@@ -12,12 +12,4 @@ public class OldRod extends AbstractEasyRelic {
     public OldRod() {
         super(ID, RelicTier.STARTER, LandingSound.FLAT, TheFishing.Enums.FISHING_COLOR);
     }
-
-    @Override
-    public void atBattleStart() {
-        flash();
-        for (int i = 0; i < 2; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
-        }
-    }
 }

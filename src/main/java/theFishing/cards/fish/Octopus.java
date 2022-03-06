@@ -14,7 +14,7 @@ public class Octopus extends AbstractFishCard {
 
     public Octopus() {
         super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.NONE);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         exhaust = true;
     }
 

@@ -183,7 +183,7 @@
   },
   "${ModID}:BombFishing": {
     "NAME": "Bomb Fishing",
-    "DESCRIPTION": "Shuffle one *Surprise! and !M! *Dazed* into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Shuffle one *Surprise! and !M! *Dazed into your draw pile. NL Exhaust."
   },
   "${ModID}:Surprise": {
     "NAME": "Surprise!",
@@ -356,5 +356,17 @@
   "${ModID}:AnchorsAweigh": {
     "NAME": "Anchors Aweigh",
     "DESCRIPTION": "Upon obtaining this card, gain an Anchor. NL Gain !B! Block. NL Exhaust."
+  },
+  "${ModID}:PickMe": {
+    "NAME": "Pick Me!",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage to ALL enemies. NL When this appears in a card reward, the other cards are Upgraded."
+  },
+  "${ModID}:TakeItEasy": {
+    "NAME": "Take it Easy",
+    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Draw 1 fewer card each turn."
+  },
+  "${ModID}:Hook": {
+    "NAME": "Hook",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
   }
 }

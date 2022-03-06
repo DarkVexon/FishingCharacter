@@ -9,7 +9,10 @@ import theFishing.cards.BagOfDefends;
 public class BagOfDefendsPatch {
     @SpirePatch(
             clz = CardGroup.class,
-            method = "removeCard"
+            method = "removeCard",
+            paramtypez = {
+                    AbstractCard.class
+            }
     )
     public static class OnRemoveDefendDoAThing {
         public static void Postfix(CardGroup __instance, AbstractCard toRemove) {

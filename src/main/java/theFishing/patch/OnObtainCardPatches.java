@@ -11,7 +11,7 @@ public class OnObtainCardPatches {
     @SpirePatch(clz = ShowCardAndObtainEffect.class, method = "update")
     public static class OnPickupCardDoStuffPatch {
         public static void Postfix(ShowCardAndObtainEffect __instance) {
-            AbstractCard q = ((AbstractCard) ReflectionHacks.getPrivate(__instance, ShowCardAndObtainEffect.class, "card"));
+            AbstractCard q = ReflectionHacks.getPrivate(__instance, ShowCardAndObtainEffect.class, "card");
             if (__instance.isDone && q instanceof OnObtainCard) {
                 ((OnObtainCard) q).onObtainCard();
             }
@@ -21,7 +21,7 @@ public class OnObtainCardPatches {
     @SpirePatch(clz = FastCardObtainEffect.class, method = "update")
     public static class OnPickupCardDoStuffPatch2 {
         public static void Postfix(FastCardObtainEffect __instance) {
-            AbstractCard q = ((AbstractCard) ReflectionHacks.getPrivate(__instance, FastCardObtainEffect.class, "card"));
+            AbstractCard q = ReflectionHacks.getPrivate(__instance, FastCardObtainEffect.class, "card");
             if (__instance.isDone && q instanceof OnObtainCard) {
                 ((OnObtainCard) q).onObtainCard();
             }
