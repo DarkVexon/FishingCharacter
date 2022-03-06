@@ -57,5 +57,25 @@
   "${ModID}:Siren": {
     "NAME": "Siren",
     "DESCRIPTION": "Enemy loses !M! Strength and !${ModID}:m2! HP. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:CastLine": {
+    "NAME": "Cast Line",
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. Draw a card."
+  },
+  "${ModID}:SetSail": {
+    "NAME": "Set Sail",
+    "DESCRIPTION": "Can't be upgraded. NL Gain !B! Block. NL Apply 1 Weak to ALL enemies."
+  },
+  "${ModID}:MopUp": {
+    "NAME": "Mop Up",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it's a Curse or Status, gain [E] and draw a card."
+  },
+  "${ModID}:QuickShot": {
+    "NAME": "Quick Shot",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:Sunhat": {
+    "NAME": "Sunhat",
+    "DESCRIPTION": "Gain !B! Block. NL Remove your Weak."
   }
 }
