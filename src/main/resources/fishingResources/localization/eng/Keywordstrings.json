@@ -1,10 +1,9 @@
 [
   {
-    "PROPER_NAME": "TODO",
+    "PROPER_NAME": "Fish",
     "NAMES": [
-      "todo",
-      "todos"
+      "fish"
     ],
-    "DESCRIPTION": "TODO: Make your own epic keywords"
+    "DESCRIPTION": "Fish are Colorless 0 cost cards that confer a bonus effect, draw a card, and Exhaust."
   }
 ]
