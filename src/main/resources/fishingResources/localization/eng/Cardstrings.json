@@ -331,5 +331,30 @@
   "${ModID}:BeachBoy": {
     "NAME": "Beach Boy",
     "DESCRIPTION": "Innate. NL Retain. NL Deal !D! damage. NL Enemy loses !M! HP at the start of each of its turns."
+  },
+  "${ModID}:AnglerForm": {
+    "NAME": "Angler Form",
+    "DESCRIPTION": "The first !M! times you play a card each turn, draw a card."
+  },
+  "${ModID}:FinalFlourish": {
+    "NAME": "Final Flourish",
+    "DESCRIPTION": "Gain !M! Strength this turn only. NL If this is the only card in your hand, gain !${ModID}:m2! Strength next turn only instead."
+  },
+  "${ModID}:FullHouse": {
+    "NAME": "Full House",
+    "DESCRIPTION": "Whenever you start your turn with two or more of the same card in your hand, add an Upgraded copy into your hand that costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you start your turn with two or more of the same card in your hand, add an Upgraded copy into your hand that costs 0 until played."
+  },
+  "${ModID}:Fishbones": {
+    "NAME": "Fishbones",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card in the Exhaust pile."
+  },
+  "${ModID}:BeastSlayer": {
+    "NAME": "Beast Slayer",
+    "DESCRIPTION": "Deal !D! damage. NL In Elite combats, deal !${ModID}:sd! damage instead."
+  },
+  "${ModID}:AnchorsAweigh": {
+    "NAME": "Anchors Aweigh",
+    "DESCRIPTION": "Upon obtaining this card, gain an Anchor. NL Gain !B! Block. NL Exhaust."
   }
 }
