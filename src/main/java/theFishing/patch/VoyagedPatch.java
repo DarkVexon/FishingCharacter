@@ -4,7 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import theFishing.FishingMod;
 
-public class CorporealPatch {
+public class VoyagedPatch {
 
     @SpirePatch(
             clz = AbstractPlayer.class,
