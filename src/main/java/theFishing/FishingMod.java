@@ -2,6 +2,7 @@ package theFishing;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.abstracts.CustomSavable;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -23,10 +24,13 @@ import org.apache.logging.log4j.Logger;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
+import theFishing.cards.fish.AbstractFishCard;
 import theFishing.relics.AbstractEasyRelic;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+
+import static theFishing.util.Wiz.shuffleIn;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -36,7 +40,9 @@ public class FishingMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        PostBattleSubscriber {
+        PostBattleSubscriber,
+        OnStartBattleSubscriber,
+        CustomSavable<Integer> {
 
     public static final String modID = "fishing"; //TODO: Change this.
 
@@ -65,6 +71,8 @@ public class FishingMod implements
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
 
     private static ArrayList<AbstractCard> nonVoyagedCards = new ArrayList<>();
+
+    public static int nextCombatFish;
 
     public FishingMod() {
         BaseMod.subscribe(this);
@@ -162,9 +170,27 @@ public class FishingMod implements
         nonVoyagedCards.clear();
     }
 
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        for (int i = 0; i < nextCombatFish; i++) {
+            shuffleIn(AbstractFishCard.returnRandomFish());
+        }
+        nextCombatFish = 0;
+    }
+
     public static void determineNonVoyagedCards() {
         nonVoyagedCards.clear();
         nonVoyagedCards.addAll(AbstractDungeon.player.hand.group);
+    }
+
+    @Override
+    public Integer onSave() {
+        return nextCombatFish;
+    }
+
+    @Override
+    public void onLoad(Integer integer) {
+        nextCombatFish = integer;
     }
 
     public static boolean isThisVoyaged(AbstractCard card) {

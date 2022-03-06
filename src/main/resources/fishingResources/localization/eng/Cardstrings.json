@@ -171,5 +171,35 @@
   "${ModID}:BigHaul": {
     "NAME": "Big Haul",
     "DESCRIPTION": "Add !M! ${ModID}:Fish into your hand with Retain. NL Exhaust."
+  },
+  "${ModID}:Bobber": {
+    "NAME": "Bobber",
+    "DESCRIPTION": "Unplayable. NL If you draw this during your turn, gain !B! Block and !M! Strength."
+  },
+  "${ModID}:Tackle Box": {
+    "NAME": "Tackle Box",
+    "DESCRIPTION": "At the start of your turn, draw !M! Colorless card.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, draw !M! Colorless cards."
+  },
+  "${ModID}:BombFishing": {
+    "NAME": "Bomb Fishing",
+    "DESCRIPTION": "Shuffle one *Surprise! and !M! *Dazed* into your draw pile. NL Exhaust."
+  },
+  "${ModID}:Surprise": {
+    "NAME": "Surprise!",
+    "DESCRIPTION": "Unplayable. Ethereal. When this card is drawn, deal 30 damage to ALL enemies."
+  },
+  "${ModID}:Harpoon": {
+    "NAME": "Harpoon",
+    "DESCRIPTION": "Deal !D! damage. NL Fatal: At the start of next combat, shuffle !M! ${ModID}:Fish into your draw pile. NL Exhaust."
+  },
+  "${ModID}:WakaWaka": {
+    "NAME": "Waka Waka",
+    "DESCRIPTION": "Deal !D! damage. NL Startup: Shuffle 2 *Power *Pellets into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Startup: Shuffle 2 *Power *Pellets into your draw pile."
+  },
+  "${ModID}:PowerPellet": {
+    "NAME": "Power Pellet",
+    "DESCRIPTION": "*Waka *Wakas deal !M! more damage. NL Exhaust."
   }
 }

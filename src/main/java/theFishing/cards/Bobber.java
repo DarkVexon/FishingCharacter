@@ -1,7 +1,11 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
@@ -18,6 +22,38 @@ public class Bobber extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+    }
+
+    private boolean isValid = false;
+
+    @Override
+    public void atTurnStart() {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                isValid = true;
+            }
+        });
+    }
+
+    @Override
+    public void atTurnStartPreDraw() {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                isValid = false;
+            }
+        });
+    }
+
+    @Override
+    public void triggerWhenDrawn() {
+        if (isValid) {
+            blck();
+            applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
+        }
     }
 
     @Override
