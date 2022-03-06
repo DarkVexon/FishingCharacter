@@ -7,12 +7,11 @@ import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractEasyCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class MopUp extends AbstractEasyCard {
+public class MopUp extends AbstractFishingCard {
     public final static String ID = makeID("MopUp");
     // intellij stuff attack, enemy, common, 7, 3, , , , 
 

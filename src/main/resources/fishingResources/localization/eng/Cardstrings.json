@@ -81,5 +81,38 @@
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
     "DESCRIPTION": "Deal !D! damage. If this is the only card in your hand, deal !D! damage again."
+  },
+  "${ModID}:ScavengedShield": {
+    "NAME": "Scavenged Shield",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Voyaged: Gain !B! Block again."
+  },
+  "${ModID}:Wander": {
+    "NAME": "Wander",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! cards."
+  },
+  "${ModID}:SurpriseAttack": {
+    "NAME": "Surprise Attack",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Apply !M! Vulnerable."
+  },
+  "${ModID}:BagOfDefends": {
+    "NAME": "Bag of Defends",
+    "DESCRIPTION": "Gain !B! Block X times. NL When you remove a Defend from your deck, Upgrade this.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X times."
+  },
+  "${ModID}:Oblivious": {
+    "NAME": "Oblivious",
+    "DESCRIPTION": "Gain !B! Block. NL Add 1 ${ModID}:Fish into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add 1 Upgraded ${ModID}:Fish into your hand."
+  },
+  "${ModID}:SpoilerAlert": {
+    "NAME": "Spoiler Alert",
+    "DESCRIPTION": "Scry X. NL Play the top card of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Scry X+1. NL Play the top card of your draw pile."
+  },
+  "${ModID}:SelfImprovement": {
+    "NAME": "Self Improvement",
+    "DESCRIPTION": "Choose a card in your hand. Upgrade it and give it Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in your hand. Upgrade it and give it Retain."
   }
 }

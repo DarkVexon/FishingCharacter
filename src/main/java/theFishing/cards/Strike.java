@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
 
-public class Strike extends AbstractEasyCard {
+public class Strike extends AbstractFishingCard {
     public final static String ID = makeID("Strike");
     // intellij stuff attack, enemy, basic, 6, 3,  , , , 
 

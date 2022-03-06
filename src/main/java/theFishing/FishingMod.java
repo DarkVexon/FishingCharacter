@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theFishing.cards.AbstractEasyCard;
+import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
 import theFishing.relics.AbstractEasyRelic;
@@ -127,7 +127,7 @@ public class FishingMod implements
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
         new AutoAdd(modID)
-                .packageFilter(AbstractEasyCard.class)
+                .packageFilter(AbstractFishingCard.class)
                 .setDefaultSeen(true)
                 .cards();
     }

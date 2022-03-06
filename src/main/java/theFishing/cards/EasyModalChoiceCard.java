@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static theFishing.FishingMod.makeID;
 
 @AutoAdd.Ignore
-public class EasyModalChoiceCard extends AbstractEasyCard {
+public class EasyModalChoiceCard extends AbstractFishingCard {
 
     private Runnable onUseOrChosen;
     private String passedName;

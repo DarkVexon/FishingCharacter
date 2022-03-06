@@ -3,12 +3,10 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractEasyCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
 
-public class ThatsAllFolks extends AbstractEasyCard {
+public class ThatsAllFolks extends AbstractFishingCard {
     public final static String ID = makeID("ThatsAllFolks");
     // intellij stuff attack, enemy, common, 8, 2, , , , 
 

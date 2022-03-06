@@ -5,5 +5,12 @@
       "fish"
     ],
     "DESCRIPTION": "Fish are Colorless 0 cost cards that confer a bonus effect, draw a card, and Exhaust."
+  },
+  {
+    "PROPER_NAME": "Voyaged",
+    "NAMES": [
+      "voyaged"
+    ],
+    "DESCRIPTION": "Effect triggers only if this card wasn't in your opening hand this turn."
   }
 ]

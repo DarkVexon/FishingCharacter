@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
-import theFishing.cards.AbstractEasyCard;
+import theFishing.cards.AbstractFishingCard;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -93,7 +93,7 @@ public class CardArtRoller {
         return new ArrayList<AbstractCard>(cardList.stream().filter(c -> c.type == t).collect(Collectors.toList()));
     }
 
-    public static void computeCard(AbstractEasyCard c) {
+    public static void computeCard(AbstractFishingCard c) {
         if (cardList == null) {
             initializeCardsList();
         }

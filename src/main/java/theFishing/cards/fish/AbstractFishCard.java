@@ -3,11 +3,11 @@ package theFishing.cards.fish;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theFishing.cards.AbstractEasyCard;
+import theFishing.cards.AbstractFishingCard;
 
 import java.util.LinkedHashMap;
 
-public abstract class AbstractFishCard extends AbstractEasyCard {
+public abstract class AbstractFishCard extends AbstractFishingCard {
     public AbstractFishCard(String cardID, int cost, AbstractCard.CardType type, AbstractCard.CardRarity rarity, AbstractCard.CardTarget target, AbstractCard.CardColor color) {
         super(cardID, cost, type, rarity, target, color);
     }

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.FishingMod;
 import theFishing.TheFishing;
 import theFishing.util.CardArtRoller;
 
@@ -24,7 +25,7 @@ import static theFishing.FishingMod.*;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
-public abstract class AbstractEasyCard extends CustomCard {
+public abstract class AbstractFishingCard extends CustomCard {
 
     protected final CardStrings cardStrings;
 
@@ -44,11 +45,11 @@ public abstract class AbstractEasyCard extends CustomCard {
 
     private boolean needsArtRefresh = false;
 
-    public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        this(cardID, cost, type, rarity, target, TheFishing.Enums.TODO_COLOR);
+    public AbstractFishingCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
+        this(cardID, cost, type, rarity, target, TheFishing.Enums.FISHING_COLOR);
     }
 
-    public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
+    public AbstractFishingCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
         super(cardID, "", getCardTextureString(cardID.replace(modID + ":", ""), type),
                 cost, "", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(this.cardID);
@@ -243,5 +244,9 @@ public abstract class AbstractEasyCard extends CustomCard {
 
     protected void upSecondDamage(int x) {
         upgradeSecondDamage(x);
+    }
+
+    protected boolean isVoyaged() {
+        return FishingMod.isThisVoyaged(this);
     }
 }

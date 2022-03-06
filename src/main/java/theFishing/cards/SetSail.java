@@ -3,12 +3,11 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import theFishing.cards.AbstractEasyCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class SetSail extends AbstractEasyCard {
+public class SetSail extends AbstractFishingCard {
     public final static String ID = makeID("SetSail");
     // intellij stuff skill, self, common, , , 4, , , 
 

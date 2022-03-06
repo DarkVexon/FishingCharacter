@@ -4,12 +4,11 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import theFishing.cards.AbstractEasyCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class Sunhat extends AbstractEasyCard {
+public class Sunhat extends AbstractFishingCard {
     public final static String ID = makeID("Sunhat");
     // intellij stuff skill, self, common, , , 7, 3, , 
 

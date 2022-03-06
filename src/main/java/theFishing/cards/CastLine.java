@@ -8,7 +8,7 @@ import theFishing.cards.fish.AbstractFishCard;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class CastLine extends AbstractEasyCard {
+public class CastLine extends AbstractFishingCard {
     public final static String ID = makeID("CastLine");
     // intellij stuff skill, self, basic, , , , , 2, 1
 
