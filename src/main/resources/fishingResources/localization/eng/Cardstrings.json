@@ -155,5 +155,21 @@
   "${ModID}:Baited": {
     "NAME": "Baited",
     "DESCRIPTION": "Deal !D! damage. NL Add a ${ModID}:Fish into your hand. NL If the enemy intends to attack, add !M! more."
+  },
+  "${ModID}:AllOut": {
+    "NAME": "All Out",
+    "DESCRIPTION": "At the end of your turn, if your hand is empty, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:GarlicClove": {
+    "NAME": "Garlic Clove",
+    "DESCRIPTION": "Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
+  },
+  "${ModID}:RingTheBell": {
+    "NAME": "Ring the Bell",
+    "DESCRIPTION": "ALL enemies lose 13 HP. NL Put a *Curse *of *the *Bell on top of your draw pile."
+  },
+  "${ModID}:BigHaul": {
+    "NAME": "Big Haul",
+    "DESCRIPTION": "Add !M! ${ModID}:Fish into your hand with Retain. NL Exhaust."
   }
 }
