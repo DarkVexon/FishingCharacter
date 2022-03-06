@@ -8,12 +8,9 @@ import theFishing.cards.AbstractFishingCard;
 import java.util.LinkedHashMap;
 
 public abstract class AbstractFishCard extends AbstractFishingCard {
-    public AbstractFishCard(String cardID, int cost, AbstractCard.CardType type, AbstractCard.CardRarity rarity, AbstractCard.CardTarget target, AbstractCard.CardColor color) {
-        super(cardID, cost, type, rarity, target, color);
-    }
 
     public AbstractFishCard(String cardID, int cost, AbstractCard.CardType type, AbstractCard.CardRarity rarity, AbstractCard.CardTarget target) {
-        super(cardID, cost, type, rarity, target);
+        super(cardID, cost, type, rarity, target, CardColor.COLORLESS);
     }
 
     public static LinkedHashMap<AbstractFishCard, Integer> weightedFishList;

@@ -13,7 +13,7 @@ public class PowerPellet extends AbstractFishingCard {
     // intellij stuff skill, self, special, , , , , 6, 3
 
     public PowerPellet() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 6;
         exhaust = true;
     }

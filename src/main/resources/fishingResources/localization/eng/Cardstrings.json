@@ -201,5 +201,56 @@
   "${ModID}:PowerPellet": {
     "NAME": "Power Pellet",
     "DESCRIPTION": "*Waka *Wakas deal !M! more damage. NL Exhaust."
+  },
+  "${ModID}:ManifestMeal": {
+    "NAME": "Manifest Meal",
+    "DESCRIPTION": "Add a *Food into your hand.",
+    "UPGRADE_DESCRIPTION": "Add a *Food with X+1 into your hand."
+  },
+  "${ModID}:Food": {
+    "NAME": "Food",
+    "DESCRIPTION": "Retain. NL Gain X [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain X [E]. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:Cannoneer": {
+    "NAME": "Cannoneer",
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times."
+  },
+  "${ModID}:BootsSequence": {
+    "NAME": "Boots Sequence",
+    "DESCRIPTION": "Put !M! *Boots on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put !M! *Boots on top of your draw pile. NL Draw 1 additional card next turn. NL Exhaust."
+  },
+  "${ModID}:DiscoverACrate": {
+    "NAME": "Discover a Crate",
+    "DESCRIPTION": "Add *Smite and *Safety into your hand. ${ModID}:Voyaged: Upgrade them. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add *Smite and *Safety into your hand. ${ModID}:Voyaged: Upgrade them."
+  },
+  "${ModID}:BloodInTheWater": {
+    "NAME": "Blood in the Water",
+    "DESCRIPTION": "${ModID}:Consume. NL Gain 2 Strength. NL Gain 1 additional Strength for each ${ModID}:Fish consumed to play this.",
+    "UPGRADE_DESCRIPTION": "Retain. NL ${ModID}:Consume. NL Gain 2 Strength. NL Gain 1 additional Strength for each ${ModID}:Fish consumed to play this."
+  },
+  "${ModID}:SupplyTrip": {
+    "NAME": "Supply Trip",
+    "DESCRIPTION": "Draw cards until you have !M! in your hand. NL Gain !B! Block for each card drawn."
+  },
+  "${ModID}:TreasureChest": {
+    "NAME": "Treasure Chest",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Gold. NL Exhaust."
+  },
+  "${ModID}:Whaling": {
+    "NAME": "Whaling",
+    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 Gold, spend 15 to gain an extra 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Strength. NL If you have over 200 Gold, spend 15 to gain an extra 1 Strength."
+  },
+  "${ModID}:Reserves": {
+    "NAME": "Reserves",
+    "DESCRIPTION": "After you play a cost X card, gain [E]."
+  },
+  "${ModID}:XMarksTheSpot": {
+    "NAME": "X Marks the Spot",
+    "DESCRIPTION": "Add a random cost X card from another class into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a random cost X card from another class into your hand. NL Gain [E]. NL Exhaust."
   }
 }

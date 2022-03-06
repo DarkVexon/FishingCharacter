@@ -1,0 +1,48 @@
+package theFishing.cards;
+
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import theFishing.cards.AbstractFishingCard;
+import theFishing.powers.LambdaPower;
+
+import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.*;
+
+public class Reserves extends AbstractFishingCard {
+    public final static String ID = makeID("Reserves");
+    // intellij stuff power, self, uncommon, , , , , , 
+
+    public Reserves() {
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        applyToSelf(new LambdaPower("Reserves", AbstractPower.PowerType.BUFF, false, p, 1) {
+            @Override
+            public void onUseCard(AbstractCard card, UseCardAction action) {
+                if (card.cost == -1) {
+                    flash();
+                    atb(new GainEnergyAction(amount));
+                }
+            }
+
+            @Override
+            public void updateDescription() {
+                StringBuilder sb = new StringBuilder("After you play a cost X card, gain ");
+                for (int i = 0; i < amount; i++) {
+                    sb.append("[E] ");
+                }
+                sb.append(".");
+                description = sb.toString();
+            }
+        });
+    }
+
+    public void upp() {
+        upgradeBaseCost(1);
+    }
+}

@@ -16,7 +16,7 @@ public class Surprise extends AbstractFishingCard {
     // intellij stuff skill, self, special, , , , , , 
 
     public Surprise() {
-        super(ID, -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         isEthereal = true;
     }
 

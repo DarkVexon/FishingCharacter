@@ -18,7 +18,7 @@ public class SeaMonster extends AbstractFishCard {
     // intellij stuff skill, none, special, , , , , , 
 
     public SeaMonster() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.NONE, AbstractCard.CardColor.COLORLESS);
+        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.NONE);
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
     }

@@ -16,7 +16,7 @@ public class Siren extends AbstractFishCard {
     // intellij stuff skill, enemy, special, , , , , 2, 1
 
     public Siren() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY, AbstractCard.CardColor.COLORLESS);
+        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 6;
         exhaust = true;
