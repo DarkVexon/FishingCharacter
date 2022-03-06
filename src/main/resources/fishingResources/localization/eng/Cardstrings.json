@@ -276,5 +276,60 @@
   "${ModID}:ThornyPersonality": {
     "NAME": "Thorny Personality",
     "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Voyaged: Gain !M! Thorns."
+  },
+  "${ModID}:Tripwire": {
+    "NAME": "Tripwire",
+    "DESCRIPTION": "Deal !D! damage. NL If your Block is broken this turn, ALL enemies lose !M! HP."
+  },
+  "${ModID}:Lie": {
+    "NAME": "Lie",
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add Cheat into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add Cheat+ into your hand. NL Exhaust."
+  },
+  "${ModID}:Cheat": {
+    "NAME": "Cheat",
+    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add Steal into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add Steal+ into your hand. NL Exhaust."
+  },
+  "${ModID}:Steal": {
+    "NAME": "Steal",
+    "DESCRIPTION": "Enemy loses !M! Strength. NL Gain 1 Strength. NL Exhaust."
+  },
+  "${ModID}:SetupButWithRetain": {
+    "NAME": "Setup but with Retain",
+    "DESCRIPTION": "Retain. NL Put a card from your hand on top of your draw pile. NL It costs 0 until played."
+  },
+  "${ModID}:RatedX": {
+    "NAME": "Rated X",
+    "DESCRIPTION": "Deal !D! damage. NL If X is 1 or more, apply !M! Weak and Vulnerable. NL If X is 2 or more, gain !M! Strength. NL If X is 4 or more, gain !B! Block."
+  },
+  "${ModID}:ItWasTHIIIIIIISBig": {
+    "NAME": "It Was THIIIIIIIS Big!",
+    "DESCRIPTION": "Triple the effects of ALL current ${ModID}:Fish cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Quadruple the effects of ALL current ${ModID}:Fish cards. NL Exhaust."
+  },
+  "${ModID}:GoneFishing": {
+    "NAME": "Gone Fishing",
+    "DESCRIPTION": "Gain 1 Intangible. NL Shuffle !M! ${ModID}:Fish into your draw pile. NL Exhaust."
+  },
+  "${ModID}:FinishingTouches": {
+    "NAME": "Finishing Touches",
+    "DESCRIPTION": "Whenever you play the last card in your hand, play it twice."
+  },
+  "${ModID}:Schooled": {
+    "NAME": "Schooled",
+    "DESCRIPTION": "${ModID}:Consume. NL Deal !D! damage."
+  },
+  "${ModID}:ChocolateChipCookie": {
+    "NAME": "Chocolate Chip Cookie",
+    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand this combat. NL Exhaust."
+  },
+  "${ModID}:QuickestShot": {
+    "NAME": "Quickest Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL ${ModID}:Voyaged: Draw another card and gain [E]."
+  },
+  "${ModID}:BeachBoy": {
+    "NAME": "Beach Boy",
+    "DESCRIPTION": "Innate. NL Retain. NL Deal !D! damage. NL Enemy loses !M! HP at the start of each of its turns."
   }
 }
