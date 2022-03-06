@@ -112,7 +112,48 @@
   },
   "${ModID}:SelfImprovement": {
     "NAME": "Self Improvement",
-    "DESCRIPTION": "Choose a card in your hand. Upgrade it and give it Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in your hand. Upgrade it and give it Retain."
+    "DESCRIPTION": "Choose a card in your hand. Upgrade it and give it Retain this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in your hand. Upgrade it and give it Retain this combat."
+  },
+  "${ModID}:FishCannon": {
+    "NAME": "Fish Cannon",
+    "DESCRIPTION": "${ModID}:Consume. NL Deal !D! damage."
+  },
+  "${ModID}:HunkerDown": {
+    "NAME": "Hunker Down",
+    "DESCRIPTION": "Discard a random card. NL Gain [E].",
+    "UPGRADE_DESCRIPTION": "Discard a card. NL Gain [E]."
+  },
+  "${ModID}:NostalgicStrike": {
+    "NAME": "Nostalgic Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Return a random card from your discard pile to your hand."
+  },
+  "${ModID}:FutureProofing": {
+    "NAME": "Future Proofing",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Upgrade th top card of your draw pile this combat."
+  },
+  "${ModID}:CardboardBullets": {
+    "NAME": "Cardboard Bullets",
+    "DESCRIPTION": "Deal damage equal to the total cost of cards in your hand. NL X counts as 4.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal damage equal to the total cost of cards in your hand. NL X counts as 4.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
+  },
+  "${ModID}:FeedingFrenzy": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTION": "Exhaust all ${ModID}:Fish in your hand and draw pile. Deal !D! damage to a random enemy for each.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( !${ModID}:fshhd! ${ModID}:Fish. )"
+    ]
+  },
+  "${ModID}:CatchOfTheDay": {
+    "NAME": "Catch of the Day",
+    "DESCRIPTION": "At the start of your turn, shuffle a ${ModID}:Fish into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, shuffle a ${ModID}:Fish into your draw pile."
+  },
+  "${ModID}:Baited": {
+    "NAME": "Baited",
+    "DESCRIPTION": "Deal !D! damage. NL Add a ${ModID}:Fish into your hand. NL If the enemy intends to attack, add !M! more."
   }
 }

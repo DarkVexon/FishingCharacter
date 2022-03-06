@@ -12,5 +12,12 @@
       "voyaged"
     ],
     "DESCRIPTION": "Effect triggers only if this card wasn't in your opening hand this turn."
+  },
+  {
+    "PROPER_NAME": "Consume",
+    "NAMES": [
+      "consume"
+    ],
+    "DESCRIPTION": "When you have Fish in your hand, you will instead Exhaust 1 Fish to pay 1 [E] for this card's cost."
   }
 ]
