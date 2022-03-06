@@ -252,5 +252,29 @@
     "NAME": "X Marks the Spot",
     "DESCRIPTION": "Add a random cost X card from another class into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Add a random cost X card from another class into your hand. NL Gain [E]. NL Exhaust."
+  },
+  "${ModID}:Splash": {
+    "NAME": "Splash",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. This card's damage and Block are reduced by 2 for each other card in your hand."
+  },
+  "${ModID}:DeckedOut": {
+    "NAME": "Decked Out",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL If you're on Steam Deck, gain !${ModID}:m2! Artifact."
+  },
+  "${ModID}:ShipRam": {
+    "NAME": "Ship Ram",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Deal !${ModID}:sd! damage instead."
+  },
+  "${ModID}:FlamingFlip": {
+    "NAME": "Flaming Flip",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw 2 cards."
+  },
+  "${ModID}:BoxOfHavoc": {
+    "NAME": "Box of Havoc",
+    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL If this is the last card in your hand, apply !M! Weak and Vulnerable to ALL enemies instead."
+  },
+  "${ModID}:ThornyPersonality": {
+    "NAME": "Thorny Personality",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Voyaged: Gain !M! Thorns."
   }
 }
