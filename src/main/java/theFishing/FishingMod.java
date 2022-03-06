@@ -10,10 +10,13 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,6 +26,7 @@ import theFishing.cards.cardvars.SecondMagicNumber;
 import theFishing.relics.AbstractEasyRelic;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -31,7 +35,8 @@ public class FishingMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        EditCharactersSubscriber {
+        EditCharactersSubscriber,
+        PostBattleSubscriber {
 
     public static final String modID = "fishing"; //TODO: Change this.
 
@@ -58,6 +63,8 @@ public class FishingMod implements
     private static final String CARD_ENERGY_L = modID + "Resources/images/1024/energy.png";
     private static final String CHARSELECT_BUTTON = modID + "Resources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
+
+    private static ArrayList<AbstractCard> nonVoyagedCards = new ArrayList<>();
 
     public FishingMod() {
         BaseMod.subscribe(this);
@@ -148,5 +155,19 @@ public class FishingMod implements
                 BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        nonVoyagedCards.clear();
+    }
+
+    public static void determineNonVoyagedCards() {
+        nonVoyagedCards.clear();
+        nonVoyagedCards.addAll(AbstractDungeon.player.hand.group);
+    }
+
+    public static boolean isThisVoyaged(AbstractCard card) {
+        return (!nonVoyagedCards.contains(card));
     }
 }
