@@ -18,7 +18,7 @@ public class Strike extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
     public void upp() {

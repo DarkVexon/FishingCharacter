@@ -16,6 +16,7 @@ public class WakaWaka extends AbstractFishingCard implements StartupCard {
     public WakaWaka() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
+        cardsToPreview = new PowerPellet();
     }
 
     @Override
