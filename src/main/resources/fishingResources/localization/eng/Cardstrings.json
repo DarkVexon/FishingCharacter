@@ -60,11 +60,12 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. Draw a card."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw a card."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Can't be upgraded. NL Gain !B! Block. NL Apply 1 Weak to ALL enemies."
+    "DESCRIPTION": "Draw !M! card. NL Put 1 card from your hand on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Put 1 card from your hand on top of your draw pile."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -237,12 +238,12 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Gold. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !M! *Gold. NL Exhaust."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
-    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 Gold, spend 15 to gain an extra 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Strength. NL If you have over 200 Gold, spend 15 to gain an extra 1 Strength."
+    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend 15 to gain an extra 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Strength. NL If you have over 200 *Gold, spend 15 to gain an extra 1 Strength."
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",

@@ -25,7 +25,6 @@ public class PowerPellet extends AbstractFishingCard {
                 isDone = true;
                 forAllCardsInList((card) -> {
                     if (card.cardID.equals(WakaWaka.ID)) {
-                        card.flash();
                         card.baseDamage += magicNumber;
                         card.applyPowers();
                     }

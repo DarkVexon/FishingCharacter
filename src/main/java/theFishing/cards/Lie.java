@@ -37,7 +37,7 @@ public class Lie extends AbstractFishingCard {
         }
 
         forAllMonstersLiving(q -> {
-            applyToEnemy(q, new StrengthPower(m, -magicNumber));
+            applyToEnemy(q, new StrengthPower(q, -magicNumber));
             if (!q.hasPower(ArtifactPower.POWER_ID)) {
                 applyToEnemy(q, new GainStrengthPower(q, magicNumber));
             }

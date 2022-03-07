@@ -16,13 +16,14 @@ public class ManifestMeal extends AbstractFishingCard {
     public ManifestMeal() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
+        cardsToPreview = new Food();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
             Food q = new Food();
             q.setX(effect + params[0]);
-            shuffleIn(q);
+            makeInHand(q);
             return true;
         }, magicNumber));
     }
