@@ -81,7 +81,7 @@
   },
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
-    "DESCRIPTION": "Deal !D! damage. If this is the only card in your hand, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Finale: deal !D! damage again."
   },
   "${ModID}:ScavengedShield": {
     "NAME": "Scavenged Shield",
@@ -272,7 +272,7 @@
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
-    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL If this is the last card in your hand, apply !M! Weak and Vulnerable to ALL enemies instead."
+    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL ${ModID}:Finale: apply !M! Weak and Vulnerable to ALL enemies instead."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Thorny Personality",
@@ -302,7 +302,7 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL If X is 1 or more, apply !M! Weak and Vulnerable. NL If X is 2 or more, gain !M! Strength. NL If X is 4 or more, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: apply !M! Weak and Vulnerable. NL X >= 2: gain !M! Strength. NL X >= 4: gain !B! Block."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
@@ -339,7 +339,7 @@
   },
   "${ModID}:FinalFlourish": {
     "NAME": "Final Flourish",
-    "DESCRIPTION": "Gain !M! Strength this turn only. NL If this is the only card in your hand, gain !${ModID}:m2! Strength next turn only instead."
+    "DESCRIPTION": "Gain !M! Strength this turn only. NL ${ModID}:Finale: gain !${ModID}:m2! Strength next turn only instead."
   },
   "${ModID}:FullHouse": {
     "NAME": "Full House",
@@ -356,7 +356,7 @@
   },
   "${ModID}:AnchorsAweigh": {
     "NAME": "Anchors Aweigh",
-    "DESCRIPTION": "Upon obtaining this card, gain an Anchor. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Startup: Gain !M! Block. NL Gain !B! Block. NL Exhaust."
   },
   "${ModID}:PickMe": {
     "NAME": "Pick Me!",
@@ -377,5 +377,18 @@
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
     "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to a random enemy."
+  },
+  "${ModID}:RidiculousFishing": {
+    "NAME": "Ridiculous Fishing",
+    "DESCRIPTION": "Whenever you play a Colorless card, deal !M! damage to a random enemy."
+  },
+  "${ModID}:TackleBox": {
+    "NAME": "Tackle Box",
+    "DESCRIPTION": "At the start of your turn, draw !M! Colorless card.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, draw !M! Colorless cards."
+  },
+  "${ModID}:Concentrated": {
+    "NAME": "Concentrated",
+    "DESCRIPTION": "At the start of your turn, gain [E]."
   }
 }

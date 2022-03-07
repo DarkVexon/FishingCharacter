@@ -8,21 +8,19 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 
-public class Berserk extends AbstractFishingCard {
-    public final static String ID = makeID("Berserk");
+public class Concentrated extends AbstractFishingCard {
+    public final static String ID = makeID("Concentrated");
     // intellij stuff power, self, rare, , , , , 2, -1
 
-    public Berserk() {
-        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+    public Concentrated() {
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new VulnerablePower(p, magicNumber, false));
         applyToSelf(new BerserkPower(p, 1));
     }
 
     public void upp() {
-        upgradeMagicNumber(-1);
+        upgradeBaseCost(1);
     }
 }

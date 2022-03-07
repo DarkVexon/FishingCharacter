@@ -29,5 +29,6 @@ public class ManifestMeal extends AbstractFishingCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+        uDesc();
     }
 }

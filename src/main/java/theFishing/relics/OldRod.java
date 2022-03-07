@@ -14,7 +14,7 @@ public class OldRod extends AbstractEasyRelic {
     }
 
     @Override
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
         flash();
         for (int i = 0; i < 2; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());

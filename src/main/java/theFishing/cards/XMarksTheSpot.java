@@ -19,7 +19,7 @@ public class XMarksTheSpot extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard q = getRandomItem(getCardsMatchingPredicate(c -> c.cost == -1 && c.color != TheFishing.Enums.FISHING_COLOR, true));
+        AbstractCard q = getRandomItem(getCardsMatchingPredicate(c -> c.cost == -1 && c.color != TheFishing.Enums.FISHING_COLOR && c.color != CardColor.COLORLESS, true));
         makeInHand(q);
         if (upgraded) {
             atb(new GainEnergyAction(1));

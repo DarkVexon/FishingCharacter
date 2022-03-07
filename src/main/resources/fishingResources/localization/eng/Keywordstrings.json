@@ -19,5 +19,12 @@
       "consume"
     ],
     "DESCRIPTION": "When you have #yFish in your hand, you will instead #yExhaust #b1 Fish to pay each [E] for this card's cost."
+  },
+  {
+    "PROPER_NAME": "Solo",
+    "NAMES": [
+      "solo"
+    ],
+    "DESCRIPTION": "Effect triggers only if this card is the only one in your hand."
   }
 ]
