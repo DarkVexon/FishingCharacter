@@ -5,11 +5,10 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.makeInHand;
 
 public class BigHaul extends AbstractFishingCard {
     public final static String ID = makeID("BigHaul");

@@ -9,7 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class MopUp extends AbstractFishingCard {
     public final static String ID = makeID("MopUp");

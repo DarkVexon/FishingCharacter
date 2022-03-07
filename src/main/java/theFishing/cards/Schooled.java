@@ -5,10 +5,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cardmods.ConsumeMod;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
 
 public class Schooled extends AbstractFishingCard {
     public final static String ID = makeID("Schooled");

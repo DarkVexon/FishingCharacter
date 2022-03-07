@@ -4,10 +4,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToEnemy;
+import static theFishing.util.Wiz.forAllMonstersLiving;
 
 public class BoxOfHavoc extends AbstractFishingCard {
     public final static String ID = makeID("BoxOfHavoc");

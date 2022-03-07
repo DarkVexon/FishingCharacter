@@ -3,15 +3,12 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
-import com.megacrit.cardcrawl.cards.red.Warcry;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
 
 public class SetSail extends AbstractFishingCard {
     public final static String ID = makeID("SetSail");

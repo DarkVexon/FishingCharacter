@@ -2,9 +2,7 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawReductionPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.powers.TakeItEasyPower;
 
 import static theFishing.FishingMod.makeID;

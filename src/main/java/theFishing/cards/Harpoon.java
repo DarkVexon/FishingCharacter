@@ -1,15 +1,13 @@
 package theFishing.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.DamageCallbackAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 import theFishing.actions.FatalRunnableAction;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class Harpoon extends AbstractFishingCard {
     public final static String ID = makeID("Harpoon");

@@ -7,10 +7,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class BeastSlayer extends AbstractFishingCard {
     public final static String ID = makeID("BeastSlayer");
@@ -25,8 +24,7 @@ public class BeastSlayer extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomElite) {
             atb(new DamageAction(m, new DamageInfo(p, secondDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        }
-        else {
+        } else {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
     }

@@ -1,17 +1,10 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import theFishing.cards.AbstractFishingCard;
-import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
 
 public class BeachBoy extends AbstractFishingCard {
     public final static String ID = makeID("BeachBoy");

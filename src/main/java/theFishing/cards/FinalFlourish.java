@@ -4,10 +4,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.applyToSelfNextTurn;
 
 public class FinalFlourish extends AbstractFishingCard {
     public final static String ID = makeID("FinalFlourish");
@@ -23,8 +23,7 @@ public class FinalFlourish extends AbstractFishingCard {
         if (p.hand.size() == 1) {
             applyToSelfNextTurn(new StrengthPower(p, secondMagic));
             applyToSelfNextTurn(new LoseStrengthPower(p, secondMagic));
-        }
-        else {
+        } else {
             applyToSelf(new StrengthPower(p, magicNumber));
             applyToSelf(new LoseStrengthPower(p, magicNumber));
         }

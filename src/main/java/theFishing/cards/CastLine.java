@@ -6,7 +6,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.shuffleIn;
 
 public class CastLine extends AbstractFishingCard {
     public final static String ID = makeID("CastLine");

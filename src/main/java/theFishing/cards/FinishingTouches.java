@@ -8,11 +8,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class FinishingTouches extends AbstractFishingCard {
     public final static String ID = makeID("FinishingTouches");
@@ -29,7 +28,7 @@ public class FinishingTouches extends AbstractFishingCard {
                     this.flash();
                     AbstractMonster m = null;
                     if (action.target != null) {
-                        m = (AbstractMonster)action.target;
+                        m = (AbstractMonster) action.target;
                     }
 
                     AbstractCard tmp = card.makeSameInstanceOf();
@@ -37,7 +36,7 @@ public class FinishingTouches extends AbstractFishingCard {
                     tmp.current_x = card.current_x;
                     tmp.current_y = card.current_y;
                     tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-                    tmp.target_y = (float)Settings.HEIGHT / 2.0F;
+                    tmp.target_y = (float) Settings.HEIGHT / 2.0F;
                     if (m != null) {
                         tmp.calculateCardDamage(m);
                     }

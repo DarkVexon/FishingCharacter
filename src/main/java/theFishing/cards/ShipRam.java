@@ -5,10 +5,9 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class ShipRam extends AbstractFishingCard {
     public final static String ID = makeID("ShipRam");
@@ -23,8 +22,7 @@ public class ShipRam extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (isVoyaged()) {
             atb(new DamageAction(m, new DamageInfo(p, secondDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        }
-        else {
+        } else {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
     }

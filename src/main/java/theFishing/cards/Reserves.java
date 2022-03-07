@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class Reserves extends AbstractFishingCard {
     public final static String ID = makeID("Reserves");

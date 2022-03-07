@@ -5,10 +5,9 @@ import com.megacrit.cardcrawl.cards.tempCards.Safety;
 import com.megacrit.cardcrawl.cards.tempCards.Smite;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.makeInHand;
 
 public class DiscoverACrate extends AbstractFishingCard {
     public final static String ID = makeID("DiscoverACrate");

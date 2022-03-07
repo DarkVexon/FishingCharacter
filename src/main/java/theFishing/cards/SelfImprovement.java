@@ -6,10 +6,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.ApplyCardModifierAction;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class SelfImprovement extends AbstractFishingCard {
     public final static String ID = makeID("SelfImprovement");

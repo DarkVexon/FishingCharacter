@@ -2,11 +2,10 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.powers.AnglerFormPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class AnglerForm extends AbstractFishingCard {
     public final static String ID = makeID("AnglerForm");

@@ -21,7 +21,8 @@ import theFishing.util.CardArtRoller;
 
 import java.util.ArrayList;
 
-import static theFishing.FishingMod.*;
+import static theFishing.FishingMod.makeImagePath;
+import static theFishing.FishingMod.modID;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
@@ -70,8 +71,7 @@ public abstract class AbstractFishingCard extends CustomCard {
     protected Texture getPortraitImage() {
         if (textureImg.contains("ui/missing.png")) {
             return CardArtRoller.getPortraitTexture(this);
-        }
-        else {
+        } else {
             return super.getPortraitImage();
         }
     }

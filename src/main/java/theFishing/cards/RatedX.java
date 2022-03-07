@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theFishing.actions.EasyXCostAction;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
