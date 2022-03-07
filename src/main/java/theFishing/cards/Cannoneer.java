@@ -20,11 +20,11 @@ public class Cannoneer extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            for (int i = 0; i < effect + params[0]; i++) {
+            for (int i = 0; i < effect; i++) {
                 atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
             }
             return true;
-        }, magicNumber));
+        }));
     }
 
     public void upp() {
