@@ -42,7 +42,7 @@ public class FullHouse extends AbstractFishingCard {
                         }
                         for (int i = 0; i < amount; i++)
                             for (String s : dupesFound) {
-                                AbstractCard q = CardLibrary.getCard(s);
+                                AbstractCard q = CardLibrary.getCard(s).makeCopy();
                                 q.upgrade();
                                 q.setCostForTurn(0);
                                 att(new MakeTempCardInHandAction(q, false));
