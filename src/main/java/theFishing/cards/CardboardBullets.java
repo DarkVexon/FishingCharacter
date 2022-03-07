@@ -26,6 +26,7 @@ public class CardboardBullets extends AbstractFishingCard {
     private int getEnergyAmount(AbstractCard card) {
         int cost = card.costForTurn;
         if (card.cost == -1) cost = 4;
+        if (card.cost == -2) cost = 0;
         if (card.freeToPlayOnce) cost = 0;
         return cost;
     }
