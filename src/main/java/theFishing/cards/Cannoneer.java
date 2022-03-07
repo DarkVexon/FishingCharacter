@@ -14,7 +14,7 @@ public class Cannoneer extends AbstractFishingCard {
     // intellij stuff attack, all_enemy, uncommon, 8, 2, , , , 
 
     public Cannoneer() {
-        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 8;
     }
 

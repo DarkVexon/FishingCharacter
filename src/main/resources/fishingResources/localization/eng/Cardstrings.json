@@ -89,7 +89,7 @@
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! cards.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! cards."
   },
   "${ModID}:SurpriseAttack": {
@@ -108,8 +108,8 @@
   },
   "${ModID}:SpoilerAlert": {
     "NAME": "Spoiler Alert",
-    "DESCRIPTION": "Scry X. NL Play the top card of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Scry X+1. NL Play the top card of your draw pile."
+    "DESCRIPTION": "Scry X+1. NL Play the top card of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Scry X+2. NL Play the top card of your draw pile."
   },
   "${ModID}:SelfImprovement": {
     "NAME": "Self Improvement",

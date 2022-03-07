@@ -16,7 +16,8 @@ public class SpoilerAlert extends AbstractFishingCard {
     // intellij stuff skill, self, common, , , , , , 1
 
     public SpoilerAlert() {
-        super(ID, -1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
