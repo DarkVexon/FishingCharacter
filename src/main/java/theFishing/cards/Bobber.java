@@ -14,7 +14,7 @@ public class Bobber extends AbstractFishingCard {
 
     public Bobber() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseBlock = 9;
+        baseBlock = block = 9;
         baseMagicNumber = magicNumber = 1;
     }
 

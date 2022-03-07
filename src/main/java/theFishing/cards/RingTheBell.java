@@ -24,7 +24,7 @@ public class RingTheBell extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //TODO: VFX Vex
         atb(new SFXAction("BELL"));
-        atb(new AllEnemyLoseHPAction(p, magicNumber));
+        atb(new AllEnemyLoseHPAction(magicNumber));
         topDeck(new CurseOfTheBell());
     }
 

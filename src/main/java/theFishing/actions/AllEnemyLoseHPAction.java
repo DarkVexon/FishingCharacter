@@ -12,12 +12,12 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 public class AllEnemyLoseHPAction extends AbstractGameAction {
     private static final float DURATION = 0.33F;
 
-    public AllEnemyLoseHPAction(AbstractCreature source, int amount) {
-        this(source, amount, AttackEffect.NONE);
+    public AllEnemyLoseHPAction(int amount) {
+        this(amount, AttackEffect.NONE);
     }
 
-    public AllEnemyLoseHPAction(AbstractCreature source, int amount, AttackEffect effect) {
-        this.source = source;
+    public AllEnemyLoseHPAction(int amount, AttackEffect effect) {
+        this.source = AbstractDungeon.player;
         this.amount = amount;
 
         this.actionType = ActionType.DAMAGE;

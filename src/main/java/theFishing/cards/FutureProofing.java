@@ -26,7 +26,8 @@ public class FutureProofing extends AbstractFishingCard {
             @Override
             public void update() {
                 isDone = true;
-                AbstractDungeon.player.drawPile.getTopCard().upgrade();
+                if (!AbstractDungeon.player.drawPile.isEmpty())
+                    AbstractDungeon.player.drawPile.getTopCard().upgrade();
             }
         });
     }

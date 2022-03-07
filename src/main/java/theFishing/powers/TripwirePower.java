@@ -17,12 +17,12 @@ public class TripwirePower extends AbstractEasyPower implements OnMyBlockBrokenP
     @Override
     public void onMyBlockBroken() {
         flash();
-        addToBot(new AllEnemyLoseHPAction(AbstractDungeon.player, amount));
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this.ID));
+        addToBot(new AllEnemyLoseHPAction(amount));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this.ID));
+    public void atEndOfRound() {
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override

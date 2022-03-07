@@ -81,7 +81,7 @@
   },
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Finale: deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Solo: Deal !D! damage again."
   },
   "${ModID}:ScavengedShield": {
     "NAME": "Scavenged Shield",
@@ -272,7 +272,7 @@
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
-    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL ${ModID}:Finale: apply !M! Weak and Vulnerable to ALL enemies instead."
+    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL ${ModID}:Solo: Apply !M! Weak and Vulnerable to ALL enemies instead."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Thorny Personality",
@@ -339,7 +339,7 @@
   },
   "${ModID}:FinalFlourish": {
     "NAME": "Final Flourish",
-    "DESCRIPTION": "Gain !M! Strength this turn only. NL ${ModID}:Finale: gain !${ModID}:m2! Strength next turn only instead."
+    "DESCRIPTION": "Gain !M! Strength this turn only. NL ${ModID}:Solo: Gain !${ModID}:m2! Strength next turn only instead."
   },
   "${ModID}:FullHouse": {
     "NAME": "Full House",
