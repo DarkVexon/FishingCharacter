@@ -130,7 +130,7 @@
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Upgrade th top card of your draw pile this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Upgrade the top card of your draw pile this combat."
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
@@ -368,5 +368,9 @@
   "${ModID}:Hook": {
     "NAME": "Hook",
     "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
+  },
+  "${ModID}:NoWhammies": {
+    "NAME": "No Whammies",
+    "DESCRIPTION": "Draw !M! cards. NL If any are Colorless, gain [E]."
   }
 }

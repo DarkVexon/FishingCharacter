@@ -17,36 +17,14 @@ public class Bobber extends AbstractFishingCard {
 
     public Bobber() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseBlock = 12;
+        baseBlock = 9;
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
     }
 
-    private boolean isValid = false;
-
-    @Override
-    public void atTurnStart() {
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                isValid = true;
-            }
-        });
-    }
-
-    @Override
-    public void atTurnStartPreDraw() {
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                isValid = false;
-            }
-        });
-    }
+    public boolean isValid = false;
 
     @Override
     public void triggerWhenDrawn() {

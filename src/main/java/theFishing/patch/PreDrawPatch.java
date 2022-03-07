@@ -9,28 +9,21 @@ import theFishing.FishingMod;
 import theFishing.cards.Bobber;
 import theFishing.util.Wiz;
 
-public class VoyagedPatch {
+public class PreDrawPatch {
 
     @SpirePatch(
             clz = AbstractPlayer.class,
-            method = "applyStartOfTurnPostDrawRelics"
+            method = "applyStartOfTurnRelics"
     )
-    public static class AbstractPlayerApplyStartOfTurnPostDrawRelicsPatch {
+    public static class AbstractPlayerApplyStartOfTurnRelicsPatch {
         public static void Prefix(AbstractPlayer __instance) {
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    FishingMod.determineNonVoyagedCards();
-                }
-            });
             AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
                     for (AbstractCard q : Wiz.getAllCardsInCardGroups(true, false)) {
                         if (q instanceof Bobber) {
-                            ((Bobber) q).isValid = true;
+                            ((Bobber) q).isValid = false;
                         }
                     }
                 }

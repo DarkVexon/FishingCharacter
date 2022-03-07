@@ -17,7 +17,7 @@ public class MopUp extends AbstractFishingCard {
 
     public MopUp() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

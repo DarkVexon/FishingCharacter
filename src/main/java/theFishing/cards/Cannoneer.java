@@ -5,16 +5,15 @@ import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.EasyXCostAction;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class Cannoneeer extends AbstractFishingCard {
-    public final static String ID = makeID("Cannoneeer");
+public class Cannoneer extends AbstractFishingCard {
+    public final static String ID = makeID("Cannoneer");
     // intellij stuff attack, all_enemy, uncommon, 8, 2, , , , 
 
-    public Cannoneeer() {
+    public Cannoneer() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 8;
     }
