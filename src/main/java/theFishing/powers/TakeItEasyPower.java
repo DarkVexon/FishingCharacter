@@ -23,6 +23,6 @@ public class TakeItEasyPower extends AbstractEasyPower {
 
     @Override
     public void updateDescription() {
-        description = "Draw #b" + (amount == 1 ? " fewer card each turn." : " fewer cards each turn.");
+        description = "Draw #b" + amount + (amount == 1 ? " fewer card each turn." : " fewer cards each turn.");
     }
 }
