@@ -373,5 +373,9 @@
   "${ModID}:NoWhammies": {
     "NAME": "No Whammies",
     "DESCRIPTION": "Draw !M! cards. NL If any are Colorless, gain [E]."
+  },
+  "${ModID}:Crosshairs": {
+    "NAME": "Crosshairs",
+    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to a random enemy."
   }
 }

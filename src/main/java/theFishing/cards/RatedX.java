@@ -19,7 +19,7 @@ public class RatedX extends AbstractFishingCard {
 
     public RatedX() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 8;
         baseBlock = 14;
         baseMagicNumber = magicNumber = 1;
     }
@@ -33,8 +33,8 @@ public class RatedX extends AbstractFishingCard {
                 applyToSelfTop(new StrengthPower(p, magicNumber));
             }
             if (effect >= 1) {
-                applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
                 applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
+                applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
             }
             dmgTop(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
             return true;
@@ -42,7 +42,7 @@ public class RatedX extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
         upgradeBlock(4);
         upgradeMagicNumber(1);
     }

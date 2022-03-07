@@ -4,7 +4,7 @@
     "NAMES": [
       "fish"
     ],
-    "DESCRIPTION": "Fish are Colorless 0 cost cards that confer a bonus effect, draw a card, and Exhaust."
+    "DESCRIPTION": "Fish are Colorless #b0 cost cards that confer a bonus effect, draw a card, and #yExhaust."
   },
   {
     "PROPER_NAME": "Voyaged",
@@ -18,6 +18,6 @@
     "NAMES": [
       "consume"
     ],
-    "DESCRIPTION": "When you have Fish in your hand, you will instead Exhaust 1 Fish to pay 1 [E] for this card's cost."
+    "DESCRIPTION": "When you have #yFish in your hand, you will instead #yExhaust #b1 Fish to pay each [E] for this card's cost."
   }
 ]

@@ -3,7 +3,7 @@
     "NAME": "Old Rod",
     "FLAVOR": "I can see the horizon they can't.",
     "DESCRIPTIONS": [
-      "Start the game with an additional #b150 #yGold."
+      "At the start of each combat, shuffle #b2 #yFish into your draw pile."
     ]
   }
 }
