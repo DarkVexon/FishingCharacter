@@ -12,7 +12,7 @@ public class ThatsAllFolks extends AbstractFishingCard {
 
     public ThatsAllFolks() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,6 +23,6 @@ public class ThatsAllFolks extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

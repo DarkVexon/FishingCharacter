@@ -2,6 +2,7 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.MultiCast;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.TheFishing;
@@ -19,7 +20,7 @@ public class XMarksTheSpot extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard q = getRandomItem(getCardsMatchingPredicate(c -> c.cost == -1 && c.color != TheFishing.Enums.FISHING_COLOR && c.color != CardColor.COLORLESS, true));
+        AbstractCard q = getRandomItem(getCardsMatchingPredicate(c -> c.cost == -1 && c.color != TheFishing.Enums.FISHING_COLOR && c.color != CardColor.COLORLESS && !c.cardID.equals(MultiCast.ID), true));
         makeInHand(q);
         if (upgraded) {
             atb(new GainEnergyAction(1));

@@ -1,15 +1,9 @@
 package theFishing.powers;
 
-import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static theFishing.FishingMod.makeID;
 
@@ -20,6 +14,7 @@ public class AnglerFormPower extends AbstractEasyPower {
         super("Angler Form", PowerType.BUFF, false, AbstractDungeon.player, amount);
         isTwoAmount = true;
         amount2 = amount;
+        updateDescription();
     }
 
     @Override
@@ -33,6 +28,7 @@ public class AnglerFormPower extends AbstractEasyPower {
             flash();
             addToBot(new DrawCardAction(1));
             amount2--;
+            updateDescription();
         }
     }
 

@@ -36,7 +36,7 @@ public class PickMe extends AbstractFishingCard implements SpawnModificationCard
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(1);
+        upgradeDamage(1);
+        upgradeBlock(2);
     }
 }

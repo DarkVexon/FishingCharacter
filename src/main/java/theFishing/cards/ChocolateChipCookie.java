@@ -16,7 +16,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
 
     public ChocolateChipCookie() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 4;
         baseSecondMagic = secondMagic = 1;
         exhaust = true;
     }
@@ -28,7 +28,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
         upgradeSecondMagic(1);
     }
 }

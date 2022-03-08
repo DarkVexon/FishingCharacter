@@ -64,8 +64,8 @@
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Draw !M! card. NL Put 1 card from your hand on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Put 1 card from your hand on top of your draw pile."
+    "DESCRIPTION": "Draw !M! card. NL Put 1 card from your hand on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Put 1 card from your hand on top of your draw pile. NL Exhaust."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -150,8 +150,8 @@
   },
   "${ModID}:CatchOfTheDay": {
     "NAME": "Catch of the Day",
-    "DESCRIPTION": "At the start of your turn, shuffle a ${ModID}:Fish into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, shuffle a ${ModID}:Fish into your draw pile."
+    "DESCRIPTION": "At the end of your turn, shuffle a ${ModID}:Fish into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, shuffle a ${ModID}:Fish into your draw pile."
   },
   "${ModID}:Baited": {
     "NAME": "Baited",
@@ -302,7 +302,7 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL X >= 1: apply !M! Weak and Vulnerable. NL X >= 2: gain !M! Strength. NL X >= 4: gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain 1 Strength. NL X >= 4: Gain !B! Block."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",

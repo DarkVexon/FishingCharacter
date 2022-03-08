@@ -33,6 +33,12 @@ public class FeedingFrenzy extends AbstractFishingCard {
                 count++;
             }
         }
+        for (AbstractCard c : p.discardPile.group) {
+            if (c instanceof AbstractFishCard) {
+                addToBot(new ExhaustSpecificCardAction(c, p.discardPile));
+                count++;
+            }
+        }
         for (int i = 0; i < count; i++)
             addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }

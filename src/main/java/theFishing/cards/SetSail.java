@@ -17,6 +17,7 @@ public class SetSail extends AbstractFishingCard {
     public SetSail() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
