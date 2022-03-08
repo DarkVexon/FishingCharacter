@@ -14,7 +14,7 @@ public class Orca extends AbstractFishCard {
     // intellij stuff skill, none, special, , , , , , 
 
     public Orca() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.NONE);
+        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
         magicNumber = baseMagicNumber = 1;
         exhaust = true;
     }

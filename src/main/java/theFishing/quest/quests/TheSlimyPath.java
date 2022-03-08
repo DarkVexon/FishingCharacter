@@ -1,11 +1,12 @@
 package theFishing.quest.quests;
 
-public class TheSlimyPath extends AbstractQuest {
-    private boolean upgraded;
+import theFishing.cards.treasures.AbstractTreasureCard;
+import theFishing.util.Wiz;
 
-    public TheSlimyPath(int goal, boolean upgraded) {
-        super(goal);
-        this.upgraded = upgraded;
+public class TheSlimyPath extends AbstractQuest {
+
+    public TheSlimyPath() {
+        super(3);
     }
 
     @Override
@@ -20,6 +21,6 @@ public class TheSlimyPath extends AbstractQuest {
 
     @Override
     public void grantReward() {
-
+        Wiz.topDeck(AbstractTreasureCard.returnRandomLegendaryTreasure());
     }
 }

@@ -13,7 +13,7 @@ public class Octopus extends AbstractFishCard {
     // intellij stuff skill, none, special, , , , , 2, 1
 
     public Octopus() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.NONE);
+        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
         baseMagicNumber = magicNumber = 3;
         exhaust = true;
     }

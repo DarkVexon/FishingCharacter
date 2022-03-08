@@ -15,7 +15,7 @@ public class Clownfish extends AbstractFishCard {
     // intellij stuff skill, enemy, special, , , , , 2, 1
 
     public Clownfish() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY);
+        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
         exhaust = true;
         baseMagicNumber = magicNumber = 2;
     }

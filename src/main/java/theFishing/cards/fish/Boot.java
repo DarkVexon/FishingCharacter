@@ -13,7 +13,7 @@ public class Boot extends AbstractFishCard {
     // intellij stuff skill, none, special, , , , , 1, 1
 
     public Boot() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.NONE);
+        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
     }
