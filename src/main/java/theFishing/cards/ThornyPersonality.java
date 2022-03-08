@@ -12,7 +12,7 @@ public class ThornyPersonality extends AbstractFishingCard {
     // intellij stuff skill, self, uncommon, , , 8, 2, 2, 1
 
     public ThornyPersonality() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
         baseMagicNumber = magicNumber = 2;
     }

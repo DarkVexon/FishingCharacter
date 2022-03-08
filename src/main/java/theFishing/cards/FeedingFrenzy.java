@@ -15,7 +15,7 @@ public class FeedingFrenzy extends AbstractFishingCard {
     public final static String ID = makeID(FeedingFrenzy.class.getSimpleName());
 
     public FeedingFrenzy() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 7;
     }
 

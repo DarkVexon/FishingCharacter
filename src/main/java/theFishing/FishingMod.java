@@ -25,7 +25,9 @@ import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
 import theFishing.cards.fish.AbstractFishCard;
+import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
+import theFishing.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -42,7 +44,8 @@ public class FishingMod implements
         EditCharactersSubscriber,
         PostBattleSubscriber,
         OnStartBattleSubscriber,
-        CustomSavable<Integer> {
+        CustomSavable<Integer>,
+        PostPlayerUpdateSubscriber {
 
     public static final String modID = "fishing"; //TODO: Change this.
 
@@ -172,10 +175,18 @@ public class FishingMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        QuestHelper.reset();
         for (int i = 0; i < nextCombatFish; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());
         }
         nextCombatFish = 0;
+    }
+
+    @Override
+    public void receivePostPlayerUpdate() {
+        if (Wiz.isInCombat() && !QuestHelper.quests.isEmpty()) {
+            QuestHelper.update();
+        }
     }
 
     public static void determineNonVoyagedCards() {

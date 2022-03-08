@@ -10,7 +10,7 @@ public class ScavengedShield extends AbstractFishingCard {
     // intellij stuff skill, self, common, , , 7, 2, , 
 
     public ScavengedShield() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 7;
     }
 
