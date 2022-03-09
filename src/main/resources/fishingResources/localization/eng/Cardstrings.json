@@ -390,5 +390,18 @@
   "${ModID}:Concentrated": {
     "NAME": "Concentrated",
     "DESCRIPTION": "At the start of your turn, gain [E]."
+  },
+  "${ModID}:PlantFlag": {
+    "NAME": "Plant Flag",
+    "DESCRIPTION": "Put a *Flag on top of your draw pile. NL Next turn, draw 1 additional card.",
+    "UPGRADE_DESCRIPTION": "Put a *Flag+ on top of your draw pile. NL Next turn, draw 1 additional card."
+  },
+  "${ModID}:Flag": {
+    "NAME": "Flag",
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
+  },
+  "${ModID}:MagicRainbowStarBarrage": {
+    "NAME": "Magic Rainbow Star Barrage",
+    "DESCRIPTION": "Deal !D! damage 6 times."
   }
 }

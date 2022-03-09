@@ -61,7 +61,7 @@ public class TheFishing extends CustomPlayer {
         dialogY = (drawY + 240.0F * Settings.scale);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        e.setTimeScale(0.9F);
+        e.setTimeScale(0.85F);
     }
 
     @Override
