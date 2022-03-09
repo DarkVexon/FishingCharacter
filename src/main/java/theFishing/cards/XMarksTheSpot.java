@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -25,6 +26,7 @@ public class XMarksTheSpot extends AbstractFishingCard {
         AbstractCard q = getRandomItem(getCardsMatchingPredicate(c -> c.cost == -1 && c.color != TheFishing.Enums.FISHING_COLOR && c.color != CardColor.COLORLESS && !c.cardID.equals(MultiCast.ID), true));
         if (q.cardID.equals(Tempest.ID)) {
             addToBot(new IncreaseMaxOrbAction(6));
+            atb(new TalkAction(true, "orb? :0", 1.0F, 1.0F));
         }
         makeInHand(q);
         if (upgraded) {

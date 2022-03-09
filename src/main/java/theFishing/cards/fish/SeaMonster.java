@@ -20,7 +20,7 @@ public class SeaMonster extends AbstractFishCard {
     public SeaMonster() {
         super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
         exhaust = true;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

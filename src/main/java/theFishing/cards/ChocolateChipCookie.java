@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,6 +26,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
         atb(new HealAction(p, p, magicNumber));
         applyToSelf(new DexterityPower(p, secondMagic));
         atb(new ArmamentsAction(true));
+        atb(new TalkAction(true, "mmm...", 1.0F, 1.0F));
     }
 
     public void upp() {

@@ -418,7 +418,8 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Take an additional turn after this one, in which you draw 2 fewer cards and gain 1 less [E]. NL Exhaust."
+    "DESCRIPTION": "End your turn and take an additional one, in which you draw !M! fewer cards and gain 1 less [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "End your turn, and take an additional one, in which you draw !M! fewer card and gain 1 less [E]. NL Exhaust."
   },
   "${ModID}:SeeingStars": {
     "NAME": "Seeing Stars",

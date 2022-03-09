@@ -15,7 +15,7 @@ import static theFishing.FishingMod.makeID;
 public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower {
     public static String ID = makeID(VictoryLapPower.class.getSimpleName());
 
-    private static int upgraded = -99;
+    public static int upgraded = -99;
 
     public static boolean upgraded() {
         if (upgraded == -99) {

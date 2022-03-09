@@ -26,6 +26,7 @@ import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
 import theFishing.cards.fish.AbstractFishCard;
+import theFishing.powers.VictoryLapPower;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
 import theFishing.util.Wiz;
@@ -46,7 +47,8 @@ public class FishingMod implements
         PostBattleSubscriber,
         OnStartBattleSubscriber,
         CustomSavable<Integer>,
-        PostPlayerUpdateSubscriber {
+        PostPlayerUpdateSubscriber,
+        StartGameSubscriber {
 
     public static final String modID = "fishing"; //TODO: Change this.
 
@@ -210,5 +212,10 @@ public class FishingMod implements
 
     public static boolean isThisVoyaged(AbstractCard card) {
         return (!nonVoyagedCards.contains(card));
+    }
+
+    @Override
+    public void receiveStartGame() {
+        VictoryLapPower.upgraded = -99;
     }
 }

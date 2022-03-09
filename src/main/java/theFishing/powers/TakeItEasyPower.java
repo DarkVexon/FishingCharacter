@@ -13,12 +13,17 @@ public class TakeItEasyPower extends AbstractEasyPower {
 
     @Override
     public void onInitialApplication() {
-        AbstractDungeon.player.gameHandSize -= 1;
+        AbstractDungeon.player.gameHandSize -= amount;
     }
 
     @Override
     public void stackPower(int stackAmount) {
         AbstractDungeon.player.gameHandSize -= stackAmount;
+    }
+
+    @Override
+    public void onRemove() {
+        AbstractDungeon.player.gameHandSize += amount;
     }
 
     @Override
