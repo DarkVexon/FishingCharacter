@@ -1,14 +1,13 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import theFishing.cards.AbstractFishingCard;
-import theFishing.powers.LambdaPower;
+import theFishing.powers.VictoryLapPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class VictoryLap extends AbstractFishingCard {
     public final static String ID = makeID("VictoryLap");
@@ -20,14 +19,11 @@ public class VictoryLap extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Victory Lap", AbstractPower.PowerType.BUFF, false, p, 2) {
+        applyToSelf(new VictoryLapPower(2));
+    }
 
-
-            @Override
-            public void updateDescription() {
-                description = "Whenever you shuffle your draw pile, add #b" + amount + " #yShivs into your hand.";
-            }
-        });
+    public void triggerOnGlowCheck() {
+        this.glowColor = VictoryLapPower.upgraded() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

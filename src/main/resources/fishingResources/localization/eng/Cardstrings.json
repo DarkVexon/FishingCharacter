@@ -14,7 +14,7 @@
   },
   "${ModID}:Clownfish": {
     "NAME": "Clownfish",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:Guppy": {
     "NAME": "Guppy",
@@ -316,7 +316,13 @@
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
-    "DESCRIPTION": "Whenever you play the last card in your hand, play it twice."
+    "DESCRIPTION": "Whenever you play the last card in your hand, play it twice.",
+    "EXTENDED_DESCRIPTION": [
+      "Finishing Touches",
+      "When you play a card, if it's the only one in your hand, play it twice.",
+      "When you play a card, if it's the only one in your hand, play it #b",
+      " additional times."
+    ]
   },
   "${ModID}:Schooled": {
     "NAME": "Schooled",

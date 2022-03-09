@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -25,6 +26,10 @@ public class SurpriseAttack extends AbstractFishingCard {
         if (isVoyaged()) {
             applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         }
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = isVoyaged() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
