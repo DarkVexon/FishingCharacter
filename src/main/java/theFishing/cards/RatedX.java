@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theFishing.actions.EasyXCostAction;
 
+import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
@@ -21,6 +22,7 @@ public class RatedX extends AbstractFishingCard {
         baseDamage = 8;
         baseBlock = 14;
         baseMagicNumber = magicNumber = 1;
+        tags.add(STAR_IN_ART);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

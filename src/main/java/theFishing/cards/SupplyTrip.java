@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
@@ -19,6 +20,7 @@ public class SupplyTrip extends AbstractFishingCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 5;
         baseBlock = 2;
+        tags.add(STAR_IN_ART);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

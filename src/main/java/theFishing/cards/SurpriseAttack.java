@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
+import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToEnemy;
 
@@ -16,6 +17,7 @@ public class SurpriseAttack extends AbstractFishingCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         baseMagicNumber = magicNumber = 2;
+        tags.add(STAR_IN_ART);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

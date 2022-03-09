@@ -389,7 +389,8 @@
   },
   "${ModID}:Concentrated": {
     "NAME": "Concentrated",
-    "DESCRIPTION": "At the start of your turn, gain [E]."
+    "DESCRIPTION": "At the start of your turn, gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E]."
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
@@ -407,5 +408,9 @@
   "${ModID}:StarOfTheShow": {
     "NAME": "Star of the Show",
     "DESCRIPTION": "Whenever you play a card with a star in its art, gain !M! Vigor."
+  },
+  "${ModID}:RodOfHope": {
+    "NAME": "Rod of Hope",
+    "DESCRIPTION": "Take an additional turn after this one, in which you draw 2 fewer cards and gain 1 less [E]. NL Exhaust."
   }
 }

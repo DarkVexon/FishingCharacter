@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.powers.LambdaPower;
 
+import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
@@ -19,6 +20,7 @@ public class AllOut extends AbstractFishingCard {
     public AllOut() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 9;
+        tags.add(STAR_IN_ART);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

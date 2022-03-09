@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.AbstractFishingCard;
 
+import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
@@ -15,6 +16,7 @@ public class MagicRainbowStarBarrage extends AbstractFishingCard {
     public MagicRainbowStarBarrage() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 2;
+        tags.add(STAR_IN_ART);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
