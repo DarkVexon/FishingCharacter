@@ -163,7 +163,8 @@
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Clove",
-    "DESCRIPTION": "Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
@@ -343,8 +344,8 @@
   },
   "${ModID}:FullHouse": {
     "NAME": "Full House",
-    "DESCRIPTION": "Whenever you start your turn with two or more of the same card in your hand, add an Upgraded copy into your hand that costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you start your turn with two or more of the same card in your hand, add an Upgraded copy into your hand that costs 0 until played."
+    "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! copies into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a card in your draw pile. NL Shuffle !M! copies into your draw pile. NL Exhaust."
   },
   "${ModID}:Fishbones": {
     "NAME": "Fishbones",

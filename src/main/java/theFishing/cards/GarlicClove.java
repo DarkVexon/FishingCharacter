@@ -19,7 +19,7 @@ public class GarlicClove extends AbstractFishingCard {
 
     public GarlicClove() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         exhaust = true;
     }
 
@@ -32,6 +32,7 @@ public class GarlicClove extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        selfRetain = true;
+        uDesc();
     }
 }
