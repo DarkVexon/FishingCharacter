@@ -12,7 +12,7 @@ public class Flag extends AbstractFishingCard {
     // intellij stuff skill, self, special, , , 9, 3, , 
 
     public Flag() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = 9;
         selfRetain = true;
         exhaust = true;

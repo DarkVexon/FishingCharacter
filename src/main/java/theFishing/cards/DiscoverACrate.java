@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.adp;
 import static theFishing.util.Wiz.makeInHand;
 
 public class DiscoverACrate extends AbstractFishingCard {
@@ -29,6 +30,10 @@ public class DiscoverACrate extends AbstractFishingCard {
         }
         makeInHand(sm);
         makeInHand(sa);
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = isVoyaged() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

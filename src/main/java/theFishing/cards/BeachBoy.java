@@ -11,7 +11,7 @@ public class BeachBoy extends AbstractFishingCard {
     // intellij stuff attack, enemy, attack, 5, 1, , , 5, 1
 
     public BeachBoy() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 6;
         baseMagicNumber = magicNumber = 6;
         isInnate = true;

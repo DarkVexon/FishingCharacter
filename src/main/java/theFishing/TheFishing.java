@@ -67,7 +67,7 @@ public class TheFishing extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                73, 73, 0, 99, 5, this, getStartingRelics(),
+                72, 72, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
@@ -104,7 +104,7 @@ public class TheFishing extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 8;
+        return 7;
     }
 
     @Override
@@ -119,7 +119,7 @@ public class TheFishing extends CustomPlayer {
 
     @Override
     public BitmapFont getEnergyNumFont() {
-        return FontHelper.energyNumFontRed;
+        return FontHelper.energyNumFontPurple;
     }
 
     @Override

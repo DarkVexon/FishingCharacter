@@ -1,9 +1,6 @@
 package theFishing.quest.quests;
 
-import theFishing.cards.treasures.AbstractTreasureCard;
-import theFishing.util.Wiz;
-
-public class TheSlimyPath extends AbstractQuest {
+public class TheSlimyPath extends AbstractTreasureQuest {
 
     public TheSlimyPath() {
         super(3);
@@ -15,12 +12,7 @@ public class TheSlimyPath extends AbstractQuest {
     }
 
     @Override
-    public String getDescription() {
-        return "#yQuest: #yExhaust #b" + goal + " #ySlimed. NL #yReward: Put a #yLegendary #yTreasure on top of your draw pile.";
-    }
-
-    @Override
-    public void grantReward() {
-        Wiz.topDeck(AbstractTreasureCard.returnRandomLegendaryTreasure());
+    public String getPreText() {
+        return "#yQuest: #yExhaust #b" + goal + " #ySlimed.";
     }
 }

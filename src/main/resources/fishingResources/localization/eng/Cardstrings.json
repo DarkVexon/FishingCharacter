@@ -403,5 +403,9 @@
   "${ModID}:MagicRainbowStarBarrage": {
     "NAME": "Magic Rainbow Star Barrage",
     "DESCRIPTION": "Deal !D! damage 6 times."
+  },
+  "${ModID}:StarOfTheShow": {
+    "NAME": "Star of the Show",
+    "DESCRIPTION": "Whenever you play a card with a star in its art, gain !M! Vigor."
   }
 }

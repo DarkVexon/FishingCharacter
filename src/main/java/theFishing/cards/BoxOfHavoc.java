@@ -1,13 +1,14 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToEnemy;
-import static theFishing.util.Wiz.forAllMonstersLiving;
+import static theFishing.util.Wiz.*;
 
 public class BoxOfHavoc extends AbstractFishingCard {
     public final static String ID = makeID("BoxOfHavoc");
@@ -24,6 +25,10 @@ public class BoxOfHavoc extends AbstractFishingCard {
             applyToEnemy(q, new WeakPower(q, x, false));
             applyToEnemy(q, new VulnerablePower(q, x, false));
         });
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = adp().hand.size() == 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

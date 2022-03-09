@@ -13,7 +13,7 @@ public class Steal extends AbstractFishingCard {
     // intellij stuff skill, enemy, special, , , , , 1, 1
 
     public Steal() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }

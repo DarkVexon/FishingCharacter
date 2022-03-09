@@ -2,6 +2,7 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -25,6 +26,10 @@ public class ShipRam extends AbstractFishingCard {
         } else {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = isVoyaged() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

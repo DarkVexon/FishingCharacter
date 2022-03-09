@@ -12,7 +12,7 @@ public class Splash extends AbstractFishingCard {
     // intellij stuff attack, self_and_enemy, , 15, 2, 15, 2, , 
 
     public Splash() {
-        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 15;
         baseBlock = 15;
     }
