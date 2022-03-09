@@ -412,5 +412,9 @@
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
     "DESCRIPTION": "Take an additional turn after this one, in which you draw 2 fewer cards and gain 1 less [E]. NL Exhaust."
+  },
+  "${ModID}:SeeingStars": {
+    "NAME": "Seeing Stars",
+    "DESCRIPTION": "Deal !D! damage 3 times. NL If you have Block, apply !M! Weak."
   }
 }
