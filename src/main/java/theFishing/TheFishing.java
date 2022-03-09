@@ -2,10 +2,11 @@ package theFishing;
 
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
+import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -48,8 +49,7 @@ public class TheFishing extends CustomPlayer {
 
 
     public TheFishing(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
-                modID + "Resources/images/char/mainChar/static.scml"));
+        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpineAnimation("fishingResources/images/char/mainChar/NewProject.atlas", "fishingResources/images/char/mainChar/NewProject.json", 1.0F));
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -59,6 +59,9 @@ public class TheFishing extends CustomPlayer {
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
+
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        e.setTimeScale(0.9F);
     }
 
     @Override

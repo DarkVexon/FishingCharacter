@@ -79,32 +79,8 @@ public class QuestHelper {
         }
     }
 
-    public static void onKillEnemy() {
-        for (AbstractQuest q : quests) {
-            q.onKillEnemy();
-        }
-    }
-
     public static void atStartOfTurn() {
 
-    }
-
-    public static void onCardDrawn(AbstractCard card) {
-        for (AbstractQuest q : quests) {
-            q.onCardDrawn(card);
-        }
-    }
-
-    public static void atEndOfTurn() {
-        for (AbstractQuest q : quests) {
-            q.atEndOfTurn();
-        }
-    }
-
-    public static void onExplore() {
-        for (AbstractQuest q : quests) {
-            q.onExplore();
-        }
     }
 
     public static void reset() {
