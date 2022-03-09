@@ -14,7 +14,7 @@
   },
   "${ModID}:Clownfish": {
     "NAME": "Clownfish",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:Guppy": {
     "NAME": "Guppy",
@@ -56,7 +56,7 @@
   },
   "${ModID}:Siren": {
     "NAME": "Siren",
-    "DESCRIPTION": "Enemy loses !M! Strength and !${ModID}:m2! HP. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
@@ -441,5 +441,10 @@
   "${ModID}:Rhaast": {
     "NAME": "Rhaast",
     "DESCRIPTION": "What am I doing here!? NL Deal !D! damage 3 times."
+  },
+  "${ModID}:VictoryLap": {
+    "NAME": "Victory Lap",
+    "DESCRIPTION": "Whenever you shuffle your draw pile, add 2 *Shivs into your hand. NL If you won last run, Upgrade them.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you shuffle your draw pile, add 2 *Shivs into your hand. NL If you won last run, Upgrade them."
   }
 }
