@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.adp;
 import static theFishing.util.Wiz.atb;
 
 public class BeastSlayer extends AbstractFishingCard {

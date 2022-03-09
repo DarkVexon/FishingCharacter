@@ -45,7 +45,7 @@ public abstract class AbstractEasyPower extends AbstractPower {
             region48 = new TextureAtlas.AtlasRegion(normalTexture, 0, 0, normalTexture.getWidth(), normalTexture.getHeight());
         } else if (normalTexture == null) {
             overrideRender = true;
-            Random rng = new Random((long)  this.ID.hashCode());
+            Random rng = new Random((long) this.ID.hashCode());
             renderIconColor = new Color(rng.random(), rng.random(), rng.random(), 1);
         }
 

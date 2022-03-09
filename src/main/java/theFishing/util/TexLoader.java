@@ -54,12 +54,13 @@ public class TexLoader {
     }
 
 
-    @SpirePatch(clz = Texture.class, method="dispose")
+    @SpirePatch(clz = Texture.class, method = "dispose")
     public static class DisposeListener {
         @SpirePrefixPatch
         public static void DisposeListenerPatch(final Texture __instance) {
             textures.entrySet().removeIf(entry -> {
-                if (entry.getValue().equals(__instance)) System.out.println("TextureLoader | Removing Texture: " + entry.getKey());
+                if (entry.getValue().equals(__instance))
+                    System.out.println("TextureLoader | Removing Texture: " + entry.getKey());
                 return entry.getValue().equals(__instance);
             });
         }

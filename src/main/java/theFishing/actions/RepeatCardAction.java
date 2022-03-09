@@ -29,7 +29,7 @@ public class RepeatCardAction extends AbstractGameAction {
             if (target == null) {
                 target = AbstractDungeon.getRandomMonster();
             }
-            GameActionManager.queueExtraCard(funCard, (AbstractMonster)target);
+            GameActionManager.queueExtraCard(funCard, (AbstractMonster) target);
         }
 
         this.isDone = true;

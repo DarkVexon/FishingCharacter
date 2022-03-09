@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 
 public abstract class AbstractFishCard extends AbstractFishingCard {
 
-    public AbstractFishCard(String cardID, int cost, AbstractCard.CardType type,  AbstractCard.CardTarget target) {
+    public AbstractFishCard(String cardID, int cost, AbstractCard.CardType type, AbstractCard.CardTarget target) {
         super(cardID, cost, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);
     }
 

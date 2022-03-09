@@ -1,6 +1,5 @@
 package theFishing.cards.quest;
 
-import basemod.AutoAdd;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,7 +11,6 @@ import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.shuffleIn;
 
-@AutoAdd.Ignore
 public class QuestTimeTheSlimyPath extends AbstractFishingCard {
     public final static String ID = makeID("QuestTimeTheSlimyPath");
     // intellij stuff power, self, rare, , , , , , 

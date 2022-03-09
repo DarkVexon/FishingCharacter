@@ -1,5 +1,8 @@
 package theFishing.quest.quests;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Slimed;
+
 public class TheSlimyPath extends AbstractTreasureQuest {
 
     public TheSlimyPath() {
@@ -14,5 +17,12 @@ public class TheSlimyPath extends AbstractTreasureQuest {
     @Override
     public String getPreText() {
         return "#yQuest: #yExhaust #b" + goal + " #ySlimed.";
+    }
+
+    @Override
+    public void onExhaust(AbstractCard c) {
+        if (c.cardID.equals(Slimed.ID)) {
+            increment();
+        }
     }
 }

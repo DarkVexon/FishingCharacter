@@ -4,10 +4,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.topDeck;
 
 public class PlantFlag extends AbstractFishingCard {
     public final static String ID = makeID("PlantFlag");

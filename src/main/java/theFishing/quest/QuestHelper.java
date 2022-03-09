@@ -73,17 +73,14 @@ public class QuestHelper {
         }
     }
 
-    public static void onCardPlayed(AbstractCard card) {
-        for (AbstractQuest q : quests) {
-            q.onCardPlayed(card);
-        }
-    }
-
-    public static void atStartOfTurn() {
-
-    }
-
     public static void reset() {
         quests = new ArrayList<>();
+    }
+
+
+    public static void onExhaust(AbstractCard c) {
+        for (AbstractQuest q : quests) {
+            q.onExhaust(c);
+        }
     }
 }

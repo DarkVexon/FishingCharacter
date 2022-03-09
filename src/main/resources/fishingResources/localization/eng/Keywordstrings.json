@@ -26,5 +26,20 @@
       "solo"
     ],
     "DESCRIPTION": "Effect triggers only if this card is the only one in your hand."
+  },
+  {
+    "PROPER_NAME": "Quest",
+    "NAMES": [
+      "quest"
+    ],
+    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward."
+  },
+  {
+    "PROPER_NAME": "Legendary Treasure",
+    "NAMES": [
+      "legendary treasure",
+      "legendary_treasure"
+    ],
+    "DESCRIPTION": "Legendary Treasures are really good cards."
   }
 ]

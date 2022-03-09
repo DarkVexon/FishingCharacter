@@ -1,13 +1,10 @@
 package theFishing.cards.treasures;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.cards.AbstractFishingCard;
-import theFishing.cards.fish.*;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 
 public abstract class AbstractTreasureCard extends AbstractFishingCard {
 
@@ -20,7 +17,11 @@ public abstract class AbstractTreasureCard extends AbstractFishingCard {
     public static AbstractCard returnRandomLegendaryTreasure() {
         if (treasuresList == null) {
             treasuresList = new ArrayList<>();
-            //add cards
+            treasuresList.add(new ComicallyLargeSpoon());
+            treasuresList.add(new GoldenLute());
+            treasuresList.add(new OneRing());
+            treasuresList.add(new PastKillingGun());
+            treasuresList.add(new Rhaast());
         }
 
         return treasuresList.get(AbstractDungeon.cardRandomRng.random(treasuresList.size())).makeCopy();

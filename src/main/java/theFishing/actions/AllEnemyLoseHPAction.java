@@ -3,7 +3,6 @@ package theFishing.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,10 +26,8 @@ public class AllEnemyLoseHPAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == this.startDuration) {
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
-            {
-                if (!m.isDeadOrEscaped())
-                {
+            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                if (!m.isDeadOrEscaped()) {
                     AbstractDungeon.effectList.add(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, this.attackEffect));
                 }
             }
@@ -39,10 +36,8 @@ public class AllEnemyLoseHPAction extends AbstractGameAction {
         this.tickDuration();
 
         if (this.isDone) {
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
-            {
-                if (!m.isDeadOrEscaped() && !m.halfDead)
-                {
+            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                if (!m.isDeadOrEscaped() && !m.halfDead) {
                     m.damage(new DamageInfo(this.source, this.amount, DamageInfo.DamageType.HP_LOSS));
                 }
             }

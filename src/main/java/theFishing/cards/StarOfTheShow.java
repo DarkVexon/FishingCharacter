@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import theFishing.FishingMod;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.powers.LambdaPower;
 
 import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class StarOfTheShow extends AbstractFishingCard {
     public final static String ID = makeID("StarOfTheShow");

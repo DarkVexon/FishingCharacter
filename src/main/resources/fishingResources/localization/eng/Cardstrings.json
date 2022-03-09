@@ -294,7 +294,7 @@
   },
   "${ModID}:Steal": {
     "NAME": "Steal",
-    "DESCRIPTION": "Enemy loses !M! Strength. NL Gain 1 Strength. NL Exhaust."
+    "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
   },
   "${ModID}:SetupButWithRetain": {
     "NAME": "Setup but with Retain",
@@ -416,5 +416,29 @@
   "${ModID}:SeeingStars": {
     "NAME": "Seeing Stars",
     "DESCRIPTION": "Deal !D! damage 3 times. NL If you have Block, apply !M! Weak."
+  },
+  "${ModID}:QuestTimeTheSlimyPath": {
+    "NAME": "Quest Time: The Slimy Path",
+    "DESCRIPTION": "Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile."
+  },
+  "${ModID}:GoldenLute": {
+    "NAME": "Golden Lute",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Stun the enemy for one turn. NL Exhaust."
+  },
+  "${ModID}:PastKillingGun": {
+    "NAME": "Past Killing Gun",
+    "DESCRIPTION": "Deal !D! damage. NL At the end of this combat, heal !M! HP. NL Exhaust."
+  },
+  "${ModID}:ComicallyLargeSpoon": {
+    "NAME": "Comically Large Spoon",
+    "DESCRIPTION": "Only a spoonful. NL Deal !D! damage. NL Exhaust."
+  },
+  "${ModID}:OneRing": {
+    "NAME": "One Ring",
+    "DESCRIPTION": "Gain !M! Intangible. NL Lose 2 Max HP. NL Exhaust."
+  },
+  "${ModID}:Rhaast": {
+    "NAME": "Rhaast",
+    "DESCRIPTION": "What am I doing here!? NL Deal !D! damage 3 times."
   }
 }

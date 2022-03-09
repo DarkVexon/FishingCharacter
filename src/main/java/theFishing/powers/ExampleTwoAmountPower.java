@@ -9,7 +9,8 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.FishingMod;
 
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.adp;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class ExampleTwoAmountPower extends AbstractEasyPower implements OnReceivePowerPower {
     // intellij stuff Example, buff, false
@@ -33,7 +34,7 @@ public class ExampleTwoAmountPower extends AbstractEasyPower implements OnReceiv
     @Override
     public boolean onReceivePower(AbstractPower pow, AbstractCreature target, AbstractCreature source) {
         if (pow instanceof ExampleTwoAmountPower && target == owner)
-            amount2 += ((ExampleTwoAmountPower)pow).amount2;
+            amount2 += ((ExampleTwoAmountPower) pow).amount2;
         return true;
     }
 

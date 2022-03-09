@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.adp;
 import static theFishing.util.Wiz.makeInHand;
 
 public class DiscoverACrate extends AbstractFishingCard {

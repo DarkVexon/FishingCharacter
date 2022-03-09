@@ -3,7 +3,6 @@ package theFishing.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -35,8 +34,8 @@ public class DrawSpecificColorCardAction extends AbstractGameAction {
             Iterator var2 = this.p.drawPile.group.iterator();
 
             AbstractCard card;
-            while(var2.hasNext() && counter < amount) {
-                card = (AbstractCard)var2.next();
+            while (var2.hasNext() && counter < amount) {
+                card = (AbstractCard) var2.next();
                 if (card.color == colorMatch) {
                     tmp.addToRandomSpot(card);
                     counter++;
@@ -49,7 +48,7 @@ public class DrawSpecificColorCardAction extends AbstractGameAction {
             }
 
 
-            for(int i = 0; i < counter; ++i) {
+            for (int i = 0; i < counter; ++i) {
                 if (!tmp.isEmpty()) {
                     tmp.shuffle();
                     card = tmp.getBottomCard();
