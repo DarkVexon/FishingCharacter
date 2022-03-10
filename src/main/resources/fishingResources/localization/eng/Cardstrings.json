@@ -178,11 +178,6 @@
     "NAME": "Bobber",
     "DESCRIPTION": "Unplayable. NL If you draw this during your turn, gain !B! Block and !M! Strength."
   },
-  "${ModID}:Tackle Box": {
-    "NAME": "Tackle Box",
-    "DESCRIPTION": "At the start of your turn, draw !M! Colorless card.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, draw !M! Colorless cards."
-  },
   "${ModID}:BombFishing": {
     "NAME": "Bomb Fishing",
     "DESCRIPTION": "Shuffle one *Surprise! and !M! *Dazed into your draw pile. NL Exhaust."
@@ -260,7 +255,7 @@
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL If you're on Steam Deck, gain !${ModID}:m2! Artifact."
+    "DESCRIPTION": "Gain !M! *Plated *Armor. NL If you're on Steam Deck, gain !${ModID}:m2! Artifact."
   },
   "${ModID}:ShipRam": {
     "NAME": "Ship Ram",
@@ -362,7 +357,7 @@
   },
   "${ModID}:AnchorsAweigh": {
     "NAME": "Anchors Aweigh",
-    "DESCRIPTION": "Startup: Gain !M! Block. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Startup: Gain !M! Block and [E]. NL Gain !B! Block. NL Next turn, gain [E]. NL Exhaust."
   },
   "${ModID}:PickMe": {
     "NAME": "Pick Me!",
@@ -391,7 +386,7 @@
   "${ModID}:TackleBox": {
     "NAME": "Tackle Box",
     "DESCRIPTION": "At the start of your turn, draw !M! Colorless card.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, draw !M! Colorless cards."
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! Colorless card."
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",

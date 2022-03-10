@@ -40,6 +40,6 @@ public class SnaggedPower extends AbstractEasyPower implements HealthBarRenderPo
 
     @Override
     public void updateDescription() {
-        description = "At the start of its turn, " + owner.name + " loses #b" + amount + "HP.";
+        description = "At the start of its turn, " + owner.name + " loses #b" + amount + " HP.";
     }
 }

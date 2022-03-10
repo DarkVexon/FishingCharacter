@@ -15,8 +15,8 @@ public class Harpoon extends AbstractFishingCard {
 
     public Harpoon() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 18;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 20;
+        baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }
 

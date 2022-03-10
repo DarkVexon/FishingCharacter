@@ -2,11 +2,15 @@ package theFishing.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class AnchorsAweigh extends AbstractFishingCard implements StartupCard {
     public final static String ID = makeID("AnchorsAweigh");
@@ -21,11 +25,13 @@ public class AnchorsAweigh extends AbstractFishingCard implements StartupCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        applyToSelf(new EnergizedPower(p, 1));
     }
 
     @Override
     public boolean atBattleStartPreDraw() {
         addToBot(new GainBlockAction(AbstractDungeon.player, magicNumber));
+        atb(new GainEnergyAction(1));
         return true;
     }
 

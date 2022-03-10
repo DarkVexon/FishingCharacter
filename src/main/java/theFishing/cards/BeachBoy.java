@@ -15,8 +15,8 @@ public class BeachBoy extends AbstractFishingCard {
 
     public BeachBoy() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 6;
+        baseDamage = 5;
+        baseMagicNumber = magicNumber = 5;
         isInnate = true;
         selfRetain = true;
         tags.add(STAR_IN_ART);

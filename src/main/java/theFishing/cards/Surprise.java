@@ -23,12 +23,12 @@ public class Surprise extends AbstractFishingCard {
 
     @Override
     public void triggerWhenDrawn() {
-        addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(30, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+        addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(22, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = "This is a bomb.";
+        cantUseMessage = "this is a bomb";
         return false;
     }
 
