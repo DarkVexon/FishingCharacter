@@ -60,7 +60,7 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw 2 cards."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
@@ -418,7 +418,7 @@
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
     "DESCRIPTION": "End your turn and take an additional one, in which you draw !M! fewer cards and gain 1 less [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "End your turn, and take an additional one, in which you draw !M! fewer card and gain 1 less [E]. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "End your turn and take an additional one, in which you draw !M! fewer card and gain 1 less [E]. NL Exhaust."
   },
   "${ModID}:SeeingStars": {
     "NAME": "Seeing Stars",

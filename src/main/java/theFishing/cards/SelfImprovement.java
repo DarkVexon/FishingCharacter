@@ -3,6 +3,7 @@ package theFishing.cards;
 import basemod.cardmods.RetainMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.ApplyCardModifierAction;
@@ -22,12 +23,13 @@ public class SelfImprovement extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SelectCardsInHandAction("to Upgrade and Retain.", (cards) -> {
-            att(new ApplyCardModifierAction(cards.get(0), new RetainMod()));
+            AbstractCard c = cards.get(0);
+            att(new ApplyCardModifierAction(c, new RetainMod()));
             att(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
-                    cards.get(0).upgrade();
+                    c.upgrade();
                 }
             });
         }));

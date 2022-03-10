@@ -15,8 +15,8 @@ public class CastLine extends AbstractFishingCard {
     // intellij stuff skill, self, basic, , , , , 2, 1
 
     public CastLine() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
         tags.add(STAR_IN_ART);
     }
 
@@ -24,7 +24,6 @@ public class CastLine extends AbstractFishingCard {
         for (int i = 0; i < magicNumber; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());
         }
-        atb(new DrawCardAction(2));
     }
 
     public void upp() {

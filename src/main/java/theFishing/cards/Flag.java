@@ -11,7 +11,7 @@ public class Flag extends AbstractFishingCard {
 
     public Flag() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = 9;
+        baseBlock = 8;
         selfRetain = true;
         exhaust = true;
     }
@@ -21,6 +21,6 @@ public class Flag extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 }

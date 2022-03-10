@@ -17,13 +17,7 @@ public class PreDrawPatch {
     )
     public static class AbstractPlayerApplyStartOfTurnRelicsPatch {
         public static void Prefix(AbstractPlayer __instance) {
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    DRAWN_DURING_TURN = false;
-                    isDone = true;
-                }
-            });
+            DRAWN_DURING_TURN = false;
         }
     }
 }

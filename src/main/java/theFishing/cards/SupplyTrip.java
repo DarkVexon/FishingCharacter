@@ -27,7 +27,7 @@ public class SupplyTrip extends AbstractFishingCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                int toDraw = this.amount - AbstractDungeon.player.hand.size();
+                int toDraw = magicNumber - AbstractDungeon.player.hand.size();
                 if (toDraw > 0) {
                     for (int i = 0; i < toDraw; i++) {
                         att(new GainBlockAction(p, block));

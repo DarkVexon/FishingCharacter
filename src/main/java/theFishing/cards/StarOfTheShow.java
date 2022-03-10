@@ -41,7 +41,7 @@ public class StarOfTheShow extends AbstractFishingCard {
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (card.hasTag(FishingMod.STAR_IN_ART) || StarOfTheShow.isBasegameStarCard(card.cardID)) {
-                    flash();
+                    flashWithoutSound();
                     atb(new ApplyPowerAction(owner, owner, new VigorPower(owner, amount), amount));
                 }
             }

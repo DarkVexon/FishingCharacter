@@ -20,6 +20,7 @@ public class AnglerFormPower extends AbstractEasyPower {
     @Override
     public void atStartOfTurn() {
         amount2 = amount;
+        updateDescription();
     }
 
     @Override

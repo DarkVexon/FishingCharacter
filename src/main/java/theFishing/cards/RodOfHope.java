@@ -5,10 +5,12 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
+import com.megacrit.cardcrawl.cards.green.Blur;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import theFishing.FishingMod;
 import theFishing.powers.LambdaPower;
@@ -29,6 +31,7 @@ public class RodOfHope extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        applyToSelf(new BlurPower(p, 1));
         applyToSelf(new LambdaPower("Draw Less Next Turn", AbstractPower.PowerType.DEBUFF, true, p, magicNumber) {
 
             @Override

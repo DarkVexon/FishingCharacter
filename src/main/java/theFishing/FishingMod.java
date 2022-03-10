@@ -26,6 +26,7 @@ import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
 import theFishing.cards.fish.AbstractFishCard;
+import theFishing.patch.PreDrawPatch;
 import theFishing.powers.VictoryLapPower;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
@@ -182,6 +183,7 @@ public class FishingMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         QuestHelper.reset();
+        PreDrawPatch.DRAWN_DURING_TURN = false;
         for (int i = 0; i < nextCombatFish; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());
         }
