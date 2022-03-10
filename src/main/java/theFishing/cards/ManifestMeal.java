@@ -1,12 +1,16 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import theFishing.actions.EasyXCostAction;
 
+import java.util.ArrayList;
+
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.makeInHand;
+import static theFishing.util.Wiz.*;
 
 public class ManifestMeal extends AbstractFishingCard {
     public final static String ID = makeID("ManifestMeal");
@@ -14,7 +18,7 @@ public class ManifestMeal extends AbstractFishingCard {
 
     public ManifestMeal() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 0;
+        baseMagicNumber = magicNumber = 1;
         cardsToPreview = new Food();
     }
 
@@ -22,10 +26,12 @@ public class ManifestMeal extends AbstractFishingCard {
         atb(new EasyXCostAction(this, (effect, params) -> {
             Food q = new Food();
             q.setX(effect + params[0]);
-            makeInHand(q);
+            att(new MakeTempCardInDrawPileAction(q, 1, false, true));
             return true;
         }, magicNumber));
+        applyToSelf(new DrawCardNextTurnPower(p, 1));
     }
+
 
     public void upp() {
         upgradeMagicNumber(1);

@@ -2,8 +2,11 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -28,6 +31,15 @@ public class Food extends AbstractFishingCard {
         sb.append(". NL Exhaust.");
         this.rawDescription = sb.toString();
         this.initializeDescription();
+    }
+
+
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard card = super.makeStatEquivalentCopy();
+        card.baseMagicNumber = this.baseMagicNumber;
+        card.magicNumber = this.magicNumber;
+        card.description = (ArrayList)this.description.clone();
+        return card;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

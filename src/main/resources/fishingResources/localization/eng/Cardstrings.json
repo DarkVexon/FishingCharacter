@@ -206,8 +206,8 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "Manifest Meal",
-    "DESCRIPTION": "Add a *Food into your hand.",
-    "UPGRADE_DESCRIPTION": "Add a *Food with X+1 into your hand."
+    "DESCRIPTION": "Put a *Food with X+1 on top of your draw pile. NL Draw 1 additional card next turn.",
+    "UPGRADE_DESCRIPTION": "Put a *Food with X+2 on top of your draw pile. NL Draw 1 additional card next turn."
   },
   "${ModID}:Food": {
     "NAME": "Food",

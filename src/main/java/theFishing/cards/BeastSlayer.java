@@ -19,8 +19,8 @@ public class BeastSlayer extends AbstractFishingCard {
 
     public BeastSlayer() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 12;
-        baseSecondDamage = secondDamage = 25;
+        baseDamage = 13;
+        baseSecondDamage = secondDamage = 28;
         tags.add(STAR_IN_ART);
     }
 
