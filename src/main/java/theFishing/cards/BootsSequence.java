@@ -17,6 +17,7 @@ public class BootsSequence extends AbstractFishingCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
         cardsToPreview = new Octopus();
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -26,6 +27,7 @@ public class BootsSequence extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        exhaust = false;
+        uDesc();
     }
 }

@@ -10,7 +10,7 @@ public class ItWasTHIIIIIIISBig extends AbstractFishingCard {
     public final static String ID = makeID(ItWasTHIIIIIIISBig.class.getSimpleName());
 
     public ItWasTHIIIIIIISBig() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         magicNumber = baseMagicNumber = 3;
         exhaust = true;
     }
@@ -20,7 +20,6 @@ public class ItWasTHIIIIIIISBig extends AbstractFishingCard {
     }
 
     public void upp() {
-        upMagic(1);
-        uDesc();
+        upgradeBaseCost(1);
     }
 }

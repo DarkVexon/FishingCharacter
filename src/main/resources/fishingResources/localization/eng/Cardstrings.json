@@ -111,10 +111,9 @@
     "DESCRIPTION": "Scry X+1. NL Play the top card of your draw pile.",
     "UPGRADE_DESCRIPTION": "Scry X+2. NL Play the top card of your draw pile."
   },
-  "${ModID}:SelfImprovement": {
-    "NAME": "Self Improvement",
-    "DESCRIPTION": "Choose a card in your hand. Upgrade it and give it Retain this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in your hand. Upgrade it and give it Retain this combat."
+  "${ModID}:RodSlam": {
+    "NAME": "Rod Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 fewer card next turn."
   },
   "${ModID}:FishCannon": {
     "NAME": "Fish Cannon",
@@ -184,7 +183,7 @@
   },
   "${ModID}:Surprise": {
     "NAME": "Surprise!",
-    "DESCRIPTION": "Unplayable. Ethereal. When this card is drawn, deal 30 damage to ALL enemies."
+    "DESCRIPTION": "Unplayable. Ethereal. When this card is drawn, deal 22 damage to ALL enemies."
   },
   "${ModID}:Harpoon": {
     "NAME": "Harpoon",
@@ -215,7 +214,8 @@
   },
   "${ModID}:BootsSequence": {
     "NAME": "Calimari",
-    "DESCRIPTION": "Shuffle !M! *Octopi into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Shuffle !M! *Octopi into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle !M! *Octopi into your draw pile."
   },
   "${ModID}:DiscoverACrate": {
     "NAME": "Discover a Crate",
@@ -390,8 +390,8 @@
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
-    "DESCRIPTION": "At the start of your turn, gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E]."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL Ethereal. NL At the start of your turn, gain [E]."
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
@@ -448,5 +448,23 @@
     "NAME": "Victory Lap",
     "DESCRIPTION": "Whenever you shuffle your draw pile, add 2 *Shivs into your hand. NL If you won last run, Upgrade them.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you shuffle your draw pile, add 2 *Shivs into your hand. NL If you won last run, Upgrade them."
+  },
+  "${ModID}:Starfish": {
+    "NAME": "Starfish",
+    "DESCRIPTION": "Return a card from your discard pile to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Return a card from your discard pile to your hand. NL Exhaust."
+  },
+  "${ModID}:Maw": {
+    "NAME": "Maw",
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:Eel": {
+    "NAME": "Eel",
+    "DESCRIPTION": "Gain [E]. NL Draw 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:SearingSight": {
+    "NAME": "Searing Sight",
+    "DESCRIPTION": "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded any number of times."
   }
 }

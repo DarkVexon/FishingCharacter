@@ -4,7 +4,7 @@
     <groupId>UnimportantInfo</groupId>
 
     <artifactId>TheFishing</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>The Fishing</name>
     <description>An fisherperson.</description>
     <!-- Change the above for mod information. -->

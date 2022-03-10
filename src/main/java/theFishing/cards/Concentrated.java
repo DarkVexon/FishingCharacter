@@ -13,7 +13,7 @@ public class Concentrated extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , 2, -1
 
     public Concentrated() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         isEthereal = true;
         tags.add(STAR_IN_ART);
     }

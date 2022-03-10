@@ -16,7 +16,7 @@ public class QuestHelper {
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
 
     public static final float POSITION_X = 10F * Settings.scale;
-    public static final float POSITION_Y = 250F * Settings.scale;
+    public static final float POSITION_Y = 300F * Settings.scale;
 
     static {
         for (int i = 0; i < 15; i++) {
