@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 
+import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;
@@ -20,6 +21,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
         baseMagicNumber = magicNumber = 4;
         baseSecondMagic = secondMagic = 1;
         exhaust = true;
+        tags.add(STAR_IN_ART);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

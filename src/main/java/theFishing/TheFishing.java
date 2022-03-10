@@ -49,7 +49,7 @@ public class TheFishing extends CustomPlayer {
 
 
     public TheFishing(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpineAnimation("fishingResources/images/char/mainChar/NewProject.atlas", "fishingResources/images/char/mainChar/NewProject.json", 1.0F));
+        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpineAnimation("fishingResources/images/char/mainChar/NewProject.atlas", "fishingResources/images/char/mainChar/NewProject.json", 0.8F));
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -61,7 +61,7 @@ public class TheFishing extends CustomPlayer {
         dialogY = (drawY + 240.0F * Settings.scale);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        e.setTimeScale(0.8F);
+        e.setTimeScale(0.6F);
     }
 
     @Override
