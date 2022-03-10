@@ -24,8 +24,8 @@ public class Splash extends AbstractFishingCard {
 
     @Override
     public void applyPowers() {
-        int realBaseDamage = upgraded ? 18 : 15;
-        int realBaseBlock = upgraded ? 18 : 15;
+        int realBaseDamage = upgraded ? 17 : 15;
+        int realBaseBlock = upgraded ? 17 : 15;
         int modifier = (int) AbstractDungeon.player.hand.group.stream().filter(c -> c != this).count() * 2;
         baseDamage -= modifier;
         baseBlock -= modifier;
@@ -37,7 +37,7 @@ public class Splash extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
-        upgradeBlock(3);
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 }

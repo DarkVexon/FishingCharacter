@@ -256,7 +256,7 @@
   },
   "${ModID}:Splash": {
     "NAME": "Splash",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. This card's damage and Block are reduced by 2 for each other card in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL This card's damage and Block are reduced by 2 for each other card in your hand."
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
@@ -426,7 +426,8 @@
   },
   "${ModID}:QuestTimeTheSlimyPath": {
     "NAME": "Quest Time: The Slimy Path",
-    "DESCRIPTION": "Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile."
+    "DESCRIPTION": "Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile."
   },
   "${ModID}:GoldenLute": {
     "NAME": "Golden Lute",
