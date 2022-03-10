@@ -22,7 +22,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
 import theFishing.cards.Strike;
-import theFishing.relics.OldRod;
+import theFishing.relics.TheRod;
 
 import java.util.ArrayList;
 
@@ -86,7 +86,7 @@ public class TheFishing extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(OldRod.ID);
+        retVal.add(TheRod.ID);
         return retVal;
     }
 

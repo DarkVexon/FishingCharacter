@@ -2,12 +2,9 @@ package theFishing.patch;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
-import theFishing.cards.Bobber;
-import theFishing.util.Wiz;
 
 public class VoyagedPatch {
 
@@ -21,18 +18,8 @@ public class VoyagedPatch {
                 @Override
                 public void update() {
                     isDone = true;
-                    FishingMod.determineNonVoyagedCards();
-                }
-            });
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    for (AbstractCard q : Wiz.getAllCardsInCardGroups(true, false)) {
-                        if (q instanceof Bobber) {
-                            ((Bobber) q).isValid = true;
-                        }
-                    }
+                    PreDrawPatch.DRAWN_DURING_TURN = true;
+                    FishingMod.voyagedCards.clear();
                 }
             });
         }

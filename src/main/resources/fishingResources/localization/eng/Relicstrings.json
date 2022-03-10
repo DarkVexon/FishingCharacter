@@ -1,7 +1,7 @@
 {
-  "${ModID}:OldRod": {
-    "NAME": "Old Rod",
-    "FLAVOR": "I can see the horizon they can't.",
+  "${ModID}:TheRod": {
+    "NAME": "The Rod",
+    "FLAVOR": "ting!",
     "DESCRIPTIONS": [
       "At the start of each combat, shuffle #b2 #yFish into your draw pile."
     ]

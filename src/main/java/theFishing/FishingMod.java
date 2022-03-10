@@ -79,7 +79,7 @@ public class FishingMod implements
     @SpireEnum
     public static AbstractCard.CardTags STAR_IN_ART;
 
-    private static ArrayList<AbstractCard> nonVoyagedCards = new ArrayList<>();
+    public static ArrayList<AbstractCard> voyagedCards = new ArrayList<>();
 
     public static int nextCombatFish;
 
@@ -176,7 +176,7 @@ public class FishingMod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        nonVoyagedCards.clear();
+        voyagedCards.clear();
     }
 
     @Override
@@ -195,11 +195,6 @@ public class FishingMod implements
         }
     }
 
-    public static void determineNonVoyagedCards() {
-        nonVoyagedCards.clear();
-        nonVoyagedCards.addAll(AbstractDungeon.player.hand.group);
-    }
-
     @Override
     public Integer onSave() {
         return nextCombatFish;
@@ -211,7 +206,7 @@ public class FishingMod implements
     }
 
     public static boolean isThisVoyaged(AbstractCard card) {
-        return (!nonVoyagedCards.contains(card));
+        return (voyagedCards.contains(card));
     }
 
     @Override

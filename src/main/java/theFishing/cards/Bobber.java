@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import theFishing.patch.PreDrawPatch;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
@@ -21,11 +22,9 @@ public class Bobber extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
     }
 
-    public boolean isValid = false;
-
     @Override
     public void triggerWhenDrawn() {
-        if (isValid) {
+        if (PreDrawPatch.DRAWN_DURING_TURN) {
             blck();
             applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
         }
@@ -38,7 +37,7 @@ public class Bobber extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 }

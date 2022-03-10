@@ -28,13 +28,14 @@ public class AllOut extends AbstractFishingCard {
 
             @Override
             public void atEndOfTurn(boolean isPlayer) {
+                int x = this.amount;
                 atb(new AbstractGameAction() {
                     @Override
                     public void update() {
                         isDone = true;
                         if (AbstractDungeon.player.hand.size() == 0) {
                             flash();
-                            att(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AttackEffect.SLASH_DIAGONAL));
+                            att(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.SLASH_DIAGONAL));
                         }
                     }
                 });

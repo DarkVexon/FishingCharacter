@@ -60,7 +60,7 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw a card."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw 2 cards."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
@@ -89,7 +89,7 @@
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! cards.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! cards."
   },
   "${ModID}:SurpriseAttack": {
@@ -219,9 +219,8 @@
     "DESCRIPTION": "Deal !D! damage to a random enemy X times."
   },
   "${ModID}:BootsSequence": {
-    "NAME": "Boots Sequence",
-    "DESCRIPTION": "Put !M! *Boots on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put !M! *Boots on top of your draw pile. NL Draw 1 additional card next turn. NL Exhaust."
+    "NAME": "Calimari",
+    "DESCRIPTION": "Shuffle !M! *Octopi into your draw pile. NL Exhaust."
   },
   "${ModID}:DiscoverACrate": {
     "NAME": "Discover a Crate",

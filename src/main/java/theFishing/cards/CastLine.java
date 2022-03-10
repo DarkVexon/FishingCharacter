@@ -24,7 +24,7 @@ public class CastLine extends AbstractFishingCard {
         for (int i = 0; i < magicNumber; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());
         }
-        atb(new DrawCardAction(1));
+        atb(new DrawCardAction(2));
     }
 
     public void upp() {

@@ -6,10 +6,10 @@ import theFishing.cards.fish.AbstractFishCard;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.shuffleIn;
 
-public class OldRod extends AbstractEasyRelic {
-    public static final String ID = makeID("OldRod");
+public class TheRod extends AbstractEasyRelic {
+    public static final String ID = makeID("TheRod");
 
-    public OldRod() {
+    public TheRod() {
         super(ID, RelicTier.STARTER, LandingSound.FLAT, TheFishing.Enums.FISHING_COLOR);
     }
 

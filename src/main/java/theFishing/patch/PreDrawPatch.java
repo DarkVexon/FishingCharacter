@@ -9,6 +9,7 @@ import theFishing.cards.Bobber;
 import theFishing.util.Wiz;
 
 public class PreDrawPatch {
+    public static boolean DRAWN_DURING_TURN = false;
 
     @SpirePatch(
             clz = AbstractPlayer.class,
@@ -16,16 +17,11 @@ public class PreDrawPatch {
     )
     public static class AbstractPlayerApplyStartOfTurnRelicsPatch {
         public static void Prefix(AbstractPlayer __instance) {
-
             AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
                 @Override
                 public void update() {
+                    DRAWN_DURING_TURN = false;
                     isDone = true;
-                    for (AbstractCard q : Wiz.getAllCardsInCardGroups(true, false)) {
-                        if (q instanceof Bobber) {
-                            ((Bobber) q).isValid = false;
-                        }
-                    }
                 }
             });
         }
