@@ -20,9 +20,12 @@ public class Steal extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.hasPower(StrengthPower.POWER_ID)) {
-            int x = Math.min(magicNumber, m.getPower(StrengthPower.POWER_ID).amount);
-            applyToEnemy(m, new StrengthPower(m, -x));
-            applyToSelf(new StrengthPower(p, x));
+            int found = m.getPower(StrengthPower.POWER_ID).amount;
+            if (found > 0) {
+                int x = Math.min(magicNumber, found);
+                applyToEnemy(m, new StrengthPower(m, -x));
+                applyToSelf(new StrengthPower(p, x));
+            }
         }
     }
 

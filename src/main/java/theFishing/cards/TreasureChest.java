@@ -16,6 +16,7 @@ public class TreasureChest extends AbstractFishingCard {
         baseMagicNumber = magicNumber = 20;
         isEthereal = true;
         exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

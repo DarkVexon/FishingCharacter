@@ -22,8 +22,10 @@ public abstract class AbstractTreasureCard extends AbstractFishingCard {
             treasuresList.add(new OneRing());
             treasuresList.add(new PastKillingGun());
             treasuresList.add(new Rhaast());
+            treasuresList.add(new HolyGrail());
+            treasuresList.add(new MacGuffin());
         }
 
-        return treasuresList.get(AbstractDungeon.cardRandomRng.random(treasuresList.size())).makeCopy();
+        return treasuresList.get(AbstractDungeon.cardRandomRng.random(treasuresList.size() - 1)).makeCopy();
     }
 }

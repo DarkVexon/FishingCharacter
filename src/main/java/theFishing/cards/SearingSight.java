@@ -32,10 +32,17 @@ public class SearingSight extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         for (int i = 0; i < magicNumber; i++) {
-            cardsList.add(AbstractDungeon.returnTrulyRandomCardInCombat());
+            AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat();
+            if (timesUpgraded >= 3) {
+                c.upgrade();
+            }
+            cardsList.add(c);
         }
         atb(new SelectCardsCenteredAction(cardsList, "to add into your hand.", (cards) -> {
             AbstractCard q = cards.get(0);
+            if (timesUpgraded >= 6) {
+                q.freeToPlayOnce = true;
+            }
             att(new MakeTempCardInHandAction(q, true));
         }));
     }
@@ -46,6 +53,15 @@ public class SearingSight extends AbstractFishingCard {
         this.upgraded = true;
         this.name = cardStrings.NAME + "+" + this.timesUpgraded;
         this.initializeTitle();
+
+        if (timesUpgraded == 3) {
+            rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
+            initializeDescription();
+        }
+        else if (timesUpgraded == 6) {
+            rawDescription = cardStrings.EXTENDED_DESCRIPTION[1];
+            initializeDescription();
+        }
     }
 
     @Override

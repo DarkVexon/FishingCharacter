@@ -22,6 +22,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
         baseSecondMagic = secondMagic = 1;
         exhaust = true;
         tags.add(STAR_IN_ART);
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

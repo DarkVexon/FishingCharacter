@@ -19,7 +19,6 @@ public class VoyagedPatch {
                 public void update() {
                     isDone = true;
                     PreDrawPatch.DRAWN_DURING_TURN = true;
-                    FishingMod.voyagedCards.clear();
                 }
             });
         }

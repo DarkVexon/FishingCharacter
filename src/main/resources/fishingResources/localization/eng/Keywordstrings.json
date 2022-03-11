@@ -11,7 +11,7 @@
     "NAMES": [
       "voyaged"
     ],
-    "DESCRIPTION": "Effect triggers only you drew this card during your turn, outside of the opening draw."
+    "DESCRIPTION": "Effect triggers only if you drew this card during your turn, outside of the opening draw."
   },
   {
     "PROPER_NAME": "Consume",

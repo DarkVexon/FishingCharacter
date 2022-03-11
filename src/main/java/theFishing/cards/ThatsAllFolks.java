@@ -14,7 +14,7 @@ public class ThatsAllFolks extends AbstractFishingCard {
 
     public ThatsAllFolks() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
