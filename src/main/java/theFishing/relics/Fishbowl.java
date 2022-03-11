@@ -27,4 +27,9 @@ public class Fishbowl extends AbstractEasyRelic {
         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(AbstractFishCard.returnRandomFish(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(AbstractFishCard.returnRandomFish(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
     }
+
+    @Override
+    public boolean canSpawn() {
+        return false;
+    }
 }

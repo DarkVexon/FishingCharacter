@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -35,8 +36,6 @@ public class SearingSight extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new BorderFlashEffect(Color.VIOLET, true)));
-        atb(new VFXAction(new GiantEyeEffect(p.hb.cX, p.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.8F, 1.0F, 0.0F))));
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         for (int i = 0; i < magicNumber; i++) {
             AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat();
@@ -52,6 +51,7 @@ public class SearingSight extends AbstractFishingCard {
             }
             att(new MakeTempCardInHandAction(q, timesUpgraded > 10 ? 2 : 1, true));
         }));
+        atb(new VFXAction(new GiantEyeEffect(p.hb.cX, p.hb.cY + 100.0F * Settings.scale, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 0.0F))));
     }
 
     public void upgrade() {

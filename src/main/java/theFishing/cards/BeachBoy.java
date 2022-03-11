@@ -27,7 +27,7 @@ public class BeachBoy extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new CollectorStakeEffect(m.hb.cX, m.hb.cY), 2.0F));
+        atb(new VFXAction(new CollectorStakeEffect(m.hb.cX, m.hb.cY), 1F));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         applyToEnemy(m, new SnaggedPower(m, magicNumber));
     }

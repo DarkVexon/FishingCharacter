@@ -24,7 +24,7 @@ public class RodSlam extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SMASH);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         AbstractPower p2 = new DrawReductionPower(p, 1);
         ReflectionHacks.setPrivate(p2, DrawReductionPower.class, "justApplied", false);
         applyToSelf(p2);

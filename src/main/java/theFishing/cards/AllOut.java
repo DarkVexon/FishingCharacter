@@ -38,7 +38,7 @@ public class AllOut extends AbstractFishingCard {
                         isDone = true;
                         if (AbstractDungeon.player.hand.size() == 0) {
                             flash();
-                            att(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.SLASH_DIAGONAL));
+                            att(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.FIRE));
                             att(new VFXAction(p, new SweepingBeamEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractDungeon.player.flipHorizontal), 0.4F));
                             att(new SFXAction("ATTACK_DEFECT_BEAM"));
                         }

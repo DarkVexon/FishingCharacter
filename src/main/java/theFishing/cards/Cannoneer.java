@@ -29,14 +29,13 @@ public class Cannoneer extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
-
-                atb(new AbstractGameAction() {
+                att(new AbstractGameAction() {
                     @Override
                     public void update() {
                         isDone = true;
                         AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
                         AbstractGameEffect tde = new ThrowDaggerEffect(q.hb.cX, q.hb.cY);
-                        ReflectionHacks.setPrivateInherited(tde, AbstractGameEffect.class, "color", Color.BLACK.cpy());
+                        ReflectionHacks.setPrivate(tde, AbstractGameEffect.class, "color", Color.DARK_GRAY.cpy());
                         att(new DamageAction(q, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
                         att(new VFXAction(tde));
                     }

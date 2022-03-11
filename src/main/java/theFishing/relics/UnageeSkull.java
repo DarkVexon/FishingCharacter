@@ -20,4 +20,9 @@ public class UnageeSkull extends AbstractEasyRelic {
        }
        return damage;
     }
+
+    @Override
+    public boolean canSpawn() {
+        return false;
+    }
 }
