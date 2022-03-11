@@ -19,7 +19,7 @@ public class Splash extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.SMASH);
     }
 
     @Override

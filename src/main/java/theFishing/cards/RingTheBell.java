@@ -1,10 +1,13 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AllEnemyLoseHPAction;
+import theFishing.effects.OrbToAllFoesEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -22,7 +25,7 @@ public class RingTheBell extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO: VFX Vex
+        atb(new VFXAction(new OrbToAllFoesEffect(Color.PURPLE.cpy())));
         atb(new SFXAction("BELL"));
         atb(new AllEnemyLoseHPAction(magicNumber));
         topDeck(new CurseOfTheBell());

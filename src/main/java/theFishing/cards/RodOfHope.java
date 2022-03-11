@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
@@ -66,7 +67,7 @@ public class RodOfHope extends AbstractFishingCard {
                 description = "Gain #b" + amount + " fewer [E] next turn.";
             }
         });
-        this.addToBot(new VFXAction(new WhirlwindEffect(FishingMod.characterColor, true)));
+        this.addToBot(new VFXAction(new WhirlwindEffect(Color.YELLOW.cpy(), true)));
         this.addToBot(new SkipEnemiesTurnAction());
         this.addToBot(new PressEndTurnButtonAction());
     }

@@ -6,10 +6,12 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.combat.IntimidateEffect;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 import static theFishing.FishingMod.makeID;
@@ -28,12 +30,8 @@ public class Lie extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction("ATTACK_PIERCING_WAIL"));
-        if (Settings.FAST_MODE) {
-            atb(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.WHITE.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
-        } else {
-            atb(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.WHITE.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), 1.5F));
-        }
+        atb(new SFXAction("INTIMIDATE"));
+        atb(new VFXAction(p, new IntimidateEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 1.0F));
 
         forAllMonstersLiving(q -> {
             applyToEnemy(q, new StrengthPower(q, -magicNumber));

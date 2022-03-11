@@ -28,7 +28,7 @@ public class BeastSlayer extends AbstractFishingCard {
         if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomElite) {
             atb(new DamageAction(m, new DamageInfo(p, secondDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         } else {
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         }
     }
 

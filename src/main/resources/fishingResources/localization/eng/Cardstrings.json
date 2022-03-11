@@ -479,6 +479,13 @@
     "NAME": "Message",
     "DESCRIPTION": "Retain. NL Choose a card in your hand. NL Shuffle a copy of it into your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in your hand. NL Shuffle a copy of it into your draw pile."
+  },
+  "${ModID}:Jellyfish": {
+    "NAME": "Jellyfish",
+    "DESCRIPTION": "Apply !M! ${ModID}:Zapped. NL Exhaust."
+  },
+  "${ModID}:FinishingTouches": {
+    "NAME": "Finishing Touches",
+    "DESCRIPTION": "When you play a card, if it's the only one in your hand, play it twice."
   }
-
 }

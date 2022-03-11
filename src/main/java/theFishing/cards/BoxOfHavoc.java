@@ -1,10 +1,14 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -20,6 +24,12 @@ public class BoxOfHavoc extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int x = p.hand.size() == 1 ? magicNumber : 1;
+        if (x != 1) {
+            float duration = 0.3F;
+            addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.RED.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
+            addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.YELLOW.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
+            addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.BLUE.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
+        }
         forAllMonstersLiving(q -> {
             applyToEnemy(q, new WeakPower(q, x, false));
             applyToEnemy(q, new VulnerablePower(q, x, false));

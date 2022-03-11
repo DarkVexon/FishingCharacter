@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,8 +12,7 @@ import theFishing.cards.fish.AbstractFishCard;
 import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.makeInHand;
+import static theFishing.util.Wiz.*;
 
 public class FishOPedia extends AbstractFishingCard {
     public final static String ID = makeID("FishOPedia");
@@ -30,8 +30,10 @@ public class FishOPedia extends AbstractFishingCard {
             }
         }
         if (fishes.isEmpty()) {
+            atb(new TalkAction(true, "Complete!", 2.0F, 2.0F));
             applyToSelf(new StrengthPower(p, 4));
         } else {
+            atb(new TalkAction(true, "left: " + fishes.size(), 2.0F, 2.0F));
             makeInHand(CardLibrary.getCard(fishes.get(AbstractDungeon.cardRandomRng.random(fishes.size() - 1))));
         }
     }

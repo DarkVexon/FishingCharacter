@@ -12,6 +12,7 @@ import static theFishing.util.Wiz.*;
 
 public class Whaling extends AbstractFishingCard {
     public final static String ID = makeID("Whaling");
+    public final static int GOLD_COST = 15;
     // intellij stuff power, self, uncommon, , , , , , 
 
     public Whaling() {
@@ -25,7 +26,7 @@ public class Whaling extends AbstractFishingCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    p.loseGold(15);
+                    p.loseGold(GOLD_COST);
                     applyToSelfTop(new StrengthPower(p, 1));
                 }
             });

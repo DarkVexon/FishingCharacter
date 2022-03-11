@@ -1,12 +1,8 @@
 package theFishing.relics;
 
-import basemod.helpers.CardPowerTip;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import theFishing.TheFishing;
-import theFishing.cards.SignpostCard;
-import theFishing.cards.fish.Piranha;
+import theFishing.cards.fish.basefish.Piranha;
 
 import static theFishing.FishingMod.makeID;
 

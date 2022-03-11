@@ -26,6 +26,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //TODO: Crunch munch
         atb(new HealAction(p, p, magicNumber));
         applyToSelf(new DexterityPower(p, secondMagic));
         atb(new ArmamentsAction(true));

@@ -41,5 +41,12 @@
       "legendary_treasure"
     ],
     "DESCRIPTION": "Legendary Treasures are really good cards."
+  },
+  {
+    "PROPER_NAME": "Zapped",
+    "NAMES": [
+      "zapped"
+    ],
+    "DESCRIPTION": "A Zapped foe loses HP each time it is attacked."
   }
 ]

@@ -1,12 +1,15 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.SweepingBeamEffect;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.STAR_IN_ART;
@@ -36,6 +39,8 @@ public class AllOut extends AbstractFishingCard {
                         if (AbstractDungeon.player.hand.size() == 0) {
                             flash();
                             att(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.SLASH_DIAGONAL));
+                            att(new VFXAction(p, new SweepingBeamEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractDungeon.player.flipHorizontal), 0.4F));
+                            att(new SFXAction("ATTACK_DEFECT_BEAM"));
                         }
                     }
                 });

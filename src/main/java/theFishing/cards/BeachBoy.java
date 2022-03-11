@@ -1,13 +1,17 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.deprecated.DEPRECATEDSublimeSlice;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.CollectorStakeEffect;
 import theFishing.powers.SnaggedPower;
 
 import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToEnemy;
+import static theFishing.util.Wiz.atb;
 
 public class BeachBoy extends AbstractFishingCard {
     public final static String ID = makeID("BeachBoy");
@@ -23,7 +27,8 @@ public class BeachBoy extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        atb(new VFXAction(new CollectorStakeEffect(m.hb.cX, m.hb.cY), 2.0F));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         applyToEnemy(m, new SnaggedPower(m, magicNumber));
     }
 

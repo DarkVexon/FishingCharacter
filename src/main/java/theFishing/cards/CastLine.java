@@ -19,6 +19,7 @@ public class CastLine extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //TODO: SFX? VFX?
         for (int i = 0; i < magicNumber; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());
         }

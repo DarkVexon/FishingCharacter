@@ -16,7 +16,7 @@ public class QuickShot extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
     public void upp() {

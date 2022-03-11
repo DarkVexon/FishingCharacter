@@ -2,7 +2,7 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.fish.Octopus;
+import theFishing.cards.fish.basefish.Octopus;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.shuffleIn;

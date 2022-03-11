@@ -1,4 +1,4 @@
-package theFishing.cards.quest;
+package theFishing.cards;
 
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

@@ -25,6 +25,7 @@ public class CatchOfTheDay extends AbstractFishingCard {
             public void atEndOfTurn(boolean isPlayer) {
                 flash();
                 for (int i = 0; i < amount; i++) {
+                    //TODO: Same VFX/SFX as Cast Line
                     atb(new MakeTempCardInDrawPileAction(AbstractFishCard.returnRandomFish(), 1, true, true));
                 }
             }

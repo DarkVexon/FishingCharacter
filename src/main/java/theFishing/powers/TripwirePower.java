@@ -1,6 +1,7 @@
 package theFishing.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnMyBlockBrokenPower;
+import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.actions.AllEnemyLoseHPAction;
@@ -17,6 +18,7 @@ public class TripwirePower extends AbstractEasyPower implements OnMyBlockBrokenP
     @Override
     public void onMyBlockBroken() {
         flash();
+        addToBot(new AnimateHopAction(owner));
         addToBot(new AllEnemyLoseHPAction(amount));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }

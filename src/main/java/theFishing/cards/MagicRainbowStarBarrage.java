@@ -19,6 +19,7 @@ public class MagicRainbowStarBarrage extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < 6; i++) {
+            //TODO: Stars
             dmg(m, AbstractGameAction.AttackEffect.FIRE);
         }
     }

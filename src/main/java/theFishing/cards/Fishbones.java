@@ -1,11 +1,15 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.LaserBeamEffect;
+import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.atb;
 
 public class Fishbones extends AbstractFishingCard {
     public final static String ID = makeID("Fishbones");
@@ -18,6 +22,7 @@ public class Fishbones extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new VFXAction(new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal)));
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 

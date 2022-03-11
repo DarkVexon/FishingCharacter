@@ -28,7 +28,7 @@ public class GarlicClove extends AbstractFishingCard {
         atb(new RemoveSpecificPowerAction(p, p, FrailPower.POWER_ID));
         atb(new RemoveSpecificPowerAction(p, p, VulnerablePower.POWER_ID));
         if (AbstractDungeon.player.masterDeck.group.stream().noneMatch(c -> c.cardID.equals(Bite.ID))) {
-            att(new HealAction(p, p, magicNumber));
+            atb(new HealAction(p, p, magicNumber));
         }
     }
 

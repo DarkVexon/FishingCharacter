@@ -1,8 +1,9 @@
-package theFishing.cards.fish;
+package theFishing.cards.fish.basefish;
 
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;

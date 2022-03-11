@@ -1,6 +1,5 @@
 package theFishing.relics;
 
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
 
 import static theFishing.FishingMod.makeID;
@@ -10,5 +9,10 @@ public class MaelstromAnkh extends AbstractEasyRelic {
 
     public MaelstromAnkh() {
         super(ID, RelicTier.BOSS, LandingSound.SOLID, TheFishing.Enums.FISHING_COLOR);
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return false;
     }
 }
