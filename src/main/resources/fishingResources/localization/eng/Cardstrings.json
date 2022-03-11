@@ -113,7 +113,7 @@
   },
   "${ModID}:RodSlam": {
     "NAME": "Rod Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 fewer card next turn."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw 1 fewer card."
   },
   "${ModID}:FishCannon": {
     "NAME": "Fish Cannon",
@@ -472,7 +472,13 @@
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards."
   },
   "${ModID}:FishOPedia": {
-    "NAME": "Fish-O-Pedia",
+    "NAME": "Fish-o-pedia",
     "DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand. NL If you've played them all, instead gain 4 Strength."
+  },
+  "${ModID}:SignpostCard": {
+    "NAME": "Message",
+    "DESCRIPTION": "Retain. NL Choose a card in your hand. NL Shuffle a copy of it into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in your hand. NL Shuffle a copy of it into your draw pile."
   }
+
 }

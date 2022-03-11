@@ -30,7 +30,7 @@ public class StarOfTheShow extends AbstractFishingCard {
 
     private static ArrayList<String> basegameStarCards;
 
-    public static boolean isBasegameStarCard(String ID) {
+    private static boolean isBasegameStarCard(String ID) {
         if (basegameStarCards == null) {
             basegameStarCards = new ArrayList<>();
             basegameStarCards.add(Offering.ID);
@@ -38,12 +38,16 @@ public class StarOfTheShow extends AbstractFishingCard {
         return basegameStarCards.contains(ID);
     }
 
+    public static boolean isStarCard(AbstractCard c) {
+        return c.hasTag(FishingMod.STAR_IN_ART) || StarOfTheShow.isBasegameStarCard(c.cardID);
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.effectsQueue.add(new SpotlightPlayerEffect());
         applyToSelf(new LambdaPower("Star of the Show", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
-                if (card.hasTag(FishingMod.STAR_IN_ART) || StarOfTheShow.isBasegameStarCard(card.cardID)) {
+                if (isStarCard(card)) {
                     flashWithoutSound();
                     atb(new ApplyPowerAction(owner, owner, new VigorPower(owner, amount), amount));
                 }

@@ -5,5 +5,69 @@
     "DESCRIPTIONS": [
       "At the start of each combat, shuffle #b2 #yFish into your draw pile."
     ]
+  },
+  "${ModID}:RainbowRod": {
+    "NAME": "Rainbow Rod",
+    "FLAVOR": "zwoong...",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      ".[] NL At the end of each turn, shuffle #b2 #yFish into your draw pile."
+    ]
+  },
+  "${ModID}:BrokenOar": {
+    "NAME": "Broken Oar",
+    "FLAVOR": "gotta get repair",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. NL Draw 1 fewer card each turn."
+    ]
+  },
+  "${ModID}:DNAVial": {
+    "NAME": "DNA Vial",
+    "FLAVOR": "smells fishy",
+    "DESCRIPTIONS": [
+      "The first #b2 times you play a #yFish each combat, shuffle an #yUpgraded copy into your draw pile."
+    ]
+  },
+  "${ModID}:SpareBait": {
+    "NAME": "Spare Bait",
+    "FLAVOR": "woah!",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if your hand is empty, gain #b1 #yStrength."
+    ]
+  },
+  "${ModID}:UnageeSkull": {
+    "NAME": "Unagee Skull",
+    "FLAVOR": "guarded a treasure ship a long time ago",
+    "DESCRIPTIONS": [
+      "#yGuppies grant #b2 more Block. #yPiranhas deal #b2 more damage."
+    ]
+  },
+  "${ModID}:Signpost": {
+    "NAME": "Signpost",
+    "FLAVOR": "can you read it?",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a #yMessage into your hand."
+    ]
+  },
+  "${ModID}:Starshield": {
+    "NAME": "Starshield",
+    "FLAVOR": "stars protect",
+    "DESCRIPTIONS": [
+      "Whenever you play a card with a star in its art, gain #b1 #yBlock."
+    ]
+  },
+  "${ModID}:Fishbowl": {
+    "NAME": "Fishbowl",
+    "FLAVOR": "get them out!",
+    "DESCRIPTIONS": [
+      "Add #b2 random #yFish to your deck."
+    ]
+  },
+  "${ModID}:MaelstromAnkh": {
+    "NAME": "Maelstrom Ankh",
+    "FLAVOR": "Into the depths.",
+    "DESCRIPTIONS": [
+      "#yFish are now strange and powerful. At times, they may not cost #b0 or draw cards."
+    ]
   }
 }
