@@ -38,7 +38,7 @@ public class Food extends AbstractFishingCard {
         AbstractCard card = super.makeStatEquivalentCopy();
         card.baseMagicNumber = this.baseMagicNumber;
         card.magicNumber = this.magicNumber;
-        card.description = (ArrayList)this.description.clone();
+        card.description = (ArrayList) this.description.clone();
         return card;
     }
 

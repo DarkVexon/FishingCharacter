@@ -3,12 +3,9 @@ package theFishing.cards.fish;
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
-import theFishing.cards.treasures.AbstractTreasureCard;
 
 import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
 
 public class Starfish extends AbstractFishCard {
     public final static String ID = makeID("Starfish");

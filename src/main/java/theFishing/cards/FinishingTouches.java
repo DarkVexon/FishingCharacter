@@ -22,7 +22,7 @@ public class FinishingTouches extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower(cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
+        applyToSelf(new LambdaPower("Finishing Touches", AbstractPower.PowerType.BUFF, false, p, 1) {
             public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (!card.purgeOnUse && this.amount > 0 && AbstractDungeon.player.hand.size() == 1) {
                     this.flash();
@@ -49,7 +49,7 @@ public class FinishingTouches extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[1] : (cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3]);
+                description = amount == 1 ? "When you play a card, if it's the only one in your hand, play it twice." : ("When you play a card, if it's the only one in your hand, play it #b" + amount + " additional times.");
             }
         });
     }

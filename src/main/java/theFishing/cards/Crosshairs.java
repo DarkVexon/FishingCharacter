@@ -3,7 +3,6 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,7 +33,7 @@ public class Crosshairs extends AbstractFishingCard {
                         @Override
                         public void update() {
                             isDone = true;
-                            AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
+                            AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
                             this.addToTop(new DamageAction(q, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
                             addToTop(new VFXAction(new ClashEffect(q.hb.cX, q.hb.cY), 0.1f));
                         }

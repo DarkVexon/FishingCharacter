@@ -13,7 +13,7 @@ public class Fishbones extends AbstractFishingCard {
 
     public Fishbones() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 15;
+        baseDamage = 16;
         baseMagicNumber = magicNumber = 1;
     }
 

@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
 
 import java.util.ArrayList;
 
 import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class SearingSight extends AbstractFishingCard {
     public final static String ID = makeID("SearingSight");
@@ -38,17 +38,16 @@ public class SearingSight extends AbstractFishingCard {
             }
             cardsList.add(c);
         }
-        atb(new SelectCardsCenteredAction(cardsList, "to add into your hand.", (cards) -> {
+        atb(new SelectCardsCenteredAction(cardsList, "Choose a card to add into your hand.", (cards) -> {
             AbstractCard q = cards.get(0);
             if (timesUpgraded >= 6) {
                 q.freeToPlayOnce = true;
             }
-            att(new MakeTempCardInHandAction(q, true));
+            att(new MakeTempCardInHandAction(q, timesUpgraded > 10 ? 2 : 1, true));
         }));
     }
 
     public void upgrade() {
-        upp();
         ++this.timesUpgraded;
         this.upgraded = true;
         this.name = cardStrings.NAME + "+" + this.timesUpgraded;
@@ -57,16 +56,20 @@ public class SearingSight extends AbstractFishingCard {
         if (timesUpgraded == 3) {
             rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
             initializeDescription();
-        }
-        else if (timesUpgraded == 6) {
+        } else if (timesUpgraded == 6) {
             rawDescription = cardStrings.EXTENDED_DESCRIPTION[1];
             initializeDescription();
+        } else if (timesUpgraded == 10) {
+            rawDescription = cardStrings.EXTENDED_DESCRIPTION[2];
+            initializeDescription();
+        } else {
+            upp();
         }
     }
 
     @Override
     public boolean canUpgrade() {
-        return true;
+        return timesUpgraded < 10;
     }
 
     public void upp() {

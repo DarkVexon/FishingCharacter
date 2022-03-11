@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.random.Random;
 import theFishing.FishingMod;
 import theFishing.util.TexLoader;
 
@@ -21,9 +20,6 @@ public abstract class AbstractEasyPower extends AbstractPower {
     public static Color greenColor2 = Color.GREEN.cpy();
     public boolean canGoNegative2 = false;
 
-    private boolean overrideRender = false;
-    private Color renderIconColor;
-
     public AbstractEasyPower(String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
         this.ID = makeID(NAME.replaceAll("([ ])", ""));
         this.isTurnBased = isTurnBased;
@@ -34,8 +30,8 @@ public abstract class AbstractEasyPower extends AbstractPower {
         this.amount = amount;
         this.type = powerType;
 
-        Texture normalTexture = TexLoader.getTexture(FishingMod.modID + "Resources/images/powers/" + NAME.replaceAll("([ ])", "") + "32.png");
-        Texture hiDefImage = TexLoader.getTexture(FishingMod.modID + "Resources/images/powers/" + NAME.replaceAll("([ ])", "") + "84.png");
+        Texture normalTexture = TexLoader.getTexture(FishingMod.modID + "Resources/images/powers/" + NAME.replaceAll("([ ])", "") + "_32.png");
+        Texture hiDefImage = TexLoader.getTexture(FishingMod.modID + "Resources/images/powers/" + NAME.replaceAll("([ ])", "") + "_84.png");
         if (hiDefImage != null) {
             region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
             if (normalTexture != null)
@@ -43,18 +39,9 @@ public abstract class AbstractEasyPower extends AbstractPower {
         } else if (normalTexture != null) {
             this.img = normalTexture;
             region48 = new TextureAtlas.AtlasRegion(normalTexture, 0, 0, normalTexture.getWidth(), normalTexture.getHeight());
-        } else if (normalTexture == null) {
-            overrideRender = true;
-            Random rng = new Random((long) this.ID.hashCode());
-            renderIconColor = new Color(rng.random(), rng.random(), rng.random(), 1);
         }
 
         this.updateDescription();
-    }
-
-    @Override
-    public void renderIcons(SpriteBatch sb, float x, float y, Color c) {
-        super.renderIcons(sb, x, y, c);
     }
 
     public void renderAmount(SpriteBatch sb, float x, float y, Color c) {

@@ -3,7 +3,6 @@ package theFishing.cards;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -12,12 +11,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
-import theFishing.util.CardArtRoller;
 
 import java.util.ArrayList;
 
@@ -44,8 +41,6 @@ public abstract class AbstractFishingCard extends CustomCard {
     private int previewIndex;
     protected ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
 
-    private boolean needsArtRefresh = false;
-
     public AbstractFishingCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, TheFishing.Enums.FISHING_COLOR);
     }
@@ -58,22 +53,6 @@ public abstract class AbstractFishingCard extends CustomCard {
         name = originalName = cardStrings.NAME;
         initializeTitle();
         initializeDescription();
-
-        if (textureImg.contains("ui/missing.png")) {
-            if (CardLibrary.getAllCards() != null && !CardLibrary.getAllCards().isEmpty()) {
-                CardArtRoller.computeCard(this);
-            } else
-                needsArtRefresh = true;
-        }
-    }
-
-    @Override
-    protected Texture getPortraitImage() {
-        if (textureImg.contains("ui/missing.png")) {
-            return CardArtRoller.getPortraitTexture(this);
-        } else {
-            return super.getPortraitImage();
-        }
     }
 
     public static String getCardTextureString(final String cardName, final AbstractCard.CardType cardType) {
@@ -189,9 +168,6 @@ public abstract class AbstractFishingCard extends CustomCard {
 
     public void update() {
         super.update();
-        if (needsArtRefresh) {
-            CardArtRoller.computeCard(this);
-        }
         if (!cardToPreview.isEmpty()) {
             if (hb.hovered) {
                 if (rotationTimer <= 0F) {
@@ -228,10 +204,6 @@ public abstract class AbstractFishingCard extends CustomCard {
 
     protected void blck() {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
-    }
-
-    public String cardArtCopy() {
-        return null;
     }
 
     protected void upMagic(int x) {

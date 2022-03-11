@@ -175,7 +175,7 @@
   },
   "${ModID}:Bobber": {
     "NAME": "Bobber",
-    "DESCRIPTION": "Unplayable. NL If you draw this during your turn, gain !B! Block and !M! Strength."
+    "DESCRIPTION": "Unplayable. NL If you draw this during your turn, gain !${ModID}:m2! Block and !M! Strength."
   },
   "${ModID}:BombFishing": {
     "NAME": "Bomb Fishing",
@@ -307,16 +307,6 @@
   "${ModID}:GoneFishing": {
     "NAME": "Gone Fishing",
     "DESCRIPTION": "Gain 1 Intangible. NL Shuffle !M! ${ModID}:Fish into your draw pile. NL Exhaust."
-  },
-  "${ModID}:FinishingTouches": {
-    "NAME": "Finishing Touches",
-    "DESCRIPTION": "Whenever you play the last card in your hand, play it twice.",
-    "EXTENDED_DESCRIPTION": [
-      "Finishing Touches",
-      "When you play a card, if it's the only one in your hand, play it twice.",
-      "When you play a card, if it's the only one in your hand, play it #b",
-      " additional times."
-    ]
   },
   "${ModID}:Schooled": {
     "NAME": "Schooled",
@@ -465,10 +455,11 @@
   },
   "${ModID}:SearingSight": {
     "NAME": "Searing Sight",
-    "DESCRIPTION": "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded any number of times. NL Bonus at +3.",
+    "DESCRIPTION": "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded 10 times. NL Bonus at +3.",
     "EXTENDED_DESCRIPTION": [
-      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL Can be Upgraded any number of times. NL Bonus at +6.",
-      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL It costs 0 until played. NL Can be Upgraded any number of times."
+      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL Can be Upgraded 10 times. NL Bonus at +6.",
+      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL It costs 0 until played. NL Can be Upgraded 10 times. NL Bonus at +10.",
+      "Choose 1 of !M! random Upgraded cards and add 2 copies that cost 0 until played into your hand."
     ]
   },
   "${ModID}:HolyGrail": {
@@ -479,5 +470,9 @@
   "${ModID}:MacGuffin": {
     "NAME": "MacGuffin",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards."
+  },
+  "${ModID}:FishOPedia": {
+    "NAME": "Fish-O-Pedia",
+    "DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand. NL If you've played them all, instead gain 4 Strength."
   }
 }

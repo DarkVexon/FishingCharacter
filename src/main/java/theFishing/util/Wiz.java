@@ -18,7 +18,6 @@ import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import theFishing.actions.TimedVFXAction;
-import theFishing.powers.LosePowerPower;
 import theFishing.powers.NextTurnPowerPower;
 
 import java.util.ArrayList;
@@ -174,15 +173,6 @@ public class Wiz {
         att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 
-    public static void applyToSelfTemp(AbstractPower po) {
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LosePowerPower(AbstractDungeon.player, po, po.amount)));
-    }
-
-    public static void applyToSelfNextTurn(AbstractPower po) {
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new NextTurnPowerPower(AbstractDungeon.player, po)));
-    }
-
     public static void thornDmg(AbstractCreature m, int amount, AbstractGameAction.AttackEffect AtkFX) {
         atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, amount, DamageInfo.DamageType.THORNS), AtkFX));
     }
@@ -197,5 +187,9 @@ public class Wiz {
 
     public static void discard(int amount) {
         discard(amount, false);
+    }
+
+    public static void applyToSelfNextTurn(AbstractPower po) {
+        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new NextTurnPowerPower(AbstractDungeon.player, po)));
     }
 }

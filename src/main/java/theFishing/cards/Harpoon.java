@@ -15,9 +15,10 @@ public class Harpoon extends AbstractFishingCard {
 
     public Harpoon() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 20;
-        baseMagicNumber = magicNumber = 1;
+        baseDamage = 18;
+        baseMagicNumber = magicNumber = 2;
         exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,7 +28,6 @@ public class Harpoon extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
-        upgradeMagicNumber(1);
+        upgradeDamage(6);
     }
 }

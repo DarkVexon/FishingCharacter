@@ -1,13 +1,11 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.shuffleIn;
 
 public class CastLine extends AbstractFishingCard {

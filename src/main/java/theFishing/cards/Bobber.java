@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -8,6 +9,7 @@ import theFishing.patch.PreDrawPatch;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class Bobber extends AbstractFishingCard {
     public final static String ID = makeID("Bobber");
@@ -15,7 +17,7 @@ public class Bobber extends AbstractFishingCard {
 
     public Bobber() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseBlock = block = 9;
+        baseSecondMagic = secondMagic = 9;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -25,7 +27,7 @@ public class Bobber extends AbstractFishingCard {
     @Override
     public void triggerWhenDrawn() {
         if (PreDrawPatch.DRAWN_DURING_TURN) {
-            blck();
+            atb(new GainBlockAction(AbstractDungeon.player, secondMagic));
             applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
         }
     }
@@ -37,6 +39,6 @@ public class Bobber extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeSecondMagic(3);
     }
 }
