@@ -16,12 +16,12 @@ public class VictoryLap extends AbstractFishingCard {
 
     public VictoryLap() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        cardsToPreview = new Shiv();
+        cardsToPreview = new DoubleShiv();
         tags.add(STAR_IN_ART);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new VictoryLapPower(2));
+        applyToSelf(new VictoryLapPower(1));
     }
 
     public void triggerOnGlowCheck() {

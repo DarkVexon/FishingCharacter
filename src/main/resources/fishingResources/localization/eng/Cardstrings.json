@@ -498,12 +498,12 @@
     "NAME": "The Whale",
     "DESCRIPTION": "Enemy loses !M! HP. NL Draw 1 card. NL Exhaust."
   },
-  "${ModID}:Rainbowscales": {
-    "NAME": "Rainbow Scaled",
-    "DESCRIPTION": "Add !M! random cards from ANY color into your hand. NL They cost 0 this turn. NL Exhaust."
-  },
   "${ModID}:Swordfish": {
     "NAME": "Swordfish",
     "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:DoubleShiv": {
+    "NAME": "Double Shiv",
+    "DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   }
 }

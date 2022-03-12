@@ -15,7 +15,7 @@ public class Swordfish extends AbstractFishCard {
 
     public Swordfish() {
         super(ID, 0, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
         exhaust = true;
     }
 

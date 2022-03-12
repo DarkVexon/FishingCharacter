@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.runHistory.RunHistoryScreen;
 import com.megacrit.cardcrawl.screens.stats.RunData;
+import theFishing.cards.DoubleShiv;
 import theFishing.util.Wiz;
 
 import java.util.ArrayList;
@@ -39,7 +40,7 @@ public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower
     @Override
     public void onShuffle() {
         flash();
-        AbstractCard q = new Shiv();
+        AbstractCard q = new DoubleShiv();
         if (upgraded()) {
             q.upgrade();
         }
