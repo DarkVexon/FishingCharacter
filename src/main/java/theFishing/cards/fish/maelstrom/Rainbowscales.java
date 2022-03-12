@@ -15,7 +15,7 @@ public class Rainbowscales extends AbstractFishCard {
     // intellij stuff skill, self, , , , , 2, 1
 
     public Rainbowscales() {
-        super(ID, 1, CardType.SKILL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
     }
 

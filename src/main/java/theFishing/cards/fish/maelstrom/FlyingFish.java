@@ -1,5 +1,6 @@
 package theFishing.cards.fish.maelstrom;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,13 +12,14 @@ import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class FlyingFish extends AbstractFishCard {
     public final static String ID = makeID("FlyingFish");
     // intellij stuff skill, self, , , , , , 
 
     public FlyingFish() {
-        super(ID, 1, CardType.SKILL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardTarget.SELF);
         exhaust = true;
 
     }
@@ -41,6 +43,7 @@ public class FlyingFish extends AbstractFishCard {
                 description = amount == 1 ? "Receive #b50% less damage this turn." : ("Receive #b50% less damage for the next #b" + amount + " turns.");
             }
         });
+        atb(new DrawCardAction(1));
     }
 
     public void upp() {

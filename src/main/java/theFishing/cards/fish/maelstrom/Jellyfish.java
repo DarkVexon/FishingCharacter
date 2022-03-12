@@ -2,6 +2,7 @@ package theFishing.cards.fish.maelstrom;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,7 +18,7 @@ public class Jellyfish extends AbstractFishCard {
     // intellij stuff skill, enemy, , , , , 4, 2
 
     public Jellyfish() {
-        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 4;
         exhaust = true;
     }
@@ -39,6 +40,7 @@ public class Jellyfish extends AbstractFishCard {
                 description = "After receiving attack damage, lose #b" + amount + " HP.";
             }
         });
+        atb(new DrawCardAction(1));
     }
 
     public void upp() {

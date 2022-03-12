@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -25,6 +27,7 @@ import theFishing.cards.Strike;
 import theFishing.relics.TheRod;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static theFishing.FishingMod.*;
 import static theFishing.TheFishing.Enums.FISHING_COLOR;
@@ -184,5 +187,14 @@ public class TheFishing extends CustomPlayer {
         @SpireEnum(name = "FISHING_COLOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList<>();
+        panels.add(new CutscenePanel("fishingResources/images/ending/ending_1.png", "ATTACK_MAGIC_BEAM_SHORT"));
+        panels.add(new CutscenePanel("fishingResources/images/ending/ending_2.png", "AUTOMATON_ORB_SPAWN"));
+        panels.add(new CutscenePanel("fishingResources/images/ending/ending_2.png", "UNLOCK_PING"));
+        return panels;
     }
 }

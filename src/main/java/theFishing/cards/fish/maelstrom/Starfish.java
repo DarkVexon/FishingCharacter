@@ -1,4 +1,4 @@
-package theFishing.cards.fish.basefish;
+package theFishing.cards.fish.maelstrom;
 
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

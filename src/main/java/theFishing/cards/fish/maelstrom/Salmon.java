@@ -1,5 +1,6 @@
 package theFishing.cards.fish.maelstrom;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -20,6 +21,7 @@ public class Salmon extends AbstractFishCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new DexterityPower(p, magicNumber));
+        atb(new DrawCardAction(1));
     }
 
     public void upp() {

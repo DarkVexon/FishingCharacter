@@ -32,18 +32,17 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
         if (weightedFishList == null) {
             weightedFishList = new LinkedHashMap<>();
             weightedFishList.put(new Guppy(), 30);
-            weightedFishList.put(new Piranha(), 27);
-            weightedFishList.put(new Clownfish(), 6);
-            weightedFishList.put(new Starfish(), 6);
+            weightedFishList.put(new Piranha(), 30);
             weightedFishList.put(new Octopus(), 6);
-            weightedFishList.put(new Eel(), 4);
+            weightedFishList.put(new Clownfish(), 6);
+            weightedFishList.put(new Eel(), 5);
             weightedFishList.put(new Shark(), 4);
             weightedFishList.put(new Siren(), 4);
+            weightedFishList.put(new Boot(), 4);
             weightedFishList.put(new Maw(), 3);
             weightedFishList.put(new Hammerhead(), 3);
             weightedFishList.put(new Orca(), 2);
             weightedFishList.put(new Qwilfish(), 2);
-            weightedFishList.put(new Boot(), 2);
             weightedFishList.put(new SeaMonster(), 1);
         }
 
@@ -64,19 +63,20 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
 
     private static AbstractCard returnRandomMaelstromFish() {
         if (maelstromFishList == null) {
-            weightedFishList = new LinkedHashMap<>();
-            // 0-100: Common
-
-            // 100-160: Uncommon
-
-            // 160-185: Rare
-
-            // 185-200: Legendary
-            weightedFishList.put(new Jellyfish(), 5);
-            weightedFishList.put(new Salmon(), 5);
-            weightedFishList.put(new FlyingFish(), 3);
-            weightedFishList.put(new Rainbowscales(), 2);
-            weightedFishList.put(new Neow(), 1);
+            maelstromFishList = new LinkedHashMap<>();
+            maelstromFishList.put(new Maw(), 15);
+            maelstromFishList.put(new Jellyfish(), 13);
+            maelstromFishList.put(new Eel(), 11);
+            maelstromFishList.put(new Clownfish(), 10);
+            maelstromFishList.put(new Hammerhead(), 10);
+            maelstromFishList.put(new Qwilfish(), 10);
+            maelstromFishList.put(new Swordfish(), 10);
+            maelstromFishList.put(new Shark(), 5);
+            maelstromFishList.put(new Siren(), 5);
+            maelstromFishList.put(new SeaMonster(), 4);
+            maelstromFishList.put(new FlyingFish(), 4);
+            maelstromFishList.put(new Rainbowscales(), 2);
+            maelstromFishList.put(new Neow(), 1);
         }
 
         int fishRoll = AbstractDungeon.cardRandomRng.random(1,
