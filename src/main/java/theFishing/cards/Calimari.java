@@ -7,11 +7,11 @@ import theFishing.cards.fish.basefish.Octopus;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.shuffleIn;
 
-public class BootsSequence extends AbstractFishingCard {
-    public final static String ID = makeID("BootsSequence");
+public class Calimari extends AbstractFishingCard {
+    public final static String ID = makeID("Calimari");
     // intellij stuff skill, self, uncommon, , , , , 5, 1
 
-    public BootsSequence() {
+    public Calimari() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
         cardsToPreview = new Octopus();

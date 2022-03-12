@@ -10,9 +10,4 @@ public class MaelstromAnkh extends AbstractEasyRelic {
     public MaelstromAnkh() {
         super(ID, RelicTier.BOSS, LandingSound.SOLID, TheFishing.Enums.FISHING_COLOR);
     }
-
-    @Override
-    public boolean canSpawn() {
-        return false;
-    }
 }

@@ -67,7 +67,7 @@
     "NAME": "Maelstrom Ankh",
     "FLAVOR": "Into the depths.",
     "DESCRIPTIONS": [
-      "Find rarer, stranger #y${ModID}:Fish."
+      "Find rarer #y${ModID}:Fish."
     ]
   }
 }

@@ -21,11 +21,11 @@ public class FlyingFish extends AbstractFishCard {
     public FlyingFish() {
         super(ID, 0, CardType.SKILL, CardTarget.SELF);
         exhaust = true;
-
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Flying Fish", AbstractPower.PowerType.BUFF, true, p, 1) {
+        applyToSelf(new LambdaPower("Flying Fish", AbstractPower.PowerType.BUFF, true, p, magicNumber) {
 
             @Override
             public void atEndOfRound() {
@@ -47,6 +47,7 @@ public class FlyingFish extends AbstractFishCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
+        uDesc();
     }
 }

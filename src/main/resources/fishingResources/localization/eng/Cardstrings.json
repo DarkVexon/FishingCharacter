@@ -212,7 +212,7 @@
     "NAME": "Cannoneer",
     "DESCRIPTION": "Deal !D! damage to a random enemy X times."
   },
-  "${ModID}:BootsSequence": {
+  "${ModID}:Calimari": {
     "NAME": "Calimari",
     "DESCRIPTION": "Shuffle !M! *Octopi into your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Shuffle !M! *Octopi into your draw pile."
@@ -481,12 +481,29 @@
     "DESCRIPTION": "Retain. NL Choose a card in your hand. NL Shuffle a copy of it into your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in your hand. NL Shuffle a copy of it into your draw pile."
   },
-  "${ModID}:Jellyfish": {
-    "NAME": "Jellyfish",
-    "DESCRIPTION": "Apply !M! ${ModID}:Zapped. NL Exhaust."
-  },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
     "DESCRIPTION": "When you play a card, if it's the only one in your hand, play it twice."
+  },
+  "${ModID}:FlyingFish": {
+    "NAME": "Flying Fish",
+    "DESCRIPTION": "Take 50% less damage for 1 turn. NL Draw 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Take 50% less damage for 2 turns. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:Jellyfish": {
+    "NAME": "Jellyfish",
+    "DESCRIPTION": "Apply !M! ${ModID}:Zapped. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:Neow": {
+    "NAME": "The Whale",
+    "DESCRIPTION": "Enemy loses !M! HP. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:Rainbowscales": {
+    "NAME": "Rainbow Scaled",
+    "DESCRIPTION": "Add !M! random cards from ANY color into your hand. NL They cost 0 this turn. NL Exhaust."
+  },
+  "${ModID}:Swordfish": {
+    "NAME": "Swordfish",
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card. NL Exhaust."
   }
 }

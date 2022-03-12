@@ -2,11 +2,12 @@ package theFishing.relics;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import theFishing.TheFishing;
+import theFishing.cards.fish.basefish.Guppy;
 import theFishing.cards.fish.basefish.Piranha;
 
 import static theFishing.FishingMod.makeID;
 
-public class UnageeSkull extends AbstractEasyRelic {
+public class UnageeSkull extends AbstractEasyRelic implements ModifyBlockRelic {
     public static final String ID = makeID("UnageeSkull");
 
     public UnageeSkull() {
@@ -22,7 +23,10 @@ public class UnageeSkull extends AbstractEasyRelic {
     }
 
     @Override
-    public boolean canSpawn() {
-        return false;
+    public float modifyBlock(float block, AbstractCard source) {
+        if (source.cardID.equals(Guppy.ID)) {
+            return block + 2;
+        }
+        return block;
     }
 }
