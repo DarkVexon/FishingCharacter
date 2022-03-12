@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 import theFishing.actions.EasyXCostAction;
+import theFishing.actions.TimedVFXAction;
+import theFishing.effects.OrbToFoeEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -34,10 +36,8 @@ public class Cannoneer extends AbstractFishingCard {
                     public void update() {
                         isDone = true;
                         AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
-                        AbstractGameEffect tde = new ThrowDaggerEffect(q.hb.cX, q.hb.cY);
-                        ReflectionHacks.setPrivate(tde, AbstractGameEffect.class, "color", Color.DARK_GRAY.cpy());
                         att(new DamageAction(q, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
-                        att(new VFXAction(tde));
+                        att(new TimedVFXAction(new OrbToFoeEffect(Color.DARK_GRAY.cpy(), q)));
                     }
                 });
             }

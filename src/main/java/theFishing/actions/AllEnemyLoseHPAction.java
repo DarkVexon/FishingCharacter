@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class AllEnemyLoseHPAction extends AbstractGameAction {
-    private static final float DURATION = 0.33F;
+    private static final float DURATION = 0.01F;
 
     public AllEnemyLoseHPAction(int amount) {
         this(amount, AttackEffect.NONE);

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.relics.DeadBranch;
+import com.megacrit.cardcrawl.relics.StrangeSpoon;
 import theFishing.TheFishing;
 
 import java.util.Arrays;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class BanRelicsPatch {
 
-    public static List<String> ourList = Arrays.asList(DeadBranch.ID, ChemicalX.ID);
+    public static List<String> ourList = Arrays.asList(DeadBranch.ID, ChemicalX.ID, StrangeSpoon.ID);
 
     @SpirePatch(
             clz = AbstractDungeon.class,
