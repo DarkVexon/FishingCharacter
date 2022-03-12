@@ -10,12 +10,12 @@ import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -45,6 +45,7 @@ public class TheFishing extends CustomPlayer {
             modID + "Resources/images/char/mainChar/orb/layer3d.png",
             modID + "Resources/images/char/mainChar/orb/layer4d.png",
             modID + "Resources/images/char/mainChar/orb/layer5d.png",};
+    private static final Float SIZE_SCALE = 0.8F;
     static final String ID = makeID("TheFishing");
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
@@ -52,7 +53,7 @@ public class TheFishing extends CustomPlayer {
 
 
     public TheFishing(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpineAnimation("fishingResources/images/char/mainChar/NewProject.atlas", "fishingResources/images/char/mainChar/NewProject.json", 0.8F));
+        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpineAnimation("fishingResources/images/char/mainChar/NewProject.atlas", "fishingResources/images/char/mainChar/NewProject.json", SIZE_SCALE));
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -61,10 +62,21 @@ public class TheFishing extends CustomPlayer {
 
 
         dialogX = (drawX + 0.0F * Settings.scale);
-        dialogY = (drawY + 300.0F * Settings.scale);
+        dialogY = (drawY + 50.0F * Settings.scale);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        e.setTimeScale(0.6F);
+        this.stateData.setMix("Hit", "Idle", 0.1F);
+        e.setTimeScale(0.7F);
+    }
+
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
+            AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
+            e.setTimeScale(0.7F);
+        }
+
+        super.damage(info);
     }
 
     @Override
@@ -122,7 +134,7 @@ public class TheFishing extends CustomPlayer {
 
     @Override
     public BitmapFont getEnergyNumFont() {
-        return FontHelper.energyNumFontPurple;
+        return FontHelper.energyNumFontGreen;
     }
 
     @Override
@@ -179,7 +191,6 @@ public class TheFishing extends CustomPlayer {
     }
 
     public static class Enums {
-        //TODO: Change these.
         @SpireEnum
         public static AbstractPlayer.PlayerClass THE_FISHING;
         @SpireEnum(name = "FISHING_COLOR")
@@ -196,5 +207,12 @@ public class TheFishing extends CustomPlayer {
         panels.add(new CutscenePanel("fishingResources/images/ending/ending_2.png", "AUTOMATON_ORB_SPAWN"));
         panels.add(new CutscenePanel("fishingResources/images/ending/ending_2.png", "UNLOCK_PING"));
         return panels;
+    }
+
+    public void onEquipRainbowRod() {
+        loadAnimation("fishingResources/images/char/mainChar/NewProject2.atlas", "fishingResources/images/char/mainChar/NewProject2.json", SIZE_SCALE);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        this.stateData.setMix("Hit", "Idle", 0.1F);
+        e.setTimeScale(0.7F);
     }
 }

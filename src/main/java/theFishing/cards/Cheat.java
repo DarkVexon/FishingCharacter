@@ -22,7 +22,9 @@ public class Cheat extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new RemoveAllBlockAction(m, p));
+        if (m.currentBlock > 0) {
+            atb(new RemoveAllBlockAction(m, p));
+        }
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         AbstractCard q = new Steal();
         if (upgraded) q.upgrade();

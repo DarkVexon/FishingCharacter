@@ -26,6 +26,13 @@ public class RainbowRod extends AbstractEasyRelic {
     }
 
     @Override
+    public void onEquip() {
+        if (AbstractDungeon.player instanceof TheFishing) {
+            ((TheFishing) AbstractDungeon.player).onEquipRainbowRod();
+        }
+    }
+
+    @Override
     public void obtain() {
         if (AbstractDungeon.player.hasRelic(TheRod.ID)) {
             for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {

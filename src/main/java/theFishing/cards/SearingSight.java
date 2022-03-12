@@ -38,7 +38,7 @@ public class SearingSight extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         for (int i = 0; i < magicNumber; i++) {
-            AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat();
+            AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
             if (timesUpgraded >= 4) {
                 c.upgrade();
             }

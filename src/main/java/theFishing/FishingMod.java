@@ -51,7 +51,7 @@ public class FishingMod implements
         PostPlayerUpdateSubscriber,
         StartGameSubscriber {
 
-    public static final String modID = "fishing"; //TODO: Change this.
+    public static final String modID = "fishing";
 
     public static String makeID(String idText) {
         return modID + ":" + idText;

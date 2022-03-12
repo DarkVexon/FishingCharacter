@@ -30,10 +30,10 @@ public class FishOPedia extends AbstractFishingCard {
             }
         }
         if (fishes.isEmpty()) {
-            atb(new TalkAction(true, "Complete!", 2.0F, 2.0F));
+            atb(new TalkAction(true, "Complete!", 1F, 2.0F));
             applyToSelf(new StrengthPower(p, 4));
         } else {
-            atb(new TalkAction(true, "left: " + fishes.size(), 2.0F, 2.0F));
+            atb(new TalkAction(true, "left: " + fishes.size(), 1F, 2.0F));
             makeInHand(CardLibrary.getCard(fishes.get(AbstractDungeon.cardRandomRng.random(fishes.size() - 1))));
         }
     }

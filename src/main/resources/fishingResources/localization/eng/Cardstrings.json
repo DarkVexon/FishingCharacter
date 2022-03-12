@@ -347,7 +347,7 @@
   },
   "${ModID}:AnchorsAweigh": {
     "NAME": "Anchors Aweigh",
-    "DESCRIPTION": "Startup: Gain !M! Block and [E]. NL Gain !B! Block. NL Next turn, gain [E]. NL Exhaust."
+    "DESCRIPTION": "Startup: Gain !M! Block and [E]. NL Gain !B! Block. NL Exhaust."
   },
   "${ModID}:PickMe": {
     "NAME": "Pick Me!",

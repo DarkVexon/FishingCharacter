@@ -17,7 +17,7 @@ public class DamagePlusWallopVFXAction extends AbstractGameAction {
         this.info = info;
         this.setValues(target, info);
         this.actionType = ActionType.DAMAGE;
-        this.startDuration = Settings.ACTION_DUR_FAST;
+        this.startDuration = 0.1F;
         this.duration = this.startDuration;
     }
 

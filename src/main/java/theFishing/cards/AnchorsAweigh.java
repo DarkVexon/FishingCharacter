@@ -25,7 +25,6 @@ public class AnchorsAweigh extends AbstractFishingCard implements StartupCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new EnergizedPower(p, 1));
     }
 
     @Override

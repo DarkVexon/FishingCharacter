@@ -23,7 +23,7 @@ public class Neow extends AbstractFishCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new TalkAction(true, "catch... and release...", 2.0F, 2.0F));
+        atb(new TalkAction(true, "catch... and release...", 1.0F, 2.0F));
         atb(new LoseHPAction(m, p, magicNumber));
         atb(new DrawCardAction(p, 1));
     }

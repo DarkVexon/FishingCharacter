@@ -14,7 +14,7 @@ public class Steal extends AbstractFishingCard {
 
     public Steal() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         exhaust = true;
     }
 
