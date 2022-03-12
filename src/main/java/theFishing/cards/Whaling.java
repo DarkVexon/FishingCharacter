@@ -1,11 +1,14 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.red.Inflame;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -28,6 +31,7 @@ public class Whaling extends AbstractFishingCard {
                     isDone = true;
                     p.loseGold(GOLD_COST);
                     applyToSelfTop(new StrengthPower(p, 1));
+                    att(new VFXAction(new InflameEffect(p)));
                 }
             });
         }

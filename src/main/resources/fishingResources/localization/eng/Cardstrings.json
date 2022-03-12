@@ -455,11 +455,12 @@
   },
   "${ModID}:SearingSight": {
     "NAME": "Searing Sight",
-    "DESCRIPTION": "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded 10 times. NL Bonus at +3.",
+    "DESCRIPTION": "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded 12 times. NL Bonus at +2.",
     "EXTENDED_DESCRIPTION": [
-      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL Can be Upgraded 10 times. NL Bonus at +6.",
-      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL It costs 0 until played. NL Can be Upgraded 10 times. NL Bonus at +10.",
-      "Choose 1 of !M! random Upgraded cards and add 2 copies that cost 0 until played into your hand."
+      "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded 12 times. NL Bonus at +4.",
+      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL Can be Upgraded 12 times. NL Bonus at +6.",
+      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL It costs 0 this turn. NL Can be Upgraded 12 times. NL Bonus at +12.",
+      "Choose 1 of !M! random Upgraded cards and add two copies that cost 0 into your hand."
     ]
   },
   "${ModID}:HolyGrail": {

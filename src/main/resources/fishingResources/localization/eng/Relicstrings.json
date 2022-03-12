@@ -67,7 +67,7 @@
     "NAME": "Maelstrom Ankh",
     "FLAVOR": "Into the depths.",
     "DESCRIPTIONS": [
-      "#y${ModID}:Fish are now strange and powerful. At times, they may not cost #b0 or draw cards."
+      "Find rarer, stranger #y${ModID}:Fish."
     ]
   }
 }
