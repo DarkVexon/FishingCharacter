@@ -19,6 +19,7 @@ public class TakeItEasyPower extends AbstractEasyPower {
     @Override
     public void stackPower(int stackAmount) {
         AbstractDungeon.player.gameHandSize -= stackAmount;
+        super.stackPower(stackAmount);
     }
 
     @Override
