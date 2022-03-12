@@ -279,13 +279,13 @@
   },
   "${ModID}:Lie": {
     "NAME": "Lie",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add Cheat into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add Cheat+ into your hand. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add *Cheat into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add *Cheat+ into your hand. NL Exhaust."
   },
   "${ModID}:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add Steal into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add Steal+ into your hand. NL Exhaust."
+    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add *Steal into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add *Steal+ into your hand. NL Exhaust."
   },
   "${ModID}:Steal": {
     "NAME": "Steal",
@@ -436,8 +436,8 @@
   },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
-    "DESCRIPTION": "Whenever you shuffle your draw pile, add 2 *Shivs into your hand. NL If you won last run, Upgrade them.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you shuffle your draw pile, add 2 *Shivs into your hand. NL If you won last run, Upgrade them."
+    "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Double *Shiv into your hand. NL If you won last run, Upgrade it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you shuffle your draw pile, add 1 *Double *Shiv into your hand. NL If you won last run, Upgrade it."
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
