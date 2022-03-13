@@ -33,7 +33,7 @@ public class BeachBoy extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

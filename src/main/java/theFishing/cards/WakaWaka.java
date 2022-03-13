@@ -29,6 +29,7 @@ public class WakaWaka extends AbstractFishingCard implements StartupCard {
     }
 
     public void upp() {
+        upgradeDamage(2);
         selfRetain = true;
         uDesc();
     }

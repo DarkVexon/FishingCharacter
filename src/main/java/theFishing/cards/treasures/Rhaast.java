@@ -12,7 +12,7 @@ public class Rhaast extends AbstractTreasureCard {
 
     public Rhaast() {
         super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

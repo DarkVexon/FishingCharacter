@@ -11,9 +11,8 @@ public class ComicallyLargeSpoon extends AbstractTreasureCard {
     // intellij stuff attack, enemy, 50, 16, , , , 
 
     public ComicallyLargeSpoon() {
-        super(ID, 3, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 50;
-        exhaust = true;
+        super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
+        baseDamage = 32;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +20,6 @@ public class ComicallyLargeSpoon extends AbstractTreasureCard {
     }
 
     public void upp() {
-        upgradeDamage(16);
+        upgradeDamage(8);
     }
 }

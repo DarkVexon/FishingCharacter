@@ -13,9 +13,9 @@ public class MacGuffin extends AbstractTreasureCard {
     // intellij stuff attack, enemy, 22, 5, 22, 5, 2, 1
 
     public MacGuffin() {
-        super(ID, 2, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 22;
-        baseBlock = 22;
+        super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
+        baseDamage = 10;
+        baseBlock = 13;
         baseMagicNumber = magicNumber = 2;
     }
 

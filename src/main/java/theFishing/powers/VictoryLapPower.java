@@ -2,7 +2,6 @@ package theFishing.powers;
 
 import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.runHistory.RunHistoryScreen;
 import com.megacrit.cardcrawl.screens.stats.RunData;
@@ -23,7 +22,10 @@ public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower
             RunHistoryScreen rhs = new RunHistoryScreen();
             rhs.refreshData();
             ArrayList<RunData> unfilteredRuns = ReflectionHacks.getPrivate(rhs, RunHistoryScreen.class, "unfilteredRuns");
-            upgraded = unfilteredRuns.get(0).victory ? 1 : 0;
+            if (unfilteredRuns.isEmpty()) {
+                upgraded = 0;
+            } else
+                upgraded = unfilteredRuns.get(0).victory ? 1 : 0;
         }
         return upgraded == 1 ? true : false;
     }
@@ -34,7 +36,7 @@ public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower
 
     @Override
     public void updateDescription() {
-        description = "When you shuffle your draw pile, add #b" + amount + (upgraded() ? " #yUpgraded" : " ") + (amount == 1 ? "#yShiv" : "#yShivs") + " into your hand.";
+        description = "When you shuffle your draw pile, add #b" + amount + (upgraded() ? " #yUpgraded" : " ") + (amount == 1 ? "#yDouble #yShiv" : "#yDouble #yShivs") + " into your hand.";
     }
 
     @Override

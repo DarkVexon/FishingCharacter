@@ -416,7 +416,7 @@
   },
   "${ModID}:GoldenLute": {
     "NAME": "Golden Lute",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Stun the enemy for one turn. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Poison. NL Enemy loses !${ModID}:m2! Strength. NL Exhaust."
   },
   "${ModID}:PastKillingGun": {
     "NAME": "Past Killing Gun",
@@ -424,15 +424,15 @@
   },
   "${ModID}:ComicallyLargeSpoon": {
     "NAME": "Comically Large Spoon",
-    "DESCRIPTION": "Only a spoonful. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage."
   },
   "${ModID}:OneRing": {
     "NAME": "One Ring",
-    "DESCRIPTION": "Gain !M! Intangible. NL Lose 2 Max HP. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Intangible. NL Exhaust."
   },
   "${ModID}:Rhaast": {
     "NAME": "Rhaast",
-    "DESCRIPTION": "What am I doing here!? NL Deal !D! damage 3 times."
+    "DESCRIPTION": "Deal !D! damage 3 times."
   },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
@@ -465,8 +465,8 @@
   },
   "${ModID}:HolyGrail": {
     "NAME": "Holy Grail",
-    "DESCRIPTION": "Gain [E] [E] [E]. NL Next turn, gain [E] [E] [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] [E]. NL Next turn, gain [E] [E] [E] [E]. NL Exhaust."
+    "DESCRIPTION": "Gain [E] [E]  and draw 1 additional card at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]  and draw 2 additional cards at the start of your turn."
   },
   "${ModID}:MacGuffin": {
     "NAME": "MacGuffin",
@@ -505,5 +505,35 @@
   "${ModID}:DoubleShiv": {
     "NAME": "Double Shiv",
     "DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
+  },
+  "${ModID}:DoomsdayClock": {
+    "NAME": "Doomsday Clock",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:LostStaff": {
+    "NAME": "Lost Staff",
+    "DESCRIPTION": "Enter Divinity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter Divinity. NL Exhaust."
+  },
+  "${ModID}:BottomlessWell": {
+    "NAME": "Bottomless Well",
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile."
+  },
+  "${ModID}:PowerEternal": {
+    "NAME": "Power Eternal",
+    "DESCRIPTION": "Gain !M! Strength and Dexterity."
+  },
+  "${ModID}:MassProduction": {
+    "NAME": "Mass Production",
+    "DESCRIPTION": "Choose 1 card in your hand. NL Add !M! copies of it that cost 0 into your hand. NL Exhaust."
+  },
+  "${ModID}:DefinitelyUntrappedIdol": {
+    "NAME": "Definitely Untrapped Idol",
+    "DESCRIPTION": "Gain !M! Gold. NL Shuffle a *Rolling *Boulder into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Gold. NL Shuffle a *Rolling *Boulder+ into your draw pile. NL Exhaust."
+  },
+  "${ModID}:RollingBoulder": {
+    "NAME": "Rolling Boulder",
+    "DESCRIPTION": "Unplayable. NL When this card is drawn, deal !M! damage to ALL enemies."
   }
 }

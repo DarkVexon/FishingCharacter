@@ -13,7 +13,7 @@ public class PastKillingGun extends AbstractTreasureCard {
     // intellij stuff attack, enemy, 18, 6, , , 6, 3
 
     public PastKillingGun() {
-        super(ID, 2, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 18;
         baseMagicNumber = magicNumber = 9;
         exhaust = true;

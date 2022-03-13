@@ -18,7 +18,7 @@
     "NAME": "Broken Oar",
     "FLAVOR": "A repairman should be on this island...",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Draw 1 fewer card each turn."
+      "Gain [E] at the start of your turn. Draw #b1 fewer card each turn."
     ]
   },
   "${ModID}:DNAVial": {

@@ -62,7 +62,7 @@ public class TheFishing extends CustomPlayer {
 
 
         dialogX = (drawX + 0.0F * Settings.scale);
-        dialogY = (drawY + 50.0F * Settings.scale);
+        dialogY = (drawY + 125.0F * Settings.scale);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1F);

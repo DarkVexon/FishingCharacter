@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.cards.fish.AbstractFishCard;
+import theFishing.relics.MaelstromAnkh;
 
 import java.util.ArrayList;
 
@@ -24,9 +25,17 @@ public class FishOPedia extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<String> fishes = new ArrayList<>();
-        for (AbstractCard q : AbstractFishCard.weightedFishList.keySet()) {
-            if (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().noneMatch(c -> c.cardID.equals(q.cardID))) {
-                fishes.add(q.cardID);
+        if (AbstractDungeon.player.hasRelic(MaelstromAnkh.ID)) {
+            for (AbstractCard q : AbstractFishCard.maelstromFishList.keySet()) {
+                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().noneMatch(c -> c.cardID.equals(q.cardID))) {
+                    fishes.add(q.cardID);
+                }
+            }
+        } else {
+            for (AbstractCard q : AbstractFishCard.weightedFishList.keySet()) {
+                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().noneMatch(c -> c.cardID.equals(q.cardID))) {
+                    fishes.add(q.cardID);
+                }
             }
         }
         if (fishes.isEmpty()) {

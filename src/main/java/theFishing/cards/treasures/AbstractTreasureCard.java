@@ -17,13 +17,19 @@ public abstract class AbstractTreasureCard extends AbstractFishingCard {
     public static AbstractCard returnRandomLegendaryTreasure() {
         if (treasuresList == null) {
             treasuresList = new ArrayList<>();
+            treasuresList.add(new BottomlessWell());
             treasuresList.add(new ComicallyLargeSpoon());
+            treasuresList.add(new DefinitelyUntrappedIdol());
+            treasuresList.add(new DoomsdayClock());
             treasuresList.add(new GoldenLute());
+            treasuresList.add(new HolyGrail());
+            treasuresList.add(new LostStaff());
+            treasuresList.add(new MacGuffin());
+            treasuresList.add(new MassProduction());
             treasuresList.add(new OneRing());
             treasuresList.add(new PastKillingGun());
+            treasuresList.add(new PowerEternal());
             treasuresList.add(new Rhaast());
-            treasuresList.add(new HolyGrail());
-            treasuresList.add(new MacGuffin());
         }
 
         return treasuresList.get(AbstractDungeon.cardRandomRng.random(treasuresList.size() - 1)).makeCopy();

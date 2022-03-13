@@ -27,7 +27,7 @@ public class SeaMonster extends AbstractFishCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> foundCards = new ArrayList<>();
         for (int i = 0; i < magicNumber; i++) {
-            foundCards.add(AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK));
+            foundCards.add(AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy());
         }
         if (upgraded) {
             for (AbstractCard c : foundCards) {
