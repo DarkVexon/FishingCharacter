@@ -19,6 +19,11 @@ public class ComicallyLargeSpoon extends AbstractTreasureCard {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
+    @Override
+    public float getTitleFontSize() {
+        return 18F;
+    }
+
     public void upp() {
         upgradeDamage(8);
     }

@@ -15,7 +15,7 @@ public class PowerEternal extends AbstractTreasureCard {
 
     public PowerEternal() {
         super(ID, 1, CardType.POWER, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,6 +24,6 @@ public class PowerEternal extends AbstractTreasureCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

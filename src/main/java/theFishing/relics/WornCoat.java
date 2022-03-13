@@ -9,10 +9,10 @@ import theFishing.cards.fish.AbstractFishCard;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
-public class Fishbowl extends AbstractEasyRelic implements OnEnterDiscardRelic {
-    public static final String ID = makeID("Fishbowl");
+public class WornCoat extends AbstractEasyRelic implements OnEnterDiscardRelic {
+    public static final String ID = makeID("WornCoat");
 
-    public Fishbowl() {
+    public WornCoat() {
         super(ID, RelicTier.SHOP, LandingSound.CLINK, TheFishing.Enums.FISHING_COLOR);
     }
 

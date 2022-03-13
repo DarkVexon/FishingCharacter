@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
+import theFishing.cards.SpinAttack;
 import theFishing.cards.Strike;
 import theFishing.relics.TheRod;
 
@@ -89,12 +90,13 @@ public class TheFishing extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             retVal.add(Strike.ID);
         }
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(SpinAttack.ID);
         retVal.add(CastLine.ID);
         return retVal;
     }
@@ -205,7 +207,7 @@ public class TheFishing extends CustomPlayer {
         List<CutscenePanel> panels = new ArrayList<>();
         panels.add(new CutscenePanel("fishingResources/images/ending/ending_1.png", "ATTACK_MAGIC_BEAM_SHORT"));
         panels.add(new CutscenePanel("fishingResources/images/ending/ending_2.png", "AUTOMATON_ORB_SPAWN"));
-        panels.add(new CutscenePanel("fishingResources/images/ending/ending_2.png", "UNLOCK_PING"));
+        panels.add(new CutscenePanel("fishingResources/images/ending/ending_3.png", "UNLOCK_PING"));
         return panels;
     }
 

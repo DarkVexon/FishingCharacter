@@ -33,6 +33,11 @@ public class ChocolateChipCookie extends AbstractFishingCard {
         atb(new TalkAction(true, "mmm...", 1F, 2F));
     }
 
+    @Override
+    public float getTitleFontSize() {
+        return 18F;
+    }
+
     public void upp() {
         upgradeMagicNumber(1);
         upgradeSecondMagic(1);

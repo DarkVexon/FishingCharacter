@@ -14,9 +14,9 @@ public class MacGuffin extends AbstractTreasureCard {
 
     public MacGuffin() {
         super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 10;
-        baseBlock = 13;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 15;
+        baseBlock = 15;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

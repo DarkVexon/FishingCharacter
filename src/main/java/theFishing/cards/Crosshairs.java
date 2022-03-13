@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
@@ -14,6 +13,7 @@ import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.getEnemies;
 
 public class Crosshairs extends AbstractFishingCard {
     public final static String ID = makeID("Crosshairs");
@@ -33,9 +33,15 @@ public class Crosshairs extends AbstractFishingCard {
                         @Override
                         public void update() {
                             isDone = true;
-                            AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
-                            this.addToTop(new DamageAction(q, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
-                            addToTop(new VFXAction(new ClashEffect(q.hb.cX, q.hb.cY), 0.1f));
+                            AbstractMonster q = null;
+                            for (AbstractMonster m2 : getEnemies()) {
+                                q = m2;
+                                break;
+                            }
+                            if (q != null) {
+                                this.addToTop(new DamageAction(q, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
+                                addToTop(new VFXAction(new ClashEffect(q.hb.cX, q.hb.cY), 0.1f));
+                            }
                         }
                     });
                 }

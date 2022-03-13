@@ -15,7 +15,8 @@ public class DoomsdayClock extends AbstractTreasureCard {
 
     public DoomsdayClock() {
         super(ID, 1, CardType.SKILL, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 7;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

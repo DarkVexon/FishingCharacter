@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.cards.VictoryLap;
 import theFishing.cards.cardvars.FishInCombatVar;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
@@ -214,6 +215,6 @@ public class FishingMod implements
 
     @Override
     public void receiveStartGame() {
-        VictoryLapPower.upgraded = -99;
+        VictoryLap.wonPrevRun = -99;
     }
 }

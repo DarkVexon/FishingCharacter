@@ -60,12 +60,12 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw 1 card."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
     "DESCRIPTION": "Draw !M! card. NL Put 1 card from your hand on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Put 1 card from your hand on top of your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL Put 1 card from your hand on top of your draw pile."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -121,8 +121,8 @@
   },
   "${ModID}:HunkerDown": {
     "NAME": "Hunker Down",
-    "DESCRIPTION": "Discard a random card. NL Gain [E].",
-    "UPGRADE_DESCRIPTION": "Discard a card. NL Gain [E]."
+    "DESCRIPTION": "Gain [E].",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]."
   },
   "${ModID}:NostalgicStrike": {
     "NAME": "Nostalgic Strike",
@@ -142,7 +142,7 @@
   },
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
-    "DESCRIPTION": "Exhaust all ${ModID}:Fish. Deal !D! damage to a random enemy for each.",
+    "DESCRIPTION": "Exhaust all ${ModID}:Fish. NL Deal !D! damage to a random enemy for each.",
     "EXTENDED_DESCRIPTION": [
       " NL ( !${ModID}:fshhd! ${ModID}:Fish. )"
     ]
@@ -162,8 +162,7 @@
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Clove",
-    "DESCRIPTION": "Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
@@ -267,7 +266,7 @@
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
-    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL ${ModID}:Solo: Apply !M! Weak and Vulnerable to ALL enemies instead."
+    "DESCRIPTION": "Apply !${ModID}:m2! Weak and Vulnerable to ALL enemies. NL ${ModID}:Solo: Apply !M! Weak and Vulnerable to ALL enemies instead."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Thorny Personality",
@@ -322,7 +321,7 @@
   },
   "${ModID}:BeachBoy": {
     "NAME": "Beach Boy",
-    "DESCRIPTION": "Innate. NL Retain. NL Deal !D! damage. NL Enemy loses !M! HP at the start of each of its turns."
+    "DESCRIPTION": "Innate. NL Retain. NL Deal !D! damage. NL Enemy loses !M! HP at the start of its turn."
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
@@ -335,7 +334,9 @@
   "${ModID}:FullHouse": {
     "NAME": "Full House",
     "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! copies into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a card in your draw pile. NL Shuffle !M! copies into your draw pile. NL Exhaust."
+    "EXTENDED_DESCRIPTION": [
+      "Four of a Kind"
+    ]
   },
   "${ModID}:Fishbones": {
     "NAME": "Fishbones",
@@ -367,7 +368,7 @@
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
-    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to the frontmost enemy."
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
@@ -376,7 +377,7 @@
   "${ModID}:TackleBox": {
     "NAME": "Tackle Box",
     "DESCRIPTION": "At the start of your turn, draw !M! Colorless card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! Colorless card."
+    "UPGRADE_DESCRIPTION": "At the start of your turn, draw !M! Colorless cards."
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
@@ -436,8 +437,8 @@
   },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
-    "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Double *Shiv into your hand. NL If you won last run, Upgrade it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you shuffle your draw pile, add 1 *Double *Shiv into your hand. NL If you won last run, Upgrade it."
+    "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Double *Shiv into your hand. NL If you won last run, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Double *Shiv+ into your hand. NL If you won last run, gain !M! Strength."
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
@@ -535,5 +536,9 @@
   "${ModID}:RollingBoulder": {
     "NAME": "Rolling Boulder",
     "DESCRIPTION": "Unplayable. NL When this card is drawn, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:SpinAttack": {
+    "NAME": "Spin Attack",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Discard 1 card."
   }
 }

@@ -14,7 +14,7 @@ public class PastKillingGun extends AbstractTreasureCard {
 
     public PastKillingGun() {
         super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 18;
+        baseDamage = 27;
         baseMagicNumber = magicNumber = 9;
         exhaust = true;
     }

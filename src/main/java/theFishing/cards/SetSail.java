@@ -26,7 +26,7 @@ public class SetSail extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        exhaust = false;
         uDesc();
     }
 }

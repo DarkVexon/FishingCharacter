@@ -30,7 +30,7 @@ public class Jellyfish extends AbstractFishCard {
             public int onAttacked(DamageInfo info, int damageAmount) {
                 if (info.type == DamageInfo.DamageType.NORMAL) {
                     flash();
-                    addToBot(new DamageAction(owner, new DamageInfo(null, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                    addToTop(new DamageAction(owner, new DamageInfo(null, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                 }
                 return damageAmount;
             }

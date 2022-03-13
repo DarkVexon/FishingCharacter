@@ -56,9 +56,9 @@
       "Whenever you play a card with a star in its art, gain #b1 #yBlock."
     ]
   },
-  "${ModID}:Fishbowl": {
-    "NAME": "Fishbowl",
-    "FLAVOR": "The only manageable pets that remain.",
+  "${ModID}:WornCoat": {
+    "NAME": "Worn Coat",
+    "FLAVOR": "They say Captain Abe rocked this.",
     "DESCRIPTIONS": [
       "Whenever a #y${ModID}:Fish enters your discard pile, gain #b4 #yBlock."
     ]

@@ -1,49 +1,42 @@
 package theFishing.powers;
 
-import basemod.ReflectionHacks;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.screens.runHistory.RunHistoryScreen;
-import com.megacrit.cardcrawl.screens.stats.RunData;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.cards.DoubleShiv;
 import theFishing.util.Wiz;
 
-import java.util.ArrayList;
-
 import static theFishing.FishingMod.makeID;
 
-public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower {
+public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower, NonStackablePower {
     public static String ID = makeID(VictoryLapPower.class.getSimpleName());
 
-    public static int upgraded = -99;
+    private boolean plus;
 
-    public static boolean upgraded() {
-        if (upgraded == -99) {
-            RunHistoryScreen rhs = new RunHistoryScreen();
-            rhs.refreshData();
-            ArrayList<RunData> unfilteredRuns = ReflectionHacks.getPrivate(rhs, RunHistoryScreen.class, "unfilteredRuns");
-            if (unfilteredRuns.isEmpty()) {
-                upgraded = 0;
-            } else
-                upgraded = unfilteredRuns.get(0).victory ? 1 : 0;
-        }
-        return upgraded == 1 ? true : false;
-    }
-
-    public VictoryLapPower(int amount) {
+    public VictoryLapPower(int amount, boolean plus) {
         super("Victory Lap", PowerType.BUFF, false, AbstractDungeon.player, amount);
+        this.plus = plus;
     }
 
     @Override
     public void updateDescription() {
-        description = "When you shuffle your draw pile, add #b" + amount + (upgraded() ? " #yUpgraded" : " ") + (amount == 1 ? "#yDouble #yShiv" : "#yDouble #yShivs") + " into your hand.";
+        description = "When you shuffle your draw pile, add #b" + amount + (plus ? " #yUpgraded" : " ") + (amount == 1 ? "#yDouble #yShiv" : "#yDouble #yShivs") + " into your hand.";
+    }
+
+    @Override
+    public boolean isStackable(AbstractPower power) {
+        if (power instanceof VictoryLapPower) {
+            return plus == ((VictoryLapPower) power).plus;
+        }
+        return false;
     }
 
     @Override
     public void onShuffle() {
         flash();
         AbstractCard q = new DoubleShiv();
-        if (upgraded()) {
+        if (plus) {
             q.upgrade();
         }
         Wiz.makeInHand(q, amount);

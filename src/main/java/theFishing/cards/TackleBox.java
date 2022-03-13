@@ -36,7 +36,7 @@ public class TackleBox extends AbstractFishingCard {
     }
 
     public void upp() {
-        isInnate = true;
+        upgradeMagicNumber(1);
         uDesc();
     }
 }

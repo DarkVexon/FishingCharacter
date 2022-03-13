@@ -25,6 +25,11 @@ public class QuestTimeTheSlimyPath extends AbstractFishingCard {
         atb(new AcceptQuestAction(new TheSlimyPath()));
     }
 
+    @Override
+    public float getTitleFontSize() {
+        return 18F;
+    }
+
     public void upp() {
         isInnate = true;
         uDesc();

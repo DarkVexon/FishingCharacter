@@ -18,7 +18,7 @@ public class DeckedOut extends AbstractFishingCard {
 
     public DeckedOut() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
         baseSecondMagic = secondMagic = 1;
     }
 

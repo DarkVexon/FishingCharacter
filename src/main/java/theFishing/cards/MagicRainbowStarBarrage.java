@@ -45,6 +45,11 @@ public class MagicRainbowStarBarrage extends AbstractFishingCard {
         }
     }
 
+    @Override
+    public float getTitleFontSize() {
+        return 18F;
+    }
+
     public void upp() {
         upgradeDamage(1);
     }

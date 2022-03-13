@@ -20,6 +20,11 @@ public class SetupButWithRetain extends AbstractFishingCard {
         atb(new SetupAction());
     }
 
+    @Override
+    public float getTitleFontSize() {
+        return 18F;
+    }
+
     public void upp() {
         upgradeBaseCost(0);
     }

@@ -16,7 +16,7 @@ public class GoldenLute extends AbstractTreasureCard {
 
     public GoldenLute() {
         super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 12;
         baseSecondMagic = secondMagic = 3;
         exhaust = true;
     }
@@ -27,7 +27,7 @@ public class GoldenLute extends AbstractTreasureCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(3);
         upgradeSecondMagic(1);
     }
 }

@@ -19,6 +19,11 @@ public class ItWasTHIIIIIIISBig extends AbstractFishingCard {
         addToBot(new ItWasTHIIIIIIISBigAction(magicNumber));
     }
 
+    @Override
+    public float getTitleFontSize() {
+        return 18F;
+    }
+
     public void upp() {
         upgradeBaseCost(1);
     }
