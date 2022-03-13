@@ -26,6 +26,7 @@ public class QuestTimeTheSlimyPath extends AbstractFishingCard {
     }
 
     public void upp() {
+        isInnate = true;
         uDesc();
     }
 }

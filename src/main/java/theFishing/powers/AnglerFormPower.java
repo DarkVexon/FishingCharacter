@@ -24,6 +24,13 @@ public class AnglerFormPower extends AbstractEasyPower {
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        amount2 += stackAmount;
+        super.stackPower(stackAmount);
+        updateDescription();
+    }
+
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (amount2 > 0) {
             flash();

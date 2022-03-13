@@ -22,7 +22,7 @@ public class MassProduction extends AbstractTreasureCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SelectCardsInHandAction("to duplicate for Mass Production.", (cards) -> {
-            AbstractCard q = cards.get(0);
+            AbstractCard q = cards.get(0).makeCopy();
             q.updateCost(-999);
             att(new MakeTempCardInHandAction(q, magicNumber, true));
         }));

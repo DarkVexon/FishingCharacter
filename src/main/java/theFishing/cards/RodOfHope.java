@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import theFishing.FishingMod;
+import theFishing.powers.DrawLessNextTurnPower;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.STAR_IN_ART;
@@ -30,30 +31,8 @@ public class RodOfHope extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new BlurPower(p, 1));
-        applyToSelf(new LambdaPower("Draw Less Next Turn", AbstractPower.PowerType.DEBUFF, true, p, magicNumber) {
-
-            @Override
-            public void onInitialApplication() {
-                AbstractDungeon.player.gameHandSize -= amount;
-            }
-
-            @Override
-            public void onRemove() {
-                AbstractDungeon.player.gameHandSize += amount;
-            }
-
-            @Override
-            public void atStartOfTurnPostDraw() {
-                addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-            }
-
-            @Override
-            public void updateDescription() {
-                description = "Draw #b" + amount + (amount == 1 ? " less card next turn." : " less cards next turn.");
-            }
-        });
-        applyToSelf(new LambdaPower("De-Energized Next Turn", AbstractPower.PowerType.DEBUFF, true, p, 1) {
+        applyToSelf(new DrawLessNextTurnPower(magicNumber));
+        applyToSelf(new LambdaPower("De-Energized", AbstractPower.PowerType.DEBUFF, true, p, 1) {
 
             @Override
             public void onEnergyRecharge() {
