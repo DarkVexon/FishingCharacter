@@ -47,8 +47,8 @@
   },
   "${ModID}:SeaMonster": {
     "NAME": "Sea Monster",
-    "DESCRIPTION": "Add !M! random Attacks into your hand. They cost 0 this turn and gain Exhaust. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add !M! random Upgraded Attacks into your hand. They cost 0 this turn and gain Exhaust. NL Exhaust."
+    "DESCRIPTION": "Add !M! random Attacks into your hand. NL They cost 0 this turn and gain Exhaust. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add !M! random Upgraded Attacks into your hand. NL They cost 0 this turn and gain Exhaust. NL Exhaust."
   },
   "${ModID}:Shark": {
     "NAME": "Shark",
