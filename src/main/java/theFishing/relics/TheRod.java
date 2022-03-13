@@ -1,5 +1,6 @@
 package theFishing.relics;
 
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
 import theFishing.cards.fish.AbstractFishCard;
 
@@ -18,6 +19,13 @@ public class TheRod extends AbstractEasyRelic {
         flash();
         for (int i = 0; i < 2; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());
+        }
+    }
+
+    @Override
+    public void onUnequip() {
+        if (AbstractDungeon.player instanceof TheFishing) {
+            ((TheFishing) AbstractDungeon.player).onLoseStartingRod();
         }
     }
 }

@@ -60,7 +60,7 @@ public class FishingMod implements
     // This makes debugging so much easier
     public static Logger logger = LogManager.getLogger(FishingMod.class.getName());
 
-    public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
+    public static Color characterColor = Color.valueOf("4fd1db");
 
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";

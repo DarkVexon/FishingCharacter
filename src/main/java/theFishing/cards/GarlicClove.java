@@ -33,6 +33,7 @@ public class GarlicClove extends AbstractFishingCard {
     }
 
     public void upp() {
+        upgradeMagicNumber(1);
         selfRetain = true;
         uDesc();
     }

@@ -1,0 +1,62 @@
+
+NewProject3.png
+size: 128,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+backpack
+  rotate: false
+  xy: 68, 50
+  size: 16, 23
+  orig: 16, 23
+  offset: 0, 0
+  index: -1
+leg1
+  rotate: false
+  xy: 1, 147
+  size: 64, 5
+  orig: 64, 5
+  offset: 0, 0
+  index: -1
+leg2
+  rotate: false
+  xy: 65, 123
+  size: 57, 5
+  orig: 57, 5
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 1, 50
+  size: 65, 52
+  orig: 65, 52
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1, 104
+  size: 62, 41
+  orig: 62, 41
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 1, 1
+  size: 99, 47
+  orig: 99, 47
+  offset: 0, 0
+  index: -1
+arm2
+  rotate: false
+  xy: 65, 104
+  size: 33, 17
+  orig: 33, 17
+  offset: 0, 0
+  index: -1
+arm1
+  rotate: false
+  xy: 68, 75
+  size: 12, 25
+  orig: 12, 25
+  offset: 0, 0
+  index: -1

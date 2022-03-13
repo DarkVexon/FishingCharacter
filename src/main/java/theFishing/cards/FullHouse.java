@@ -12,7 +12,7 @@ public class FullHouse extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public FullHouse() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
     }

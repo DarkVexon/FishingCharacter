@@ -215,4 +215,11 @@ public class TheFishing extends CustomPlayer {
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.7F);
     }
+
+    public void onLoseStartingRod() {
+        loadAnimation("fishingResources/images/char/mainChar/NewProject3.atlas", "fishingResources/images/char/mainChar/NewProject3.json", SIZE_SCALE);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        this.stateData.setMix("Hit", "Idle", 0.1F);
+        e.setTimeScale(0.7F);
+    }
 }
