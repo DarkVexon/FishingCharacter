@@ -38,7 +38,7 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             weightedFishList.put(new Eel(), 6);
             weightedFishList.put(new Boot(), 3);
             weightedFishList.put(new Shark(), 3);
-            weightedFishList.put(new Siren(), 3);
+            weightedFishList.put(new Starfish(), 3);
             weightedFishList.put(new Maw(), 3);
             weightedFishList.put(new Hammerhead(), 3);
             weightedFishList.put(new Qwilfish(), 2);
@@ -71,7 +71,7 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             maelstromFishList.put(new Qwilfish(), 10);
             maelstromFishList.put(new Swordfish(), 10);
             maelstromFishList.put(new Shark(), 5);
-            maelstromFishList.put(new Siren(), 5);
+            maelstromFishList.put(new Starfish(), 5);
             maelstromFishList.put(new SeaMonster(), 4);
             maelstromFishList.put(new FlyingFish(), 4);
             maelstromFishList.put(new Neow(), 1);

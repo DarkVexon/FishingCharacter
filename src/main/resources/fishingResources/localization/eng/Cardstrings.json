@@ -54,8 +54,8 @@
     "NAME": "Shark",
     "DESCRIPTION": "Apply !M! Vulnerable. NL Draw 1 card. NL Exhaust."
   },
-  "${ModID}:Siren": {
-    "NAME": "Siren",
+  "${ModID}:Starfish": {
+    "NAME": "Starfish",
     "DESCRIPTION": "Apply !M! Weak. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:CastLine": {
