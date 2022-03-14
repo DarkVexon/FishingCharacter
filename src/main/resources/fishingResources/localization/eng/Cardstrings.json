@@ -94,7 +94,7 @@
   },
   "${ModID}:SurpriseAttack": {
     "NAME": "Surprise Attack",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL ${ModID}:Voyaged: Apply !M! Vulnerable."
   },
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
@@ -130,7 +130,7 @@
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Upgrade the top card of your draw pile this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Scry !M!. NL Upgrade the top card of your draw pile this combat."
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
@@ -158,7 +158,7 @@
   },
   "${ModID}:AllOut": {
     "NAME": "All Out",
-    "DESCRIPTION": "At the end of your turn, if your hand is empty, gain !M! Strength."
+    "DESCRIPTION": "At the end of your turn, if your hand is empty, deal !M! damage to ALL enemies."
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Clove",
@@ -296,7 +296,7 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain 1 Strength. NL X >= 4: Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain !M! Strength. NL X >= 4: Gain !B! Block."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
@@ -386,8 +386,8 @@
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
-    "DESCRIPTION": "Put a *Flag on top of your draw pile. NL Next turn, draw 1 additional card.",
-    "UPGRADE_DESCRIPTION": "Put a *Flag+ on top of your draw pile. NL Next turn, draw 1 additional card."
+    "DESCRIPTION": "Gain !B! Block. NL Put a *Flag on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put a *Flag+ on top of your draw pile."
   },
   "${ModID}:Flag": {
     "NAME": "Flag",
@@ -413,7 +413,7 @@
   "${ModID}:QuestTimeTheSlimyPath": {
     "NAME": "Quest Time: The Slimy Path",
     "DESCRIPTION": "Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile."
+    "UPGRADE_DESCRIPTION": "Innate. Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile."
   },
   "${ModID}:GoldenLute": {
     "NAME": "Golden Lute",
@@ -433,7 +433,7 @@
   },
   "${ModID}:Rhaast": {
     "NAME": "Rhaast",
-    "DESCRIPTION": "Deal !D! damage 3 times."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies 3 times."
   },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
@@ -488,8 +488,8 @@
   },
   "${ModID}:FlyingFish": {
     "NAME": "Flying Fish",
-    "DESCRIPTION": "Take 50% less damage for 1 turn. NL Draw 1 card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Take 50% less damage for 2 turns. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Take 50% less damage for !M! turn. NL Draw 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Take 50% less damage for !M! turns. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",

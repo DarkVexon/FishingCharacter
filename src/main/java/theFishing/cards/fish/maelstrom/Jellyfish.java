@@ -19,7 +19,7 @@ public class Jellyfish extends AbstractFishCard {
 
     public Jellyfish() {
         super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         exhaust = true;
     }
 

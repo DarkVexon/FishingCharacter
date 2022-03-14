@@ -35,7 +35,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
 
     @Override
     public float getTitleFontSize() {
-        return 18F;
+        return 19F;
     }
 
     public void upp() {

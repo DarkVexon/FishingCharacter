@@ -16,7 +16,7 @@ public class SpinAttack extends AbstractFishingCard {
 
     public SpinAttack() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ALL_ENEMY);
-        baseDamage = 7;
+        baseDamage = 8;
         isMultiDamage = true;
         tags.add(STAR_IN_ART);
     }

@@ -13,11 +13,12 @@ public class Rhaast extends AbstractTreasureCard {
     public Rhaast() {
         super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 13;
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < 3; i++) {
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+            allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
     }
 

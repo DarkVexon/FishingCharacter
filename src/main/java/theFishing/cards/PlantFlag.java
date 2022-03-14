@@ -18,16 +18,18 @@ public class PlantFlag extends AbstractFishingCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         cardsToPreview = new Flag();
         tags.add(STAR_IN_ART);
+        baseBlock = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         AbstractCard q = new Flag();
         if (upgraded) q.upgrade();
         topDeck(q);
-        applyToSelf(new DrawCardNextTurnPower(p, 1));
     }
 
     public void upp() {
+        upgradeBlock(1);
         AbstractCard q = new Flag();
         q.upgrade();
         cardsToPreview = q;

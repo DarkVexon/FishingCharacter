@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToEnemy;
+import static theFishing.util.Wiz.atb;
 
 public class SurpriseAttack extends AbstractFishingCard {
     public final static String ID = makeID("SurpriseAttack");
@@ -25,6 +27,7 @@ public class SurpriseAttack extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, isVoyaged() ? AbstractGameAction.AttackEffect.BLUNT_HEAVY : AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        atb(new DrawCardAction(1));
         if (isVoyaged()) {
             applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         }

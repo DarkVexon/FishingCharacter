@@ -7,7 +7,6 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -28,7 +27,6 @@ import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
 import theFishing.cards.fish.AbstractFishCard;
 import theFishing.patch.PreDrawPatch;
-import theFishing.powers.VictoryLapPower;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
 import theFishing.util.Wiz;
@@ -50,7 +48,8 @@ public class FishingMod implements
         OnStartBattleSubscriber,
         CustomSavable<Integer>,
         PostPlayerUpdateSubscriber,
-        StartGameSubscriber {
+        StartGameSubscriber,
+        AddAudioSubscriber {
 
     public static final String modID = "fishing";
 
@@ -216,5 +215,11 @@ public class FishingMod implements
     @Override
     public void receiveStartGame() {
         VictoryLap.wonPrevRun = -99;
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(makeID("WAKA_WAKA"), "fishingResources/audio/eat_ghost.ogg");
+        BaseMod.addAudio(makeID("EAT_FRUIT"), "fishingResources/audio/eatfruit.ogg");
     }
 }
