@@ -24,6 +24,6 @@ public class HunkerDown extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 }

@@ -21,7 +21,7 @@ public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower
 
     @Override
     public void updateDescription() {
-        description = "When you shuffle your draw pile, add #b" + amount + (plus ? " #yUpgraded" : " ") + (amount == 1 ? "#yDouble #yShiv" : "#yDouble #yShivs") + " into your hand.";
+        description = "When you shuffle your draw pile, add #b" + amount + (plus ? " #yUpgraded" : " ") + (amount == 1 ? "#yTwin #yShiv" : "#yTwin #yShivs") + " into your hand.";
     }
 
     @Override

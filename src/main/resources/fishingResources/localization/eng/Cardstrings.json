@@ -295,7 +295,7 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage twice. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain !M! Strength. NL X >= 4: Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain !M! Strength. NL X >= 4: Gain !B! Block."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
