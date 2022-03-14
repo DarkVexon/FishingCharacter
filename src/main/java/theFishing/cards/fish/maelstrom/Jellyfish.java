@@ -3,8 +3,10 @@ package theFishing.cards.fish.maelstrom;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.cards.fish.AbstractFishCard;
@@ -30,7 +32,7 @@ public class Jellyfish extends AbstractFishCard {
             public int onAttacked(DamageInfo info, int damageAmount) {
                 if (info.type == DamageInfo.DamageType.NORMAL) {
                     flash();
-                    addToTop(new DamageAction(owner, new DamageInfo(null, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                    addToTop(new LoseHPAction(this.owner, (AbstractCreature)null, this.amount));
                 }
                 return damageAmount;
             }
