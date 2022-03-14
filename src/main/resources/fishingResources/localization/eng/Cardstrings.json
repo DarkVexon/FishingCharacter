@@ -440,11 +440,6 @@
     "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Twin *Shiv into your hand. NL If you won last run, gain !M! Strength.",
     "UPGRADE_DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Twin *Shiv+ into your hand. NL If you won last run, gain !M! Strength."
   },
-  "${ModID}:Starfish": {
-    "NAME": "Starfish",
-    "DESCRIPTION": "Return a card from your discard pile to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Return a card from your discard pile to your hand. NL Exhaust."
-  },
   "${ModID}:Maw": {
     "NAME": "Maw",
     "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card. NL Exhaust."
