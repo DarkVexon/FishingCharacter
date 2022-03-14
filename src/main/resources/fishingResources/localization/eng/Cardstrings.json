@@ -121,8 +121,7 @@
   },
   "${ModID}:HunkerDown": {
     "NAME": "Hunker Down",
-    "DESCRIPTION": "Gain [E].",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E]."
+    "DESCRIPTION": "Gain !B! Block. NL Gain [E]."
   },
   "${ModID}:NostalgicStrike": {
     "NAME": "Nostalgic Strike",
