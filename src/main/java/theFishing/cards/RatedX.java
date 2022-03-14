@@ -24,7 +24,7 @@ public class RatedX extends AbstractFishingCard {
 
     public RatedX() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 4;
         baseBlock = 14;
         baseMagicNumber = magicNumber = 1;
         tags.add(STAR_IN_ART);
@@ -43,16 +43,19 @@ public class RatedX extends AbstractFishingCard {
                 applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
             }
             dmgTop(m, AbstractGameAction.AttackEffect.NONE);
-
-            this.addToTop(new VFXAction(new AnimatedSlashEffect(m.hb.cX, m.hb.cY - 30.0F * Settings.scale, 500.0F, -200.0F, 250.0F, 3.0F, Color.VIOLET, Color.PINK)));
+            this.addToTop(new VFXAction(new AnimatedSlashEffect(m.hb.cX, m.hb.cY - 30.0F * Settings.scale, 500.0F, -200.0F, 250.0F, 3.0F, Color.GRAY.cpy(), Color.DARK_GRAY.cpy())));
             this.addToTop(new SFXAction("ATTACK_FAST", 0.2F));
             this.addToTop(new SFXAction("ATTACK_WHIFF_1", 0.2F));
+            dmgTop(m, AbstractGameAction.AttackEffect.NONE);
+            this.addToTop(new VFXAction(new AnimatedSlashEffect(m.hb.cX, m.hb.cY - 30.0F * Settings.scale, 500.0F, 200.0F, 290.0F, 3.0F, Color.GRAY.cpy(), Color.DARK_GRAY.cpy())));
+            this.addToTop(new SFXAction("ATTACK_FAST", 0.2F));
+            this.addToTop(new SFXAction("ATTACK_WHIFF_2", 0.2F));
             return true;
         }));
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
         upgradeBlock(4);
         upgradeMagicNumber(1);
     }

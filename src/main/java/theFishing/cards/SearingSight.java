@@ -81,7 +81,7 @@ public class SearingSight extends AbstractFishingCard {
 
     @Override
     public boolean canUpgrade() {
-        return timesUpgraded < 12;
+        return true;
     }
 
     public void upp() {

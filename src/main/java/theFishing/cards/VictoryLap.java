@@ -29,7 +29,7 @@ public class VictoryLap extends AbstractFishingCard {
             if (unfilteredRuns.isEmpty()) {
                 wonPrevRun = 0;
             } else
-                wonPrevRun = unfilteredRuns.get(0).victory ? 1 : 0;
+                wonPrevRun = unfilteredRuns.get(unfilteredRuns.size() - 1).victory ? 1 : 0;
         }
         return wonPrevRun == 1 ? true : false;
     }

@@ -296,7 +296,7 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain !M! Strength. NL X >= 4: Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage twice. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain !M! Strength. NL X >= 4: Gain !B! Block."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
@@ -437,8 +437,8 @@
   },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
-    "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Double *Shiv into your hand. NL If you won last run, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Double *Shiv+ into your hand. NL If you won last run, gain !M! Strength."
+    "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Twin *Shiv into your hand. NL If you won last run, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Twin *Shiv+ into your hand. NL If you won last run, gain !M! Strength."
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
@@ -456,12 +456,12 @@
   },
   "${ModID}:SearingSight": {
     "NAME": "Searing Sight",
-    "DESCRIPTION": "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded 12 times. NL Bonus at +2.",
+    "DESCRIPTION": "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded any number of times. NL Bonus at +2.",
     "EXTENDED_DESCRIPTION": [
-      "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded 12 times. NL Bonus at +4.",
-      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL Can be Upgraded 12 times. NL Bonus at +6.",
-      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL It costs 0 this turn. NL Can be Upgraded 12 times. NL Bonus at +12.",
-      "Choose 1 of !M! random Upgraded cards and add two copies that cost 0 into your hand."
+      "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded any number of times. NL Bonus at +4.",
+      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL Can be Upgraded any number of times. NL Bonus at +6.",
+      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL It costs 0 this turn. NL Can be Upgraded any number of times. NL Last Bonus at +12.",
+      "Choose 1 of !M! random Upgraded cards and add two copies that cost 0 into your hand. NL Can be Upgraded any number of times."
     ]
   },
   "${ModID}:HolyGrail": {
@@ -504,12 +504,12 @@
     "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:DoubleShiv": {
-    "NAME": "Double Shiv",
+    "NAME": "Twin Shiv",
     "DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   },
   "${ModID}:DoomsdayClock": {
     "NAME": "Doomsday Clock",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL At the end of !M! turns, deal !${ModID}:m2! damage to ALL enemies. NL Exhaust."
   },
   "${ModID}:LostStaff": {
     "NAME": "Lost Staff",
