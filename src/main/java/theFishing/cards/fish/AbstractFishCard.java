@@ -33,10 +33,10 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             weightedFishList = new LinkedHashMap<>();
             weightedFishList.put(new Guppy(), 30);
             weightedFishList.put(new Piranha(), 30);
-            weightedFishList.put(new Octopus(), 8);
+            weightedFishList.put(new Octopus(), 10);
             weightedFishList.put(new Clownfish(), 6);
             weightedFishList.put(new Eel(), 6);
-            weightedFishList.put(new Boot(), 5);
+            weightedFishList.put(new Boot(), 3);
             weightedFishList.put(new Shark(), 3);
             weightedFishList.put(new Siren(), 3);
             weightedFishList.put(new Maw(), 3);

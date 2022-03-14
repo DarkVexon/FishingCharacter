@@ -472,7 +472,8 @@
   },
   "${ModID}:FishOPedia": {
     "NAME": "Fish-o-pedia",
-    "DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand. NL If you've played them all, instead gain 4 Strength."
+    "DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand. NL If you've played them all, instead gain 4 Strength.",
+    "UPGRADE_DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand and Upgrade it. NL If you've played them all, instead gain 4 Strength."
   },
   "${ModID}:SignpostCard": {
     "NAME": "Message",
