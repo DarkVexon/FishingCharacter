@@ -544,5 +544,9 @@
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL ${ModID}:Solo: Play the top card of your draw pile."
+  },
+  "${ModID}:FreeDrinks": {
+    "NAME": "Free Drinks",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Next turn, draw 1 additional card. NL When you obtain this, obtain a random Potion."
   }
 }
