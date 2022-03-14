@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class SearingSight extends AbstractFishingCard {
 
     public SearingSight(int upgrades) {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         this.timesUpgraded = upgrades;
         tags.add(STAR_IN_ART);
     }
@@ -39,17 +38,17 @@ public class SearingSight extends AbstractFishingCard {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         for (int i = 0; i < magicNumber; i++) {
             AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
-            if (timesUpgraded >= 4) {
+            if (timesUpgraded >= 2) {
                 c.upgrade();
             }
             cardsList.add(c);
         }
         atb(new SelectCardsCenteredAction(cardsList, "Choose a card to add into your hand.", (cards) -> {
             AbstractCard q = cards.get(0);
-            if (timesUpgraded >= 6) {
+            if (timesUpgraded >= 3) {
                 q.freeToPlayOnce = true;
             }
-            att(new MakeTempCardInHandAction(q, timesUpgraded > 12 ? 2 : 1, true));
+            att(new MakeTempCardInHandAction(q,true));
         }));
         atb(new VFXAction(new GiantEyeEffect(p.hb.cX, p.hb.cY + 100.0F * Settings.scale, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 0.0F))));
     }
@@ -60,31 +59,22 @@ public class SearingSight extends AbstractFishingCard {
         this.name = cardStrings.NAME + "+" + this.timesUpgraded;
         this.initializeTitle();
 
-        if (timesUpgraded == 2) {
+        if (timesUpgraded == 1) {
             upgradeBaseCost(0);
+        } else if (timesUpgraded == 2) {
             rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
             initializeDescription();
-        } else if (timesUpgraded == 4) {
+        } else if (timesUpgraded == 3) {
             rawDescription = cardStrings.EXTENDED_DESCRIPTION[1];
             initializeDescription();
-        } else if (timesUpgraded == 6) {
-            rawDescription = cardStrings.EXTENDED_DESCRIPTION[2];
-            initializeDescription();
-        } else if (timesUpgraded == 12) {
-            rawDescription = cardStrings.EXTENDED_DESCRIPTION[3];
-            initializeDescription();
-        }
-        else {
-            upp();
         }
     }
 
     @Override
     public boolean canUpgrade() {
-        return true;
+        return timesUpgraded < 3;
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
     }
 }
