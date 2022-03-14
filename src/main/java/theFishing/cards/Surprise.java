@@ -22,6 +22,7 @@ public class Surprise extends AbstractFishingCard {
     public Surprise() {
         super(ID, -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         isEthereal = true;
+        baseMagicNumber = magicNumber = 16;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,7 +31,7 @@ public class Surprise extends AbstractFishingCard {
     @Override
     public void triggerWhenDrawn() {
         flash();
-        addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(22, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+        addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(magicNumber, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
         addToTop(new VFXAction(adp(), new ShockWaveEffect(adp().hb.cX, adp().hb.cY, Color.RED.cpy(), ShockWaveEffect.ShockWaveType.NORMAL), 0.3F));
     }
 
@@ -41,5 +42,6 @@ public class Surprise extends AbstractFishingCard {
     }
 
     public void upp() {
+        upgradeMagicNumber(4);
     }
 }

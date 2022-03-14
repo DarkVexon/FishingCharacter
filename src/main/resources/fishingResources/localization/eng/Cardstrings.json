@@ -177,7 +177,8 @@
   },
   "${ModID}:BombFishing": {
     "NAME": "Bomb Fishing",
-    "DESCRIPTION": "Shuffle one *Surprise! and !M! *Dazed into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Shuffle 1 *Surprise! into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Shuffle 1 *Surprise!+ into your draw pile."
   },
   "${ModID}:Surprise": {
     "NAME": "Surprise!",
