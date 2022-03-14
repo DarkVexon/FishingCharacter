@@ -17,7 +17,7 @@ public class PowerPellet extends AbstractFishingCard {
 
     public PowerPellet() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 8;
         exhaust = true;
     }
 
