@@ -525,7 +525,7 @@
   },
   "${ModID}:MassProduction": {
     "NAME": "Mass Production",
-    "DESCRIPTION": "Choose 1 card in your hand. NL Add !M! copies of it that cost 0 into your hand. NL Exhaust."
+    "DESCRIPTION": "Choose 1 card from your deck. NL Add !M! copies of it that cost 0 into your hand. NL Exhaust."
   },
   "${ModID}:DefinitelyUntrappedIdol": {
     "NAME": "Definitely Untrapped Idol",

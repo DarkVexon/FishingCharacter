@@ -1,14 +1,15 @@
 package theFishing.cards.treasures;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.treasures.AbstractTreasureCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class MassProduction extends AbstractTreasureCard {
     public final static String ID = makeID("MassProduction");
@@ -21,7 +22,7 @@ public class MassProduction extends AbstractTreasureCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsInHandAction("to duplicate for Mass Production.", (cards) -> {
+        atb(new SelectCardsAction(AbstractDungeon.player.masterDeck.group, "to duplicate for Mass Production.", (cards) -> {
             AbstractCard q = cards.get(0).makeCopy();
             q.updateCost(-999);
             att(new MakeTempCardInHandAction(q, magicNumber, true));
