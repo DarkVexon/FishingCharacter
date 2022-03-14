@@ -182,7 +182,7 @@
   },
   "${ModID}:Surprise": {
     "NAME": "Surprise!",
-    "DESCRIPTION": "Unplayable. Ethereal. When this card is drawn, deal 22 damage to ALL enemies."
+    "DESCRIPTION": "Unplayable. Ethereal. When this card is drawn, deal !M! damage to ALL enemies."
   },
   "${ModID}:Harpoon": {
     "NAME": "Harpoon",
