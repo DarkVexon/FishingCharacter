@@ -14,6 +14,7 @@ public class CardboardBullets extends AbstractFishingCard {
 
     public CardboardBullets() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,6 +31,9 @@ public class CardboardBullets extends AbstractFishingCard {
 
     public void applyPowers() {
         baseDamage = AbstractDungeon.player.hand.group.stream().mapToInt(this::getEnergyAmount).sum();
+        if (upgraded) {
+            baseDamage += 3;
+        }
         super.applyPowers();
         this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
@@ -43,7 +47,6 @@ public class CardboardBullets extends AbstractFishingCard {
 
 
     public void upp() {
-        selfRetain = true;
         uDesc();
     }
 }

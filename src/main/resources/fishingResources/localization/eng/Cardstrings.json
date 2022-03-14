@@ -135,7 +135,7 @@
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
     "DESCRIPTION": "Deal damage equal to the total cost of cards in your hand. NL X counts as 4.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal damage equal to the total cost of cards in your hand. NL X counts as 4.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to the total cost of cards in your hand +3. NL X counts as 4.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
