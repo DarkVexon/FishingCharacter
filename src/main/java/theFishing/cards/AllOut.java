@@ -21,7 +21,7 @@ public class AllOut extends AbstractFishingCard {
     // intellij stuff power, self, uncommon, , , , , 9, 3
 
     public AllOut() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 9;
         tags.add(STAR_IN_ART);
     }

@@ -29,6 +29,7 @@ public class Crosshairs extends AbstractFishingCard {
             public void onAfterCardPlayed(AbstractCard card) {
                 if (card.cost == -1) {
                     flash();
+                    int x = amount;
                     addToBot(new AbstractGameAction() {
                         @Override
                         public void update() {
@@ -39,7 +40,7 @@ public class Crosshairs extends AbstractFishingCard {
                                 break;
                             }
                             if (q != null) {
-                                this.addToTop(new DamageAction(q, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
+                                this.addToTop(new DamageAction(q, new DamageInfo(owner, x, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
                                 addToTop(new VFXAction(new ClashEffect(q.hb.cX, q.hb.cY), 0.1f));
                             }
                         }

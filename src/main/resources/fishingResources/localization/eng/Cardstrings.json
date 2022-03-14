@@ -158,7 +158,7 @@
   },
   "${ModID}:AllOut": {
     "NAME": "All Out",
-    "DESCRIPTION": "At the end of your turn, if your hand is empty, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "At the end of your turn, if your hand is empty, gain !M! Strength."
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Clove",
@@ -540,5 +540,9 @@
   "${ModID}:SpinAttack": {
     "NAME": "Spin Attack",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Discard 1 card."
+  },
+  "${ModID}:AquaOrb": {
+    "NAME": "Aqua Orb",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL ${ModID}:Solo: Play the top card of your draw pile."
   }
 }

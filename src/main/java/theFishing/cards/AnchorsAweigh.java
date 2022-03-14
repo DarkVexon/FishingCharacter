@@ -18,7 +18,7 @@ public class AnchorsAweigh extends AbstractFishingCard implements StartupCard {
 
     public AnchorsAweigh() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 10;
+        baseBlock = 15;
         baseMagicNumber = magicNumber = 10;
         exhaust = true;
     }

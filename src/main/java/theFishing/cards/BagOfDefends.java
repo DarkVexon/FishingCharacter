@@ -35,10 +35,10 @@ public class BagOfDefends extends AbstractFishingCard implements OnRemoveCardFro
 
     @Override
     public void onRemoveCardFromDeck(AbstractCard c) {
-        if (c.hasTag(CardTags.STARTER_DEFEND)) {
+        if (c.hasTag(CardTags.STARTER_DEFEND) && !upgraded) {
             upgrade();
             float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
-            float y = MathUtils.random(0.2F, 0.8F) * (float)Settings.HEIGHT;
+            float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(makeStatEquivalentCopy(), x, y));
             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
         }
