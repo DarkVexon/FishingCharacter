@@ -22,7 +22,7 @@ public class PowerPellet extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction(makeID("EAT_FRUIT")));
+        atb(new SFXAction(makeID("WAKA_WAKA")));
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {

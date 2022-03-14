@@ -17,12 +17,12 @@ public class BrokenOar extends AbstractEasyRelic {
     @Override
     public void onEquip() {
         AbstractDungeon.player.energy.energyMaster++;
-        AbstractDungeon.player.gameHandSize--;
+        AbstractDungeon.player.masterHandSize--;
     }
 
     @Override
     public void onUnequip() {
         AbstractDungeon.player.energy.energyMaster--;
-        AbstractDungeon.player.gameHandSize++;
+        AbstractDungeon.player.masterHandSize--;
     }
 }

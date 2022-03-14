@@ -29,7 +29,7 @@ public class WakaWaka extends AbstractFishingCard implements StartupCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction(makeID("WAKA_WAKA")));
+        atb(new SFXAction(makeID("EAT_FRUIT")));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
     }
 
