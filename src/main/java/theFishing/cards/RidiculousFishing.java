@@ -17,8 +17,8 @@ public class RidiculousFishing extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , 4, 1
 
     public RidiculousFishing() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

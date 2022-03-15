@@ -541,6 +541,13 @@
   },
   "${ModID}:FreeDrinks": {
     "NAME": "Free Drinks",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Next turn, draw 1 additional card. NL When you obtain this, obtain a random Potion."
+    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust. NL When you obtain this, obtain a random Potion.",
+    "EXTENDED_DESCRIPTION": [
+      "On the house."
+    ]
+  },
+  "${ModID}:ProtonBlast": {
+    "NAME": "Ghostbuster",
+    "DESCRIPTION": "Deal !D! damage, tripled against undead. NL While this is in your deck, if you would obtain a Curse, gain !M! Gold instead."
   }
 }

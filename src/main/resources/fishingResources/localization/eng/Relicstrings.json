@@ -3,7 +3,7 @@
     "NAME": "The Rod",
     "FLAVOR": "The only one of its kind.",
     "DESCRIPTIONS": [
-      "At the start of each combat, shuffle #b2 #y${ModID}:Fish into your draw pile."
+      "After drawing your first hand each combat, add a #y${ModID}:Fish into your hand, draw pile, and discard pile."
     ]
   },
   "${ModID}:RainbowRod": {

@@ -1,11 +1,12 @@
 package theFishing.relics;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.shuffleIn;
+import static theFishing.util.Wiz.*;
 
 public class TheRod extends AbstractEasyRelic {
     public static final String ID = makeID("TheRod");
@@ -15,11 +16,11 @@ public class TheRod extends AbstractEasyRelic {
     }
 
     @Override
-    public void atBattleStartPreDraw() {
+    public void atBattleStart() {
         flash();
-        for (int i = 0; i < 2; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
-        }
+        shuffleIn(AbstractFishCard.returnRandomFish());
+        atb(new MakeTempCardInDiscardAction(AbstractFishCard.returnRandomFish(), 1));
+        makeInHand(AbstractFishCard.returnRandomFish());
     }
 
     @Override

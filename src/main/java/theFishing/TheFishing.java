@@ -90,7 +90,7 @@ public class TheFishing extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             retVal.add(Strike.ID);
         }
         for (int i = 0; i < 5; i++) {
