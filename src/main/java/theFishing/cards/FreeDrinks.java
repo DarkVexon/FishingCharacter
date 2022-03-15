@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
@@ -29,11 +30,9 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        if (!(AbstractDungeon.getCurrRoom() instanceof MonsterRoom) && !(AbstractDungeon.getCurrRoom() instanceof MonsterRoomElite) && !(AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss)) {
-            AbstractDungeon.getCurrRoom().rewards.clear();
+        if (AbstractDungeon.player.potions.stream().anyMatch(c -> c instanceof PotionSlot)) {
+            AbstractDungeon.player.obtainPotion(AbstractDungeon.returnRandomPotion());
         }
-        AbstractDungeon.getCurrRoom().addPotionToRewards(PotionHelper.getRandomPotion());
-        AbstractDungeon.combatRewardScreen.open(cardStrings.EXTENDED_DESCRIPTION[0]);
     }
 
     public void upp() {
