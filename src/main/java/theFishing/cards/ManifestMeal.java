@@ -15,7 +15,7 @@ public class ManifestMeal extends AbstractFishingCard {
 
     public ManifestMeal() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Food();
     }
 
@@ -26,7 +26,6 @@ public class ManifestMeal extends AbstractFishingCard {
             att(new MakeTempCardInDrawPileAction(q, 1, false, true));
             return true;
         }, magicNumber));
-        applyToSelf(new DrawCardNextTurnPower(p, 1));
     }
 
 

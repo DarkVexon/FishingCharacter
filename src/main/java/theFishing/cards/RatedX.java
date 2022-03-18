@@ -5,16 +5,13 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
+import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
 import theFishing.actions.EasyXCostAction;
 
 import static theFishing.FishingMod.STAR_IN_ART;
@@ -46,10 +43,9 @@ public class RatedX extends AbstractFishingCard {
                 applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
             }
             dmgTop(m, AbstractGameAction.AttackEffect.NONE);
-            AbstractGameEffect e = new CleaveEffect();
+            AbstractGameEffect e = new ClashEffect(m.hb.cX, m.hb.cY);
             ReflectionHacks.setPrivate(e, AbstractGameEffect.class, "color", Color.DARK_GRAY.cpy());
             this.addToTop(new VFXAction(p, e, 0.1F));
-            this.addToTop(new SFXAction("ATTACK_HEAVY"));
             return true;
         }));
     }

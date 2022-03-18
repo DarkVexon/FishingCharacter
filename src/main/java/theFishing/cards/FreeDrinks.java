@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
@@ -9,6 +10,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
+
+import java.util.Arrays;
+import java.util.List;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToEnemy;
@@ -33,6 +37,11 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
         if (AbstractDungeon.player.potions.stream().anyMatch(c -> c instanceof PotionSlot)) {
             AbstractDungeon.player.obtainPotion(AbstractDungeon.returnRandomPotion());
         }
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        return Arrays.asList(new TooltipInfo("DISCLAIMER", "Offer only valid with an empty potion slot."));
     }
 
     public void upp() {

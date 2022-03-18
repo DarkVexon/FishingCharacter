@@ -39,7 +39,7 @@
     "NAME": "Unagee Skull",
     "FLAVOR": "They say this terrifying beast used to guard sunken ships.",
     "DESCRIPTIONS": [
-      "#yGuppies grant #b2 more Block. #yPiranhas deal #b2 more damage."
+      "#yGuppies grant #b2 more #yBlock. #yPiranhas deal #b2 more damage."
     ]
   },
   "${ModID}:Signpost": {

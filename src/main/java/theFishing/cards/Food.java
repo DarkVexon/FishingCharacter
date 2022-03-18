@@ -17,19 +17,12 @@ public class Food extends AbstractFishingCard {
 
     public Food() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        selfRetain = true;
-        exhaust = true;
     }
 
     public void setX(int amount) {
         this.magicNumber = amount;
         this.baseMagicNumber = this.magicNumber;
-        StringBuilder sb = new StringBuilder("Retain. NL Gain ");
-        for (int i = 0; i < amount; i++) {
-            sb.append("[E] ");
-        }
-        sb.append(". NL Exhaust.");
-        this.rawDescription = sb.toString();
+        this.rawDescription = this.baseMagicNumber == 1 ? cardStrings.EXTENDED_DESCRIPTION[1] : cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
@@ -43,14 +36,10 @@ public class Food extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new GainEnergyAction(magicNumber));
-        if (upgraded) {
-            atb(new DrawCardAction(1));
-        }
+        atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {
-        rawDescription = rawDescription.replaceAll("Exhaust.", "Draw 1 card. NL Exhaust.");
-        initializeDescription();
+        upgradeMagicNumber(1);
     }
 }

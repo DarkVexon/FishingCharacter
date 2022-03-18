@@ -2,6 +2,7 @@ package theFishing.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.cards.DoubleShiv;
@@ -21,7 +22,7 @@ public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower
 
     @Override
     public void updateDescription() {
-        description = "When you shuffle your draw pile, add #b" + amount + (plus ? " #yUpgraded" : " ") + (amount == 1 ? "#yTwin #yShiv" : "#yTwin #yShivs") + " into your hand.";
+        description = "When you shuffle your draw pile, add #b" + amount + (plus ? " #yUpgraded" : " ") + (amount == 1 ? "#yMiracle" : "#yMiracles") + " into your hand.";
     }
 
     @Override
@@ -35,7 +36,7 @@ public class VictoryLapPower extends AbstractEasyPower implements OnShufflePower
     @Override
     public void onShuffle() {
         flash();
-        AbstractCard q = new DoubleShiv();
+        AbstractCard q = new Miracle();
         if (plus) {
             q.upgrade();
         }

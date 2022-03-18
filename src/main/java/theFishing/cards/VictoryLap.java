@@ -2,6 +2,7 @@ package theFishing.cards;
 
 import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -36,7 +37,7 @@ public class VictoryLap extends AbstractFishingCard {
 
     public VictoryLap() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        cardsToPreview = new DoubleShiv();
+        cardsToPreview = new Miracle();
         baseMagicNumber = magicNumber = 1;
         tags.add(STAR_IN_ART);
     }
@@ -54,7 +55,7 @@ public class VictoryLap extends AbstractFishingCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        AbstractCard q = new DoubleShiv();
+        AbstractCard q = new Miracle();
         q.upgrade();
         cardsToPreview = q;
         uDesc();

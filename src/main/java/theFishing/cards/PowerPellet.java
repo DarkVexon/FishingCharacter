@@ -41,6 +41,6 @@ public class PowerPellet extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(4);
     }
 }

@@ -199,13 +199,16 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "Manifest Meal",
-    "DESCRIPTION": "Put a *Food with X+1 on top of your draw pile. NL Draw 1 additional card next turn.",
-    "UPGRADE_DESCRIPTION": "Put a *Food with X+2 on top of your draw pile. NL Draw 1 additional card next turn."
+    "DESCRIPTION": "Put a *Food with X+2 on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Put a *Food with X+3 on top of your draw pile."
   },
   "${ModID}:Food": {
     "NAME": "Food",
-    "DESCRIPTION": "Retain. NL Gain X [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain X [E]. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Draw X cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Draw !M! card.",
+      "Draw !M! cards."
+    ]
   },
   "${ModID}:Cannoneer": {
     "NAME": "Cannoneer",
@@ -437,8 +440,8 @@
   },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
-    "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Twin *Shiv into your hand. NL If you won last run, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Twin *Shiv+ into your hand. NL If you won last run, gain !M! Strength."
+    "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Miracle into your hand. NL If you won last run, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Miracle+ into your hand. NL If you won last run, gain !M! Strength."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
