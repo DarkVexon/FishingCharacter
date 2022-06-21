@@ -548,9 +548,5 @@
     "EXTENDED_DESCRIPTION": [
       "On the house."
     ]
-  },
-  "${ModID}:ProtonBlast": {
-    "NAME": "Ghostbuster",
-    "DESCRIPTION": "Deal !D! damage, tripled against undead. NL While this is in your deck, if you would obtain a Curse, gain !M! Gold instead."
   }
 }
