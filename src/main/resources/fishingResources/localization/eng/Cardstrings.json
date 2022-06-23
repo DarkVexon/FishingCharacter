@@ -134,7 +134,7 @@
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
     "DESCRIPTION": "Deal damage equal to the total cost of cards in your hand. NL X counts as 4.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to the total cost of cards in your hand +3. NL X counts as 4.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to the total cost of cards in your hand + 3. NL X counts as 4.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
@@ -452,14 +452,6 @@
     "DESCRIPTION": "Gain [E]. NL Draw 1 card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw 1 card. NL Exhaust."
   },
-  "${ModID}:SearingSight": {
-    "NAME": "Searing Sight",
-    "DESCRIPTION": "Choose 1 of !M! random cards and add it into your hand. NL Can be Upgraded 3 times.",
-    "EXTENDED_DESCRIPTION": [
-      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL Can be Upgraded 3 times.",
-      "Choose 1 of !M! random Upgraded cards and add it into your hand. NL It costs 0 this turn."
-    ]
-  },
   "${ModID}:HolyGrail": {
     "NAME": "Holy Grail",
     "DESCRIPTION": "Gain [E] [E]  and draw 1 additional card at the start of your turn.",
@@ -473,11 +465,6 @@
     "NAME": "Fish-o-pedia",
     "DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand. NL If you've played them all, instead gain 4 Strength.",
     "UPGRADE_DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand and Upgrade it. NL If you've played them all, instead gain 4 Strength."
-  },
-  "${ModID}:SignpostCard": {
-    "NAME": "Message",
-    "DESCRIPTION": "Retain. NL Choose a card in your hand. NL Shuffle a copy of it into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in your hand. NL Shuffle a copy of it into your draw pile."
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
