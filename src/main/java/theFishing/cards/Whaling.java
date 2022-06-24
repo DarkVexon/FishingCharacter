@@ -15,21 +15,22 @@ import static theFishing.util.Wiz.*;
 
 public class Whaling extends AbstractFishingCard {
     public final static String ID = makeID("Whaling");
-    public final static int GOLD_COST = 15;
     // intellij stuff power, self, uncommon, , , , , , 
 
     public Whaling() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 15;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p, 1));
+        applyToSelf(new StrengthPower(p, magicNumber));
         if (p.gold > 200) {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
-                    p.loseGold(GOLD_COST);
+                    p.loseGold(secondMagic);
                     applyToSelfTop(new StrengthPower(p, 1));
                     att(new VFXAction(new InflameEffect(p)));
                 }
@@ -42,7 +43,7 @@ public class Whaling extends AbstractFishingCard {
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(-5);
     }
 }

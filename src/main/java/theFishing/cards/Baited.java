@@ -15,12 +15,11 @@ public class Baited extends AbstractFishingCard {
     public Baited() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 15;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        makeInHand(AbstractFishCard.returnRandomFish());
         if (m.getIntentBaseDmg() > -1) {
             for (int i = 0; i < magicNumber; i++) {
                 makeInHand(AbstractFishCard.returnRandomFish());
@@ -29,7 +28,6 @@ public class Baited extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(7);
     }
 }

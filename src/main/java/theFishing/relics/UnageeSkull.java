@@ -25,7 +25,7 @@ public class UnageeSkull extends AbstractEasyRelic implements ModifyBlockRelic {
     @Override
     public float modifyBlock(float block, AbstractCard source) {
         if (source.cardID.equals(Guppy.ID)) {
-            return block + 2;
+            return block + 1;
         }
         return block;
     }

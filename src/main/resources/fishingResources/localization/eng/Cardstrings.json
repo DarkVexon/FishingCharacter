@@ -153,7 +153,7 @@
   },
   "${ModID}:Baited": {
     "NAME": "Baited",
-    "DESCRIPTION": "Deal !D! damage. NL Add a ${ModID}:Fish into your hand. NL If the enemy intends to attack, add !M! more."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, add !M! ${ModID}:Fish into your hand."
   },
   "${ModID}:AllOut": {
     "NAME": "All Out",
@@ -239,8 +239,7 @@
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
-    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend 15 to gain an extra 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Strength. NL If you have over 200 *Gold, spend 15 to gain an extra 1 Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL If you have over 200 *Gold, spend !${ModID}:m2! to gain an extra 1 Strength."
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",
