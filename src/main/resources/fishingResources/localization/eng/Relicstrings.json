@@ -3,7 +3,7 @@
     "NAME": "The Rod",
     "FLAVOR": "The only one of its kind.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a #y${ModID}:Fish into your hand, draw pile, and discard pile."
+      "#yUpgrade the first #b3 unupgraded cards you draw each combat."
     ]
   },
   "${ModID}:RainbowRod": {
@@ -11,7 +11,7 @@
     "FLAVOR": "Fishing 120",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL At the end of each turn, shuffle #b2 #y${ModID}:Fish into your draw pile."
+      ".[] NL #yUpgrade the first #b2 unupgraded cards you draw each turn."
     ]
   },
   "${ModID}:BrokenOar": {

@@ -1,6 +1,7 @@
 package theFishing.relics;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
 import theFishing.cards.fish.AbstractFishCard;
@@ -17,10 +18,20 @@ public class TheRod extends AbstractEasyRelic {
 
     @Override
     public void atBattleStart() {
-        flash();
-        shuffleIn(AbstractFishCard.returnRandomFish());
-        atb(new MakeTempCardInDiscardAction(AbstractFishCard.returnRandomFish(), 1));
-        makeInHand(AbstractFishCard.returnRandomFish());
+        counter = 3;
+        grayscale = false;
+    }
+
+    @Override
+    public void onCardDraw(AbstractCard drawnCard) {
+        if (!grayscale && !drawnCard.upgraded) {
+            counter -= 1;
+            drawnCard.upgrade();
+            if (counter == 0) {
+                grayscale = true;
+                counter = -1;
+            }
+        }
     }
 
     @Override

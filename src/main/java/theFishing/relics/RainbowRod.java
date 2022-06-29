@@ -2,6 +2,7 @@ package theFishing.relics;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
@@ -18,10 +19,18 @@ public class RainbowRod extends AbstractEasyRelic {
     }
 
     @Override
-    public void onPlayerEndTurn() {
-        flash();
-        for (int i = 0; i < 2; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
+    public void atTurnStart() {
+        counter = 2;
+    }
+
+    @Override
+    public void onCardDraw(AbstractCard drawnCard) {
+        if (counter > 0 && !drawnCard.upgraded) {
+            counter -= 1;
+            drawnCard.upgrade();
+            if (counter == 0) {
+                counter = -1;
+            }
         }
     }
 

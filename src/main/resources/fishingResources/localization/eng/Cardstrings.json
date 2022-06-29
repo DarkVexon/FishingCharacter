@@ -235,7 +235,7 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Ethereal. NL Gain !M! *Gold. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !M! *Gold. NL Add 1 ${ModID}:Fish into your hand. NL Exhaust."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
@@ -349,8 +349,8 @@
     "DESCRIPTION": "Deal !D! damage. NL In Elite combats, deal !${ModID}:sd! damage instead."
   },
   "${ModID}:AnchorsAweigh": {
-    "NAME": "Anchors Aweigh",
-    "DESCRIPTION": "Startup: Gain !M! Block and [E]. NL Gain !B! Block. NL Exhaust."
+    "NAME": "Anchor Lantern",
+    "DESCRIPTION": "Startup: Gain !M! Block and [E]. NL Gain !B! Block and [E]. NL Exhaust."
   },
   "${ModID}:PickMe": {
     "NAME": "Pick Me!",

@@ -18,13 +18,14 @@ public class AnchorsAweigh extends AbstractFishingCard implements StartupCard {
 
     public AnchorsAweigh() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 15;
+        baseBlock = 10;
         baseMagicNumber = magicNumber = 10;
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        atb(new GainEnergyAction(1));
     }
 
     @Override
@@ -35,7 +36,6 @@ public class AnchorsAweigh extends AbstractFishingCard implements StartupCard {
     }
 
     public void upp() {
-        upgradeBlock(5);
-        upgradeMagicNumber(5);
+        upgradeBaseCost(1);
     }
 }

@@ -13,7 +13,7 @@ public class Flag extends AbstractFishingCard {
 
     public Flag() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = 8;
+        baseBlock = 7;
         selfRetain = true;
         exhaust = true;
     }

@@ -16,8 +16,9 @@ public class QuestTimeTheSlimyPath extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public QuestTimeTheSlimyPath() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new Slimed();
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

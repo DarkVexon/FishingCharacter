@@ -96,7 +96,7 @@ public class TheFishing extends CustomPlayer {
         for (int i = 0; i < 5; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(SpinAttack.ID);
+        //retVal.add(SpinAttack.ID);
         retVal.add(CastLine.ID);
         return retVal;
     }
