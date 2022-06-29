@@ -19,7 +19,7 @@ public class ShipRam extends AbstractFishingCard {
     public ShipRam() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 16;
-        baseSecondDamage = secondDamage = 25;
+        baseSecondDamage = secondDamage = 28;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -23,7 +23,6 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
-import theFishing.cards.SpinAttack;
 import theFishing.cards.Strike;
 import theFishing.relics.TheRod;
 

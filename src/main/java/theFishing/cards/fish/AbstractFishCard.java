@@ -31,12 +31,11 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     private static AbstractCard returnRandomBasicFish() {
         if (weightedFishList == null) {
             weightedFishList = new LinkedHashMap<>();
-            weightedFishList.put(new Guppy(), 30);
+            weightedFishList.put(new Guppy(), 32);
             weightedFishList.put(new Piranha(), 30);
-            weightedFishList.put(new Octopus(), 10);
-            weightedFishList.put(new Clownfish(), 6);
-            weightedFishList.put(new Eel(), 6);
-            weightedFishList.put(new Boot(), 3);
+            weightedFishList.put(new Octopus(), 11);
+            weightedFishList.put(new Eel(), 7);
+            weightedFishList.put(new Boot(), 5);
             weightedFishList.put(new Shark(), 3);
             weightedFishList.put(new Starfish(), 3);
             weightedFishList.put(new Maw(), 3);
@@ -65,13 +64,12 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             maelstromFishList = new LinkedHashMap<>();
             maelstromFishList.put(new Maw(), 15);
             maelstromFishList.put(new Jellyfish(), 15);
-            maelstromFishList.put(new Eel(), 11);
-            maelstromFishList.put(new Clownfish(), 10);
+            maelstromFishList.put(new Eel(), 15);
             maelstromFishList.put(new Hammerhead(), 10);
             maelstromFishList.put(new Qwilfish(), 10);
-            maelstromFishList.put(new Swordfish(), 10);
-            maelstromFishList.put(new Shark(), 5);
-            maelstromFishList.put(new Starfish(), 5);
+            maelstromFishList.put(new Swordfish(), 12);
+            maelstromFishList.put(new Shark(), 7);
+            maelstromFishList.put(new Starfish(), 7);
             maelstromFishList.put(new SeaMonster(), 4);
             maelstromFishList.put(new FlyingFish(), 4);
             maelstromFishList.put(new Neow(), 1);

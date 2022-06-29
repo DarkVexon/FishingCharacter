@@ -44,6 +44,5 @@ public class Whaling extends AbstractFishingCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(-5);
     }
 }
