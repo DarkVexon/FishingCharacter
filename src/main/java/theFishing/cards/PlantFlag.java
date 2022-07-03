@@ -29,7 +29,7 @@ public class PlantFlag extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(1);
+        upgradeBlock(2);
         AbstractCard q = new Flag();
         q.upgrade();
         cardsToPreview = q;

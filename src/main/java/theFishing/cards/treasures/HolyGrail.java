@@ -16,7 +16,7 @@ public class HolyGrail extends AbstractTreasureCard {
     // intellij stuff skill, self, , , , , 3, 1
 
     public HolyGrail() {
-        super(ID, 1, CardType.POWER, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

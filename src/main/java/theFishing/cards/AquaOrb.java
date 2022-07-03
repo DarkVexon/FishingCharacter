@@ -43,6 +43,7 @@ public class AquaOrb extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(1);
+        upgradeMagicNumber(1);
     }
 }

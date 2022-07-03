@@ -15,7 +15,7 @@ public class OneRing extends AbstractTreasureCard {
     // intellij stuff skill, self, , , , , 2, 1
 
     public OneRing() {
-        super(ID, 1, CardType.SKILL, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
     }

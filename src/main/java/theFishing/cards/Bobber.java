@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.patch.PreDrawPatch;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.*;
 
 public class Bobber extends AbstractFishingCard {
     public final static String ID = makeID("Bobber");
@@ -27,8 +26,8 @@ public class Bobber extends AbstractFishingCard {
     @Override
     public void triggerWhenDrawn() {
         if (PreDrawPatch.DRAWN_DURING_TURN) {
-            atb(new GainBlockAction(AbstractDungeon.player, secondMagic));
-            applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
+            applyToSelfTop(new StrengthPower(AbstractDungeon.player, magicNumber));
+            att(new GainBlockAction(AbstractDungeon.player, secondMagic));
         }
     }
 

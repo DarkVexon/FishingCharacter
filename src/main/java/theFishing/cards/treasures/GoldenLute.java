@@ -15,9 +15,9 @@ public class GoldenLute extends AbstractTreasureCard {
     // intellij stuff skill, enemy, rare, , , , , 2, 1
 
     public GoldenLute() {
-        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 2, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 12;
-        baseSecondMagic = secondMagic = 3;
+        baseSecondMagic = secondMagic = 4;
         exhaust = true;
     }
 

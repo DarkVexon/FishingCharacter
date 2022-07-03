@@ -60,7 +60,7 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw 1 card."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
@@ -161,7 +161,7 @@
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Clove",
-    "DESCRIPTION": "Retain. NL Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",

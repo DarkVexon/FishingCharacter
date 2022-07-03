@@ -17,7 +17,7 @@ public class Neow extends AbstractFishCard {
 
     public Neow() {
         super(ID, 0, CardType.SKILL, CardTarget.SELF_AND_ENEMY);
-        baseMagicNumber = magicNumber = 15;
+        baseMagicNumber = magicNumber = 30;
         exhaust = true;
         tags.add(STAR_IN_ART);
     }

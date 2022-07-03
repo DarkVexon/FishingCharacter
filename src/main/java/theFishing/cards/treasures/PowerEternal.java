@@ -14,7 +14,7 @@ public class PowerEternal extends AbstractTreasureCard {
     // intellij stuff power, self, , , , , 3, 1
 
     public PowerEternal() {
-        super(ID, 1, CardType.POWER, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
     }
 

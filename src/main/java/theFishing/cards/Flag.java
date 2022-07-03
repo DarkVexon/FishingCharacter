@@ -24,6 +24,6 @@ public class Flag extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(1);
     }
 }

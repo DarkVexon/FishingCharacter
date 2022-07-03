@@ -14,13 +14,6 @@
     "DESCRIPTION": "Effect triggers only if you drew this card during your turn, outside of the opening draw."
   },
   {
-    "PROPER_NAME": "Consume",
-    "NAMES": [
-      "consume"
-    ],
-    "DESCRIPTION": "When you have #yFish in your hand, you will instead #yExhaust #b1 Fish to pay each [E] for this card's cost."
-  },
-  {
     "PROPER_NAME": "Solo",
     "NAMES": [
       "solo"

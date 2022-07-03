@@ -16,16 +16,14 @@ public class CastLine extends AbstractFishingCard {
 
     public CastLine() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         tags.add(STAR_IN_ART);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO: SFX? VFX?
         for (int i = 0; i < magicNumber; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());
         }
-        atb(new DrawCardAction(1));
     }
 
     public void upp() {

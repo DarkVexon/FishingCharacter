@@ -11,7 +11,7 @@ public class Rhaast extends AbstractTreasureCard {
     // intellij stuff attack, enemy, 10, 3, , , , 
 
     public Rhaast() {
-        super(ID, 1, CardType.ATTACK, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardTarget.ALL_ENEMY);
         baseDamage = 13;
         isMultiDamage = true;
     }
