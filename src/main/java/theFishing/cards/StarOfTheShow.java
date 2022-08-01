@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.SpotlightPlayerEffect;
 import theFishing.FishingMod;
@@ -16,6 +18,7 @@ import theFishing.powers.LambdaPower;
 import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.StarHelper.isStarCard;
 import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;
 
@@ -28,20 +31,6 @@ public class StarOfTheShow extends AbstractFishingCard {
         baseMagicNumber = magicNumber = 2;
     }
 
-    private static ArrayList<String> basegameStarCards;
-
-    private static boolean isBasegameStarCard(String ID) {
-        if (basegameStarCards == null) {
-            basegameStarCards = new ArrayList<>();
-            basegameStarCards.add(Offering.ID);
-        }
-        return basegameStarCards.contains(ID);
-    }
-
-    public static boolean isStarCard(AbstractCard c) {
-        return c.hasTag(FishingMod.STAR_IN_ART) || StarOfTheShow.isBasegameStarCard(c.cardID);
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.effectsQueue.add(new SpotlightPlayerEffect());
         applyToSelf(new LambdaPower("Star of the Show", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
@@ -49,7 +38,8 @@ public class StarOfTheShow extends AbstractFishingCard {
             public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (isStarCard(card)) {
                     flashWithoutSound();
-                    atb(new ApplyPowerAction(owner, owner, new VigorPower(owner, amount), amount));
+                    atb(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+                    atb(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));
                 }
             }
 

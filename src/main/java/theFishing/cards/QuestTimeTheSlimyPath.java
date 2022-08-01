@@ -22,7 +22,7 @@ public class QuestTimeTheSlimyPath extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        shuffleIn(new Slimed(), 3);
+        shuffleIn(new Slimed(), 2);
         atb(new AcceptQuestAction(new TheSlimyPath()));
     }
 

@@ -11,11 +11,11 @@ import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class Neow extends AbstractFishCard {
-    public final static String ID = makeID("Neow");
+public class TheWhale extends AbstractFishCard {
+    public final static String ID = makeID("TheWhale");
     // intellij stuff skill, enemy, , , , , 50, 10
 
-    public Neow() {
+    public TheWhale() {
         super(ID, 0, CardType.SKILL, CardTarget.SELF_AND_ENEMY);
         baseMagicNumber = magicNumber = 30;
         exhaust = true;

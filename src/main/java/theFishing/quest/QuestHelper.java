@@ -83,4 +83,22 @@ public class QuestHelper {
             q.onExhaust(c);
         }
     }
+
+    public static void onSpendEnergy(int amount) {
+        for (AbstractQuest q : quests) {
+            q.onSpendEnergy(amount);
+        }
+    }
+
+    public static void onCardPlayed(AbstractCard card) {
+        for (AbstractQuest q : quests) {
+            q.onPlayCard(card);
+        }
+    }
+
+    public static void onKillEnemy() {
+        for (AbstractQuest q : quests) {
+            q.onKillEnemy();
+        }
+    }
 }

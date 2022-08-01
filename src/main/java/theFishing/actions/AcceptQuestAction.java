@@ -1,6 +1,7 @@
 package theFishing.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.AbstractQuest;
 
@@ -13,7 +14,12 @@ public class AcceptQuestAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        QuestHelper.acceptQuest(questToTake);
+        if (!QuestHelper.quests.stream().anyMatch(q -> q.questID.equals(questToTake.questID))) {
+            QuestHelper.acceptQuest(questToTake);
+        }
+        else {
+            addToTop(new DrawCardAction(1));
+        }
         isDone = true;
     }
 }

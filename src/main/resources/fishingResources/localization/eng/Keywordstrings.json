@@ -25,7 +25,7 @@
     "NAMES": [
       "quest"
     ],
-    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward."
+    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward. If you already have that #yQuest in progress, draw a card instead."
   },
   {
     "PROPER_NAME": "Legendary Treasure",
@@ -41,5 +41,19 @@
       "zapped"
     ],
     "DESCRIPTION": "A Zapped foe loses HP each time it is attacked."
+  },
+  {
+    "PROPER_NAME": "Starlit",
+    "NAMES": [
+      "starlit"
+    ],
+    "DESCRIPTION": "A bonus effect that triggers each time you play a card with a star in its art for the rest of the turn."
+  },
+  {
+    "PROPER_NAME": "Potency",
+    "NAMES": [
+      "potency"
+    ],
+    "DESCRIPTION": "Potency increases the effectiveness of X on cards."
   }
 ]

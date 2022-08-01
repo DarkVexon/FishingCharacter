@@ -9,6 +9,7 @@ import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.makeInHand;
+import static theFishing.util.Wiz.topDeck;
 
 public class TreasureChest extends AbstractFishingCard {
     public final static String ID = makeID("TreasureChest");
@@ -25,7 +26,7 @@ public class TreasureChest extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.effectList.add(new RainingGoldEffect(this.magicNumber, true));
         this.addToBot(new GainGoldAction(this.magicNumber));
-        makeInHand(AbstractFishCard.returnRandomFish());
+        topDeck(AbstractFishCard.returnRandomFish());
     }
 
     public void upp() {

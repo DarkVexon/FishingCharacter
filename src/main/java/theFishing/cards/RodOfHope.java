@@ -1,7 +1,10 @@
 package theFishing.cards;
 
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
@@ -10,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import theFishing.FishingMod;
 import theFishing.powers.DrawLessNextTurnPower;
@@ -18,37 +22,26 @@ import theFishing.powers.LambdaPower;
 import static theFishing.FishingMod.STAR_IN_ART;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class RodOfHope extends AbstractFishingCard {
     public final static String ID = makeID("RodOfHope");
     // intellij stuff skill, self, rare, , , , , , 
 
     public RodOfHope() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         tags.add(STAR_IN_ART);
+        baseDamage = 2;
         baseMagicNumber = magicNumber = 2;
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new DrawLessNextTurnPower(magicNumber));
-        applyToSelf(new LambdaPower("De-Energized", AbstractPower.PowerType.DEBUFF, true, p, 1) {
-
-            @Override
-            public void onEnergyRecharge() {
-                flash();
-                AbstractDungeon.player.loseEnergy(amount);
-                addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-            }
-
-            @Override
-            public void updateDescription() {
-                description = "Gain #b" + amount + " fewer [E] next turn.";
-            }
-        });
-        this.addToBot(new VFXAction(new WhirlwindEffect(Color.YELLOW.cpy(), true)));
-        this.addToBot(new SkipEnemiesTurnAction());
-        this.addToBot(new PressEndTurnButtonAction());
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        if (isVoyaged()) {
+            atb(new GainEnergyAction(Math.max(p.energy.energyMaster - EnergyPanel.totalCount, 0)));
+            atb(new DrawCardAction(magicNumber));
+            exhaust = true;
+        }
     }
 
     public void upp() {

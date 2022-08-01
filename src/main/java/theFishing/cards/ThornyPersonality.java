@@ -16,7 +16,7 @@ public class ThornyPersonality extends AbstractFishingCard {
     public ThornyPersonality() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         tags.add(STAR_IN_ART);
     }
 

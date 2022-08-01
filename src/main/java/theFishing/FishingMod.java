@@ -8,19 +8,23 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.cards.TheFinalCard;
 import theFishing.cards.VictoryLap;
 import theFishing.cards.cardvars.FishInCombatVar;
 import theFishing.cards.cardvars.SecondDamage;
@@ -179,6 +183,16 @@ public class FishingMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         voyagedCards.clear();
+        if (!abstractRoom.mugged) {
+            AbstractCard q = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1);
+            if (q != null && q.cardID.equals(TheFinalCard.ID) && !q.upgraded) {
+                AbstractCard r = StSLib.getMasterDeckEquivalent(q);
+                if (r != null) {
+                    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(q.makeCopy()));
+                    r.upgrade();
+                }
+            }
+        }
     }
 
     @Override

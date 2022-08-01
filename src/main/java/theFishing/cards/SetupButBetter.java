@@ -1,28 +1,25 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
 import com.megacrit.cardcrawl.actions.unique.SetupAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.DiscardPileSetupAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
-public class SetupButWithRetain extends AbstractFishingCard {
-    public final static String ID = makeID("SetupButWithRetain");
+public class SetupButBetter extends AbstractFishingCard {
+    public final static String ID = makeID("SetupButBetter");
     // intellij stuff skill, self, uncommon, , , , , , 
 
-    public SetupButWithRetain() {
+    public SetupButBetter() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SetupAction());
-    }
-
-    @Override
-    public float getTitleFontSize() {
-        return 18F;
+        atb(new DiscardPileSetupAction());
     }
 
     public void upp() {

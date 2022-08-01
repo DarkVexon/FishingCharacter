@@ -235,7 +235,7 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Ethereal. NL Gain !M! *Gold. NL Add 1 ${ModID}:Fish into your hand. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !M! *Gold. NL Put 1 ${ModID}:Fish on top of your draw pile. NL Exhaust."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
@@ -292,9 +292,9 @@
     "NAME": "Steal",
     "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
   },
-  "${ModID}:SetupButWithRetain": {
-    "NAME": "Setup but with Retain",
-    "DESCRIPTION": "Retain. NL Put a card from your hand on top of your draw pile. NL It costs 0 until played."
+  "${ModID}:SetupButBetter": {
+    "NAME": "Setup but Better",
+    "DESCRIPTION": "Retain. NL Put a card from your discard pile on top of your draw pile. NL It costs 0 until played."
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
@@ -370,7 +370,7 @@
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
-    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to the frontmost enemy."
+    "DESCRIPTION": "Gain !M! ${ModID}:Potency."
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
@@ -397,20 +397,19 @@
   },
   "${ModID}:MagicRainbowStarBarrage": {
     "NAME": "Magic Rainbow Star Barrage",
-    "DESCRIPTION": "Deal !D! damage 6 times."
+    "DESCRIPTION": "Deal !D! damage. ${ModID}:Starlit: Deal !M! damage to a random enemy."
   },
   "${ModID}:StarOfTheShow": {
     "NAME": "Star of the Show",
-    "DESCRIPTION": "Whenever you play a card with a star in its art, gain !M! Vigor."
+    "DESCRIPTION": "Whenever you play a card with a star in its art, gain !M! Temporary Strength."
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "End your turn and take an additional one, in which you draw !M! fewer cards and gain 1 less [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "End your turn and take an additional one, in which you draw !M! fewer card and gain 1 less [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain Energy up to your maximum, draw !M! cards, and Exhaust this."
   },
   "${ModID}:SeeingStars": {
     "NAME": "Seeing Stars",
-    "DESCRIPTION": "Deal !D! damage 3 times. NL If you have Block, apply !M! Weak."
+    "DESCRIPTION": "Deal !D! damage 3 times. NL ${ModID}:Starlit: Gain !M! Block."
   },
   "${ModID}:QuestTimeTheSlimyPath": {
     "NAME": "Quest Time: The Slimy Path",
@@ -439,8 +438,7 @@
   },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
-    "DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Miracle into your hand. NL If you won last run, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Whenever you shuffle your draw pile, add 1 *Miracle+ into your hand. NL If you won last run, gain !M! Strength."
+    "DESCRIPTION": "Draw !M! cards. NL If you won last run, gain !B! Block."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -534,5 +532,58 @@
     "EXTENDED_DESCRIPTION": [
       "On the house."
     ]
+  },
+  "${ModID}:SolarPowered": {
+    "NAME": "Solar Powered",
+    "DESCRIPTION": "Gain !B! Block. NL Discard the top card of your draw pile. NL Gain !M! Temporary Strength for each star in its art."
+  },
+  "${ModID}:CrystallineConfluence": {
+    "NAME": "Crystalline Confluence",
+    "DESCRIPTION": "Shuffle X *Star *Shards into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Shuffle X+1 *Star *Shards into your draw pile."
+  },
+  "${ModID}:FastingB": {
+    "NAME": "Fasting-B",
+    "DESCRIPTION": "Gain !M! Strength and !${ModID}:m2! Thorns. NL Draw 1 fewer card each turn."
+  },
+  "${ModID}:QuestTimeTheStorm": {
+    "NAME": "Quest Time: The Storm",
+    "DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses 17 HP.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses 17 HP."
+  },
+  "${ModID}:QuestTimeTheStarrySky": {
+    "NAME": "Quest Time: The Starry Sky",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Quest: Play 4 cards with stars in their art in a row. NL *Reward: Play the last card twice."
+  },
+  "${ModID}:QuestTimeTheTerribleTwos": {
+    "NAME": "Quest Time: The Terrible Twos",
+    "DESCRIPTION": "Apply 2 Weak and Vulnerable. NL ${ModID}:Quest: Play 3 2-cost cards. NL *Reward: Gain 22 Block."
+  },
+  "${ModID}:SoleSight": {
+    "NAME": "Sole Sight",
+    "DESCRIPTION": "Scry !M!. NL ${ModID}:Solo: Gain !${ModID}:m2! Strength."
+  },
+  "${ModID}:ShineBrighter": {
+    "NAME": "Shine Brighter",
+    "DESCRIPTION": "${ModID}:Starlit: Gain 1 Strength and ALL enemies lose 1 Strength. NL Exhaust."
+  },
+  "${ModID}:Supernova": {
+    "NAME": "Supernova",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies for each card with a star in its art played this turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Star card played.)",
+      " Star cards played.)"
+    ]
+  },
+  "${ModID}:VexingDeal": {
+    "NAME": "Vexing Deal",
+    "DESCRIPTION": "Whenever you draw a Curse card, draw !M! card and ALL enemies lose !${ModID}:m2! HP.",
+    "UPGRADE_DESCRIPTION": "Whenever you draw a Curse card, draw !M! cards and ALL enemies lose !${ModID}:m2! HP."
+  },
+  "${ModID}:TheFinalCard": {
+    "NAME": "The Final Card",
+    "DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL If this ends the combat, Upgrade it.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL Thanks for playing."
   }
 }

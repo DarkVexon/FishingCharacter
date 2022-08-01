@@ -11,24 +11,20 @@ import static theFishing.util.Wiz.atb;
 public abstract class AbstractQuest {
     public int progress;
     public int goal;
-
     private static Texture def = TexLoader.getTexture(makeImagePath("quests/default.png"));
-
     public Texture progressTex() {
         return def;
     }
-
     public abstract String getName();
-
     public abstract String getDescription();
-
     public abstract void grantReward();
 
-    public AbstractQuest(int goal) {
+    public String questID;
+    public AbstractQuest(String ID, int goal) {
+        this.questID = ID;
         this.progress = 0;
         this.goal = goal;
     }
-
     public void increment() {
         if (progress < goal) {
             progress++;
@@ -38,8 +34,19 @@ public abstract class AbstractQuest {
             }
         }
     }
-
     public void onExhaust(AbstractCard c) {
+
+    }
+
+    public void onSpendEnergy(int amount) {
+
+    }
+
+    public void onPlayCard(AbstractCard card) {
+
+    }
+
+    public void onKillEnemy() {
 
     }
 }

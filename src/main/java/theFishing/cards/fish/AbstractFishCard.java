@@ -72,7 +72,7 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             maelstromFishList.put(new Starfish(), 7);
             maelstromFishList.put(new SeaMonster(), 4);
             maelstromFishList.put(new FlyingFish(), 4);
-            maelstromFishList.put(new Neow(), 1);
+            maelstromFishList.put(new TheWhale(), 1);
         }
 
         int fishRoll = AbstractDungeon.cardRandomRng.random(1,

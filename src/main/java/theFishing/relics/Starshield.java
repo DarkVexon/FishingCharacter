@@ -9,6 +9,7 @@ import theFishing.cards.StarOfTheShow;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.StarHelper.isStarCard;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.shuffleIn;
 
@@ -21,7 +22,7 @@ public class Starshield extends AbstractEasyRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        if (StarOfTheShow.isStarCard(targetCard)) {
+        if (isStarCard(targetCard)) {
             flash();
             atb(new GainBlockAction(AbstractDungeon.player, 1));
         }

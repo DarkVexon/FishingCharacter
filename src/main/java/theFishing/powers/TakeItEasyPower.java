@@ -8,7 +8,7 @@ public class TakeItEasyPower extends AbstractEasyPower {
     public static String ID = makeID(TakeItEasyPower.class.getSimpleName());
 
     public TakeItEasyPower() {
-        super("Take it Easy", PowerType.DEBUFF, false, AbstractDungeon.player, 1);
+        super("Fasting-B", PowerType.DEBUFF, false, AbstractDungeon.player, 1);
     }
 
     @Override

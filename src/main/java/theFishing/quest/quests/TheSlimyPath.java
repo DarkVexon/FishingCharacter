@@ -2,11 +2,15 @@ package theFishing.quest.quests;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
+import theFishing.cards.treasures.AbstractTreasureCard;
+import theFishing.util.Wiz;
 
-public class TheSlimyPath extends AbstractTreasureQuest {
+public class TheSlimyPath extends AbstractQuest {
+
+    public static final String ID = "TheSlimyPath";
 
     public TheSlimyPath() {
-        super(3);
+        super(ID, 3);
     }
 
     @Override
@@ -15,8 +19,13 @@ public class TheSlimyPath extends AbstractTreasureQuest {
     }
 
     @Override
-    public String getPreText() {
-        return "#yQuest: #yExhaust #b" + goal + " #ySlimed.";
+    public void grantReward() {
+        Wiz.shuffleIn(AbstractTreasureCard.returnRandomLegendaryTreasure());
+    }
+
+    @Override
+    public String getDescription() {
+        return "#yQuest: #yExhaust #b" + goal + " #ySlimed. NL #yReward: Put a #yLegendary #yTreasure on top of your draw pile.";
     }
 
     @Override
