@@ -597,5 +597,9 @@
   "${ModID}:DoubleUp": {
     "NAME": "Double Up",
     "DESCRIPTION": "Deal !D! damage twice. NL If you have Block, draw !M! cards."
+  },
+  "${ModID}:StarShard": {
+    "NAME": "Star Shard",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw 1 card."
   }
 }
