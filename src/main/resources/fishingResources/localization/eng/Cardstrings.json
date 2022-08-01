@@ -585,5 +585,17 @@
     "NAME": "The Final Card",
     "DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL If this ends the combat, Upgrade it.",
     "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL Thanks for playing."
+  },
+  "${ModID}:QuestTimeTheHarpoon": {
+    "NAME": "Quest Time: The Harpoon",
+    "DESCRIPTION": "Deal !D! damage. NL Startup ${ModID}:Quest: Kill an enemy. NL *Reward: Shuffle *The *Whale into your draw pile."
+  },
+  "${ModID}:EndsOfTheEarth": {
+    "NAME": "Ends Of The Earth",
+    "DESCRIPTION": "You can play this from your discard pile. NL Deal !D! damage. NL Gain !B! Block."
+  },
+  "${ModID}:DoubleUp": {
+    "NAME": "Double Up",
+    "DESCRIPTION": "Deal !D! damage twice. NL If you have Block, draw !M! cards."
   }
 }

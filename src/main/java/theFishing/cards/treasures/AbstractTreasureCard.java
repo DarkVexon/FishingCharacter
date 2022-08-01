@@ -18,7 +18,6 @@ public abstract class AbstractTreasureCard extends AbstractFishingCard {
         if (treasuresList == null) {
             treasuresList = new ArrayList<>();
             treasuresList.add(new ComicallyLargeSpoon());
-            treasuresList.add(new DefinitelyUntrappedIdol());
             treasuresList.add(new GoldenLute());
             treasuresList.add(new HolyGrail());
             treasuresList.add(new OneRing());
