@@ -26,26 +26,23 @@ public class FeedingFrenzy extends AbstractFishingCard {
 
     public FeedingFrenzy() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 8;
+        baseDamage = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int count = 0;
         for (AbstractCard c : p.drawPile.group) {
             if (c instanceof AbstractFishCard) {
-                addToBot(new ExhaustSpecificCardAction(c, p.drawPile));
                 count++;
             }
         }
         for (AbstractCard c : p.hand.group) {
             if (c instanceof AbstractFishCard) {
-                addToBot(new ExhaustSpecificCardAction(c, p.hand));
                 count++;
             }
         }
         for (AbstractCard c : p.discardPile.group) {
             if (c instanceof AbstractFishCard) {
-                addToBot(new ExhaustSpecificCardAction(c, p.discardPile));
                 count++;
             }
         }
@@ -70,6 +67,6 @@ public class FeedingFrenzy extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
     }
 }

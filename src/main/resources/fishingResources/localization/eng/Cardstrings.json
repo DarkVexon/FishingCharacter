@@ -141,7 +141,7 @@
   },
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
-    "DESCRIPTION": "Exhaust all ${ModID}:Fish. NL Deal !D! damage to a random enemy for each.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each Fish in your draw pile, discard pile, or hand.",
     "EXTENDED_DESCRIPTION": [
       " NL ( !${ModID}:fshhd! ${ModID}:Fish. )"
     ]
