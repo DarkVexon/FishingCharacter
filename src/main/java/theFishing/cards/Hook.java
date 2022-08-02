@@ -7,6 +7,7 @@ import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.shuffleIn;
+import static theFishing.util.Wiz.topDeck;
 
 public class Hook extends AbstractFishingCard {
     public final static String ID = makeID("Hook");
@@ -21,7 +22,7 @@ public class Hook extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         for (int i = 0; i < magicNumber; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
+            topDeck(AbstractFishCard.returnRandomFish());
         }
     }
 

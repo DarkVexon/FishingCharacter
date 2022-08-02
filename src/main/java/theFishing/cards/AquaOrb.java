@@ -20,7 +20,7 @@ public class AquaOrb extends AbstractFishingCard {
 
     public AquaOrb() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 10;
+        baseBlock = 12;
         baseMagicNumber = magicNumber = 1;
     }
 

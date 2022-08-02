@@ -60,7 +60,7 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
@@ -362,7 +362,7 @@
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Put !M! ${ModID}:Fish on top of your draw pile."
   },
   "${ModID}:NoWhammies": {
     "NAME": "No Whammies",

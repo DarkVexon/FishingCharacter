@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.cards.fish.maelstrom.TheWhale;
 import theFishing.quest.quests.TheHarpoon;
 
 import static theFishing.FishingMod.makeID;
@@ -18,6 +19,7 @@ public class QuestTimeTheHarpoon extends AbstractFishingCard implements StartupC
     public QuestTimeTheHarpoon() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 24;
+        cardsToPreview = new TheWhale();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -27,7 +27,7 @@ public class SeeingStars extends AbstractFishingCard {
     public SeeingStars() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 5;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 3;
         tags.add(STAR_IN_ART);
     }
 

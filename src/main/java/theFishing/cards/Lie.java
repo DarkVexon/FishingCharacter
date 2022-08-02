@@ -1,18 +1,15 @@
 package theFishing.cards;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.IntimidateEffect;
-import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -24,8 +21,7 @@ public class Lie extends AbstractFishingCard {
     public Lie() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 3;
-        cardToPreview.add(new Cheat());
-        cardToPreview.add(new Steal());
+        cardsToPreview = new Cheat();
         exhaust = true;
     }
 
@@ -49,10 +45,7 @@ public class Lie extends AbstractFishingCard {
         upgradeMagicNumber(2);
         AbstractCard q = new Cheat();
         q.upgrade();
-        AbstractCard q2 = new Steal();
-        q2.upgrade();
-        cardToPreview.add(q);
-        cardToPreview.add(q2);
+        cardsToPreview = q;
         uDesc();
     }
 
