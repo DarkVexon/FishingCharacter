@@ -183,16 +183,6 @@ public class FishingMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         voyagedCards.clear();
-        if (!abstractRoom.mugged) {
-            AbstractCard q = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1);
-            if (q != null && q.cardID.equals(TheFinalCard.ID) && !q.upgraded) {
-                AbstractCard r = StSLib.getMasterDeckEquivalent(q);
-                if (r != null) {
-                    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(q.makeCopy()));
-                    r.upgrade();
-                }
-            }
-        }
     }
 
     @Override
