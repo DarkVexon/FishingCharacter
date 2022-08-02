@@ -12,7 +12,7 @@ public abstract class AbstractQuest {
     public int progress;
     public int goal;
     private static Texture def = TexLoader.getTexture(makeImagePath("quests/default.png"));
-    public Texture progressTex() {
+    public Texture progressTex(int idx) {
         return def;
     }
     public abstract String getName();

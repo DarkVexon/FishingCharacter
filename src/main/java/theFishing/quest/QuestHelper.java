@@ -36,12 +36,7 @@ public class QuestHelper {
         int xr = 0;
         for (AbstractQuest q : quests) {
             for (int i = 0; i < q.goal; i++) {
-                if (i < q.progress || q.goal == 1) {
-                    sb.setColor(Color.WHITE.cpy());
-                } else {
-                    sb.setColor(Color.GRAY.cpy());
-                }
-                ImageHelper.drawTextureScaled(sb, q.progressTex(), boxes.get(xr).x + ((i * 32) * Settings.scale), boxes.get(xr).y);
+                ImageHelper.drawTextureScaled(sb, q.progressTex(i), boxes.get(xr).x + ((i * 32) * Settings.scale), boxes.get(xr).y);
             }
             FontHelper.renderFontLeft(
                     sb,

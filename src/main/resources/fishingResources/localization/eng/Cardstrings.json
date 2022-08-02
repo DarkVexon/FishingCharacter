@@ -592,7 +592,7 @@
   },
   "${ModID}:EndsOfTheEarth": {
     "NAME": "Ends Of The Earth",
-    "DESCRIPTION": "You can play this from your discard pile. NL Deal !D! damage. NL Gain !B! Block."
+    "DESCRIPTION": "Can be played from your discard pile for [E]. NL Deal !D! damage. NL Gain !B! Block."
   },
   "${ModID}:DoubleUp": {
     "NAME": "Double Up",
@@ -601,5 +601,17 @@
   "${ModID}:StarShard": {
     "NAME": "Star Shard",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw 1 card."
+  },
+  "${ModID}:QuestTimeThePrismaticPortal": {
+    "NAME": "Quest Time: The Prismatic Portal",
+    "DESCRIPTION": "Ethereal. NL ${ModID}:Quest: Play a Common, Uncommon, Rare, and Special card. NL *Reward: Shuffle *Quest *Time: *The *Gem *Search into your draw pile."
+  },
+  "${ModID}:QuestTimeTheGemSearch": {
+    "NAME": "Quest Time: The Gem Search",
+    "DESCRIPTION": "Ethereal. NL ${ModID}:Quest: End your turn with an empty hand. NL *Reward: Shuffle *The *Eternity *Gem into your draw pile."
+  },
+  "${ModID}:TheEternityGem": {
+    "NAME": "The Eternity Gem",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times. NL Exhaust."
   }
 }
