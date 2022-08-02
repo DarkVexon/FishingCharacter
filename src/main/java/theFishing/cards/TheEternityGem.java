@@ -14,7 +14,7 @@ public class TheEternityGem extends AbstractFishingCard {
     // intellij stuff attack, all_enemy, special, 13, 1, , , 13, 1
 
     public TheEternityGem() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         isEthereal = true;
         baseDamage = 13;
         baseMagicNumber = magicNumber = 13;
