@@ -7,12 +7,12 @@ import theFishing.patch.FoilPatches;
 
 import static theFishing.util.Wiz.att;
 
-public class TheStarrySky extends AbstractQuest {
+public class TheLuckyPack extends AbstractQuest {
 
-    public static final String ID = "TheStarrySky";
+    public static final String ID = "TheLuckyPack";
 
-    public TheStarrySky() {
-        super(ID, 4);
+    public TheLuckyPack() {
+        super(ID, 3);
     }
 
 

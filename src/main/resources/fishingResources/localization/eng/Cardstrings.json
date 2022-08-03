@@ -160,7 +160,7 @@
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Clove",
-    "DESCRIPTION": "Remove your Vulnerable and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Remove your Weak and Vulnerable. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
@@ -550,8 +550,8 @@
     "DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses 17 HP.",
     "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses 17 HP."
   },
-  "${ModID}:QuestTimeTheStarrySky": {
-    "NAME": "Quest Time: The Perfect Pack",
+  "${ModID}:QuestTimeTheLuckyPack": {
+    "NAME": "Quest Time: The Lucky Pack",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a row. NL *Reward: Play the last card twice."
   },
   "${ModID}:QuestTimeTheTerribleTwos": {
@@ -591,7 +591,7 @@
   },
   "${ModID}:EndsOfTheEarth": {
     "NAME": "Ends Of The Earth",
-    "DESCRIPTION": "Can be played from your discard pile for [E]. NL Deal !D! damage. NL Gain !B! Block."
+    "DESCRIPTION": "Can be played from your discard pile. NL Deal !D! damage. NL Gain !B! Block."
   },
   "${ModID}:DoubleUp": {
     "NAME": "Double Up",
@@ -628,5 +628,9 @@
   "${ModID}:MaybeLater": {
     "NAME": "Maybe Later",
     "DESCRIPTION": "Deal !D! damage. NL Put 1 card from your hand on top of your draw pile. NL If you do, gain !B! Block."
+  },
+  "${ModID}:MintCondition": {
+    "NAME": "Mint Condition",
+    "DESCRIPTION": "Whenever you draw a ${ModID]:Foil card, gain !M! Temporary Strength."
   }
 }

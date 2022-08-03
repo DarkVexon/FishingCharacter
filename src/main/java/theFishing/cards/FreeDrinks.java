@@ -4,6 +4,7 @@ import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.patch.FoilPatches;
@@ -32,7 +33,13 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
     @Override
     public void onObtainCard() {
         if (AbstractDungeon.player.potions.stream().anyMatch(c -> c instanceof PotionSlot)) {
-            AbstractDungeon.player.obtainPotion(AbstractDungeon.returnRandomPotion());
+            AbstractPotion p;
+            if (FoilPatches.isFoil(this)) {
+                p = AbstractDungeon.returnRandomPotion(AbstractPotion.PotionRarity.RARE, false);
+            } else {
+                p = AbstractDungeon.returnRandomPotion();
+            }
+            AbstractDungeon.player.obtainPotion(p);
         }
     }
 

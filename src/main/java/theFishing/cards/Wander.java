@@ -17,7 +17,7 @@ public class Wander extends AbstractFishingCard {
 
     public Wander() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 10;
+        baseDamage = 11;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -28,6 +28,6 @@ public class Wander extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }
