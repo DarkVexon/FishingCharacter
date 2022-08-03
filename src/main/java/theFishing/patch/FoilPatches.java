@@ -10,6 +10,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
+import theFishing.TheFishing;
+import theFishing.cards.AbstractFishingCard;
 
 import java.util.ArrayList;
 
@@ -33,6 +35,15 @@ public class FoilPatches {
 
     public static void makeFoil(AbstractCard card) {
         FoilField.foil.set(card, true);
+        if (card.color == TheFishing.Enums.FISHING_COLOR && card instanceof AbstractFishingCard) {
+            switch (card.type) {
+                case ATTACK:
+                case SKILL:
+                case POWER:
+                    ((AbstractFishingCard) card).setBackgroundTexture("fishingResources/images/512/" + card.type.toString().toLowerCase() + "_foil.png", "fishingResources/images/1024/" + card.type.toString().toLowerCase() + "_foil.png");
+                    break;
+            }
+        }
     }
 
     @SpirePatch(
@@ -135,7 +146,7 @@ public class FoilPatches {
         private static Color oldColor;
 
         public static void Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
-            if (isFoil(__instance)) {
+            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR) {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
@@ -144,7 +155,7 @@ public class FoilPatches {
         }
 
         public static void Postfix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
-            if (isFoil(__instance)) {
+            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR) {
                 sb.setShader(oldShader);
                 ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", oldColor);
             }
@@ -186,7 +197,7 @@ public class FoilPatches {
 
         public static void Prefix(SingleCardViewPopup __instance, SpriteBatch sb) {
             AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
-            if (isFoil(card)) {
+            if (isFoil(card) && card.color != TheFishing.Enums.FISHING_COLOR) {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = sb.getColor();
@@ -196,7 +207,7 @@ public class FoilPatches {
 
         public static void Postfix(SingleCardViewPopup __instance, SpriteBatch sb) {
             AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
-            if (isFoil(card)) {
+            if (isFoil(card) && card.color != TheFishing.Enums.FISHING_COLOR) {
                 sb.setShader(oldShader);
                 sb.setColor(oldColor);
             }

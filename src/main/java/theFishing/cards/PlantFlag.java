@@ -17,7 +17,6 @@ public class PlantFlag extends AbstractFishingCard {
     public PlantFlag() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         cardsToPreview = new Flag();
-
         baseBlock = 3;
     }
 

@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.Gdx;
@@ -18,12 +19,10 @@ import theFishing.FishingMod;
 import theFishing.TheFishing;
 import theFishing.patch.FoilPatches;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static theFishing.FishingMod.makeImagePath;
-import static theFishing.FishingMod.modID;
+import static theFishing.FishingMod.*;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
@@ -195,8 +194,8 @@ public abstract class AbstractFishingCard extends CustomCard {
 
     @Override
     public List<TooltipInfo> getCustomTooltips() {
-        if (FoilPatches.isFoil(this)) {
-            return Arrays.asList(new TooltipInfo("Foil", "Approx. #b1 in #b" + FoilPatches.FOIL_CHANCE + " cards are Foil. Maximum #b1 per card reward. Shiny!"));
+        if (FoilPatches.isFoil(this) && !this.rawDescription.contains(makeID("Foil"))) {
+            return Arrays.asList(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
         }
         return null;
     }

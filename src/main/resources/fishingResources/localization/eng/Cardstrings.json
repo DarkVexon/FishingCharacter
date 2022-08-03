@@ -64,8 +64,7 @@
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Draw !M! card. NL Put 1 card from your hand on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! card. NL Put 1 card from your hand on top of your draw pile."
+    "DESCRIPTION": "Draw the rarest Attack in your draw pile. NL It costs 0 until played. NL Apply !M! Vulnerable to a random enemy."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -539,8 +538,8 @@
   },
   "${ModID}:CrystallineConfluence": {
     "NAME": "Crystalline Confluence",
-    "DESCRIPTION": "Shuffle X *Star *Shards into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle X+1 *Star *Shards into your draw pile."
+    "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Shuffle X+1 ${ModID}:Foil *Star *Shards into your draw pile."
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",
@@ -552,8 +551,8 @@
     "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses 17 HP."
   },
   "${ModID}:QuestTimeTheStarrySky": {
-    "NAME": "Quest Time: The Starry Sky",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Quest: Play 4 cards with stars in their art in a row. NL *Reward: Play the last card twice."
+    "NAME": "Quest Time: The Perfect Pack",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a row. NL *Reward: Play the last card twice."
   },
   "${ModID}:QuestTimeTheTerribleTwos": {
     "NAME": "Quest Time: The Terrible Twos",
@@ -625,5 +624,9 @@
   "${ModID}:ShimmeringShank": {
     "NAME": "Shimmering Shank",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you play a ${ModID}:Foil card this turn, add a *Shiv into your hand."
+  },
+  "${ModID}:MaybeLater": {
+    "NAME": "Maybe Later",
+    "DESCRIPTION": "Deal !D! damage. NL Put 1 card from your hand on top of your draw pile. NL If you do, gain !B! Block."
   }
 }

@@ -3,12 +3,14 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.EasyXCostAction;
 import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.patch.FoilPatches.makeFoil;
 import static theFishing.util.Wiz.*;
 
 public class CrystallineConfluence extends AbstractFishingCard {
@@ -23,7 +25,9 @@ public class CrystallineConfluence extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            att(new MakeTempCardInDrawPileAction(new StarShard(), effect + params[0], true, false));
+            AbstractCard q = new StarShard();
+            makeFoil(q);
+            att(new MakeTempCardInDrawPileAction(q, effect + params[0], true, false));
             return true;
         }, magicNumber));
     }
