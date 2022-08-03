@@ -3,7 +3,7 @@ package theFishing.quest.quests;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.actions.RepeatCardAction;
-import theFishing.util.StarHelper;
+import theFishing.patch.FoilPatches;
 
 import static theFishing.util.Wiz.att;
 
@@ -34,7 +34,7 @@ public class TheStarrySky extends AbstractQuest {
 
     @Override
     public void onPlayCard(AbstractCard card) {
-        if (StarHelper.isStarCard(card)) {
+        if (FoilPatches.isFoil(card)) {
             increment();
         }
         else {

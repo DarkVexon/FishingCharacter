@@ -81,9 +81,6 @@ public class FishingMod implements
     private static final String CHARSELECT_BUTTON = modID + "Resources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
 
-    @SpireEnum
-    public static AbstractCard.CardTags STAR_IN_ART;
-
     public static ArrayList<AbstractCard> voyagedCards = new ArrayList<>();
 
     public static int nextCombatFish;
