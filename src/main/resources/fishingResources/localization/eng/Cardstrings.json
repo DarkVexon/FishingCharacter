@@ -569,7 +569,7 @@
   },
   "${ModID}:Supernova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies for each card with a star in its art played this turn. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies for each ${ModID}:Foil card played this turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " Star card played.)",
@@ -613,5 +613,17 @@
   "${ModID}:TheEternityGem": {
     "NAME": "The Eternity Gem",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times. NL Exhaust."
+  },
+  "${ModID}:ShinyShots": {
+    "NAME": "Shiny Shots",
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Gain !B! Block for each ${ModID}:Foil card in your hand."
+  },
+  "${ModID}:PerfectPull": {
+    "NAME": "Perfect Pull",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL If you draw a ${ModID}:Foil card, repeat this."
+  },
+  "${ModID}:ShimmeringShank": {
+    "NAME": "Shimmering Shank",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a ${ModID}:Foil card this turn, add a *Shiv into your hand."
   }
 }

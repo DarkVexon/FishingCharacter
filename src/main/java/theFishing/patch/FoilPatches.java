@@ -6,12 +6,18 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
+
+import java.util.ArrayList;
 
 public class FoilPatches {
 
     // GAMEPLAY STUFF
+
+    public static final float FOIL_CHANCE = 7F; // 1 out of X
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -43,11 +49,20 @@ public class FoilPatches {
         }
     }
 
-
-
-
-
-
+    @SpirePatch2(
+            clz = AbstractDungeon.class,
+            method = "getRewardCards"
+    )
+    public static class FoilInRewards {
+        public static void Postfix(ArrayList<AbstractCard> __result) {
+            for (AbstractCard q : __result) {
+                if (AbstractDungeon.cardRng.random() <= (1 / FOIL_CHANCE)) {
+                    makeFoil(q);
+                    break;
+                }
+            }
+        }
+    }
 
 
     // VISUAL STUFF

@@ -55,5 +55,12 @@
       "potency"
     ],
     "DESCRIPTION": "Potency increases the effectiveness of X on cards."
+  },
+  {
+    "PROPER_NAME": "Foil",
+    "NAMES": [
+      "foil"
+    ],
+    "DESCRIPTION": "Approx. #b1 in #b7 cards are Foil. Maximum #b1 per card reward. Shiny!"
   }
 ]

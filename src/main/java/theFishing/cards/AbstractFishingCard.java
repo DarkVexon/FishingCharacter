@@ -196,7 +196,7 @@ public abstract class AbstractFishingCard extends CustomCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         if (FoilPatches.isFoil(this)) {
-            return Arrays.asList(new TooltipInfo("Foil", "Approx. 1 in 5 cards are Foil. Shiny!"));
+            return Arrays.asList(new TooltipInfo("Foil", "Approx. #b1 in #b" + FoilPatches.FOIL_CHANCE + " cards are Foil. Maximum #b1 per card reward. Shiny!"));
         }
         return null;
     }
