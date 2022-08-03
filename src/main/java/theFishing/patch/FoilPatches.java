@@ -7,8 +7,51 @@ import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 
 public class FoilPatches {
+
+    // GAMEPLAY STUFF
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = SpirePatch.CLASS
+    )
+    public static class FoilField {
+        public static SpireField<Boolean> foil = new SpireField<>(() -> false);
+    }
+
+    public static boolean isFoil(AbstractCard card) {
+        return FoilField.foil.get(card);
+    }
+
+    public static void makeFoil(AbstractCard card) {
+        FoilField.foil.set(card, true);
+    }
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = "makeStatEquivalentCopy"
+    )
+    public static class FoilCopies {
+        public static AbstractCard Postfix(AbstractCard __result, AbstractCard __instance) {
+            if (isFoil(__instance)) {
+                makeFoil(__result);
+            }
+
+            return __result;
+        }
+    }
+
+
+
+
+
+
+
+
+    // VISUAL STUFF
+
     private static final String partialHueRodrigues =
             "vec3 applyHue(vec3 rgb, float hue)\n" +
                     "{\n" +
@@ -64,23 +107,9 @@ public class FoilPatches {
                     "     tgt.a), 0.0, 1.0);\n" + // keep alpha, then clamp
                     "}";
 
-    private static ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
-
-    public static boolean isFoil(AbstractCard card) {
-        return FoilField.foil.get(card);
-    }
-
-    public static void makeFoil(AbstractCard card) {
-        FoilField.foil.set(card, true);
-    }
-
-    @SpirePatch(
-            clz = AbstractCard.class,
-            method = SpirePatch.CLASS
-    )
-    public static class FoilField {
-        public static SpireField<Boolean> foil = new SpireField<>(() -> false);
-    }
+    private static final ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
+    private static final Color hslcBacks = new Color(0.5F, 0.6F, 0.7F, 0.55F);
+    private static final Color hslcArt = new Color(0.6F, 0.6F, 0.5F, 0.6F);
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -95,7 +124,7 @@ public class FoilPatches {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", new Color(0.5F, 0.6F, 0.7F, 0.55F));
+                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", hslcBacks);
             }
         }
 
@@ -120,7 +149,7 @@ public class FoilPatches {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", new Color(0.6F, 0.6F, 0.5F, 0.6F));
+                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", hslcArt);
             }
         }
 
@@ -128,6 +157,60 @@ public class FoilPatches {
             if (isFoil(__instance)) {
                 sb.setShader(oldShader);
                 ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", oldColor);
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = SingleCardViewPopup.class,
+            method = "renderCardBack"
+    )
+    public static class FoilShinySingleCardView {
+        private static ShaderProgram oldShader;
+        private static Color oldColor;
+
+        public static void Prefix(SingleCardViewPopup __instance, SpriteBatch sb) {
+            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+            if (isFoil(card)) {
+                oldShader = sb.getShader();
+                sb.setShader(shade);
+                oldColor = sb.getColor();
+                sb.setColor(hslcBacks);
+            }
+        }
+
+        public static void Postfix(SingleCardViewPopup __instance, SpriteBatch sb) {
+            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+            if (isFoil(card)) {
+                sb.setShader(oldShader);
+                sb.setColor(oldColor);
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = SingleCardViewPopup.class,
+            method = "renderPortrait"
+    )
+    public static class FoilSpecialArtSingleCardView {
+        private static ShaderProgram oldShader;
+        private static Color oldColor;
+
+        public static void Prefix(SingleCardViewPopup __instance, SpriteBatch sb) {
+            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+            if (isFoil(card)) {
+                oldShader = sb.getShader();
+                sb.setShader(shade);
+                oldColor = sb.getColor();
+                sb.setColor(hslcArt);
+            }
+        }
+
+        public static void Postfix(SingleCardViewPopup __instance, SpriteBatch sb) {
+            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+            if (isFoil(card)) {
+                sb.setShader(oldShader);
+                sb.setColor(oldColor);
             }
         }
     }
