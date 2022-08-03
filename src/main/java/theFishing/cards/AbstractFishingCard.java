@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,8 +16,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
+import theFishing.patch.FoilPatches;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.FishingMod.modID;
@@ -220,5 +224,13 @@ public abstract class AbstractFishingCard extends CustomCard {
 
     protected boolean isVoyaged() {
         return FishingMod.isThisVoyaged(this);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        if (FoilPatches.isFoil(this)) {
+            return Arrays.asList(new TooltipInfo("Foil", "Approx. 1 in 5 cards are Foil. Shiny!"));
+        }
+        return null;
     }
 }

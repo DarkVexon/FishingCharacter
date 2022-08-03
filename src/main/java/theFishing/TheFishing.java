@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -24,6 +25,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
 import theFishing.cards.Strike;
+import theFishing.patch.FoilPatches;
 import theFishing.relics.TheRod;
 
 import java.util.ArrayList;
@@ -31,6 +33,7 @@ import java.util.List;
 
 import static theFishing.FishingMod.*;
 import static theFishing.TheFishing.Enums.FISHING_COLOR;
+import static theFishing.patch.FoilPatches.makeFoil;
 
 public class TheFishing extends CustomPlayer {
     private static final String[] orbTextures = {
@@ -222,5 +225,12 @@ public class TheFishing extends CustomPlayer {
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.7F);
+    }
+
+    @Override
+    public void initializeStarterDeck() {
+        super.initializeStarterDeck();
+        makeFoil(AbstractDungeon.player.masterDeck.group.get(4));
+        makeFoil(AbstractDungeon.player.masterDeck.group.get(8));
     }
 }

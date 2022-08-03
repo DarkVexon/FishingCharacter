@@ -6,7 +6,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class FoilPatches {
     public static boolean isFoil(AbstractCard card) {
-        return FoilField.isFoil.get(card);
+        return FoilField.foil.get(card);
+    }
+
+    public static void makeFoil(AbstractCard card) {
+        FoilField.foil.set(card, true);
     }
 
     @SpirePatch(
@@ -14,6 +18,8 @@ public class FoilPatches {
             method = SpirePatch.CLASS
     )
     public static class FoilField {
-        public static SpireField<Boolean> isFoil = new SpireField<>(() -> false);
+        public static SpireField<Boolean> foil = new SpireField<>(() -> false);
     }
+
+
 }
