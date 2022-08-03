@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.shuffleIn;
@@ -17,7 +17,7 @@ public class CastLine extends AbstractFishingCard {
     public CastLine() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        tags.add(STAR_IN_ART);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

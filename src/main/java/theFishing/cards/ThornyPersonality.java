@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 
@@ -17,7 +17,7 @@ public class ThornyPersonality extends AbstractFishingCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
         baseMagicNumber = magicNumber = 3;
-        tags.add(STAR_IN_ART);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

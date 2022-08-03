@@ -41,10 +41,6 @@ public abstract class AbstractFishingCard extends CustomCard {
     public boolean upgradedSecondDamage;
     public boolean isSecondDamageModified;
 
-    private float rotationTimer = 0;
-    private int previewIndex;
-    protected ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
-
     public AbstractFishingCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, TheFishing.Enums.FISHING_COLOR);
     }
@@ -155,12 +151,6 @@ public abstract class AbstractFishingCard extends CustomCard {
         initializeDescription();
     }
 
-    protected void upgradeCardToPreview() {
-        for (AbstractCard q : cardToPreview) {
-            q.upgrade();
-        }
-    }
-
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
@@ -169,29 +159,6 @@ public abstract class AbstractFishingCard extends CustomCard {
     }
 
     public abstract void upp();
-
-    public void update() {
-        super.update();
-        if (!cardToPreview.isEmpty()) {
-            if (hb.hovered) {
-                if (rotationTimer <= 0F) {
-                    rotationTimer = getRotationTimeNeeded();
-                    cardsToPreview = cardToPreview.get(previewIndex);
-                    if (previewIndex == cardToPreview.size() - 1) {
-                        previewIndex = 0;
-                    } else {
-                        previewIndex++;
-                    }
-                } else {
-                    rotationTimer -= Gdx.graphics.getDeltaTime();
-                }
-            }
-        }
-    }
-
-    protected float getRotationTimeNeeded() {
-        return 1f;
-    }
 
     // These shortcuts are specifically for cards. All other shortcuts that aren't specifically for cards can go in Wiz.
     protected void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {

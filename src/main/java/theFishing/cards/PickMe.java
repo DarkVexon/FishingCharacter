@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 
 public class PickMe extends AbstractFishingCard implements SpawnModificationCard {
@@ -20,7 +20,7 @@ public class PickMe extends AbstractFishingCard implements SpawnModificationCard
         baseDamage = 9;
         baseBlock = 3;
         isMultiDamage = true;
-        tags.add(STAR_IN_ART);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

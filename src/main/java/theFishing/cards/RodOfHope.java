@@ -19,7 +19,7 @@ import theFishing.FishingMod;
 import theFishing.powers.DrawLessNextTurnPower;
 import theFishing.powers.LambdaPower;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;
@@ -30,7 +30,7 @@ public class RodOfHope extends AbstractFishingCard {
 
     public RodOfHope() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        tags.add(STAR_IN_ART);
+
         baseDamage = 2;
         baseMagicNumber = magicNumber = 2;
     }

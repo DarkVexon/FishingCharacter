@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawReductionPower;
 import theFishing.powers.DrawLessNextTurnPower;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;
@@ -21,7 +21,7 @@ public class RodSlam extends AbstractFishingCard {
     public RodSlam() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 12;
-        tags.add(STAR_IN_ART);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

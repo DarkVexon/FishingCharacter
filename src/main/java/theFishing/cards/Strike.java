@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 
 public class Strike extends AbstractFishingCard {
@@ -16,7 +16,7 @@ public class Strike extends AbstractFishingCard {
         baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
-        tags.add(STAR_IN_ART);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
@@ -19,7 +19,7 @@ public class TheWhale extends AbstractFishCard {
         super(ID, 0, CardType.SKILL, CardTarget.SELF_AND_ENEMY);
         baseMagicNumber = magicNumber = 30;
         exhaust = true;
-        tags.add(STAR_IN_ART);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

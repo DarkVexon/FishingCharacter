@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.screens.stats.RunData;
 
 import java.util.ArrayList;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
@@ -36,7 +36,7 @@ public class VictoryLap extends AbstractFishingCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
         baseBlock = 3;
-        tags.add(STAR_IN_ART);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

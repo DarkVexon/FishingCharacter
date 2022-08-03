@@ -6,8 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.patch.FoilPatches;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
@@ -29,7 +30,7 @@ public class Supernova extends AbstractFishingCard {
                 isDone = true;
                 int x = 0;
                 for (AbstractCard q : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-                    if (q.hasTag(STAR_IN_ART)) {
+                    if (FoilPatches.isFoil(q)) {
                         x += 1;
                     }
                 }
@@ -47,7 +48,7 @@ public class Supernova extends AbstractFishingCard {
         super.applyPowers();
         int count = 0;
         for (AbstractCard q : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-            if (q.hasTag(STAR_IN_ART)) {
+            if (FoilPatches.isFoil(q)) {
                 count += 1;
             }
         }

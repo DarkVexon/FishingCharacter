@@ -15,8 +15,6 @@ public class DiscoverACrate extends AbstractFishingCard {
 
     public DiscoverACrate() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        cardToPreview.add(new Smite());
-        cardToPreview.add(new Safety());
         exhaust = true;
     }
 

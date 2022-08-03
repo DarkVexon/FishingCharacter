@@ -48,9 +48,4 @@ public class Lie extends AbstractFishingCard {
         cardsToPreview = q;
         uDesc();
     }
-
-    @Override
-    protected float getRotationTimeNeeded() {
-        return 2.0F;
-    }
 }

@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theFishing.cards.fish.AbstractFishCard;
 
-import static theFishing.FishingMod.STAR_IN_ART;
+
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToEnemy;
 import static theFishing.util.Wiz.atb;
@@ -20,7 +20,7 @@ public class Starfish extends AbstractFishCard {
         super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
-        tags.add(STAR_IN_ART);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
