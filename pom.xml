@@ -53,6 +53,13 @@
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>rare-cards-sparkle</groupId>
+            <artifactId>rare-cards-sparkle</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${Steam.path}/workshop/content/646570/2001434611/rare-cards-sparkle.jar</systemPath>
+        </dependency>
     </dependencies>
 
 

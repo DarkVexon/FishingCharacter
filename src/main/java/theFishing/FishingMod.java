@@ -8,6 +8,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -27,6 +28,7 @@ import theFishing.patch.PreDrawPatch;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
+import theFishing.util.FoilSparkleHandler;
 import theFishing.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
@@ -221,5 +223,9 @@ public class FishingMod implements
     @Override
     public void receivePostInitialize() {
         BaseMod.addSaveField("FishingMod", fishingMod);
+
+        if (Loader.isModLoaded("rare-cards-sparkle")) {
+            FoilSparkleHandler.init();
+        }
     }
 }
