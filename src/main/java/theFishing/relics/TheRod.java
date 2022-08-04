@@ -1,13 +1,11 @@
 package theFishing.relics;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
-import theFishing.cards.fish.AbstractFishCard;
+import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
 
 public class TheRod extends AbstractEasyRelic {
     public static final String ID = makeID("TheRod");
@@ -24,7 +22,7 @@ public class TheRod extends AbstractEasyRelic {
 
     @Override
     public void onCardDraw(AbstractCard drawnCard) {
-        if (!grayscale && !drawnCard.upgraded) {
+        if (!grayscale && !drawnCard.upgraded && FoilPatches.isFoil(drawnCard)) {
             counter -= 1;
             drawnCard.upgrade();
             if (counter == 0) {

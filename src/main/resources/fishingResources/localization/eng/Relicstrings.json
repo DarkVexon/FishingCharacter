@@ -3,7 +3,7 @@
     "NAME": "The Rod",
     "FLAVOR": "The only one of its kind.",
     "DESCRIPTIONS": [
-      "#yUpgrade the first #b3 unupgraded cards you draw each combat."
+      "#yUpgrade the first #b3 unupgraded #y${ModID}:Foil cards you draw each combat."
     ]
   },
   "${ModID}:RainbowRod": {
