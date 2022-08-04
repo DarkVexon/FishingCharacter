@@ -52,7 +52,7 @@ public class FeedingFrenzy extends AbstractFishingCard {
                 public void update() {
                     isDone = true;
                     AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
-                    att(new DamageAction(q, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
+                    att(new DamageAction(q, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.NONE));
                     att(new VFXAction(new BiteEffect(q.hb.cX, q.hb.cY)));
                 }
             });
