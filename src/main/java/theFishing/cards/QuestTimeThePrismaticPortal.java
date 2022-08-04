@@ -15,7 +15,6 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
 
     public QuestTimeThePrismaticPortal() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        isEthereal = true;
         cardsToPreview = new QuestTimeTheGemSearch();
     }
 

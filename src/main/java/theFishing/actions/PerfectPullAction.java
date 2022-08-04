@@ -25,6 +25,7 @@ public class PerfectPullAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        isDone = true;
         Wiz.att(new DrawCardAction(1, new AbstractGameAction() {
             @Override
             public void update() {

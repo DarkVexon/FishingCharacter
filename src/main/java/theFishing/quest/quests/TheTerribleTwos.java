@@ -43,7 +43,7 @@ public class TheTerribleTwos extends AbstractQuest {
 
     @Override
     public Texture progressTex(int idx) {
-        if (progress >= idx) {
+        if (progress > idx) {
             return complete;
         }
         return incomplete;

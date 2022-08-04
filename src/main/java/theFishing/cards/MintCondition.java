@@ -17,7 +17,7 @@ public class MintCondition extends AbstractFishingCard {
     // intellij stuff self, , uncommon, , , , , 2, 1
 
     public MintCondition() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
     }
 

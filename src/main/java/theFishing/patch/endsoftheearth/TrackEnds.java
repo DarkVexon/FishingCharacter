@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.ui.panels.DrawPilePanel;
+import com.megacrit.cardcrawl.ui.panels.DiscardPilePanel;
 import javassist.CtBehavior;
 import theFishing.cards.EndsOfTheEarth;
 
@@ -27,12 +27,12 @@ public class TrackEnds {
     }
 
     @SpirePatch(
-            clz = DrawPilePanel.class,
+            clz = DiscardPilePanel.class,
             method = "updatePositions"
     )
     public static class Update {
         @SpirePostfixPatch
-        public static void doTheUpdateThing(DrawPilePanel __instance) {
+        public static void doTheUpdateThing(DiscardPilePanel __instance) {
             if (!AbstractDungeon.isScreenUp) {
                 if (!AbstractDungeon.player.discardPile.isEmpty()) {
                     ArrayList<AbstractCard> found = new ArrayList<>();
@@ -42,7 +42,7 @@ public class TrackEnds {
                         }
                     }
                     for (AbstractCard top : found) {
-                        if (!currentCard.get(AbstractDungeon.player.discardPile.group).contains(top)) {
+                        if (!currentCard.get(AbstractDungeon.player.discardPile).contains(top)) {
                             currentCard.get(AbstractDungeon.player.discardPile).add(top);
 
                             glowCheck(top);
@@ -138,7 +138,7 @@ public class TrackEnds {
     public static class MaybeYouCan {
         @SpirePostfixPatch
         public static boolean maybe(boolean __result, CardGroup __instance) {
-            return __result || (!AbstractDungeon.player.drawPile.isEmpty() && AbstractDungeon.player.drawPile.getTopCard().hasEnoughEnergy());
+            return __result || (!currentCard.get(AbstractDungeon.player.discardPile).isEmpty() && AbstractDungeon.player.energy.energy > 0);
         }
     }
 

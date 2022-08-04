@@ -331,26 +331,26 @@
     "DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust. NL When you obtain this, obtain a random Potion."
   },
   "${ModID}:CrystallineConfluence": {
-    "NAME": "Crystalline Confluence",
-    "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle X+1 ${ModID}:Foil *Star *Shards into your draw pile."
+    "NAME": "Crystal Confluence",
+    "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle X+1 ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust."
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",
     "DESCRIPTION": "Gain !M! Strength and !${ModID}:m2! Thorns. NL Draw 1 fewer card each turn."
   },
   "${ModID}:QuestTimeTheStorm": {
-    "NAME": "Quest Time: The Storm",
+    "NAME": "The Storm",
     "DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses 17 HP.",
     "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses 17 HP."
   },
   "${ModID}:QuestTimeTheLuckyPack": {
-    "NAME": "Quest Time: The Lucky Pack",
+    "NAME": "The Lucky Pack",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a row. NL *Reward: Play the last card twice."
   },
   "${ModID}:QuestTimeTheTerribleTwos": {
-    "NAME": "Quest Time: The Terrible Twos",
-    "DESCRIPTION": "Apply 2 Weak and Vulnerable. NL ${ModID}:Quest: Play 3 2-cost cards. NL *Reward: Gain 22 Block."
+    "NAME": "The Terrible Twos",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL ${ModID}:Quest: Play 3 2-cost cards. NL *Reward: Gain 22 Block."
   },
   "${ModID}:SoleSight": {
     "NAME": "Sole Sight",
@@ -376,7 +376,7 @@
     "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL Thanks for playing."
   },
   "${ModID}:QuestTimeTheHarpoon": {
-    "NAME": "Quest Time: The Harpoon",
+    "NAME": "Adventure: The Harpoon",
     "DESCRIPTION": "Deal !D! damage. NL Startup ${ModID}:Quest: Kill an enemy. NL *Reward: Shuffle *The *Whale into your draw pile."
   },
   "${ModID}:EndsOfTheEarth": {
@@ -392,12 +392,12 @@
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw 1 card."
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
-    "NAME": "Quest Time: The Prismatic Portal",
-    "DESCRIPTION": "Ethereal. NL ${ModID}:Quest: Play a Common, Uncommon, Rare, and Special card. NL *Reward: Shuffle *Quest *Time: *The *Gem *Search into your draw pile."
+    "NAME": "The Prismatic Portal",
+    "DESCRIPTION": "${ModID}:Quest: Play a Common, Uncommon, Rare, and Special card. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
-    "NAME": "Quest Time: The Gem Search",
-    "DESCRIPTION": "Ethereal. NL ${ModID}:Quest: End your turn with an empty hand. NL *Reward: Shuffle *The *Eternity *Gem into your draw pile."
+    "NAME": "The Gem Search",
+    "DESCRIPTION": "${ModID}:Quest: End your turn with an empty hand. NL *Reward: Shuffle *The *Eternity *Gem into your draw pile."
   },
   "${ModID}:TheEternityGem": {
     "NAME": "The Eternity Gem",
@@ -421,7 +421,7 @@
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "Whenever you draw a ${ModID]:Foil card, gain !M! Temporary Strength."
+    "DESCRIPTION": "Whenever you draw a ${ModID}:Foil card, gain !M! Temporary Strength."
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",

@@ -21,6 +21,7 @@ public class CrystallineConfluence extends AbstractFishingCard {
         AbstractCard q = new StarShard();
         makeFoil(q);
         cardsToPreview = q;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

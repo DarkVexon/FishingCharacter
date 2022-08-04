@@ -14,7 +14,6 @@ public class QuestTimeTheGemSearch extends AbstractFishingCard {
 
     public QuestTimeTheGemSearch() {
         super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        isEthereal = true;
         cardsToPreview = new TheEternityGem();
     }
 

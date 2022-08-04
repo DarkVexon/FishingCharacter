@@ -65,25 +65,6 @@ public class HoverEnds {
         }
     }
 
-    /*@SpireInsertPatch(
-            locator = Locator.class
-    )
-    public static void TestHoverOtherHand(AbstractPlayer __instance)
-    {
-        if (__instance.hasRelic(dunno.ID))
-        {
-            if (__instance.toHover == null)
-            {
-                AbstractCard top = RenderAndClickableTopCard.Fields.currentCard.get(__instance.drawPile);
-                if (top != null)
-                {
-                    if (top == __instance.hoveredCard) {
-                        __instance.toHover = top;
-                    }
-            }
-        }
-    }*/
-
     private static class FirstLocator extends SpireInsertLocator {
         @Override
         public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {

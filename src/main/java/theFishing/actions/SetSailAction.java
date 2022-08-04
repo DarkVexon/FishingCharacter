@@ -64,18 +64,16 @@ public class SetSailAction extends AbstractGameAction {
 
         int group = 0;
 
-        for (int i = 0; i < this.amount; ++i) {
-            while (group < 14 && groups.get(group).isEmpty())
-                group++;
-            if (group < 14) {
-                groups.get(group).shuffle();
-                AbstractCard card = groups.get(group).getBottomCard();
-                groups.get(group).removeCard(card);
-                p.drawPile.removeCard(card);
-                p.drawPile.addToTop(card);
-                card.freeToPlayOnce = true;
-                addToTop(new DrawCardAction(1));
-            }
+        while (group < 14 && groups.get(group).isEmpty())
+            group++;
+        if (group < 14) {
+            groups.get(group).shuffle();
+            AbstractCard card = groups.get(group).getBottomCard();
+            groups.get(group).removeCard(card);
+            p.drawPile.removeCard(card);
+            p.drawPile.addToTop(card);
+            card.freeToPlayOnce = true;
+            addToTop(new DrawCardAction(1));
         }
 
         this.isDone = true;
