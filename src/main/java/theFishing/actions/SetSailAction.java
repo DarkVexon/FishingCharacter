@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 
 public class SetSailAction extends AbstractGameAction {
     private AbstractPlayer p;

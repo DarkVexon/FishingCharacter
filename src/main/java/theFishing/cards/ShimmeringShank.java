@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theFishing.cards.AbstractFishingCard;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;

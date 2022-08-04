@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;

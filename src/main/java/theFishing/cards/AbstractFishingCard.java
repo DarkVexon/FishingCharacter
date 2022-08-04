@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 
 import java.util.Arrays;
 import java.util.List;
@@ -190,13 +190,5 @@ public abstract class AbstractFishingCard extends CustomCard {
 
     protected boolean isVoyaged() {
         return FishingMod.isThisVoyaged(this);
-    }
-
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        if (FoilPatches.isFoil(this) && !this.rawDescription.contains(makeID("Foil"))) {
-            return Arrays.asList(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
-        }
-        return null;
     }
 }

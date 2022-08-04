@@ -25,7 +25,7 @@ import theFishing.cards.VictoryLap;
 import theFishing.cards.cardvars.FishInCombatVar;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 import theFishing.patch.PreDrawPatch;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;

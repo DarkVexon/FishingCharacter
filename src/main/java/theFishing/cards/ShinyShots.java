@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.DamagePlusWallopVFXAction;
-import theFishing.cards.AbstractFishingCard;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;

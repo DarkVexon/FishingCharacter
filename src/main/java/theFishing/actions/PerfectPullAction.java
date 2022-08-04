@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 import theFishing.util.Wiz;
 
 public class PerfectPullAction extends AbstractGameAction {

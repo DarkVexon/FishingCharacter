@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 
 import java.util.ArrayList;
 import java.util.List;

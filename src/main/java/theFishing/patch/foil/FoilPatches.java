@@ -1,4 +1,4 @@
-package theFishing.patch;
+package theFishing.patch.foil;
 
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
@@ -104,7 +104,7 @@ public class FoilPatches {
 
     private static final ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
     private static final Color hslcBackground = new Color(0.5F, 0.6F, 0.7F, 0.55F);
-    private static final Color hslcArt = new Color(0.6F, 0.6F, 0.5F, 0.6F);
+    private static final Color hslcArt = new Color(0.66F, 0.6F, 0.5F, 0.6F);
     private static final Color hslcCardBacks = new Color(0.66F, 0.5F, 0.575F, 0.5F);
 
     @SpirePatch(
@@ -235,4 +235,6 @@ public class FoilPatches {
             }
         }
     }
+
+
 }

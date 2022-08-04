@@ -3,7 +3,7 @@ package theFishing.quest.quests;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.actions.RepeatCardAction;
-import theFishing.patch.FoilPatches;
+import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.util.Wiz.att;
 

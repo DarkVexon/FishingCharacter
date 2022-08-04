@@ -25,7 +25,6 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
 import theFishing.cards.Strike;
-import theFishing.patch.FoilPatches;
 import theFishing.relics.TheRod;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ import java.util.List;
 
 import static theFishing.FishingMod.*;
 import static theFishing.TheFishing.Enums.FISHING_COLOR;
-import static theFishing.patch.FoilPatches.makeFoil;
+import static theFishing.patch.foil.FoilPatches.makeFoil;
 
 public class TheFishing extends CustomPlayer {
     private static final String[] orbTextures = {
