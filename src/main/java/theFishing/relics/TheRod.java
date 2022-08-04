@@ -25,6 +25,8 @@ public class TheRod extends AbstractEasyRelic {
         if (!grayscale && !drawnCard.upgraded && FoilPatches.isFoil(drawnCard)) {
             counter -= 1;
             drawnCard.upgrade();
+            drawnCard.superFlash();
+            drawnCard.applyPowers();
             if (counter == 0) {
                 grayscale = true;
                 counter = -1;
@@ -37,5 +39,10 @@ public class TheRod extends AbstractEasyRelic {
         if (AbstractDungeon.player instanceof TheFishing) {
             ((TheFishing) AbstractDungeon.player).onLoseStartingRod();
         }
+    }
+
+    @Override
+    public void onVictory() {
+        grayscale = false;
     }
 }

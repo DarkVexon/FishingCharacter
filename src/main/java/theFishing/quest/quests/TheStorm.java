@@ -58,4 +58,9 @@ public class TheStorm extends AbstractQuest {
         }
         return incomplete;
     }
+
+    @Override
+    public void atEndOfTurn() {
+        progress = 0;
+    }
 }

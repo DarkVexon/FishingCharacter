@@ -47,7 +47,7 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Put !M! ${ModID}:Fish on top of your draw pile."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
@@ -425,6 +425,7 @@
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
-    "DESCRIPTION": "Innate. NL Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand."
   }
 }

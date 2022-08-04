@@ -91,4 +91,10 @@ public class QuestHelper {
             q.onKillEnemy();
         }
     }
+
+    public static void atEndOfTurn() {
+        for (AbstractQuest q : quests) {
+            q.atEndOfTurn();
+        }
+    }
 }

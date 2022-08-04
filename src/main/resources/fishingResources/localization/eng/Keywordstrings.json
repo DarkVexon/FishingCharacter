@@ -25,7 +25,7 @@
     "NAMES": [
       "quest"
     ],
-    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward. If you already have that #yQuest in progress, draw a card instead."
+    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward. NL If you already have that #yQuest in progress, draw a card instead."
   },
   {
     "PROPER_NAME": "Zapped",
@@ -46,6 +46,6 @@
     "NAMES": [
       "foil"
     ],
-    "DESCRIPTION": "Approx. #b1 in #b4 card rewards contain a Foil card. Shiny!"
+    "DESCRIPTION": "Approx. #b1 in #b4 card rewards contain a Foil card. NL #gShiny!"
   }
 ]

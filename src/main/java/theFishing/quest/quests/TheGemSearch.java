@@ -1,6 +1,7 @@
 package theFishing.quest.quests;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.cards.TheEternityGem;
 import theFishing.util.TexLoader;
 
@@ -41,5 +42,12 @@ public class TheGemSearch extends AbstractQuest {
             return complete;
         }
         return incomplete;
+    }
+
+    @Override
+    public void atEndOfTurn() {
+        if (AbstractDungeon.player.hand.isEmpty()) {
+            increment();
+        }
     }
 }
