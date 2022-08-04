@@ -36,6 +36,6 @@ public class MaybeLater extends AbstractFishingCard {
 
     public void upp() {
         upgradeDamage(2);
-        upgradeBlock(2);
+        upgradeBlock(1);
     }
 }
