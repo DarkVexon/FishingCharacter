@@ -12,10 +12,6 @@
     "DESCRIPTION": "Draw !M! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust."
   },
-  "${ModID}:Clownfish": {
-    "NAME": "Clownfish",
-    "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Draw 1 card. NL Exhaust."
-  },
   "${ModID}:Guppy": {
     "NAME": "Guppy",
     "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Exhaust."
@@ -27,15 +23,6 @@
   "${ModID}:Octopus": {
     "NAME": "Octopus",
     "DESCRIPTION": "Draw !M! cards. NL Exhaust."
-  },
-  "${ModID}:Orca": {
-    "NAME": "Orca",
-    "DESCRIPTION": "Play the top card of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Play the top card of your draw pile. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Play the top !M! cards of your draw pile. NL Exhaust.",
-      "Retain. NL Play the top !M! cards of your draw pile. NL Exhaust."
-    ]
   },
   "${ModID}:Piranha": {
     "NAME": "Piranha",
@@ -70,30 +57,14 @@
     "NAME": "Mop Up",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it's a Curse or Status, gain [E] and draw a card."
   },
-  "${ModID}:QuickShot": {
-    "NAME": "Quick Shot",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "${ModID}:Sunhat": {
-    "NAME": "Sunhat",
-    "DESCRIPTION": "Gain !B! Block. NL Remove your Weak."
-  },
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Solo: Deal !D! damage again."
-  },
-  "${ModID}:ScavengedShield": {
-    "NAME": "Scavenged Shield",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Voyaged: Gain !B! Block again."
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! cards."
-  },
-  "${ModID}:SurpriseAttack": {
-    "NAME": "Surprise Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL ${ModID}:Voyaged: Apply !M! Vulnerable."
   },
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
@@ -105,18 +76,9 @@
     "DESCRIPTION": "Gain !B! Block. NL Add 1 ${ModID}:Fish into your hand.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add 1 Upgraded ${ModID}:Fish into your hand."
   },
-  "${ModID}:SpoilerAlert": {
-    "NAME": "Spoiler Alert",
-    "DESCRIPTION": "Scry X+1. NL Play the top card of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Scry X+2. NL Play the top card of your draw pile."
-  },
   "${ModID}:RodSlam": {
     "NAME": "Rod Slam",
     "DESCRIPTION": "Deal !D! damage. NL Next turn, draw 1 fewer card."
-  },
-  "${ModID}:FishCannon": {
-    "NAME": "Fish Cannon",
-    "DESCRIPTION": "${ModID}:Consume. NL Deal !D! damage."
   },
   "${ModID}:HunkerDown": {
     "NAME": "Hunker Down",
@@ -166,10 +128,6 @@
     "NAME": "Ring the Bell",
     "DESCRIPTION": "ALL enemies lose 13 HP. NL Put a *Curse *of *the *Bell on top of your draw pile."
   },
-  "${ModID}:BigHaul": {
-    "NAME": "Big Haul",
-    "DESCRIPTION": "Add !M! ${ModID}:Fish into your hand with Retain. NL Exhaust."
-  },
   "${ModID}:Bobber": {
     "NAME": "Bobber",
     "DESCRIPTION": "Unplayable. NL If you draw this during your turn, gain !${ModID}:m2! Block and !M! Strength."
@@ -192,41 +150,14 @@
     "NAME": "Power Pellet",
     "DESCRIPTION": "*Waka *Wakas deal !M! more damage. NL Exhaust."
   },
-  "${ModID}:ManifestMeal": {
-    "NAME": "Manifest Meal",
-    "DESCRIPTION": "Put a *Food with X+2 on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Put a *Food with X+3 on top of your draw pile."
-  },
-  "${ModID}:Food": {
-    "NAME": "Food",
-    "DESCRIPTION": "Draw X cards.",
-    "EXTENDED_DESCRIPTION": [
-      "Draw !M! card.",
-      "Draw !M! cards."
-    ]
-  },
   "${ModID}:Cannoneer": {
     "NAME": "Cannoneer",
     "DESCRIPTION": "Deal !D! damage to a random enemy X times."
-  },
-  "${ModID}:Calimari": {
-    "NAME": "Calimari",
-    "DESCRIPTION": "Shuffle !M! *Octopi into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle !M! *Octopi into your draw pile."
   },
   "${ModID}:DiscoverACrate": {
     "NAME": "Discover a Crate",
     "DESCRIPTION": "Add *Smite and *Safety into your hand. ${ModID}:Voyaged: Upgrade them. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Add *Smite and *Safety into your hand. ${ModID}:Voyaged: Upgrade them."
-  },
-  "${ModID}:BloodInTheWater": {
-    "NAME": "Blood in the Water",
-    "DESCRIPTION": "${ModID}:Consume. NL Gain 2 Strength. NL Gain 1 additional Strength for each ${ModID}:Fish consumed to play this.",
-    "UPGRADE_DESCRIPTION": "Retain. NL ${ModID}:Consume. NL Gain 2 Strength. NL Gain 1 additional Strength for each ${ModID}:Fish consumed to play this."
-  },
-  "${ModID}:SupplyTrip": {
-    "NAME": "Supply Trip",
-    "DESCRIPTION": "Draw cards until you have !M! in your hand. NL Gain !B! Block for each card drawn."
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
@@ -304,29 +235,13 @@
     "NAME": "Gone Fishing",
     "DESCRIPTION": "Gain 1 Intangible. NL Shuffle !M! ${ModID}:Fish into your draw pile. NL Exhaust."
   },
-  "${ModID}:Schooled": {
-    "NAME": "Schooled",
-    "DESCRIPTION": "${ModID}:Consume. NL Deal !D! damage."
-  },
   "${ModID}:ChocolateChipCookie": {
     "NAME": "Chocolate Chip Cookie",
     "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand this combat. NL Exhaust."
   },
-  "${ModID}:QuickestShot": {
-    "NAME": "Quickest Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL ${ModID}:Voyaged: Draw another card and gain [E]."
-  },
-  "${ModID}:BeachBoy": {
-    "NAME": "Beach Boy",
-    "DESCRIPTION": "Innate. NL Retain. NL Deal !D! damage. NL Enemy loses !M! HP at the start of its turn."
-  },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
     "DESCRIPTION": "The first !M! times you play a card each turn, draw a card."
-  },
-  "${ModID}:FinalFlourish": {
-    "NAME": "Final Flourish",
-    "DESCRIPTION": "Gain !M! Strength this turn only. NL ${ModID}:Solo: Gain !${ModID}:m2! Strength next turn only instead."
   },
   "${ModID}:FullHouse": {
     "NAME": "Full House",
@@ -343,17 +258,9 @@
     "NAME": "Pick Me!",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage to ALL enemies. NL When this appears in a card reward, the other cards are Upgraded."
   },
-  "${ModID}:TakeItEasy": {
-    "NAME": "Take it Easy",
-    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Draw 1 fewer card each turn."
-  },
   "${ModID}:Hook": {
     "NAME": "Hook",
     "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
-  },
-  "${ModID}:NoWhammies": {
-    "NAME": "No Whammies",
-    "DESCRIPTION": "Draw !M! cards. NL If any are Colorless, gain [E]."
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
@@ -381,31 +288,6 @@
     "NAME": "Rod of Hope",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain Energy up to your maximum, draw !M! cards, and Exhaust this."
   },
-  "${ModID}:QuestTimeTheSlimyPath": {
-    "NAME": "Quest Time: The Slimy Path",
-    "DESCRIPTION": "Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. Shuffle 3 *Slimed into your draw pile. NL ${ModID}:Quest: Exhaust 3 Slimed. NL *Reward: Put a ${ModID}:Legendary_Treasure on top of your draw pile."
-  },
-  "${ModID}:GoldenLute": {
-    "NAME": "Golden Lute",
-    "DESCRIPTION": "Apply !M! Poison. NL Enemy loses !${ModID}:m2! Strength. NL Exhaust."
-  },
-  "${ModID}:PastKillingGun": {
-    "NAME": "Past Killing Gun",
-    "DESCRIPTION": "Deal !D! damage. NL At the end of this combat, heal !M! HP. NL Exhaust."
-  },
-  "${ModID}:ComicallyLargeSpoon": {
-    "NAME": "Comically Large Spoon",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "${ModID}:OneRing": {
-    "NAME": "One Ring",
-    "DESCRIPTION": "Gain !M! Intangible. NL Exhaust."
-  },
-  "${ModID}:Rhaast": {
-    "NAME": "Rhaast",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies 3 times."
-  },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
     "DESCRIPTION": "Draw !M! cards. NL If you won last run, gain !B! Block."
@@ -418,20 +300,6 @@
     "NAME": "Eel",
     "DESCRIPTION": "Gain [E]. NL Draw 1 card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw 1 card. NL Exhaust."
-  },
-  "${ModID}:HolyGrail": {
-    "NAME": "Holy Grail",
-    "DESCRIPTION": "Gain [E] [E]  and draw 1 additional card at the start of your turn.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E]  and draw 2 additional cards at the start of your turn."
-  },
-  "${ModID}:MacGuffin": {
-    "NAME": "MacGuffin",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards."
-  },
-  "${ModID}:FishOPedia": {
-    "NAME": "Fish-o-pedia",
-    "DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand. NL If you've played them all, instead gain 4 Strength.",
-    "UPGRADE_DESCRIPTION": "Add a ${ModID}:Fish that you haven't played this combat into your hand and Upgrade it. NL If you've played them all, instead gain 4 Strength."
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
@@ -454,54 +322,13 @@
     "NAME": "Swordfish",
     "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card. NL Exhaust."
   },
-  "${ModID}:DoubleShiv": {
-    "NAME": "Twin Shiv",
-    "DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
-  },
-  "${ModID}:DoomsdayClock": {
-    "NAME": "Doomsday Clock",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL At the end of !M! turns, deal !${ModID}:m2! damage to ALL enemies. NL Exhaust."
-  },
-  "${ModID}:LostStaff": {
-    "NAME": "Lost Staff",
-    "DESCRIPTION": "Enter Divinity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Enter Divinity. NL Exhaust."
-  },
-  "${ModID}:BottomlessWell": {
-    "NAME": "Bottomless Well",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile."
-  },
-  "${ModID}:PowerEternal": {
-    "NAME": "Power Eternal",
-    "DESCRIPTION": "Gain !M! Strength and Dexterity."
-  },
-  "${ModID}:MassProduction": {
-    "NAME": "Mass Production",
-    "DESCRIPTION": "Choose 1 card from your deck. NL Add !M! copies of it that cost 0 into your hand. NL Exhaust."
-  },
-  "${ModID}:DefinitelyUntrappedIdol": {
-    "NAME": "Definitely Untrapped Idol",
-    "DESCRIPTION": "Gain !M! Gold. NL Shuffle a *Rolling *Boulder into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Gold. NL Shuffle a *Rolling *Boulder+ into your draw pile. NL Exhaust."
-  },
-  "${ModID}:RollingBoulder": {
-    "NAME": "Rolling Boulder",
-    "DESCRIPTION": "Unplayable. NL When this card is drawn, deal !M! damage to ALL enemies."
-  },
-  "${ModID}:SpinAttack": {
-    "NAME": "Spin Attack",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Discard 1 card."
-  },
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL ${ModID}:Solo: Play the top card of your draw pile."
   },
   "${ModID}:FreeDrinks": {
     "NAME": "Free Drinks",
-    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust. NL When you obtain this, obtain a random Potion.",
-    "EXTENDED_DESCRIPTION": [
-      "On the house."
-    ]
+    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust. NL When you obtain this, obtain a random Potion."
   },
   "${ModID}:CrystallineConfluence": {
     "NAME": "Crystalline Confluence",
