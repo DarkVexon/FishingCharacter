@@ -11,12 +11,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.patch.foil.FoilPatches;
 
+import java.util.ArrayList;
+
 public class SetSailAction extends AbstractGameAction {
     private AbstractPlayer p;
 
-    public SetSailAction() {
+    public SetSailAction(int amount) {
         this.p = AbstractDungeon.player;
         this.actionType = ActionType.CARD_MANIPULATION;
+        this.amount = amount;
     }
 
     public void update() {
@@ -62,25 +65,33 @@ public class SetSailAction extends AbstractGameAction {
             }
         }
 
-        int group = 0;
+        ArrayList<AbstractCard> toReduce = new ArrayList<>();
+        for (int i = 0; i < amount; i++) {
+            int group = 0;
 
-        while (group < 14 && groups.get(group).isEmpty())
-            group++;
-        if (group < 14) {
-            groups.get(group).shuffle();
-            AbstractCard card = groups.get(group).getBottomCard();
-            groups.get(group).removeCard(card);
-            p.drawPile.removeCard(card);
-            p.drawPile.addToTop(card);
-            addToTop(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    card.freeToPlayOnce = true;
-                }
-            });
-            addToTop(new DrawCardAction(1));
+            while (group < 14 && groups.get(group).isEmpty())
+                group++;
+            if (group < 14) {
+                groups.get(group).shuffle();
+                AbstractCard card = groups.get(group).getBottomCard();
+                groups.get(group).removeCard(card);
+                p.drawPile.removeCard(card);
+                p.drawPile.addToTop(card);
+                toReduce.add(card);
+            }
         }
+
+        addToTop(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractCard q : toReduce) {
+                    q.freeToPlayOnce = true;
+                    q.superFlash();
+                }
+            }
+        });
+        addToTop(new DrawCardAction(amount));
 
         this.isDone = true;
     }

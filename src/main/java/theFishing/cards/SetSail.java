@@ -21,7 +21,7 @@ public class SetSail extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SetSailAction());
+        atb(new SetSailAction(1));
         atb(new AbstractGameAction() {
             @Override
             public void update() {

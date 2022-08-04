@@ -286,7 +286,7 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Draw !M! cards. NL They cost 0 until played."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Draw the rarest !M! cards in your draw pile. NL They cost 0 until played."
   },
   "${ModID}:VictoryLap": {
     "NAME": "Victory Lap",
