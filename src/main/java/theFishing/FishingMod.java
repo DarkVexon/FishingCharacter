@@ -18,8 +18,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.VictoryLap;
 import theFishing.cards.cardvars.FishInCombatVar;
@@ -47,7 +45,8 @@ public class FishingMod implements
         CustomSavable<ArrayList<Boolean>>,
         PostPlayerUpdateSubscriber,
         StartGameSubscriber,
-        AddAudioSubscriber {
+        AddAudioSubscriber,
+        PostInitializeSubscriber {
 
     public static final String modID = "fishing";
 
@@ -73,6 +72,8 @@ public class FishingMod implements
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
 
     public static ArrayList<AbstractCard> voyagedCards = new ArrayList<>();
+
+    private static FishingMod fishingMod;
 
     public FishingMod() {
         BaseMod.subscribe(this);
@@ -105,7 +106,7 @@ public class FishingMod implements
     }
 
     public static void initialize() {
-        FishingMod thismod = new FishingMod();
+        fishingMod = new FishingMod();
     }
 
     @Override
@@ -217,5 +218,10 @@ public class FishingMod implements
     public void receiveAddAudio() {
         BaseMod.addAudio(makeID("WAKA_WAKA"), "fishingResources/audio/eat_ghost.ogg");
         BaseMod.addAudio(makeID("EAT_FRUIT"), "fishingResources/audio/eatfruit.ogg");
+    }
+
+    @Override
+    public void receivePostInitialize() {
+        BaseMod.addSaveField("FishingMod", fishingMod);
     }
 }
