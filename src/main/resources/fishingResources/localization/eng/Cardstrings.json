@@ -421,10 +421,10 @@
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "Whenever you draw a ${ModID}:Foil card, gain !M! Temporary Strength."
+    "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, gain !M! Temporary Strength."
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
-    "DESCRIPTION": "Innate. NL Retain. NL Put ${ModID}:Foil card from your draw or discard pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand. NL Exhaust."
   }
 }

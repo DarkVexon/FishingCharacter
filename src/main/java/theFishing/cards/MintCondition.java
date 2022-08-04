@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,9 +25,9 @@ public class MintCondition extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new LambdaPower("Mint Condition", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             @Override
-            public void onCardDraw(AbstractCard card) {
+            public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (FoilPatches.isFoil(card)) {
-                    flashWithoutSound();
+                    flash();
                     applyToSelf(new StrengthPower(owner, amount));
                     applyToSelf(new LoseStrengthPower(owner, amount));
                 }
@@ -34,7 +35,7 @@ public class MintCondition extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "Whenever you draw a #yFoil card, gain #b" + amount + " #yTemporary Strength.";
+                description = "Whenever you play a #yFoil card, gain #b" + amount + " #yTemporary Strength.";
             }
         });
     }
