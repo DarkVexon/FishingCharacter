@@ -446,7 +446,7 @@
     "NAME": "Jellyfish",
     "DESCRIPTION": "Apply !M! ${ModID}:Zapped. NL Draw 1 card. NL Exhaust."
   },
-  "${ModID}:Neow": {
+  "${ModID}:TheWhale": {
     "NAME": "The Whale",
     "DESCRIPTION": "Enemy loses !M! HP. NL Draw 1 card. NL Exhaust."
   },

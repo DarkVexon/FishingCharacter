@@ -25,8 +25,8 @@ import theFishing.cards.VictoryLap;
 import theFishing.cards.cardvars.FishInCombatVar;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
-import theFishing.patch.foil.FoilPatches;
 import theFishing.patch.PreDrawPatch;
+import theFishing.patch.foil.FoilPatches;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
 import theFishing.util.Wiz;
@@ -191,6 +191,7 @@ public class FishingMod implements
     public ArrayList<Boolean> onSave() {
         ArrayList<Boolean> whatsFoil = new ArrayList<>();
         for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+            System.out.println(("VEX LOOK HERE: " + q.cardID + " " + FoilPatches.isFoil(q)));
             whatsFoil.add(FoilPatches.isFoil(q));
         }
         return whatsFoil;
@@ -199,6 +200,7 @@ public class FishingMod implements
     @Override
     public void onLoad(ArrayList<Boolean> whatsFoil) {
         for (int i = 0; i < whatsFoil.size(); i++) {
+            System.out.println(("VEX LOOK HERE: " + whatsFoil.get(i)));
             if (whatsFoil.get(i)) {
                 FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
             }

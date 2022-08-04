@@ -18,12 +18,12 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public String getName() {
-        return "The Starry Sky";
+        return "The Lucky Pack";
     }
 
     @Override
     public String getDescription() {
-        return "#yQuest: Play #b" + goal + " cards with stars in their art in a row. NL #yReward: Play the last card again.";
+        return "#yQuest: Play #b" + goal + " #yFoil cards in a row. NL #yReward: Play the last card again.";
     }
 
     @Override
