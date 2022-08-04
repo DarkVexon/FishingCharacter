@@ -16,7 +16,7 @@ public class Cheat extends AbstractFishingCard {
 
     public Cheat() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 8;
+        baseDamage = 9;
         cardsToPreview = new Steal();
         exhaust = true;
     }

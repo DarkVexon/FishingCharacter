@@ -39,7 +39,7 @@ public class TheTerribleTwos extends AbstractQuest {
     }
 
     private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Twos.png"));
-    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/Twos_completed.png"));
+    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/Twos_Completed.png"));
 
     @Override
     public Texture progressTex(int idx) {
@@ -47,5 +47,10 @@ public class TheTerribleTwos extends AbstractQuest {
             return complete;
         }
         return incomplete;
+    }
+
+    @Override
+    public float textpadding() {
+        return 180F;
     }
 }

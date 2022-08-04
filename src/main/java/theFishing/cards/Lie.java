@@ -20,7 +20,7 @@ public class Lie extends AbstractFishingCard {
 
     public Lie() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
         cardsToPreview = new Cheat();
         exhaust = true;
     }

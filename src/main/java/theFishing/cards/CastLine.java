@@ -27,7 +27,6 @@ public class CastLine extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

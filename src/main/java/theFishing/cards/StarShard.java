@@ -16,7 +16,7 @@ public class StarShard extends AbstractFishingCard {
     public StarShard() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 4;
-        baseBlock = 4;
+        baseBlock = 2;
 
     }
 
@@ -28,6 +28,6 @@ public class StarShard extends AbstractFishingCard {
 
     public void upp() {
         upgradeDamage(2);
-        upgradeBlock(2);
+        upgradeBlock(1);
     }
 }
