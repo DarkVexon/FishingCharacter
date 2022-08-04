@@ -1,8 +1,8 @@
 {
   "${ModID}:TheFishing": {
     "NAMES": [
-      "The Wanderer",
-      "the Wanderer"
+      "The Adventurer",
+      "the Adventurer"
     ],
     "TEXT": [
       "An exile, now bound to the waters. NL Came to the Spire to hunt a whale.",
