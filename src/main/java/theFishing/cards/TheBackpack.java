@@ -1,11 +1,13 @@
 package theFishing.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.patch.foil.FoilPatches;
+
+import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -22,16 +24,23 @@ public class TheBackpack extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        CardGroup newGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        ArrayList<AbstractCard> possCards = new ArrayList<>();
         for (AbstractCard q : p.drawPile.group) {
             if (FoilPatches.isFoil(q))
-                newGroup.addToTop(q);
+                possCards.add(q);
         }
         for (AbstractCard q : p.discardPile.group) {
             if (FoilPatches.isFoil(q))
-                newGroup.addToTop(q);
+                possCards.add(q);
         }
-        atb(new FetchAction(newGroup));
+        atb(new SelectCardsAction(possCards, 1, "Choose a card to put into your hand.", (cards) -> {
+            AbstractCard card = cards.get(0);
+            if (AbstractDungeon.player.drawPile.group.contains(card)) {
+                AbstractDungeon.player.drawPile.moveToHand(card);
+            } else if (AbstractDungeon.player.discardPile.group.contains(card)) {
+                AbstractDungeon.player.discardPile.moveToHand(card);
+            }
+        }));
     }
 
     public void upp() {

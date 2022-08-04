@@ -44,5 +44,6 @@ public class TheRod extends AbstractEasyRelic {
     @Override
     public void onVictory() {
         grayscale = false;
+        counter = -1;
     }
 }

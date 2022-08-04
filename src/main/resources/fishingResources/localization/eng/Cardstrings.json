@@ -376,7 +376,7 @@
     "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL Thanks for playing."
   },
   "${ModID}:QuestTimeTheHarpoon": {
-    "NAME": "Adventure: The Harpoon",
+    "NAME": "The Harpoon",
     "DESCRIPTION": "Deal !D! damage. NL Startup ${ModID}:Quest: Kill an enemy. NL *Reward: Shuffle *The *Whale into your draw pile."
   },
   "${ModID}:EndsOfTheEarth": {
