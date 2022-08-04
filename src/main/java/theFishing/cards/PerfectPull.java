@@ -15,7 +15,7 @@ public class PerfectPull extends AbstractFishingCard {
 
     public PerfectPull() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 5;
+        baseDamage = 4;
         isMultiDamage = true;
     }
 

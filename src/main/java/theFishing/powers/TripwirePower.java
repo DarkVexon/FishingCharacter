@@ -29,6 +29,6 @@ public class TripwirePower extends AbstractEasyPower implements OnMyBlockBrokenP
 
     @Override
     public void updateDescription() {
-        description = "If your #yBlock is broken this turn, the attacker loses #b" + amount + " HP.";
+        description = "If your #yBlock is broken this turn, ALL enemies lose #b" + amount + " HP.";
     }
 }

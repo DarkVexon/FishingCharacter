@@ -14,8 +14,8 @@ public class Tripwire extends AbstractFishingCard {
 
     public Tripwire() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 9;
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,6 +25,6 @@ public class Tripwire extends AbstractFishingCard {
 
     public void upp() {
         upgradeDamage(1);
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(2);
     }
 }
