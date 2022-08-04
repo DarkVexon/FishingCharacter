@@ -10,16 +10,24 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
+import com.megacrit.cardcrawl.shop.ShopScreen;
 import theFishing.TheFishing;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.util.Wiz;
 
 import java.util.ArrayList;
+
+import static theFishing.util.Shaders.fragmentShaderHSLC;
+import static theFishing.util.Shaders.vertexShaderHSLC;
 
 public class FoilPatches {
 
     // GAMEPLAY STUFF
 
-    public static final float FOIL_CHANCE = 7F; // 1 out of X
+    public static final float FOIL_CHANCE_REWARDS = 4F; // 1 out of X rewards
+    public static final int SHOP_FOIL_CARDS = 2; // X out of the shop's cards
+    public static final float SHOP_FOIL_MARKUP = 1.1F; // how much more expensive foils should be
+    //public static final int GREMLIN_MATCH_FOILS = 1; // how many pairs to make foil in gremlin match, out of 6
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -66,76 +74,38 @@ public class FoilPatches {
     )
     public static class FoilInRewards {
         public static void Postfix(ArrayList<AbstractCard> __result) {
-            for (AbstractCard q : __result) {
-                if (AbstractDungeon.cardRng.random() <= (1 / FOIL_CHANCE)) {
-                    makeFoil(q);
-                    break;
-                }
+            if (AbstractDungeon.cardRng.random() <= (1 / FOIL_CHANCE_REWARDS)) {
+                makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRng));
             }
         }
     }
 
+    @SpirePatch(
+            clz = ShopScreen.class,
+            method = "initCards"
+    )
+    public static class FoilInShops {
+        public static void Postfix(ShopScreen __instance) {
+            ArrayList<AbstractCard> shopCards = new ArrayList<>();
+            ArrayList<AbstractCard> coloredCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "coloredCards");
+            ArrayList<AbstractCard> colorlessCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
+            shopCards.addAll(coloredCards);
+            shopCards.addAll(colorlessCards);
+            for (int i = 0; i < SHOP_FOIL_CARDS; i++) {
+                AbstractCard target = shopCards.remove(AbstractDungeon.cardRng.random(shopCards.size() - 1));
+                makeFoil(target);
+                target.price *= SHOP_FOIL_MARKUP;
+            }
+        }
+    }
 
     // VISUAL STUFF
 
-    private static final String partialHueRodrigues =
-            "vec3 applyHue(vec3 rgb, float hue)\n" +
-                    "{\n" +
-                    "    vec3 k = vec3(0.57735);\n" +
-                    "    float c = cos(hue);\n" +
-                    "    //Rodrigues' rotation formula\n" +
-                    "    return rgb * c + cross(k, rgb) * sin(hue) + k * dot(k, rgb) * (1.0 - c);\n" +
-                    "}\n";
-    private static final String vertexShaderHSLC = "attribute vec4 a_position;\n"
-            + "attribute vec4 a_color;\n"
-            + "attribute vec2 a_texCoord0;\n"
-            + "uniform mat4 u_projTrans;\n"
-            + "varying vec4 v_color;\n"
-            + "varying vec2 v_texCoords;\n"
-            + "varying float v_lightFix;\n"
-            + "\n"
-            + "void main()\n"
-            + "{\n"
-            + "   v_color = a_color;\n"
-            + "   v_texCoords = a_texCoord0;\n"
-            + "   v_color.a = pow(v_color.a * (255.0/254.0) + 0.5, 1.709);\n"
-            + "   v_lightFix = 1.0 + pow(v_color.a, 1.41421356);\n"
-            + "   gl_Position =  u_projTrans * a_position;\n"
-            + "}\n";
-
-    private static final String fragmentShaderHSLC =
-            "#ifdef GL_ES\n" +
-                    "#define LOWP lowp\n" +
-                    "precision mediump float;\n" +
-                    "#else\n" +
-                    "#define LOWP \n" +
-                    "#endif\n" +
-                    "varying vec2 v_texCoords;\n" +
-                    "varying float v_lightFix;\n" +
-                    "varying LOWP vec4 v_color;\n" +
-                    "uniform sampler2D u_texture;\n" +
-                    partialHueRodrigues +
-                    "void main()\n" +
-                    "{\n" +
-                    "    float hue = 6.2831853 * (v_color.x - 0.5);\n" +
-                    "    float saturation = v_color.y * 2.0;\n" +
-                    "    float brightness = v_color.z - 0.5;\n" +
-                    "    vec4 tgt = texture2D( u_texture, v_texCoords );\n" +
-                    "    tgt.rgb = applyHue(tgt.rgb, hue);\n" +
-                    "    tgt.rgb = vec3(\n" +
-                    "     (0.5 * pow(dot(tgt.rgb, vec3(0.375, 0.5, 0.125)), v_color.w) * v_lightFix + brightness),\n" + // lightness
-                    "     ((tgt.r - tgt.b) * saturation),\n" + // warmth
-                    "     ((tgt.g - tgt.b) * saturation));\n" + // mildness
-                    "    gl_FragColor = clamp(vec4(\n" +
-                    "     dot(tgt.rgb, vec3(1.0, 0.625, -0.5)),\n" + // back to red
-                    "     dot(tgt.rgb, vec3(1.0, -0.375, 0.5)),\n" + // back to green
-                    "     dot(tgt.rgb, vec3(1.0, -0.375, -0.5)),\n" + // back to blue
-                    "     tgt.a), 0.0, 1.0);\n" + // keep alpha, then clamp
-                    "}";
 
     private static final ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
-    private static final Color hslcBacks = new Color(0.5F, 0.6F, 0.7F, 0.55F);
+    private static final Color hslcBackground = new Color(0.5F, 0.6F, 0.7F, 0.55F);
     private static final Color hslcArt = new Color(0.6F, 0.6F, 0.5F, 0.6F);
+    private static final Color hslcCardBacks = new Color(0.66F, 0.5F, 0.575F, 0.5F);
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -150,7 +120,7 @@ public class FoilPatches {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", hslcBacks);
+                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", hslcBackground);
             }
         }
 
@@ -201,7 +171,7 @@ public class FoilPatches {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = sb.getColor();
-                sb.setColor(hslcBacks);
+                sb.setColor(hslcBackground);
             }
         }
 
@@ -235,6 +205,31 @@ public class FoilPatches {
         public static void Postfix(SingleCardViewPopup __instance, SpriteBatch sb) {
             AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
             if (isFoil(card)) {
+                sb.setShader(oldShader);
+                sb.setColor(oldColor);
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = "renderBack"
+    )
+    public static class FoilCardsSpecialCardbacks {
+        private static ShaderProgram oldShader;
+        private static Color oldColor;
+
+        public static void Prefix(AbstractCard __instance, SpriteBatch sb, boolean hovered, boolean selected) {
+            if (isFoil(__instance)) {
+                oldShader = sb.getShader();
+                sb.setShader(shade);
+                oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
+                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", hslcCardBacks);
+            }
+        }
+
+        public static void Postfix(AbstractCard __instance, SpriteBatch sb, boolean hovered, boolean selected) {
+            if (isFoil(__instance)) {
                 sb.setShader(oldShader);
                 sb.setColor(oldColor);
             }

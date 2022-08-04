@@ -8,8 +8,6 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
-import com.evacipated.cardcrawl.mod.stslib.StSLib;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,16 +18,14 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theFishing.cards.AbstractFishingCard;
-import theFishing.cards.TheFinalCard;
 import theFishing.cards.VictoryLap;
 import theFishing.cards.cardvars.FishInCombatVar;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
-import theFishing.cards.fish.AbstractFishCard;
+import theFishing.patch.FoilPatches;
 import theFishing.patch.PreDrawPatch;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
@@ -37,8 +33,6 @@ import theFishing.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-
-import static theFishing.util.Wiz.shuffleIn;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -50,7 +44,7 @@ public class FishingMod implements
         EditCharactersSubscriber,
         PostBattleSubscriber,
         OnStartBattleSubscriber,
-        CustomSavable<Integer>,
+        CustomSavable<ArrayList<Boolean>>,
         PostPlayerUpdateSubscriber,
         StartGameSubscriber,
         AddAudioSubscriber {
@@ -82,8 +76,6 @@ public class FishingMod implements
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
 
     public static ArrayList<AbstractCard> voyagedCards = new ArrayList<>();
-
-    public static int nextCombatFish;
 
     public FishingMod() {
         BaseMod.subscribe(this);
@@ -186,10 +178,6 @@ public class FishingMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         QuestHelper.reset();
         PreDrawPatch.DRAWN_DURING_TURN = false;
-        for (int i = 0; i < nextCombatFish; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
-        }
-        nextCombatFish = 0;
     }
 
     @Override
@@ -200,13 +188,21 @@ public class FishingMod implements
     }
 
     @Override
-    public Integer onSave() {
-        return nextCombatFish;
+    public ArrayList<Boolean> onSave() {
+        ArrayList<Boolean> whatsFoil = new ArrayList<>();
+        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+            whatsFoil.add(FoilPatches.isFoil(q));
+        }
+        return whatsFoil;
     }
 
     @Override
-    public void onLoad(Integer integer) {
-        nextCombatFish = integer;
+    public void onLoad(ArrayList<Boolean> whatsFoil) {
+        for (int i = 0; i < whatsFoil.size(); i++) {
+            if (whatsFoil.get(i)) {
+                FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
+            }
+        }
     }
 
     public static boolean isThisVoyaged(AbstractCard card) {

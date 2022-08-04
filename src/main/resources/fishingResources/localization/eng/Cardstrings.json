@@ -183,10 +183,6 @@
     "NAME": "Surprise!",
     "DESCRIPTION": "Unplayable. Ethereal. When this card is drawn, deal !M! damage to ALL enemies."
   },
-  "${ModID}:Harpoon": {
-    "NAME": "Harpoon",
-    "DESCRIPTION": "Deal !D! damage. NL Fatal: At the start of next combat, shuffle !M! ${ModID}:Fish into your draw pile. NL Exhaust."
-  },
   "${ModID}:WakaWaka": {
     "NAME": "Waka Waka",
     "DESCRIPTION": "Deal !D! damage. NL Startup: Shuffle 2 *Power *Pellets into your draw pile.",
@@ -343,14 +339,6 @@
     "NAME": "Fishbones",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card in the Exhaust pile."
   },
-  "${ModID}:BeastSlayer": {
-    "NAME": "Beast Slayer",
-    "DESCRIPTION": "Deal !D! damage. NL In Elite combats, deal !${ModID}:sd! damage instead."
-  },
-  "${ModID}:AnchorsAweigh": {
-    "NAME": "Anchor Lantern",
-    "DESCRIPTION": "Startup: Gain !M! Block and [E]. NL Gain !B! Block and [E]. NL Exhaust."
-  },
   "${ModID}:PickMe": {
     "NAME": "Pick Me!",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage to ALL enemies. NL When this appears in a card reward, the other cards are Upgraded."
@@ -375,11 +363,6 @@
     "NAME": "Ridiculous Fishing",
     "DESCRIPTION": "Whenever you play a Colorless card, deal !M! damage to a random enemy."
   },
-  "${ModID}:TackleBox": {
-    "NAME": "Tackle Box",
-    "DESCRIPTION": "At the start of your turn, draw !M! Colorless card.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, draw !M! Colorless cards."
-  },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
     "DESCRIPTION": "Ethereal. NL At the start of your turn, gain [E].",
@@ -394,21 +377,9 @@
     "NAME": "Flag",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
   },
-  "${ModID}:MagicRainbowStarBarrage": {
-    "NAME": "Magic Rainbow Star Barrage",
-    "DESCRIPTION": "Deal !D! damage. ${ModID}:Starlit: Deal !M! damage to a random enemy."
-  },
-  "${ModID}:StarOfTheShow": {
-    "NAME": "Star of the Show",
-    "DESCRIPTION": "Whenever you play a card with a star in its art, gain !M! Temporary Strength."
-  },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain Energy up to your maximum, draw !M! cards, and Exhaust this."
-  },
-  "${ModID}:SeeingStars": {
-    "NAME": "Seeing Stars",
-    "DESCRIPTION": "Deal !D! damage 3 times. NL ${ModID}:Starlit: Gain !M! Block."
   },
   "${ModID}:QuestTimeTheSlimyPath": {
     "NAME": "Quest Time: The Slimy Path",
@@ -532,10 +503,6 @@
       "On the house."
     ]
   },
-  "${ModID}:SolarPowered": {
-    "NAME": "Solar Powered",
-    "DESCRIPTION": "Gain !B! Block. NL Discard the top card of your draw pile. NL Gain !M! Temporary Strength for each star in its art."
-  },
   "${ModID}:CrystallineConfluence": {
     "NAME": "Crystalline Confluence",
     "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile.",
@@ -562,17 +529,13 @@
     "NAME": "Sole Sight",
     "DESCRIPTION": "Scry !M!. NL ${ModID}:Solo: Gain !${ModID}:m2! Strength."
   },
-  "${ModID}:ShineBrighter": {
-    "NAME": "Shine Brighter",
-    "DESCRIPTION": "${ModID}:Starlit: Gain 1 Strength and ALL enemies lose 1 Strength. NL Exhaust."
-  },
   "${ModID}:Supernova": {
     "NAME": "Supernova",
     "DESCRIPTION": "Deal !D! damage to ALL enemies for each ${ModID}:Foil card played this turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " Star card played.)",
-      " Star cards played.)"
+      " ${ModID}:Foil card played.)",
+      " ${ModID}:Foil cards played.)"
     ]
   },
   "${ModID}:VexingDeal": {
@@ -632,5 +595,9 @@
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
     "DESCRIPTION": "Whenever you draw a ${ModID]:Foil card, gain !M! Temporary Strength."
+  },
+  "${ModID}:TheBackpack": {
+    "NAME": "The Backpack",
+    "DESCRIPTION": "Innate. NL Retain. NL Put ${ModID}:Foil card from your draw or discard pile into your hand. NL Exhaust."
   }
 }
