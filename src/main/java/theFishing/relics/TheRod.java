@@ -16,7 +16,7 @@ public class TheRod extends AbstractEasyRelic {
 
     @Override
     public void atBattleStart() {
-        counter = 3;
+        counter = 2;
         grayscale = false;
     }
 
