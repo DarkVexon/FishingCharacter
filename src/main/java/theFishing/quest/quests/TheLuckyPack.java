@@ -1,10 +1,13 @@
 package theFishing.quest.quests;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.actions.RepeatCardAction;
 import theFishing.patch.foil.FoilPatches;
+import theFishing.util.TexLoader;
 
+import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.att;
 
 public class TheLuckyPack extends AbstractQuest {
@@ -40,5 +43,16 @@ public class TheLuckyPack extends AbstractQuest {
         else {
             progress = 0;
         }
+    }
+
+    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/LuckyPack.png"));
+    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/LuckyPack_completed.png"));
+
+    @Override
+    public Texture progressTex(int idx) {
+        if (progress >= idx) {
+            return complete;
+        }
+        return incomplete;
     }
 }

@@ -1,7 +1,10 @@
 package theFishing.quest.quests;
 
+import com.badlogic.gdx.graphics.Texture;
 import theFishing.cards.fish.maelstrom.TheWhale;
+import theFishing.util.TexLoader;
 
+import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.shuffleIn;
 
 public class TheHarpoon extends AbstractQuest {
@@ -30,5 +33,16 @@ public class TheHarpoon extends AbstractQuest {
     @Override
     public void onKillEnemy() {
         increment();
+    }
+
+    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Harpoon.png"));
+    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/Harpoon_completed.png"));
+
+    @Override
+    public Texture progressTex(int idx) {
+        if (progress >= idx) {
+            return complete;
+        }
+        return incomplete;
     }
 }

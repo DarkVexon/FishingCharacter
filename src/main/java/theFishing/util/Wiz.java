@@ -127,10 +127,6 @@ public class Wiz {
         atb(new VFXAction(gameEffect, duration));
     }
 
-    public static void tfx(AbstractGameEffect gameEffect) {
-        atb(new TimedVFXAction(gameEffect));
-    }
-
     public static void makeInHand(AbstractCard c, int i) {
         atb(new MakeTempCardInHandAction(c, i));
     }
@@ -185,9 +181,5 @@ public class Wiz {
 
     public static void discard(int amount) {
         discard(amount, false);
-    }
-
-    public static void applyToSelfNextTurn(AbstractPower po) {
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new NextTurnPowerPower(AbstractDungeon.player, po)));
     }
 }

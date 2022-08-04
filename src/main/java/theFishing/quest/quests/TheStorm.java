@@ -1,10 +1,13 @@
 package theFishing.quest.quests;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.util.TexLoader;
 
+import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
@@ -18,7 +21,7 @@ public class TheStorm extends AbstractQuest {
 
     @Override
     public String getName() {
-        return "Conduct Lightning";
+        return "The Storm";
     }
 
     @Override
@@ -43,5 +46,16 @@ public class TheStorm extends AbstractQuest {
         for (int i = 0; i < amount; i++) {
             increment();
         }
+    }
+
+    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Storm.png"));
+    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/Storm_Completed.png"));
+
+    @Override
+    public Texture progressTex(int idx) {
+        if (progress >= idx) {
+            return complete;
+        }
+        return incomplete;
     }
 }

@@ -12,19 +12,27 @@ public abstract class AbstractQuest {
     public int progress;
     public int goal;
     private static Texture def = TexLoader.getTexture(makeImagePath("quests/default.png"));
+
     public Texture progressTex(int idx) {
         return def;
     }
+
+    public float textpadding() {
+        return 166F;
+    }
+
     public abstract String getName();
     public abstract String getDescription();
     public abstract void grantReward();
 
     public String questID;
+
     public AbstractQuest(String ID, int goal) {
         this.questID = ID;
         this.progress = 0;
         this.goal = goal;
     }
+
     public void increment() {
         if (progress < goal) {
             progress++;
@@ -33,9 +41,6 @@ public abstract class AbstractQuest {
                 atb(new AbandonQuestAction(this));
             }
         }
-    }
-    public void onExhaust(AbstractCard c) {
-
     }
 
     public void onSpendEnergy(int amount) {

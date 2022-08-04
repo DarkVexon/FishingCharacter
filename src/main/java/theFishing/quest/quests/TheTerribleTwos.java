@@ -1,9 +1,12 @@
 package theFishing.quest.quests;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theFishing.util.TexLoader;
 
+import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.atb;
 
 public class TheTerribleTwos extends AbstractQuest {
@@ -33,5 +36,16 @@ public class TheTerribleTwos extends AbstractQuest {
         if (card.costForTurn == 2) {
             increment();
         }
+    }
+
+    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Twos.png"));
+    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/Twos_completed.png"));
+
+    @Override
+    public Texture progressTex(int idx) {
+        if (progress >= idx) {
+            return complete;
+        }
+        return incomplete;
     }
 }

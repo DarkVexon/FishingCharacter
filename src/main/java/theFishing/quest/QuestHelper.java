@@ -19,8 +19,8 @@ public class QuestHelper {
     public static final float POSITION_Y = 300F * Settings.scale;
 
     static {
-        for (int i = 0; i < 15; i++) {
-            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (25F * Settings.scale))), 200F * Settings.scale, 25F * Settings.scale));
+        for (int i = 0; i < 6; i++) {
+            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (50F * Settings.scale))), 200F * Settings.scale, 25F * Settings.scale));
         }
     }
 
@@ -34,20 +34,22 @@ public class QuestHelper {
                 Settings.GOLD_COLOR
         );
         int xr = 0;
+
         for (AbstractQuest q : quests) {
-            for (int i = 0; i < q.goal; i++) {
-                ImageHelper.drawTextureScaled(sb, q.progressTex(i), boxes.get(xr).x + ((i * 32) * Settings.scale), boxes.get(xr).y);
-            }
             FontHelper.renderFontLeft(
                     sb,
                     FontHelper.tipHeaderFont,
                     q.getName(),
-                    boxes.get(xr).x + (100 * Settings.scale),
-                    boxes.get(xr).y + (12.5F * Settings.scale),
+                    boxes.get(xr).x,
+                    boxes.get(xr).y + 12.5F,
                     Color.WHITE.cpy()
             );
+            for (int i = 0; i < q.goal; i++) {
+                ImageHelper.drawTextureScaled(sb, q.progressTex(i), boxes.get(xr).x + (((i * 40) + q.textpadding()) * Settings.scale), boxes.get(xr).y - 3);
+            }
             xr++;
         }
+
         for (Hitbox h : boxes) {
             h.render(sb);
         }
@@ -70,13 +72,6 @@ public class QuestHelper {
 
     public static void reset() {
         quests = new ArrayList<>();
-    }
-
-
-    public static void onExhaust(AbstractCard c) {
-        for (AbstractQuest q : quests) {
-            q.onExhaust(c);
-        }
     }
 
     public static void onSpendEnergy(int amount) {
