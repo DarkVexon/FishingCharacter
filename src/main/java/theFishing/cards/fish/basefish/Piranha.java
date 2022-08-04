@@ -18,7 +18,7 @@ public class Piranha extends AbstractFishCard {
 
     public Piranha() {
         super(ID, 0, AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 4;
         exhaust = true;
     }
 
@@ -29,6 +29,6 @@ public class Piranha extends AbstractFishCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(2);
     }
 }
