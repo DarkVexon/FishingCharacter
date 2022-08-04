@@ -1,4 +1,4 @@
-package theFishing.patch;
+package theFishing.patch.questhooks;
 
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -17,9 +17,7 @@ public class OnKillEnemy {
             locator = Locator.class
     )
     public static void triggerOnDeath(AbstractMonster __instance, boolean triggerRelics) {
-        if (triggerRelics) {
-            QuestHelper.onKillEnemy();
-        }
+        QuestHelper.onKillEnemy();
     }
 
     private static class Locator extends SpireInsertLocator {

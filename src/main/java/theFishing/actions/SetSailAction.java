@@ -72,7 +72,13 @@ public class SetSailAction extends AbstractGameAction {
             groups.get(group).removeCard(card);
             p.drawPile.removeCard(card);
             p.drawPile.addToTop(card);
-            card.freeToPlayOnce = true;
+            addToTop(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    card.freeToPlayOnce = true;
+                }
+            });
             addToTop(new DrawCardAction(1));
         }
 
