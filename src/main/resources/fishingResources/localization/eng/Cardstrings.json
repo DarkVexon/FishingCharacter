@@ -417,7 +417,7 @@
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "The first time you play a ${ModID}:Foil card each turn, gain !M! Block."
+    "DESCRIPTION": "The second time you play a ${ModID}:Foil card each turn, gain !M! Block."
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",

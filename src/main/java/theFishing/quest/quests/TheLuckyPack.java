@@ -62,4 +62,9 @@ public class TheLuckyPack extends AbstractQuest {
         }
         return incomplete;
     }
+
+    @Override
+    public float textpadding() {
+        return 175F;
+    }
 }

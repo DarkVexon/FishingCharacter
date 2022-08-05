@@ -26,25 +26,27 @@ public class MintCondition extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new LambdaPower("Mint Condition", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
-            private boolean activated = false;
+            private int playedThisTurn = 0;
 
             @Override
             public void atStartOfTurn() {
-                activated = false;
+                playedThisTurn = 0;
             }
 
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
-                if (FoilPatches.isFoil(card) && !activated) {
-                    flash();
-                    activated = true;
-                    atb(new GainBlockAction(owner, amount));
+                if (FoilPatches.isFoil(card)) {
+                    playedThisTurn += 1;
+                    if (playedThisTurn == 2) {
+                        flash();
+                        atb(new GainBlockAction(owner, amount));
+                    }
                 }
             }
 
             @Override
             public void updateDescription() {
-                description = "The first time you play a #yFoil card each turn, gain #b" + amount + " #yBlock.";
+                description = "The second time you play a #yFoil card each turn, gain #b" + amount + " #yBlock.";
             }
         });
     }
