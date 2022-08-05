@@ -349,8 +349,8 @@
     "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL ${ModID}:Quest: Play 3 2-cost cards. NL *Reward: Gain 22 Block."
   },
   "${ModID}:SoleSight": {
-    "NAME": "Sole Sight",
-    "DESCRIPTION": "Scry !M!. NL ${ModID}:Solo: Gain !${ModID}:m2! Strength."
+    "NAME": "Sole Searching",
+    "DESCRIPTION": "Scry !M!. NL ${ModID}:Solo: Gain !M! Strength."
   },
   "${ModID}:Supernova": {
     "NAME": "Supernova",

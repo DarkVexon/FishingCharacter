@@ -17,13 +17,12 @@ public class SoleSight extends AbstractFishingCard {
     public SoleSight() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ScryAction(magicNumber));
         if (p.hand.size() == 1) {
-            applyToSelf(new StrengthPower(p, secondMagic));
+            applyToSelf(new StrengthPower(p, magicNumber));
         }
     }
 
@@ -33,6 +32,5 @@ public class SoleSight extends AbstractFishingCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(2);
     }
 }
