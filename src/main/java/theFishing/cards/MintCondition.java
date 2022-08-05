@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,6 +13,7 @@ import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class MintCondition extends AbstractFishingCard {
     public final static String ID = makeID("MintCondition");
@@ -19,23 +21,30 @@ public class MintCondition extends AbstractFishingCard {
 
     public MintCondition() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new LambdaPower("Mint Condition", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+            private boolean activated = false;
+
+            @Override
+            public void atStartOfTurn() {
+                activated = false;
+            }
+
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
-                if (FoilPatches.isFoil(card)) {
+                if (FoilPatches.isFoil(card) && !activated) {
                     flash();
-                    applyToSelf(new StrengthPower(owner, amount));
-                    applyToSelf(new LoseStrengthPower(owner, amount));
+                    activated = true;
+                    atb(new GainBlockAction(owner, amount));
                 }
             }
 
             @Override
             public void updateDescription() {
-                description = "Whenever you play a #yFoil card, gain #b" + amount + " #yTemporary Strength.";
+                description = "The first time you play a #yFoil card each turn, gain #b" + amount + " #yBlock.";
             }
         });
     }

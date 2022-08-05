@@ -20,7 +20,6 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.cards.AbstractFishingCard;
-import theFishing.cards.VictoryLap;
 import theFishing.cards.cardvars.FishInCombatVar;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
