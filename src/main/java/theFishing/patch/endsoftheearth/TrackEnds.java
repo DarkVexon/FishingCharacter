@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class TrackEnds {
     private static final float RENDER_X = 1800 * Settings.scale;
     private static final float RENDER_Y = 400 * Settings.scale;
-    public static final float CARD_SPACING = 200 * Settings.scale;
+    public static final float CARD_SPACING = 266 * Settings.scale;
 
     public static ArrayList<AbstractCard> validEnds = new ArrayList<>();
 
@@ -163,6 +163,6 @@ public class TrackEnds {
         c.targetDrawScale = 0.5f;
         c.targetAngle = 0;
         c.target_x = RENDER_X;
-        c.target_y = RENDER_Y - (CARD_SPACING * validEnds.indexOf(c));
+        c.target_y = RENDER_Y + (CARD_SPACING * validEnds.indexOf(c));
     }
 }

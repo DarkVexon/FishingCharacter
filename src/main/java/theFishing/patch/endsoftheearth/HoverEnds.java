@@ -44,8 +44,8 @@ public class HoverEnds {
         if (TrackEnds.validEnds.contains(__instance.hoveredCard)) {
             __instance.hoveredCard.current_x = HOVERED_X_POSITION;
             __instance.hoveredCard.target_x = HOVERED_X_POSITION;
-            __instance.hoveredCard.current_y = HOVERED_Y_POSITION - (TrackEnds.CARD_SPACING * TrackEnds.validEnds.indexOf(__instance.hoveredCard));
-            __instance.hoveredCard.target_y = HOVERED_Y_POSITION - (TrackEnds.CARD_SPACING * TrackEnds.validEnds.indexOf(__instance.hoveredCard));
+            __instance.hoveredCard.current_y = HOVERED_Y_POSITION + (TrackEnds.CARD_SPACING * TrackEnds.validEnds.indexOf(__instance.hoveredCard));
+            __instance.hoveredCard.target_y = HOVERED_Y_POSITION + (TrackEnds.CARD_SPACING * TrackEnds.validEnds.indexOf(__instance.hoveredCard));
         }
     }
 

@@ -30,10 +30,15 @@ public class PickMe extends AbstractFishingCard implements SpawnModificationCard
 
     @Override
     public void onRewardListCreated(ArrayList<AbstractCard> rewardCards) {
+        boolean triggered = false;
         for (AbstractCard q : rewardCards) {
-            if (q != this) {
+            if (q != this && !q.upgraded) {
                 q.upgrade();
+                triggered = true;
             }
+        }
+        if (triggered) {
+            superFlash();
         }
     }
 
