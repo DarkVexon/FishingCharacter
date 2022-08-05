@@ -190,7 +190,7 @@
   },
   "${ModID}:FlamingFlip": {
     "NAME": "Flaming Flip",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw 2 cards."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card at random. NL Draw 2 cards."
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
@@ -389,11 +389,11 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "${ModID}:Quest: Play a Common, Uncommon, Rare, and Special card. NL *Reward: Shuffle a *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "${ModID}:Quest: Play a Common, Uncommon, Rare, and Special card. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
-    "DESCRIPTION": "${ModID}:Quest: End your turn with an empty hand. NL *Reward: Shuffle a *The *Eternity *Gem into your draw pile."
+    "DESCRIPTION": "${ModID}:Quest: End your turn with an empty hand. NL *Reward: Shuffle *The *Eternity *Gem into your draw pile."
   },
   "${ModID}:TheEternityGem": {
     "NAME": "The Eternity Gem",

@@ -19,7 +19,7 @@ public class FlamingFlip extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new ExhaustAction(1, false));
+        atb(new ExhaustAction(1, true, false, false));
         atb(new DrawCardAction(2));
     }
 
