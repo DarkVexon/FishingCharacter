@@ -17,8 +17,7 @@ public class Supernova extends AbstractFishingCard {
 
     public Supernova() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 12;
-        exhaust = true;
+        baseDamage = 11;
         isMultiDamage = true;
     }
 

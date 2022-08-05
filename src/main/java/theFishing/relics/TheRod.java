@@ -14,9 +14,11 @@ public class TheRod extends AbstractEasyRelic {
         super(ID, RelicTier.STARTER, LandingSound.FLAT, TheFishing.Enums.FISHING_COLOR);
     }
 
+    private static final int CARDS_UPGRADED = 3;
+
     @Override
     public void atBattleStart() {
-        counter = 2;
+        counter = CARDS_UPGRADED;
         grayscale = false;
     }
 
@@ -45,5 +47,10 @@ public class TheRod extends AbstractEasyRelic {
     public void onVictory() {
         grayscale = false;
         counter = -1;
+    }
+
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0] + CARDS_UPGRADED + DESCRIPTIONS[1];
     }
 }

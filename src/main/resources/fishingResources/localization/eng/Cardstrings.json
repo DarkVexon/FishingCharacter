@@ -148,7 +148,7 @@
   },
   "${ModID}:PowerPellet": {
     "NAME": "Power Pellet",
-    "DESCRIPTION": "*Waka *Wakas deal !M! more damage. NL Exhaust."
+    "DESCRIPTION": "Increase the damage of *Waka *Wakas by !M!. NL Exhaust."
   },
   "${ModID}:Cannoneer": {
     "NAME": "Cannoneer",
@@ -156,8 +156,8 @@
   },
   "${ModID}:DiscoverACrate": {
     "NAME": "Discover a Crate",
-    "DESCRIPTION": "Add *Smite and *Safety into your hand. ${ModID}:Voyaged: Upgrade them. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add *Smite and *Safety into your hand. ${ModID}:Voyaged: Upgrade them."
+    "DESCRIPTION": "Add a *Smite and a *Safety into your hand. ${ModID}:Voyaged: Upgrade them. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Smite and a *Safety into your hand. ${ModID}:Voyaged: Upgrade them."
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
@@ -206,13 +206,13 @@
   },
   "${ModID}:Lie": {
     "NAME": "Lie",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add *Cheat into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add *Cheat+ into your hand. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Cheat into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Cheat+ into your hand. NL Exhaust."
   },
   "${ModID}:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add *Steal into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add *Steal+ into your hand. NL Exhaust."
+    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal+ into your hand. NL Exhaust."
   },
   "${ModID}:Steal": {
     "NAME": "Steal",
@@ -354,7 +354,7 @@
   },
   "${ModID}:Supernova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies for each ${ModID}:Foil card played this turn. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies for each ${ModID}:Foil card played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " ${ModID}:Foil card played.)",
@@ -363,8 +363,8 @@
   },
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
-    "DESCRIPTION": "Whenever you draw a Curse card, draw !M! card and ALL enemies lose !${ModID}:m2! HP.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw a Curse card, draw !M! cards and ALL enemies lose !${ModID}:m2! HP."
+    "DESCRIPTION": "At the start of your turn, Exhaust the lowest rarity card in your hand and draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust the lowest rarity card in your hand and draw 1 card."
   },
   "${ModID}:TheFinalCard": {
     "NAME": "The Final Card",
@@ -377,7 +377,7 @@
   },
   "${ModID}:EndsOfTheEarth": {
     "NAME": "Ends Of The Earth",
-    "DESCRIPTION": "Can be played from your discard pile. NL Deal !D! damage. NL Gain !B! Block."
+    "DESCRIPTION": "Can be played from your discard pile. NL Gain !B! Block. NL Deal !D! damage."
   },
   "${ModID}:DoubleUp": {
     "NAME": "Double Up",
@@ -389,11 +389,11 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "${ModID}:Quest: Play a Common, Uncommon, Rare, and Special card. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "${ModID}:Quest: Play a Common, Uncommon, Rare, and Special card. NL *Reward: Shuffle a *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
-    "DESCRIPTION": "${ModID}:Quest: End your turn with an empty hand. NL *Reward: Shuffle *The *Eternity *Gem into your draw pile."
+    "DESCRIPTION": "${ModID}:Quest: End your turn with an empty hand. NL *Reward: Shuffle a *The *Eternity *Gem into your draw pile."
   },
   "${ModID}:TheEternityGem": {
     "NAME": "The Eternity Gem",
@@ -423,5 +423,9 @@
     "NAME": "The Backpack",
     "DESCRIPTION": "Innate. NL Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. NL Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand."
+  },
+  "${ModID}:PyramidClimber": {
+    "NAME": "Pyramid Climb",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block for every 6 cards in your discard pile."
   }
 }

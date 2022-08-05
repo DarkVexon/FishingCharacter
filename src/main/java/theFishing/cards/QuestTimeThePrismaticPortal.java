@@ -23,7 +23,6 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeBaseCost(0);
     }
 }

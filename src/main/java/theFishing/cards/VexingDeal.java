@@ -1,9 +1,17 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
-import theFishing.powers.VexingDealPower;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import theFishing.actions.SetSailAction;
+import theFishing.powers.LambdaPower;
+
+import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -14,16 +22,42 @@ public class VexingDeal extends AbstractFishingCard {
 
     public VexingDeal() {
         super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 17;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new VexingDealPower(magicNumber, secondMagic));
+        applyToSelf(new LambdaPower("Vexing Deal", AbstractPower.PowerType.BUFF, false, p, 1) {
+
+            @Override
+            public void atStartOfTurnPostDraw() {
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        ArrayList<AbstractCard> valid = new ArrayList<>();
+                        valid.addAll(AbstractDungeon.player.hand.group);
+                        ArrayList<AbstractCard> toExhaust = new ArrayList<>();
+                        for (int i = 0; i < amount; i++) {
+                            AbstractCard toHit = SetSailAction.getRarestCardInList(valid, null, true);
+                            valid.remove(toHit);
+                            toExhaust.add(toHit);
+                        }
+                        for (AbstractCard q : toExhaust) {
+                            att(new DrawCardAction(1));
+                            att(new ExhaustSpecificCardAction(q, AbstractDungeon.player.hand));
+                        }
+                        isDone = true;
+                    }
+                });
+            }
+
+            @Override
+            public void updateDescription() {
+                description = "At the start of your turn, #yExhaust the #b" + amount + " lowest rarity " + (amount == 1 ? "card" : "cards") + " in your hand and draw #b" + amount + " cards.";
+            }
+        });
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        isInnate = true;
+        uDesc();
     }
 }

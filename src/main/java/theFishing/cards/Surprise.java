@@ -22,7 +22,7 @@ public class Surprise extends AbstractFishingCard {
     public Surprise() {
         super(ID, -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         isEthereal = true;
-        baseMagicNumber = magicNumber = 16;
+        baseMagicNumber = magicNumber = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

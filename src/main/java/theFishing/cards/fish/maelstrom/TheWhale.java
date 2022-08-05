@@ -17,7 +17,7 @@ public class TheWhale extends AbstractFishCard {
 
     public TheWhale() {
         super(ID, 0, CardType.SKILL, CardTarget.SELF_AND_ENEMY);
-        baseMagicNumber = magicNumber = 30;
+        baseMagicNumber = magicNumber = 24;
         exhaust = true;
 
     }
@@ -29,6 +29,6 @@ public class TheWhale extends AbstractFishCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(7);
+        upgradeMagicNumber(6);
     }
 }

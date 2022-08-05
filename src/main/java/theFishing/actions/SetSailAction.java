@@ -21,17 +21,12 @@ public class SetSailAction extends AbstractGameAction {
         this.actionType = ActionType.CARD_MANIPULATION;
     }
 
-    public void update() {
-        isDone = true;
-        if (this.p.drawPile.isEmpty()) {
-            return;
-        }
-
+    public static AbstractCard getRarestCardInList(ArrayList<AbstractCard> cards, CardType type, boolean reverse) {
         Array<CardGroup> groups = new Array();
         for (int i = 0; i < 14; i++)
             groups.add(new CardGroup(CardGroupType.UNSPECIFIED));
-        for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
-            if (q.type == CardType.ATTACK) {
+        for (AbstractCard q : cards) {
+            if (type == null || q.type == type) {
                 if (q.rarity == AbstractCard.CardRarity.RARE && FoilPatches.isFoil(q)) {
                     groups.get(0).addToTop(q);
                 } else if (q.rarity == AbstractCard.CardRarity.RARE) {
@@ -63,29 +58,38 @@ public class SetSailAction extends AbstractGameAction {
                 }
             }
         }
+        int group = reverse ? 13 : 0;
 
-        for (int i = 0; i < amount; i++) {
-            int group = 0;
-
-            while (group < 14 && groups.get(group).isEmpty())
+        while (group < 14 && groups.get(group).isEmpty())
+            if (reverse) group--;
+            else
                 group++;
-            if (group < 14) {
-                groups.get(group).shuffle();
-                AbstractCard card = groups.get(group).getBottomCard();
-                groups.get(group).removeCard(card);
-                p.drawPile.removeCard(card);
-                p.drawPile.addToTop(card);
-                addToTop(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        isDone = true;
-                        card.freeToPlayOnce = true;
-                        card.superFlash();
-                    }
-                });
-                addToTop(new DrawCardAction(1));
-            }
+        if (group < 14) {
+            groups.get(group).shuffle();
+            AbstractCard card = groups.get(group).getBottomCard();
+            return card;
         }
+        return null;
+    }
+
+    public void update() {
+        isDone = true;
+        if (this.p.drawPile.isEmpty()) {
+            return;
+        }
+
+        AbstractCard card = getRarestCardInList(AbstractDungeon.player.drawPile.group, CardType.ATTACK, false);
+        p.drawPile.removeCard(card);
+        p.drawPile.addToTop(card);
+        addToTop(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                card.freeToPlayOnce = true;
+                card.superFlash();
+            }
+        });
+        addToTop(new DrawCardAction(1));
 
         this.isDone = true;
     }
