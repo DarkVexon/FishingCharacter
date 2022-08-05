@@ -20,7 +20,7 @@ public class PerfectPull extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new PerfectPullAction(p, multiDamage, AbstractGameAction.AttackEffect.FIRE, false));
+        atb(new PerfectPullAction(p, multiDamage, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
     }
 
     public void upp() {

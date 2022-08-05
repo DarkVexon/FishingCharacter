@@ -26,7 +26,7 @@ public class TheStorm extends AbstractQuest {
 
     @Override
     public String getDescription() {
-        return "#yQuest: Spend #b" + goal + " Energy in a single turn. #yReward: A random enemy loses #b17 HP.";
+        return "#yQuest: Spend #b" + goal + " Energy in a single turn. NL #yReward: A random enemy loses #b17 HP.";
     }
 
     @Override
@@ -62,5 +62,10 @@ public class TheStorm extends AbstractQuest {
     @Override
     public void atEndOfTurn() {
         progress = 0;
+    }
+
+    @Override
+    public float textpadding() {
+        return 120F;
     }
 }
