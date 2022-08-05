@@ -16,10 +16,9 @@ import java.util.ArrayList;
 public class SetSailAction extends AbstractGameAction {
     private AbstractPlayer p;
 
-    public SetSailAction(int amount) {
+    public SetSailAction() {
         this.p = AbstractDungeon.player;
         this.actionType = ActionType.CARD_MANIPULATION;
-        this.amount = amount;
     }
 
     public void update() {
@@ -65,7 +64,6 @@ public class SetSailAction extends AbstractGameAction {
             }
         }
 
-        ArrayList<AbstractCard> toReduce = new ArrayList<>();
         for (int i = 0; i < amount; i++) {
             int group = 0;
 
@@ -77,21 +75,17 @@ public class SetSailAction extends AbstractGameAction {
                 groups.get(group).removeCard(card);
                 p.drawPile.removeCard(card);
                 p.drawPile.addToTop(card);
-                toReduce.add(card);
+                addToTop(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        card.freeToPlayOnce = true;
+                        card.superFlash();
+                    }
+                });
+                addToTop(new DrawCardAction(1));
             }
         }
-
-        addToTop(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                for (AbstractCard q : toReduce) {
-                    q.freeToPlayOnce = true;
-                    q.superFlash();
-                }
-            }
-        });
-        addToTop(new DrawCardAction(amount));
 
         this.isDone = true;
     }

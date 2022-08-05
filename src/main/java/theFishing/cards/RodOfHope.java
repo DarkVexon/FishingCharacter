@@ -5,9 +5,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.SetSailAction;
+import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.*;
 
 public class RodOfHope extends AbstractFishingCard {
     public final static String ID = makeID("RodOfHope");
@@ -15,15 +16,20 @@ public class RodOfHope extends AbstractFishingCard {
 
     public RodOfHope() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-
-        baseDamage = 2;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 4;
+        baseMagicNumber = magicNumber = 4;
+        AbstractCard q = new StarShard();
+        FoilPatches.makeFoil(q);
+        cardsToPreview = q;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         if (isVoyaged()) {
-            atb(new SetSailAction(magicNumber));
+            AbstractCard q = new StarShard();
+            FoilPatches.makeFoil(q);
+            topDeck(q, magicNumber);
+            exhaust = true;
         }
     }
 

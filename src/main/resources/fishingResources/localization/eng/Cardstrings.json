@@ -286,7 +286,7 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Draw the !M! rarest cards in your draw pile. NL They cost 0 until played."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Put !M! ${ModID}:Foil *Star *Shards on top of your draw pile and Exhaust this."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
