@@ -45,7 +45,6 @@ public class FishingMod implements
         OnStartBattleSubscriber,
         CustomSavable<ArrayList<Boolean>>,
         PostPlayerUpdateSubscriber,
-        StartGameSubscriber,
         AddAudioSubscriber,
         PostInitializeSubscriber {
 
@@ -206,11 +205,6 @@ public class FishingMod implements
 
     public static boolean isThisVoyaged(AbstractCard card) {
         return (voyagedCards.contains(card));
-    }
-
-    @Override
-    public void receiveStartGame() {
-        VictoryLap.wonPrevRun = -99;
     }
 
     @Override
