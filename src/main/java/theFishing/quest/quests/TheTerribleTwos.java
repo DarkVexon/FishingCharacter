@@ -51,6 +51,6 @@ public class TheTerribleTwos extends AbstractQuest {
 
     @Override
     public float textpadding() {
-        return 180F;
+        return 200F;
     }
 }
