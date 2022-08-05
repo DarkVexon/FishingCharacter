@@ -31,7 +31,7 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        AbstractCard q = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size()-1);
+        AbstractCard q = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1);
         att(new RepeatCardAction(q));
     }
 
@@ -39,17 +39,24 @@ public class TheLuckyPack extends AbstractQuest {
     public void onPlayCard(AbstractCard card) {
         if (FoilPatches.isFoil(card)) {
             increment();
-        }
-        else {
+        } else {
             progress = 0;
         }
     }
 
     private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/LuckyPack.png"));
     private static Texture complete = TexLoader.getTexture(makeImagePath("quests/LuckyPack_completed.png"));
+    private static Texture incomplete_last = TexLoader.getTexture(makeImagePath("quests/LuckyPack_Last.png"));
+    private static Texture complete_last = TexLoader.getTexture(makeImagePath("quests/LuckyPack_Last_completed.png"));
 
     @Override
     public Texture progressTex(int idx) {
+        if (idx == 2) {
+            if (progress > idx) {
+                return complete_last;
+            }
+            return incomplete_last;
+        }
         if (progress > idx) {
             return complete;
         }
