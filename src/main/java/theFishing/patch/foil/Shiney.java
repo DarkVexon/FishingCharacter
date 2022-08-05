@@ -1,4 +1,4 @@
-package theFishing.util;
+package theFishing.patch.foil;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -11,7 +11,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
-import theFishing.patch.foil.FoilPatches;
 
 import java.nio.charset.StandardCharsets;
 
