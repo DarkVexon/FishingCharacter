@@ -20,13 +20,13 @@ public class AquaOrb extends AbstractFishingCard {
 
     public AquaOrb() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 12;
+        baseBlock = 10;
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
         forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, 1, false)));
+        blck();
         if (p.hand.size() == 1) {
             atb(new AbstractGameAction() {
                 @Override

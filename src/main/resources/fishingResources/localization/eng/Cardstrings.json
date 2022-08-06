@@ -320,7 +320,7 @@
   },
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL ${ModID}:Solo: Play the top card of your draw pile."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL ${ModID}:Solo: Play the top card of your draw pile."
   },
   "${ModID}:FreeDrinks": {
     "NAME": "Free Drinks",
@@ -363,8 +363,8 @@
   },
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
-    "DESCRIPTION": "At the start of your turn, Exhaust the rarest card in your hand and draw 2 cards.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust the rarest card in your hand and draw 2 cards."
+    "DESCRIPTION": "At the start of your turn, Exhaust 1 card at random and draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust 1 card at random and draw 2 cards."
   },
   "${ModID}:TheFinalCard": {
     "NAME": "The Final Card",
