@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
 import theFishing.powers.LambdaPower;
-import theFishing.powers.PotencyPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
@@ -22,14 +21,41 @@ public class Crosshairs extends AbstractFishingCard {
 
     public Crosshairs() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PotencyPower(magicNumber));
+        applyToSelf(new LambdaPower("Crosshairs", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+            public void onAfterCardPlayed(AbstractCard card) {
+                if (card.cost == -1) {
+                    flash();
+                    int x = amount;
+                    addToBot(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            AbstractMonster q = null;
+                            for (AbstractMonster m2 : getEnemies()) {
+                                q = m2;
+                                break;
+                            }
+                            if (q != null) {
+                                this.addToTop(new DamageAction(q, new DamageInfo(owner, x, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
+                                addToTop(new VFXAction(new ClashEffect(q.hb.cX, q.hb.cY), 0.1f));
+                            }
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void updateDescription() {
+                description = "Whenever you play a cost X card, deal #b" + amount + " damage to a random enemy.";
+            }
+        });
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(4);
     }
 }

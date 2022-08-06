@@ -47,7 +47,7 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Deal !D! damage. NL Put !M! ${ModID}:Fish on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
@@ -154,11 +154,6 @@
     "NAME": "Cannoneer",
     "DESCRIPTION": "Deal !D! damage to a random enemy X times."
   },
-  "${ModID}:DiscoverACrate": {
-    "NAME": "Discover a Crate",
-    "DESCRIPTION": "Add a *Smite and a *Safety into your hand. ${ModID}:Voyaged: Upgrade them. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Smite and a *Safety into your hand. ${ModID}:Voyaged: Upgrade them."
-  },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
     "DESCRIPTION": "Ethereal. NL Gain !M! *Gold. NL Put 1 ${ModID}:Fish on top of your draw pile. NL Exhaust."
@@ -264,7 +259,7 @@
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
-    "DESCRIPTION": "Gain !M! ${ModID}:Potency."
+    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to a random enemy."
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
@@ -333,7 +328,7 @@
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",
-    "DESCRIPTION": "Gain !M! Strength and !${ModID}:m2! Thorns. NL Draw 1 fewer card each turn."
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !${ModID}:m2! Thorns. NL Draw 1 fewer card each turn."
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Storm",
@@ -427,5 +422,9 @@
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
     "DESCRIPTION": "At the end of your turn, gain !M! Block for every 6 cards in your discard pile."
+  },
+  "${ModID}:Collector": {
+    "NAME": "Collector",
+    "DESCRIPTION": "If the first card you play each turn is... NL Rare: Gain 4 Vigor. NL ${ModID}:Foil: Gain 1 Strength."
   }
 }

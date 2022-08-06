@@ -29,7 +29,7 @@ public class VexingDeal extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "At the start of your turn, #yExhaust #b" + amount + (amount == 1 ? "card" : "cards") + " and draw #b" + amount + (amount == 1 ? "card" : "cards") + ".";
+                description = "At the start of your turn, #yExhaust #b" + amount + (amount == 1 ? "card" : "cards") + " and draw #b" + amount + " " + (amount == 1 ? "card" : "cards") + ".";
             }
         });
     }

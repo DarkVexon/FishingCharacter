@@ -17,7 +17,7 @@ public class FastingB extends AbstractFishingCard {
     public FastingB() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
-        baseSecondMagic = secondMagic = 4;
+        baseSecondMagic = secondMagic = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,6 +28,6 @@ public class FastingB extends AbstractFishingCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(2);
+        upgradeSecondMagic(1);
     }
 }
