@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import theFishing.powers.PotencyPower;
 
 import java.util.function.BiFunction;
 
@@ -41,11 +40,6 @@ public class EasyXCostAction extends AbstractGameAction {
             if (AbstractDungeon.player.hasRelic(ChemicalX.ID)) {
                 effect += 2;
                 AbstractDungeon.player.getRelic(ChemicalX.ID).flash();
-            }
-
-            if (AbstractDungeon.player.hasPower(PotencyPower.ID)) {
-                effect += AbstractDungeon.player.getPower(PotencyPower.ID).amount;
-                AbstractDungeon.player.getPower(PotencyPower.ID).flashWithoutSound();
             }
 
             isDone = xActionUpdate.apply(effect, params) || duration < 0.0f;

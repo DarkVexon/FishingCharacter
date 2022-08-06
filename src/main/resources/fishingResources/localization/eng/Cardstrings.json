@@ -324,7 +324,7 @@
   "${ModID}:CrystallineConfluence": {
     "NAME": "Crystal Confluence",
     "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle X+1 ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards+ into your draw pile. NL Exhaust."
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",
