@@ -38,6 +38,8 @@ public class Supernova extends AbstractFishingCard {
                 }
                 for (int i = 0; i < x; i++) {
                     atb(new VFXAction(new ShockWaveEffect(p.hb.cX, p.hb.cY, new Color(MathUtils.random(1.0f), MathUtils.random(1.0f), MathUtils.random(1.0f), 1.0f), ShockWaveEffect.ShockWaveType.NORMAL)));
+                }
+                for (int i = 0; i < x; i++) {
                     allDmg(AttackEffect.FIRE);
                 }
             }

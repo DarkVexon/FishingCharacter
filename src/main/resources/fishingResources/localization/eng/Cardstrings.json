@@ -259,7 +259,7 @@
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
-    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to the frontmost enemy."
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",

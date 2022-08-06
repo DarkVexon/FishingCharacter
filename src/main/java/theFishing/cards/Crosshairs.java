@@ -50,7 +50,7 @@ public class Crosshairs extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "Whenever you play a cost X card, deal #b" + amount + " damage to a random enemy.";
+                description = "Whenever you play a cost X card, deal #b" + amount + " damage to the frontmost enemy.";
             }
         });
     }
