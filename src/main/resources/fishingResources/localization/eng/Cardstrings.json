@@ -51,7 +51,7 @@
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Draw 1 Attack. NL It costs 0 until played. NL Apply !M! Vulnerable to a random enemy."
+    "DESCRIPTION": "Draw a non-Fish Attack. NL It costs 0 until played. NL Apply !M! Vulnerable to a random enemy."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -94,8 +94,8 @@
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
-    "DESCRIPTION": "Deal damage equal to the total cost of cards in your hand. NL Cost X cards count as 4.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to the total cost of cards in your hand + 3. NL Cost X cards count as 4.",
+    "DESCRIPTION": "Deal damage equal to the total cost of cards in your hand. NL Cost X counts as 4.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to the total cost of cards in your hand + 3. NL Cost X counts as 4.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]

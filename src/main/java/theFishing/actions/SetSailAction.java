@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theFishing.cards.fish.AbstractFishCard;
 import theFishing.util.Wiz;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class SetSailAction extends AbstractGameAction {
         }
         ArrayList<AbstractCard> open = new ArrayList<>();
         for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
-            if (q.type.equals(typeToCheck)) {
+            if (q.type.equals(typeToCheck) && !(q instanceof AbstractFishCard)) {
                 open.add(q);
             }
         }
