@@ -1,10 +1,14 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import theFishing.patch.foil.FoilPatches;
 
 
@@ -33,6 +37,7 @@ public class Supernova extends AbstractFishingCard {
                     }
                 }
                 for (int i = 0; i < x; i++) {
+                    atb(new VFXAction(new ShockWaveEffect(p.hb.cX, p.hb.cY, new Color(MathUtils.random(1.0f), MathUtils.random(1.0f), MathUtils.random(1.0f), 1.0f), ShockWaveEffect.ShockWaveType.NORMAL)));
                     allDmg(AttackEffect.FIRE);
                 }
             }

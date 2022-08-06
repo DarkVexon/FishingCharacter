@@ -1,12 +1,14 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.adp;
+import static theFishing.util.Wiz.atb;
 
 public class ThatsAllFolks extends AbstractFishingCard {
     public final static String ID = makeID("ThatsAllFolks");
@@ -21,6 +23,7 @@ public class ThatsAllFolks extends AbstractFishingCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (p.hand.size() == 1) {
             dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+            atb(new DrawCardAction(1));
         }
     }
 

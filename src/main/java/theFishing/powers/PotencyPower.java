@@ -9,7 +9,7 @@ import theFishing.actions.AllEnemyLoseHPAction;
 import static theFishing.FishingMod.makeID;
 
 public class PotencyPower extends AbstractEasyPower {
-    public static String ID = makeID(PotencyPower.class.getSimpleName());
+    public static String ID = makeID("Potency");
 
     public PotencyPower(int amount) {
         super("Potency", AbstractPower.PowerType.BUFF, true, AbstractDungeon.player, amount);

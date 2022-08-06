@@ -3,9 +3,14 @@ package theFishing.cards;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import static theFishing.FishingMod.makeID;
 
@@ -29,7 +34,9 @@ public class FullHouse extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsAction(p.drawPile.group, "Choose a card to duplicate.", (cards) -> {
+        ArrayList<AbstractCard> sortedList = new ArrayList<>(p.drawPile.group);
+        Collections.sort(sortedList, Comparator.comparing(c -> c.rarity));
+        addToBot(new SelectCardsAction(sortedList, "Choose a card to duplicate.", (cards) -> {
             addToTop(new MakeTempCardInDrawPileAction(cards.get(0).makeStatEquivalentCopy(), magicNumber, true, true));
         }));
     }

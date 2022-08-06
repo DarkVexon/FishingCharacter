@@ -4,10 +4,11 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
+import theFishing.actions.FinalCardAction;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.adp;
+import static theFishing.util.Wiz.atb;
 
 public class TheFinalCard extends AbstractFishingCard {
     public final static String ID = makeID("TheFinalCard");
@@ -16,11 +17,12 @@ public class TheFinalCard extends AbstractFishingCard {
     public TheFinalCard() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 32;
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.hand.size() == 1) {
-            allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+            atb(new FinalCardAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH, this));
         }
     }
 

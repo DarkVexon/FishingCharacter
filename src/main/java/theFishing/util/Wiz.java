@@ -1,9 +1,11 @@
 package theFishing.util;
 
+import com.badlogic.gdx.utils.Array;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -17,6 +19,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import theFishing.patch.foil.FoilPatches;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
@@ -167,19 +170,54 @@ public class Wiz {
         att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 
-    public static void thornDmg(AbstractCreature m, int amount, AbstractGameAction.AttackEffect AtkFX) {
-        atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, amount, DamageInfo.DamageType.THORNS), AtkFX));
-    }
+    public static AbstractCard getRarestCardInList(ArrayList<AbstractCard> cards, AbstractCard.CardType type, boolean reverse) {
+        Array<CardGroup> groups = new Array();
+        for (int i = 0; i < 14; i++)
+            groups.add(new CardGroup(CardGroup.CardGroupType.UNSPECIFIED));
+        for (AbstractCard q : cards) {
+            if (type == null || q.type == type) {
+                if (q.rarity == AbstractCard.CardRarity.RARE && FoilPatches.isFoil(q)) {
+                    groups.get(0).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.RARE) {
+                    groups.get(1).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.UNCOMMON && FoilPatches.isFoil(q)) {
+                    groups.get(2).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.UNCOMMON) {
+                    groups.get(3).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.COMMON && FoilPatches.isFoil(q) && q.type != AbstractCard.CardType.STATUS) {
+                    groups.get(4).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.COMMON && q.type != AbstractCard.CardType.STATUS) {
+                    groups.get(5).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.BASIC && FoilPatches.isFoil(q)) {
+                    groups.get(6).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.BASIC) {
+                    groups.get(7).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.SPECIAL && FoilPatches.isFoil(q)) {
+                    groups.get(6).addToTop(q);
+                } else if (q.rarity == AbstractCard.CardRarity.SPECIAL) {
+                    groups.get(9).addToTop(q);
+                } else if (q.type == AbstractCard.CardType.STATUS && FoilPatches.isFoil(q)) {
+                    groups.get(10).addToTop(q);
+                } else if (q.type == AbstractCard.CardType.STATUS) {
+                    groups.get(11).addToTop(q);
+                } else if ((q.type == AbstractCard.CardType.CURSE || q.color == AbstractCard.CardColor.CURSE) && FoilPatches.isFoil(q)) {
+                    groups.get(12).addToTop(q);
+                } else {
+                    groups.get(13).addToTop(q);
+                }
+            }
+        }
+        int group = reverse ? 13 : 0;
 
-    public static void thornDmg(AbstractCreature m, int amount) {
-        thornDmg(m, amount, AbstractGameAction.AttackEffect.NONE);
-    }
-
-    public static void discard(int amount, boolean isRandom) {
-        atb(new DiscardAction(adp(), adp(), amount, isRandom));
-    }
-
-    public static void discard(int amount) {
-        discard(amount, false);
+        while (group < 14 && groups.get(group).isEmpty())
+            if (reverse) group--;
+            else
+                group++;
+        if (group < 14) {
+            groups.get(group).shuffle();
+            AbstractCard card = groups.get(group).getBottomCard();
+            return card;
+        }
+        return null;
     }
 }

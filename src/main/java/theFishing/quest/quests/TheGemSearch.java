@@ -50,4 +50,9 @@ public class TheGemSearch extends AbstractQuest {
             increment();
         }
     }
+
+    @Override
+    public float textpadding() {
+        return 180F;
+    }
 }

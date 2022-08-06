@@ -69,4 +69,9 @@ public class ThePrismaticPortal extends AbstractQuest {
         }
         return super.progressTex(idx);
     }
+
+    @Override
+    public float textpadding() {
+        return 233F;
+    }
 }
