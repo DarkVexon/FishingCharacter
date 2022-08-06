@@ -44,14 +44,14 @@ public class SetSailAction extends AbstractGameAction {
                 } else if (q.rarity == AbstractCard.CardRarity.BASIC) {
                     groups.get(7).addToTop(q);
                 } else if (q.rarity == AbstractCard.CardRarity.SPECIAL && FoilPatches.isFoil(q)) {
-                    groups.get(8).addToTop(q);
+                    groups.get(6).addToTop(q);
                 } else if (q.rarity == AbstractCard.CardRarity.SPECIAL) {
                     groups.get(9).addToTop(q);
-                } else if (q.rarity == AbstractCard.CardRarity.CURSE && FoilPatches.isFoil(q)) {
-                    groups.get(10).addToTop(q);
-                } else if (q.rarity == AbstractCard.CardRarity.CURSE) {
-                    groups.get(11).addToTop(q);
                 } else if (q.type == CardType.STATUS && FoilPatches.isFoil(q)) {
+                    groups.get(10).addToTop(q);
+                } else if (q.type == CardType.STATUS) {
+                    groups.get(11).addToTop(q);
+                } else if ((q.type == CardType.CURSE || q.color == AbstractCard.CardColor.CURSE) && FoilPatches.isFoil(q)) {
                     groups.get(12).addToTop(q);
                 } else {
                     groups.get(13).addToTop(q);

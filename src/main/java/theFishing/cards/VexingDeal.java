@@ -14,7 +14,8 @@ import theFishing.powers.LambdaPower;
 import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.att;
 
 public class VexingDeal extends AbstractFishingCard {
     public final static String ID = makeID("VexingDeal");
@@ -29,19 +30,20 @@ public class VexingDeal extends AbstractFishingCard {
 
             @Override
             public void atStartOfTurnPostDraw() {
+                int x = this.amount;
                 addToBot(new AbstractGameAction() {
                     @Override
                     public void update() {
                         ArrayList<AbstractCard> valid = new ArrayList<>();
                         valid.addAll(AbstractDungeon.player.hand.group);
                         ArrayList<AbstractCard> toExhaust = new ArrayList<>();
-                        for (int i = 0; i < amount; i++) {
-                            AbstractCard toHit = SetSailAction.getRarestCardInList(valid, null, true);
+                        for (int i = 0; i < x; i++) {
+                            AbstractCard toHit = SetSailAction.getRarestCardInList(valid, null, false);
                             valid.remove(toHit);
                             toExhaust.add(toHit);
                         }
                         for (AbstractCard q : toExhaust) {
-                            att(new DrawCardAction(1));
+                            att(new DrawCardAction(2));
                             att(new ExhaustSpecificCardAction(q, AbstractDungeon.player.hand));
                         }
                         isDone = true;
@@ -51,7 +53,7 @@ public class VexingDeal extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "At the start of your turn, #yExhaust the #b" + amount + " lowest rarity " + (amount == 1 ? "card" : "cards") + " in your hand and draw #b" + amount + " cards.";
+                description = "At the start of your turn, #yExhaust the #b" + amount + " rarest " + (amount == 1 ? "card" : "cards") + " in your hand and draw #b" + amount * 2 + " cards.";
             }
         });
     }

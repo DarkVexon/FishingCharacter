@@ -17,13 +17,13 @@ public class TheWhale extends AbstractFishCard {
 
     public TheWhale() {
         super(ID, 0, CardType.SKILL, CardTarget.SELF_AND_ENEMY);
-        baseMagicNumber = magicNumber = 24;
+        baseMagicNumber = magicNumber = 22;
         exhaust = true;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new TalkAction(true, "catch... and release...", 0.5F, 1.5F));
+        atb(new TalkAction(true, "catch... and release...", 0.25F, 1.5F));
         atb(new LoseHPAction(m, p, magicNumber));
         atb(new DrawCardAction(p, 1));
     }

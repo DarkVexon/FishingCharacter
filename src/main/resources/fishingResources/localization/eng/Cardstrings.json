@@ -363,8 +363,8 @@
   },
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
-    "DESCRIPTION": "At the start of your turn, Exhaust the lowest rarity card in your hand and draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust the lowest rarity card in your hand and draw 1 card."
+    "DESCRIPTION": "At the start of your turn, Exhaust the rarest card in your hand and draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust the rarest card in your hand and draw 2 cards."
   },
   "${ModID}:TheFinalCard": {
     "NAME": "The Final Card",

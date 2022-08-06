@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,7 +39,7 @@ public class PickMe extends AbstractFishingCard implements SpawnModificationCard
             }
         }
         if (triggered) {
-            superFlash();
+            superFlash(Color.GREEN);
         }
     }
 
