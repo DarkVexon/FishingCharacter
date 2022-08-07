@@ -35,13 +35,6 @@
     "DESCRIPTION": "A Zapped foe loses HP each time it is attacked."
   },
   {
-    "PROPER_NAME": "Potency",
-    "NAMES": [
-      "potency"
-    ],
-    "DESCRIPTION": "Potency increases the effectiveness of X on cards."
-  },
-  {
     "PROPER_NAME": "Foil",
     "NAMES": [
       "foil"

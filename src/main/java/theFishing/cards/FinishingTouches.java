@@ -18,7 +18,8 @@ public class FinishingTouches extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public FinishingTouches() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -55,6 +56,7 @@ public class FinishingTouches extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        isEthereal = false;
+        uDesc();
     }
 }

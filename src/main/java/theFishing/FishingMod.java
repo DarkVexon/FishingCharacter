@@ -197,11 +197,13 @@ public class FishingMod implements
 
     @Override
     public void onLoad(ArrayList<Boolean> whatsFoil) {
-        for (int i = 0; i < whatsFoil.size(); i++) {
-            if (whatsFoil.get(i)) {
-                FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
+        if (whatsFoil != null)
+            for (int i = 0; i < whatsFoil.size(); i++) {
+                if (whatsFoil.get(i)) {
+                    if (AbstractDungeon.player.masterDeck.size() > i)
+                        FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
+                }
             }
-        }
     }
 
     public static boolean isThisVoyaged(AbstractCard card) {

@@ -291,7 +291,8 @@
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
-    "DESCRIPTION": "When you play a card, if it's the only one in your hand, play it twice."
+    "DESCRIPTION": "Ethereal. NL When you play a card, if it's the only one in your hand, play it twice.",
+    "UPGRADE_DESCRIPTION": "When you play a card, if it's the only one in your hand, play it twice."
   },
   "${ModID}:FlyingFish": {
     "NAME": "Flying Fish",
