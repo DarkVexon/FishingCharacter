@@ -13,7 +13,8 @@ import theFishing.patch.foil.FoilPatches;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class ShimmeringShank extends AbstractFishingCard {
     public final static String ID = makeID("ShimmeringShank");
@@ -32,7 +33,7 @@ public class ShimmeringShank extends AbstractFishingCard {
             public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (FoilPatches.isFoil(card)) {
                     flash();
-                    atb(new MakeTempCardInHandAction(new Shiv()));
+                    atb(new MakeTempCardInHandAction(new Shiv(), amount, true));
                 }
             }
 
