@@ -44,9 +44,7 @@ public class Collector extends AbstractFishingCard {
                     applyToSelfTop(new StrengthPower(owner, amount));
                     triggered = true;
                 }
-                if (triggered) {
-                    activated = true;
-                }
+                activated = true;
             }
 
             @Override

@@ -16,7 +16,7 @@ public class Wizardry extends AbstractFishingCard {
     // intellij stuff skill, self, uncommon, , , , , 5, 3
 
     public Wizardry() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
         AbstractCard q = new Pinball();
         FoilPatches.makeFoil(q);
