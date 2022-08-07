@@ -17,6 +17,7 @@ public class CrystallineConfluence extends AbstractFishingCard {
 
     public CrystallineConfluence() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 0;
         AbstractCard q = new StarShard();
         makeFoil(q);
         cardsToPreview = q;
@@ -30,13 +31,11 @@ public class CrystallineConfluence extends AbstractFishingCard {
             if (upgraded) q.upgrade();
             att(new MakeTempCardInDrawPileAction(q, effect + params[0], true, false));
             return true;
-        }));
+        }, magicNumber));
     }
 
     public void upp() {
-        AbstractCard q = new StarShard();
-        makeFoil(q);
-        q.upgrade();
+        upgradeMagicNumber(1);
         uDesc();
     }
 }

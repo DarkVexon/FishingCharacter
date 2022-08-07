@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.patch.foil.FoilPatches;
 
 import java.util.ArrayList;
 
@@ -33,13 +34,13 @@ public class PickMe extends AbstractFishingCard implements SpawnModificationCard
     public void onRewardListCreated(ArrayList<AbstractCard> rewardCards) {
         boolean triggered = false;
         for (AbstractCard q : rewardCards) {
-            if (q != this && !q.upgraded) {
-                q.upgrade();
+            if (!FoilPatches.isFoil(q)) {
+                FoilPatches.makeFoil(q);
                 triggered = true;
             }
         }
         if (triggered) {
-            superFlash(Color.GREEN);
+            superFlash(Color.BLUE);
         }
     }
 

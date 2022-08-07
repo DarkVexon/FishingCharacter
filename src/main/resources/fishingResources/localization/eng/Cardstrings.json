@@ -251,7 +251,7 @@
   },
   "${ModID}:PickMe": {
     "NAME": "Pick Me!",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage to ALL enemies. NL When this appears in a card reward, the other cards are Upgraded."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage to ALL enemies. NL When this appears in a card reward, the cards are ${ModID}:Foil."
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
@@ -324,7 +324,7 @@
   "${ModID}:CrystallineConfluence": {
     "NAME": "Crystal Confluence",
     "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards+ into your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Shuffle X+1 ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust."
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",

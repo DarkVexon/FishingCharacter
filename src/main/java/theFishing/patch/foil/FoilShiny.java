@@ -12,12 +12,13 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
+import theFishing.FishingMod;
 
 import java.nio.charset.StandardCharsets;
 
-public class Shiney {
+public class FoilShiny {
     @SpirePatch(clz = AbstractCard.class, method = "render", paramtypez = SpriteBatch.class)
-    public static class Foil {
+    public static class FoilCardsShine {
         private static final ShaderProgram VEX = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/vex.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
         private static FrameBuffer fbo = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
@@ -43,7 +44,7 @@ public class Shiney {
                     t.flip(false, true);
                     ShaderProgram oldShader = spriteBatch.getShader();
                     spriteBatch.setShader(vex);
-                    vex.setUniformf("x_time", Foil.getTime());
+                    vex.setUniformf("x_time", FishingMod.time);
                     spriteBatch.draw(t, 0, 0, 0, 0, fbo.getWidth(), fbo.getHeight(), 1f, 1f, 0f);
                     //Draws the framebuffer with the shader applied (so the shader is applied uniformly to the card as its made up of different parts)
                     spriteBatch.end();
@@ -54,13 +55,6 @@ public class Shiney {
                 }
             }
             return SpireReturn.Return();
-        }
-
-        private static float time = 0f;
-
-        private static float getTime() {
-            time += Gdx.graphics.getDeltaTime();
-            return time;
         }
     }
 }

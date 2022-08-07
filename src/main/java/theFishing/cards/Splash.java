@@ -13,8 +13,8 @@ public class Splash extends AbstractFishingCard {
 
     public Splash() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 14;
-        baseBlock = 14;
+        baseDamage = 13;
+        baseBlock = 13;
         baseMagicNumber = magicNumber = 2;
     }
 

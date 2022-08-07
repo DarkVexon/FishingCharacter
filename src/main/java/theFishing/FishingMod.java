@@ -46,7 +46,8 @@ public class FishingMod implements
         CustomSavable<ArrayList<Boolean>>,
         PostPlayerUpdateSubscriber,
         AddAudioSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        PostUpdateSubscriber {
 
     public static final String modID = "fishing";
 
@@ -220,5 +221,12 @@ public class FishingMod implements
         if (Loader.isModLoaded("rare-cards-sparkle")) {
             FoilSparkleHandler.init();
         }
+    }
+
+    public static float time = 0f;
+
+    @Override
+    public void receivePostUpdate() {
+        time += Gdx.graphics.getDeltaTime();
     }
 }
