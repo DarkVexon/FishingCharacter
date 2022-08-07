@@ -313,7 +313,7 @@
   },
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL If the last card played this combat was ${ModID}:Foil, gain 1 Artifact."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL ${ModID}:Voyaged: Gain 1 Artifact."
   },
   "${ModID}:FreeDrinks": {
     "NAME": "Free Drinks",

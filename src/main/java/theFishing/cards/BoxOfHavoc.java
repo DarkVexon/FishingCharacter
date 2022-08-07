@@ -42,7 +42,7 @@ public class BoxOfHavoc extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(2);
+        upgradeMagicNumber(2);
+        upgradeSecondMagic(1);
     }
 }
