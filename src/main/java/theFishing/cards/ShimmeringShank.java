@@ -22,7 +22,7 @@ public class ShimmeringShank extends AbstractFishingCard {
 
     public ShimmeringShank() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 6;
         cardsToPreview = new Shiv();
     }
 
