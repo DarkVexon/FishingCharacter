@@ -21,13 +21,13 @@ public class ShimmeringShank extends AbstractFishingCard {
     // intellij stuff attack, enemy, uncommon, 4, 2, , , , 
 
     public ShimmeringShank() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 7;
         cardsToPreview = new Shiv();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        blck();
         applyToSelf(new LambdaPower("Shiny Shiv", AbstractPower.PowerType.BUFF, true, p, 1) {
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -50,6 +50,6 @@ public class ShimmeringShank extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBlock(3);
     }
 }

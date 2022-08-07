@@ -219,7 +219,7 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain !B! Block. NL X >= 4: Gain !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain !B! Block. NL X >= 4: Gain !${ModID}:m2! Strength."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
@@ -402,7 +402,7 @@
   },
   "${ModID}:ShimmeringShank": {
     "NAME": "Shimmering Shank",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a ${ModID}:Foil card this turn, add a *Shiv into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you play a ${ModID}:Foil card this turn, add a *Shiv into your hand."
   },
   "${ModID}:MaybeLater": {
     "NAME": "Maybe Later",
