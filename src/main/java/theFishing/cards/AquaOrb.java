@@ -1,15 +1,15 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import theFishing.cards.AbstractFishingCard;
+import com.megacrit.cardcrawl.vfx.combat.SanctityEffect;
+import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -20,30 +20,35 @@ public class AquaOrb extends AbstractFishingCard {
 
     public AquaOrb() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 10;
+        baseBlock = 9;
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, 1, false)));
         blck();
-        if (p.hand.size() == 1) {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    att(new PlayTopCardAction(AbstractDungeon.getRandomMonster(), false));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && FoilPatches.isFoil(AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2))) {
+                    applyToSelfTop(new ArtifactPower(p, 1));
+                    this.addToTop(new VFXAction(new SanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY)));
                 }
-            });
-        }
+            }
+        });
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = adp().hand.size() == 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && FoilPatches.isFoil(AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1))) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 }

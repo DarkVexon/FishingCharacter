@@ -187,13 +187,13 @@ public class Wiz {
                 groups.get(4).addToTop(q);
             } else if (q.rarity == AbstractCard.CardRarity.COMMON && q.type != AbstractCard.CardType.STATUS) {
                 groups.get(5).addToTop(q);
-            } else if (q.rarity == AbstractCard.CardRarity.BASIC && FoilPatches.isFoil(q)) {
-                groups.get(6).addToTop(q);
-            } else if (q.rarity == AbstractCard.CardRarity.BASIC) {
-                groups.get(7).addToTop(q);
             } else if (q.rarity == AbstractCard.CardRarity.SPECIAL && FoilPatches.isFoil(q)) {
                 groups.get(6).addToTop(q);
             } else if (q.rarity == AbstractCard.CardRarity.SPECIAL) {
+                groups.get(7).addToTop(q);
+            } else if (q.rarity == AbstractCard.CardRarity.BASIC && FoilPatches.isFoil(q)) {
+                groups.get(8).addToTop(q);
+            } else if (q.rarity == AbstractCard.CardRarity.BASIC) {
                 groups.get(9).addToTop(q);
             } else if (q.type == AbstractCard.CardType.STATUS && FoilPatches.isFoil(q)) {
                 groups.get(10).addToTop(q);

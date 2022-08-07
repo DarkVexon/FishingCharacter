@@ -24,7 +24,7 @@ public class FoilPatches {
 
     // GAMEPLAY STUFF
 
-    public static final float FOIL_CHANCE_REWARDS = 3.5F; // 1 out of X rewards
+    public static final float FOIL_CHANCE_REWARDS = 3F; // 1 out of X rewards
     public static final int SHOP_FOIL_CARDS = 2; // X out of the shop's cards
     public static final float SHOP_FOIL_MARKUP = 1.1F; // how much more expensive foils should be
 

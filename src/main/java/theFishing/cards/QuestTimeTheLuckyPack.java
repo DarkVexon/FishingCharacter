@@ -16,7 +16,7 @@ public class QuestTimeTheLuckyPack extends AbstractFishingCard {
 
     public QuestTimeTheLuckyPack() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 7;
+        baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

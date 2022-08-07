@@ -277,8 +277,8 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Put !M! ${ModID}:Foil *Star *Shards on top of your draw pile and Exhaust this.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Put !M! ${ModID}:Foil *Star *Shards+ on top of your draw pile and Exhaust this."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! ${ModID}:Foil *Star *Shards into your hand and Exhaust this.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! ${ModID}:Foil *Star *Shards into your hand and Exhaust this."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -312,7 +312,7 @@
   },
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL ${ModID}:Solo: Play the top card of your draw pile."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL If the last card played this combat was ${ModID}:Foil, gain 1 Artifact."
   },
   "${ModID}:FreeDrinks": {
     "NAME": "Free Drinks",
@@ -427,5 +427,13 @@
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL When this appears in a card reward, the cards are ${ModID}:Foil."
+  },
+  "${ModID}:Wizardry": {
+    "NAME": "Wizardry",
+    "DESCRIPTION": "Gain !M! Vigor. NL Whenever you draw this card, put a ${ModID}:Foil *Pinball on top of your draw pile."
+  },
+  "${ModID}:Pinball": {
+    "NAME": "Pinball",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
   }
 }
