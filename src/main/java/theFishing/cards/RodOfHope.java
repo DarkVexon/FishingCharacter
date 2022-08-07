@@ -16,7 +16,7 @@ public class RodOfHope extends AbstractFishingCard {
     public RodOfHope() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 4;
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         AbstractCard q = new StarShard();
         FoilPatches.makeFoil(q);
         cardsToPreview = q;
@@ -27,6 +27,7 @@ public class RodOfHope extends AbstractFishingCard {
         if (isVoyaged()) {
             AbstractCard q = new StarShard();
             FoilPatches.makeFoil(q);
+            if (upgraded) q.upgrade();
             topDeck(q, magicNumber);
             exhaust = true;
         }
@@ -38,6 +39,10 @@ public class RodOfHope extends AbstractFishingCard {
 
     public void upp() {
         upgradeDamage(1);
-        upgradeMagicNumber(1);
+        AbstractCard q = new StarShard();
+        FoilPatches.makeFoil(q);
+        q.upgrade();
+        cardsToPreview = q;
+        uDesc();
     }
 }

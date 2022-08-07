@@ -24,16 +24,16 @@ public class RatedX extends AbstractFishingCard {
 
     public RatedX() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 9;
-        baseBlock = 7;
+        baseDamage = 8;
+        baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
-
+        baseSecondMagic = secondMagic = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
             if (effect >= 4) {
-                applyToSelfTop(new StrengthPower(p, magicNumber));
+                applyToSelfTop(new StrengthPower(p, secondMagic));
             }
             if (effect >= 2) {
                 att(new GainBlockAction(p, block));
@@ -52,7 +52,8 @@ public class RatedX extends AbstractFishingCard {
 
     public void upp() {
         upgradeDamage(2);
-        upgradeBlock(3);
+        upgradeBlock(2);
         upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

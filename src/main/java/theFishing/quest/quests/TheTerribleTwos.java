@@ -28,7 +28,7 @@ public class TheTerribleTwos extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        atb(new GainBlockAction(AbstractDungeon.player, 22));
+        atb(new GainBlockAction(AbstractDungeon.player, 12));
     }
 
     @Override

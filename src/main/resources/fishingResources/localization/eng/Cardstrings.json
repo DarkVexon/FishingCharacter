@@ -277,7 +277,8 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Put !M! ${ModID}:Foil *Star *Shards on top of your draw pile and Exhaust this."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Put !M! ${ModID}:Foil *Star *Shards on top of your draw pile and Exhaust this.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Put !M! ${ModID}:Foil *Star *Shards+ on top of your draw pile and Exhaust this."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -337,7 +338,7 @@
   },
   "${ModID}:QuestTimeTheTerribleTwos": {
     "NAME": "The Terrible Twos",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL ${ModID}:Quest: Play 3 2-cost cards. NL *Reward: Gain 22 Block."
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL ${ModID}:Quest: Play 3 2-cost cards. NL *Reward: Gain 12 Block."
   },
   "${ModID}:SoleSight": {
     "NAME": "Sole Searching",
