@@ -21,13 +21,13 @@ public class TheFinalCard extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.hand.size() == 1) {
+        if (p.hand.size() <= 1) {
             atb(new FinalCardAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH, this));
         }
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = adp().hand.size() == 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = adp().hand.size() <= 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

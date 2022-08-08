@@ -25,7 +25,7 @@ public class FinishingTouches extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new LambdaPower(makeID("FinishingTouchesPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
             public void onUseCard(AbstractCard card, UseCardAction action) {
-                if (!card.purgeOnUse && this.amount > 0 && AbstractDungeon.player.hand.size() == 1) {
+                if (!card.purgeOnUse && this.amount > 0 && AbstractDungeon.player.hand.size() <= 1) {
                     this.flash();
                     AbstractMonster m = null;
                     if (action.target != null) {

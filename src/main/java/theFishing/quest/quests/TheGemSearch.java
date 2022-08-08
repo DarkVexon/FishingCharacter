@@ -13,9 +13,9 @@ import static theFishing.util.Wiz.shuffleIn;
 
 public class TheGemSearch extends AbstractQuest {
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("QuestTheGemSearch");
-
     public static String ID = makeID("TheGemSearch");
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheGemSearch() {
         super(ID, 1);

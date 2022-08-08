@@ -28,7 +28,7 @@ public class ShimmeringShank extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new LambdaPower("Shiny Shiv", AbstractPower.PowerType.BUFF, true, p, 1) {
+        applyToSelf(new LambdaPower(makeID("ShinyShivPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, true, p, 1) {
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (FoilPatches.isFoil(card)) {
@@ -44,7 +44,7 @@ public class ShimmeringShank extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "Whenever you play a #yFoil card this turn, add #b" + amount + " " + (amount == 1 ? "#yShiv" : "#yShivs") + " into your hand.";
+                description = cardStrings.EXTENDED_DESCRIPTION[0] + amount + (amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[1] : cardStrings.EXTENDED_DESCRIPTION[2]) + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
     }

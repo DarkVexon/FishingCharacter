@@ -9,10 +9,43 @@
       "Fish"
     ]
   },
-  "${ModID}:QuestTheGemSearch": {
+  "${ModID}:TheGemSearch": {
     "TEXT": [
       "The Gem Search",
       "#yQuest: End your turn with an empty hand. NL #yReward: Shuffle #yThe #yEternity #yGem into your draw pile."
+    ]
+  },
+  "${ModID}:TheHarpoon": {
+    "TEXT": [
+      "The Harpoon",
+      "#yQuest: Kill an enemy. NL #yReward: Shuffle #yThe #yWhale into your draw pile."
+    ]
+  },
+  "${ModID}:TheLuckyPack": {
+    "TEXT": [
+      "The Lucky Pack",
+      "#yQuest: Play #b",
+      " #yFoil cards in a turn. NL #yReward: Play the last card again."
+    ]
+  },
+  "${ModID}:ThePrismaticPortal": {
+    "TEXT": [
+      "The Prismatic Portal",
+      "#yQuest: Play a Common, #bUncommon, #yRare, and Special card. NL #yReward: Shuffle #yQuest #yTime: #yThe #yGem #ySearch into your draw pile."
+    ]
+  },
+  "${ModID}:TheStorm": {
+    "TEXT": [
+      "The Storm",
+      "#yQuest: Spend #b",
+      " Energy in a single turn. NL #yReward: A random enemy loses #b17 HP."
+    ]
+  },
+  "${ModID}:TheTerribleTwos": {
+    "TEXT": [
+      "The Terrible Twos",
+      "#yQuest: Play #b",
+      " 2-cost cards. NL #yReward: Gain #b12 #yBlock."
     ]
   }
 }

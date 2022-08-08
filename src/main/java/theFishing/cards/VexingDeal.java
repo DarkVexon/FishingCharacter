@@ -3,6 +3,7 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.powers.LambdaPower;
@@ -19,7 +20,7 @@ public class VexingDeal extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Vexing Deal", AbstractPower.PowerType.BUFF, false, p, 1) {
+        applyToSelf(new LambdaPower(makeID("VexingDealPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
 
             @Override
             public void atStartOfTurnPostDraw() {
@@ -29,7 +30,7 @@ public class VexingDeal extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "At the start of your turn, #yExhaust #b" + amount + " " + (amount == 1 ? "card" : "cards") + " and draw #b" + amount + " " + (amount == 1 ? "card" : "cards") + ".";
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + (amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[2] : cardStrings.EXTENDED_DESCRIPTION[3]) + cardStrings.EXTENDED_DESCRIPTION[4] + amount +  (amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[2] : cardStrings.EXTENDED_DESCRIPTION[3]) + LocalizedStrings.PERIOD;
             }
         });
     }

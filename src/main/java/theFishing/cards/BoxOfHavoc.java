@@ -24,8 +24,8 @@ public class BoxOfHavoc extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = p.hand.size() == 1 ? magicNumber : secondMagic;
-        if (p.hand.size() == 1) {
+        int x = p.hand.size() <= 1 ? magicNumber : secondMagic;
+        if (p.hand.size() <= 1) {
             float duration = 0.3F;
             addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.RED.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
             addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.YELLOW.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
@@ -38,7 +38,7 @@ public class BoxOfHavoc extends AbstractFishingCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = adp().hand.size() == 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = adp().hand.size() <= 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

@@ -2,18 +2,23 @@ package theFishing.quest.quests;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.actions.AbandonQuestAction;
 import theFishing.cards.QuestTimeTheGemSearch;
 import theFishing.util.TexLoader;
 import theFishing.util.Wiz;
 
+import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 
 public class ThePrismaticPortal extends AbstractQuest {
-    public static final String ID = "ThePrismaticPortal";
+    public static final String ID = makeID("ThePrismaticPortal");
 
-    public boolean[] okayed = new boolean[4];
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+
+    private boolean[] okayed = new boolean[4];
 
     public ThePrismaticPortal() {
         super(ID, 4);
@@ -21,12 +26,12 @@ public class ThePrismaticPortal extends AbstractQuest {
 
     @Override
     public String getName() {
-        return "The Prismatic Portal";
+        return uiStrings.TEXT[0];
     }
 
     @Override
     public String getDescription() {
-        return "#yQuest: Play a Common, #bUncommon, #yRare, and Special card. NL #yReward: Shuffle #yQuest #yTime: #yThe #yGem #ySearch into your draw pile.";
+        return uiStrings.TEXT[1];
     }
 
     @Override

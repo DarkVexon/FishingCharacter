@@ -22,7 +22,7 @@ public class RidiculousFishing extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Ridiculous Fishing", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("RidiculousFishingPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             public void onAfterCardPlayed(AbstractCard card) {
                 if (card.color == CardColor.COLORLESS) {
                     flash();
@@ -32,7 +32,7 @@ public class RidiculousFishing extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "Whenever you play a Colorless card, deal #b" + amount + " damage to a random enemy.";
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2];
             }
         });
     }

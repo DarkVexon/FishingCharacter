@@ -3,16 +3,19 @@ package theFishing.powers;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnMyBlockBrokenPower;
 import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
 
 public class TripwirePower extends AbstractEasyPower implements OnMyBlockBrokenPower {
     public static String ID = makeID(TripwirePower.class.getSimpleName());
+    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TripwirePower(int amount) {
-        super("Tripwire", PowerType.BUFF, true, AbstractDungeon.player, amount);
+        super(ID, powerStrings.NAME, PowerType.BUFF, true, AbstractDungeon.player, amount);
     }
 
     @Override
@@ -29,6 +32,6 @@ public class TripwirePower extends AbstractEasyPower implements OnMyBlockBrokenP
 
     @Override
     public void updateDescription() {
-        description = "If your #yBlock is broken this turn, ALL enemies lose #b" + amount + " HP.";
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1];
     }
 }

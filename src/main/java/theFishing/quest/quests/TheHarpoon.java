@@ -1,15 +1,20 @@
 package theFishing.quest.quests;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.cards.fish.maelstrom.TheWhale;
 import theFishing.util.TexLoader;
 
+import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.shuffleIn;
 
 public class TheHarpoon extends AbstractQuest {
 
-    public static final String ID = "TheHarpoon";
+    public static final String ID = makeID("TheHarpoon");
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheHarpoon() {
         super(ID, 1);
@@ -17,12 +22,12 @@ public class TheHarpoon extends AbstractQuest {
 
     @Override
     public String getName() {
-        return "The Harpoon";
+        return uiStrings.TEXT[0];
     }
 
     @Override
     public String getDescription() {
-        return "#yQuest: Kill an enemy. NL #yReward: Shuffle #yThe #yWhale into your draw pile.";
+        return uiStrings.TEXT[1];
     }
 
     @Override

@@ -6,5 +6,20 @@
       " fewer card each turn."
       " fewer cards each turn."
     ]
+  },
+  "${ModID}:DrawLessNextTurnPower": {
+    "NAME": "Draw Less Next Turn",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " less card next turn.",
+      " less cards next turn."
+    ]
+  },
+  "${ModID}:TripwirePower": {
+    "NAME": "Tripwire",
+    "DESCRIPTIONS": [
+      "If your #yBlock is broken this turn, ALL enemies lose #b",
+      " HP."
+    ]
   }
 }

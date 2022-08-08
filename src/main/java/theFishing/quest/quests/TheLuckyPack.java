@@ -2,17 +2,22 @@ package theFishing.quest.quests;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.actions.RepeatCardAction;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.util.TexLoader;
 
+import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.att;
 
 public class TheLuckyPack extends AbstractQuest {
 
-    public static final String ID = "TheLuckyPack";
+    public static final String ID = makeID("TheLuckyPack");
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheLuckyPack() {
         super(ID, 3);
@@ -21,12 +26,12 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public String getName() {
-        return "The Lucky Pack";
+        return uiStrings.TEXT[0];
     }
 
     @Override
     public String getDescription() {
-        return "#yQuest: Play #b" + goal + " #yFoil cards in a turn. NL #yReward: Play the last card again.";
+        return uiStrings.TEXT[1] + goal + uiStrings.TEXT[2];
     }
 
     @Override

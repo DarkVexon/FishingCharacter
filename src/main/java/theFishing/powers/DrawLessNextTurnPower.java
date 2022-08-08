@@ -6,16 +6,19 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static theFishing.FishingMod.makeID;
 
 public class DrawLessNextTurnPower extends AbstractEasyPower {
     public static String ID = makeID(DrawLessNextTurnPower.class.getSimpleName());
+    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public DrawLessNextTurnPower(int amount) {
-        super("Draw Less Next Turn", PowerType.DEBUFF, true, AbstractDungeon.player, amount);
+        super(ID, powerStrings.NAME, PowerType.DEBUFF, true, AbstractDungeon.player, amount);
         this.loadRegion("lessdraw");
     }
 
@@ -42,6 +45,6 @@ public class DrawLessNextTurnPower extends AbstractEasyPower {
 
     @Override
     public void updateDescription() {
-        description = "Draw #b" + amount + (amount == 1 ? " less card next turn." : " less cards next turn.");
+        description = powerStrings.DESCRIPTIONS[0] + amount + (amount == 1 ? powerStrings.DESCRIPTIONS[1] : powerStrings.DESCRIPTIONS[2]);
     }
 }

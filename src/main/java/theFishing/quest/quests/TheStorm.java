@@ -5,18 +5,23 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import theFishing.util.TexLoader;
 
+import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
 public class TheStorm extends AbstractQuest {
 
-    public static final String ID = "TheStorm";
+    public static final String ID = makeID("TheStorm");
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheStorm() {
         super(ID, 6);
@@ -24,12 +29,12 @@ public class TheStorm extends AbstractQuest {
 
     @Override
     public String getName() {
-        return "The Storm";
+        return uiStrings.TEXT[0];
     }
 
     @Override
     public String getDescription() {
-        return "#yQuest: Spend #b" + goal + " Energy in a single turn. NL #yReward: A random enemy loses #b17 HP.";
+        return uiStrings.TEXT[1] + goal + uiStrings.TEXT[2];
     }
 
     @Override

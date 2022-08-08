@@ -3,14 +3,19 @@ package theFishing.quest.quests;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.util.TexLoader;
 
+import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.atb;
 
 public class TheTerribleTwos extends AbstractQuest {
-    public static final String ID = "TheTerribleTwos";
+    public static final String ID = makeID("TheTerribleTwos");
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheTerribleTwos() {
         super(ID, 3);
@@ -18,12 +23,12 @@ public class TheTerribleTwos extends AbstractQuest {
 
     @Override
     public String getName() {
-        return "The Terrible Twos";
+        return uiStrings.TEXT[0];
     }
 
     @Override
     public String getDescription() {
-        return "#yQuest: Play #b" + goal + " 2-cost cards. NL #yReward: Gain #b12 #yBlock.";
+        return uiStrings.TEXT[0] + goal + uiStrings.TEXT[1];
     }
 
     @Override
