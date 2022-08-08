@@ -26,7 +26,7 @@ public class Crosshairs extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Crosshairs", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("CrosshairsPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (card.cost == -1) {
                     flash();
@@ -51,7 +51,7 @@ public class Crosshairs extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "Whenever you play a cost X card, deal #b" + amount + " damage to the frontmost enemy.";
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2];
             }
         });
     }

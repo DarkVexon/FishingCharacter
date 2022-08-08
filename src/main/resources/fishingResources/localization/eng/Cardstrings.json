@@ -117,7 +117,12 @@
   },
   "${ModID}:AllOut": {
     "NAME": "All Out",
-    "DESCRIPTION": "At the end of your turn, if your hand is empty, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "At the end of your turn, if your hand is empty, deal !M! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "All Out",
+      "At the end of your turn, if your hand is empty, deal #b",
+      " damage to ALL enemies."
+    ]
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Clove",
@@ -129,7 +134,10 @@
   },
   "${ModID}:Bobber": {
     "NAME": "Bobber",
-    "DESCRIPTION": "Unplayable. NL If you draw this after your turn starts, gain !${ModID}:m2! Block and !M! Strength."
+    "DESCRIPTION": "Unplayable. NL If you draw this after your turn starts, gain !${ModID}:m2! Block and !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "I have to draw this Bobber on my turn to use it."
+    ]
   },
   "${ModID}:BombFishing": {
     "NAME": "Bomb Fishing",
@@ -255,7 +263,12 @@
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
-    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to the frontmost enemy."
+    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to the frontmost enemy.",
+    "EXTENDED_DESCRIPTION": [
+      "Crosshairs",
+      "Whenever you play a cost X card, deal #b",
+      " damage to the frontmost enemy."
+    ]
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
@@ -291,11 +304,23 @@
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
     "DESCRIPTION": "Ethereal. NL When you play a card, if it's the only one in your hand, play it twice.",
-    "UPGRADE_DESCRIPTION": "When you play a card, if it's the only one in your hand, play it twice."
+    "UPGRADE_DESCRIPTION": "When you play a card, if it's the only one in your hand, play it twice.",
+    "EXTENDED_DESCRIPTION": [
+      "Finishing Touches",
+      "When you play a card, if it's the only one in your hand, play it twice.",
+      "When you play a card, if it's the only one in your hand, play it #b",
+      " additional times."
+    ]
   },
   "${ModID}:FlyingFish": {
     "NAME": "Flying Fish",
-    "DESCRIPTION": "{@@}Take 50% less damage for !M! turn{!M!|>1=s}. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "{@@}Take 50% less damage for !M! turn{!M!|>1=s}. NL Draw 1 card. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Flying Fish",
+      "Receive #b50% less damage this turn.",
+      "Receive #b50% less damage for the next #b",
+      " turns."
+    ]
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",
@@ -403,7 +428,12 @@
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "The second time you play a ${ModID}:Foil card each turn, gain !M! Block."
+    "DESCRIPTION": "The second time you play a ${ModID}:Foil card each turn, gain !M! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "Mint Condition",
+      "The second time you play a #yFoil card each turn, gain #b",
+      " #yBlock."
+    ]
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
@@ -412,11 +442,22 @@
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block for every 6 cards in your discard pile."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block for every 6 cards in your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Pyramid Climb",
+      "At the end of your turn, gain #b",
+      " #yBlock for every #b6 cards in your discard pile."
+    ]
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 4 Vigor."
+    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 4 Vigor.",
+    "EXTENDED_DESCRIPTION": [
+      "Collector",
+      "If the first card you play each turn is: NL #yFoil: Gain #b",
+      " #yStrength. NL Rare: Gain #b",
+      " #yVigor."
+    ]
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",

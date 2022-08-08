@@ -25,7 +25,7 @@ public class AllOut extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("All Out", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("AllOutPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, magicNumber) {
 
             @Override
             public void atEndOfTurn(boolean isPlayer) {
@@ -46,7 +46,7 @@ public class AllOut extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "At the end of your turn, if your hand is empty, deal #b" + amount + " damage to ALL enemies.";
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2];
             }
         });
     }

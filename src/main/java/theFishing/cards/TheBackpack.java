@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.patch.foil.FoilPatches;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -33,6 +35,8 @@ public class TheBackpack extends AbstractFishingCard {
             if (FoilPatches.isFoil(q))
                 possCards.add(q);
         }
+        Collections.sort(possCards, Comparator.comparing(c -> c.rarity));
+        Collections.reverse(possCards);
         atb(new SelectCardsAction(possCards, 1, "Choose a card to put into your hand.", (cards) -> {
             AbstractCard card = cards.get(0);
             if (AbstractDungeon.player.drawPile.group.contains(card)) {

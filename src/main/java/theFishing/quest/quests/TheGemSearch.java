@@ -1,7 +1,9 @@
 package theFishing.quest.quests;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.cards.TheEternityGem;
 import theFishing.util.TexLoader;
 
@@ -10,6 +12,8 @@ import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.shuffleIn;
 
 public class TheGemSearch extends AbstractQuest {
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("QuestTheGemSearch");
 
     public static String ID = makeID("TheGemSearch");
 
@@ -20,12 +24,12 @@ public class TheGemSearch extends AbstractQuest {
 
     @Override
     public String getName() {
-        return "The Gem Search";
+        return uiStrings.TEXT[0];
     }
 
     @Override
     public String getDescription() {
-        return "#yQuest: End your turn with an empty hand. NL #yReward: Shuffle #yThe #yEternity #yGem into your draw pile.";
+        return uiStrings.TEXT[1];
     }
 
     @Override

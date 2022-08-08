@@ -2,8 +2,10 @@ package theFishing.cards.fish;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.fish.basefish.*;
 import theFishing.cards.fish.maelstrom.*;
@@ -13,7 +15,11 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import static theFishing.FishingMod.makeID;
+
 public abstract class AbstractFishCard extends AbstractFishingCard {
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("FishDescriptor"));
 
     public AbstractFishCard(String cardID, AbstractCard.CardType type, AbstractCard.CardTarget target) {
         super(cardID, 0, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);
@@ -96,6 +102,6 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
 
     @Override
     public List<String> getCardDescriptors() {
-        return Collections.singletonList("Fish");
+        return Collections.singletonList(uiStrings.TEXT[0]);
     }
 }

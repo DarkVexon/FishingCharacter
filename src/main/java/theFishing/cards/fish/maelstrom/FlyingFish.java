@@ -24,7 +24,7 @@ public class FlyingFish extends AbstractFishCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Flying Fish", AbstractPower.PowerType.BUFF, true, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("FlyingFishPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, true, p, magicNumber) {
 
             @Override
             public void atEndOfRound() {
@@ -39,7 +39,7 @@ public class FlyingFish extends AbstractFishCard {
 
             @Override
             public void updateDescription() {
-                description = amount == 1 ? "Receive #b50% less damage this turn." : ("Receive #b50% less damage for the next #b" + amount + " turns.");
+                description = amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[1] : (cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[2]);
             }
         });
         atb(new DrawCardAction(1));

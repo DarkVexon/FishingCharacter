@@ -25,7 +25,7 @@ public class MintCondition extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Mint Condition", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("MintConditionPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             private int playedThisTurn = 0;
 
             @Override
@@ -46,7 +46,7 @@ public class MintCondition extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "The second time you play a #yFoil card each turn, gain #b" + amount + " #yBlock.";
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2];
             }
         });
     }

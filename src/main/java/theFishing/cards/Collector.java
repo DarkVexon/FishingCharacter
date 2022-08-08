@@ -23,7 +23,7 @@ public class Collector extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Collector", AbstractPower.PowerType.BUFF, false, p, 1) {
+        applyToSelf(new LambdaPower(makeID("Collector"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
             boolean activated = false;
 
             @Override
@@ -46,7 +46,7 @@ public class Collector extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "If the first card you play each turn is: NL #yFoil: Gain #b" + amount + " #yStrength. NL Rare: Gain #b" + amount * 4 + " #yVigor.";
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount * 4 + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
     }

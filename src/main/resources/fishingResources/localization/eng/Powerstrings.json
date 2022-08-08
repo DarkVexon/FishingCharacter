@@ -1,3 +1,10 @@
 {
-
+  "${ModID}:TakeItEasyPower": {
+    "NAME": "Take It Easy",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " fewer card each turn."
+      " fewer cards each turn."
+    ]
+  }
 }

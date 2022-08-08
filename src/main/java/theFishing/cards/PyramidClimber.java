@@ -21,7 +21,7 @@ public class PyramidClimber extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Pyramid Climb", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("PyramidClimbPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             @Override
             public void atEndOfTurn(boolean isPlayer) {
                 int x = AbstractDungeon.player.discardPile.size() / 6;
@@ -33,7 +33,7 @@ public class PyramidClimber extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = "At the end of your turn, gain #b" + amount + " #yBlock for every #b6 cards in your discard pile.";
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2];
             }
         });
     }

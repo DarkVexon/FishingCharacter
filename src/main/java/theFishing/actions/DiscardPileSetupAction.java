@@ -11,7 +11,10 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.util.Iterator;
 
+import static theFishing.FishingMod.makeID;
+
 public class DiscardPileSetupAction extends AbstractGameAction {
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("DiscardPileSetupAction"));
 
     public DiscardPileSetupAction() {
         this.actionType = ActionType.CARD_MANIPULATION;
@@ -36,7 +39,7 @@ public class DiscardPileSetupAction extends AbstractGameAction {
                 }
 
                 if (AbstractDungeon.player.discardPile.group.size() > this.amount) {
-                    AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.discardPile, 1, "Choose a card to put on top of your draw pile and make free until played.", false, false, false, false);
+                    AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.discardPile, 1, uiStrings.TEXT[0], false, false, false, false);
                     this.tickDuration();
                     return;
                 }

@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>UnimportantInfo</groupId>
 
-    <artifactId>TheFishing</artifactId>
-    <version>0.86</version>
-    <name>The Fishing</name>
-    <description>An fisherperson.</description>
+    <artifactId>TheAdventurer</artifactId>
+    <version>1.0</version>
+    <name>The Adventurer</name>
+    <description>Adds a new playable character: The Adventurer.</description>
     <!-- Change the above for mod information. -->
 
     <properties>

@@ -1,14 +1,18 @@
 package theFishing.powers;
 
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import theFishing.cards.FastingB;
 
 import static theFishing.FishingMod.makeID;
 
 public class TakeItEasyPower extends AbstractEasyPower {
     public static String ID = makeID(TakeItEasyPower.class.getSimpleName());
+    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TakeItEasyPower() {
-        super("Fasting-B", PowerType.DEBUFF, false, AbstractDungeon.player, 1);
+        super(makeID("TakeItEasyPower"), powerStrings.NAME, PowerType.DEBUFF, false, AbstractDungeon.player, 1);
     }
 
     @Override
@@ -29,6 +33,6 @@ public class TakeItEasyPower extends AbstractEasyPower {
 
     @Override
     public void updateDescription() {
-        description = "Draw #b" + amount + (amount == 1 ? " fewer card each turn." : " fewer cards each turn.");
+        description = powerStrings.DESCRIPTIONS[0] + amount + (amount == 1 ? powerStrings.DESCRIPTIONS[1] : powerStrings.DESCRIPTIONS[2]);
     }
 }

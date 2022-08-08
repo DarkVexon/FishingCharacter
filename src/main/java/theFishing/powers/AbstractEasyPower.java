@@ -20,8 +20,8 @@ public abstract class AbstractEasyPower extends AbstractPower {
     public static Color greenColor2 = Color.GREEN.cpy();
     public boolean canGoNegative2 = false;
 
-    public AbstractEasyPower(String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
-        this.ID = makeID(NAME.replaceAll("([ ])", ""));
+    public AbstractEasyPower(String ID, String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
+        this.ID = ID;
         this.isTurnBased = isTurnBased;
 
         this.name = NAME;

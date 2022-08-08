@@ -33,7 +33,7 @@ public class Bobber extends AbstractFishingCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = "I have to draw this Bobber on my turn to use it.";
+        cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
         return false;
     }
 
