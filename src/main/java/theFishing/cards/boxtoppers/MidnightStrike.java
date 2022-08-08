@@ -1,5 +1,6 @@
 package theFishing.cards.boxtoppers;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
+@AutoAdd.Ignore
 public class MidnightStrike extends AbstractBoxTopper {
     public final static String ID = makeID("MidnightStrike");
     // intellij stuff attack, enemy, 80, , , , , 

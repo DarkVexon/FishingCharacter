@@ -1,5 +1,6 @@
 package theFishing.cards.boxtoppers;
 
+import basemod.AutoAdd;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
+@AutoAdd.Ignore
 public class ZaHando extends AbstractBoxTopper {
     public final static String ID = makeID("ZaHando");
     // intellij stuff attack, enemy, special, 13, 5, , , , 

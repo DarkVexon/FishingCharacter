@@ -1,5 +1,6 @@
 package theFishing.cards.boxtoppers;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DemonFormPower;
@@ -9,6 +10,7 @@ import theFishing.powers.LambdaPower;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
+@AutoAdd.Ignore
 public class ScalingIsWin extends AbstractBoxTopper {
     public final static String ID = makeID("ScalingIsWin");
     // intellij stuff power, self, special, , , , , 1, 1

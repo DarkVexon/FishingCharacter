@@ -69,14 +69,14 @@
     "NAME": "Lucky Ring",
     "FLAVOR": "The eye blinks just when you start to look away.",
     "DESCRIPTIONS": [
-      "At the start of turn #b2, draw #b1 card and gain [E] [E]."
+      "At the start of turn #b2, draw #b1 card and gain [E] [E] ."
     ]
   },
   "${ModID}:BoosterBox": {
     "NAME": "Booster Box",
     "FLAVOR": "Packed with goodies.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain #y${ModID}:Foil Rare, Colorless, and #pBox #pTopper card rewards."
+      "Upon pickup, obtain #y${ModID}:Foil Rare, Colorless, and #pPromo card rewards."
     ]
   }
 }

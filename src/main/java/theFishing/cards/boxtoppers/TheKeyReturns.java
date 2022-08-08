@@ -1,5 +1,6 @@
 package theFishing.cards.boxtoppers;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -11,6 +12,7 @@ import theFishing.quest.quests.AbstractQuest;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
+@AutoAdd.Ignore
 public class TheKeyReturns extends AbstractBoxTopper {
     public final static String ID = makeID("TheKeyReturns");
     // intellij stuff attack, all_enemy, 11, 2, , , , 

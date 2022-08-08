@@ -1,5 +1,6 @@
 package theFishing.cards.boxtoppers;
 
+import basemod.AutoAdd;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,6 +14,7 @@ import theFishing.cards.AbstractFishingCard;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
+@AutoAdd.Ignore
 public class LastDitchEffort extends AbstractBoxTopper {
     public final static String ID = makeID("LastDitchEffort");
     // intellij stuff attack, enemy, 13, 3, , , , 

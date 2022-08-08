@@ -1,5 +1,6 @@
 package theFishing.cards.boxtoppers;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.powers.VictoryLapPower;
@@ -7,6 +8,7 @@ import theFishing.powers.VictoryLapPower;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 
+@AutoAdd.Ignore
 public class VictoryLap extends AbstractBoxTopper {
     public final static String ID = makeID("VictoryLap");
     // intellij stuff power, self, , , , , 12, 4

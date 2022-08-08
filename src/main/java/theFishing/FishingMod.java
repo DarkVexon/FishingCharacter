@@ -31,7 +31,6 @@ import theFishing.potions.StarlightSoda;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
 import theFishing.util.FoilSparkleHandler;
-import theFishing.util.SaveWrapper;
 import theFishing.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
@@ -47,7 +46,7 @@ public class FishingMod implements
         EditCharactersSubscriber,
         PostBattleSubscriber,
         OnStartBattleSubscriber,
-        CustomSavable<SaveWrapper>,
+        CustomSavable<ArrayList<Boolean>>,
         PostPlayerUpdateSubscriber,
         AddAudioSubscriber,
         PostInitializeSubscriber,
@@ -195,25 +194,23 @@ public class FishingMod implements
     }
 
     @Override
-    public SaveWrapper onSave() {
-        SaveWrapper s = new SaveWrapper();
+    public ArrayList<Boolean> onSave() {
+        ArrayList<Boolean> foilCards = new ArrayList<>();
         for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            s.foilCards.add(FoilPatches.isFoil(q));
+            foilCards.add(FoilPatches.isFoil(q));
         }
-        s.bossPreHPLoss = bossPreHpLoss;
-        return s;
+        return foilCards;
     }
 
     @Override
-    public void onLoad(SaveWrapper s) {
-        if (s != null)
-            for (int i = 0; i < s.foilCards.size(); i++) {
-                if (s.foilCards.get(i)) {
+    public void onLoad(ArrayList<Boolean> foilCards) {
+        if (foilCards != null)
+            for (int i = 0; i < foilCards.size(); i++) {
+                if (foilCards.get(i)) {
                     if (AbstractDungeon.player.masterDeck.size() > i)
                         FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
                 }
             }
-        bossPreHpLoss = s.bossPreHPLoss;
     }
 
     public static boolean isThisVoyaged(AbstractCard card) {

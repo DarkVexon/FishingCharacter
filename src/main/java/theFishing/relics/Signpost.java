@@ -35,6 +35,7 @@ public class Signpost extends AbstractEasyRelic {
             flash();
             atb(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             atb(new GainBlockAction(AbstractDungeon.player, BLOCK_GRANTED));
+            grayscale = true;
         }
     }
 

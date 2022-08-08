@@ -1,5 +1,6 @@
 package theFishing.cards.boxtoppers;
 
+import basemod.AutoAdd;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,6 +10,7 @@ import theFishing.cards.AbstractFishingCard;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
+@AutoAdd.Ignore
 public class Rebalance extends AbstractBoxTopper {
     public final static String ID = makeID("Rebalance");
     // intellij stuff skill, all, , , , , , 
