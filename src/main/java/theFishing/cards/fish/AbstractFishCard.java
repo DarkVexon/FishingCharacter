@@ -42,14 +42,14 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
         maelstromFishList.put(Maw.ID, 16);
         maelstromFishList.put(Swordfish.ID, 10);
         maelstromFishList.put(Hammerhead.ID, 10);
-        maelstromFishList.put(Jellyfish.ID, 8);
+        maelstromFishList.put(Jellyfish.ID, 10);
         maelstromFishList.put(Starfy.ID, 8);
         maelstromFishList.put(Shark.ID, 6);
         maelstromFishList.put(Starfish.ID, 6);
         maelstromFishList.put(Qwilfish.ID, 6);
         maelstromFishList.put(SeaMonster.ID, 3);
-        maelstromFishList.put(FlyingFish.ID, 3);
-        maelstromFishList.put(Blooper.ID, 3);
+        maelstromFishList.put(FlyingFish.ID, 2);
+        maelstromFishList.put(Blooper.ID, 2);
         maelstromFishList.put(TheWhale.ID, 1);
     }
 
