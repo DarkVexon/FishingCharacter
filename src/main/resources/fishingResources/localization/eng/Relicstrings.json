@@ -9,7 +9,7 @@
   },
   "${ModID}:RainbowRod": {
     "NAME": "Rainbow Rod",
-    "FLAVOR": "Fishing 120",
+    "FLAVOR": "Fishing 100",
     "DESCRIPTIONS": [
       "Replaces ",
       ".[] NL #yUpgrade the first #b2 unupgraded cards you draw each turn."
@@ -17,7 +17,7 @@
   },
   "${ModID}:BrokenOar": {
     "NAME": "Broken Oar",
-    "FLAVOR": "Most trips to the Spire are one-way anyways.",
+    "FLAVOR": "Most trips to the Spire are one-way.",
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. Draw #b1 fewer card each turn."
     ]
@@ -27,6 +27,28 @@
     "FLAVOR": "Into the depths.",
     "DESCRIPTIONS": [
       "Find rarer #y${ModID}:Fish."
+    ]
+  },
+  "${ModID}:UnageeSkull": {
+    "NAME": "Unagee Skull",
+    "FLAVOR": "Known to guard sunken ships long ago.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, shuffle #b1 #y${ModID}:Fish into your draw and discard piles."
+    ]
+  },
+  "${ModID}:Signpost": {
+    "NAME": "Signpost",
+    "FLAVOR": "\"Welcome. You have come very far...\"",
+    "DESCRIPTIONS": [
+      "The first time you play a #yPower card each combat, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:Goggles": {
+    "NAME": "Goggles",
+    "FLAVOR": "\"With this... we can cross it.\" - Kublai the Great",
+    "DESCRIPTIONS": [
+      "Whenever you end your turn with an empty hand, gain #b1 #yStrength."
     ]
   }
 }
