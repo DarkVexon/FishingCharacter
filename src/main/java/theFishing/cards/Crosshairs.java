@@ -3,6 +3,7 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -26,7 +27,7 @@ public class Crosshairs extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new LambdaPower("Crosshairs", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
-            public void onAfterCardPlayed(AbstractCard card) {
+            public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (card.cost == -1) {
                     flash();
                     int x = amount;

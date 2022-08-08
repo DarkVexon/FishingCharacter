@@ -26,7 +26,7 @@
       "quest",
       "quests"
     ],
-    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward. NL If you already have that #yQuest in progress, draw a card instead."
+    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward. NL If you already have that #yQuest in progress, draw #b1 card instead."
   },
   {
     "PROPER_NAME": "Foil",

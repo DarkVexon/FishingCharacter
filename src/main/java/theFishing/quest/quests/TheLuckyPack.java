@@ -26,7 +26,7 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public String getDescription() {
-        return "#yQuest: Play #b" + goal + " #yFoil cards in a row. NL #yReward: Play the last card again.";
+        return "#yQuest: Play #b" + goal + " #yFoil cards in a turn. NL #yReward: Play the last card again.";
     }
 
     @Override
@@ -39,9 +39,12 @@ public class TheLuckyPack extends AbstractQuest {
     public void onPlayCard(AbstractCard card) {
         if (FoilPatches.isFoil(card)) {
             increment();
-        } else {
-            progress = 0;
         }
+    }
+
+    @Override
+    public void atEndOfTurn() {
+        progress = 0;
     }
 
     private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/LuckyPack.png"));
