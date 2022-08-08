@@ -19,10 +19,8 @@ public class TheWhale extends AbstractFishCard {
     // intellij stuff skill, enemy, , , , , 50, 10
 
     public TheWhale() {
-        super(ID, 0, CardType.SKILL, CardTarget.SELF_AND_ENEMY);
+        super(ID,  CardType.SKILL, CardTarget.SELF_AND_ENEMY);
         baseMagicNumber = magicNumber = 20;
-        exhaust = true;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

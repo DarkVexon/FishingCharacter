@@ -14,8 +14,7 @@ public class Boot extends AbstractFishCard {
     // intellij stuff skill, none, special, , , , , 1, 1
 
     public Boot() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
-        exhaust = true;
+        super(ID,  AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
     }
 

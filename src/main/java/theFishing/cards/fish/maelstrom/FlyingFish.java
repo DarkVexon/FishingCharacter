@@ -19,8 +19,7 @@ public class FlyingFish extends AbstractFishCard {
     // intellij stuff skill, self, , , , , , 
 
     public FlyingFish() {
-        super(ID, 0, CardType.SKILL, CardTarget.SELF);
-        exhaust = true;
+        super(ID, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

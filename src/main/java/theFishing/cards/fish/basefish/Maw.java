@@ -14,9 +14,8 @@ public class Maw extends AbstractFishCard {
     // intellij stuff attack, enemy, 4, , , , , 
 
     public Maw() {
-        super(ID, 0, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID,  CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 4;
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

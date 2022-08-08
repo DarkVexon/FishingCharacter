@@ -1,51 +1,33 @@
 package theFishing.cards.fish.maelstrom;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.orbs.Lightning;
 import theFishing.cards.fish.AbstractFishCard;
-import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class Jellyfish extends AbstractFishCard {
     public final static String ID = makeID("Jellyfish");
     // intellij stuff skill, enemy, , , , , 4, 2
 
     public Jellyfish() {
-        super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 3;
-        exhaust = true;
+        super(ID, CardType.SKILL, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new LambdaPower("Zapped", AbstractPower.PowerType.DEBUFF, false, m, magicNumber) {
-
-            @Override
-            public int onAttacked(DamageInfo info, int damageAmount) {
-                if (info.type == DamageInfo.DamageType.NORMAL) {
-                    flash();
-                    addToTop(new LoseHPAction(this.owner, (AbstractCreature)null, this.amount));
-                }
-                return damageAmount;
-            }
-
-            @Override
-            public void updateDescription() {
-                description = "After receiving attack damage, lose #b" + amount + " HP.";
-            }
-        });
+        atb(new IncreaseMaxOrbAction(1));
+        for (int i = 0; i < magicNumber; i++)
+            atb(new ChannelAction(new Lightning()));
         atb(new DrawCardAction(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

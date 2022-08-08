@@ -14,9 +14,8 @@ public class Octopus extends AbstractFishCard {
     // intellij stuff skill, none, special, , , , , 2, 1
 
     public Octopus() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
+        super(ID,  AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
         baseMagicNumber = magicNumber = 2;
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -17,10 +17,8 @@ public class Starfish extends AbstractFishCard {
     // intellij stuff skill, enemy, special, , , , , 2, 1
 
     public Starfish() {
-        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
+        super(ID,  AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
-        exhaust = true;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

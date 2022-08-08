@@ -17,9 +17,8 @@ public class Piranha extends AbstractFishCard {
     // intellij stuff atack, enemy, special, 5, 4, , , , 
 
     public Piranha() {
-        super(ID, 0, AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ENEMY);
+        super(ID,  AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ENEMY);
         baseDamage = 4;
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

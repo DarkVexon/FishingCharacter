@@ -28,13 +28,6 @@
     "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward. NL If you already have that #yQuest in progress, draw a card instead."
   },
   {
-    "PROPER_NAME": "Zapped",
-    "NAMES": [
-      "zapped"
-    ],
-    "DESCRIPTION": "A Zapped foe loses HP each time it is attacked."
-  },
-  {
     "PROPER_NAME": "Foil",
     "NAMES": [
       "foil"

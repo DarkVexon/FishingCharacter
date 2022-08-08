@@ -301,7 +301,7 @@
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",
-    "DESCRIPTION": "Apply !M! ${ModID}:Zapped. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Gain 1 Orb Slot. NL Channel !M! Lightning. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:TheWhale": {
     "NAME": "The Whale",
@@ -309,7 +309,7 @@
   },
   "${ModID}:Swordfish": {
     "NAME": "Swordfish",
-    "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
@@ -401,7 +401,7 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL If you draw a ${ModID}:Foil card, repeat this."
   },
   "${ModID}:ShimmeringShank": {
-    "NAME": "Shimmering Shank",
+    "NAME": "Shimmering Shield",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you play a ${ModID}:Foil card this turn, add a *Shiv into your hand."
   },
   "${ModID}:MaybeLater": {
@@ -436,5 +436,17 @@
   "${ModID}:Pinball": {
     "NAME": "Pinball",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
+  },
+  "${ModID}:Blooper": {
+    "NAME": "Blooper",
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:Starfy": {
+    "NAME": "Starfy",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage to ALL enemies. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:CeramicFish": {
+    "NAME": "Ceramic Fish",
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Exhaust."
   }
 }

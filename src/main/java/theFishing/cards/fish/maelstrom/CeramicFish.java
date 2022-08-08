@@ -7,23 +7,23 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
 
-public class Swordfish extends AbstractFishCard {
-    public final static String ID = makeID("Swordfish");
-    // intellij stuff attack, enemy, 7, 2, , , , 
+public class CeramicFish extends AbstractFishCard {
+    public static final String ID = makeID("CeramicFish");
 
-    public Swordfish() {
-        super(ID,  CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 11;
+    public CeramicFish() {
+        super(ID, CardType.ATTACK, CardTarget.ALL);
+        baseBlock = 5;
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        atb(new DrawCardAction(1));
+        blck();
+        addToBot(new DrawCardAction(1));
     }
 
+    @Override
     public void upp() {
-        upgradeDamage(4);
+        upgradeBlock(3);
     }
 }
