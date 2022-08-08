@@ -31,9 +31,11 @@ public class Supernova extends AbstractFishingCard {
             public void update() {
                 isDone = true;
                 int x = 0;
-                for (AbstractCard q : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-                    if (FoilPatches.isFoil(q)) {
-                        x += 1;
+                for (int i = 0; i < AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 2; i++) {
+                    if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1 >= i) {
+                        if (FoilPatches.isFoil(AbstractDungeon.actionManager.cardsPlayedThisTurn.get(i))) {
+                            x += 1;
+                        }
                     }
                 }
                 for (int i = 0; i < x; i++) {

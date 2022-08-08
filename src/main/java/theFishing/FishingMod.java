@@ -119,7 +119,7 @@ public class FishingMod implements
                 CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheFishing.Enums.THE_FISHING);
 
         BaseMod.addPotion(OceanInAJar.class, Color.BLUE.cpy(), Color.SKY.cpy(), null, OceanInAJar.POTION_ID, TheFishing.Enums.THE_FISHING);
-        BaseMod.addPotion(StarlightSoda.class, Color.BLACK.cpy(), Color.YELLOW.cpy(), null, StarlightSoda.POTION_ID, TheFishing.Enums.THE_FISHING);
+        BaseMod.addPotion(StarlightSoda.class, Color.YELLOW.cpy(), Color.BLACK.cpy(), null, StarlightSoda.POTION_ID, TheFishing.Enums.THE_FISHING);
         BaseMod.addPotion(CarePackage.class, Color.CORAL.cpy(), Color.GRAY.cpy(), null, CarePackage.POTION_ID, TheFishing.Enums.THE_FISHING);
     }
 
@@ -238,6 +238,4 @@ public class FishingMod implements
     public void receivePostUpdate() {
         time += Gdx.graphics.getDeltaTime();
     }
-
-    public static int bossPreHpLoss = 0;
 }

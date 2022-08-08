@@ -69,7 +69,7 @@
     "NAME": "Lucky Ring",
     "FLAVOR": "The eye blinks just when you start to look away.",
     "DESCRIPTIONS": [
-      "At the start of turn #b2, draw #b1 card and gain [E] [E] ."
+      "At the start of your 2nd turn, draw #b1 card and gain [E] [E] ."
     ]
   },
   "${ModID}:BoosterBox": {

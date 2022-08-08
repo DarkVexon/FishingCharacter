@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.cards.tempCards.Smite;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -32,6 +33,8 @@ public class CarePackage extends AbstractPotion {
     public void initializeData() {
         potency = getPotency();
         description = "Add #ySmite, #ySafety and a #yShiv into your hand. Heal #b" + potency + " HP.";
+        tips.clear();
+        tips.add(new PowerTip(name, description));
     }
 
     @Override

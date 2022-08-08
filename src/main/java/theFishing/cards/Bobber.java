@@ -38,7 +38,6 @@ public class Bobber extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeSecondMagic(2);
-        upgradeMagicNumber(1);
+        upgradeSecondMagic(3);
     }
 }

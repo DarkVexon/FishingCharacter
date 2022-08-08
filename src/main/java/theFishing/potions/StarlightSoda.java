@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -29,6 +30,8 @@ public class StarlightSoda extends AbstractPotion {
     public void initializeData() {
         potency = getPotency();
         description = "Remove your #yWeak, #yVulnerable, and #yFrail. #yScry #b" + potency + ".";
+        tips.clear();
+        tips.add(new PowerTip(name, description));
     }
 
     @Override

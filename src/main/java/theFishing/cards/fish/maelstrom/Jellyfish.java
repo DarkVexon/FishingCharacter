@@ -16,7 +16,7 @@ public class Jellyfish extends AbstractFishCard {
     // intellij stuff skill, enemy, , , , , 4, 2
 
     public Jellyfish() {
-        super(ID, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
