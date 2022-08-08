@@ -64,8 +64,8 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     private static AbstractCard returnRandomMaelstromFish() {
         if (maelstromFishList == null) {
             maelstromFishList = new LinkedHashMap<>();
-            maelstromFishList.put(CeramicFish.ID, 20);
-            maelstromFishList.put(Maw.ID, 16);
+            maelstromFishList.put(CeramicFish.ID, 18);
+            maelstromFishList.put(Maw.ID, 18);
             maelstromFishList.put(Swordfish.ID, 10);
             maelstromFishList.put(Hammerhead.ID, 10);
             maelstromFishList.put(Jellyfish.ID, 10);
