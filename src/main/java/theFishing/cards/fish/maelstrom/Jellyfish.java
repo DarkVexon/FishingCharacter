@@ -21,7 +21,7 @@ public class Jellyfish extends AbstractFishCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new IncreaseMaxOrbAction(1));
+        atb(new IncreaseMaxOrbAction(magicNumber));
         for (int i = 0; i < magicNumber; i++)
             atb(new ChannelAction(new Lightning()));
         atb(new DrawCardAction(1));

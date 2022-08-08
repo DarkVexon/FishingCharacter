@@ -9,8 +9,7 @@
   },
   "${ModID}:Boot": {
     "NAME": "Boot",
-    "DESCRIPTION": "Draw !M! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Exhaust."
   },
   "${ModID}:Guppy": {
     "NAME": "Guppy",
@@ -223,8 +222,8 @@
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
-    "DESCRIPTION": "Triple the effects of ALL current ${ModID}:Fish cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Quadruple the effects of ALL current ${ModID}:Fish cards. NL Exhaust."
+    "DESCRIPTION": "Double the effects of ALL current ${ModID}:Fish cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the effects of ALL current ${ModID}:Fish cards. NL Exhaust."
   },
   "${ModID}:GoneFishing": {
     "NAME": "Gone Fishing",
@@ -286,8 +285,7 @@
   },
   "${ModID}:Eel": {
     "NAME": "Eel",
-    "DESCRIPTION": "Gain [E]. NL Draw 1 card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "{@@}Gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|>4=!M! [E]}. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
@@ -296,12 +294,11 @@
   },
   "${ModID}:FlyingFish": {
     "NAME": "Flying Fish",
-    "DESCRIPTION": "Take 50% less damage for !M! turn. NL Draw 1 card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Take 50% less damage for !M! turns. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "{@@}Take 50% less damage for !M! turn{!M!|>1=s}. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",
-    "DESCRIPTION": "Gain 1 Orb Slot. NL Channel !M! Lightning. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Orb Slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:TheWhale": {
     "NAME": "The Whale",
@@ -318,11 +315,6 @@
   "${ModID}:FreeDrinks": {
     "NAME": "Free Drinks",
     "DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust. NL When you obtain this, obtain a random Potion."
-  },
-  "${ModID}:CrystallineConfluence": {
-    "NAME": "Crystal Confluence",
-    "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle X+1 ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust."
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",

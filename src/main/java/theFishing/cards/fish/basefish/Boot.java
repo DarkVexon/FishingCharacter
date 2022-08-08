@@ -24,6 +24,5 @@ public class Boot extends AbstractFishCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        uDesc();
     }
 }
