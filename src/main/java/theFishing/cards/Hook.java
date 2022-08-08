@@ -1,11 +1,13 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.shuffleIn;
 
 public class Hook extends AbstractFishingCard {
@@ -15,18 +17,16 @@ public class Hook extends AbstractFishingCard {
     public Hook() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        for (int i = 0; i < magicNumber; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
-        }
+        shuffleIn(AbstractFishCard.returnRandomFish());
+        if (upgraded) atb(new MakeTempCardInDiscardAction(AbstractFishCard.returnRandomFish(), 1));
     }
 
     public void upp() {
         upgradeDamage(1);
-        upgradeMagicNumber(1);
+        uDesc();
     }
 }

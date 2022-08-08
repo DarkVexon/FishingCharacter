@@ -250,7 +250,8 @@
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle 1 ${ModID}:Fish into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle 1 ${ModID}:Fish into your draw and discard piles."
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
@@ -298,7 +299,7 @@
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",
-    "DESCRIPTION": "Gain !M! Orb Slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "{@@}Gain !M! Orb Slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:TheWhale": {
     "NAME": "The Whale",
@@ -415,7 +416,7 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "If the first card you play each turn is... NL Rare: Gain 4 Vigor. NL ${ModID}:Foil: Gain 1 Strength."
+    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 4 Vigor."
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",
@@ -460,10 +461,6 @@
   "${ModID}:LastDitchEffort": {
     "NAME": "Last Ditch Effort",
     "DESCRIPTION": "Deal !D! damage. NL If your HP is below 50%, deal !D! damage. NL If your HP is below 33%, deal !D! damage."
-  },
-  "${ModID}:PlannedObsolescence": {
-    "NAME": "Planned Obsolescence",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL The act's Boss loses !M! HP. NL Exhaust."
   },
   "${ModID}:CardboardBox": {
     "NAME": "Cardboard Box",

@@ -16,8 +16,8 @@ public class Blooper extends AbstractFishCard {
     public static final String ID = makeID("Blooper");
 
     public Blooper() {
-        super(ID, CardType.SKILL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 8;
+        super(ID, CardType.SKILL, CardTarget.ALL_ENEMY);
+        baseMagicNumber = magicNumber = 7;
     }
 
     @Override

@@ -47,6 +47,5 @@ public class FlyingFish extends AbstractFishCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        uDesc();
     }
 }

@@ -23,7 +23,7 @@ public class TheTerribleTwos extends AbstractQuest {
 
     @Override
     public String getDescription() {
-        return "#yQuest: Play #b" + goal + " 2-cost cards. NL #yReward: Gain #b22 #yBlock.";
+        return "#yQuest: Play #b" + goal + " 2-cost cards. NL #yReward: Gain #b12 #yBlock.";
     }
 
     @Override
@@ -51,6 +51,6 @@ public class TheTerribleTwos extends AbstractQuest {
 
     @Override
     public float textpadding() {
-        return 200F;
+        return 220F;
     }
 }

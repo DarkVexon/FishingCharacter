@@ -12,7 +12,7 @@ public class CeramicFish extends AbstractFishCard {
     public static final String ID = makeID("CeramicFish");
 
     public CeramicFish() {
-        super(ID, CardType.ATTACK, CardTarget.ALL);
+        super(ID, CardType.SKILL, CardTarget.SELF);
         baseBlock = 5;
     }
 

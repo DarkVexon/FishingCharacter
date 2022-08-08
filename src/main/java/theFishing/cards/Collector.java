@@ -33,23 +33,20 @@ public class Collector extends AbstractFishingCard {
 
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
-                boolean triggered = false;
-                if (card.rarity == CardRarity.RARE && !activated) {
-                    flash();
-                    applyToSelfTop(new VigorPower(owner, amount * 4));
-                    triggered = true;
-                }
                 if (FoilPatches.isFoil(card) && !activated) {
                     flash();
-                    applyToSelfTop(new StrengthPower(owner, amount));
-                    triggered = true;
+                    applyToSelf(new StrengthPower(owner, amount));
+                }
+                if (card.rarity == CardRarity.RARE && !activated) {
+                    flash();
+                    applyToSelf(new VigorPower(owner, amount * 4));
                 }
                 activated = true;
             }
 
             @Override
             public void updateDescription() {
-                description = "If the first card you play each turn is: NL Rare: Gain #b" + amount * 4 + " #yVigor. NL Foil: Gain #b" + amount + " #yStrength.";
+                description = "If the first card you play each turn is: NL #yFoil: Gain #b" + amount + " #yStrength. NL Rare: Gain #b" + amount * 4 + " #yVigor.";
             }
         });
     }
