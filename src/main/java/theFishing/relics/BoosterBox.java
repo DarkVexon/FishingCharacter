@@ -19,4 +19,9 @@ public class BoosterBox extends AbstractEasyRelic {
         AbstractDungeon.combatRewardScreen.open("Foils!");
         AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
     }
+
+    @Override
+    public boolean canSpawn() {
+        return false;
+    }
 }
