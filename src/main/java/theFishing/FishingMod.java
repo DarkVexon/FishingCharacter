@@ -25,6 +25,9 @@ import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
 import theFishing.patch.PreDrawPatch;
 import theFishing.patch.foil.FoilPatches;
+import theFishing.potions.CarePackage;
+import theFishing.potions.OceanInAJar;
+import theFishing.potions.StarlightSoda;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
 import theFishing.util.FoilSparkleHandler;
@@ -115,6 +118,10 @@ public class FishingMod implements
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new TheFishing(TheFishing.characterStrings.NAMES[1], TheFishing.Enums.THE_FISHING),
                 CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheFishing.Enums.THE_FISHING);
+
+        BaseMod.addPotion(OceanInAJar.class, Color.BLUE.cpy(), Color.SKY.cpy(), null, OceanInAJar.POTION_ID, TheFishing.Enums.THE_FISHING);
+        BaseMod.addPotion(StarlightSoda.class, Color.BLACK.cpy(), Color.YELLOW.cpy(), null, StarlightSoda.POTION_ID, TheFishing.Enums.THE_FISHING);
+        BaseMod.addPotion(CarePackage.class, Color.CORAL.cpy(), Color.GRAY.cpy(), null, CarePackage.POTION_ID, TheFishing.Enums.THE_FISHING);
     }
 
     @Override
