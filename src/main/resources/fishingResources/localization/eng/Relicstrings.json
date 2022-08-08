@@ -46,9 +46,30 @@
   },
   "${ModID}:Goggles": {
     "NAME": "Goggles",
-    "FLAVOR": "\"With this... we can cross it.\" - Kublai the Great",
+    "FLAVOR": "\"With these... we can cross it.\" - Kublai the Great",
     "DESCRIPTIONS": [
       "Whenever you end your turn with an empty hand, gain #b1 #yStrength."
+    ]
+  },
+  "${ModID}:Newsletter": {
+    "NAME": "Newsletter",
+    "FLAVOR": "\"Peculiar! A shimmering cube of false promises.\" - Ranwid",
+    "DESCRIPTIONS": [
+      "The merchant's cards are #y${ModID}:Foil, Upgraded, and cost #b20% less."
+    ]
+  },
+  "${ModID}:OldBobber": {
+    "NAME": "Bobber",
+    "FLAVOR": "The new one is shinier.",
+    "DESCRIPTIONS": [
+      "Every time you play #b3 #y${ModID}:Fish in a single turn, draw #b1 card."
+    ]
+  },
+  "${ModID}:LuckyRing": {
+    "NAME": "Lucky Ring",
+    "FLAVOR": "The eye blinks just when you start to look away.",
+    "DESCRIPTIONS": [
+      "At the start of turn #b2, draw #b1 card and gain [E] [E]."
     ]
   }
 }

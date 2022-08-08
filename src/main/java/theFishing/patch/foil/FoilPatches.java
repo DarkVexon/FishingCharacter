@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import theFishing.TheFishing;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.relics.Newsletter;
 import theFishing.util.Wiz;
 
 import java.util.ArrayList;
@@ -91,10 +92,19 @@ public class FoilPatches {
                 ArrayList<AbstractCard> colorlessCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
                 shopCards.addAll(coloredCards);
                 shopCards.addAll(colorlessCards);
-                for (int i = 0; i < SHOP_FOIL_CARDS; i++) {
-                    AbstractCard target = shopCards.remove(AbstractDungeon.cardRng.random(shopCards.size() - 1));
-                    makeFoil(target);
-                    target.price *= SHOP_FOIL_MARKUP;
+                if (AbstractDungeon.player.hasRelic(Newsletter.ID)) {
+                    for (AbstractCard q : shopCards) {
+                        makeFoil(q);
+                        q.upgrade();
+                        q.price *= Newsletter.SHOP_CARD_PRICE_REDUCE;
+                    }
+                }
+                else {
+                    for (int i = 0; i < SHOP_FOIL_CARDS; i++) {
+                        AbstractCard target = shopCards.remove(AbstractDungeon.cardRng.random(shopCards.size() - 1));
+                        makeFoil(target);
+                        target.price *= SHOP_FOIL_MARKUP;
+                    }
                 }
             }
         }
