@@ -20,7 +20,7 @@ public class MetricsPatches {
     private static final Logger logger = LogManager.getLogger(MetricsPatches.class);
 
     private static boolean shouldSendInfo() {
-        return AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING && !CardCrawlGame.playerName.equals("Vex") && false;
+        return AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING;
     }
 
     @SpirePatch(clz = Metrics.class, method = "sendPost", paramtypez = {String.class, String.class})
@@ -28,7 +28,7 @@ public class MetricsPatches {
 
         public static void Prefix(Metrics metrics, @ByRef String[] url, String fileName) {
             if (shouldSendInfo()) {
-                url[0] = "http://anglerstats.atwebpages.com/";
+                url[0] = "https://script.google.com/macros/s/AKfycbxyJtdr_l29Ea9LCOMld0p9eNL0ylXr9C8qUMmu7mIRJsBpERNkkwZRc6bRnMl4X_c1/exec";
             }
         }
 

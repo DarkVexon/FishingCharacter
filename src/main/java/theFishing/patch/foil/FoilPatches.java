@@ -73,7 +73,7 @@ public class FoilPatches {
     )
     public static class FoilInRewards {
         public static void Postfix(ArrayList<AbstractCard> __result) {
-            if (AbstractDungeon.cardRng.random() <= (1 / FOIL_CHANCE_REWARDS)) {
+            if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING && AbstractDungeon.cardRng.random() <= (1 / FOIL_CHANCE_REWARDS)) {
                 makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRng));
             }
         }
@@ -85,15 +85,17 @@ public class FoilPatches {
     )
     public static class FoilInShops {
         public static void Postfix(ShopScreen __instance) {
-            ArrayList<AbstractCard> shopCards = new ArrayList<>();
-            ArrayList<AbstractCard> coloredCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "coloredCards");
-            ArrayList<AbstractCard> colorlessCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
-            shopCards.addAll(coloredCards);
-            shopCards.addAll(colorlessCards);
-            for (int i = 0; i < SHOP_FOIL_CARDS; i++) {
-                AbstractCard target = shopCards.remove(AbstractDungeon.cardRng.random(shopCards.size() - 1));
-                makeFoil(target);
-                target.price *= SHOP_FOIL_MARKUP;
+            if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING) {
+                ArrayList<AbstractCard> shopCards = new ArrayList<>();
+                ArrayList<AbstractCard> coloredCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "coloredCards");
+                ArrayList<AbstractCard> colorlessCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
+                shopCards.addAll(coloredCards);
+                shopCards.addAll(colorlessCards);
+                for (int i = 0; i < SHOP_FOIL_CARDS; i++) {
+                    AbstractCard target = shopCards.remove(AbstractDungeon.cardRng.random(shopCards.size() - 1));
+                    makeFoil(target);
+                    target.price *= SHOP_FOIL_MARKUP;
+                }
             }
         }
     }
