@@ -71,5 +71,12 @@
     "DESCRIPTIONS": [
       "At the start of turn #b2, draw #b1 card and gain [E] [E]."
     ]
+  },
+  "${ModID}:BoosterBox": {
+    "NAME": "Booster Box",
+    "FLAVOR": "Packed with goodies.",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain #y${ModID}:Foil Rare, Colorless, and #pBox #pTopper card rewards."
+    ]
   }
 }

@@ -16,7 +16,6 @@ public class Strike extends AbstractFishingCard {
         baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -2,27 +2,26 @@ package theFishing.cards.boxtoppers;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DemonFormPower;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import theFishing.cards.AbstractFishingCard;
-import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class ScalingIsWin extends AbstractBoxTopper {
-    public final static String ID = makeID("ScalingIsWin");
-    // intellij stuff power, self, special, , , , , 1, 1
+public class CardboardBox extends AbstractBoxTopper {
+    public final static String ID = makeID("CardboardBox");
+    // intellij stuff power, self, , , , , 1, 
 
-    public ScalingIsWin() {
+    public CardboardBox() {
         super(ID, 1, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new DemonFormPower(p, magicNumber));
+        applyToSelf(new IntangiblePlayerPower(p, 1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(0);
     }
 }

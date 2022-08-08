@@ -23,7 +23,8 @@
   {
     "PROPER_NAME": "Quest",
     "NAMES": [
-      "quest"
+      "quest",
+      "quests"
     ],
     "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward. NL If you already have that #yQuest in progress, draw a card instead."
   },

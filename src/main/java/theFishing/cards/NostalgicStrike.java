@@ -18,6 +18,7 @@ public class NostalgicStrike extends AbstractFishingCard {
     public NostalgicStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 9;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -17,7 +17,7 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
 
     public AbstractFishCard(String cardID, AbstractCard.CardType type, AbstractCard.CardTarget target) {
         super(cardID, 0, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);
-
+        exhaust = true;
     }
 
     public static LinkedHashMap<String, Integer> weightedFishList;

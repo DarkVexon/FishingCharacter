@@ -440,5 +440,73 @@
   "${ModID}:CeramicFish": {
     "NAME": "Ceramic Fish",
     "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:ScalingIsWin": {
+    "NAME": "Scaling Is Win",
+    "DESCRIPTION": "At the start of your turn, gain !M! Strength."
+  },
+  "${ModID}:ZaHando": {
+    "NAME": "Za Hando",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust the middle card(s) of your hand."
+  },
+  "${ModID}:MidnightStrike": {
+    "NAME": "Midnight Strike",
+    "DESCRIPTION": "Can only be played if you have played exactly 11 cards this combat. NL Deal !D! damage. NL Exhaust."
+  },
+  "${ModID}:ToxicGreed": {
+    "NAME": "Toxic Greed",
+    "DESCRIPTION": "Apply !M! Poison to a random enemy. NL Repeat this process up to 5 times for every 100 Gold you have. NL Exhaust."
+  },
+  "${ModID}:LastDitchEffort": {
+    "NAME": "Last Ditch Effort",
+    "DESCRIPTION": "Deal !D! damage. NL If your HP is below 50%, deal !D! damage. NL If your HP is below 33%, deal !D! damage."
+  },
+  "${ModID}:PlannedObsolescence": {
+    "NAME": "Planned Obsolescence",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL The act's Boss loses !M! HP. NL Exhaust."
+  },
+  "${ModID}:CardboardBox": {
+    "NAME": "Cardboard Box",
+    "DESCRIPTION": "Gain 1 Intangible."
+  },
+  "${ModID}:Rebalance": {
+    "NAME": "Rebalance",
+    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies lose 1 Strength. NL Exhaustive !stslib:ex!."
+  },
+  "${ModID}:Hindsight": {
+    "NAME": "Hindsight",
+    "DESCRIPTION": "Next turn, gain !B! Block. NL Put a card from your discard pile into your hand."
+  },
+  "${ModID}:Fatigue": {
+    "NAME": "Fatigue",
+    "DESCRIPTION": "Apply 99 Weak. NL Exhaust."
+  },
+  "${ModID}:TheKeyReturns": {
+    "NAME": "The Key Returns",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Complete your ${ModID}:Quests."
+  },
+  "${ModID}:VictoryLap": {
+    "NAME": "Victory Lap",
+    "DESCRIPTION": "Whenever you shuffle your draw pile, deal !D! damage to ALL enemies."
+  },
+  "${ModID}:F": {
+    "NAME": "f",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Shuffle 1 *Skull into your draw pile."
+  },
+  "${ModID}:Skull": {
+    "NAME": "Skull",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If this card is Exhausted, lose 15 HP."
+  },
+  "${ModID}:Joust": {
+    "NAME": "Joust",
+    "DESCRIPTION": "Can only be played if no other Attacks are in your hand. NL Deal !D! damage. NL Apply !M! Weak."
+  },
+  "${ModID}:Leer": {
+    "NAME": "Leer",
+    "DESCRIPTION": "Remove all Block from the enemy. NL Deal !D! damage !M! times. NL Apply !${ModID}:m2! Vulnerable."
+  },
+  "${ModID}:HelloThere": {
+    "NAME": "Hello There",
+    "DESCRIPTION": "Innate. NL Apply !M! Weak and Vulnerable to a random enemy. NL Draw 1 card. NL Exhaust."
   }
 }

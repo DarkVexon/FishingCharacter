@@ -28,6 +28,7 @@ import theFishing.patch.foil.FoilPatches;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractEasyRelic;
 import theFishing.util.FoilSparkleHandler;
+import theFishing.util.SaveWrapper;
 import theFishing.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
@@ -43,7 +44,7 @@ public class FishingMod implements
         EditCharactersSubscriber,
         PostBattleSubscriber,
         OnStartBattleSubscriber,
-        CustomSavable<ArrayList<Boolean>>,
+        CustomSavable<SaveWrapper>,
         PostPlayerUpdateSubscriber,
         AddAudioSubscriber,
         PostInitializeSubscriber,
@@ -187,23 +188,25 @@ public class FishingMod implements
     }
 
     @Override
-    public ArrayList<Boolean> onSave() {
-        ArrayList<Boolean> whatsFoil = new ArrayList<>();
+    public SaveWrapper onSave() {
+        SaveWrapper s = new SaveWrapper();
         for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            whatsFoil.add(FoilPatches.isFoil(q));
+            s.foilCards.add(FoilPatches.isFoil(q));
         }
-        return whatsFoil;
+        s.bossPreHPLoss = bossPreHpLoss;
+        return s;
     }
 
     @Override
-    public void onLoad(ArrayList<Boolean> whatsFoil) {
-        if (whatsFoil != null)
-            for (int i = 0; i < whatsFoil.size(); i++) {
-                if (whatsFoil.get(i)) {
+    public void onLoad(SaveWrapper s) {
+        if (s != null)
+            for (int i = 0; i < s.foilCards.size(); i++) {
+                if (s.foilCards.get(i)) {
                     if (AbstractDungeon.player.masterDeck.size() > i)
                         FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
                 }
             }
+        bossPreHpLoss = s.bossPreHPLoss;
     }
 
     public static boolean isThisVoyaged(AbstractCard card) {
@@ -231,4 +234,6 @@ public class FishingMod implements
     public void receivePostUpdate() {
         time += Gdx.graphics.getDeltaTime();
     }
+
+    public static int bossPreHpLoss = 0;
 }
