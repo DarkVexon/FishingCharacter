@@ -39,7 +39,7 @@ public class FoilTooltips1 {
             }
         }
         List<TooltipInfo> tooltips = new ArrayList<>();
-        if (FoilPatches.isFoil(___card)) {
+        if (FoilPatches.isFoil(___card) && !___card.rawDescription.contains("fishing:foil")) {
             tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
         }
         if (!tooltips.isEmpty())

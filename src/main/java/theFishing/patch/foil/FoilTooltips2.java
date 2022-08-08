@@ -24,7 +24,7 @@ public class FoilTooltips2 {
     @SpireInsertPatch(locator = LocatorAfter.class, localvars = {"card", "t"})
     public static void InsertAfter(SingleCardViewPopup __instance, SpriteBatch sb, AbstractCard acard, @ByRef ArrayList<PowerTip>[] t) {
         List<TooltipInfo> tooltips = new ArrayList<>();
-        if (FoilPatches.isFoil(acard)) {
+        if (FoilPatches.isFoil(acard) && !acard.rawDescription.contains("fishing:foil")) {
             tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
         }
         if (!tooltips.isEmpty())

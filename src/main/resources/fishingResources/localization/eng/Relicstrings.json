@@ -76,7 +76,7 @@
     "NAME": "Booster Box",
     "FLAVOR": "Packed with goodies.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain #y${ModID}:Foil Rare, Colorless, and #pPromo card rewards."
+      "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil."
     ]
   }
 }
