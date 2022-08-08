@@ -7,8 +7,10 @@ import com.megacrit.cardcrawl.cards.tempCards.Safety;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.cards.tempCards.Smite;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -21,6 +23,8 @@ import static theFishing.util.Wiz.makeInHand;
 
 public class CarePackage extends AbstractPotion {
     public static final String POTION_ID = makeID("CarePackage");
+
+    private static PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
     public CarePackage() {
         super("Care Package", POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPIKY, PotionColor.ENERGY);
