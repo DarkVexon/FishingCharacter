@@ -8,6 +8,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -231,6 +232,12 @@ public class FishingMod implements
 
         if (Loader.isModLoaded("rare-cards-sparkle")) {
             FoilSparkleHandler.init();
+        }
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(OceanInAJar.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(StarlightSoda.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(CarePackage.POTION_ID);
         }
     }
 

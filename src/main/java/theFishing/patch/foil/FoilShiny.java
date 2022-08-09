@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import theFishing.FishingMod;
+import theFishing.util.ImageHelper;
 
 import java.nio.charset.StandardCharsets;
 
@@ -21,7 +22,10 @@ public class FoilShiny {
     public static class FoilCardsShine {
         private static final ShaderProgram VEX = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/vex.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
-        private static FrameBuffer fbo = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
+        private static FrameBuffer fbo = ImageHelper.createBuffer();
+        //private static FrameBuffer fbo2 = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
+        //private static SpriteBatch sb = new SpriteBatch();
+        //private static SpriteBatch sb2 = new SpriteBatch();
 
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(AbstractCard __instance, SpriteBatch spriteBatch) {
@@ -30,9 +34,7 @@ public class FoilShiny {
                 if (FoilPatches.isFoil(__instance)) //Use this to determine whether or not to apply the shader to a card instance
                 {
                     spriteBatch.end();
-                    fbo.begin();
-                    Gdx.gl.glClearColor(0, 0, 0, 0);
-                    Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+                    ImageHelper.beginBuffer(fbo);
 
                     spriteBatch.begin();
                     __instance.render(spriteBatch, false);
@@ -40,8 +42,7 @@ public class FoilShiny {
                     fbo.end();              //Draws the card to the framebuffer
 
                     spriteBatch.begin();
-                    TextureRegion t = new TextureRegion(fbo.getColorBufferTexture());
-                    t.flip(false, true);
+                    TextureRegion t = ImageHelper.getBufferTexture(fbo);
                     ShaderProgram oldShader = spriteBatch.getShader();
                     spriteBatch.setShader(vex);
                     vex.setUniformf("x_time", FishingMod.time);

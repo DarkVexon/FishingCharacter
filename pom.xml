@@ -60,6 +60,13 @@
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/2001434611/rare-cards-sparkle.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>com.megacrit.cardcrawl.mod</groupId>
+            <artifactId>WidePotions</artifactId>
+            <version>0.4</version>
+            <scope>system</scope>
+            <systemPath>${Steam.path}/workshop/content/646570/2368513093/WidePotions.jar</systemPath>
+        </dependency>
     </dependencies>
 
 
