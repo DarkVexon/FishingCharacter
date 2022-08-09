@@ -25,15 +25,8 @@ public class HelloThere extends AbstractBoxTopper {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                applyToEnemyTop(q, new VulnerablePower(q, magicNumber, false));
-                applyToEnemyTop(q, new WeakPower(q, magicNumber, false));
-            }
-        });
+        applyToEnemy(m, new WeakPower(m, magicNumber, false));
+        applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         atb(new DrawCardAction(1));
     }
 

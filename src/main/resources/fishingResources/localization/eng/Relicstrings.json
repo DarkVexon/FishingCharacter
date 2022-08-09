@@ -76,6 +76,7 @@
     "NAME": "Booster Box",
     "FLAVOR": "Over 5 promotional Foils! Can you discover them all?",
     "DESCRIPTIONS": [
+      "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. In addition, obtain a #y${ModID}:Foil #pPromo card.",
       "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. In addition, obtain a #y${ModID}:Foil #pPromo card: "
     ]
   }

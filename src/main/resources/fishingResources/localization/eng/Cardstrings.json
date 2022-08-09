@@ -513,7 +513,7 @@
   },
   "${ModID}:HelloThere": {
     "NAME": "Hello There!",
-    "DESCRIPTION": "Innate. NL Apply !M! Weak and Vulnerable. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:TheKeyReturns": {
     "NAME": "The Key Finisher",
