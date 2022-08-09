@@ -86,12 +86,12 @@ public class BoosterBox extends AbstractEasyRelic implements CustomSavable<Strin
             }
         }
 
-        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(boosterBoxBonus.makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(boosterBoxBonus.makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
     }
 
     @Override
     public String getUpdatedDescription() {
-        if (CardCrawlGame.isInARun() && boosterBoxBonus != null) {
+        if (boosterBoxBonus != null) {
             return DESCRIPTIONS[1] + FontHelper.colorString(boosterBoxBonus.name, "y") + LocalizedStrings.PERIOD;
         }
         return DESCRIPTIONS[0];
