@@ -13,6 +13,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.patch.foil.FoilPatches.isFoil;
+import static theFishing.patch.foil.FoilPatches.makeFoil;
 
 public class FullHouse extends AbstractFishingCard {
     public final static String ID = makeID("FullHouse");
@@ -38,7 +40,11 @@ public class FullHouse extends AbstractFishingCard {
         Collections.sort(sortedList, Comparator.comparing(c -> c.rarity));
         Collections.reverse(sortedList);
         addToBot(new SelectCardsAction(sortedList, "Choose a card to duplicate.", (cards) -> {
-            addToTop(new MakeTempCardInDrawPileAction(cards.get(0).makeStatEquivalentCopy(), magicNumber, true, true));
+            AbstractCard q = cards.get(0).makeStatEquivalentCopy();
+            if (!isFoil(q)) {
+                makeFoil(q);
+            }
+            addToTop(new MakeTempCardInDrawPileAction(q, magicNumber, true, true));
         }));
     }
 

@@ -256,7 +256,7 @@
   },
   "${ModID}:FullHouse": {
     "NAME": "Full House",
-    "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! copies into your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! ${ModID}:Foil copies into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Four of a Kind"
     ]
@@ -304,8 +304,8 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! ${ModID}:Foil *Star *Shards into your hand and Exhaust this.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! ${ModID}:Foil *Star *Shards into your hand and Exhaust this."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! *Star *Shards into your hand and Exhaust this.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! *Star *Shards+ into your hand and Exhaust this."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",

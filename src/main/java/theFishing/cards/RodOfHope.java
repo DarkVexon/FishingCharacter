@@ -17,16 +17,13 @@ public class RodOfHope extends AbstractFishingCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 4;
         baseMagicNumber = magicNumber = 3;
-        AbstractCard q = new StarShard();
-        FoilPatches.makeFoil(q);
-        cardsToPreview = q;
+        cardsToPreview = new StarShard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         if (isVoyaged()) {
             AbstractCard q = new StarShard();
-            FoilPatches.makeFoil(q);
             if (upgraded) q.upgrade();
             makeInHand(q, magicNumber);
             exhaust = true;
@@ -40,7 +37,6 @@ public class RodOfHope extends AbstractFishingCard {
     public void upp() {
         upgradeDamage(1);
         AbstractCard q = new StarShard();
-        FoilPatches.makeFoil(q);
         q.upgrade();
         cardsToPreview = q;
         uDesc();
