@@ -18,8 +18,8 @@ public class QuestTimeTheHarpoon extends AbstractFishingCard implements StartupC
     // intellij stuff attack, enemy, rare, 24, 6, , , , 
 
     public QuestTimeTheHarpoon() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 20;
+        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = 28;
         cardsToPreview = new TheWhale();
     }
 
@@ -29,7 +29,7 @@ public class QuestTimeTheHarpoon extends AbstractFishingCard implements StartupC
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(8);
     }
 
     @Override
