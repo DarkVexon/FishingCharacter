@@ -1,3 +1,23 @@
 {
-
+  "${ModID}:CarePackage": {
+    "NAME": "Care Package",
+    "DESCRIPTIONS": [
+      "Add #ySmite, #ySafety and a #yShiv into your hand. Heal #b",
+      " HP."
+    ]
+  },
+  "${ModID}:OceanInAJar": {
+    "NAME": "Ocean In A Jar",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " #yFish into your hand."
+    ]
+  },
+  "${ModID}:StarlightSoda": {
+    "NAME": "Starlight Soda",
+    "DESCRIPTIONS": [
+      "Remove your #yWeak, #yVulnerable, and #yFrail. #yScry #b",
+      " ."
+    ]
+  }
 }

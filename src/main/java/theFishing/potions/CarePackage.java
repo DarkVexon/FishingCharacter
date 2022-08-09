@@ -23,20 +23,19 @@ import static theFishing.util.Wiz.makeInHand;
 
 public class CarePackage extends AbstractPotion {
     public static final String POTION_ID = makeID("CarePackage");
-
     private static PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
     public CarePackage() {
-        super("Care Package", POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPIKY, PotionColor.ENERGY);
+        super(potionStrings.NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPIKY, PotionColor.ENERGY);
         potency = getPotency();
-        description = "Add #ySmite, #ySafety and a #yShiv into your hand. Heal #b" + potency + " HP.";
+        description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
         labOutlineColor = FishingMod.characterColor;
     }
 
     @Override
     public void initializeData() {
         potency = getPotency();
-        description = "Add #ySmite, #ySafety and a #yShiv into your hand. Heal #b" + potency + " HP.";
+        description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
         tips.clear();
         tips.add(new PowerTip(name, description));
     }
