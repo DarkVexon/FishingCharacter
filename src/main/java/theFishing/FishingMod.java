@@ -144,7 +144,7 @@ public class FishingMod implements
         BaseMod.addDynamicVariable(new FishInCombatVar());
         new AutoAdd(modID)
                 .packageFilter(AbstractFishingCard.class)
-                .setDefaultSeen(false)
+                .setDefaultSeen(true)
                 .cards();
     }
 

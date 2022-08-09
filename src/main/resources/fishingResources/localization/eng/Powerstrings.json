@@ -22,7 +22,7 @@
       " HP."
     ]
   },
-  "${ModID}:AnglerForm": {
+  "${ModID}:AnglerFormPower": {
     "NAME": "Angler Form",
     "DESCRIPTIONS": [
       "The first #b",

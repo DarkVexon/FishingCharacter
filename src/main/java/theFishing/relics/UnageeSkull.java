@@ -1,6 +1,8 @@
 package theFishing.relics;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAndDeckAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import theFishing.TheFishing;
 import theFishing.cards.fish.AbstractFishCard;
 
@@ -17,6 +19,7 @@ public class UnageeSkull extends AbstractEasyRelic {
     @Override
     public void atBattleStart() {
         flash();
-        atb(new MakeTempCardInDiscardAndDeckAction(AbstractFishCard.returnRandomFish()));
+        atb(new MakeTempCardInDrawPileAction(AbstractFishCard.returnRandomFish(), 1, true, true));
+        atb(new MakeTempCardInDiscardAction(AbstractFishCard.returnRandomFish(), 1));
     }
 }

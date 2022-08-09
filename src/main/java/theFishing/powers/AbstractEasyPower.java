@@ -30,8 +30,8 @@ public abstract class AbstractEasyPower extends AbstractPower {
         this.amount = amount;
         this.type = powerType;
 
-        Texture normalTexture = TexLoader.getTexture(FishingMod.modID + "Resources/images/powers/" + NAME.replaceAll("([ ])", "") + "_32.png");
-        Texture hiDefImage = TexLoader.getTexture(FishingMod.modID + "Resources/images/powers/" + NAME.replaceAll("([ ])", "") + "_84.png");
+        Texture normalTexture = TexLoader.getTexture(FishingMod.modID + "Resources/images/powers/" + ID.replaceAll(FishingMod.modID + ":", "") + "_32.png");
+        Texture hiDefImage = TexLoader.getTexture(FishingMod.modID + "Resources/images/powers/" + ID.replaceAll(FishingMod.modID + ":", "") + "_84.png");
         if (hiDefImage != null) {
             region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
             if (normalTexture != null)
