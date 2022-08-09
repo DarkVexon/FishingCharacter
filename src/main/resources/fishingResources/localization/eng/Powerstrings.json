@@ -3,7 +3,7 @@
     "NAME": "Take It Easy",
     "DESCRIPTIONS": [
       "Draw #b",
-      " fewer card each turn."
+      " fewer card each turn.",
       " fewer cards each turn."
     ]
   },
@@ -20,6 +20,14 @@
     "DESCRIPTIONS": [
       "If your #yBlock is broken this turn, ALL enemies lose #b",
       " HP."
+    ]
+  },
+  "${ModID}:AnglerForm": {
+    "NAME": "Angler Form",
+    "DESCRIPTIONS": [
+      "The first #b",
+      " times you play a card each turn, draw a card. NL #b",
+      " triggers remaining this turn."
     ]
   }
 }

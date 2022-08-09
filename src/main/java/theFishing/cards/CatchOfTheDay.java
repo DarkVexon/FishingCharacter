@@ -20,19 +20,18 @@ public class CatchOfTheDay extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower("Catch of the Day", AbstractPower.PowerType.BUFF, false, p, 1) {
+        applyToSelf(new LambdaPower(makeID("CatchOfTheDayPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
             @Override
             public void atEndOfTurn(boolean isPlayer) {
                 flash();
                 for (int i = 0; i < amount; i++) {
-                    //TODO: Same VFX/SFX as Cast Line
                     atb(new MakeTempCardInDrawPileAction(AbstractFishCard.returnRandomFish(), 1, true, true));
                 }
             }
 
             @Override
             public void updateDescription() {
-                description = "At the end of your turn, shuffle #b" + amount + " #yFish into your draw pile.";
+                description = cardStrings.EXTENDED_DESCRIPTION[0] + amount + cardStrings.EXTENDED_DESCRIPTION[1];
             }
         });
     }

@@ -19,6 +19,8 @@ import static theFishing.patch.foil.FoilPatches.makeFoil;
 public class BoosterBox extends AbstractEasyRelic {
     public static final String ID = makeID("BoosterBox");
 
+    private AbstractCard boosterBoxBonus;
+
     public BoosterBox() {
         super(ID, RelicTier.SHOP, LandingSound.SOLID, TheFishing.Enums.FISHING_COLOR);
     }

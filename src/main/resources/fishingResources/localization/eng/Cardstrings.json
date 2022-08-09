@@ -109,7 +109,12 @@
   "${ModID}:CatchOfTheDay": {
     "NAME": "Catch of the Day",
     "DESCRIPTION": "At the end of your turn, shuffle a ${ModID}:Fish into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, shuffle a ${ModID}:Fish into your draw pile."
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, shuffle a ${ModID}:Fish into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Catch of the Day",
+      "At the end of your turn, shuffle #b",
+      " #yFish into your draw pile."
+    ]
   },
   "${ModID}:Baited": {
     "NAME": "Baited",
@@ -505,5 +510,21 @@
   "${ModID}:CeramicFish": {
     "NAME": "Ceramic Fish",
     "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:HelloThere": {
+    "NAME": "Hello There!",
+    "DESCRIPTION": "Innate. NL Apply !M! Weak and Vulnerable. NL Draw 1 card. NL Exhaust."
+  },
+  "${ModID}:TheKeyReturns": {
+    "NAME": "The Key Finisher",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Complete your ${ModID}:Quests."
+  },
+  "${ModID}:Hindsight": {
+    "NAME": "Hindsight",
+    "DESCRIPTION": "Next turn, gain !B! Block. NL Return 1 card from your discard pile to your hand."
+  },
+  "${ModID}:ScalingIsWin": {
+    "NAME": "Scaling Is Win",
+    "DESCRIPTION": "At the start of your turn, gain !M! Strength."
   }
 }

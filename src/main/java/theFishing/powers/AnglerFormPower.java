@@ -3,15 +3,19 @@ package theFishing.powers;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 
 import static theFishing.FishingMod.makeID;
 
 public class AnglerFormPower extends AbstractEasyPower {
     public static String ID = makeID(AnglerFormPower.class.getSimpleName());
 
+    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
+
     public AnglerFormPower(int amount) {
-        super("Angler Form", PowerType.BUFF, false, AbstractDungeon.player, amount);
+        super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
         isTwoAmount = true;
         amount2 = amount;
         updateDescription();
@@ -42,6 +46,6 @@ public class AnglerFormPower extends AbstractEasyPower {
 
     @Override
     public void updateDescription() {
-        description = "The first #b" + amount + " times you play a card each turn, draw a card. NL #b" + amount2 + " triggers remaining this turn.";
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount2 + powerStrings.DESCRIPTIONS[2];
     }
 }

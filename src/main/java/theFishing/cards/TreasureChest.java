@@ -16,8 +16,8 @@ public class TreasureChest extends AbstractFishingCard {
     // intellij stuff skill, self, uncommon, , , , , 20, 10
 
     public TreasureChest() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 20;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 10;
         isEthereal = true;
         exhaust = true;
         tags.add(CardTags.HEALING);
@@ -30,6 +30,6 @@ public class TreasureChest extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(10);
+        upgradeMagicNumber(5);
     }
 }
