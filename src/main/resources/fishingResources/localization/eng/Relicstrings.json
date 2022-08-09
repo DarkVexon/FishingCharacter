@@ -19,7 +19,7 @@
     "NAME": "Broken Oar",
     "FLAVOR": "Most trips to the Spire are one-way.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. Draw #b1 fewer card each turn."
+      "Gain [E] at the start of your turn. NL Draw #b1 fewer card each turn."
     ]
   },
   "${ModID}:MaelstromAnkh": {
@@ -76,8 +76,8 @@
     "NAME": "Booster Box",
     "FLAVOR": "Over 5 promotional Foils! Can you discover them all?",
     "DESCRIPTIONS": [
-      "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. In addition, obtain a #y${ModID}:Foil #pPromo card.",
-      "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. In addition, obtain a #y${ModID}:Foil #pPromo card: "
+      "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. NL In addition, obtain a #y${ModID}:Foil #pPromo card.",
+      "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. NL In addition, obtain a #y${ModID}:Foil #pPromo card: "
     ]
   }
 }

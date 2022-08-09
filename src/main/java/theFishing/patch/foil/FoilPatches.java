@@ -132,7 +132,7 @@ public class FoilPatches {
         private static Color oldColor;
 
         public static void Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
-            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR) {
+            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR && __instance.color != AbstractCard.CardColor.COLORLESS) {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
@@ -141,7 +141,7 @@ public class FoilPatches {
         }
 
         public static void Postfix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
-            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR) {
+            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR && __instance.color != AbstractCard.CardColor.COLORLESS) {
                 sb.setShader(oldShader);
                 ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", oldColor);
             }

@@ -44,10 +44,7 @@ public class FoilShiny {
                     ShaderProgram oldShader = spriteBatch.getShader();
                     spriteBatch.setShader(vex);
                     vex.setUniformf("x_time", FishingMod.time);
-                    spriteBatch.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     spriteBatch.draw(t, 0, 0, 0, 0, fbo.getWidth(), fbo.getHeight(), 1f, 1f, 0f);
-                    spriteBatch.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
-                    //Draws the framebuffer with the shader applied (so the shader is applied uniformly to the card as its made up of different parts)
                     spriteBatch.end();
                     spriteBatch.setShader(oldShader);
                     spriteBatch.begin();
