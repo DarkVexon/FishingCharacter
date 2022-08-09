@@ -14,10 +14,7 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theFishing.TheFishing;
-import theFishing.cards.boxtoppers.HelloThere;
-import theFishing.cards.boxtoppers.Hindsight;
-import theFishing.cards.boxtoppers.ScalingIsWin;
-import theFishing.cards.boxtoppers.TheKeyReturns;
+import theFishing.cards.boxtoppers.*;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.util.Wiz;
 
@@ -44,6 +41,7 @@ public class BoosterBox extends AbstractEasyRelic implements CustomSavable<Strin
                 possibleBoosters.add(Hindsight.ID);
                 possibleBoosters.add(ScalingIsWin.ID);
                 possibleBoosters.add(TheKeyReturns.ID);
+                possibleBoosters.add(ZaHando.ID);
             }
 
             boosterBoxBonus = CardLibrary.getCard(Wiz.getRandomItem(possibleBoosters, AbstractDungeon.cardRng)).makeCopy();

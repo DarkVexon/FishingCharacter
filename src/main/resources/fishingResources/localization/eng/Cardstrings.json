@@ -526,5 +526,9 @@
   "${ModID}:ScalingIsWin": {
     "NAME": "Scaling Is Win",
     "DESCRIPTION": "At the start of your turn, gain !M! Strength."
+  },
+  "${ModID}:ZaHando": {
+    "NAME": "Za Hando",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust the middle card(s) of your hand."
   }
 }
