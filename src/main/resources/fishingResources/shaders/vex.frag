@@ -25,19 +25,19 @@ void main() {
     float val = magnitude * v_texCoords.x + 1.0; //Equation of the line y=mx+c
 
                     //(s)    (1)  (2)
-    float tmp = mod(x_time / 5.0, 1.5); //(1)Use this value to slow down the line (higher = slower) | (2)Changing this affects the range of y-values the line covers
+    float tmp = mod(x_time / 3.0, 1.5); //(1)Use this value to slow down the line (higher = slower) | (2)Changing this affects the range of y-values the line covers
 
     val = val - tmp;
 
+    /*
     if (val - v_texCoords.y < 0.03 && val - v_texCoords.y > -0.03) //If Pixel within 0.03 of line then:
     {
-//      outputColor.rgb = outputColor.rgb + 0.2;    //Make the pixel whiter
+        outputColor.rgb = outputColor.rgb + 0.2;    //Make the pixel whiter
         0.2*smoothstep(val - tmp, val - tmp - 0.03, 0.0);
         outputColor.rgb = outputColor.rgb + (0.1 * (abs(val - v_texCoords.y) / 0.03));
     }
-/*
+    */
 
-*/
     if (val - v_texCoords.y < 0.03 && val - v_texCoords.y > -0.03)
     {
         outputColor.r = outputColor.r + 0.1;

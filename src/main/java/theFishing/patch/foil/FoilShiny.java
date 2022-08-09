@@ -2,7 +2,6 @@ package theFishing.patch.foil;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
@@ -31,22 +30,23 @@ public class FoilShiny {
         public static SpireReturn<Void> Prefix(AbstractCard __instance, SpriteBatch spriteBatch) {
             ShaderProgram vex = VEX;
             if (!Settings.hideCards) {
-                if (FoilPatches.isFoil(__instance)) //Use this to determine whether or not to apply the shader to a card instance
-                {
+                if (FoilPatches.isFoil(__instance)) {
                     spriteBatch.end();
                     ImageHelper.beginBuffer(fbo);
 
                     spriteBatch.begin();
                     __instance.render(spriteBatch, false);
                     spriteBatch.end();
-                    fbo.end();              //Draws the card to the framebuffer
+                    fbo.end();
 
                     spriteBatch.begin();
                     TextureRegion t = ImageHelper.getBufferTexture(fbo);
                     ShaderProgram oldShader = spriteBatch.getShader();
                     spriteBatch.setShader(vex);
                     vex.setUniformf("x_time", FishingMod.time);
+                    spriteBatch.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     spriteBatch.draw(t, 0, 0, 0, 0, fbo.getWidth(), fbo.getHeight(), 1f, 1f, 0f);
+                    spriteBatch.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     //Draws the framebuffer with the shader applied (so the shader is applied uniformly to the card as its made up of different parts)
                     spriteBatch.end();
                     spriteBatch.setShader(oldShader);
