@@ -47,5 +47,15 @@
       "#yQuest: Play #b",
       " 2-cost cards. NL #yReward: Gain #b12 #yBlock."
     ]
+  },
+  "${ModID}:SillyFishSizes": {
+    "TEXT": [
+      "Leviathan ",
+      "Gargantuan ",
+      "Gigantic ",
+      "Huge ",
+      "Bigger ",
+      "Big "
+    ]
   }
 }

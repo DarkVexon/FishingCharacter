@@ -104,4 +104,8 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     public List<String> getCardDescriptors() {
         return Collections.singletonList(uiStrings.TEXT[0]);
     }
+
+    public void trickyInitializeTitle() {
+        initializeTitle();
+    }
 }

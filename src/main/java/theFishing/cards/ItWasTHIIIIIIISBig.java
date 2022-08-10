@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.ItWasTHIIIIIIISBigAction;
@@ -10,7 +11,7 @@ public class ItWasTHIIIIIIISBig extends AbstractFishingCard {
     public final static String ID = makeID(ItWasTHIIIIIIISBig.class.getSimpleName());
 
     public ItWasTHIIIIIIISBig() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         magicNumber = baseMagicNumber = 2;
         exhaust = true;
     }
@@ -25,7 +26,6 @@ public class ItWasTHIIIIIIISBig extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        uDesc();
+        upgradeBaseCost(1);
     }
 }

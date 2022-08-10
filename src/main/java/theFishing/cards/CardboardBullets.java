@@ -45,6 +45,11 @@ public class CardboardBullets extends AbstractFishingCard {
         this.initializeDescription();
     }
 
+    @Override
+    public void onMoveToDiscard() {
+        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION);
+        initializeDescription();
+    }
 
     public void upp() {
         uDesc();
