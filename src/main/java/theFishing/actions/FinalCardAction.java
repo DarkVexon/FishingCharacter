@@ -78,7 +78,7 @@ public class FinalCardAction extends AbstractGameAction {
             if ((AbstractDungeon.getCurrRoom()).monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
                 AbstractCard q = StSLib.getMasterDeckEquivalent(toUp);
-                if (q != null) {
+                if (q != null && !q.upgraded) {
                     q.upgrade();
                     float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
                     float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;

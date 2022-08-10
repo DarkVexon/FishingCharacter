@@ -15,7 +15,7 @@ public class TheFinalCard extends AbstractFishingCard {
     // intellij stuff attack, all_enemy, rare, 32, 8, , , , 
 
     public TheFinalCard() {
-        super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 32;
         isMultiDamage = true;
     }
