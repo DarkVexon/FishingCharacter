@@ -18,7 +18,7 @@ public class HelloThere extends AbstractBoxTopper {
     // intellij stuff skill, all_enemy, , , , , 1, 1
 
     public HelloThere() {
-        super(ID, 0, CardType.SKILL, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
         isInnate = true;
         exhaust = true;
