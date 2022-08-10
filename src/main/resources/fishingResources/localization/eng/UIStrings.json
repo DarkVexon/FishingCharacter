@@ -57,5 +57,10 @@
       "Bigger ",
       "Big "
     ]
+  },
+  "${ModID}:KeywordsForCode": {
+    "TEXT": [
+      "${ModID}:Foil"
+    ]
   }
 }

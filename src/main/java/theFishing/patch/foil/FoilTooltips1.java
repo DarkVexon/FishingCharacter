@@ -6,10 +6,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -26,6 +28,8 @@ public class FoilTooltips1 {
 
     private static float BOX_EDGE_H = 0.0F;
 
+    public static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(makeID("KeywordsForCode"));
+
     public static void Prefix(float x, @ByRef float[] y, SpriteBatch sb, ArrayList<String> keywords, AbstractCard ___card) {
         if (BODY_TEXT_WIDTH == 0.0F)
             getConstants();
@@ -39,7 +43,7 @@ public class FoilTooltips1 {
             }
         }
         List<TooltipInfo> tooltips = new ArrayList<>();
-        if (FoilPatches.isFoil(___card) && !___card.rawDescription.contains("fishing:foil")) {
+        if (FoilPatches.isFoil(___card) && !___card.rawDescription.contains(UI_STRINGS.TEXT[0])) {
             tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
         }
         if (!tooltips.isEmpty())
@@ -60,7 +64,7 @@ public class FoilTooltips1 {
             cardField.setAccessible(true);
             AbstractCard acard = (AbstractCard) cardField.get(null);
             List<TooltipInfo> tooltips = new ArrayList<>();
-            if (FoilPatches.isFoil(acard)) {
+            if (FoilPatches.isFoil(acard) && !acard.rawDescription.contains(UI_STRINGS.TEXT[0])) {
                 tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
             }
             if (!tooltips.isEmpty())

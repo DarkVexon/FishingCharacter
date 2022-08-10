@@ -12,7 +12,6 @@ import javassist.CannotCompileException;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,7 +23,7 @@ public class FoilTooltips2 {
     @SpireInsertPatch(locator = LocatorAfter.class, localvars = {"card", "t"})
     public static void InsertAfter(SingleCardViewPopup __instance, SpriteBatch sb, AbstractCard acard, @ByRef ArrayList<PowerTip>[] t) {
         List<TooltipInfo> tooltips = new ArrayList<>();
-        if (FoilPatches.isFoil(acard) && !acard.rawDescription.contains("fishing:foil")) {
+        if (FoilPatches.isFoil(acard) && !acard.rawDescription.contains(FoilTooltips1.UI_STRINGS.TEXT[0])) {
             tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
         }
         if (!tooltips.isEmpty())
