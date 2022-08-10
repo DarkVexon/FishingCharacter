@@ -31,7 +31,7 @@ public class CatchOfTheDay extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = cardStrings.EXTENDED_DESCRIPTION[0] + amount + cardStrings.EXTENDED_DESCRIPTION[1];
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2];
             }
         });
     }
