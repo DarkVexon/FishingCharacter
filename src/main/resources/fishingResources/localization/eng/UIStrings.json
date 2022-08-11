@@ -60,7 +60,13 @@
   },
   "${ModID}:KeywordsForCode": {
     "TEXT": [
-      "${ModID}:Foil"
+      "${ModID}:Foil",
+      "TRANSLATION NOTE: Make sure this is the same as implementations of the Foil keyword in cards."
+    ]
+  },
+  "${ModID}:QuestLog": {
+    "TEXT": [
+      "Quest Log"
     ]
   }
 }

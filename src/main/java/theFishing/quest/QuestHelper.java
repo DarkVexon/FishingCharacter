@@ -3,13 +3,17 @@ package theFishing.quest;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.quest.quests.AbstractQuest;
 import theFishing.util.ImageHelper;
 
 import java.util.ArrayList;
+
+import static theFishing.FishingMod.makeID;
 
 public class QuestHelper {
     public static ArrayList<AbstractQuest> quests = new ArrayList<>();
@@ -17,6 +21,8 @@ public class QuestHelper {
 
     public static final float POSITION_X = 10F * Settings.scale;
     public static final float POSITION_Y = 300F * Settings.scale;
+
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("QuestLog"));
 
     static {
         for (int i = 0; i < 6; i++) {
@@ -28,7 +34,7 @@ public class QuestHelper {
         FontHelper.renderFontLeftTopAligned(
                 sb,
                 FontHelper.tipHeaderFont,
-                "Quest Log",
+                uiStrings.TEXT[0],
                 POSITION_X,
                 Settings.HEIGHT - POSITION_Y + (50 * Settings.scale),
                 Settings.GOLD_COLOR
