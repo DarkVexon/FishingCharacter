@@ -44,7 +44,7 @@ public class ShimmeringShank extends AbstractFishingCard {
 
             @Override
             public void updateDescription() {
-                description = cardStrings.EXTENDED_DESCRIPTION[0] + amount + (amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[1] : cardStrings.EXTENDED_DESCRIPTION[2]) + cardStrings.EXTENDED_DESCRIPTION[3];
+                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + (amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[2] : cardStrings.EXTENDED_DESCRIPTION[3]) + cardStrings.EXTENDED_DESCRIPTION[4];
             }
         });
     }

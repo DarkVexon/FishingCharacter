@@ -96,15 +96,15 @@
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
-    "DESCRIPTION": "Deal damage equal to the total cost of cards in your hand. NL Cost X counts as 4.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to the total cost of cards in your hand + 3. NL Cost X counts as 4.",
+    "DESCRIPTION": "Deal damage equal to the total cost of cards in your hand. NL X-cost counts as 4.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to the total cost of cards in your hand + 3. NL X-cost counts as 4.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
   },
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each Fish in your draw pile, discard pile, or hand.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each ${ModID}:Fish in your draw pile, discard pile, or hand.",
     "EXTENDED_DESCRIPTION": [
       " NL ( !${ModID}:fshhd! ${ModID}:Fish. )"
     ]
@@ -179,16 +179,16 @@
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",
-    "DESCRIPTION": "After you play a cost X card, gain [E].",
+    "DESCRIPTION": "After you play a X-cost card, gain [E].",
     "EXTENDED_DESCRIPTION": [
       "Reserves",
-      "After you play a cost X card, gain "
+      "After you play a X-cost card, gain "
     ]
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
-    "DESCRIPTION": "Add a random cost X card from another class into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a random cost X card from another class into your hand. NL Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Add a random X-cost card from another class into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a random X-cost card from another class into your hand. NL Gain [E]. NL Exhaust."
   },
   "${ModID}:Splash": {
     "NAME": "Splash",
@@ -230,7 +230,7 @@
   },
   "${ModID}:Steal": {
     "NAME": "Steal",
-    "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
+    "DESCRIPTION": "If the enemy has Strength, steal up to !M! of it. NL Exhaust."
   },
   "${ModID}:SetupButBetter": {
     "NAME": "Setup but Better",
@@ -242,8 +242,8 @@
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
-    "DESCRIPTION": "Double the effects of ALL current ${ModID}:Fish cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the effects of ALL current ${ModID}:Fish cards. NL Exhaust."
+    "DESCRIPTION": "Double the effects of ALL ${ModID}:Fish in your hand, draw pile, and discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the effects of ALL ${ModID}:Fish in your hand, draw pile, and discard pile. NL Exhaust."
   },
   "${ModID}:GoneFishing": {
     "NAME": "Gone Fishing",
@@ -267,7 +267,7 @@
   },
   "${ModID}:Fishbones": {
     "NAME": "Fishbones",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card in the Exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card in your Exhaust pile."
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
@@ -276,10 +276,10 @@
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
-    "DESCRIPTION": "Whenever you play a cost X card, deal !M! damage to the frontmost enemy.",
+    "DESCRIPTION": "Whenever you play a X-cost card, deal !M! damage to the frontmost enemy.",
     "EXTENDED_DESCRIPTION": [
       "Crosshairs",
-      "Whenever you play a cost X card, deal #b",
+      "Whenever you play a X-cost card, deal #b",
       " damage to the frontmost enemy."
     ]
   },
@@ -308,8 +308,8 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! *Star *Shards into your hand and Exhaust this.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! *Star *Shards+ into your hand and Exhaust this."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! *Star *Shards into your hand and Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! *Star *Shards+ into your hand and Exhaust."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -486,7 +486,7 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 4 Vigor.",
+    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL *Rare: Gain 4 Vigor.",
     "EXTENDED_DESCRIPTION": [
       "Collector",
       "If the first card you play each turn is: NL #yFoil: Gain #b",

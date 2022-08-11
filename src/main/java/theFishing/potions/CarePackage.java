@@ -26,7 +26,7 @@ public class CarePackage extends AbstractPotion {
     private static PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
     public CarePackage() {
-        super(potionStrings.NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPIKY, PotionColor.ENERGY);
+        super(potionStrings.NAME, POTION_ID, PotionRarity.RARE, PotionSize.SPIKY, PotionColor.ENERGY);
         potency = getPotency();
         description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
         labOutlineColor = FishingMod.characterColor;
