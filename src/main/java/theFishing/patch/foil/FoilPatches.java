@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import theFishing.TheFishing;
@@ -22,6 +23,7 @@ import theFishing.util.TexLoader;
 import theFishing.util.Wiz;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Shaders.fragmentShaderHSLC;
@@ -120,7 +122,8 @@ public class FoilPatches {
 
     private static final ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
     private static final Color hslcBackground = new Color(0.5F, 0.6F, 0.7F, 0.55F);
-    private static final Color hslcArt = new Color(0.66F, 0.6F, 0.5F, 0.6F);
+    //private static final Color hslcArt = new Color(0.66F, 0.6F, 0.5F, 0.6F);
+    private static HashMap<String, Color> idToFoilColors = new HashMap<>();
     private static final Color hslcCardBacks = new Color(0.66F, 0.5F, 0.575F, 0.5F);
 
     @SpirePatch(
@@ -161,7 +164,10 @@ public class FoilPatches {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", hslcArt);
+                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", idToFoilColors.computeIfAbsent(__instance.cardID, key -> {
+                    Random rng = new com.megacrit.cardcrawl.random.Random((long) __instance.cardID.hashCode());
+                    return new Color(rng.random(0F, 1F), 0.6F, 0.6F, 0.6F);
+                }));
             }
         }
 
@@ -214,7 +220,10 @@ public class FoilPatches {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = sb.getColor();
-                sb.setColor(hslcArt);
+                sb.setColor(idToFoilColors.computeIfAbsent(card.cardID, key -> {
+                    Random rng = new com.megacrit.cardcrawl.random.Random((long) card.cardID.hashCode());
+                    return new Color(rng.random(0F, 1F), 0.6F, 0.6F, 0.6F);
+                }));
             }
         }
 
