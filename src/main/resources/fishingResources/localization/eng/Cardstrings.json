@@ -537,5 +537,9 @@
   "${ModID}:ZaHando": {
     "NAME": "Za Hando",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust the middle card(s) of your hand."
+  },
+  "${ModID}:BeastSlayer": {
+    "NAME": "Beast Slayer",
+    "DESCRIPTION": "Deal !D! damage. NL In Elite combats, deal !${ModID}:sd! damage instead."
   }
 }

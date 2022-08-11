@@ -222,7 +222,7 @@ public class FoilPatches {
                 oldColor = sb.getColor();
                 sb.setColor(idToFoilColors.computeIfAbsent(card.cardID, key -> {
                     Random rng = new com.megacrit.cardcrawl.random.Random((long) card.cardID.hashCode());
-                    return new Color(rng.random(0F, 1F), 0.6F, 0.6F, 0.6F);
+                    return new Color(0.5F + (rng.random(0.25F, 0.5F) * (rng.randomBoolean() ? 1 : -1)), 0.6F, 0.6F, 0.6F);
                 }));
             }
         }
