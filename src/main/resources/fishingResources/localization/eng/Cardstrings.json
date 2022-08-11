@@ -54,7 +54,10 @@
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it's a Curse or Status, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it's a Curse or Status, gain [E] and draw a card.",
+    "EXTENDED_DESCRIPTION": [
+      "to Exhaust for Mop Up."
+    ]
   },
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
@@ -258,7 +261,8 @@
     "NAME": "Full House",
     "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! ${ModID}:Foil copies into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Four of a Kind"
+      "Four of a Kind",
+      "Choose a card to duplicate."
     ]
   },
   "${ModID}:Fishbones": {
@@ -466,7 +470,10 @@
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
     "DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand."
+    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to put into your hand."
+    ]
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",

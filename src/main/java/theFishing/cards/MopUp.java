@@ -23,7 +23,7 @@ public class MopUp extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        atb(new SelectCardsInHandAction("to Exhaust for Mop Up.", (cards) -> {
+        atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             if (cards.get(0).type == CardType.STATUS || cards.get(0).type == CardType.CURSE || cards.get(0).color == CardColor.CURSE) {
                 att(new DrawCardAction(1));
                 att(new GainEnergyAction(1));

@@ -39,7 +39,7 @@ public class FullHouse extends AbstractFishingCard {
         ArrayList<AbstractCard> sortedList = new ArrayList<>(p.drawPile.group);
         Collections.sort(sortedList, Comparator.comparing(c -> c.rarity));
         Collections.reverse(sortedList);
-        addToBot(new SelectCardsAction(sortedList, "Choose a card to duplicate.", (cards) -> {
+        addToBot(new SelectCardsAction(sortedList, cardStrings.EXTENDED_DESCRIPTION[1], (cards) -> {
             AbstractCard q = cards.get(0).makeStatEquivalentCopy();
             if (!isFoil(q)) {
                 makeFoil(q);

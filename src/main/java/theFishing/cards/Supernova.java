@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,9 +12,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import theFishing.patch.foil.FoilPatches;
 
-
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class Supernova extends AbstractFishingCard {
     public final static String ID = makeID("Supernova");
@@ -30,18 +31,16 @@ public class Supernova extends AbstractFishingCard {
             @Override
             public void update() {
                 isDone = true;
-                int x = 0;
-                for (int i = 0; i < AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 2; i++) {
-                    if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1 >= i) {
-                        if (FoilPatches.isFoil(AbstractDungeon.actionManager.cardsPlayedThisTurn.get(i))) {
-                            x += 1;
-                        }
+                int x = -1;
+                for (AbstractCard q : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
+                    if (FoilPatches.isFoil(q))
+                        x += 1;
+                }
+                if (x > 0)
+                    for (int i = 0; i < x; i++) {
+                        att(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AttackEffect.FIRE));
+                        att(new VFXAction(new ShockWaveEffect(p.hb.cX, p.hb.cY, new Color(MathUtils.random(1.0f), MathUtils.random(1.0f), MathUtils.random(1.0f), 1.0f), ShockWaveEffect.ShockWaveType.NORMAL)));
                     }
-                }
-                for (int i = 0; i < x; i++) {
-                    atb(new VFXAction(new ShockWaveEffect(p.hb.cX, p.hb.cY, new Color(MathUtils.random(1.0f), MathUtils.random(1.0f), MathUtils.random(1.0f), 1.0f), ShockWaveEffect.ShockWaveType.NORMAL)));
-                    allDmg(AttackEffect.FIRE);
-                }
             }
         });
         this.rawDescription = cardStrings.DESCRIPTION;

@@ -37,7 +37,7 @@ public class TheBackpack extends AbstractFishingCard {
         }
         Collections.sort(possCards, Comparator.comparing(c -> c.rarity));
         Collections.reverse(possCards);
-        atb(new SelectCardsAction(possCards, 1, "Choose a card to put into your hand.", (cards) -> {
+        atb(new SelectCardsAction(possCards, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             AbstractCard card = cards.get(0);
             if (AbstractDungeon.player.drawPile.group.contains(card)) {
                 AbstractDungeon.player.drawPile.moveToHand(card);
