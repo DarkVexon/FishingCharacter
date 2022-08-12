@@ -154,7 +154,6 @@ public class FoilPatches {
         }
     }
 
-    //TODO: Fix transparency
     @SpirePatch(
             clz = AbstractCard.class,
             method = "renderPortrait"

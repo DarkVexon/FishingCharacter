@@ -14,10 +14,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import theFishing.FishingMod;
 import theFishing.util.ImageHelper;
 
-import javax.print.attribute.standard.Destination;
-import java.io.File;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 
 public class FoilShiny {
     @SpirePatch(clz = AbstractCard.class, method = "render", paramtypez = SpriteBatch.class)
@@ -25,28 +22,23 @@ public class FoilShiny {
         private static final ShaderProgram VEX = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/vex.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
         private static FrameBuffer fbo = ImageHelper.createBuffer();
-        //private static FrameBuffer fbo2 = ImageHelper.createBuffer();
-        //private static SpriteBatch sb = new SpriteBatch();
-        //private static SpriteBatch sb2 = new SpriteBatch();
 
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(AbstractCard __instance, SpriteBatch spriteBatch) {
-            ShaderProgram vex = VEX;
             if (!Settings.hideCards) {
                 if (FoilPatches.isFoil(__instance)) {
                     TextureRegion t = cardToTextureRegion(__instance, spriteBatch);
                     spriteBatch.setBlendFunction(GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     ShaderProgram oldShader = spriteBatch.getShader();
-                    spriteBatch.setShader(vex);
-                    vex.setUniformf("x_time", FishingMod.time);
+                    spriteBatch.setShader(VEX);
+                    VEX.setUniformf("x_time", FishingMod.time);
                     spriteBatch.draw(t, -Settings.VERT_LETTERBOX_AMT, -Settings.HORIZ_LETTERBOX_AMT);
                     spriteBatch.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     spriteBatch.setShader(oldShader);
-                } else {
-                    __instance.render(spriteBatch, false);
+                    return SpireReturn.Return();
                 }
             }
-            return SpireReturn.Return();
+            return SpireReturn.Continue();
         }
 
         public static TextureRegion cardToTextureRegion(AbstractCard card, SpriteBatch sb) {

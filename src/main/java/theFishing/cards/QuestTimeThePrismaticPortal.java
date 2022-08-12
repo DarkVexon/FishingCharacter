@@ -25,4 +25,9 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
     public void upp() {
         upgradeBaseCost(0);
     }
+
+    @Override
+    public float getTitleFontSize() {
+        return 18F;
+    }
 }
