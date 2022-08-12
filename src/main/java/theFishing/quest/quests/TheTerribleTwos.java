@@ -18,7 +18,7 @@ public class TheTerribleTwos extends AbstractQuest {
     private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheTerribleTwos() {
-        super(ID, 3);
+        super(ID, 2);
     }
 
     @Override

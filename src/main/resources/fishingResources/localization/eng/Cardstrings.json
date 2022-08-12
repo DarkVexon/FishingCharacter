@@ -61,7 +61,7 @@
   },
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Solo: Deal !D! damage again and draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Solo: Play the top card of your draw pile."
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
@@ -179,7 +179,7 @@
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",
-    "DESCRIPTION": "After you play a X-cost card, gain [E].",
+    "DESCRIPTION": "After you play an X-cost card, gain [E].",
     "EXTENDED_DESCRIPTION": [
       "Reserves",
       "After you play a X-cost card, gain "
@@ -276,10 +276,10 @@
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
-    "DESCRIPTION": "Whenever you play a X-cost card, deal !M! damage to the frontmost enemy.",
+    "DESCRIPTION": "Whenever you play an X-cost card, deal !M! damage to the frontmost enemy.",
     "EXTENDED_DESCRIPTION": [
       "Crosshairs",
-      "Whenever you play a X-cost card, deal #b",
+      "Whenever you play an X-cost card, deal #b",
       " damage to the frontmost enemy."
     ]
   },
@@ -375,7 +375,7 @@
   },
   "${ModID}:QuestTimeTheTerribleTwos": {
     "NAME": "The Terrible Twos",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL ${ModID}:Quest: Play 3 2-cost cards. NL *Reward: Gain 12 Block."
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL ${ModID}:Quest: Play 2 2-cost cards. NL *Reward: Gain 12 Block."
   },
   "${ModID}:SoleSight": {
     "NAME": "Sole Searching",
