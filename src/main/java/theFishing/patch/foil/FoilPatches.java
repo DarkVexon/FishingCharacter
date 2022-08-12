@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
+import com.badlogic.gdx.math.Vector3;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
@@ -26,8 +27,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import static theFishing.FishingMod.makeImagePath;
-import static theFishing.util.Shaders.fragmentShaderHSLC;
-import static theFishing.util.Shaders.vertexShaderHSLC;
+import static theFishing.util.Shaders.fragmentShaderHsluv;
+import static theFishing.util.Shaders.vertexShaderHsluv;
 
 public class FoilPatches {
 
@@ -120,11 +121,14 @@ public class FoilPatches {
     // VISUAL STUFF
 
 
-    private static final ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
+    private static final ShaderProgram shade = new ShaderProgram(vertexShaderHsluv, fragmentShaderHsluv);
     private static final Color hslcBackground = new Color(0.5F, 0.6F, 0.7F, 0.55F);
-    //private static final Color hslcArt = new Color(0.66F, 0.6F, 0.5F, 0.6F);
     private static HashMap<String, Color> idToFoilColors = new HashMap<>();
-    private static final Color hslcCardBacks = new Color(0.66F, 0.5F, 0.575F, 0.5F);
+
+    private static Color getCustomReskinColor(String ID) {
+        Random rng = new com.megacrit.cardcrawl.random.Random((long) ID.hashCode());
+        return new Color(0.5F + (rng.random(0.25F, 0.5F) * (rng.randomBoolean() ? 1 : -1)), 0.5F, 0.5F, 0);
+    }
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -151,6 +155,7 @@ public class FoilPatches {
         }
     }
 
+    //TODO: Fix transparency
     @SpirePatch(
             clz = AbstractCard.class,
             method = "renderPortrait"
@@ -164,10 +169,9 @@ public class FoilPatches {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", idToFoilColors.computeIfAbsent(__instance.cardID, key -> {
-                    Random rng = new com.megacrit.cardcrawl.random.Random((long) __instance.cardID.hashCode());
-                    return new Color(rng.random(0F, 1F), 0.6F, 0.6F, 0.6F);
-                }));
+                Color toSet = idToFoilColors.computeIfAbsent(__instance.cardID, key -> getCustomReskinColor(__instance.cardID));
+                toSet.a = __instance.transparency;
+                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", toSet);
             }
         }
 
@@ -220,10 +224,9 @@ public class FoilPatches {
                 oldShader = sb.getShader();
                 sb.setShader(shade);
                 oldColor = sb.getColor();
-                sb.setColor(idToFoilColors.computeIfAbsent(card.cardID, key -> {
-                    Random rng = new com.megacrit.cardcrawl.random.Random((long) card.cardID.hashCode());
-                    return new Color(0.5F + (rng.random(0.25F, 0.5F) * (rng.randomBoolean() ? 1 : -1)), 0.6F, 0.6F, 0.6F);
-                }));
+                Color toSet = idToFoilColors.computeIfAbsent(card.cardID, key -> getCustomReskinColor(card.cardID));
+                toSet.a = card.transparency;
+                sb.setColor(toSet);
             }
         }
 
