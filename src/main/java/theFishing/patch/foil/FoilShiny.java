@@ -2,7 +2,6 @@ package theFishing.patch.foil;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
@@ -36,7 +35,7 @@ public class FoilShiny {
                     ImageHelper.beginBuffer(fbo);
 
                     spriteBatch.begin();
-                    __instance.render(spriteBatch, false);
+                    __instance.render(spriteBatch, false); // render one
                     spriteBatch.end();
                     fbo.end();
 
@@ -46,9 +45,10 @@ public class FoilShiny {
                     ShaderProgram oldShader = spriteBatch.getShader();
                     spriteBatch.setShader(vex);
                     vex.setUniformf("x_time", FishingMod.time);
-                    spriteBatch.setBlendFunction(GL20.GL_ONE, GL20.GL_ONE_MINUS_DST_COLOR);
-                    spriteBatch.draw(t, -Settings.VERT_LETTERBOX_AMT, -Settings.HORIZ_LETTERBOX_AMT);
-                    spriteBatch.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+
+                    spriteBatch.setBlendFunction(GL20.GL_ONE, GL20.GL_ONE);
+                    spriteBatch.draw(t, 0, 0); // render two
+
                     spriteBatch.end();
                     spriteBatch.setShader(oldShader);
 
@@ -56,8 +56,11 @@ public class FoilShiny {
 
                     spriteBatch.begin();
                     TextureRegion t2 = ImageHelper.getBufferTexture(fbo2);
-                    spriteBatch.draw(t2, -Settings.VERT_LETTERBOX_AMT, -Settings.HORIZ_LETTERBOX_AMT);
+
+                    spriteBatch.draw(t2, -Settings.VERT_LETTERBOX_AMT, -Settings.HORIZ_LETTERBOX_AMT); // render three (to game)
+
                     spriteBatch.end();
+                    spriteBatch.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
 
                     spriteBatch.begin();
                 } else {
