@@ -141,10 +141,9 @@ public class FishingMod implements
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
-        BaseMod.addDynamicVariable(new FishInCombatVar());
         new AutoAdd(modID)
                 .packageFilter(AbstractFishingCard.class)
-                .setDefaultSeen(true)
+                .setDefaultSeen(false)
                 .cards();
     }
 
