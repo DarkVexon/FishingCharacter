@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.quest.quests.AbstractQuest;
+import theFishing.quest.quests.TheGemSearch;
 import theFishing.util.ImageHelper;
 
 import java.util.ArrayList;
@@ -63,6 +64,10 @@ public class QuestHelper {
 
     public static void acceptQuest(AbstractQuest quest) {
         quests.add(quest);
+        Hitbox box = boxes.get(quests.indexOf(quest));
+        float width = quest.textpadding() * Settings.scale + ((quest.goal * 40) * Settings.scale);
+        if (quest.questID.equals(TheGemSearch.ID)) width += (40 * Settings.scale);
+        box.resize(width, box.height);
     }
 
     public static void update() {
