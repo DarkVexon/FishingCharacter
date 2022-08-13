@@ -104,9 +104,11 @@
   },
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each ${ModID}:Fish in your draw pile, discard pile, or hand.",
-    "EXTENDED_DESCRIPTION": [
-      " NL ( !${ModID}:fshhd! ${ModID}:Fish. )"
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each ${ModID}:Fish card played this turn.",
+      "EXTENDED_DESCRIPTION": [
+        " NL (",
+        " ${ModID}:Fish played.)",
+        " ${ModID}:Fish played.)"
     ]
   },
   "${ModID}:CatchOfTheDay": {
