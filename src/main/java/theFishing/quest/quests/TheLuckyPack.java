@@ -59,11 +59,6 @@ public class TheLuckyPack extends AbstractQuest {
         }
     }
 
-    @Override
-    public void atEndOfTurn() {
-        progress = 0;
-    }
-
     private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/LuckyPack.png"));
     private static Texture complete = TexLoader.getTexture(makeImagePath("quests/LuckyPack_completed.png"));
     private static Texture incomplete_last = TexLoader.getTexture(makeImagePath("quests/LuckyPack_Last.png"));
