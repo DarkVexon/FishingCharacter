@@ -22,7 +22,7 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
 
     public FreeDrinks() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         exhaust = true;
     }
 
