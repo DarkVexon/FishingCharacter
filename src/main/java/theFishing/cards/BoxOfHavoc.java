@@ -18,7 +18,7 @@ public class BoxOfHavoc extends AbstractFishingCard {
     // intellij stuff skill, all_enemy, uncommon, , , , , 3, 1
 
     public BoxOfHavoc() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseSecondMagic = secondMagic = 1;
         baseMagicNumber = magicNumber = 3;
     }
