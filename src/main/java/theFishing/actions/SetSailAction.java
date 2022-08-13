@@ -50,7 +50,7 @@ public class SetSailAction extends AbstractGameAction {
                     @Override
                     public void update() {
                         isDone = true;
-                        card.freeToPlayOnce = true;
+                        card.setCostForTurn(0);
                         card.superFlash();
                     }
                 });

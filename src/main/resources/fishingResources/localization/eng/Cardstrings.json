@@ -50,7 +50,7 @@
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 until played. NL Apply !M! Vulnerable to a random enemy."
+    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Apply !M! Vulnerable to a random enemy."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
