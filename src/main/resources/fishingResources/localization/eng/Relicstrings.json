@@ -4,7 +4,7 @@
     "FLAVOR": "The only one of its kind.",
     "DESCRIPTIONS": [
       "#yUpgrade the first #b",
-      " un-Upgraded #y${ModID}:Foil cards you draw each combat."
+      " unupgraded #y${ModID}:Foil cards you draw each combat."
     ]
   },
   "${ModID}:RainbowRod": {
@@ -12,7 +12,7 @@
     "FLAVOR": "Fishing 100",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL #yUpgrade the first #b2 un-Upgraded cards you draw each turn."
+      ".[] NL #yUpgrade the first #b2 unupgraded cards you draw each turn."
     ]
   },
   "${ModID}:BrokenOar": {
