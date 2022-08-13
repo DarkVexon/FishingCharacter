@@ -26,7 +26,7 @@
     "NAME": "Maelstrom Ankh",
     "FLAVOR": "Into the depths.",
     "DESCRIPTIONS": [
-      "Find rarer #y${ModID}:Fish."
+      "Find better #y${ModID}:Fish."
     ]
   },
   "${ModID}:UnageeSkull": {
