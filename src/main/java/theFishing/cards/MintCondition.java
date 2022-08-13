@@ -52,6 +52,6 @@ public class MintCondition extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

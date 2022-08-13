@@ -171,7 +171,7 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Ethereal. NL Gain !M! *Gold. NL Put 1 ${ModID}:Fish on top of your draw pile. NL Exhaust."
+    "DESCRIPTION": "Draw 1 card. NL Startup: Gain !M! Gold."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
@@ -371,7 +371,7 @@
   },
   "${ModID}:QuestTimeTheLuckyPack": {
     "NAME": "The Lucky Pack",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a turn. NL *Reward: Play the last card twice."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards with different names. NL *Reward: Play the last card twice."
   },
   "${ModID}:QuestTimeTheTerribleTwos": {
     "NAME": "The Terrible Twos",
