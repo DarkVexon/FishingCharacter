@@ -19,7 +19,7 @@ import java.nio.charset.StandardCharsets;
 public class FoilShiny {
     @SpirePatch(clz = AbstractCard.class, method = "render", paramtypez = SpriteBatch.class)
     public static class FoilCardsShine {
-        private static final ShaderProgram VEX = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/vex.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
+        private static final ShaderProgram FOIL_SHINE = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_shine.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
         private static FrameBuffer fbo = ImageHelper.createBuffer();
 
@@ -30,8 +30,8 @@ public class FoilShiny {
                     TextureRegion t = cardToTextureRegion(__instance, spriteBatch);
                     spriteBatch.setBlendFunction(GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     ShaderProgram oldShader = spriteBatch.getShader();
-                    spriteBatch.setShader(VEX);
-                    VEX.setUniformf("x_time", FishingMod.time);
+                    spriteBatch.setShader(FOIL_SHINE);
+                    FOIL_SHINE.setUniformf("x_time", FishingMod.time);
                     spriteBatch.draw(t, -Settings.VERT_LETTERBOX_AMT, -Settings.HORIZ_LETTERBOX_AMT);
                     spriteBatch.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     spriteBatch.setShader(oldShader);

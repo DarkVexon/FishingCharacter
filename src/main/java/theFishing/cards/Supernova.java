@@ -22,16 +22,17 @@ public class Supernova extends AbstractFishingCard {
 
     public Supernova() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 11;
+        baseDamage = 10;
         isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractCard self = this;
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                int x = -1;
+                int x = FoilPatches.isFoil(self) ? -1 : -0;
                 for (AbstractCard q : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
                     if (FoilPatches.isFoil(q))
                         x += 1;
@@ -75,6 +76,6 @@ public class Supernova extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 }

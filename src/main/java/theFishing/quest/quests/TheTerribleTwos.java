@@ -28,7 +28,7 @@ public class TheTerribleTwos extends AbstractQuest {
 
     @Override
     public String getDescription() {
-        return uiStrings.TEXT[0] + goal + uiStrings.TEXT[1];
+        return uiStrings.TEXT[1] + goal + uiStrings.TEXT[2];
     }
 
     @Override

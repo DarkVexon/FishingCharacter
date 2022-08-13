@@ -447,7 +447,7 @@
     "NAME": "Shimmering Shield",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you play a ${ModID}:Foil card this turn, add a *Shiv into your hand.",
     "EXTENDED_DESCRIPTION": [
-      "Shiny Shiv:",
+      "Shiny Shiv",
       "Whenever you play a #yFoil card this turn, add #b",
       " #yShiv",
       " #yShivs",

@@ -16,36 +16,26 @@ public class AnglerFormPower extends AbstractEasyPower {
 
     public AnglerFormPower(int amount) {
         super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
-        isTwoAmount = true;
-        amount2 = amount;
         updateDescription();
     }
 
     @Override
     public void atStartOfTurn() {
-        amount2 = amount;
-        updateDescription();
-    }
-
-    @Override
-    public void stackPower(int stackAmount) {
-        amount2 += stackAmount;
-        super.stackPower(stackAmount);
         updateDescription();
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (amount2 > 0) {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() <= amount) {
             flash();
             addToBot(new DrawCardAction(1));
-            amount2--;
             updateDescription();
         }
     }
 
     @Override
     public void updateDescription() {
-        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount2 + powerStrings.DESCRIPTIONS[2];
+        int remaining = (amount - AbstractDungeon.actionManager.cardsPlayedThisTurn.size());
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + remaining + (powerStrings.DESCRIPTIONS[2]);
     }
 }

@@ -1,6 +1,7 @@
 package theFishing.patch.foil;
 
 import basemod.ReflectionHacks;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -22,12 +23,10 @@ import theFishing.util.ImageHelper;
 import theFishing.util.TexLoader;
 import theFishing.util.Wiz;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import static theFishing.FishingMod.makeImagePath;
-import static theFishing.util.Shaders.fragmentShaderHsluv;
-import static theFishing.util.Shaders.vertexShaderHsluv;
 
 public class FoilPatches {
 
@@ -117,42 +116,36 @@ public class FoilPatches {
         }
     }
 
+
+
     // VISUAL STUFF
 
+//    @SpirePatch(
+//            clz = AbstractCard.class,
+//            method = "renderCardBg"
+//    )
+//    public static class FoilShiny {
+//        private static ShaderProgram oldShader;
+//        private static Color oldColor;
+//
+//        public static void Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
+//            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR && __instance.color != AbstractCard.CardColor.COLORLESS) {
+//                oldShader = sb.getShader();
+//                sb.setShader(shade);
+//                oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
+//                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", hslcBackground);
+//            }
+//        }
+//
+//        public static void Postfix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
+//            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR && __instance.color != AbstractCard.CardColor.COLORLESS) {
+//                sb.setShader(oldShader);
+//                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", oldColor);
+//            }
+//        }
+//    }
 
-    private static final ShaderProgram shade = new ShaderProgram(vertexShaderHsluv, fragmentShaderHsluv);
-    private static final Color hslcBackground = new Color(0.5F, 0.6F, 0.7F, 0.55F);
-    private static HashMap<String, Color> idToFoilColors = new HashMap<>();
-
-    private static Color getCustomReskinColor(String ID) {
-        Random rng = new com.megacrit.cardcrawl.random.Random((long) ID.hashCode());
-        return new Color(0.5F + (rng.random(0.25F, 0.5F) * (rng.randomBoolean() ? 1 : -1)), 0.5F, 0.5F, 0);
-    }
-
-    @SpirePatch(
-            clz = AbstractCard.class,
-            method = "renderCardBg"
-    )
-    public static class FoilShiny {
-        private static ShaderProgram oldShader;
-        private static Color oldColor;
-
-        public static void Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
-            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR && __instance.color != AbstractCard.CardColor.COLORLESS) {
-                oldShader = sb.getShader();
-                sb.setShader(shade);
-                oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", hslcBackground);
-            }
-        }
-
-        public static void Postfix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
-            if (isFoil(__instance) && __instance.color != TheFishing.Enums.FISHING_COLOR && __instance.color != AbstractCard.CardColor.COLORLESS) {
-                sb.setShader(oldShader);
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", oldColor);
-            }
-        }
-    }
+    public static final ShaderProgram ART_SHADER =  new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_card_art.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -165,48 +158,43 @@ public class FoilPatches {
         public static void Prefix(AbstractCard __instance, SpriteBatch sb) {
             if (isFoil(__instance)) {
                 oldShader = sb.getShader();
-                sb.setShader(shade);
-                oldColor = ReflectionHacks.getPrivate(__instance, AbstractCard.class, "renderColor");
-                Color toSet = idToFoilColors.computeIfAbsent(__instance.cardID, key -> getCustomReskinColor(__instance.cardID));
-                toSet.a = __instance.transparency;
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", toSet);
+                sb.setShader(ART_SHADER);
             }
         }
 
         public static void Postfix(AbstractCard __instance, SpriteBatch sb) {
             if (isFoil(__instance)) {
                 sb.setShader(oldShader);
-                ReflectionHacks.setPrivate(__instance, AbstractCard.class, "renderColor", oldColor);
             }
         }
     }
 
-    @SpirePatch(
-            clz = SingleCardViewPopup.class,
-            method = "renderCardBack"
-    )
-    public static class FoilShinySingleCardView {
-        private static ShaderProgram oldShader;
-        private static Color oldColor;
-
-        public static void Prefix(SingleCardViewPopup __instance, SpriteBatch sb) {
-            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
-            if (isFoil(card) && card.color != TheFishing.Enums.FISHING_COLOR && card.color != AbstractCard.CardColor.COLORLESS) {
-                oldShader = sb.getShader();
-                sb.setShader(shade);
-                oldColor = sb.getColor();
-                sb.setColor(hslcBackground);
-            }
-        }
-
-        public static void Postfix(SingleCardViewPopup __instance, SpriteBatch sb) {
-            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
-            if (isFoil(card) && card.color != TheFishing.Enums.FISHING_COLOR && card.color != AbstractCard.CardColor.COLORLESS) {
-                sb.setShader(oldShader);
-                sb.setColor(oldColor);
-            }
-        }
-    }
+//    @SpirePatch(
+//            clz = SingleCardViewPopup.class,
+//            method = "renderCardBack"
+//    )
+//    public static class FoilShinySingleCardView {
+//        private static ShaderProgram oldShader;
+//        private static Color oldColor;
+//
+//        public static void Prefix(SingleCardViewPopup __instance, SpriteBatch sb) {
+//            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+//            if (isFoil(card) && card.color != TheFishing.Enums.FISHING_COLOR && card.color != AbstractCard.CardColor.COLORLESS) {
+//                oldShader = sb.getShader();
+//                sb.setShader(shade);
+//                oldColor = sb.getColor();
+//                sb.setColor(hslcBackground);
+//            }
+//        }
+//
+//        public static void Postfix(SingleCardViewPopup __instance, SpriteBatch sb) {
+//            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+//            if (isFoil(card) && card.color != TheFishing.Enums.FISHING_COLOR && card.color != AbstractCard.CardColor.COLORLESS) {
+//                sb.setShader(oldShader);
+//                sb.setColor(oldColor);
+//            }
+//        }
+//    }
 
     @SpirePatch(
             clz = SingleCardViewPopup.class,
@@ -220,11 +208,7 @@ public class FoilPatches {
             AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
             if (isFoil(card)) {
                 oldShader = sb.getShader();
-                sb.setShader(shade);
-                oldColor = sb.getColor();
-                Color toSet = idToFoilColors.computeIfAbsent(card.cardID, key -> getCustomReskinColor(card.cardID));
-                toSet.a = card.transparency;
-                sb.setColor(toSet);
+                sb.setShader(ART_SHADER);
             }
         }
 
@@ -232,7 +216,6 @@ public class FoilPatches {
             AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
             if (isFoil(card)) {
                 sb.setShader(oldShader);
-                sb.setColor(oldColor);
             }
         }
     }
