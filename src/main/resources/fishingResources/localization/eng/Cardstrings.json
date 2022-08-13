@@ -383,15 +383,6 @@
     "NAME": "Sole Searching",
     "DESCRIPTION": "Scry !M!. NL ${ModID}:Solo: Gain !M! Strength."
   },
-  "${ModID}:Supernova": {
-    "NAME": "Supernova",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies for each ${ModID}:Foil card played this turn.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " ${ModID}:Foil card played.)",
-      " ${ModID}:Foil cards played.)"
-    ]
-  },
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
     "DESCRIPTION": "At the start of your turn, Exhaust 1 card and draw 1 card.",
@@ -449,7 +440,7 @@
     "NAME": "Shimmering Shield",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you play a ${ModID}:Foil card this turn, add a *Shiv into your hand.",
     "EXTENDED_DESCRIPTION": [
-      "Shiny Shiv",
+      "Shimmering Shield",
       "Whenever you play a #yFoil card this turn, add #b",
       " #yShiv",
       " #yShivs",
@@ -543,5 +534,14 @@
   "${ModID}:BeastSlayer": {
     "NAME": "Beast Slayer",
     "DESCRIPTION": "Deal !D! damage. NL In Elite combats, deal !${ModID}:sd! damage instead."
+  },
+  "${ModID}:SicklyShine": {
+    "NAME": "Sickly Shine",
+    "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, apply !M! Poison to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "Sickly Shine",
+      "Whenever you play a #yFoil card, apply #b",
+      " #yPoison to ALL enemies."
+    ]
   }
 }
