@@ -30,7 +30,7 @@ public class FeedingFrenzy extends AbstractFishingCard {
 
     public FeedingFrenzy() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
