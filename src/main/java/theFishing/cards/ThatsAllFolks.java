@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.adp;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.*;
 
 public class ThatsAllFolks extends AbstractFishingCard {
     public final static String ID = makeID("ThatsAllFolks");
@@ -24,7 +23,13 @@ public class ThatsAllFolks extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (p.hand.size() <= 1) {
-            this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), false));
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    att(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
+                }
+            });
         }
     }
 
