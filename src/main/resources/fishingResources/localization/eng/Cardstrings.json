@@ -235,8 +235,8 @@
     "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
   },
   "${ModID}:SetupButBetter": {
-    "NAME": "Setup but Better",
-    "DESCRIPTION": "Retain. NL Put a card from your discard pile on top of your draw pile. NL It costs 0 until played."
+    "NAME": "Setdown",
+    "DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL It costs 0 until played."
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",

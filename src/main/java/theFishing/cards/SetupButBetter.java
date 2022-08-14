@@ -1,7 +1,5 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
-import com.megacrit.cardcrawl.actions.unique.SetupAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.DiscardPileSetupAction;
@@ -15,7 +13,6 @@ public class SetupButBetter extends AbstractFishingCard {
 
     public SetupButBetter() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
