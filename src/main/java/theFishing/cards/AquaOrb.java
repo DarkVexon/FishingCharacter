@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.SanctityEffect;
+import theFishing.effects.ColoredSanctityEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -26,7 +28,7 @@ public class AquaOrb extends AbstractFishingCard {
         forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, 1, false)));
         blck();
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() <= 1) {
-            atb(new VFXAction(new SanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY)));
+            atb(new VFXAction(new ColoredSanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.SKY.cpy())));
             applyToSelf(new ArtifactPower(p, 1));
         }
     }

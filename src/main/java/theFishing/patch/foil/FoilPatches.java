@@ -13,11 +13,12 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import theFishing.TheFishing;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.effects.CollectorReminderEffect;
+import theFishing.powers.CollectorPower;
 import theFishing.relics.Newsletter;
 import theFishing.util.ImageHelper;
 import theFishing.util.TexLoader;
@@ -117,7 +118,6 @@ public class FoilPatches {
     }
 
 
-
     // VISUAL STUFF
 
 //    @SpirePatch(
@@ -145,7 +145,7 @@ public class FoilPatches {
 //        }
 //    }
 
-    public static final ShaderProgram ART_SHADER =  new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_card_art.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
+    public static final ShaderProgram ART_SHADER = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_card_art.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -327,6 +327,36 @@ public class FoilPatches {
                 }
             }
             return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = SpirePatch.CLASS
+    )
+    public static class CollectorTimerField {
+        public static final float TIME_BETWEEN_SPARKS = 0.075F;
+        public static SpireField<Float> collectorTimer = new SpireField<>(() -> TIME_BETWEEN_SPARKS);
+    }
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = "update"
+    )
+    public static class CollectorReminderFlames {
+        public static void Postfix(AbstractCard __instance) {
+            if (Wiz.isInCombat() && AbstractDungeon.player.hand.contains(__instance) && AbstractDungeon.player.hasPower(CollectorPower.ID) && !((CollectorPower) AbstractDungeon.player.getPower(CollectorPower.ID)).activated) {
+                if (__instance.rarity == AbstractCard.CardRarity.RARE || isFoil(__instance)) {
+                    float timer = CollectorTimerField.collectorTimer.get(__instance);
+                    timer -= Gdx.graphics.getDeltaTime();
+                    if (timer <= 0) {
+                        AbstractDungeon.topLevelEffectsQueue.add(new CollectorReminderEffect(__instance));
+                        CollectorTimerField.collectorTimer.set(__instance, CollectorTimerField.TIME_BETWEEN_SPARKS);
+                    } else {
+                        CollectorTimerField.collectorTimer.set(__instance, timer);
+                    }
+                }
+            }
         }
     }
 }

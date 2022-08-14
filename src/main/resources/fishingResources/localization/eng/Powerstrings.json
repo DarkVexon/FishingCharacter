@@ -26,8 +26,17 @@
     "NAME": "Angler Form",
     "DESCRIPTIONS": [
       "The first #b",
-      " times you play a card each turn, draw a card. NL #b",
+      " times you play a card each turn, draw a card.",
+      " NL #b",
       " triggers remaining this turn."
+    ]
+  },
+  "${ModID}:CollectorPower": {
+    "NAME": "Collector",
+    "DESCRIPTIONS": [
+      "If the first card you play each turn is: NL #yFoil: Gain #b",
+      " #yStrength. NL Rare: Gain #b",
+      " #yVigor."
     ]
   }
 }

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import theFishing.patch.foil.FoilPatches;
+import theFishing.powers.CollectorPower;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
@@ -23,32 +24,7 @@ public class Collector extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower(makeID("CollectorPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
-            boolean activated = true;
-
-            @Override
-            public void atStartOfTurn() {
-                activated = false;
-            }
-
-            @Override
-            public void onUseCard(AbstractCard card, UseCardAction action) {
-                if (FoilPatches.isFoil(card) && !activated) {
-                    flash();
-                    applyToSelf(new StrengthPower(owner, amount));
-                }
-                if (card.rarity == CardRarity.RARE && !activated) {
-                    flash();
-                    applyToSelf(new VigorPower(owner, amount * 4));
-                }
-                activated = true;
-            }
-
-            @Override
-            public void updateDescription() {
-                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount * 4 + cardStrings.EXTENDED_DESCRIPTION[3];
-            }
-        });
+        applyToSelf(new CollectorPower(1));
     }
 
     public void upp() {
