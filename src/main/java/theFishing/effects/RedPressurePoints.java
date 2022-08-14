@@ -33,7 +33,7 @@ public class RedPressurePoints extends AbstractGameEffect {
         this.y = this.endY + MathUtils.random(380.0F, 320.0F) * Settings.scale;
         this.startingDuration = 0.3F;
         this.duration = 0.3F;
-        this.scaleMultiplier = MathUtils.random(0.05F, 0.2F);
+        this.scaleMultiplier = MathUtils.random(0.1F, 0.2F);
         this.rotation = 150.0F;
         this.color = Color.RED.cpy();
         this.color.a = 0.0F;
