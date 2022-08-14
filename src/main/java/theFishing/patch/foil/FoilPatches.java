@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import theFishing.TheFishing;
@@ -26,6 +27,7 @@ import theFishing.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import static theFishing.FishingMod.makeImagePath;
 
@@ -155,10 +157,16 @@ public class FoilPatches {
         private static ShaderProgram oldShader;
         private static Color oldColor;
 
+        public static HashMap<String, Float> shiftAmts = new HashMap<>();
+
         public static void Prefix(AbstractCard __instance, SpriteBatch sb) {
             if (isFoil(__instance)) {
                 oldShader = sb.getShader();
                 sb.setShader(ART_SHADER);
+                ART_SHADER.setUniformf("shift_amt", shiftAmts.computeIfAbsent(__instance.cardID, key -> {
+                    Random rng = new Random((long) __instance.cardID.hashCode());
+                    return 0.2F + rng.random(0F, 0.6F);
+                }));
             }
         }
 
@@ -209,6 +217,10 @@ public class FoilPatches {
             if (isFoil(card)) {
                 oldShader = sb.getShader();
                 sb.setShader(ART_SHADER);
+                ART_SHADER.setUniformf("shift_amt", FoilSpecialArt.shiftAmts.computeIfAbsent(card.cardID, key -> {
+                    Random rng = new Random((long) card.cardID.hashCode());
+                    return 0.2F + rng.random(0F, 0.6F);
+                }));
             }
         }
 
