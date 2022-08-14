@@ -462,8 +462,8 @@
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
-    "DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw or discard pile into your hand.",
+    "DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw pile into your hand.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to put into your hand."
     ]

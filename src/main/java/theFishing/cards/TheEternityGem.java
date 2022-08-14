@@ -1,10 +1,16 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.effects.ColoredVerticalAttackEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -23,7 +29,18 @@ public class TheEternityGem extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
+                    if (q != null) {
+                        calculateCardDamage(q);
+                        dmgTop(q, AttackEffect.NONE);
+                        att(new VFXAction(new ColoredVerticalAttackEffect(q.hb.cX - 60F * Settings.scale, q.hb.cY, true, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1))));
+                    }
+                }
+            });
         }
     }
 

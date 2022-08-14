@@ -1,12 +1,14 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.animations.AnimateJumpAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import com.megacrit.cardcrawl.vfx.combat.LightBulbEffect;
 import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
@@ -25,7 +27,7 @@ public class DeckedOut extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(magicNumber));
         if (CardCrawlGame.clientUtils.isSteamRunningOnSteamDeck()) {
-            atb(new AnimateJumpAction(p));
+            atb(new VFXAction(new LightBulbEffect(p.hb)));
             blck();
         }
     }

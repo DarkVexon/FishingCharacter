@@ -29,12 +29,16 @@ public class CollectorPower extends AbstractEasyPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
+        boolean triggered = false;
         if (FoilPatches.isFoil(card) && !activated) {
-            flash();
+            if (!triggered)
+                flash();
             applyToSelf(new StrengthPower(owner, amount));
+            triggered = true;
         }
         if (card.rarity == AbstractCard.CardRarity.RARE && !activated) {
-            flash();
+            if (!triggered)
+                flash();
             applyToSelf(new VigorPower(owner, amount * 4));
         }
         activated = true;

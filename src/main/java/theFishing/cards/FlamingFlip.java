@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,6 +19,7 @@ public class FlamingFlip extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new AnimateHopAction(p));
         blck();
         atb(new ExhaustAction(1, true, false, false));
         atb(new DrawCardAction(2));

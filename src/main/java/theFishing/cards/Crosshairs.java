@@ -10,11 +10,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
+import com.megacrit.cardcrawl.vfx.combat.PressurePointEffect;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.getEnemies;
+import static theFishing.util.Wiz.*;
 
 public class Crosshairs extends AbstractFishingCard {
     public final static String ID = makeID("Crosshairs");
@@ -42,7 +42,7 @@ public class Crosshairs extends AbstractFishingCard {
                             }
                             if (q != null) {
                                 this.addToTop(new DamageAction(q, new DamageInfo(owner, x, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
-                                addToTop(new VFXAction(new ClashEffect(q.hb.cX, q.hb.cY), 0.1f));
+                                att(new VFXAction(new PressurePointEffect(q.hb.cX, q.hb.cY)));
                             }
                         }
                     });

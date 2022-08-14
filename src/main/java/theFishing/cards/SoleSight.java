@@ -1,10 +1,14 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
@@ -22,6 +26,8 @@ public class SoleSight extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ScryAction(magicNumber));
         if (p.hand.size() <= 1) {
+            atb(new VFXAction(new BorderLongFlashEffect(Color.FIREBRICK, true)));
+            atb(new VFXAction(p, new InflameEffect(p), 1.0F));
             applyToSelf(new StrengthPower(p, magicNumber));
         }
     }

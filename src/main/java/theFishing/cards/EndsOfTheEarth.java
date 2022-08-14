@@ -1,8 +1,11 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DarkOrbEvokeAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
@@ -20,7 +23,8 @@ public class EndsOfTheEarth extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        atb(new VFXAction(new DarkOrbActivateEffect(m.hb.cX, m.hb.cY)));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
     }
 
     @Override

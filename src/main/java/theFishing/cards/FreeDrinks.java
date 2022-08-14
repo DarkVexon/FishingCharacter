@@ -33,13 +33,7 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
     @Override
     public void onObtainCard() {
         if (AbstractDungeon.player.potions.stream().anyMatch(c -> c instanceof PotionSlot)) {
-            AbstractPotion p;
-            if (FoilPatches.isFoil(this)) {
-                p = AbstractDungeon.returnRandomPotion(AbstractPotion.PotionRarity.RARE, false);
-            } else {
-                p = AbstractDungeon.returnRandomPotion();
-            }
-            AbstractDungeon.player.obtainPotion(p);
+            AbstractDungeon.player.obtainPotion(AbstractDungeon.returnRandomPotion());
         }
     }
 

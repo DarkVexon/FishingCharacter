@@ -20,7 +20,7 @@ public class DoubleUp extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         if (p.currentBlock > 0) {
             atb(new DrawCardAction(magicNumber));

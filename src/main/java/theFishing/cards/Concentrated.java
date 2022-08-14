@@ -15,7 +15,6 @@ public class Concentrated extends AbstractFishingCard {
     public Concentrated() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         isEthereal = true;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +10,6 @@ import theFishing.patch.foil.FoilPatches;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -31,18 +31,11 @@ public class TheBackpack extends AbstractFishingCard {
             if (FoilPatches.isFoil(q))
                 possCards.add(q);
         }
-        for (AbstractCard q : p.discardPile.group) {
-            if (FoilPatches.isFoil(q))
-                possCards.add(q);
-        }
-        Collections.sort(possCards, Comparator.comparing(c -> c.rarity));
-        Collections.reverse(possCards);
+        Collections.shuffle(possCards, MathUtils.random);
         atb(new SelectCardsAction(possCards, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             AbstractCard card = cards.get(0);
             if (AbstractDungeon.player.drawPile.group.contains(card)) {
                 AbstractDungeon.player.drawPile.moveToHand(card);
-            } else if (AbstractDungeon.player.discardPile.group.contains(card)) {
-                AbstractDungeon.player.discardPile.moveToHand(card);
             }
         }));
     }

@@ -1,5 +1,7 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.colorless.Bite;
@@ -8,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -24,6 +27,7 @@ public class GarlicClove extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new VFXAction(p, new MiracleEffect(Color.CHARTREUSE, Color.LIME, "HEAL_3"), 1.0F));
         atb(new RemoveSpecificPowerAction(p, p, WeakPower.POWER_ID));
         atb(new RemoveSpecificPowerAction(p, p, VulnerablePower.POWER_ID));
         if (AbstractDungeon.player.masterDeck.group.stream().noneMatch(c -> c.cardID.equals(Bite.ID))) {

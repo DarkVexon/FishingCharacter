@@ -43,9 +43,7 @@ public class RatedX extends AbstractFishingCard {
                 applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
             }
             dmgTop(m, AbstractGameAction.AttackEffect.NONE);
-            AbstractGameEffect e = new ClashEffect(m.hb.cX, m.hb.cY);
-            ReflectionHacks.setPrivate(e, AbstractGameEffect.class, "color", Color.DARK_GRAY.cpy());
-            this.addToTop(new VFXAction(p, e, 0.1F));
+            this.addToTop(new VFXAction(new ClashEffect(m.hb.cX, m.hb.cY), 0.1F));
             return true;
         }));
     }

@@ -1,12 +1,15 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -30,6 +33,7 @@ public class WakaWaka extends AbstractFishingCard implements StartupCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SFXAction(makeID("EAT_FRUIT")));
+        atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY, Color.YELLOW.cpy())));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
     }
 

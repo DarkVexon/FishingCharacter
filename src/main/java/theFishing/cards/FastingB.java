@@ -1,9 +1,12 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
+import com.megacrit.cardcrawl.vfx.combat.FastingEffect;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.powers.TakeItEasyPower;
 
@@ -21,6 +24,7 @@ public class FastingB extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new VFXAction(new FastingEffect(p.hb.cX, p.hb.cY, Color.ORANGE)));
         applyToSelf(new StrengthPower(p, magicNumber));
         applyToSelf(new ThornsPower(p, secondMagic));
         applyToSelf(new TakeItEasyPower());

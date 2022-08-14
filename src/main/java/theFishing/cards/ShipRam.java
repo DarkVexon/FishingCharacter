@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.VerticalImpactEffect;
+import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -24,7 +25,7 @@ public class ShipRam extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (isVoyaged()) {
-            atb(new VFXAction(new VerticalImpactEffect(m.hb.cX, m.hb.cY)));
+            atb(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
             atb(new DamageAction(m, new DamageInfo(p, secondDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         } else {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
