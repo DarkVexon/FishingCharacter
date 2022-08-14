@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -37,8 +38,7 @@ public class FullHouse extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> sortedList = new ArrayList<>(p.drawPile.group);
-        Collections.sort(sortedList, Comparator.comparing(c -> c.rarity));
-        Collections.reverse(sortedList);
+        Collections.shuffle(sortedList, MathUtils.random);
         addToBot(new SelectCardsAction(sortedList, cardStrings.EXTENDED_DESCRIPTION[1], (cards) -> {
             AbstractCard q = cards.get(0).makeStatEquivalentCopy();
             if (!isFoil(q)) {

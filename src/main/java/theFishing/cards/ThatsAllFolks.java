@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.SpotlightPlayerEffect;
+import theFishing.effects.SilentQuickPlayerSpotlight;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -25,7 +26,7 @@ public class ThatsAllFolks extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (p.hand.size() <= 1) {
-            AbstractDungeon.effectsQueue.add(new SpotlightPlayerEffect());
+            AbstractDungeon.effectsQueue.add(new SilentQuickPlayerSpotlight());
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {

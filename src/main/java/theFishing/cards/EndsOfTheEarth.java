@@ -23,8 +23,7 @@ public class EndsOfTheEarth extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new VFXAction(new DarkOrbActivateEffect(m.hb.cX, m.hb.cY)));
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
     }
 
     @Override

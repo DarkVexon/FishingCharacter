@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
 import com.megacrit.cardcrawl.vfx.combat.PressurePointEffect;
+import theFishing.effects.RedPressurePoints;
 import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
@@ -42,7 +43,7 @@ public class Crosshairs extends AbstractFishingCard {
                             }
                             if (q != null) {
                                 this.addToTop(new DamageAction(q, new DamageInfo(owner, x, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
-                                att(new VFXAction(new PressurePointEffect(q.hb.cX, q.hb.cY)));
+                                att(new VFXAction(new RedPressurePoints(q.hb.cX, q.hb.cY)));
                             }
                         }
                     });
