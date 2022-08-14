@@ -26,8 +26,7 @@ public class SoleSight extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ScryAction(magicNumber));
         if (p.hand.size() <= 1) {
-            atb(new VFXAction(new BorderLongFlashEffect(Color.FIREBRICK, true)));
-            atb(new VFXAction(p, new InflameEffect(p), 1.0F));
+            atb(new VFXAction(p, new InflameEffect(p), 0.66F));
             applyToSelf(new StrengthPower(p, magicNumber));
         }
     }

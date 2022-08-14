@@ -92,6 +92,6 @@ public class ZaHando extends AbstractBoxTopper {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
     }
 }

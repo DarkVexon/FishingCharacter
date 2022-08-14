@@ -232,7 +232,7 @@
   },
   "${ModID}:Steal": {
     "NAME": "Steal",
-    "DESCRIPTION": "If the enemy has Strength, steal up to !M! of it. NL Exhaust."
+    "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
   },
   "${ModID}:SetupButBetter": {
     "NAME": "Setup but Better",

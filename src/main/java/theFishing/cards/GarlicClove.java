@@ -27,7 +27,7 @@ public class GarlicClove extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(p, new MiracleEffect(Color.CHARTREUSE, Color.LIME, "HEAL_3"), 1.0F));
+        atb(new VFXAction(new MiracleEffect(Color.CHARTREUSE, Color.LIME, "HEAL_3")));
         atb(new RemoveSpecificPowerAction(p, p, WeakPower.POWER_ID));
         atb(new RemoveSpecificPowerAction(p, p, VulnerablePower.POWER_ID));
         if (AbstractDungeon.player.masterDeck.group.stream().noneMatch(c -> c.cardID.equals(Bite.ID))) {
