@@ -19,5 +19,5 @@ void main() {
 
 
 
-    gl_FragColor = vec4(outputColor.b, outputColor.r, outputColor.g, outputColor.a);
+    gl_FragColor = vec4(outputColor.g, outputColor.b, outputColor.r, outputColor.a);
 }
