@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,7 +22,7 @@ public class Lie extends AbstractFishingCard {
     public Lie() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 3;
-        cardsToPreview = new Cheat();
+        MultiCardPreview.add(this, new Cheat(), new Steal());
         exhaust = true;
     }
 
@@ -43,9 +44,12 @@ public class Lie extends AbstractFishingCard {
 
     public void upp() {
         upgradeMagicNumber(2);
+        MultiCardPreview.clear(this);
         AbstractCard q = new Cheat();
         q.upgrade();
-        cardsToPreview = q;
+        AbstractCard q2 = new Steal();
+        q2.upgrade();
+        MultiCardPreview.add(this, q, q2);
         uDesc();
     }
 }
