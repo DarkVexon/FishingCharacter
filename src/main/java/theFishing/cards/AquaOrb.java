@@ -25,7 +25,7 @@ public class AquaOrb extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, 1, false)));
+        forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, magicNumber, false)));
         blck();
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() <= 1) {
             atb(new VFXAction(new ColoredSanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.SKY.cpy())));
