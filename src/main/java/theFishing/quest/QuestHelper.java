@@ -2,6 +2,7 @@ package theFishing.quest;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -64,10 +65,22 @@ public class QuestHelper {
 
     public static void acceptQuest(AbstractQuest quest) {
         quests.add(quest);
+        playAcceptQuestSfx();
         Hitbox box = boxes.get(quests.indexOf(quest));
         float width = quest.textpadding() * Settings.scale + ((quest.goal * 40) * Settings.scale);
         if (quest.questID.equals(TheGemSearch.ID)) width += (40 * Settings.scale);
         box.resize(width, box.height);
+    }
+
+    public static void playAcceptQuestSfx() {
+        int roll = MathUtils.random(0, 2);
+        if (roll == 0) {
+            CardCrawlGame.sound.play("BUFF_1");
+        } else if (roll == 1) {
+            CardCrawlGame.sound.play("BUFF_2");
+        } else {
+            CardCrawlGame.sound.play("BUFF_3");
+        }
     }
 
     public static void update() {
