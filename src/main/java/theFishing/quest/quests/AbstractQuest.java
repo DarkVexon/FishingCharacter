@@ -3,6 +3,7 @@ package theFishing.quest.quests;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import theFishing.actions.AbandonQuestAction;
+import theFishing.quest.QuestHelper;
 import theFishing.util.TexLoader;
 
 import static theFishing.FishingMod.makeImagePath;
@@ -37,6 +38,7 @@ public abstract class AbstractQuest {
         if (progress < goal) {
             progress++;
             if (progress == goal) {
+                QuestHelper.playCompleteQuestSfx();
                 grantReward();
                 atb(new AbandonQuestAction(this));
             }

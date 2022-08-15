@@ -83,6 +83,10 @@ public class QuestHelper {
         }
     }
 
+    public static void playCompleteQuestSfx() {
+        CardCrawlGame.sound.playV("UNLOCK_PING", 0.6F);
+    }
+
     public static void update() {
         for (int i = 0; i < boxes.size(); i++) {
             boxes.get(i).update();

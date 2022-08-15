@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.actions.AbandonQuestAction;
 import theFishing.cards.QuestTimeTheGemSearch;
+import theFishing.quest.QuestHelper;
 import theFishing.util.TexLoader;
 import theFishing.util.Wiz;
 
@@ -41,14 +42,13 @@ public class ThePrismaticPortal extends AbstractQuest {
 
     @Override
     public void onPlayCard(AbstractCard card) {
-        if (card.rarity != AbstractCard.CardRarity.SPECIAL && card.rarity != AbstractCard.CardRarity.BASIC) {
-            int rarity = card.rarity == AbstractCard.CardRarity.COMMON ? 0 : card.rarity == AbstractCard.CardRarity.UNCOMMON ? 1 : 2;
-            if (!okayed[rarity]) {
-                okayed[rarity] = true;
-                if (okayed[0] && okayed[1] && okayed[2]) {
-                    grantReward();
-                    AbstractDungeon.actionManager.addToBottom(new AbandonQuestAction(this));
-                }
+        int rarity = card.rarity == AbstractCard.CardRarity.RARE ? 2 : card.rarity == AbstractCard.CardRarity.UNCOMMON ? 1 : 0;
+        if (!okayed[rarity]) {
+            okayed[rarity] = true;
+            if (okayed[0] && okayed[1] && okayed[2]) {
+                QuestHelper.playCompleteQuestSfx();
+                grantReward();
+                AbstractDungeon.actionManager.addToBottom(new AbandonQuestAction(this));
             }
         }
     }
