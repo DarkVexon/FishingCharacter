@@ -104,7 +104,7 @@
   },
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each ${ModID}:Fish card played this turn.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each ${ModID}:Fish played this turn.",
       "EXTENDED_DESCRIPTION": [
         " NL (",
         " ${ModID}:Fish played.)",
