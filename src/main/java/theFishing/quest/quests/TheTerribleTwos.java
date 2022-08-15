@@ -38,7 +38,7 @@ public class TheTerribleTwos extends AbstractQuest {
 
     @Override
     public void onPlayCard(AbstractCard card) {
-        if (card.costForTurn == 2) {
+        if (card.costForTurn == 2 || (card.cost == -1 && card.energyOnUse == 2)) {
             increment();
         }
     }

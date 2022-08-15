@@ -28,6 +28,8 @@ public class RainbowRod extends AbstractEasyRelic {
         if (counter > 0 && !drawnCard.upgraded) {
             counter -= 1;
             drawnCard.upgrade();
+            drawnCard.superFlash();
+            drawnCard.applyPowers();
             if (counter == 0) {
                 counter = -1;
             }

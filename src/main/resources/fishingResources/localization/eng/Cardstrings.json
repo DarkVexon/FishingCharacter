@@ -373,7 +373,7 @@
   },
   "${ModID}:QuestTimeTheLuckyPack": {
     "NAME": "The Lucky Pack",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards with different names. NL *Reward: Play the last card twice."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a row. NL *Reward: Play the last card twice."
   },
   "${ModID}:QuestTimeTheTerribleTwos": {
     "NAME": "The Terrible Twos",

@@ -4,13 +4,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.actions.RepeatCardAction;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.util.TexLoader;
-
-import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
@@ -21,8 +18,6 @@ public class TheLuckyPack extends AbstractQuest {
     public static final String ID = makeID("TheLuckyPack");
 
     private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
-
-    private ArrayList<String> alreadyPlayed = new ArrayList<>();
 
     public TheLuckyPack() {
         super(ID, 3);
@@ -36,12 +31,6 @@ public class TheLuckyPack extends AbstractQuest {
     @Override
     public String getDescription() {
         String result = uiStrings.TEXT[1] + goal + uiStrings.TEXT[2];
-        if (!alreadyPlayed.isEmpty()) {
-            result = result + uiStrings.TEXT[3];
-            for (String s : alreadyPlayed) {
-                result = result + " NL " + FontHelper.colorString(s, "y");
-            }
-        }
         return result;
     }
 
@@ -53,9 +42,10 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public void onPlayCard(AbstractCard card) {
-        if (FoilPatches.isFoil(card) && !alreadyPlayed.contains(card.originalName)) {
+        if (FoilPatches.isFoil(card)) {
             increment();
-            alreadyPlayed.add(card.originalName);
+        } else {
+            progress = 0;
         }
     }
 
