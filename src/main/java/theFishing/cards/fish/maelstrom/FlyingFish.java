@@ -39,7 +39,7 @@ public class FlyingFish extends AbstractFishCard {
 
             @Override
             public void updateDescription() {
-                description = amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[1] : (cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[2]);
+                description = amount == 1 ? cardStrings.EXTENDED_DESCRIPTION[1] : (cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3]);
             }
         });
         atb(new DrawCardAction(1));

@@ -89,6 +89,6 @@ public class FeedingFrenzy extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
     }
 }

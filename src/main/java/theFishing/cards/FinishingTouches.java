@@ -25,25 +25,27 @@ public class FinishingTouches extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new LambdaPower(makeID("FinishingTouchesPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
             public void onUseCard(AbstractCard card, UseCardAction action) {
-                if (!card.purgeOnUse && this.amount > 0 && AbstractDungeon.player.hand.size() <= 1) {
+                if (!card.purgeOnUse && this.amount > 0 && AbstractDungeon.player.hand.size() == 1 && AbstractDungeon.player.hand.contains(card)) {
                     this.flash();
-                    AbstractMonster m = null;
-                    if (action.target != null) {
-                        m = (AbstractMonster) action.target;
-                    }
+                    for (int i = 0; i < amount; i++) {
+                        AbstractMonster m = null;
+                        if (action.target != null) {
+                            m = (AbstractMonster) action.target;
+                        }
 
-                    AbstractCard tmp = card.makeSameInstanceOf();
-                    AbstractDungeon.player.limbo.addToBottom(tmp);
-                    tmp.current_x = card.current_x;
-                    tmp.current_y = card.current_y;
-                    tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-                    tmp.target_y = (float) Settings.HEIGHT / 2.0F;
-                    if (m != null) {
-                        tmp.calculateCardDamage(m);
-                    }
+                        AbstractCard tmp = card.makeSameInstanceOf();
+                        AbstractDungeon.player.limbo.addToBottom(tmp);
+                        tmp.current_x = card.current_x;
+                        tmp.current_y = card.current_y;
+                        tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                        tmp.target_y = (float) Settings.HEIGHT / 2.0F;
+                        if (m != null) {
+                            tmp.calculateCardDamage(m);
+                        }
 
-                    tmp.purgeOnUse = true;
-                    AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+                        tmp.purgeOnUse = true;
+                        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+                    }
                 }
 
             }

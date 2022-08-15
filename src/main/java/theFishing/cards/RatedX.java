@@ -24,7 +24,7 @@ public class RatedX extends AbstractFishingCard {
 
     public RatedX() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 8;
         baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
         baseSecondMagic = secondMagic = 2;

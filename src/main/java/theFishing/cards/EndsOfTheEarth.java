@@ -17,7 +17,7 @@ public class EndsOfTheEarth extends AbstractFishingCard {
 
     public EndsOfTheEarth() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 4;
         baseBlock = 2;
     }
 

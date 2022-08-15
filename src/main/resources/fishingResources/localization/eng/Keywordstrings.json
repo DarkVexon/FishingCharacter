@@ -18,7 +18,7 @@
     "NAMES": [
       "solo"
     ],
-    "DESCRIPTION": "Effect triggers only if this card is the only one in your hand."
+    "DESCRIPTION": "Effect triggers only if your hand is empty after playing this card."
   },
   {
     "PROPER_NAME": "Quest",
