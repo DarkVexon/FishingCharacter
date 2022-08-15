@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.combat.FastingEffect;
@@ -19,19 +20,17 @@ public class FastingB extends AbstractFishingCard {
 
     public FastingB() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 4;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new FastingEffect(p.hb.cX, p.hb.cY, Color.ORANGE)));
-        applyToSelf(new StrengthPower(p, magicNumber));
-        applyToSelf(new ThornsPower(p, secondMagic));
+        applyToSelf(new ThornsPower(p, magicNumber));
+        applyToSelf(new PlatedArmorPower(p, magicNumber));
         applyToSelf(new TakeItEasyPower());
     }
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(2);
     }
 }
