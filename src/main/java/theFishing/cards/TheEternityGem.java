@@ -22,8 +22,8 @@ public class TheEternityGem extends AbstractFishingCard {
     public TheEternityGem() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         isEthereal = true;
-        baseDamage = 11;
-        baseMagicNumber = magicNumber = 11;
+        baseDamage = 10;
+        baseMagicNumber = magicNumber = 10;
         exhaust = true;
     }
 

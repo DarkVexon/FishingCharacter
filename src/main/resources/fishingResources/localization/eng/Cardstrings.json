@@ -184,7 +184,7 @@
     "DESCRIPTION": "After you play an X-cost card, gain [E].",
     "EXTENDED_DESCRIPTION": [
       "Reserves",
-      "After you play a X-cost card, gain "
+      "After you play an X-cost card, gain "
     ]
   },
   "${ModID}:XMarksTheSpot": {

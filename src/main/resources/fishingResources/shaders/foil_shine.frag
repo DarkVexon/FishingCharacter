@@ -20,38 +20,25 @@ vec4 rgba(vec2 offset) {
 }
 
 void main() {
-    vec4 outputColor = rgba(vec2(0, 0));//Creates the colour of the pixel
+    vec4 outputColor = rgba(vec2(0, 0));
     float magnitude = 0.4;
-    float val = magnitude * v_texCoords.x + 1.0;//Equation of the line y=mx+c
-
-    //(s)    (1)  (2)
-    float tmp = mod(x_time / 3.0, 1.5);//(1)Use this value to slow down the line (higher = slower) | (2)Changing this affects the range of y-values the line covers
-
+    float val = magnitude * v_texCoords.x + 1.0;
+    float tmp = mod(x_time / 3.0, 1.5);
     val = val - tmp;
-
-    /*
-    if (val - v_texCoords.y < 0.03 && val - v_texCoords.y > -0.03) //If Pixel within 0.03 of line then:
-    {
-        outputColor.rgb = outputColor.rgb + 0.2;    //Make the pixel whiter
-        0.2*smoothstep(val - tmp, val - tmp - 0.03, 0.0);
-        outputColor.rgb = outputColor.rgb + (0.1 * (abs(val - v_texCoords.y) / 0.03));
-    }
-    */
-
+    float line_size = 0.075;
     if (outputColor.a > 0) {
-        if (val - v_texCoords.y < 0.03 && val - v_texCoords.y > -0.03)
+        if (val - v_texCoords.y < (line_size / 3) && val - v_texCoords.y > -(line_size/3))
         {
             outputColor.r = outputColor.r + 0.1;
         }
-        else if (val - v_texCoords.y < 0.06 && val - v_texCoords.y > -0.06)
+        else if (val - v_texCoords.y < ((line_size/3)*2) && val - v_texCoords.y > -((line_size/3)*2))
         {
             outputColor.g = outputColor.g + 0.1;
         }
-        else if (val - v_texCoords.y < 0.09 && val - v_texCoords.y > -0.09)
+        else if (val - v_texCoords.y < line_size && val - v_texCoords.y > -line_size)
         {
             outputColor.b = outputColor.b + 0.1;
         }
     }
-
     gl_FragColor = vec4(outputColor.r, outputColor.g, outputColor.b, outputColor.a);
 }

@@ -18,7 +18,7 @@ public class Reserves extends AbstractFishingCard {
     // intellij stuff power, self, uncommon, , , , , , 
 
     public Reserves() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,6 +44,6 @@ public class Reserves extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 }
