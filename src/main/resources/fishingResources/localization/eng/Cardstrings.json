@@ -323,12 +323,12 @@
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
-    "DESCRIPTION": "Ethereal. NL When you play a card, if it's the only one in your hand, play it twice.",
-    "UPGRADE_DESCRIPTION": "When you play a card, if it's the only one in your hand, play it twice.",
+    "DESCRIPTION": "Ethereal. NL When you play a card, if it's the only card in your hand, play it twice.",
+    "UPGRADE_DESCRIPTION": "When you play a card, if it's the only card in your hand, play it twice.",
     "EXTENDED_DESCRIPTION": [
       "Finishing Touches",
-      "When you play a card, if it's the only one in your hand, play it twice.",
-      "When you play a card, if it's the only one in your hand, play it #b",
+      "When you play a card, if it's the only card in your hand, play it twice.",
+      "When you play a card, if it's the only card in your hand, play it #b",
       " additional times."
     ]
   },
