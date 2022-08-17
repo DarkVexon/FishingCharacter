@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import theFishing.TheFishing;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.cards.EndsOfTheEarth;
 import theFishing.effects.CollectorReminderEffect;
 import theFishing.powers.CollectorPower;
 import theFishing.relics.Newsletter;
@@ -357,7 +358,7 @@ public class FoilPatches {
     )
     public static class CollectorReminderFlames {
         public static void Postfix(AbstractCard __instance) {
-            if (Wiz.isInCombat() && AbstractDungeon.player.hand.contains(__instance) && AbstractDungeon.player.hasPower(CollectorPower.ID) && !((CollectorPower) AbstractDungeon.player.getPower(CollectorPower.ID)).activated) {
+            if (Wiz.isInCombat() && (AbstractDungeon.player.hand.contains(__instance) || (__instance.cardID.equals(EndsOfTheEarth.ID) && AbstractDungeon.player.discardPile.contains(__instance))) && AbstractDungeon.player.hasPower(CollectorPower.ID) && !((CollectorPower) AbstractDungeon.player.getPower(CollectorPower.ID)).activated) {
                 if (__instance.rarity == AbstractCard.CardRarity.RARE || isFoil(__instance)) {
                     float timer = CollectorTimerField.collectorTimer.get(__instance);
                     timer -= Gdx.graphics.getDeltaTime();
