@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -24,12 +25,12 @@ public class Wander extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.LIGHTNING));
         atb(new DiscardAction(p, p, BaseMod.MAX_HAND_SIZE, true));
+        if (upgraded) atb(new ScryAction(2));
         atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(1);
         uDesc();
     }
 }
