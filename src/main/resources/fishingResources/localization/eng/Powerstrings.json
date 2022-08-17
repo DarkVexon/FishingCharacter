@@ -11,8 +11,8 @@
     "NAME": "Draw Less Next Turn",
     "DESCRIPTIONS": [
       "Draw #b",
-      " less card next turn.",
-      " less cards next turn."
+      " fewer card next turn.",
+      " fewer cards next turn."
     ]
   },
   "${ModID}:TripwirePower": {

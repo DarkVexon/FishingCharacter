@@ -20,10 +20,10 @@ public class RatedX extends AbstractFishingCard {
 
     public RatedX() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseBlock = 8;
-        baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 2;
+        baseDamage = 7;
+        baseBlock = 7;
+        baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,11 +32,11 @@ public class RatedX extends AbstractFishingCard {
                 applyToSelfTop(new StrengthPower(p, secondMagic));
             }
             if (effect >= 2) {
-                att(new GainBlockAction(p, block));
-            }
-            if (effect >= 1) {
                 applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
                 applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
+            }
+            if (effect >= 1) {
+                att(new GainBlockAction(p, block));
             }
             dmgTop(m, AbstractGameAction.AttackEffect.NONE);
             this.addToTop(new VFXAction(new ClashEffect(m.hb.cX, m.hb.cY), 0.1F));

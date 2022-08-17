@@ -20,8 +20,8 @@ public class Crosshairs extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , 12, 3
 
     public Crosshairs() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 12;
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -56,6 +56,6 @@ public class Crosshairs extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(3);
     }
 }

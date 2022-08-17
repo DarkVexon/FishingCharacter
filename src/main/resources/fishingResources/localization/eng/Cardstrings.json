@@ -66,7 +66,7 @@
   "${ModID}:Wander": {
     "NAME": "Wander",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, Scry 2, then draw !M! cards."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, NL Scry 2, NL then draw !M! card."
   },
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
@@ -231,7 +231,7 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Apply !M! Weak and Vulnerable. NL X >= 2: Gain !B! Block. NL X >= 4: Gain !${ModID}:m2! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: Apply !M! Weak and Vulnerable. NL X >= 4: Gain !${ModID}:m2! Strength."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
@@ -380,8 +380,8 @@
   },
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
-    "DESCRIPTION": "At the start of your turn, Exhaust 1 card and draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust 1 card and draw 1 card.",
+    "DESCRIPTION": "At the start of your turn, Exhaust 1 card and draw 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust 1 card and draw 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "Vexing Deal",
       "At the start of your turn, #yExhaust #b",
