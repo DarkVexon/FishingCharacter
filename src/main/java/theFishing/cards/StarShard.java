@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 

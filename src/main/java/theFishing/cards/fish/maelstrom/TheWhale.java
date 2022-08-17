@@ -1,25 +1,22 @@
 package theFishing.cards.fish.maelstrom;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
-
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class TheWhale extends AbstractFishCard {
     public final static String ID = makeID("TheWhale");
     // intellij stuff skill, enemy, , , , , 50, 10
 
     public TheWhale() {
-        super(ID,  CardType.SKILL, CardTarget.SELF_AND_ENEMY);
+        super(ID, CardType.SKILL, CardTarget.SELF_AND_ENEMY);
         baseMagicNumber = magicNumber = 20;
     }
 

@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theFishing.actions.AcceptQuestAction;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.quest.quests.TheTerribleTwos;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToEnemy;
+import static theFishing.util.Wiz.atb;
 
 public class QuestTimeTheTerribleTwos extends AbstractFishingCard {
     public final static String ID = makeID("QuestTimeTheTerribleTwos");

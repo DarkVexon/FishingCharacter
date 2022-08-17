@@ -22,7 +22,7 @@ public class Reserves extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower(makeID("ReservesPower"),cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
+        applyToSelf(new LambdaPower(makeID("ReservesPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (card.cost == -1) {

@@ -16,7 +16,7 @@ public class Qwilfish extends AbstractFishCard {
     // intellij stuff skill, enemy, special, , , , , 5, 2
 
     public Qwilfish() {
-        super(ID,  AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
+        super(ID, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 5;
     }
 

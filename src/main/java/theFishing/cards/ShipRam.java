@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.VerticalImpactEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
 import static theFishing.FishingMod.makeID;

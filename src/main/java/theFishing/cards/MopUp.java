@@ -26,7 +26,6 @@ public class MopUp extends AbstractFishingCard {
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             if (cards.get(0).type == CardType.STATUS || cards.get(0).type == CardType.CURSE || cards.get(0).color == CardColor.CURSE) {
                 att(new DrawCardAction(1));
-                att(new GainEnergyAction(1));
             }
             att(new ExhaustSpecificCardAction(cards.get(0), p.hand));
         }));

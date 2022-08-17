@@ -14,7 +14,7 @@ public class Eel extends AbstractFishCard {
     // intellij stuff skill, self, , , , , , 
 
     public Eel() {
-        super(ID,  CardType.SKILL, CardTarget.SELF);
+        super(ID, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

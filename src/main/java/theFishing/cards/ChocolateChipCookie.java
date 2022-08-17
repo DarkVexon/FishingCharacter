@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 
-
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;

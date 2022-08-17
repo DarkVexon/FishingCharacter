@@ -4,11 +4,10 @@ import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPrevie
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.quest.quests.ThePrismaticPortal;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
     public final static String ID = makeID("QuestTimeThePrismaticPortal");

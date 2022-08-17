@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
-import com.megacrit.cardcrawl.vfx.combat.PressurePointEffect;
 import theFishing.effects.RedPressurePoints;
 import theFishing.powers.LambdaPower;
 

@@ -2,13 +2,10 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.unique.SwordBoomerangAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
 
 public class Pinball extends AbstractFishingCard {
     public final static String ID = makeID("Pinball");
@@ -22,7 +19,7 @@ public class Pinball extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < this.magicNumber; ++i) {
+        for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }

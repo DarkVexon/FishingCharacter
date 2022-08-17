@@ -11,7 +11,8 @@ import theFishing.actions.DamagePlusWallopVFXAction;
 import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class ShinyShots extends AbstractFishingCard {
     public final static String ID = makeID("ShinyShots");

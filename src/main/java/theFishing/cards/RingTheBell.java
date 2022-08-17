@@ -7,7 +7,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.topDeck;
 
 public class RingTheBell extends AbstractFishingCard {
     public final static String ID = makeID("RingTheBell");

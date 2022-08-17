@@ -7,14 +7,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class Swordfish extends AbstractFishCard {
     public final static String ID = makeID("Swordfish");
     // intellij stuff attack, enemy, 7, 2, , , , 
 
     public Swordfish() {
-        super(ID,  CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 7;
     }
 

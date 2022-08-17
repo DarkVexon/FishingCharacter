@@ -8,7 +8,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.patch.PreDrawPatch;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelfTop;
+import static theFishing.util.Wiz.att;
 
 public class Bobber extends AbstractFishingCard {
     public final static String ID = makeID("Bobber");

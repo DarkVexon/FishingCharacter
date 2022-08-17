@@ -14,7 +14,7 @@ public class Guppy extends AbstractFishCard {
     // intellij stuff skill, self, special, , , 3, 2, , 
 
     public Guppy() {
-        super(ID,  AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
+        super(ID, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
         baseBlock = 3;
     }
 

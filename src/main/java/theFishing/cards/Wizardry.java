@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.combat.ThirdEyeEffect;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;

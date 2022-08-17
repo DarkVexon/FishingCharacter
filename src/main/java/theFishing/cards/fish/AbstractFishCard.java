@@ -19,7 +19,7 @@ import static theFishing.FishingMod.makeID;
 
 public abstract class AbstractFishCard extends AbstractFishingCard {
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("FishDescriptor"));
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("FishDescriptor"));
 
     public AbstractFishCard(String cardID, AbstractCard.CardType type, AbstractCard.CardTarget target) {
         super(cardID, 0, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);

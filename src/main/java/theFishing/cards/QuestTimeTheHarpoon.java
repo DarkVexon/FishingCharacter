@@ -35,6 +35,6 @@ public class QuestTimeTheHarpoon extends AbstractFishingCard implements StartupC
     @Override
     public boolean atBattleStartPreDraw() {
         atb(new AcceptQuestAction(new TheHarpoon()));
-        return false;
+        return true;
     }
 }

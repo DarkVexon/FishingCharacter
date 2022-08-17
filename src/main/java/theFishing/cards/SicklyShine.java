@@ -1,16 +1,11 @@
 package theFishing.cards;
 
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Safety;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
-import com.megacrit.cardcrawl.cards.tempCards.Smite;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.powers.LambdaPower;
 

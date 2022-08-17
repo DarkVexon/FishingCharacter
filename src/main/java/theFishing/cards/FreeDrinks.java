@@ -1,10 +1,10 @@
 package theFishing.cards;
 
+import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.patch.foil.FoilPatches;
@@ -41,9 +41,9 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
     public List<TooltipInfo> getCustomTooltips() {
         ArrayList<TooltipInfo> result = new ArrayList<>();
         if (FoilPatches.isFoil(this)) {
-            result.add(new TooltipInfo("Foil", "Approx. 1 in 5 cards are Foil. Shiny!"));
+            result.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
         }
-        result.add(new TooltipInfo("DISCLAIMER", "Offer only valid with an empty potion slot."));
+        result.add(new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1]));
         return result;
     }
 

@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.isFoil;

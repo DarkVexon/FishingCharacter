@@ -16,7 +16,7 @@ public class Hammerhead extends AbstractFishCard {
     // intellij stuff skill, self, special, , , , , 1, 1
 
     public Hammerhead() {
-        super(ID,  AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
+        super(ID, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

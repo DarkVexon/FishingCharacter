@@ -23,9 +23,14 @@ public class FoilShiny {
 
         private static FrameBuffer fbo = ImageHelper.createBuffer();
 
+        public static int isMac = -1;
+
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(AbstractCard __instance, SpriteBatch spriteBatch) {
-            if (!Settings.hideCards) {
+            if (isMac == -1) {
+                isMac = System.getProperty("os.name").toLowerCase().indexOf("mac") >= 0 ? 1 : 0;
+            }
+            if (!Settings.hideCards && isMac == 0) {
                 if (FoilPatches.isFoil(__instance)) {
                     TextureRegion t = cardToTextureRegion(__instance, spriteBatch);
                     spriteBatch.setBlendFunction(GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);

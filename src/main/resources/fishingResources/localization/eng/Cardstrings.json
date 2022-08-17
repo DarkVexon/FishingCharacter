@@ -54,7 +54,7 @@
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it's a Curse or Status, gain [E] and draw a card.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it's a Curse or Status, draw 1 card.",
     "EXTENDED_DESCRIPTION": [
       "to Exhaust for Mop Up."
     ]
@@ -148,15 +148,6 @@
     "EXTENDED_DESCRIPTION": [
       "I have to draw this Bobber on my turn to use it."
     ]
-  },
-  "${ModID}:BombFishing": {
-    "NAME": "Bomb Fishing",
-    "DESCRIPTION": "Shuffle 1 *Surprise! into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle 1 *Surprise!+ into your draw pile."
-  },
-  "${ModID}:Surprise": {
-    "NAME": "Surprise!",
-    "DESCRIPTION": "Unplayable. Ethereal. When this card is drawn, deal !M! damage to ALL enemies."
   },
   "${ModID}:WakaWaka": {
     "NAME": "Waka Waka",
@@ -257,7 +248,7 @@
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
-    "DESCRIPTION": "The first !M! times you play a card each turn, draw a card."
+    "DESCRIPTION": "The first !M! times you play a card each turn, draw 1 card."
   },
   "${ModID}:FullHouse": {
     "NAME": "Full House",
@@ -310,8 +301,8 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! *Star *Shards into your hand and Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add !M! *Star *Shards+ into your hand and Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add 1 *Star *Shard into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Add 1 *Star *Shard+ into your hand."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -360,7 +351,11 @@
   },
   "${ModID}:FreeDrinks": {
     "NAME": "Free Drinks",
-    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust. NL When you obtain this, obtain a random Potion."
+    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust. NL When you obtain this, obtain a random Potion.",
+    "EXTENDED_DESCRIPTION": [
+      "DISCLAIMER",
+      "Offer only valid with an empty potion slot."
+    ]
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",
@@ -537,5 +532,9 @@
       "Whenever you play a #yFoil card, apply #b",
       " #yPoison to ALL enemies."
     ]
+  },
+  "${ModID}:Standoff": {
+    "NAME": "Standoff",
+    "DESCRIPTION": "Gain !B! Block. NL If there's only one enemy, gain !B! Block next turn."
   }
 }

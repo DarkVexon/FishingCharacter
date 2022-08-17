@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theFishing.actions.SetSailAction;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static theFishing.FishingMod.makeID;
@@ -39,7 +40,7 @@ public class SetSail extends AbstractFishingCard {
 
     @Override
     public List<TooltipInfo> getCustomTooltips() {
-        return Arrays.asList(new TooltipInfo(BaseMod.getKeywordTitle(makeID("fish")), BaseMod.getKeywordDescription(makeID("fish"))));
+        return Collections.singletonList(new TooltipInfo(BaseMod.getKeywordTitle(makeID("fish")), BaseMod.getKeywordDescription(makeID("fish"))));
     }
 
     public void upp() {

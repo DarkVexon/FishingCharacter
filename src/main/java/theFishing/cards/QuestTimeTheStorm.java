@@ -7,7 +7,8 @@ import theFishing.actions.AcceptQuestAction;
 import theFishing.quest.quests.TheStorm;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class QuestTimeTheStorm extends AbstractFishingCard {
     public final static String ID = makeID("QuestTimeTheStorm");

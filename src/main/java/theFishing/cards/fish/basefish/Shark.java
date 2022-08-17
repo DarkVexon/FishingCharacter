@@ -16,7 +16,7 @@ public class Shark extends AbstractFishCard {
     // intellij stuff skill, enemy, special, , , , , 2, 1
 
     public Shark() {
-        super(ID,  AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
+        super(ID, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
     }
 

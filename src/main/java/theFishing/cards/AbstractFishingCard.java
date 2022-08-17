@@ -1,8 +1,6 @@
 package theFishing.cards;
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -17,12 +15,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
-import theFishing.patch.foil.FoilPatches;
 
-import java.util.Arrays;
-import java.util.List;
-
-import static theFishing.FishingMod.*;
+import static theFishing.FishingMod.makeImagePath;
+import static theFishing.FishingMod.modID;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 

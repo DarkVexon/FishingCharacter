@@ -1,25 +1,15 @@
 package theFishing.cards;
 
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
-import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 import theFishing.cards.fish.AbstractFishCard;
-import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
