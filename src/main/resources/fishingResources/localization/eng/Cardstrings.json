@@ -65,8 +65,7 @@
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, NL Scry 2, NL then draw !M! card."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card."
   },
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
@@ -88,7 +87,7 @@
   },
   "${ModID}:NostalgicStrike": {
     "NAME": "Nostalgic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Return the rarest card in your discard pile to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Put a random card from your discard pile into your hand."
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",
@@ -144,7 +143,7 @@
   },
   "${ModID}:Bobber": {
     "NAME": "Bobber",
-    "DESCRIPTION": "Unplayable. NL If you draw this after your turn starts, gain !${ModID}:m2! Block and !M! Strength.",
+    "DESCRIPTION": "Unplayable. NL If you draw this during your turn, gain !${ModID}:m2! Block and !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "I have to draw this Bobber on my turn to use it."
     ]

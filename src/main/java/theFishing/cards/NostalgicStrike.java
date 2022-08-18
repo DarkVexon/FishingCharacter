@@ -27,8 +27,8 @@ public class NostalgicStrike extends AbstractFishingCard {
             @Override
             public void update() {
                 isDone = true;
-                AbstractCard card = Wiz.getRarestCardInList(AbstractDungeon.player.discardPile.group, false);
-                if (card != null)
+                if (!AbstractDungeon.player.discardPile.isEmpty()) {
+                    AbstractCard card = AbstractDungeon.player.discardPile.getRandomCard(AbstractDungeon.cardRandomRng);
                     att(new AbstractGameAction() {
                         @Override
                         public void update() {
@@ -39,6 +39,7 @@ public class NostalgicStrike extends AbstractFishingCard {
                             AbstractDungeon.player.hand.refreshHandLayout();
                         }
                     });
+                }
             }
         });
     }
