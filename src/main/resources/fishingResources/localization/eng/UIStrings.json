@@ -31,7 +31,7 @@
   "${ModID}:ThePrismaticPortal": {
     "TEXT": [
       "The Prismatic Portal",
-      "#yQuest: Play a Common, #bUncommon, and #yRare card in a turn. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
+      "#yQuest: Play a Common, #bUncommon, and #yRare card in a single turn. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
     ]
   },
   "${ModID}:TheStorm": {

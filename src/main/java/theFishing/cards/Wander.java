@@ -25,12 +25,10 @@ public class Wander extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.LIGHTNING));
         atb(new DiscardAction(p, p, BaseMod.MAX_HAND_SIZE, true));
-        if (upgraded) atb(new ScryAction(2));
         atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(2);
-        uDesc();
+        upgradeDamage(3);
     }
 }
