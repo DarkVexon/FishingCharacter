@@ -171,18 +171,6 @@ public abstract class AbstractFishingCard extends CustomCard {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }
 
-    protected void upMagic(int x) {
-        upgradeMagicNumber(x);
-    }
-
-    protected void upSecondMagic(int x) {
-        upgradeSecondMagic(x);
-    }
-
-    protected void upSecondDamage(int x) {
-        upgradeSecondDamage(x);
-    }
-
     protected boolean isVoyaged() {
         return FishingMod.isThisVoyaged(this);
     }

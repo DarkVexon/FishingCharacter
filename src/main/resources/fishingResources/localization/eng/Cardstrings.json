@@ -292,8 +292,7 @@
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
-    "DESCRIPTION": "Gain !B! Block. NL Put a *Flag on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put a *Flag+ on top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Put a ${ModID}:Foil *Flag on top of your draw pile."
   },
   "${ModID}:Flag": {
     "NAME": "Flag",
