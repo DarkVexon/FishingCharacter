@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.AllEnemyLoseHPAction;
 import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
@@ -29,7 +30,7 @@ public class DoubleUp extends AbstractFishingCard implements StartupCard {
 
     @Override
     public boolean atBattleStartPreDraw() {
-        atb(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(magicNumber), damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        atb(new AllEnemyLoseHPAction(magicNumber));
         return true;
     }
 

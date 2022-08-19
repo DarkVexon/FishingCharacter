@@ -9,7 +9,7 @@
   },
   "${ModID}:Boot": {
     "NAME": "Boot",
-    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:Guppy": {
     "NAME": "Guppy",
@@ -373,6 +373,10 @@
     "NAME": "The Terrible Twos",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL ${ModID}:Quest: Play 2 2-cost cards. NL *Reward: Gain 12 Block."
   },
+  "${ModID}:QuestTimeTheFishOPedia": {
+    "NAME": "The Fish-O-Pedia",
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 4 ${ModID}:Fish with different names. NL *Reward: Gain 4 Strength."
+  },
   "${ModID}:SoleSight": {
     "NAME": "Sole Searching",
     "DESCRIPTION": "Scry !M!. NL ${ModID}:Solo: Gain !M! Strength."
@@ -534,6 +538,6 @@
   },
   "${ModID}:DoubleUp": {
     "NAME": "Double Up",
-    "DESCRIPTION": "Deal !D! damage twice. NL Startup: Deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage twice. NL Startup: ALL enemies lose !M! HP."
   }
 }

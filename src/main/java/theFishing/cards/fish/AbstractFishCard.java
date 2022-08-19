@@ -39,8 +39,8 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     private static AbstractCard returnRandomBasicFish() {
         if (weightedFishList == null) {
             weightedFishList = new LinkedHashMap<>();
-            weightedFishList.put(Guppy.ID, 33);
-            weightedFishList.put(Piranha.ID, 30);
+            weightedFishList.put(Guppy.ID, 32);
+            weightedFishList.put(Piranha.ID, 31);
             weightedFishList.put(Octopus.ID, 7);
             weightedFishList.put(Eel.ID, 7);
             weightedFishList.put(Boot.ID, 6);
@@ -72,10 +72,10 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             maelstromFishList = new LinkedHashMap<>();
             maelstromFishList.put(CeramicFish.ID, 18);
             maelstromFishList.put(Swordfish.ID, 18);
-            maelstromFishList.put(Maw.ID, 10);
+            maelstromFishList.put(Maw.ID, 12);
             maelstromFishList.put(Hammerhead.ID, 10);
             maelstromFishList.put(Jellyfish.ID, 10);
-            maelstromFishList.put(Starfy.ID, 8);
+            maelstromFishList.put(Starfy.ID, 6);
             maelstromFishList.put(Shark.ID, 6);
             maelstromFishList.put(Starfish.ID, 6);
             maelstromFishList.put(Qwilfish.ID, 6);

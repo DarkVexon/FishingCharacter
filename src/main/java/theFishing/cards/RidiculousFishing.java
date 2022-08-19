@@ -38,6 +38,6 @@ public class RidiculousFishing extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

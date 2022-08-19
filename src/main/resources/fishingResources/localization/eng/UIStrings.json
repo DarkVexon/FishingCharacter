@@ -68,5 +68,13 @@
     "TEXT": [
       "Quest Log"
     ]
+  },
+  "${ModID}:TheFishOPedia": {
+    "TEXT": [
+      "Fish-O-Pedia",
+      "#yQuest: Play #b",
+      " #yFish with different names. NL #yReward: Gain #b4 #yStrength.",
+      " NL Already played:"
+    ]
   }
 }
