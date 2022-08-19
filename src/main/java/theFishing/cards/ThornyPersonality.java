@@ -15,14 +15,16 @@ public class ThornyPersonality extends AbstractFishingCard {
     public ThornyPersonality() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 2;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        applyToSelf(new ThornsPower(p, magicNumber));
         if (isVoyaged()) {
-            applyToSelf(new ThornsPower(p, magicNumber));
+            applyToSelf(new ThornsPower(p, secondMagic));
         }
     }
 
@@ -33,5 +35,6 @@ public class ThornyPersonality extends AbstractFishingCard {
     public void upp() {
         upgradeBlock(2);
         upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

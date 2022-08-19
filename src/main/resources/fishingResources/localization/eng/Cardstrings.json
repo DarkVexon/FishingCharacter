@@ -54,7 +54,7 @@
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it's a Curse or Status, draw 1 card.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. NL If it's a Status or Curse card, draw 1 card.",
     "EXTENDED_DESCRIPTION": [
       "to Exhaust for Mop Up."
     ]
@@ -65,7 +65,8 @@
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! cards."
   },
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
@@ -204,7 +205,7 @@
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Thorny Personality",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Voyaged: Gain !M! Thorns."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns. NL ${ModID}:Voyaged: Gain !${ModID}:m2! more Thorns."
   },
   "${ModID}:Tripwire": {
     "NAME": "Tripwire",
@@ -366,7 +367,7 @@
   },
   "${ModID}:QuestTimeTheLuckyPack": {
     "NAME": "The Lucky Pack",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a row. NL *Reward: Play the last card twice."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a row. NL *Reward: Play the last card twice."
   },
   "${ModID}:QuestTimeTheTerribleTwos": {
     "NAME": "The Terrible Twos",
@@ -427,7 +428,7 @@
   },
   "${ModID}:PerfectPull": {
     "NAME": "Perfect Pull",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL If you draw a ${ModID}:Foil card, repeat this."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Draw 1 card. NL If you draw a ${ModID}:Foil card, repeat this."
   },
   "${ModID}:ShimmeringShank": {
     "NAME": "Shimmering Shield",
@@ -533,6 +534,10 @@
   },
   "${ModID}:Standoff": {
     "NAME": "Standoff",
-    "DESCRIPTION": "Gain !B! Block. NL If there's only one enemy, gain !B! Block next turn."
+    "DESCRIPTION": "Gain !B! Block. NL If there's only one enemy, gain !B! Block again."
+  },
+  "${ModID}:DoubleUp": {
+    "NAME": "Double Up",
+    "DESCRIPTION": "Deal !D! damage twice. NL Startup: Deal !M! damage to ALL enemies."
   }
 }

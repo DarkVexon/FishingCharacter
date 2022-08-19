@@ -17,13 +17,13 @@ public class Standoff extends AbstractFishingCard {
 
     public Standoff() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 6;
+        baseBlock = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         if (getEnemies().size() == 1) {
-            applyToSelf(new NextTurnBlockPower(p, block));
+            blck();
         }
     }
 

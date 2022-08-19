@@ -29,6 +29,8 @@ public class Wander extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
+        uDesc();
     }
 }

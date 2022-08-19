@@ -229,7 +229,9 @@ public class TheFishing extends CustomPlayer {
     @Override
     public void initializeStarterDeck() {
         super.initializeStarterDeck();
-        makeFoil(AbstractDungeon.player.masterDeck.group.get(4));
-        makeFoil(AbstractDungeon.player.masterDeck.group.get(8));
+        int first = AbstractDungeon.ascensionLevel >= 10 ? 5 : 4;
+        int second = AbstractDungeon.ascensionLevel >= 10 ? 9 : 8;
+        makeFoil(AbstractDungeon.player.masterDeck.group.get(first));
+        makeFoil(AbstractDungeon.player.masterDeck.group.get(second));
     }
 }

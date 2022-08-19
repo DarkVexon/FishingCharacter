@@ -15,11 +15,10 @@ public class PerfectPull extends AbstractFishingCard {
     public PerfectPull() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 4;
-        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new PerfectPullAction(p, multiDamage, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
+        atb(new PerfectPullAction(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
     }
 
     public void upp() {

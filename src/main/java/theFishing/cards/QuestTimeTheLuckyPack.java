@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
 import theFishing.quest.quests.TheLuckyPack;
 
+import static com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
@@ -15,12 +16,12 @@ public class QuestTimeTheLuckyPack extends AbstractFishingCard {
     // intellij stuff attack, all_enemy, uncommon, 7, 3, , , , 
 
     public QuestTimeTheLuckyPack() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+        dmg(m, FIRE);
         atb(new AcceptQuestAction(new TheLuckyPack()));
     }
 
