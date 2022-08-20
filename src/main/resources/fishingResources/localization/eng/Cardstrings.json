@@ -50,7 +50,8 @@
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Apply !M! Vulnerable to a random enemy."
+    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Apply 1 Vulnerable to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Apply 1 Vulnerable to ALL enemies."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -231,7 +232,7 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: Apply !M! Weak and Vulnerable. NL X >= 4: Gain !${ModID}:m2! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: Apply !M! Vulnerable. NL X >= 4: Gain !${ModID}:m2! Strength."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",

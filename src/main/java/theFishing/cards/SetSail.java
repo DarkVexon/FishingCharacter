@@ -9,13 +9,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theFishing.actions.SetSailAction;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToEnemyTop;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.*;
 
 public class SetSail extends AbstractFishingCard {
     public final static String ID = makeID("SetSail");
@@ -23,19 +21,22 @@ public class SetSail extends AbstractFishingCard {
 
     public SetSail() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SetSailAction(CardType.ATTACK));
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                applyToEnemyTop(q, new VulnerablePower(q, magicNumber, false));
-            }
-        });
+        if (upgraded) {
+            forAllMonstersLiving(q -> applyToEnemy(q, new VulnerablePower(q, 1, false)));
+        } else {
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
+                    applyToEnemyTop(q, new VulnerablePower(q, magicNumber, false));
+                }
+            });
+        }
     }
 
     @Override
@@ -44,6 +45,6 @@ public class SetSail extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        uDesc();
     }
 }

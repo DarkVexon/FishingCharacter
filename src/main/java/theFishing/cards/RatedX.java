@@ -37,7 +37,6 @@ public class RatedX extends AbstractFishingCard {
             }
             if (effect >= 2) {
                 applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
-                applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
             }
             if (effect >= 1) {
                 att(new GainBlockAction(p, block));

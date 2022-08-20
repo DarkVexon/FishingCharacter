@@ -39,13 +39,13 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     private static AbstractCard returnRandomBasicFish() {
         if (weightedFishList == null) {
             weightedFishList = new LinkedHashMap<>();
-            weightedFishList.put(Guppy.ID, 32);
-            weightedFishList.put(Piranha.ID, 31);
-            weightedFishList.put(Octopus.ID, 7);
-            weightedFishList.put(Eel.ID, 7);
-            weightedFishList.put(Boot.ID, 6);
-            weightedFishList.put(Maw.ID, 4);
-            weightedFishList.put(Hammerhead.ID, 4);
+            weightedFishList.put(Piranha.ID, 33);
+            weightedFishList.put(Guppy.ID, 25);
+            weightedFishList.put(Octopus.ID, 8);
+            weightedFishList.put(Eel.ID, 8);
+            weightedFishList.put(Boot.ID, 7);
+            weightedFishList.put(Maw.ID, 5);
+            weightedFishList.put(Hammerhead.ID, 5);
             weightedFishList.put(Shark.ID, 3);
             weightedFishList.put(Starfish.ID, 3);
             weightedFishList.put(Qwilfish.ID, 2);
