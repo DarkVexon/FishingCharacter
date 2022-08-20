@@ -1,5 +1,6 @@
 package theFishing.relics;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -35,6 +36,7 @@ public class Signpost extends AbstractEasyRelic {
             flash();
             atb(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             atb(new GainBlockAction(AbstractDungeon.player, BLOCK_GRANTED));
+            atb(new DrawCardAction(AbstractDungeon.player, 1));
             grayscale = true;
         }
     }
