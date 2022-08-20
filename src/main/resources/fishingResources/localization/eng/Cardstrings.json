@@ -376,7 +376,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 4 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength."
   },
   "${ModID}:SoleSight": {
     "NAME": "Sole Searching",
