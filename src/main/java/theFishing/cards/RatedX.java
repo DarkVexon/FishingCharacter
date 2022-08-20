@@ -24,7 +24,7 @@ public class RatedX extends AbstractFishingCard {
         baseDamage = 7;
         baseBlock = 7;
         baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 3;
+        baseSecondMagic = secondMagic = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

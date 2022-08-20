@@ -169,7 +169,7 @@
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
-    "DESCRIPTION": "Gain !M! Strength. NL If you have over 200 *Gold, spend !${ModID}:m2! to gain an extra 1 Strength."
+    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend !${ModID}:m2! to gain an extra !M! Strength."
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",

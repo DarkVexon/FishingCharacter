@@ -23,14 +23,14 @@ public class Whaling extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p, magicNumber));
+        applyToSelf(new StrengthPower(p, 1));
         if (p.gold > 200) {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
                     p.loseGold(secondMagic);
-                    applyToSelfTop(new StrengthPower(p, 1));
+                    applyToSelfTop(new StrengthPower(p, magicNumber));
                     att(new VFXAction(new InflameEffect(p)));
                 }
             });
