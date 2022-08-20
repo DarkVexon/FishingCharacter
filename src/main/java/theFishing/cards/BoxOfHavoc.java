@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -18,21 +19,21 @@ public class BoxOfHavoc extends AbstractFishingCard {
 
     public BoxOfHavoc() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseSecondMagic = secondMagic = 1;
+        baseSecondMagic = secondMagic = 5;
         baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = p.hand.size() <= 1 ? magicNumber : secondMagic;
+        atb(new AllEnemyLoseHPAction(secondMagic));
         if (p.hand.size() <= 1) {
-            float duration = 0.3F;
+            float duration = 0.25F;
             addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.RED.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
             addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.YELLOW.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
             addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.BLUE.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
         }
         forAllMonstersLiving(q -> {
-            applyToEnemy(q, new WeakPower(q, x, false));
-            applyToEnemy(q, new VulnerablePower(q, x, false));
+            applyToEnemy(q, new WeakPower(q, magicNumber, false));
+            applyToEnemy(q, new VulnerablePower(q, magicNumber, false));
         });
     }
 
@@ -41,6 +42,6 @@ public class BoxOfHavoc extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeSecondMagic(3);
     }
 }

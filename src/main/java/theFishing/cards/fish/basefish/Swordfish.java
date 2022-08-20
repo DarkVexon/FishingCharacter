@@ -1,4 +1,4 @@
-package theFishing.cards.fish.maelstrom;
+package theFishing.cards.fish.basefish;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -18,12 +18,7 @@ public class Swordfish extends AbstractFishCard {
         baseDamage = 7;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        atb(new DrawCardAction(1));
-    }
-
-    public void upp() {
-        upgradeDamage(4);
     }
 }

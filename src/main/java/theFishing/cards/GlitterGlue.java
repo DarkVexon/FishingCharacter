@@ -38,8 +38,7 @@ public class GlitterGlue extends AbstractFishingCard implements SpawnModificatio
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(4);
     }
 
 

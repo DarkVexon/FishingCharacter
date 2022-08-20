@@ -1,7 +1,6 @@
 package theFishing.cards.fish.maelstrom;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,14 +15,13 @@ public class TheWhale extends AbstractFishCard {
     // intellij stuff skill, enemy, , , , , 50, 10
 
     public TheWhale() {
-        super(ID, CardType.SKILL, CardTarget.SELF_AND_ENEMY);
+        super(ID, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 20;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         playSfx();
         atb(new LoseHPAction(m, p, magicNumber));
-        atb(new DrawCardAction(p, 1));
     }
 
     private void playSfx() {
@@ -38,9 +36,5 @@ public class TheWhale extends AbstractFishCard {
             atb(new SFXAction("VO_NEOW_2B"));
         }
 
-    }
-
-    public void upp() {
-        upgradeMagicNumber(6);
     }
 }

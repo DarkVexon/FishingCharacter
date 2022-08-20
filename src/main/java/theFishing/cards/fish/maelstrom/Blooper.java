@@ -17,21 +17,15 @@ public class Blooper extends AbstractFishCard {
 
     public Blooper() {
         super(ID, CardType.SKILL, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 7;
+        baseMagicNumber = magicNumber = 4;
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         forAllMonstersLiving(q -> {
             applyToEnemy(q, new StrengthPower(q, -magicNumber));
             if (!q.hasPower(ArtifactPower.POWER_ID))
                 applyToEnemy(q, new GainStrengthPower(q, magicNumber));
         });
-        addToBot(new DrawCardAction(1));
-    }
-
-    @Override
-    public void upp() {
-        upgradeMagicNumber(4);
     }
 }

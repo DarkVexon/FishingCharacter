@@ -9,36 +9,43 @@
   },
   "${ModID}:Boot": {
     "NAME": "Boot",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL Enemies. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Guppy": {
     "NAME": "Guppy",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Hammerhead": {
     "NAME": "Hammerhead",
-    "DESCRIPTION": "Gain !M! Strength. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Strength. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Octopus": {
     "NAME": "Octopus",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Piranha": {
     "NAME": "Piranha",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Qwilfish": {
     "NAME": "Qwilfish",
-    "DESCRIPTION": "Apply !M! Poison. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Poison. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:SeaMonster": {
     "NAME": "Sea Monster",
-    "DESCRIPTION": "Add !M! random Attacks into your hand. NL They cost 0 this turn and gain Exhaust. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add !M! random Upgraded Attacks into your hand. NL They cost 0 this turn and gain Exhaust. NL Exhaust."
+    "DESCRIPTION": "Add !M! Fish into your hand. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add !M! Fish into your hand. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Shark": {
     "NAME": "Shark",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
@@ -169,7 +176,7 @@
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
-    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend !${ModID}:m2! to gain an extra !M! Strength."
+    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend !M! to gain an extra 1 Strength."
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",
@@ -202,7 +209,7 @@
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
-    "DESCRIPTION": "Apply !${ModID}:m2! Weak and Vulnerable to ALL enemies. NL ${ModID}:Solo: Apply !M! Weak and Vulnerable to ALL enemies instead."
+    "DESCRIPTION": "ALL enemies lose !${ModID}:m2! HP. NL ${ModID}:Solo: Apply !M! Weak and Vulnerable to ALL enemies."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Thorny Personality",
@@ -306,11 +313,13 @@
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
-    "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Eel": {
     "NAME": "Eel",
-    "DESCRIPTION": "{@@}Gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|>4=!M! [E]}. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "{@@}Gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|>4=!M! [E]}. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|>4=!M! [E]}. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
@@ -325,13 +334,8 @@
   },
   "${ModID}:FlyingFish": {
     "NAME": "Flying Fish",
-    "DESCRIPTION": "{@@}Take 50% less damage for !M! turn{!M!|>1=s}. NL Draw 1 card. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Flying Fish",
-      "Receive #b50% less damage this turn.",
-      "Receive #b50% less damage for the next #b",
-      " turns."
-    ]
+    "DESCRIPTION": "Deal !D! damage 5 times. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 5 times. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",

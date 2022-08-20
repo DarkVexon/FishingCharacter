@@ -18,13 +18,8 @@ public class Maw extends AbstractFishCard {
         baseDamage = 4;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        atb(new DrawCardAction(1));
-    }
-
-    public void upp() {
-        upgradeDamage(2);
     }
 }

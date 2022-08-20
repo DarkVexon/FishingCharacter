@@ -19,7 +19,7 @@ public class QuestTimeTheHarpoon extends AbstractFishingCard implements StartupC
 
     public QuestTimeTheHarpoon() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 26;
+        baseDamage = 28;
         cardsToPreview = new TheWhale();
     }
 

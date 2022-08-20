@@ -15,14 +15,10 @@ public class Octopus extends AbstractFishCard {
 
     public Octopus() {
         super(ID, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.NONE);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(magicNumber));
-    }
-
-    public void upp() {
-        upgradeMagicNumber(1);
     }
 }

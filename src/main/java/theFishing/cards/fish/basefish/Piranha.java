@@ -21,13 +21,9 @@ public class Piranha extends AbstractFishCard {
         baseDamage = 4;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY)));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        atb(new DrawCardAction(1));
-    }
 
-    public void upp() {
-        upgradeDamage(2);
     }
 }

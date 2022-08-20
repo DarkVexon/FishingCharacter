@@ -1,4 +1,4 @@
-package theFishing.cards.fish.maelstrom;
+package theFishing.cards.fish.basefish;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
@@ -20,14 +20,9 @@ public class Jellyfish extends AbstractFishCard {
         baseMagicNumber = magicNumber = 1;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         atb(new IncreaseMaxOrbAction(magicNumber));
         for (int i = 0; i < magicNumber; i++)
             atb(new ChannelAction(new Lightning()));
-        atb(new DrawCardAction(1));
-    }
-
-    public void upp() {
-        upgradeMagicNumber(1);
     }
 }

@@ -20,12 +20,7 @@ public class Hammerhead extends AbstractFishCard {
         baseMagicNumber = magicNumber = 1;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, magicNumber));
-        atb(new DrawCardAction(1));
-    }
-
-    public void upp() {
-        upgradeMagicNumber(1);
     }
 }

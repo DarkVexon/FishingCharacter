@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
+import theFishing.cards.cardvars.ThirdMagicNumber;
 import theFishing.patch.PreDrawPatch;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.potions.CarePackage;
@@ -140,6 +141,7 @@ public class FishingMod implements
     @Override
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SecondMagicNumber());
+        BaseMod.addDynamicVariable(new ThirdMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
         new AutoAdd(modID)
                 .packageFilter(AbstractFishingCard.class)

@@ -1,14 +1,19 @@
 package theFishing.cards.fish;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.fish.basefish.*;
 import theFishing.cards.fish.maelstrom.*;
+import theFishing.cards.fish.basefish.Jellyfish;
+import theFishing.cards.fish.basefish.Swordfish;
 import theFishing.relics.MaelstromAnkh;
 
 import java.util.Collections;
@@ -24,7 +29,16 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     public AbstractFishCard(String cardID, AbstractCard.CardType type, AbstractCard.CardTarget target) {
         super(cardID, 0, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);
         exhaust = true;
+        baseThirdMagic = thirdMagic = 1;
     }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        fishEffect(p, m);
+        addToBot(new DrawCardAction(thirdMagic));
+    }
+
+    public abstract void fishEffect(AbstractPlayer p, AbstractMonster m);
 
     public static LinkedHashMap<String, Integer> weightedFishList;
     public static LinkedHashMap<String, Integer> maelstromFishList;
@@ -43,12 +57,14 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             weightedFishList.put(Guppy.ID, 25);
             weightedFishList.put(Octopus.ID, 8);
             weightedFishList.put(Eel.ID, 8);
-            weightedFishList.put(Boot.ID, 7);
-            weightedFishList.put(Maw.ID, 5);
-            weightedFishList.put(Hammerhead.ID, 5);
+            weightedFishList.put(Boot.ID, 8);
+            weightedFishList.put(Hammerhead.ID, 4);
+            weightedFishList.put(Maw.ID, 3);
             weightedFishList.put(Shark.ID, 3);
             weightedFishList.put(Starfish.ID, 3);
-            weightedFishList.put(Qwilfish.ID, 2);
+            weightedFishList.put(Swordfish.ID, 2);
+            weightedFishList.put(Qwilfish.ID, 1);
+            weightedFishList.put(Jellyfish.ID, 1);
             weightedFishList.put(SeaMonster.ID, 1);
         }
 
@@ -70,19 +86,17 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     private static AbstractCard returnRandomMaelstromFish() {
         if (maelstromFishList == null) {
             maelstromFishList = new LinkedHashMap<>();
-            maelstromFishList.put(CeramicFish.ID, 18);
-            maelstromFishList.put(Swordfish.ID, 18);
-            maelstromFishList.put(Maw.ID, 12);
-            maelstromFishList.put(Hammerhead.ID, 10);
-            maelstromFishList.put(Jellyfish.ID, 10);
-            maelstromFishList.put(Starfy.ID, 6);
-            maelstromFishList.put(Shark.ID, 6);
-            maelstromFishList.put(Starfish.ID, 6);
-            maelstromFishList.put(Qwilfish.ID, 6);
-            maelstromFishList.put(SeaMonster.ID, 3);
-            maelstromFishList.put(FlyingFish.ID, 2);
-            maelstromFishList.put(Blooper.ID, 2);
-            maelstromFishList.put(TheWhale.ID, 1);
+            weightedFishList.put(Octopus.ID, 15);
+            weightedFishList.put(Eel.ID, 15);
+            weightedFishList.put(Hammerhead.ID, 15);
+            weightedFishList.put(Swordfish.ID, 15);
+            weightedFishList.put(Maw.ID, 15);
+            weightedFishList.put(Shark.ID, 5);
+            weightedFishList.put(Starfish.ID, 5);
+            weightedFishList.put(Qwilfish.ID, 5);
+            weightedFishList.put(Jellyfish.ID, 5);
+            weightedFishList.put(SeaMonster.ID, 4);
+            weightedFishList.put(TheWhale.ID, 1);
         }
 
         int fishRoll = AbstractDungeon.cardRandomRng.random(1,
@@ -107,5 +121,11 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
 
     public void trickyInitializeTitle() {
         initializeTitle();
+    }
+
+    @Override
+    public void upp() {
+        upgradeThirdMagic(1);
+        uDesc();
     }
 }

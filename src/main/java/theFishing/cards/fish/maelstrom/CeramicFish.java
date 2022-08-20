@@ -16,13 +16,7 @@ public class CeramicFish extends AbstractFishCard {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         blck();
-        addToBot(new DrawCardAction(1));
-    }
-
-    @Override
-    public void upp() {
-        upgradeBlock(3);
     }
 }

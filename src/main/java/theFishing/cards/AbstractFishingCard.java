@@ -30,6 +30,11 @@ public abstract class AbstractFishingCard extends CustomCard {
     public boolean upgradedSecondMagic;
     public boolean isSecondMagicModified;
 
+    public int thirdMagic;
+    public int baseThirdMagic;
+    public boolean upgradedThirdMagic;
+    public boolean isThirdMagicModified;
+
     public int secondDamage;
     public int baseSecondDamage;
     public boolean upgradedSecondDamage;
@@ -112,6 +117,8 @@ public abstract class AbstractFishingCard extends CustomCard {
         super.resetAttributes();
         secondMagic = baseSecondMagic;
         isSecondMagicModified = false;
+        thirdMagic = baseThirdMagic;
+        isThirdMagicModified = false;
         secondDamage = baseSecondDamage;
         isSecondDamageModified = false;
     }
@@ -121,6 +128,10 @@ public abstract class AbstractFishingCard extends CustomCard {
         if (upgradedSecondMagic) {
             secondMagic = baseSecondMagic;
             isSecondMagicModified = true;
+        }
+        if (upgradedThirdMagic) {
+            thirdMagic = baseThirdMagic;
+            isThirdMagicModified = true;
         }
         if (upgradedSecondDamage) {
             secondDamage = baseSecondDamage;
@@ -132,6 +143,12 @@ public abstract class AbstractFishingCard extends CustomCard {
         baseSecondMagic += amount;
         secondMagic = baseSecondMagic;
         upgradedSecondMagic = true;
+    }
+
+    protected void upgradeThirdMagic(int amount) {
+        baseThirdMagic += amount;
+        thirdMagic = baseThirdMagic;
+        upgradedThirdMagic = true;
     }
 
     protected void upgradeSecondDamage(int amount) {

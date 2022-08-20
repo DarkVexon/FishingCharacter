@@ -23,17 +23,8 @@ public class Starfy extends AbstractFishCard {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new SFXAction("ATTACK_WHIRLWIND"));
-        atb(new VFXAction(new WhirlwindEffect(), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        addToBot(new DrawCardAction(1));
-    }
-
-    @Override
-    public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(2);
     }
 }

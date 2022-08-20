@@ -1,13 +1,11 @@
 package theFishing.cards.fish.basefish;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
 
 public class Boot extends AbstractFishCard {
     public final static String ID = makeID("Boot");
@@ -19,12 +17,7 @@ public class Boot extends AbstractFishCard {
         isMultiDamage = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        atb(new DrawCardAction(1));
-    }
-
-    public void upp() {
-        upgradeDamage(2);
     }
 }

@@ -18,8 +18,7 @@ public class Whaling extends AbstractFishingCard {
 
     public Whaling() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 15;
+        baseMagicNumber = magicNumber = 15;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -29,8 +28,8 @@ public class Whaling extends AbstractFishingCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    p.loseGold(secondMagic);
-                    applyToSelfTop(new StrengthPower(p, magicNumber));
+                    p.loseGold(magicNumber);
+                    applyToSelfTop(new StrengthPower(p, 1));
                     att(new VFXAction(new InflameEffect(p)));
                 }
             });
@@ -42,6 +41,6 @@ public class Whaling extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(-7);
     }
 }

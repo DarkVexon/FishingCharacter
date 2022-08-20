@@ -20,12 +20,7 @@ public class Shark extends AbstractFishCard {
         baseMagicNumber = magicNumber = 2;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
-        atb(new DrawCardAction(1));
-    }
-
-    public void upp() {
-        upgradeMagicNumber(1);
     }
 }

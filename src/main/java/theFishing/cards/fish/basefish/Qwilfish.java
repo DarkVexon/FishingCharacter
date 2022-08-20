@@ -20,12 +20,7 @@ public class Qwilfish extends AbstractFishCard {
         baseMagicNumber = magicNumber = 5;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new PoisonPower(m, p, magicNumber));
-        atb(new DrawCardAction(1));
-    }
-
-    public void upp() {
-        upgradeMagicNumber(2);
     }
 }
