@@ -209,7 +209,7 @@
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
-    "DESCRIPTION": "ALL enemies lose !${ModID}:m2! HP. NL ${ModID}:Solo: Apply !M! Weak and Vulnerable to ALL enemies."
+    "DESCRIPTION": "Apply !${ModID}:m2! Poison to ALL enemies. NL ${ModID}:Solo: Apply !M! Weak and Vulnerable to ALL enemies."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Thorny Personality",

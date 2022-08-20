@@ -5,10 +5,10 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
-import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -19,12 +19,11 @@ public class BoxOfHavoc extends AbstractFishingCard {
 
     public BoxOfHavoc() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseSecondMagic = secondMagic = 5;
+        baseSecondMagic = secondMagic = 3;
         baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AllEnemyLoseHPAction(secondMagic));
         if (p.hand.size() <= 1) {
             float duration = 0.25F;
             addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.RED.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
@@ -32,8 +31,11 @@ public class BoxOfHavoc extends AbstractFishingCard {
             addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.BLUE.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
         }
         forAllMonstersLiving(q -> {
-            applyToEnemy(q, new WeakPower(q, magicNumber, false));
-            applyToEnemy(q, new VulnerablePower(q, magicNumber, false));
+            applyToEnemy(q, new PoisonPower(q, p, secondMagic));
+            if (p.hand.size() <= 1) {
+                applyToEnemy(q, new WeakPower(q, magicNumber, false));
+                applyToEnemy(q, new VulnerablePower(q, magicNumber, false));
+            }
         });
     }
 
@@ -42,6 +44,6 @@ public class BoxOfHavoc extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeSecondMagic(3);
+        upgradeSecondMagic(2);
     }
 }
