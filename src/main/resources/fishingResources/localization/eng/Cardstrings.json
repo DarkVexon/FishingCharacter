@@ -9,7 +9,7 @@
   },
   "${ModID}:Boot": {
     "NAME": "Boot",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:Guppy": {
     "NAME": "Guppy",
