@@ -33,7 +33,7 @@ public class SetSail extends AbstractFishingCard {
                 public void update() {
                     isDone = true;
                     AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                    applyToEnemyTop(q, new VulnerablePower(q, magicNumber, false));
+                    applyToEnemyTop(q, new VulnerablePower(q, 1, false));
                 }
             });
         }
