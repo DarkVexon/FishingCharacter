@@ -48,8 +48,8 @@ public class RatedX extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(2);
+        upgradeDamage(1);
+        upgradeBlock(1);
         upgradeMagicNumber(1);
         upgradeSecondMagic(1);
     }

@@ -33,6 +33,6 @@ public class Cannoneer extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 }

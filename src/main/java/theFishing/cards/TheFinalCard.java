@@ -19,7 +19,7 @@ public class TheFinalCard extends AbstractFishingCard {
 
     public TheFinalCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 30;
+        baseDamage = 28;
         isMultiDamage = true;
     }
 
@@ -35,7 +35,7 @@ public class TheFinalCard extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(5);
         uDesc();
     }
 }
