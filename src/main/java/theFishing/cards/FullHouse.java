@@ -24,6 +24,7 @@ public class FullHouse extends AbstractFishingCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
+        isEthereal = true;
     }
 
 
@@ -38,7 +39,7 @@ public class FullHouse extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> sortedList = new ArrayList<>(p.drawPile.group);
         Collections.shuffle(sortedList, MathUtils.random);
-        addToBot(new SelectCardsAction(sortedList, cardStrings.EXTENDED_DESCRIPTION[1], (cards) -> {
+        addToBot(new SelectCardsAction(sortedList, cardStrings.EXTENDED_DESCRIPTION[1], (card -> !card.cardID.equals(FullHouse.ID)), (cards) -> {
             AbstractCard q = cards.get(0).makeStatEquivalentCopy();
             if (!isFoil(q)) {
                 makeFoil(q);

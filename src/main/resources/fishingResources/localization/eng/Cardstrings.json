@@ -245,7 +245,8 @@
   },
   "${ModID}:SetupButBetter": {
     "NAME": "Setdown",
-    "DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL It costs 0 until played."
+    "DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your discard pile on top of your draw pile. NL It costs 0 until played."
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
@@ -270,7 +271,7 @@
   },
   "${ModID}:FullHouse": {
     "NAME": "Full House",
-    "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! ${ModID}:Foil copies into your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Choose a card in your draw pile. NL Shuffle !M! ${ModID}:Foil copies into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Four of a Kind",
       "Choose a card to duplicate."
@@ -553,7 +554,7 @@
   },
   "${ModID}:Preclude": {
     "NAME": "Preclude",
-    "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp.",
+    "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all [#EFC851]Time[] [#EFC851]Warp[].",
     "EXTENDED_DESCRIPTION": [
       "I can't play this Opener after other cards.",
       "~Cheater...~ NL @CHEEEATER!@"
