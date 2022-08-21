@@ -49,7 +49,8 @@
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
@@ -118,10 +119,10 @@
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
     "DESCRIPTION": "Deal !D! damage to a random enemy for each ${ModID}:Fish played this turn.",
-      "EXTENDED_DESCRIPTION": [
-        " NL (",
-        " ${ModID}:Fish played.)",
-        " ${ModID}:Fish played.)"
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " ${ModID}:Fish played.)",
+      " ${ModID}:Fish played.)"
     ]
   },
   "${ModID}:CatchOfTheDay": {
@@ -354,11 +355,13 @@
   },
   "${ModID}:TheWhale": {
     "NAME": "The Whale",
-    "DESCRIPTION": "Enemy loses !M! HP. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Enemy loses !M! HP. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enemy loses !M! HP. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Swordfish": {
     "NAME": "Swordfish",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
