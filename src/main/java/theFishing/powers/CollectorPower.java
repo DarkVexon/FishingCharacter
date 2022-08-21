@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
@@ -38,13 +37,13 @@ public class CollectorPower extends AbstractEasyPower {
         if (card.rarity == AbstractCard.CardRarity.RARE && !activated) {
             if (!triggered)
                 flash();
-            applyToSelf(new VigorPower(owner, amount * 3));
+            applyToSelf(new StrengthPower(owner, amount));
         }
         activated = true;
     }
 
     @Override
     public void updateDescription() {
-        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount * 3 + powerStrings.DESCRIPTIONS[2];
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount + powerStrings.DESCRIPTIONS[2];
     }
 }
