@@ -24,7 +24,6 @@ public class FullHouse extends AbstractFishingCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
-        isEthereal = true;
     }
 
 

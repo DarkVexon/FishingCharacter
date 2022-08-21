@@ -271,7 +271,7 @@
   },
   "${ModID}:FullHouse": {
     "NAME": "Full House",
-    "DESCRIPTION": "Ethereal. NL Choose a card in your draw pile. NL Shuffle !M! ${ModID}:Foil copies into your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! ${ModID}:Foil copies into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Four of a Kind",
       "Choose a card to duplicate."
