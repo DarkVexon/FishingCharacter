@@ -26,7 +26,7 @@ public class HunkerDown extends AbstractFishingCard {
             @Override
             public void update() {
                 isDone = true;
-                if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1 < 3){
+                if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1 < 3) {
                     att(new GainEnergyAction(1));
                 }
             }

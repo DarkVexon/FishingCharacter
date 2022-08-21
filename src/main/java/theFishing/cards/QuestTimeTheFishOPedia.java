@@ -3,12 +3,12 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.fish.AbstractFishCard;
 import theFishing.quest.quests.TheFishOPedia;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.shuffleIn;
 
 public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     public final static String ID = makeID("QuestTimeTheFishOPedia");

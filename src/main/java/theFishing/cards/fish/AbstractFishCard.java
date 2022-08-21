@@ -11,9 +11,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.fish.basefish.*;
-import theFishing.cards.fish.maelstrom.*;
-import theFishing.cards.fish.basefish.Jellyfish;
-import theFishing.cards.fish.basefish.Swordfish;
+import theFishing.cards.fish.maelstrom.TheWhale;
 import theFishing.relics.MaelstromAnkh;
 
 import java.util.Collections;

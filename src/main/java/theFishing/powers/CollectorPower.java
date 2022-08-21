@@ -31,21 +31,20 @@ public class CollectorPower extends AbstractEasyPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         boolean triggered = false;
         if (FoilPatches.isFoil(card) && !activated) {
-            if (!triggered)
-                flash();
+            flash();
             applyToSelf(new StrengthPower(owner, amount));
             triggered = true;
         }
         if (card.rarity == AbstractCard.CardRarity.RARE && !activated) {
             if (!triggered)
                 flash();
-            applyToSelf(new VigorPower(owner, amount * 4));
+            applyToSelf(new VigorPower(owner, amount * 3));
         }
         activated = true;
     }
 
     @Override
     public void updateDescription() {
-        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount * 4 + powerStrings.DESCRIPTIONS[2];
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount * 3 + powerStrings.DESCRIPTIONS[2];
     }
 }
