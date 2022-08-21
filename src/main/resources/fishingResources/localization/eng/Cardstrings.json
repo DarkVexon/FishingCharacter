@@ -541,6 +541,7 @@
   "${ModID}:SicklyShine": {
     "NAME": "Sickly Shine",
     "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, apply !M! Poison to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a ${ModID}:Foil card, apply !M! Poison to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "Sickly Shine",
       "Whenever you play a #yFoil card, apply #b",

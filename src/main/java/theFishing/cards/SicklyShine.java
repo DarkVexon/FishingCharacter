@@ -17,7 +17,7 @@ public class SicklyShine extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , 1, 
 
     public SicklyShine() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -39,6 +39,7 @@ public class SicklyShine extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        isInnate = true;
+        uDesc();
     }
 }
