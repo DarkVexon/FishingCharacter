@@ -39,8 +39,8 @@
   },
   "${ModID}:SeaMonster": {
     "NAME": "Sea Monster",
-    "DESCRIPTION": "Add !M! Fish into your hand. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add !M! Fish into your hand. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Add !M! ${ModID}:Fish into your hand. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add !M! ${ModID}:Fish into your hand. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Shark": {
     "NAME": "Shark",
