@@ -92,7 +92,12 @@
   },
   "${ModID}:HunkerDown": {
     "NAME": "Hunker Down",
-    "DESCRIPTION": "Gain !B! Block. NL Gain [E]."
+    "DESCRIPTION": "Gain !B! Block. NL If you have played less than 3 cards this turn, gain [E].",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " card played.)",
+      " cards played.)"
+    ]
   },
   "${ModID}:NostalgicStrike": {
     "NAME": "Nostalgic Strike",
@@ -164,7 +169,12 @@
   },
   "${ModID}:PowerPellet": {
     "NAME": "Power Pellet",
-    "DESCRIPTION": "Increase the damage of *Waka *Wakas by !M!. NL Exhaust."
+    "DESCRIPTION": "*Waka *Wakas deal !M! additional damage. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Power Pellet",
+      "#yWaka #yWakas deal #b",
+      " additional damage."
+    ]
   },
   "${ModID}:Cannoneer": {
     "NAME": "Cannoneer",
@@ -374,10 +384,6 @@
     "NAME": "The Lucky Pack",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a row. NL *Reward: Play the last card twice."
   },
-  "${ModID}:QuestTimeTheTerribleTwos": {
-    "NAME": "The Terrible Twos",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL ${ModID}:Quest: Play 2 2-cost cards. NL *Reward: Gain 12 Block."
-  },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
     "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength."
@@ -544,5 +550,13 @@
   "${ModID}:DoubleUp": {
     "NAME": "Double Up",
     "DESCRIPTION": "Deal !D! damage twice. NL Startup: ALL enemies lose !M! HP."
+  },
+  "${ModID}:Preclude": {
+    "NAME": "Preclude",
+    "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp.",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this Opener after other cards.",
+      "~Cheater...~ NL @CHEEEATER!@"
+    ]
   }
 }
