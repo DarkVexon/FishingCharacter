@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.neow.NeowReward;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.shop.ShopScreen;
@@ -36,7 +37,6 @@ public class FoilPatches {
 
     // GAMEPLAY STUFF
 
-    public static final float FOIL_CHANCE_REWARDS = 1F; // 1 out of X rewards
     public static final int SHOP_FOIL_CARDS = 2; // X out of the shop's cards
     public static final float SHOP_FOIL_MARKUP = 1.1F; // how much more expensive foils should be
 
@@ -85,7 +85,7 @@ public class FoilPatches {
     )
     public static class FoilInRewards {
         public static void Postfix(ArrayList<AbstractCard> __result) {
-            if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING && AbstractDungeon.cardRng.random() <= (1 / FOIL_CHANCE_REWARDS)) {
+            if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING) {
                 makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRng));
             }
         }
@@ -120,6 +120,29 @@ public class FoilPatches {
         }
     }
 
+    @SpirePatch(
+            clz = NeowReward.class,
+            method = "getColorlessRewardCards"
+    )
+    public static class NeowFoils1 {
+        public static ArrayList<AbstractCard> Postfix(ArrayList<AbstractCard> __result, NeowReward __instance, boolean rareOnly) {
+            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING))
+                makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRandomRng));
+            return __result;
+        }
+    }
+
+    @SpirePatch(
+            clz = NeowReward.class,
+            method = "getRewardCards"
+    )
+    public static class NeowFoils2 {
+        public static ArrayList<AbstractCard> Postfix(ArrayList<AbstractCard> __result, NeowReward __instance, boolean rareOnly) {
+            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING))
+                makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRandomRng));
+            return __result;
+        }
+    }
 
     // VISUAL STUFF
 
