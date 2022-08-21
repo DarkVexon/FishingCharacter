@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theFishing.actions.SetSailAction;
 
@@ -21,22 +23,13 @@ public class SetSail extends AbstractFishingCard {
 
     public SetSail() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SetSailAction(CardType.ATTACK));
-        if (upgraded) {
-            forAllMonstersLiving(q -> applyToEnemy(q, new VulnerablePower(q, 1, false)));
-        } else {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                    applyToEnemyTop(q, new VulnerablePower(q, 1, false));
-                }
-            });
-        }
+        applyToSelf(new StrengthPower(p, magicNumber));
+        applyToSelf(new LoseStrengthPower(p, magicNumber));
     }
 
     @Override
@@ -45,6 +38,6 @@ public class SetSail extends AbstractFishingCard {
     }
 
     public void upp() {
-        uDesc();
+        upgradeMagicNumber(2);
     }
 }
