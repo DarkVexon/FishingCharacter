@@ -33,8 +33,9 @@ public class Preclude extends AbstractFishingCard {
                 for (AbstractMonster q : Wiz.getEnemies()) {
                     if (q.hasPower(TimeWarpPower.POWER_ID)) {
                         q.getPower(TimeWarpPower.POWER_ID).amount = 0;
+                        q.getPower(TimeWarpPower.POWER_ID).flash();
                         if (q instanceof TimeEater && AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.cardID.equals(Preclude.ID)).count() == 1) {
-                            att(new TalkAction(q, cardStrings.EXTENDED_DESCRIPTION[0]));
+                            att(new TalkAction(q, cardStrings.EXTENDED_DESCRIPTION[1]));
                         }
                     }
                 }
@@ -45,7 +46,7 @@ public class Preclude extends AbstractFishingCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if (!AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty()) {
-            cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[1];
+            cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
             return false;
         }
         return super.canUse(p, m);
