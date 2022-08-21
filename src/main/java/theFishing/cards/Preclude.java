@@ -23,7 +23,7 @@ public class Preclude extends AbstractFishingCard {
 
     public Preclude() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 16;
+        baseDamage = 15;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

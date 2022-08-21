@@ -41,7 +41,7 @@
     "FLAVOR": "\"Welcome. You have come very far...\"",
     "DESCRIPTIONS": [
       "The first time you play a #yPower card each combat, gain #b",
-      " #yBlock and draw #b1 card."
+      " #yBlock."
     ]
   },
   "${ModID}:Goggles": {
