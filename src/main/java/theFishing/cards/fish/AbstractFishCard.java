@@ -86,17 +86,17 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     private static AbstractCard returnRandomMaelstromFish() {
         if (maelstromFishList == null) {
             maelstromFishList = new LinkedHashMap<>();
-            weightedFishList.put(Octopus.ID, 15);
-            weightedFishList.put(Eel.ID, 15);
-            weightedFishList.put(Hammerhead.ID, 15);
-            weightedFishList.put(Swordfish.ID, 15);
-            weightedFishList.put(Maw.ID, 15);
-            weightedFishList.put(Shark.ID, 5);
-            weightedFishList.put(Starfish.ID, 5);
-            weightedFishList.put(Qwilfish.ID, 5);
-            weightedFishList.put(Jellyfish.ID, 5);
-            weightedFishList.put(SeaMonster.ID, 4);
-            weightedFishList.put(TheWhale.ID, 1);
+            maelstromFishList.put(Octopus.ID, 15);
+            maelstromFishList.put(Eel.ID, 15);
+            maelstromFishList.put(Hammerhead.ID, 15);
+            maelstromFishList.put(Swordfish.ID, 15);
+            maelstromFishList.put(Maw.ID, 15);
+            maelstromFishList.put(Shark.ID, 5);
+            maelstromFishList.put(Starfish.ID, 5);
+            maelstromFishList.put(Qwilfish.ID, 5);
+            maelstromFishList.put(Jellyfish.ID, 5);
+            maelstromFishList.put(SeaMonster.ID, 4);
+            maelstromFishList.put(TheWhale.ID, 1);
         }
 
         int fishRoll = AbstractDungeon.cardRandomRng.random(1,
