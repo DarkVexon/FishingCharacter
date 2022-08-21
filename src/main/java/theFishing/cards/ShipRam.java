@@ -1,14 +1,15 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
+import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -25,9 +26,12 @@ public class ShipRam extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (isVoyaged()) {
-            atb(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
-            atb(new WaitAction(0.8F));
-            atb(new DamageAction(m, new DamageInfo(p, secondDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+            if (Settings.FAST_MODE) {
+                this.addToBot(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED)));
+            } else {
+                this.addToBot(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED), 0.4F));
+            }
+            atb(new DamageAction(m, new DamageInfo(p, secondDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         } else {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         }

@@ -21,7 +21,7 @@ public class AllOut extends AbstractFishingCard {
 
     public AllOut() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

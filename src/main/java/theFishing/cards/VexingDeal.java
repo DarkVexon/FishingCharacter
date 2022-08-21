@@ -18,7 +18,7 @@ public class VexingDeal extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , 33, 11
 
     public VexingDeal() {
-        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
     }
 
@@ -27,8 +27,8 @@ public class VexingDeal extends AbstractFishingCard {
 
             @Override
             public void atStartOfTurnPostDraw() {
-                addToBot(new ExhaustAction(amount, false, false));
                 addToBot(new DrawCardAction(amount));
+                addToBot(new ExhaustAction(amount, false, false));
             }
 
             @Override
@@ -47,7 +47,6 @@ public class VexingDeal extends AbstractFishingCard {
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeBaseCost(0);
     }
 }

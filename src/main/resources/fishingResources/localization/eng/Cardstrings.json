@@ -106,7 +106,7 @@
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Scry !M!. NL Upgrade the top card of your draw pile this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Scry !M!. NL Upgrade any cards discarded."
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
@@ -398,14 +398,14 @@
   },
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
-    "DESCRIPTION": "At the start of your turn, Exhaust 1 card and draw 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust 1 card and draw 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
+    "DESCRIPTION": "At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "Vexing Deal",
-      "At the start of your turn, #yExhaust #b",
+      "At the start of your turn, draw #b",
       " card",
       " cards",
-      " and draw #b"
+      " and #yExhaust #b"
     ]
   },
   "${ModID}:TheFinalCard": {
