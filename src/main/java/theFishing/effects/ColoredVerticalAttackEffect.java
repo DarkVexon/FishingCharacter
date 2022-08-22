@@ -9,10 +9,10 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
 
 public class ColoredVerticalAttackEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
-    private Color slamColor;
-    private boolean isVertical;
+    private final float x;
+    private final float y;
+    private final Color slamColor;
+    private final boolean isVertical;
 
     public ColoredVerticalAttackEffect(float x, float y, boolean isVertical, Color slamColor) {
         this.x = x;

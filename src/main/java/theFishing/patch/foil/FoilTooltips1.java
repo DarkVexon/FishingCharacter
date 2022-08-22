@@ -36,7 +36,7 @@ public class FoilTooltips1 {
         float sumTooltipHeight = 0.0F;
         for (String s : keywords) {
             if (GameDictionary.keywords.containsKey(s)) {
-                float textHeight = -FontHelper.getSmartHeight(FontHelper.tipHeaderFont, TipHelper.capitalize(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - FontHelper.getSmartHeight(FontHelper.tipBodyFont, (String) GameDictionary.keywords
+                float textHeight = -FontHelper.getSmartHeight(FontHelper.tipHeaderFont, TipHelper.capitalize(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - FontHelper.getSmartHeight(FontHelper.tipBodyFont, GameDictionary.keywords
 
                         .get(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
                 sumTooltipHeight -= textHeight + BOX_EDGE_H * 3.15F;
@@ -73,9 +73,9 @@ public class FoilTooltips1 {
                     textHeight.setAccessible(true);
                     float h = -FontHelper.getSmartHeight(FontHelper.tipHeaderFont, TipHelper.capitalize(tooltip.title), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - FontHelper.getSmartHeight(FontHelper.tipBodyFont, tooltip.description, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
                     textHeight.set(null, Float.valueOf(h));
-                    Method renderTipBox = TipHelper.class.getDeclaredMethod("renderTipBox", new Class[]{float.class, float.class, SpriteBatch.class, String.class, String.class});
+                    Method renderTipBox = TipHelper.class.getDeclaredMethod("renderTipBox", float.class, float.class, SpriteBatch.class, String.class, String.class);
                     renderTipBox.setAccessible(true);
-                    renderTipBox.invoke(null, new Object[]{Float.valueOf(x), Float.valueOf(y), sb, tooltip.title, tooltip.description});
+                    renderTipBox.invoke(null, Float.valueOf(x), Float.valueOf(y), sb, tooltip.title, tooltip.description);
                     y -= h + BOX_EDGE_H * 3.15F;
                 }
         } catch (NoSuchMethodException | IllegalAccessException | java.lang.reflect.InvocationTargetException |

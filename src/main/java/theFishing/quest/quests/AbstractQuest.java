@@ -12,7 +12,7 @@ import static theFishing.util.Wiz.atb;
 public abstract class AbstractQuest {
     public int progress;
     public int goal;
-    private static Texture def = TexLoader.getTexture(makeImagePath("quests/default.png"));
+    private static final Texture def = TexLoader.getTexture(makeImagePath("quests/default.png"));
 
     public Texture progressTex(int idx) {
         return def;
@@ -23,7 +23,9 @@ public abstract class AbstractQuest {
     }
 
     public abstract String getName();
+
     public abstract String getDescription();
+
     public abstract void grantReward();
 
     public String questID;

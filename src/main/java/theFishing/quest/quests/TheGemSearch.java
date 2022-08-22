@@ -15,7 +15,7 @@ public class TheGemSearch extends AbstractQuest {
 
     public static String ID = makeID("TheGemSearch");
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheGemSearch() {
         super(ID, 1);
@@ -37,8 +37,8 @@ public class TheGemSearch extends AbstractQuest {
         shuffleIn(new TheEternityGem());
     }
 
-    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/GemSearch.png"));
-    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/GemSearch_completed.png"));
+    private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/GemSearch.png"));
+    private static final Texture complete = TexLoader.getTexture(makeImagePath("quests/GemSearch_completed.png"));
 
     @Override
     public Texture progressTex(int idx) {

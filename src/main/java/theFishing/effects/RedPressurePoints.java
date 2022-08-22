@@ -18,17 +18,17 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class RedPressurePoints extends AbstractGameEffect {
     private float x;
     private float y;
-    private float endX;
-    private float endY;
-    private float scaleMultiplier;
-    private TextureAtlas.AtlasRegion img;
+    private final float endX;
+    private final float endY;
+    private final float scaleMultiplier;
+    private final TextureAtlas.AtlasRegion img;
 
     public RedPressurePoints(float setX, float setY) {
         this.img = ImageMaster.DAGGER_STREAK;
         setX -= 120.0F * Settings.scale;
         setY -= -80.0F * Settings.scale;
-        this.endX = setX - (float)this.img.packedWidth / 2.0F;
-        this.endY = setY - (float)this.img.packedHeight / 2.0F;
+        this.endX = setX - (float) this.img.packedWidth / 2.0F;
+        this.endY = setY - (float) this.img.packedHeight / 2.0F;
         this.x = this.endX + MathUtils.random(-550.0F, -450.0F) * Settings.scale;
         this.y = this.endY + MathUtils.random(380.0F, 320.0F) * Settings.scale;
         this.startingDuration = 0.4F;
@@ -54,9 +54,9 @@ public class RedPressurePoints extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale * 1.5F, this.rotation);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale * 1.5F, this.rotation);
         sb.setBlendFunction(770, 1);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 0.75F, this.scale * 0.75F, this.rotation);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 0.75F, this.scale * 0.75F, this.rotation);
         sb.setBlendFunction(770, 771);
     }
 

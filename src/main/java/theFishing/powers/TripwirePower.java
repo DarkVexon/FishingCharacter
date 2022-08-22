@@ -12,7 +12,7 @@ import static theFishing.FishingMod.makeID;
 
 public class TripwirePower extends AbstractEasyPower implements OnMyBlockBrokenPower {
     public static String ID = makeID(TripwirePower.class.getSimpleName());
-    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TripwirePower(int amount) {
         super(ID, powerStrings.NAME, PowerType.BUFF, true, AbstractDungeon.player, amount);

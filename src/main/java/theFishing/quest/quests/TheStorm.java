@@ -21,7 +21,7 @@ public class TheStorm extends AbstractQuest {
 
     public static final String ID = makeID("TheStorm");
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheStorm() {
         super(ID, 6);
@@ -58,8 +58,8 @@ public class TheStorm extends AbstractQuest {
         }
     }
 
-    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Storm.png"));
-    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/Storm_Completed.png"));
+    private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Storm.png"));
+    private static final Texture complete = TexLoader.getTexture(makeImagePath("quests/Storm_Completed.png"));
 
     @Override
     public Texture progressTex(int idx) {

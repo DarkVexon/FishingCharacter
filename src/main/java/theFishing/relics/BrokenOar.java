@@ -2,10 +2,8 @@ package theFishing.relics;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
-import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.shuffleIn;
 
 public class BrokenOar extends AbstractEasyRelic {
     public static final String ID = makeID("BrokenOar");

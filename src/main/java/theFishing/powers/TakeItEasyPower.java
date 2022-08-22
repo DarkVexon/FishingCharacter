@@ -3,13 +3,12 @@ package theFishing.powers;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import theFishing.cards.FastingB;
 
 import static theFishing.FishingMod.makeID;
 
 public class TakeItEasyPower extends AbstractEasyPower {
     public static String ID = makeID(TakeItEasyPower.class.getSimpleName());
-    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TakeItEasyPower() {
         super(makeID("TakeItEasyPower"), powerStrings.NAME, PowerType.DEBUFF, false, AbstractDungeon.player, 1);

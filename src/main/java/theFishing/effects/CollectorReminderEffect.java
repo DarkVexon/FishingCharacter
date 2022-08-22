@@ -11,13 +11,13 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class CollectorReminderEffect extends AbstractGameEffect {
-    private Texture img = this.getImg();
+    private final Texture img = this.getImg();
     private float x;
     private float y;
-    private float oX;
+    private final float oX;
     private float oY;
-    private AbstractCard __instance;
-    private boolean flippedX = MathUtils.randomBoolean();
+    private final AbstractCard __instance;
+    private final boolean flippedX = MathUtils.randomBoolean();
 
     public CollectorReminderEffect(AbstractCard __instance) {
         x = __instance.hb.x;

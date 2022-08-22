@@ -1,9 +1,6 @@
 package theFishing.patch.questhooks;
 
-import basemod.devcommands.energy.Energy;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import theFishing.quest.QuestHelper;
 

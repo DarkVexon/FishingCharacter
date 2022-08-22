@@ -2,19 +2,15 @@ package theFishing.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
-import java.util.Iterator;
-
 import static theFishing.FishingMod.makeID;
 
 public class DiscardPileSetupAction extends AbstractGameAction {
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("DiscardPileSetupAction"));
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("DiscardPileSetupAction"));
 
     public DiscardPileSetupAction() {
         this.actionType = ActionType.CARD_MANIPULATION;
@@ -49,7 +45,8 @@ public class DiscardPileSetupAction extends AbstractGameAction {
 
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                     AbstractDungeon.player.discardPile.removeCard(c);
-                    c.freeToPlayOnce = true;
+                    if (c.cost > 0)
+                        c.freeToPlayOnce = true;
                     AbstractDungeon.player.hand.moveToDeck(c, false);
                 }
 

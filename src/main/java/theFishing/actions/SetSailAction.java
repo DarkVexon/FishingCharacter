@@ -12,8 +12,8 @@ import theFishing.util.Wiz;
 import java.util.ArrayList;
 
 public class SetSailAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private CardType typeToCheck;
+    private final AbstractPlayer p;
+    private final CardType typeToCheck;
 
     public SetSailAction(CardType typeToCheck) {
         this.p = AbstractDungeon.player;

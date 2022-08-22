@@ -12,7 +12,7 @@ import static theFishing.FishingMod.makeID;
 public class AnglerFormPower extends AbstractEasyPower {
     public static String ID = makeID(AnglerFormPower.class.getSimpleName());
 
-    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public AnglerFormPower(int amount) {
         super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);

@@ -20,11 +20,11 @@ public class TheFishOPedia extends AbstractQuest {
 
     public static String ID = makeID("TheFishOPedia");
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
-    private ArrayList<Pair<String, String>> alreadyPlayed = new ArrayList<>();
+    private final ArrayList<Pair<String, String>> alreadyPlayed = new ArrayList<>();
 
-    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Fishopedia.png"));
+    private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Fishopedia.png"));
 
     public TheFishOPedia() {
         super(ID, 5);

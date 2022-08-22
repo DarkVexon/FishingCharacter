@@ -1,7 +1,6 @@
 package theFishing.relics;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAndDeckAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import theFishing.TheFishing;
 import theFishing.cards.fish.AbstractFishCard;

@@ -6,7 +6,7 @@ import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.AbstractQuest;
 
 public class AcceptQuestAction extends AbstractGameAction {
-    private AbstractQuest questToTake;
+    private final AbstractQuest questToTake;
 
     public AcceptQuestAction(AbstractQuest questToTake) {
         this.questToTake = questToTake;
@@ -16,8 +16,7 @@ public class AcceptQuestAction extends AbstractGameAction {
     public void update() {
         if (!QuestHelper.quests.stream().anyMatch(q -> q.questID.equals(questToTake.questID))) {
             QuestHelper.acceptQuest(questToTake);
-        }
-        else {
+        } else {
             addToTop(new DrawCardAction(1));
         }
         isDone = true;

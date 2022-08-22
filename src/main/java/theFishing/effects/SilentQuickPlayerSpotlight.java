@@ -4,7 +4,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -34,7 +33,7 @@ public class SilentQuickPlayerSpotlight extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
         sb.setBlendFunction(770, 1);
-        sb.draw(ImageMaster.SPOTLIGHT_VFX, 0.0F, 0.0F, AbstractDungeon.player.drawX + AbstractDungeon.player.hb_w * 2.0F, (float)Settings.HEIGHT);
+        sb.draw(ImageMaster.SPOTLIGHT_VFX, 0.0F, 0.0F, AbstractDungeon.player.drawX + AbstractDungeon.player.hb_w * 2.0F, (float) Settings.HEIGHT);
         sb.setBlendFunction(770, 771);
     }
 

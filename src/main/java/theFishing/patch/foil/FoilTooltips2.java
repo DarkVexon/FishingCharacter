@@ -33,7 +33,7 @@ public class FoilTooltips2 {
     private static class LocatorAfter extends SpireInsertLocator {
         public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
             Matcher.MethodCallMatcher methodCallMatcher = new Matcher.MethodCallMatcher(ArrayList.class, "isEmpty");
-            return LineFinder.findInOrder(ctMethodToPatch, (Matcher) methodCallMatcher);
+            return LineFinder.findInOrder(ctMethodToPatch, methodCallMatcher);
         }
     }
 }

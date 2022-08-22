@@ -5,7 +5,7 @@ import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.AbstractQuest;
 
 public class AbandonQuestAction extends AbstractGameAction {
-    private AbstractQuest takenQuest;
+    private final AbstractQuest takenQuest;
 
     public AbandonQuestAction(AbstractQuest takenQuest) {
         this.takenQuest = takenQuest;
@@ -14,8 +14,6 @@ public class AbandonQuestAction extends AbstractGameAction {
     @Override
     public void update() {
         isDone = true;
-        if (QuestHelper.quests.contains(takenQuest)) {
-            QuestHelper.quests.remove(takenQuest);
-        }
+        QuestHelper.quests.remove(takenQuest);
     }
 }

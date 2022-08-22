@@ -58,8 +58,8 @@
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength this turn.",
-    "UPGRADE_DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength this turn."
+    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -106,7 +106,7 @@
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Scry !M!. NL Upgrade any cards discarded."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Scry !M!. NL Upgrade any cards discarded for the rest of combat."
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
@@ -264,7 +264,7 @@
   },
   "${ModID}:ChocolateChipCookie": {
     "NAME": "Chocolate Chip Cookie",
-    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand this combat. NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand for the rest of combat. NL Exhaust."
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
@@ -479,11 +479,11 @@
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block for every 6 cards in your discard pile.",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block for every 5 cards in your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "Pyramid Climb",
       "At the end of your turn, gain #b",
-      " #yBlock for every #b6 cards in your discard pile."
+      " #yBlock for every #b5 cards in your discard pile."
     ]
   },
   "${ModID}:Collector": {

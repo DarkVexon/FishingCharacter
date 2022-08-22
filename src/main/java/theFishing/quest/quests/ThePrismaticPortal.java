@@ -17,9 +17,9 @@ import static theFishing.FishingMod.makeImagePath;
 public class ThePrismaticPortal extends AbstractQuest {
     public static final String ID = makeID("ThePrismaticPortal");
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
-    private boolean[] okayed = new boolean[3];
+    private final boolean[] okayed = new boolean[3];
 
     public ThePrismaticPortal() {
         super(ID, 3);
@@ -60,12 +60,12 @@ public class ThePrismaticPortal extends AbstractQuest {
         okayed[2] = false;
     }
 
-    private static Texture common_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Common.png"));
-    private static Texture common_com = TexLoader.getTexture(makeImagePath("quests/Portal_Common_Completed.png"));
-    private static Texture uncommon_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Uncommon.png"));
-    private static Texture uncommon_com = TexLoader.getTexture(makeImagePath("quests/Portal_Uncommon_Completed.png"));
-    private static Texture rare_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Rare.png"));
-    private static Texture rare_com = TexLoader.getTexture(makeImagePath("quests/Portal_Rare_Completed.png"));
+    private static final Texture common_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Common.png"));
+    private static final Texture common_com = TexLoader.getTexture(makeImagePath("quests/Portal_Common_Completed.png"));
+    private static final Texture uncommon_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Uncommon.png"));
+    private static final Texture uncommon_com = TexLoader.getTexture(makeImagePath("quests/Portal_Uncommon_Completed.png"));
+    private static final Texture rare_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Rare.png"));
+    private static final Texture rare_com = TexLoader.getTexture(makeImagePath("quests/Portal_Rare_Completed.png"));
     //private static Texture special_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Special.png"));
     //private static Texture special_com = TexLoader.getTexture(makeImagePath("quests/Portal_Special_Completed.png"));
 

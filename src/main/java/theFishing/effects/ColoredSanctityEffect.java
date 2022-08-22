@@ -9,9 +9,9 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightRayFlyOutEffect;
 
 public class ColoredSanctityEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
-    private Color resultColor;
+    private final float x;
+    private final float y;
+    private final Color resultColor;
     private float vfxTimer;
     private int count = 10;
 

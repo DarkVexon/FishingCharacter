@@ -14,7 +14,7 @@ public class TheHarpoon extends AbstractQuest {
 
     public static final String ID = makeID("TheHarpoon");
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheHarpoon() {
         super(ID, 1);
@@ -40,8 +40,8 @@ public class TheHarpoon extends AbstractQuest {
         increment();
     }
 
-    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Harpoon.png"));
-    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/Harpoon_completed.png"));
+    private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Harpoon.png"));
+    private static final Texture complete = TexLoader.getTexture(makeImagePath("quests/Harpoon_completed.png"));
 
     @Override
     public Texture progressTex(int idx) {

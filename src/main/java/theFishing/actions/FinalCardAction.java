@@ -20,8 +20,9 @@ public class FinalCardAction extends AbstractGameAction {
 
     private int baseDamage;
 
-    private boolean firstFrame = true, utilizeBaseDamage = false;
-    private AbstractCard toUp;
+    private boolean firstFrame = true;
+    private final boolean utilizeBaseDamage = false;
+    private final AbstractCard toUp;
 
     public FinalCardAction(AbstractCreature source, int[] amount, DamageInfo.DamageType type, AbstractGameAction.AttackEffect effect, AbstractCard toUp) {
         this.toUp = toUp;

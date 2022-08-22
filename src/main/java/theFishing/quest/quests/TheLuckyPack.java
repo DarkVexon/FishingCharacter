@@ -17,7 +17,7 @@ public class TheLuckyPack extends AbstractQuest {
 
     public static final String ID = makeID("TheLuckyPack");
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheLuckyPack() {
         super(ID, 3);
@@ -49,10 +49,10 @@ public class TheLuckyPack extends AbstractQuest {
         }
     }
 
-    private static Texture incomplete = TexLoader.getTexture(makeImagePath("quests/LuckyPack.png"));
-    private static Texture complete = TexLoader.getTexture(makeImagePath("quests/LuckyPack_completed.png"));
-    private static Texture incomplete_last = TexLoader.getTexture(makeImagePath("quests/LuckyPack_Last.png"));
-    private static Texture complete_last = TexLoader.getTexture(makeImagePath("quests/LuckyPack_Last_completed.png"));
+    private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/LuckyPack.png"));
+    private static final Texture complete = TexLoader.getTexture(makeImagePath("quests/LuckyPack_completed.png"));
+    private static final Texture incomplete_last = TexLoader.getTexture(makeImagePath("quests/LuckyPack_Last.png"));
+    private static final Texture complete_last = TexLoader.getTexture(makeImagePath("quests/LuckyPack_Last_completed.png"));
 
     @Override
     public Texture progressTex(int idx) {

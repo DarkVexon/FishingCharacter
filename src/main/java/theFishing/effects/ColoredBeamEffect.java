@@ -18,16 +18,16 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class ColoredBeamEffect extends AbstractGameEffect {
-    private float sX;
-    private float sY;
+    private final float sX;
+    private final float sY;
     private float dX;
     private float dY;
     private float dst;
     private boolean isFlipped = false;
     private final float DUR = 0.5F;
     private static AtlasRegion img;
-    private Color foreground;
-    private Color bg;
+    private final Color foreground;
+    private final Color bg;
 
     public ColoredBeamEffect(float sX, float sY, boolean isFlipped, Color foreground, Color bg) {
         this.foreground = foreground;

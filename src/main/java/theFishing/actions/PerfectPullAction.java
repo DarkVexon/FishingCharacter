@@ -9,9 +9,9 @@ import theFishing.patch.foil.FoilPatches;
 import theFishing.util.Wiz;
 
 public class PerfectPullAction extends AbstractGameAction {
-    private AttackEffect effect;
-    private boolean isFast;
-    private AbstractCard c;
+    private final AttackEffect effect;
+    private final boolean isFast;
+    private final AbstractCard c;
 
     public PerfectPullAction(AbstractCard c, AbstractGameAction.AttackEffect effect, boolean isFast) {
         this.c = c;

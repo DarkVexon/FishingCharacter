@@ -5,13 +5,12 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.WallopEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class DamagePlusWallopVFXAction extends AbstractGameAction {
-    private DamageInfo info;
+    private final DamageInfo info;
 
     public DamagePlusWallopVFXAction(AbstractCreature target, DamageInfo info) {
         this.info = info;

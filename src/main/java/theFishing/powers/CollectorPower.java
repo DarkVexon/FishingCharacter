@@ -13,7 +13,7 @@ import static theFishing.util.Wiz.applyToSelf;
 
 public class CollectorPower extends AbstractEasyPower {
     public static String ID = makeID(CollectorPower.class.getSimpleName());
-    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public CollectorPower(int amount) {
         super(ID, powerStrings.NAME, PowerType.BUFF, true, AbstractDungeon.player, amount);

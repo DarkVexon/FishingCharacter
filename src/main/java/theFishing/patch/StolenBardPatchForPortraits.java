@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class StolenBardPatchForPortraits {
-    private static final List<String> cardIDs = Arrays.asList(
+    private static final List<String> cardIDs = Collections.singletonList(
             FullHouse.ID
     );
 

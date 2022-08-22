@@ -21,9 +21,9 @@ public class FoilShiny {
     public static class FoilCardsShine {
         private static final ShaderProgram FOIL_SHINE = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_shine.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
-        private static FrameBuffer fbo = ImageHelper.createBuffer();
+        private static final FrameBuffer fbo = ImageHelper.createBuffer();
 
-        private static String OS = System.getProperty("os.name").toLowerCase();
+        private static final String OS = System.getProperty("os.name").toLowerCase();
         public static boolean IS_WINDOWS = (OS.indexOf("win") >= 0);
 
         @SpirePrefixPatch

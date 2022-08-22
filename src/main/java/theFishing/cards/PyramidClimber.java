@@ -24,7 +24,7 @@ public class PyramidClimber extends AbstractFishingCard {
         applyToSelf(new LambdaPower(makeID("PyramidClimbPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             @Override
             public void atEndOfTurn(boolean isPlayer) {
-                int x = AbstractDungeon.player.discardPile.size() / 6;
+                int x = AbstractDungeon.player.discardPile.size() / 5;
                 if (x > 0) flash();
                 for (int i = 0; i < x; i++) {
                     atb(new GainBlockAction(owner, amount));

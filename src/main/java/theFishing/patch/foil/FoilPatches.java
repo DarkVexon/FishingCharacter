@@ -6,10 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
-import com.evacipated.cardcrawl.modthespire.lib.SpireField;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,6 +14,7 @@ import com.megacrit.cardcrawl.neow.NeowReward;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.shop.ShopScreen;
+import javassist.CtBehavior;
 import theFishing.TheFishing;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.EndsOfTheEarth;
@@ -106,7 +104,8 @@ public class FoilPatches {
                 if (AbstractDungeon.player.hasRelic(Newsletter.ID)) {
                     for (AbstractCard q : shopCards) {
                         makeFoil(q);
-                        q.upgrade();
+                        if (q.canUpgrade())
+                            q.upgrade();
                         q.price *= Newsletter.SHOP_CARD_PRICE_REDUCE;
                     }
                 } else {
@@ -116,6 +115,33 @@ public class FoilPatches {
                         target.price *= SHOP_FOIL_MARKUP;
                     }
                 }
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = ShopScreen.class,
+            method = "purchaseCard"
+    )
+    public static class RestockWithNewsletter {
+        @SpireInsertPatch(
+                locator = Locator.class,
+                localvars = {"c"}
+        )
+        public static void Insert(ShopScreen __instance, AbstractCard hoveredCard, AbstractCard c) {
+            if (AbstractDungeon.player.hasRelic(Newsletter.ID)) {
+                makeFoil(c);
+                if (c.canUpgrade())
+                    c.upgrade();
+                c.price *= Newsletter.SHOP_CARD_PRICE_REDUCE;
+            }
+        }
+
+        private static class Locator extends SpireInsertLocator {
+            @Override
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(ArrayList.class, "set");
+                return new int[]{LineFinder.findAllInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher)[0], LineFinder.findAllInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher)[1]};
             }
         }
     }
@@ -293,7 +319,7 @@ public class FoilPatches {
             method = "renderAttackBg"
     )
     public static class FoilColorlessLooksCool1 {
-        private static TextureAtlas.AtlasRegion colorlessFoilAttackAtlasRegion = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("512/colorless_attack_foil.png")));
+        private static final TextureAtlas.AtlasRegion colorlessFoilAttackAtlasRegion = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("512/colorless_attack_foil.png")));
 
         public static SpireReturn Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
             if (isFoil(__instance) && __instance.color == AbstractCard.CardColor.COLORLESS) {
@@ -310,7 +336,7 @@ public class FoilPatches {
             method = "renderSkillBg"
     )
     public static class FoilColorlessLooksCool2 {
-        private static TextureAtlas.AtlasRegion colorlessFoilSkillAtlasRegion = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("512/colorless_skill_foil.png")));
+        private static final TextureAtlas.AtlasRegion colorlessFoilSkillAtlasRegion = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("512/colorless_skill_foil.png")));
 
         public static SpireReturn Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
             if (isFoil(__instance) && __instance.color == AbstractCard.CardColor.COLORLESS) {
@@ -327,7 +353,7 @@ public class FoilPatches {
             method = "renderPowerBg"
     )
     public static class FoilColorlessLooksCool3 {
-        private static TextureAtlas.AtlasRegion colorlessFoilPowerAtlasRegion = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("512/colorless_power_foil.png")));
+        private static final TextureAtlas.AtlasRegion colorlessFoilPowerAtlasRegion = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("512/colorless_power_foil.png")));
 
         public static SpireReturn Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
             if (isFoil(__instance) && __instance.color == AbstractCard.CardColor.COLORLESS) {
@@ -344,9 +370,9 @@ public class FoilPatches {
             method = "getCardBackAtlasRegion"
     )
     public static class FoilColorlessLooksCool4 {
-        private static TextureAtlas.AtlasRegion colorlessFoilAttackAtlasRegion1024 = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("1024/colorless_attack_foil.png")));
-        private static TextureAtlas.AtlasRegion colorlessFoilSkillAtlasRegion1024 = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("1024/colorless_skill_foil.png")));
-        private static TextureAtlas.AtlasRegion colorlessFoilPowerAtlasRegion1024 = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("1024/colorless_power_foil.png")));
+        private static final TextureAtlas.AtlasRegion colorlessFoilAttackAtlasRegion1024 = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("1024/colorless_attack_foil.png")));
+        private static final TextureAtlas.AtlasRegion colorlessFoilSkillAtlasRegion1024 = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("1024/colorless_skill_foil.png")));
+        private static final TextureAtlas.AtlasRegion colorlessFoilPowerAtlasRegion1024 = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("1024/colorless_power_foil.png")));
 
         public static SpireReturn Prefix(SingleCardViewPopup __instance) {
             AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");

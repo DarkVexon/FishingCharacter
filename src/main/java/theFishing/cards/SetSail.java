@@ -2,20 +2,18 @@ package theFishing.cards;
 
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theFishing.actions.SetSailAction;
 
 import java.util.Collections;
 import java.util.List;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class SetSail extends AbstractFishingCard {
     public final static String ID = makeID("SetSail");

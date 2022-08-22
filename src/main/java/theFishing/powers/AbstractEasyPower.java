@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.FishingMod;
 import theFishing.util.TexLoader;
 
-import static theFishing.FishingMod.makeID;
-
 public abstract class AbstractEasyPower extends AbstractPower {
     public int amount2 = -1;
     public boolean isTwoAmount = false;
