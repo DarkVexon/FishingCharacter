@@ -44,7 +44,7 @@ public class FoilTooltips1 {
         }
         List<TooltipInfo> tooltips = new ArrayList<>();
         if (FoilPatches.isFoil(___card) && !___card.rawDescription.contains(UI_STRINGS.TEXT[0])) {
-            tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
+            tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(UI_STRINGS.TEXT[0]), BaseMod.getKeywordDescription(UI_STRINGS.TEXT[0])));
         }
         if (!tooltips.isEmpty())
             for (TooltipInfo tooltip : tooltips) {
@@ -65,7 +65,7 @@ public class FoilTooltips1 {
             AbstractCard acard = (AbstractCard) cardField.get(null);
             List<TooltipInfo> tooltips = new ArrayList<>();
             if (FoilPatches.isFoil(acard) && !acard.rawDescription.contains(UI_STRINGS.TEXT[0])) {
-                tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
+                tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(UI_STRINGS.TEXT[0]), BaseMod.getKeywordDescription(UI_STRINGS.TEXT[0])));
             }
             if (!tooltips.isEmpty())
                 for (TooltipInfo tooltip : tooltips) {

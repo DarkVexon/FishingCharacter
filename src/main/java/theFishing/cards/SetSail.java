@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.actions.SetSailAction;
+import theFishing.patch.foil.FoilTooltips1;
 
 import java.util.Collections;
 import java.util.List;
@@ -32,7 +33,7 @@ public class SetSail extends AbstractFishingCard {
 
     @Override
     public List<TooltipInfo> getCustomTooltips() {
-        return Collections.singletonList(new TooltipInfo(BaseMod.getKeywordTitle(makeID("fish")), BaseMod.getKeywordDescription(makeID("fish"))));
+        return Collections.singletonList(new TooltipInfo(BaseMod.getKeywordTitle(FoilTooltips1.UI_STRINGS.TEXT[2]), BaseMod.getKeywordDescription(FoilTooltips1.UI_STRINGS.TEXT[2])));
     }
 
     public void upp() {

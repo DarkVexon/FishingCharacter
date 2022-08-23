@@ -61,7 +61,9 @@
   "fishing:KeywordsForCode": {
     "TEXT": [
       "fishing:포일",
-      "TRANSLATION NOTE: Make sure this is the same as implementations of the Foil keyword in cards."
+      "TRANSLATION NOTE: Make sure this is the same as implementations of the Foil keyword in cards.",
+      "fishing:물고기",
+      "TRANSLATION NOTE: Make sure this is the same as implementations of the Fish keyword in cards."
     ]
   },
   "fishing:QuestLog": {

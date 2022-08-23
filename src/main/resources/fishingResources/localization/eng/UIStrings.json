@@ -54,7 +54,9 @@
   "${ModID}:KeywordsForCode": {
     "TEXT": [
       "${ModID}:Foil",
-      "TRANSLATION NOTE: Make sure this is the same as implementations of the Foil keyword in cards."
+      "TRANSLATION NOTE: Make sure this is the same as implementations of the Foil keyword in cards.",
+      "${ModID}:Fish",
+      "TRANSLATION NOTE: Make sure this is the same as implementations of the Fish keyword in cards."
     ]
   },
   "${ModID}:QuestLog": {
