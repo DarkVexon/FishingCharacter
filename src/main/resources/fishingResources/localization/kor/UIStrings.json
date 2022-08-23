@@ -1,0 +1,80 @@
+{
+  "fishing:DiscardPileSetupAction": {
+    "TEXT": [
+      "뽑을 카드 더미 맨 위로 올려놓을 카드를 선택하세요. 그 카드의 비용은 사용하기 전까지 0이 됩니다."
+    ]
+  },
+  "fishing:FishDescriptor": {
+    "TEXT": [
+      "물고기"
+    ]
+  },
+  "fishing:TheGemSearch": {
+    "TEXT": [
+      "보석 탐색",
+      "#y퀘스트: 손패에 카드가 없는 채로 턴을 종료하세요. NL #y보상: 뽑을 카드 더미에 #y영생의 #y보석 을 넣습니다."
+    ]
+  },
+  "fishing:TheHarpoon": {
+    "TEXT": [
+      "작살",
+      "#y퀘스트: 적을 처치하세요. NL #y보상: 뽑을 카드 더미에 #y고래 를 넣습니다."
+    ]
+  },
+  "fishing:TheLuckyPack": {
+    "TEXT": [
+      "행운의 가방",
+      "#y퀘스트: #y포일 카드 #b",
+      " 장을 연속으로 사용하세요. NL #y보상: 마지막으로 사용한 카드가 1번 더 사용됩니다."
+    ]
+  },
+  "fishing:ThePrismaticPortal": {
+    "TEXT": [
+      "무지개 포탈",
+      "#y퀘스트: 한 턴에 일반, #b특별, #y희귀 카드를 1장씩 사용하세요. NL #y보상: 뽑을 카드 더미에 #y보석 탐색 을 넣습니다."
+    ]
+  },
+  "fishing:TheStorm": {
+    "TEXT": [
+      "폭풍우",
+      "#y퀘스트: 한 턴에 에너지를 #b",
+      " 이상 사용하세요. NL #y보상: 무작위 적의 체력을 #b17 감소시킵니다."
+    ]
+  },
+  "fishing:TheTerribleTwos": {
+    "TEXT": [
+      "2의 의지",
+      "#y퀘스트: 비용이 2인 카드를 #b",
+      " 번 사용하세요. NL #y보상: #y방어도를 #b12 #y얻습니다."
+    ]
+  },
+  "fishing:SillyFishSizes": {
+    "TEXT": [
+      "레비아탄 ",
+      "가르강투아 ",
+      "기간틱 ",
+      "거인 ",
+      "거대 ",
+      "큰 "
+    ]
+  },
+  "fishing:KeywordsForCode": {
+    "TEXT": [
+      "fishing:포일",
+      "TRANSLATION NOTE: Make sure this is the same as implementations of the Foil keyword in cards."
+    ]
+  },
+  "fishing:QuestLog": {
+    "TEXT": [
+      "퀘스트 목록"
+    ]
+  },
+  "fishing:TheFishOPedia": {
+    "TEXT": [
+      "물고기 사전",
+      "#y퀘스트: 각기 다른 #b",
+      " 장의 #y물고기 카드를 사용하세요. NL #y보상: #y힘을 #b4 #y얻습니다.",
+      " NL 이미 사용한 물고기:"
+    ]
+  }
+}

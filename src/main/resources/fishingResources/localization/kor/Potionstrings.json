@@ -1,0 +1,23 @@
+{
+  "fishing:CarePackage": {
+    "NAME": "생필품 꾸러미",
+    "DESCRIPTIONS": [
+      "#y엄벌, #y단도, #y안전 을 1장씩 얻습니다. 체력을 #b",
+      " 회복합니다."
+    ]
+  },
+  "fishing:OceanInAJar": {
+    "NAME": "병속의 바다",
+    "DESCRIPTIONS": [
+      "#y물고기 #b",
+      " 장을 얻습니다."
+    ]
+  },
+  "fishing:StarlightSoda": {
+    "NAME": "별빛 소다",
+    "DESCRIPTIONS": [
+      "나에게 부여된 #y약화, #y취약, #y손상 을 전부 제거합니다. #y예지 #b",
+      "."
+    ]
+  }
+}

@@ -1,0 +1,570 @@
+{
+  "fishing:Strike": {
+    "NAME": "타격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
+  },
+  "fishing:Defend": {
+    "NAME": "수비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
+  },
+  "fishing:Boot": {
+    "NAME": "장화",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Guppy": {
+    "NAME": "구피",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Hammerhead": {
+    "NAME": "귀상어",
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "힘을 !M! 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Octopus": {
+    "NAME": "문어",
+    "DESCRIPTION": "{@@}카드를 !M! 장 뽑습니다{!M!|>1=s}. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "{@@}카드를 !M! 장 뽑습니다{!M!|>1=s}. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Piranha": {
+    "NAME": "피라니아",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Qwilfish": {
+    "NAME": "복어",
+    "DESCRIPTION": "중독 을 !M! 부여합니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "중독 을 !M! 부여합니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:SeaMonster": {
+    "NAME": "바다 괴수",
+    "DESCRIPTION": "무작위 fishing:물고기 !M! 장을 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "무작위 fishing:물고기 !M! 장을 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Shark": {
+    "NAME": "상어",
+    "DESCRIPTION": "취약을 !M! 부여합니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "취약을 !M! 부여합니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Starfish": {
+    "NAME": "불가사리",
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "약화를 !M! 부여합니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:CastLine": {
+    "NAME": "낚시 시작",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 fishing:물고기 !M! 장을 넣습니다."
+  },
+  "fishing:SetSail": {
+    "NAME": "Set Sail",
+    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
+  },
+  "fishing:MopUp": {
+    "NAME": "걸레질 청소",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1 장 선택해 소멸시킵니다. NL 소멸시킨 카드가 상태이상 또는 저주 였다면, 카드를 1장 뽑습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "소멸시킬 카드를 선택하세요."
+    ]
+  },
+  "fishing:ThatsAllFolks": {
+    "NAME": "오늘은 이것으로 끝!",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:솔로 : 뽑을 카드 더미 맨 위에 있는 카드를 사용합니다."
+  },
+  "fishing:Wander": {
+    "NAME": "방랑",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 손패의 카드를 전부 버리고, 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 손패의 카드를 전부 버리고, 카드를 !M! 장 뽑습니다."
+  },
+  "fishing:BagOfDefends": {
+    "NAME": "수비의 가방",
+    "DESCRIPTION": "!B! 방어도를 X 번 얻습니다. NL 덱에서 수비 카드를 제거할 때마다, 이 카드를 강화 합니다.",
+    "UPGRADE_DESCRIPTION": "!B! 방어도를 X 번 얻습니다."
+  },
+  "fishing:Oblivious": {
+    "NAME": "망각",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL fishing:물고기 1 장을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 강화된 fishing:물고기 1 장을 얻습니다."
+  },
+  "fishing:RodSlam": {
+    "NAME": "낚싯대 후려패기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴에 카드를 1 장 적게 뽑습니다."
+  },
+  "fishing:HunkerDown": {
+    "NAME": "아늑한 쉼터",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 사용한 카드가 3 장 이하라면, [E] 를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " 장의 카드를 사용했습니다.)",
+      " 장의 카드를 사용했습니다.)"
+    ]
+  },
+  "fishing:NostalgicStrike": {
+    "NAME": "추억의 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미에 있는 무작위 카드 1장을 손으로 가져옵니다."
+  },
+  "fishing:FutureProofing": {
+    "NAME": "미래 보강",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 예지 !M!. NL 이 카드의 예지 효과로 카드를 버리면, 해당 카드는 이번 전투 동안 강화됩니다."
+  },
+  "fishing:CardboardBullets": {
+    "NAME": "골판지 총알",
+    "DESCRIPTION": "손패에 있는 카드의 총합 비용만큼 피해를 줍니다. NL X 비용의 카드는 4 비용으로 취급됩니다.",
+    "UPGRADE_DESCRIPTION": "손패에 있는 카드의 총합 비용 + 3만큼 피해를 줍니다. NL X 비용의 카드는 4 비용으로 취급됩니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (피해를 !D! 줍니다.)"
+    ]
+  },
+  "fishing:FeedingFrenzy": {
+    "NAME": "피딩 프렌지",
+    "DESCRIPTION": "이번 턴에 사용한 fishing:물고기 1장당, 무작위 적에게 피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " 장의 fishing:물고기 를 사용했습니다.)",
+      " 장의 fishing:물고기 를 사용했습니다.)"
+    ]
+  },
+  "fishing:CatchOfTheDay": {
+    "NAME": "오늘의 수익",
+    "DESCRIPTION": "매 턴 종료시, 뽑을 카드 더미에 fishing:물고기 1장을 넣습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 종료시, 뽑을 카드 더미에 fishing:물고기 1장을 넣습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "오늘의 수익",
+      "매 턴 종료시, 뽑을 카드 더미에 #y물고기 #b",
+      " 장을 넣습니다."
+    ]
+  },
+  "fishing:Baited": {
+    "NAME": "미끼",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 지정한 적의 의도가 공격이었다면, fishing:물고기 !M! 장을 얻습니다."
+  },
+  "fishing:AllOut": {
+    "NAME": "총력",
+    "DESCRIPTION": "턴 종료시, 손에 카드가 하나도 없다면, 적 전체에게 피해를 !M! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      "총력",
+      "턴 종료시, 손에 카드가 하나도 없다면 적 전체에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "fishing:GarlicClove": {
+    "NAME": "마늘 한 쪽",
+    "DESCRIPTION": "나에게 부여된 약화와 손상을 전부 제거합니다. NL 흡혈귀(?) 이벤트로 얻는 흡혈 카드가 덱에 없다면, 체력을 !M! 회복합니다. NL 소멸."
+  },
+  "fishing:RingTheBell": {
+    "NAME": "방울의 울림",
+    "DESCRIPTION": "적 전체의 체력을 13 감소시킵니다. NL 뽑을 카드 더미 맨 위에 *방울의 *저주 를 넣습니다."
+  },
+  "fishing:Bobber": {
+    "NAME": "낚시찌",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 내 턴 진행 도중에 이 카드를 뽑았다면, 방어도를 !fishing:m2! 얻고 힘을 !M! 얻습니다."
+  },
+  "fishing:WakaWaka": {
+    "NAME": "와구 와구",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 개전 : 뽑을 카드 더미에 *파워 *쿠키 2 장을 넣습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 개전 : 뽑을 카드 더미에 *파워 *쿠키 2 장을 넣습니다."
+  },
+  "fishing:PowerPellet": {
+    "NAME": "파워 쿠키",
+    "DESCRIPTION": "*와구 *와구 카드의 피해량이 !M! 증가합니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "파워 쿠키",
+      "#y와구 #y와구 카드의 피해량이 #b",
+      " 증가합니다."
+    ]
+  },
+  "fishing:Cannoneer": {
+    "NAME": "포수",
+    "DESCRIPTION": "무작위 적에게 !D! 피해를 X 번 줍니다."
+  },
+  "fishing:TreasureChest": {
+    "NAME": "보물 상자",
+    "DESCRIPTION": "카드를 1 장 뽑습니다. NL 개전 : 골드를 !M! 얻습니다."
+  },
+  "fishing:Whaling": {
+    "NAME": "고래잡이",
+    "DESCRIPTION": "힘을 1 얻습니다. NL 만약 *골드를 200원 넘게 보유하고 있다면, 골드를 !M! 소모하여 추가로 힘을 1 얻습니다."
+  },
+  "fishing:Reserves": {
+    "NAME": "준비금",
+    "DESCRIPTION": "비용이 X 인 카드를 사용하면, [E] 를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "준비금",
+      "비용이 X 인 카드를 사용하면, 획득: "
+    ]
+  },
+  "fishing:XMarksTheSpot": {
+    "NAME": "목표 지점 표시",
+    "DESCRIPTION": "다른 직업의 비용이 X 인 무작위 카드 1 장을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다른 직업의 비용이 X 인 무작위 카드 1 장을 얻습니다. NL [E] 를 얻습니다. NL 소멸."
+  },
+  "fishing:Splash": {
+    "NAME": "튀어오르기",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 손패에 다른 카드가 1장 있을때마다, 이 카드의 피해량과 방어도가 2 감소합니다."
+  },
+  "fishing:DeckedOut": {
+    "NAME": "덱 아웃",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이 게임을 스팀 덱에서 플레이하고 있다면, 방어도를 !B! 얻습니다."
+  },
+  "fishing:ShipRam": {
+    "NAME": "선박 충각술",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:항해 : 대신 피해를 !fishing:sd! 줍니다."
+  },
+  "fishing:FlamingFlip": {
+    "NAME": "격렬한 물제비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 카드 1장을 소멸시킵니다. NL 카드를 2 장 뽑습니다."
+  },
+  "fishing:BoxOfHavoc": {
+    "NAME": "파괴적인 상자",
+    "DESCRIPTION": "적 전체에게 중독 을 !fishing:m2! 부여합니다. NL fishing:솔로 : 적 전체에게 약화와 취약을 !M! 부여합니다."
+  },
+  "fishing:ThornyPersonality": {
+    "NAME": "가시 돋힌 성격",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 가시 를 !M! 얻습니다. NL fishing:항해 : 추가로 가시 를 !fishing:m2! 얻습니다."
+  },
+  "fishing:Tripwire": {
+    "NAME": "철사 덫",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 방어도를 전부 잃었다면, 적 전체의 체력을 !M! 감소시킵니다."
+  },
+  "fishing:Lie": {
+    "NAME": "거짓말",
+    "DESCRIPTION": "이번 턴 동안 적 전체의 힘을 !M! 감소시킵니다. NL *반칙 을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이번 턴 동안 적 전체의 힘을 !M! 감소시킵니다. NL *반칙+ 을 얻습니다. NL 소멸."
+  },
+  "fishing:Cheat": {
+    "NAME": "반칙",
+    "DESCRIPTION": "대상의 방어도를 전부 제거합니다. NL 피해를 !D! 줍니다. NL *강탈 을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "대상의 방어도를 전부 제거합니다. NL 피해를 !D! 줍니다. NL *강탈+ 을 얻습니다. NL 소멸."
+  },
+  "fishing:Steal": {
+    "NAME": "강탈",
+    "DESCRIPTION": "대상 적이 추가 힘을 가지고 있다면, 힘을 !M! 만큼 강탈하여 자신의 것으로 만듭니다. NL 소멸."
+  },
+  "fishing:SetupButBetter": {
+    "NAME": "준비 작업",
+    "DESCRIPTION": "버린 카드 더미에 있는 카드를 1장 선택해 뽑을 카드 더미 맨 위에 넣습니다. NL 해당 카드는 사용하기 전까지 비용이 0이 됩니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 버린 카드 더미에 있는 카드를 1장 선택해 뽑을 카드 더미 맨 위에 넣습니다. NL 해당 카드는 사용하기 전까지 비용이 0이 됩니다."
+  },
+  "fishing:RatedX": {
+    "NAME": "평점 X",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL X >= 1: 방어도를 !B! 얻습니다. NL X >= 2: 취약을 !M! 부여합니다. NL X >= 4: 힘을 !fishing:m2! 얻습니다."
+  },
+  "fishing:ItWasTHIIIIIIISBig": {
+    "NAME": "이마아아안큼이나 컸어!",
+    "DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 손패에 존재하는 모든 fishing:물고기 카드의 효과가 2배 증가합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 손패에 존재하는 모든 fishing:물고기 카드의 효과가 3배 증가합니다. NL 소멸."
+  },
+  "fishing:GoneFishing": {
+    "NAME": "낚시 여행",
+    "DESCRIPTION": "불가침 을 1 얻습니다. NL 뽑을 카드 더미에 fishing:물고기 !M! 장을 넣습니다. NL 소멸."
+  },
+  "fishing:ChocolateChipCookie": {
+    "NAME": "초코칩 쿠키",
+    "DESCRIPTION": "체력을 !M! 회복합니다. NL 민첩을 !fishing:m2! 얻습니다. NL 손에 있는 모든 카드를 이번 전투 동안 강화 합니다. NL 소멸."
+  },
+  "fishing:AnglerForm": {
+    "NAME": "낚시꾼의 형상",
+    "DESCRIPTION": "매 턴 시작시, 다음에 사용하는 카드 !M! 장에 카드 1장 뽑기 효과를 부여합니다."
+  },
+  "fishing:FullHouse": {
+    "NAME": "풀하우스",
+    "DESCRIPTION": "뽑을 카드 더미의 카드 1 장을 선택합니다. NL 해당 카드를 fishing:포일 상태로 !M! 복사하여 뽑을 카드 더미에 넣습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "포 오브 어 카인드",
+      "복사할 카드를 선택하세요."
+    ]
+  },
+  "fishing:Fishbones": {
+    "NAME": "생선뼈",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸 카드 더미에 있는 카드 1장당, 이 카드의 피해량이 !M! 증가합니다."
+  },
+  "fishing:Hook": {
+    "NAME": "훅",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 fishing:물고기 1 장을 넣습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미와 버린 카드 더미에 fishing:물고기 1 장을 넣습니다."
+  },
+  "fishing:Crosshairs": {
+    "NAME": "크로스헤어",
+    "DESCRIPTION": "비용이 X 인 카드를 사용할 때마다, 제일 맨 앞에 있는 적에게 피해를 !M! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      "크로스헤어",
+      "비용이 X 인 카드를 사용할 때마다, 제일 맨 앞에 있는 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "fishing:RidiculousFishing": {
+    "NAME": "어이없는 낚시",
+    "DESCRIPTION": "무색 카드를 사용할 때마다, 무작위 적에게 피해를 !M! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      "어이없는 낚시",
+      "무색 카드를 사용할 때마다, 무작위 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "fishing:Concentrated": {
+    "NAME": "카페인 충만",
+    "DESCRIPTION": "휘발성. NL 매 턴 시작시, [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 휘발성. NL 매 턴 시작시, [E] 를 얻습니다."
+  },
+  "fishing:PlantFlag": {
+    "NAME": "깃발 꽂기",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL fishing:포일 상태의 *깃발 을 뽑을 카드 더미 맨 위에 넣습니다."
+  },
+  "fishing:Flag": {
+    "NAME": "깃발",
+    "DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL 소멸."
+  },
+  "fishing:RodOfHope": {
+    "NAME": "희망의 낚싯대",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:항해 : [E] [E] 를 얻고 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL fishing:항해 : [E] [E] 를 얻고 카드를 !M! 장 뽑습니다."
+  },
+  "fishing:Maw": {
+    "NAME": "아귀",
+    "DESCRIPTION": "!D! 피해를 2 번 줍니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "!D! 피해를 2 번 줍니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Eel": {
+    "NAME": "장어",
+    "DESCRIPTION": "{@@} {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|>4=!M! [E]} 를 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "{@@} {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|>4=!M! [E]} 를 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:FinishingTouches": {
+    "NAME": "마무리 일격",
+    "DESCRIPTION": "휘발성. NL 카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
+    "UPGRADE_DESCRIPTION": "카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "마무리 일격",
+      "카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
+      "카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 그 카드를 추가로 #b",
+      " 번 사용합니다."
+    ]
+  },
+  "fishing:FlyingFish": {
+    "NAME": "날치",
+    "DESCRIPTION": "!D! 피해를 5 번 줍니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "!D! 피해를 5 번 줍니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Jellyfish": {
+    "NAME": "해파리",
+    "DESCRIPTION": "{@@}구체 슬롯을 !M! 얻습니다{!M!|>1=s}. NL 전기를 !M! 영창 합니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "{@@}구체 슬롯을 !M! 얻습니다{!M!|>1=s}. NL 전기를 !M! 영창 합니다. NL 카드를 !fishing:m3! 장 뽑습니다 NL 소멸."
+  },
+  "fishing:TheWhale": {
+    "NAME": "고래",
+    "DESCRIPTION": "대상의 체력을 !M! 감소시킵니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "대상의 체력을 !M! 감소시킵니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Swordfish": {
+    "NAME": "황새치",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! card. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! cards. NL 소멸."
+  },
+  "fishing:AquaOrb": {
+    "NAME": "해양의 보주",
+    "DESCRIPTION": "적 전체에게 약화를 !M! 부여합니다. NL 방어도를 !B! 얻습니다. NL 이번 전투에서 처음으로 사용한 카드가 이 카드라면, 인공물을 1 얻습니다."
+  },
+  "fishing:FreeDrinks": {
+    "NAME": "공짜 음료",
+    "DESCRIPTION": "적 전체의 힘을 !M! 감소시킵니다. NL 소멸. NL 이 카드를 획득하면, 무작위 포션 1개를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "주의",
+      "포션 슬롯이 비어있을때만 포션을 얻을수 있습니다."
+    ]
+  },
+  "fishing:FastingB": {
+    "NAME": "공복 혈당",
+    "DESCRIPTION": "가시를 !M! 얻습니다. NL !M! [#EFC851]판금[] [#EFC851]갑옷[] 을 얻습니다. NL 매 턴 시작시 카드를 1장 적게 뽑습니다."
+  },
+  "fishing:QuestTimeTheStorm": {
+    "NAME": "폭풍우",
+    "DESCRIPTION": "다음 턴에, NL [E] [E] 를 얻습니다. NL fishing:퀘스트 : 한 턴에 에너지를 6 이상 소모하세요. NL *보상: 무작위 적의 체력을 17 감소시킵니다.",
+    "UPGRADE_DESCRIPTION": "다음 턴에, NL [E] [E] [E] 를 얻습니다. NL fishing:퀘스트 : 한 턴에 에너지를 6 이상 소모하세요. NL *보상: 무작위 적의 체력을 17 감소시킵니다."
+  },
+  "fishing:QuestTimeTheLuckyPack": {
+    "NAME": "행운의 가방",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:퀘스트 : fishing:포일 카드 3 장을 연속으로 사용하세요. NL *보상: 마지막으로 사용한 카드가 2번 사용됩니다."
+  },
+  "fishing:QuestTimeTheFishOPedia": {
+    "NAME": "물고기 사전",
+    "DESCRIPTION": "fishing:물고기 !M! 장을 뽑을 카드 더미에 넣습니다. NL fishing:퀘스트 : 각기 다른 5 장의 fishing:물고기 카드를 사용하세요. NL *보상: 힘을 3 얻습니다."
+  },
+  "fishing:SoleSight": {
+    "NAME": "고독한 탐색",
+    "DESCRIPTION": "예지 !M!. NL fishing:솔로 : 힘을 !M! 얻습니다."
+  },
+  "fishing:VexingDeal": {
+    "NAME": "짜증나는 거래",
+    "DESCRIPTION": "내 턴 시작시, 카드를 1장 뽑고 카드를 1장 소멸시킵니다. NL 현재 플레이하고 있는 승천이 10 또는 그 이상일시, 힘을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작시, 카드를 1장 뽑고 카드를 1장 소멸시킵니다. NL 현재 플레이하고 있는 승천이 10 또는 그 이상일시, 힘을 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "짜증나는 거래",
+      "내 턴 시작시, 카드를 #b",
+      " 장 뽑고",
+      " 장 뽑고",
+      " 카드를 소멸시킵니다: #b"
+    ]
+  },
+  "fishing:TheFinalCard": {
+    "NAME": "최후의 카드",
+    "DESCRIPTION": "fishing:솔로 : 적 전체에게 피해를 !D! 줍니다. NL 이 카드로 전투를 끝내면, 이 카드를 강화합니다.",
+    "UPGRADE_DESCRIPTION": "fishing:솔로 : 적 전체에게 피해를 !D! 줍니다. NL 이 카드를 사용해주셔서 감사합니다."
+  },
+  "fishing:QuestTimeTheHarpoon": {
+    "NAME": "작살",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 개전 fishing:퀘스트 : 적을 처치하세요. NL *보상: 뽑을 카드 더미에 *고래 를 넣습니다."
+  },
+  "fishing:EndsOfTheEarth": {
+    "NAME": "지구 종말의 날",
+    "DESCRIPTION": "이 카드는 버린 카드 더미에 있을때에도 사용할 수 있습니다. NL 방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다."
+  },
+  "fishing:StarShard": {
+    "NAME": "별의 조각",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 카드를 1 장 뽑습니다."
+  },
+  "fishing:QuestTimeThePrismaticPortal": {
+    "NAME": "무지개 포탈",
+    "DESCRIPTION": "fishing:퀘스트 : 한 턴에 일반, 특별, 희귀 카드를 1장씩 사용하세요. NL *보상: 뽑을 카드 더미에 *보석 *탐색 을 넣습니다."
+  },
+  "fishing:QuestTimeTheGemSearch": {
+    "NAME": "보석 탐색",
+    "DESCRIPTION": "fishing:퀘스트 : 손패에 카드가 없는 채로 턴을 종료하세요. NL *보상: 뽑을 카드 더미에 *영생의 *보석 을 넣습니다."
+  },
+  "fishing:TheEternityGem": {
+    "NAME": "영생의 보석",
+    "DESCRIPTION": "휘발성. NL 무작위 적에게 !D! 피해를 !M! 번 줍니다. NL 소멸."
+  },
+  "fishing:ShinyShots": {
+    "NAME": "광채의 탄환",
+    "DESCRIPTION": " !D! 피해를 3 번 줍니다. NL 손패에 존재하는 fishing:포일 카드 1장당, 방어도를 !B! 얻습니다."
+  },
+  "fishing:PerfectPull": {
+    "NAME": "완벽한 끌당",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 카드를 1 장 뽑습니다. NL 뽑은 카드가 fishing:포일 카드라면, 이 효과를 반복합니다."
+  },
+  "fishing:ShimmeringShank": {
+    "NAME": "반짝이 방패",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 fishing:포일 카드를 사용할 때마다, *단도 1 장을 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "반짝이 방패",
+      "이번 턴에 포일 카드를 사용할 때마다 #y단도 #b",
+      " 장을",
+      " 장을",
+      " 얻습니다."
+    ]
+  },
+  "fishing:MaybeLater": {
+    "NAME": "어쩌면 다음 기회에",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패의 카드 1 장을 선택해 뽑을 카드 더미 맨 위에 넣습니다. NL 해당 효과를 발동하면, 방어도를 !B! 얻습니다."
+  },
+  "fishing:MintCondition": {
+    "NAME": "상쾌한 컨디션",
+    "DESCRIPTION": "매 턴 fishing:포일 카드를 2 번 사용할 때마다, 방어도를 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "상쾌한 컨디션",
+      "매 턴 #y포일 카드를 2 번 사용할 때마다, #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "fishing:TheBackpack": {
+    "NAME": "배낭",
+    "DESCRIPTION": "선천성. 보존. NL 뽑을 카드 더미에 있는 fishing:포일 카드 1장을 선택해 손으로 가져옵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "선천성. 보존. NL 뽑을 카드 더미에 있는 fishing:포일 카드 1장을 선택해 손으로 가져옵니다.",
+    "EXTENDED_DESCRIPTION": [
+      "손으로 가져올 카드를 선택하세요."
+    ]
+  },
+  "fishing:PyramidClimber": {
+    "NAME": "피라미드 등반",
+    "DESCRIPTION": "턴 종료시, 버린 카드에 있는 카드 5장당, 방어도를 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "피라미드 등반",
+      "턴 종료시, 버린 카드에 있는 카드 #b5장당, #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "fishing:Collector": {
+    "NAME": "수집가",
+    "DESCRIPTION": "매 턴 처음으로 사용하는 카드가... NL fishing:포일 : 힘을 1 얻습니다. NL 희귀: 힘을 1 얻습니다."
+  },
+  "fishing:GlitterGlue": {
+    "NAME": "반짝이 풀",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 부여합니다. NL 이 카드가 카드 보상에서 등장할시, 이 카드는 fishing:포일 상태가 됩니다."
+  },
+  "fishing:Wizardry": {
+    "NAME": "위저드리",
+    "DESCRIPTION": "활력 을 !M! 얻습니다. NL 이 카드를 뽑으면, fishing:포일 상태의 *핀볼 을 뽑을 카드 더미에 넣습니다."
+  },
+  "fishing:Pinball": {
+    "NAME": "핀볼",
+    "DESCRIPTION": "무작위 적에게 !D! 피해를 !M! 번 줍니다. NL 소멸."
+  },
+  "fishing:Blooper": {
+    "NAME": "징오징오",
+    "DESCRIPTION": "이번 턴 동안 적 전체의 힘을 !M! 감소시킵니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+  "fishing:Starfy": {
+    "NAME": "스타피",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적 전체에게 피해를 !D! 줍니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+  "fishing:CeramicFish": {
+    "NAME": "물고기 도자기",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+  "fishing:HelloThere": {
+    "NAME": "안녕들 하신가!",
+    "DESCRIPTION": "선천성. NL 약화를 !M! 부여합니다. NL 취약을 !M! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+  "fishing:TheKeyReturns": {
+    "NAME": "해결사의 열쇠",
+    "DESCRIPTION": "적 전체에게 !D! 피해를 2 번 줍니다. NL 현재 보유한 fishing:퀘스트 를 전부 완료합니다."
+  },
+  "fishing:Hindsight": {
+    "NAME": "후견지명",
+    "DESCRIPTION": "다음 턴에 방어도를 !B! 얻습니다. NL 버린 카드 더미에 있는 카드 1 장을 손으로 가져옵니다."
+  },
+  "fishing:ScalingIsWin": {
+    "NAME": "성장성은 승리의 지름길",
+    "DESCRIPTION": "내 턴 시작시, 힘을 !M! 얻습니다."
+  },
+  "fishing:ZaHando": {
+    "NAME": "더 핸드",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패의 가장 중앙에 있는 카드를 소멸시킵니다."
+  },
+  "fishing:BeastSlayer": {
+    "NAME": "야수 학살자",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 엘리트 전투에서는, 대신 피해를 !fishing:sd! 줍니다."
+  },
+  "fishing:SicklyShine": {
+    "NAME": "질병의 광채",
+    "DESCRIPTION": "fishing:포일 카드를 사용할 때마다, 적 전체에게 중독 을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL fishing:포일 카드를 사용할 때마다, 적 전체에게 중독 을 !M! 부여합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "질병의 광채",
+      "#y포일 카드를 사용할 때마다, 적 전체에게 #y중독 을 #b",
+      " 부여합니다."
+    ]
+  },
+  "fishing:Standoff": {
+    "NAME": "교착",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 전투에서 적이 하나만 존재할시, 추가로 방어도를 !B! 얻습니다."
+  },
+  "fishing:DoubleUp": {
+    "NAME": "쌍방 공격",
+    "DESCRIPTION": " !D! 피해를 2 번 줍니다. NL 개전: 적 전체의 체력을 !M! 감소시킵니다."
+  },
+  "fishing:Preclude": {
+    "NAME": "프렐류드",
+    "DESCRIPTION": "입장식. NL 피해를 !D! 줍니다. NL 카드를 1 장 버립니다. NL 대상의 [#EFC851]시간[] [#EFC851]왜곡[] 을 초기화시킵니다.",
+    "EXTENDED_DESCRIPTION": [
+      "이 카드는 반드시 처음에 사용해야만 해",
+      "~비겁한...~ NL @이@ 비겁한@ @놈!@"
+    ]
+  },
+  "fishing:CrystallineConfluence": {
+    "NAME": "크리스탈 융합점",
+    "DESCRIPTION": "뽑을 카드 더미에 *별의 *조각 X 장을 넣습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미에 *별의 *조각 X +1 장을 넣습니다. NL 소멸."
+  }
+}

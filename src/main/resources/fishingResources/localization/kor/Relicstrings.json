@@ -1,0 +1,83 @@
+{
+  "fishing:TheRod": {
+    "NAME": "낚싯대",
+    "FLAVOR": "그 종류들 중에서도 유일한 물건입니다.",
+    "DESCRIPTIONS": [
+      "전투 시작시, 첫 턴에 뽑히는 카드 중 #yfishing:포일 카드 #b",
+      " 장을 해당 전투 동안 강화합니다."
+    ]
+  },
+  "fishing:RainbowRod": {
+    "NAME": "무지개 낚싯대",
+    "FLAVOR": "절 대 낚 시 해",
+    "DESCRIPTIONS": [
+      "  ",
+      "를 대체합니다.[] NL 매 턴 시작시, 손패의 무작위 카드 #b2 장을 해당 전투 동안 #y강화 합니다."
+    ]
+  },
+  "fishing:BrokenOar": {
+    "NAME": "부러진 노",
+    "FLAVOR": "첨탑으로 통하는 길은 대부분 일방통행입니다.",
+    "DESCRIPTIONS": [
+      "매 턴 시작시 [E] 를 얻습니다. NL 매 턴 카드를 #b1 장 적게 뽑습니다."
+    ]
+  },
+  "fishing:MaelstromAnkh": {
+    "NAME": "소용돌이 앙크",
+    "FLAVOR": "심연을 향해서.",
+    "DESCRIPTIONS": [
+      "더 이상 #y장화, #y구피, #y피라니아 를 얻을 수 없습니다."
+    ]
+  },
+  "fishing:UnageeSkull": {
+    "NAME": "장어의 뼈",
+    "FLAVOR": "오래 전부터 침몰한 배를 지키는 것으로 알려져 있습니다.",
+    "DESCRIPTIONS": [
+      "전투 시작시, 뽑을 카드 더미와 버린 카드 더미에 #yfishing:물고기 #b1 장을 넣습니다."
+    ]
+  },
+  "fishing:Signpost": {
+    "NAME": "표지판",
+    "FLAVOR": "\"환영합니다. 아주 멀리서부터 찾아오셨군요...\"",
+    "DESCRIPTIONS": [
+      "전투당 처음으로 #y파워 카드를 사용했다면, #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "fishing:Goggles": {
+    "NAME": "고글",
+    "FLAVOR": "\"이것들이라면... 우린 하나가 될 수 있다.\" - 쿠발라이 황제",
+    "DESCRIPTIONS": [
+      "손에 카드가 하나도 없는 상태로 턴을 종료할 때마다, #y힘을 #b1 얻습니다."
+    ]
+  },
+  "fishing:Newsletter": {
+    "NAME": "소식지",
+    "FLAVOR": "\"특이하군요! 거짓된 약속으로 이루어진 반짝이는 정육면체라니요.\" - 랜위드",
+    "DESCRIPTIONS": [
+      "상인이 판매하는 카드가 #yfishing:포일 상태이고, #y강화 되어있으며, 구매 비용이 #b20% 감소합니다."
+    ]
+  },
+  "fishing:OldBobber": {
+    "NAME": "오래된 낚시찌",
+    "FLAVOR": "오래된 물건일수록 더 빛나는군요.",
+    "DESCRIPTIONS": [
+      "한 턴에 #yfishing:물고기 를 #b3 장 사용할 때마다, 적 전체에게 피해를 #b7 줍니다."
+    ]
+  },
+  "fishing:LuckyRing": {
+    "NAME": "행운의 반지",
+    "FLAVOR": "한 눈을 팔기 시작하면 눈이 깜박거립니다.",
+    "DESCRIPTIONS": [
+      "2번째 턴 시작시, 카드를 #b1 장 뽑고 [E] [E] 를 얻습니다."
+    ]
+  },
+  "fishing:BoosterBox": {
+    "NAME": "부스터 박스",
+    "FLAVOR": "5개가 넘는 홍보용 포일! 전부 찾아내실수 있을까요?",
+    "DESCRIPTIONS": [
+      "획득시, 포일 상태가 아닌 무작위 카드 #b2 장을 #y강화 하고 #yfishing:포일 상태로 만듭니다. NL 추가로, #yfishing:포일 #p프로모 카드를 얻습니다.",
+      "획득시, #포일 상태가 아닌 무작위 카드 #b2 장을 #y강화 하고 #yfishing:포일 상태로 만듭니다. NL 추가로, #yfishing:포일 #p프로모 카드를 얻습니다: "
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "fishing:TakeItEasyPower": {
+    "NAME": "공복 혈당",
+    "DESCRIPTIONS": [
+      "매 턴 시작시 카드를 #b",
+      " 장 적게 뽑습니다.",
+      " 장 적게 뽑습니다."
+    ]
+  },
+  "fishing:DrawLessNextTurnPower": {
+    "NAME": "다음 턴 카드 드로우 감소",
+    "DESCRIPTIONS": [
+      "다음 턴에 카드를 #b",
+      " 장 적게 뽑습니다.",
+      " 장 적게 뽑습니다."
+    ]
+  },
+  "fishing:TripwirePower": {
+    "NAME": "철사 덫",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y방어도를 전부 잃었다면, 적 전체의 체력을 #b",
+      " 감소시킵니다."
+    ]
+  },
+  "fishing:AnglerFormPower": {
+    "NAME": "낚시꾼의 형상",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, 다음에 사용하는 카드 #b",
+      " 장에 카드 1장 뽑기 효과를 부여합니다.",
+      " NL #b",
+      " 번 카드를 뽑을수 있습니다."
+    ]
+  },
+  "fishing:CollectorPower": {
+    "NAME": "수집가",
+    "DESCRIPTIONS": [
+      "매 턴 처음으로 사용한 카드가...: NL #y포일: #y힘을 #b",
+      " #y얻습니다. NL 희귀: #y힘을 #b",
+      " 얻습니다."
+    ]
+  }
+}

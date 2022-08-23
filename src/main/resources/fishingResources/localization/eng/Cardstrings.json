@@ -349,7 +349,7 @@
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",
     "DESCRIPTION": "{@@}Gain !M! Orb Slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !M! Orb Slot{!M!|>1=s}. NL Channel !M! Lightning. NL !${ModID}:m3! NL Exhaust."
+    "UPGRADE_DESCRIPTION": "{@@}Gain !M! Orb Slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:TheWhale": {
     "NAME": "The Whale",
