@@ -124,6 +124,7 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     @Override
     public void upp() {
         upgradeThirdMagic(1);
+        System.out.println(getClass().getSimpleName());
         uDesc();
     }
 }

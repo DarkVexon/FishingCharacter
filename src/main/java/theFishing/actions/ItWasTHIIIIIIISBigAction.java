@@ -28,10 +28,12 @@ public class ItWasTHIIIIIIISBigAction extends AbstractGameAction {
                 c.superFlash();
             }
         }
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group)
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             tripleCard(c);
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group)
+        }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             tripleCard(c);
+        }
         isDone = true;
     }
 
@@ -52,7 +54,7 @@ public class ItWasTHIIIIIIISBigAction extends AbstractGameAction {
 
     private static void increaseNameSize(AbstractFishCard c) {
         boolean upgraded = false;
-        for (int i = 1; i < 4; i++) {
+        for (int i = 1; i < 6; i++) {
             if (c.name.startsWith(uiStrings.TEXT[i])) {
                 c.name = c.name.replaceFirst(uiStrings.TEXT[i], uiStrings.TEXT[i - 1]);
                 upgraded = true;

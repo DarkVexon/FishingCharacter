@@ -28,7 +28,6 @@ public class ThornyPersonality extends AbstractFishingCard {
         applyToSelf(new ThornsPower(p, magicNumber));
         if (isVoyaged()) {
             CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
-            atb(new FastShakeAction(p, 0.3F, 0.5F));
             applyToSelf(new ThornsPower(p, secondMagic));
         }
     }

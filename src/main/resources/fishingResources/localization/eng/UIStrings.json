@@ -41,13 +41,6 @@
       " Energy in a single turn. NL #yReward: A random enemy loses #b17 HP."
     ]
   },
-  "${ModID}:TheTerribleTwos": {
-    "TEXT": [
-      "The Terrible Twos",
-      "#yQuest: Play #b",
-      " 2-cost cards. NL #yReward: Gain #b12 #yBlock."
-    ]
-  },
   "${ModID}:SillyFishSizes": {
     "TEXT": [
       "Leviathan ",
@@ -73,7 +66,7 @@
     "TEXT": [
       "Fish-O-Pedia",
       "#yQuest: Play #b",
-      " #yFish with different names. NL #yReward: Gain #b4 #yStrength.",
+      " #yFish with different names. NL #yReward: Gain #b3 #yStrength.",
       " NL Already played:"
     ]
   }

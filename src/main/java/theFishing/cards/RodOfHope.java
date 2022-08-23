@@ -1,12 +1,14 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.makeInHand;
+import static theFishing.util.Wiz.atb;
 
 public class RodOfHope extends AbstractFishingCard {
     public final static String ID = makeID("RodOfHope");
@@ -15,15 +17,14 @@ public class RodOfHope extends AbstractFishingCard {
     public RodOfHope() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 6;
-        cardsToPreview = new StarShard();
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         if (isVoyaged()) {
-            AbstractCard q = new StarShard();
-            if (upgraded) q.upgrade();
-            makeInHand(q);
+            atb(new GainEnergyAction(2));
+            atb(new DrawCardAction(baseMagicNumber));
         }
     }
 
@@ -33,9 +34,6 @@ public class RodOfHope extends AbstractFishingCard {
 
     public void upp() {
         upgradeDamage(2);
-        AbstractCard q = new StarShard();
-        q.upgrade();
-        cardsToPreview = q;
-        uDesc();
+        upgradeMagicNumber(1);
     }
 }

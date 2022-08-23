@@ -62,7 +62,7 @@
     "NAME": "Bobber",
     "FLAVOR": "The new one is shinier.",
     "DESCRIPTIONS": [
-      "Every time you play #b3 #y${ModID}:Fish in a single turn, draw #b1 card."
+      "Every time you play #b3 #y${ModID}:Fish in a single turn, deal #b7 damage to ALL enemies."
     ]
   },
   "${ModID}:LuckyRing": {
@@ -74,7 +74,7 @@
   },
   "${ModID}:BoosterBox": {
     "NAME": "Booster Box",
-    "FLAVOR": "Over 5 promotional Foils! Can you discover them all?",
+    "FLAVOR": "More than six promotional Foils! Can you discover them all?",
     "DESCRIPTIONS": [
       "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. NL In addition, obtain a #y${ModID}:Foil #pPromo card.",
       "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. NL In addition, obtain a #y${ModID}:Foil #pPromo card: "

@@ -43,6 +43,7 @@ public class BoosterBox extends AbstractEasyRelic implements CustomSavable<Strin
                 possibleBoosters.add(TheKeyReturns.ID);
                 possibleBoosters.add(ZaHando.ID);
                 possibleBoosters.add(BeastSlayer.ID);
+                possibleBoosters.add(CrystallineConfluence.ID);
             }
 
             boosterBoxBonus = CardLibrary.getCard(Wiz.getRandomItem(possibleBoosters, AbstractDungeon.cardRng)).makeCopy();

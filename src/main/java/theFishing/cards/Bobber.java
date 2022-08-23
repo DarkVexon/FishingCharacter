@@ -16,12 +16,14 @@ public class Bobber extends AbstractFishingCard {
     // intellij stuff skill, none, uncommon, 9, 1, 12, 3, , 
 
     public Bobber() {
-        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseSecondMagic = secondMagic = 6;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        baseBlock = 5;
+        baseSecondMagic = secondMagic = 5;
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
     }
 
     @Override
@@ -32,14 +34,9 @@ public class Bobber extends AbstractFishingCard {
         }
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
-        return false;
-    }
-
     public void upp() {
-        upgradeSecondMagic(2);
+        upgradeBlock(1);
+        upgradeSecondMagic(1);
         upgradeMagicNumber(1);
     }
 }
