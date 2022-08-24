@@ -253,7 +253,7 @@
   "fishing:ItWasTHIIIIIIISBig": {
     "NAME": "이마아아안큼이나 컸어!",
     "DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 손패에 존재하는 모든 fishing:물고기 카드의 효과가 2배 증가합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 손패에 존재하는 모든 fishing:물고기 카드의 효과가 3배 증가합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "보존. NL 뽑을 카드 더미, 버린 카드 더미, 손패에 존재하는 모든 fishing:물고기 카드의 효과가 2배 증가합니다. NL 소멸."
   },
   "fishing:GoneFishing": {
     "NAME": "낚시 여행",
@@ -388,7 +388,7 @@
   },
   "fishing:QuestTimeTheFishOPedia": {
     "NAME": "물고기 사전",
-    "DESCRIPTION": "fishing:물고기 !M! 장을 뽑을 카드 더미에 넣습니다. NL fishing:퀘스트 : 각기 다른 5 장의 fishing:물고기 카드를 사용하세요. NL *보상: 힘을 3 얻습니다."
+    "DESCRIPTION": "fishing:물고기 !M! 장을 뽑을 카드 더미에 넣습니다. NL fishing:퀘스트 : 각기 다른 4 장의 fishing:물고기 카드를 사용하세요. NL *보상: 힘을 3 얻습니다."
   },
   "fishing:SoleSight": {
     "NAME": "고독한 탐색",
@@ -486,7 +486,8 @@
   },
   "fishing:Collector": {
     "NAME": "수집가",
-    "DESCRIPTION": "매 턴 처음으로 사용하는 카드가... NL fishing:포일 : 힘을 1 얻습니다. NL 희귀: 힘을 1 얻습니다."
+    "DESCRIPTION": "매 턴 처음으로 사용하는 카드가... NL fishing:포일 : 힘을 1 얻습니다. NL 희귀: 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. 매 턴 처음으로 사용하는 카드가... NL fishing:포일 : 힘을 1 얻습니다. NL 희귀: 힘을 1 얻습니다."
   },
   "fishing:GlitterGlue": {
     "NAME": "반짝이 풀",

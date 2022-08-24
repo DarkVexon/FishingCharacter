@@ -253,7 +253,7 @@
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
     "DESCRIPTION": "Double the effects of ALL ${ModID}:Fish in your hand, draw pile, and discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the effects of ALL ${ModID}:Fish in your hand, draw pile, and discard pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Retain. NL Double the effects of ALL ${ModID}:Fish in your hand, draw pile, and discard pile. NL Exhaust."
   },
   "${ModID}:GoneFishing": {
     "NAME": "Gone Fishing",
@@ -388,7 +388,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 4 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength."
   },
   "${ModID}:SoleSight": {
     "NAME": "Sole Searching",
@@ -486,7 +486,8 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 1 Strength."
+    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 1 Strength."
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",

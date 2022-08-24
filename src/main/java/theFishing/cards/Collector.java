@@ -20,6 +20,7 @@ public class Collector extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        isInnate = true;
+        uDesc();
     }
 }
