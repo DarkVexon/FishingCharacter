@@ -23,8 +23,8 @@ public class FoilTooltips2 {
     @SpireInsertPatch(locator = LocatorAfter.class, localvars = {"card", "t"})
     public static void InsertAfter(SingleCardViewPopup __instance, SpriteBatch sb, AbstractCard acard, @ByRef ArrayList<PowerTip>[] t) {
         List<TooltipInfo> tooltips = new ArrayList<>();
-        if (FoilPatches.isFoil(acard) && !acard.rawDescription.contains(FoilTooltips1.UI_STRINGS.TEXT[0])) {
-            tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID(FoilTooltips1.UI_STRINGS.TEXT[0])), BaseMod.getKeywordDescription(makeID(FoilTooltips1.UI_STRINGS.TEXT[0]))));
+        if (FoilPatches.isFoil(acard) && !acard.rawDescription.toLowerCase().contains(FoilTooltips1.UI_STRINGS.TEXT[0])) {
+            tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(FoilTooltips1.UI_STRINGS.TEXT[0]), BaseMod.getKeywordDescription(FoilTooltips1.UI_STRINGS.TEXT[0])));
         }
         if (!tooltips.isEmpty())
             t[0].addAll(tooltips.stream().map(TooltipInfo::toPowerTip).collect(Collectors.toList()));

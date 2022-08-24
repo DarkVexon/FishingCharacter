@@ -57,9 +57,9 @@
     "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 fishing:물고기 !M! 장을 넣습니다."
   },
   "fishing:SetSail": {
-    "NAME": "Set Sail",
-    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
+    "NAME": "출항",
+    "DESCRIPTION": "[#EFC851]물고기[] 를 제외한 공격 카드 1장을 뽑습니다. NL 그 카드는 이번 턴 동안 비용이 0이 됩니다. NL 힘을 !M! 얻습니다. NL 턴 종료시, 힘을 !M! 잃습니다.",
+    "UPGRADE_DESCRIPTION": "[#EFC851]물고기[] 를 제외한 공격 카드 1장을 뽑습니다. NL 그 카드는 이번 턴 동안 비용이 0이 됩니다. NL 힘을 !M! 얻습니다. NL 턴 종료시, 힘을 !M! 잃습니다."
   },
   "fishing:MopUp": {
     "NAME": "걸레질 청소",
@@ -358,8 +358,8 @@
   },
   "fishing:Swordfish": {
     "NAME": "황새치",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! card. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! cards. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! 뽑습니다. NL 소멸."
   },
   "fishing:AquaOrb": {
     "NAME": "해양의 보주",
@@ -401,9 +401,9 @@
     "EXTENDED_DESCRIPTION": [
       "짜증나는 거래",
       "내 턴 시작시, 카드를 #b",
-      " 장 뽑고",
-      " 장 뽑고",
-      " 카드를 소멸시킵니다: #b"
+      " 장",
+      " 장",
+      " 뽑고 카드를 소멸시킵니다: #b"
     ]
   },
   "fishing:TheFinalCard": {
@@ -558,7 +558,7 @@
     "NAME": "프렐류드",
     "DESCRIPTION": "입장식. NL 피해를 !D! 줍니다. NL 카드를 1 장 버립니다. NL 대상의 [#EFC851]시간[] [#EFC851]왜곡[] 을 초기화시킵니다.",
     "EXTENDED_DESCRIPTION": [
-      "이 카드는 반드시 처음에 사용해야만 해",
+      "이 카드는 턴 시작시 가장 처음에 사용해야만 해.",
       "~비겁한...~ NL @이@ 비겁한@ @놈!@"
     ]
   },
