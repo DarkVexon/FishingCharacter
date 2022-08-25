@@ -13,7 +13,7 @@ public class Oblivious extends AbstractFishingCard {
 
     public Oblivious() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

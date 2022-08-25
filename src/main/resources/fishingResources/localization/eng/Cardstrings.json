@@ -281,7 +281,11 @@
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
-    "DESCRIPTION": "Deal !D! damage, increased by !M! for each ${ModID}:Fish played this turn."
+    "DESCRIPTION": "Deal !D! damage, increased by !M! for each ${ModID}:Fish played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " ${ModID}:Fish played.)"
+    ]
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
@@ -407,12 +411,12 @@
   },
   "${ModID}:TheFinalCard": {
     "NAME": "The Final Card",
-    "DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL If this ends the combat, Upgrade it.",
+    "DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL If this card ends the combat, Upgrade it.",
     "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL Thanks for playing."
   },
   "${ModID}:QuestTimeTheHarpoon": {
     "NAME": "The Harpoon",
-    "DESCRIPTION": "Deal !D! damage. NL Startup ${ModID}:Quest: Kill an enemy. NL *Reward: Shuffle *The *Whale into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Startup ${ModID}:Quest: NL Kill an enemy. NL *Reward: Shuffle *The *Whale into your draw pile."
   },
   "${ModID}:EndsOfTheEarth": {
     "NAME": "Ends Of The Earth",
@@ -476,11 +480,11 @@
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block for every 5 cards in your discard pile.",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block for every 6 cards in your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "Pyramid Climb",
       "At the end of your turn, gain #b",
-      " #yBlock for every #b5 cards in your discard pile."
+      " #yBlock for every #b6 cards in your discard pile."
     ]
   },
   "${ModID}:Collector": {

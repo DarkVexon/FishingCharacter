@@ -16,7 +16,7 @@ public class CollectorPower extends AbstractEasyPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public CollectorPower(int amount) {
-        super(ID, powerStrings.NAME, PowerType.BUFF, true, AbstractDungeon.player, amount);
+        super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
     public boolean activated = true;

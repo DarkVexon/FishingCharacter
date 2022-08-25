@@ -282,7 +282,11 @@
   "fishing:Hook": {
     "NAME": "훅",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 fishing:물고기 1 장을 넣습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미와 버린 카드 더미에 fishing:물고기 1 장을 넣습니다."
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미와 버린 카드 더미에 fishing:물고기 1 장을 넣습니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " ${ModID}:Fish played.)"
+    ]
   },
   "fishing:Crosshairs": {
     "NAME": "크로스헤어",
@@ -477,10 +481,10 @@
   },
   "fishing:PyramidClimber": {
     "NAME": "피라미드 등반",
-    "DESCRIPTION": "턴 종료시, 버린 카드에 있는 카드 5장당, 방어도를 !M! 얻습니다.",
+    "DESCRIPTION": "턴 종료시, 버린 카드에 있는 카드 6장당, 방어도를 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "피라미드 등반",
-      "턴 종료시, 버린 카드에 있는 카드 #b5장당, #y방어도를 #b",
+      "턴 종료시, 버린 카드에 있는 카드 #b6장당, #y방어도를 #b",
       " 얻습니다."
     ]
   },

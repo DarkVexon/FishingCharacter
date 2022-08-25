@@ -13,8 +13,8 @@ public class Standoff extends AbstractFishingCard {
 
     public Standoff() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 6;
-        baseMagicNumber = magicNumber = 4;
+        baseBlock = 7;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
