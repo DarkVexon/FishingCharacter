@@ -74,8 +74,9 @@ public class TheFishing extends CustomPlayer {
     public void damage(DamageInfo info) {
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
             AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
-            this.state.addAnimation(0, "Idle", true, 0.0F);
+            AnimationState.TrackEntry e2 = this.state.addAnimation(0, "Idle", true, 0.0F);
             e.setTimeScale(0.7F);
+            e2.setTimeScale(0.7F);
         }
 
         super.damage(info);
@@ -214,13 +215,6 @@ public class TheFishing extends CustomPlayer {
 
     public void onEquipRainbowRod() {
         loadAnimation("fishingResources/images/char/mainChar/NewProject2.atlas", "fishingResources/images/char/mainChar/NewProject2.json", SIZE_SCALE);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        this.stateData.setMix("Hit", "Idle", 0.1F);
-        e.setTimeScale(0.7F);
-    }
-
-    public void onLoseStartingRod() {
-        loadAnimation("fishingResources/images/char/mainChar/NewProject3.atlas", "fishingResources/images/char/mainChar/NewProject3.json", SIZE_SCALE);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.7F);

@@ -1,12 +1,11 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.ModifyBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.util.Wiz;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.getEnemies;
+import static theFishing.util.Wiz.atb;
 
 public class Standoff extends AbstractFishingCard {
     public final static String ID = makeID("Standoff");
@@ -15,21 +14,16 @@ public class Standoff extends AbstractFishingCard {
     public Standoff() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 6;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (getEnemies().size() == 1) {
-            blck();
-        }
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        this.glowColor = Wiz.getEnemies().size() == 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        atb(new ModifyBlockAction(uuid, magicNumber));
     }
 
     public void upp() {
         upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 }

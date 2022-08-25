@@ -281,8 +281,7 @@
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle 1 ${ModID}:Fish into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle 1 ${ModID}:Fish into your draw and discard piles."
+    "DESCRIPTION": "Deal !D! damage, increased by !M! for each ${ModID}:Fish played this turn."
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
@@ -388,7 +387,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 4 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength."
   },
   "${ModID}:SoleSight": {
     "NAME": "Sole Searching",
@@ -549,7 +548,7 @@
   },
   "${ModID}:Standoff": {
     "NAME": "Standoff",
-    "DESCRIPTION": "Gain !B! Block. NL If there's only one enemy, gain !B! Block again."
+    "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! this combat."
   },
   "${ModID}:DoubleUp": {
     "NAME": "Double Up",

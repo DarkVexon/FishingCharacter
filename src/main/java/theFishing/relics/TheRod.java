@@ -37,13 +37,6 @@ public class TheRod extends AbstractEasyRelic {
     }
 
     @Override
-    public void onUnequip() {
-        if (AbstractDungeon.player instanceof TheFishing) {
-            ((TheFishing) AbstractDungeon.player).onLoseStartingRod();
-        }
-    }
-
-    @Override
     public void onVictory() {
         grayscale = false;
         counter = -1;
