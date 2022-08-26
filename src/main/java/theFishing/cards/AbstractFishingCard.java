@@ -61,10 +61,8 @@ public abstract class AbstractFishingCard extends CustomCard {
             case ATTACK:
             case POWER:
             case SKILL:
-                textureString = makeImagePath("cards/" + cardName + ".png");
-                break;
             default:
-                textureString = makeImagePath("ui/missing.png");
+                textureString = makeImagePath("cards/" + cardName + ".png");
                 break;
         }
 

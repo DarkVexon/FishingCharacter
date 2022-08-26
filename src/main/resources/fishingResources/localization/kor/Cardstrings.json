@@ -392,7 +392,10 @@
   },
   "fishing:QuestTimeTheFishOPedia": {
     "NAME": "물고기 사전",
-    "DESCRIPTION": "fishing:물고기 !M! 장을 뽑을 카드 더미에 넣습니다. NL fishing:퀘스트 : 각기 다른 5 장의 fishing:물고기 카드를 사용하세요. NL *보상: 힘을 3 얻습니다."
+    "DESCRIPTION": "fishing:물고기 !M! 장을 뽑을 카드 더미에 넣습니다. NL fishing:퀘스트 : 각기 다른 5 장의 fishing:물고기 카드를 사용하세요. NL *보상: 힘을 3 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a Fish."
+    ]
   },
   "fishing:SoleSight": {
     "NAME": "고독한 탐색",
@@ -481,7 +484,7 @@
   },
   "fishing:PyramidClimber": {
     "NAME": "피라미드 등반",
-    "DESCRIPTION": "턴 종료시, 버린 카드에 있는 카드 6장당, 방어도를 !M! 얻습니다.",
+    "DESCRIPTION": "Gain !B! Block. NL Put a *Stone on top of your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "피라미드 등반",
       "턴 종료시, 버린 카드에 있는 카드 #b6장당, #y방어도를 #b",
@@ -507,7 +510,8 @@
   },
   "fishing:Blooper": {
     "NAME": "징오징오",
-    "DESCRIPTION": "이번 턴 동안 적 전체의 힘을 !M! 감소시킵니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "이번 턴 동안 적 전체의 힘을 !M! 감소시킵니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이번 턴 동안 적 전체의 힘을 !M! 감소시킵니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
   },
   "fishing:Starfy": {
     "NAME": "스타피",
@@ -571,5 +575,13 @@
     "NAME": "크리스탈 융합점",
     "DESCRIPTION": "뽑을 카드 더미에 *별의 *조각 X 장을 넣습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "뽑을 카드 더미에 *별의 *조각 X +1 장을 넣습니다. NL 소멸."
+  },
+  "fishing:SpinAttack": {
+    "NAME": "Spin Attack",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. 카드를 1 장 버립니다."
+  },
+  "fishing:Stone": {
+    "NAME": "Stone",
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, deal !M! damage to a random enemy."
   }
 }

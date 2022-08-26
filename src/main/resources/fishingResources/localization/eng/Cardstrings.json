@@ -391,7 +391,10 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength."
+    "DESCRIPTION": "Choose 1 of !M! ${ModID}:Fish to add into your hand. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a Fish."
+    ]
   },
   "${ModID}:SoleSight": {
     "NAME": "Sole Searching",
@@ -480,7 +483,7 @@
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block for every 6 cards in your discard pile.",
+    "DESCRIPTION": "Gain !B! Block. NL Put a *Stone on top of your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "Pyramid Climb",
       "At the end of your turn, gain #b",
@@ -506,7 +509,8 @@
   },
   "${ModID}:Blooper": {
     "NAME": "Blooper",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Starfy": {
     "NAME": "Starfy",
@@ -568,7 +572,15 @@
   },
   "${ModID}:CrystallineConfluence": {
     "NAME": "Crystalline Confluence",
-    "DESCRIPTION": "Shuffle X *Star *Shards into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle X+1 *Star *Shards into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle X+1 ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust."
+  },
+  "${ModID}:SpinAttack": {
+    "NAME": "Spin Attack",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Discard 1 card."
+  },
+  "${ModID}:Stone": {
+    "NAME": "Stone",
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, deal !M! damage to a random enemy."
   }
 }

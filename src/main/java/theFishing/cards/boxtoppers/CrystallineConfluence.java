@@ -1,6 +1,7 @@
 package theFishing.cards.boxtoppers;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -8,6 +9,7 @@ import theFishing.actions.EasyXCostAction;
 import theFishing.cards.StarShard;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.patch.foil.FoilPatches.makeFoil;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
@@ -19,7 +21,9 @@ public class CrystallineConfluence extends AbstractBoxTopper {
         super(ID, -1, CardType.SKILL, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 0;
-        cardsToPreview = new StarShard();
+        AbstractCard q = new StarShard();
+        makeFoil(q);
+        cardsToPreview = q;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,8 +31,10 @@ public class CrystallineConfluence extends AbstractBoxTopper {
             energyOnUse = EnergyPanel.totalCount;
         }
         atb(new EasyXCostAction(this, (effect, params) -> {
-            for (int i = 0; i < effect; i++) {
-                att(new MakeTempCardInDrawPileAction(new StarShard(), 1, true, true));
+            AbstractCard q = new StarShard();
+            makeFoil(q);
+            for (int i = 0; i < effect + params[0]; i++) {
+                att(new MakeTempCardInDrawPileAction(q, 1, true, true));
             }
             return true;
         }, magicNumber));
