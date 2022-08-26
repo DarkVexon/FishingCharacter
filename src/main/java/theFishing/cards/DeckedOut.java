@@ -2,6 +2,7 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,7 +17,6 @@ public class DeckedOut extends AbstractFishingCard {
 
     public DeckedOut() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 3;
         baseMagicNumber = magicNumber = 3;
     }
 
@@ -24,12 +24,11 @@ public class DeckedOut extends AbstractFishingCard {
         atb(new DrawCardAction(magicNumber));
         if (CardCrawlGame.clientUtils.isSteamRunningOnSteamDeck()) {
             atb(new VFXAction(new LightBulbEffect(p.hb)));
-            blck();
+            atb(new GainEnergyAction(1));
         }
     }
 
     public void upp() {
-        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 }

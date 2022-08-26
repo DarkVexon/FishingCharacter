@@ -205,7 +205,7 @@
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
-    "DESCRIPTION": "Draw !M! cards. NL If you're on Steam Deck, gain !B! Block."
+    "DESCRIPTION": "Draw !M! cards. NL If you're on Steam Deck, gain [E]."
   },
   "${ModID}:ShipRam": {
     "NAME": "Ship Ram",
