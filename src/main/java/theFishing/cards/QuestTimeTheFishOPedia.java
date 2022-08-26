@@ -13,6 +13,8 @@ import theFishing.quest.quests.TheFishOPedia;
 import theFishing.relics.MaelstromAnkh;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -28,15 +30,33 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<String> fishList = new ArrayList<>();
+        AbstractFishCard.setupLists();
+        HashMap<String, Integer> dupeList = new HashMap<>();
         if (AbstractDungeon.player.hasRelic(MaelstromAnkh.ID)) {
-            fishList.addAll(AbstractFishCard.maelstromFishList.keySet());
+            for (Map.Entry<String, Integer> e : AbstractFishCard.maelstromFishList.entrySet()) {
+                dupeList.put(e.getKey(), e.getValue());
+            }
         } else {
-            fishList.addAll(AbstractFishCard.weightedFishList.keySet());
+            for (Map.Entry<String, Integer> e : AbstractFishCard.weightedFishList.entrySet()) {
+                dupeList.put(e.getKey(), e.getValue());
+            }
         }
         ArrayList<AbstractCard> possCards = new ArrayList<>();
         for (int i = 0; i < magicNumber; i++) {
-            possCards.add(CardLibrary.getCard(fishList.remove(AbstractDungeon.cardRandomRng.random(fishList.size() - 1))));
+            int fishRoll = AbstractDungeon.cardRandomRng.random(1,
+                    dupeList.keySet().stream()
+                            .mapToInt(f -> dupeList.get(f))
+                            .sum()
+            );
+
+            for (String fishy : dupeList.keySet()) {
+                fishRoll -= dupeList.get(fishy);
+                if (fishRoll <= 0) {
+                    possCards.add(CardLibrary.getCard(fishy).makeCopy());
+                    dupeList.remove(fishy);
+                    break;
+                }
+            }
         }
         atb(new SelectCardsCenteredAction(possCards, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             att(new MakeTempCardInHandAction(cards.get(0)));

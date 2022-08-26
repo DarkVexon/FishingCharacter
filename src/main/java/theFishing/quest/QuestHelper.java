@@ -28,7 +28,7 @@ public class QuestHelper {
 
     static {
         for (int i = 0; i < 6; i++) {
-            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (50F * Settings.scale))), 200F * Settings.scale, 25F * Settings.scale));
+            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (50F * Settings.scale))), 200F * Settings.scale, 27.5F * Settings.scale));
         }
     }
 

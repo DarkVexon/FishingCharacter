@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.fish.basefish.*;
-import theFishing.cards.fish.maelstrom.TheWhale;
 import theFishing.relics.MaelstromAnkh;
 
 import java.util.Collections;
@@ -48,7 +47,7 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
         return returnRandomBasicFish();
     }
 
-    private static AbstractCard returnRandomBasicFish() {
+    public static void setupLists() {
         if (weightedFishList == null) {
             weightedFishList = new LinkedHashMap<>();
             weightedFishList.put(Piranha.ID, 33);
@@ -67,6 +66,24 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             weightedFishList.put(SeaMonster.ID, 1);
         }
 
+        if (maelstromFishList == null) {
+            maelstromFishList = new LinkedHashMap<>();
+            maelstromFishList.put(Octopus.ID, 8);
+            maelstromFishList.put(Eel.ID, 8);
+            maelstromFishList.put(Hammerhead.ID, 3);
+            maelstromFishList.put(Maw.ID, 3);
+            maelstromFishList.put(Shark.ID, 3);
+            maelstromFishList.put(Starfish.ID, 3);
+            maelstromFishList.put(Swordfish.ID, 2);
+            maelstromFishList.put(Qwilfish.ID, 1);
+            maelstromFishList.put(Jellyfish.ID, 1);
+            maelstromFishList.put(Blooper.ID, 1);
+            maelstromFishList.put(SeaMonster.ID, 1);
+        }
+    }
+
+    private static AbstractCard returnRandomBasicFish() {
+        setupLists();
         int fishRoll = AbstractDungeon.cardRandomRng.random(1,
                 weightedFishList.keySet().stream()
                         .mapToInt(f -> weightedFishList.get(f))
@@ -78,39 +95,21 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             if (fishRoll <= 0)
                 return CardLibrary.getCard(fishy).makeCopy();
         }
-
         return new Madness();
     }
 
     private static AbstractCard returnRandomMaelstromFish() {
-        if (maelstromFishList == null) {
-            maelstromFishList = new LinkedHashMap<>();
-            maelstromFishList.put(Octopus.ID, 15);
-            maelstromFishList.put(Eel.ID, 15);
-            maelstromFishList.put(Hammerhead.ID, 12);
-            maelstromFishList.put(Swordfish.ID, 15);
-            maelstromFishList.put(Maw.ID, 15);
-            maelstromFishList.put(Shark.ID, 5);
-            maelstromFishList.put(Starfish.ID, 5);
-            maelstromFishList.put(Qwilfish.ID, 5);
-            maelstromFishList.put(Jellyfish.ID, 5);
-            maelstromFishList.put(SeaMonster.ID, 4);
-            maelstromFishList.put(Blooper.ID, 3);
-            maelstromFishList.put(TheWhale.ID, 1);
-        }
-
+        setupLists();
         int fishRoll = AbstractDungeon.cardRandomRng.random(1,
                 maelstromFishList.keySet().stream()
                         .mapToInt(f -> maelstromFishList.get(f))
                         .sum()
         );
-
         for (String fishy : maelstromFishList.keySet()) {
             fishRoll -= maelstromFishList.get(fishy);
             if (fishRoll <= 0)
                 return CardLibrary.getCard(fishy).makeCopy();
         }
-
         return new Madness();
     }
 
@@ -126,7 +125,6 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     @Override
     public void upp() {
         upgradeThirdMagic(1);
-        System.out.println(getClass().getSimpleName());
         uDesc();
     }
 }
