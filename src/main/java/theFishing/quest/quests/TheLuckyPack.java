@@ -44,9 +44,12 @@ public class TheLuckyPack extends AbstractQuest {
     public void onPlayCard(AbstractCard card) {
         if (FoilPatches.isFoil(card)) {
             increment();
-        } else {
-            progress = 0;
         }
+    }
+
+    @Override
+    public void atEndOfTurn() {
+        progress = 0;
     }
 
     private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/LuckyPack.png"));

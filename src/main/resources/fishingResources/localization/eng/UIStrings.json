@@ -25,7 +25,7 @@
     "TEXT": [
       "The Lucky Pack",
       "#yQuest: Play #b",
-      " #yFoil cards in a row. NL #yReward: Play the last card again."
+      " #yFoil cards in a turn. NL #yReward: Play the last card again."
     ]
   },
   "${ModID}:ThePrismaticPortal": {

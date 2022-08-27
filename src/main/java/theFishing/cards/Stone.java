@@ -23,7 +23,7 @@ public class Stone extends AbstractFishingCard {
 
     @Override
     public void triggerOnExhaust() {
-        addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
+        addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
     @Override
