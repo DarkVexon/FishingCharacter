@@ -1,7 +1,6 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -37,6 +36,6 @@ public class Wizardry extends AbstractFishingCard {
     public void triggerWhenDrawn() {
         AbstractCard q = new Pinball();
         FoilPatches.makeFoil(q);
-        att(new MakeTempCardInDrawPileAction(q, 1, false, true));
+        topDeck(q);
     }
 }
