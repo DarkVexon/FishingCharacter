@@ -2,7 +2,6 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -16,7 +15,7 @@ public class Cheat extends AbstractFishingCard {
 
     public Cheat() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 9;
+        baseDamage = 8;
         cardsToPreview = new Steal();
         exhaust = true;
     }
@@ -26,16 +25,10 @@ public class Cheat extends AbstractFishingCard {
             atb(new RemoveAllBlockAction(m, p));
         }
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        AbstractCard q = new Steal();
-        if (upgraded) q.upgrade();
-        makeInHand(q);
+        makeInHand(new Steal());
     }
 
     public void upp() {
-        upgradeDamage(2);
-        AbstractCard q = new Steal();
-        q.upgrade();
-        cardsToPreview = q;
-        uDesc();
+        upgradeDamage(3);
     }
 }

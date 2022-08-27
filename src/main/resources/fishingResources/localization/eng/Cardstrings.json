@@ -58,8 +58,7 @@
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Draw a non-[#EFC851]Fish[] Attack. NL It costs 0 this turn. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
+    "DESCRIPTION": "Put a card from your draw pile on top of your draw pile. NL Gain !M! temporary Strength."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -391,7 +390,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Choose 1 of !M! ${ModID}:Fish to add into your hand. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength.",
+    "DESCRIPTION": "Put !M! ${ModID}:Fish on top of your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]

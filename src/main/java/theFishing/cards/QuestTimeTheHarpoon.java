@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.VerticalImpactEffect;
 import theFishing.actions.AcceptQuestAction;
 import theFishing.cards.fish.maelstrom.TheWhale;
+import theFishing.quest.QuestHelper;
+import theFishing.quest.quests.TheGemSearch;
 import theFishing.quest.quests.TheHarpoon;
 
 import static theFishing.FishingMod.makeID;

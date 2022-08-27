@@ -24,6 +24,8 @@ public class QuestHelper {
     public static final float POSITION_X = 10F * Settings.scale;
     public static final float POSITION_Y = 300F * Settings.scale;
 
+    public static final Color QUEST_DUPE_BORDER_GLOW_COLOR = new Color(0.2F, 1F, 0.6F, 0.25F);
+
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("QuestLog"));
 
     static {
@@ -124,5 +126,9 @@ public class QuestHelper {
         for (AbstractQuest q : quests) {
             q.atEndOfTurn();
         }
+    }
+
+    public static boolean hasQuest(String ID) {
+        return quests.stream().anyMatch(q -> q.questID.equals(ID));
     }
 }

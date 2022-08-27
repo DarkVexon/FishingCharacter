@@ -4,6 +4,8 @@ import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPrevie
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
+import theFishing.quest.QuestHelper;
+import theFishing.quest.quests.TheGemSearch;
 import theFishing.quest.quests.ThePrismaticPortal;
 
 import static theFishing.FishingMod.makeID;
@@ -24,6 +26,11 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
 
     public void upp() {
         upgradeBaseCost(0);
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = QuestHelper.hasQuest(ThePrismaticPortal.ID) ? QuestHelper.QUEST_DUPE_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override

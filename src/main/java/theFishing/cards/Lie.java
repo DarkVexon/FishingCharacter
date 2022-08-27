@@ -21,7 +21,7 @@ public class Lie extends AbstractFishingCard {
 
     public Lie() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
         MultiCardPreview.add(this, new Cheat(), new Steal());
         exhaust = true;
     }
@@ -37,19 +37,10 @@ public class Lie extends AbstractFishingCard {
             }
         });
 
-        AbstractCard q = new Cheat();
-        if (upgraded) q.upgrade();
-        makeInHand(q);
+        makeInHand(new Cheat());
     }
 
     public void upp() {
         upgradeMagicNumber(2);
-        MultiCardPreview.clear(this);
-        AbstractCard q = new Cheat();
-        q.upgrade();
-        AbstractCard q2 = new Steal();
-        q2.upgrade();
-        MultiCardPreview.add(this, q, q2);
-        uDesc();
     }
 }
