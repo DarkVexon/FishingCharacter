@@ -1,4 +1,4 @@
-package theFishing.cards.fish.basefish;
+package theFishing.cards.fish;
 
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;

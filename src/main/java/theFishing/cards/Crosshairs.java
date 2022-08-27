@@ -21,7 +21,7 @@ public class Crosshairs extends AbstractFishingCard {
 
     public Crosshairs() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 9;
+        baseMagicNumber = magicNumber = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

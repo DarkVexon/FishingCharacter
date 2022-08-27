@@ -1,4 +1,4 @@
-package theFishing.cards.fish.maelstrom;
+package theFishing.cards.fish;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -16,7 +16,7 @@ public class TheWhale extends AbstractFishCard {
 
     public TheWhale() {
         super(ID, CardType.SKILL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 20;
+        baseMagicNumber = magicNumber = 24;
     }
 
     public void fishEffect(AbstractPlayer p, AbstractMonster m) {

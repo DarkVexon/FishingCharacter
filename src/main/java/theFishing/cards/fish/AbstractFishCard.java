@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.AbstractFishingCard;
-import theFishing.cards.fish.basefish.*;
 import theFishing.relics.MaelstromAnkh;
 
 import java.util.Collections;

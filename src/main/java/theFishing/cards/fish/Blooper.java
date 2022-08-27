@@ -1,4 +1,4 @@
-package theFishing.cards.fish.basefish;
+package theFishing.cards.fish;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

@@ -3,7 +3,7 @@ package theFishing.quest.quests;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import theFishing.cards.fish.maelstrom.TheWhale;
+import theFishing.cards.fish.TheWhale;
 import theFishing.util.TexLoader;
 
 import static theFishing.FishingMod.makeID;

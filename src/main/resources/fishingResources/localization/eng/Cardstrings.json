@@ -267,7 +267,7 @@
     "DESCRIPTION": "The first !M! times you play a card each turn, draw 1 card."
   },
   "${ModID}:FullHouse": {
-    "NAME": "Full House",
+    "NAME": "Three of a Kind",
     "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! ${ModID}:Foil copies into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Four of a Kind",
@@ -280,7 +280,7 @@
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
-    "DESCRIPTION": "Deal !D! damage, increased by !M! for each ${ModID}:Fish played this turn.",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each ${ModID}:Fish played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " ${ModID}:Fish played.)"
@@ -390,7 +390,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Put !M! ${ModID}:Fish on top of your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength.",
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]
