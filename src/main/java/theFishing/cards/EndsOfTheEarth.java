@@ -25,6 +25,8 @@ public class EndsOfTheEarth extends AbstractFishingCard {
     public void onMoveToDiscard() {
         cost = 1;
         costForTurn = 1;
+        isCostModified = false;
+        isCostModifiedForTurn = false;
     }
 
     public void upp() {

@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
 import theFishing.quest.QuestHelper;
-import theFishing.quest.quests.TheGemSearch;
 import theFishing.quest.quests.ThePrismaticPortal;
 
 import static theFishing.FishingMod.makeID;

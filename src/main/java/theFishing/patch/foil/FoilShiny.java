@@ -10,7 +10,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import org.apache.commons.lang3.SystemUtils;
 import theFishing.FishingMod;
 import theFishing.util.ImageHelper;
 
@@ -23,12 +25,18 @@ public class FoilShiny {
 
         private static final FrameBuffer fbo = ImageHelper.createBuffer();
 
-        private static final String OS = System.getProperty("os.name").toLowerCase();
-        public static boolean IS_WINDOWS = (OS.indexOf("win") >= 0);
+        private static int RUNNING_ON_STEAM_DECK = -1;
+
+        public static boolean isOnSteamDeck() {
+            if (RUNNING_ON_STEAM_DECK == -1) {
+                RUNNING_ON_STEAM_DECK = CardCrawlGame.clientUtils.isSteamRunningOnSteamDeck() ? 1 : 0;
+            }
+            return RUNNING_ON_STEAM_DECK == 1;
+        }
 
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(AbstractCard __instance, SpriteBatch spriteBatch) {
-            if (!Settings.hideCards && IS_WINDOWS) {
+            if (!Settings.hideCards) {
                 if (FoilPatches.isFoil(__instance)) {
                     TextureRegion t = cardToTextureRegion(__instance, spriteBatch);
                     spriteBatch.setBlendFunction(GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);

@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
 import theFishing.quest.QuestHelper;
-import theFishing.quest.quests.TheGemSearch;
 import theFishing.quest.quests.TheLuckyPack;
 
 import static com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE;

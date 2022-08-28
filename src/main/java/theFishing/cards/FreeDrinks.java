@@ -36,8 +36,7 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
         if (AbstractDungeon.player.potions.stream().anyMatch(c -> c instanceof PotionSlot)) {
             if (AbstractDungeon.player.hasRelic(Sozu.ID)) {
                 AbstractDungeon.player.getRelic(Sozu.ID).flash();
-            }
-            else {
+            } else {
                 AbstractDungeon.player.obtainPotion(AbstractDungeon.returnRandomPotion());
             }
         }

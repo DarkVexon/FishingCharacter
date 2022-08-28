@@ -1,6 +1,5 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.animations.FastShakeAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,7 +8,6 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.atb;
 
 public class ThornyPersonality extends AbstractFishingCard {
     public final static String ID = makeID("ThornyPersonality");

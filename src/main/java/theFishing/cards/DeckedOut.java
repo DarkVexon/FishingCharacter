@@ -4,9 +4,9 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightBulbEffect;
+import theFishing.patch.foil.FoilShiny;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -22,10 +22,15 @@ public class DeckedOut extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(magicNumber));
-        if (CardCrawlGame.clientUtils.isSteamRunningOnSteamDeck()) {
+        if (FoilShiny.FoilCardsShine.isOnSteamDeck()) {
             atb(new VFXAction(new LightBulbEffect(p.hb)));
             atb(new GainEnergyAction(1));
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = FoilShiny.FoilCardsShine.isOnSteamDeck() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
