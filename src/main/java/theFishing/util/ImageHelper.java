@@ -25,7 +25,6 @@ public class ImageHelper {
         fbo.begin();
         Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
-        Gdx.gl.glColorMask(true, true, true, true);
     }
 
     public static TextureRegion getBufferTexture(FrameBuffer fbo) {

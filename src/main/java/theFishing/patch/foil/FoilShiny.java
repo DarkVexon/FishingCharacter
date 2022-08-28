@@ -12,7 +12,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import org.apache.commons.lang3.SystemUtils;
 import theFishing.FishingMod;
 import theFishing.util.ImageHelper;
 
@@ -27,6 +26,9 @@ public class FoilShiny {
 
         private static int RUNNING_ON_STEAM_DECK = -1;
 
+        private static final String OS = System.getProperty("os.name").toLowerCase();
+        public static boolean IS_WINDOWS = (OS.indexOf("win") >= 0);
+
         public static boolean isOnSteamDeck() {
             if (RUNNING_ON_STEAM_DECK == -1) {
                 RUNNING_ON_STEAM_DECK = CardCrawlGame.clientUtils.isSteamRunningOnSteamDeck() ? 1 : 0;
@@ -37,7 +39,7 @@ public class FoilShiny {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(AbstractCard __instance, SpriteBatch spriteBatch) {
             if (!Settings.hideCards) {
-                if (FoilPatches.isFoil(__instance)) {
+                if (FoilPatches.isFoil(__instance) && IS_WINDOWS && !isOnSteamDeck()) {
                     TextureRegion t = cardToTextureRegion(__instance, spriteBatch);
                     spriteBatch.setBlendFunction(GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     ShaderProgram oldShader = spriteBatch.getShader();
