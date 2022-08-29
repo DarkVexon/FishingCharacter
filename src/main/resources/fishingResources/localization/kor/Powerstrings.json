@@ -35,7 +35,16 @@
     "NAME": "수집가",
     "DESCRIPTIONS": [
       "매 턴 처음으로 사용한 카드가...: NL #y포일: #y힘을 #b",
-      " #y얻습니다. NL 희귀: #y힘을 #b",
+      " #y얻습니다. NL 희귀: #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "fishing:MintConditionPower": {
+    "NAME": "상쾌한 컨디션",
+    "DESCRIPTIONS": [
+      "#y포일 카드를 #b3 장 사용할 때마다, #y단도 #b",
+      " 장을",
+      " 장을",
       " 얻습니다."
     ]
   }
