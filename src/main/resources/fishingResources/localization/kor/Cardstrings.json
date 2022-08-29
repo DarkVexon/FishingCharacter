@@ -58,8 +58,7 @@
   },
   "fishing:SetSail": {
     "NAME": "출항",
-    "DESCRIPTION": "[#EFC851]물고기[] 를 제외한 공격 카드 1장을 뽑습니다. NL 그 카드는 이번 턴 동안 비용이 0이 됩니다. NL 힘을 !M! 얻습니다. NL 턴 종료시, 힘을 !M! 잃습니다.",
-    "UPGRADE_DESCRIPTION": "[#EFC851]물고기[] 를 제외한 공격 카드 1장을 뽑습니다. NL 그 카드는 이번 턴 동안 비용이 0이 됩니다. NL 힘을 !M! 얻습니다. NL 턴 종료시, 힘을 !M! 잃습니다."
+    "DESCRIPTION": "카드를 1 장 뽑습니다. NL 카드를 1 장 버립니다. NL 활력 을 !M! 얻습니다."
   },
   "fishing:MopUp": {
     "NAME": "걸레질 청소",
@@ -74,8 +73,7 @@
   },
   "fishing:Wander": {
     "NAME": "방랑",
-    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 손패의 카드를 전부 버리고, 카드를 !M! 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 손패의 카드를 전부 버리고, 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 손패의 카드를 전부 버리고, 카드를 !M! 장 뽑습니다."
   },
   "fishing:BagOfDefends": {
     "NAME": "수비의 가방",
@@ -205,7 +203,7 @@
   },
   "fishing:DeckedOut": {
     "NAME": "덱 아웃",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이 게임을 스팀 덱에서 플레이하고 있다면, 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이 게임을 스팀 덱에서 플레이하고 있다면, [E] 를 얻습니다."
   },
   "fishing:ShipRam": {
     "NAME": "선박 충각술",
@@ -281,11 +279,11 @@
   },
   "fishing:Hook": {
     "NAME": "훅",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 fishing:물고기 1 장을 넣습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미와 버린 카드 더미에 fishing:물고기 1 장을 넣습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 fishing:물고기 1장당, 이 카드의 피해량이 !M! 증가합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 fishing:물고기 1장당, 이 카드의 피해량이 !M! 증가합니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " ${ModID}:Fish played.)"
+      " 장의 fishing:물고기 를 사용했습니다.)"
     ]
   },
   "fishing:Crosshairs": {
@@ -388,7 +386,7 @@
   },
   "fishing:QuestTimeTheLuckyPack": {
     "NAME": "행운의 가방",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:퀘스트 : fishing:포일 카드 3 장을 연속으로 사용하세요. NL *보상: 마지막으로 사용한 카드가 2번 사용됩니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:퀘스트 : 한 턴에 fishing:포일 카드 3 장을 사용하세요. NL *보상: 마지막으로 사용한 카드가 2번 사용됩니다."
   },
   "fishing:QuestTimeTheFishOPedia": {
     "NAME": "물고기 사전",
@@ -420,7 +418,7 @@
   },
   "fishing:QuestTimeTheHarpoon": {
     "NAME": "작살",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 개전 fishing:퀘스트 : 적을 처치하세요. NL *보상: 뽑을 카드 더미에 *고래 를 넣습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 개전 fishing:퀘스트 : 적을 처치하세요. NL *보상: *고래 를 얻습니다."
   },
   "fishing:EndsOfTheEarth": {
     "NAME": "지구 종말의 날",
@@ -467,12 +465,7 @@
   },
   "fishing:MintCondition": {
     "NAME": "상쾌한 컨디션",
-    "DESCRIPTION": "매 턴 fishing:포일 카드를 2 번 사용할 때마다, 방어도를 !M! 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "상쾌한 컨디션",
-      "매 턴 #y포일 카드를 2 번 사용할 때마다, #y방어도를 #b",
-      " 얻습니다."
-    ]
+    "DESCRIPTION": "fishing:포일 카드를 3 장 사용할 때마다, *단도 를 얻습니다."
   },
   "fishing:TheBackpack": {
     "NAME": "배낭",
@@ -484,7 +477,7 @@
   },
   "fishing:PyramidClimber": {
     "NAME": "피라미드 등반",
-    "DESCRIPTION": "Gain !B! Block. NL Put a *Stone on top of your draw pile.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 뽑을 카드 더미 맨 위에 *바위 를 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "피라미드 등반",
       "턴 종료시, 버린 카드에 있는 카드 #b6장당, #y방어도를 #b",
@@ -577,11 +570,29 @@
     "UPGRADE_DESCRIPTION": "뽑을 카드 더미에 *별의 *조각 X +1 장을 넣습니다. NL 소멸."
   },
   "fishing:SpinAttack": {
-    "NAME": "Spin Attack",
+    "NAME": "스핀 어택",
     "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. 카드를 1 장 버립니다."
   },
   "fishing:Stone": {
-    "NAME": "Stone",
-    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, deal !M! damage to a random enemy."
+    "NAME": "바위",
+    "DESCRIPTION": "사용불가. NL 이 카드가 소멸된다면, 무작위 적에게 피해를 !M! 줍니다."
+  },
+  "fishing:ConfettiCannon": {
+    "NAME": "색종이 대포",
+    "DESCRIPTION": "보유한 fishing:포일 카드 3장당, 적 전체에게 피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( ",
+      " 번 공격합니다.)",
+      " 번 공격합니다.)"
+    ]
+  },
+  "fishing:FullySleeved": {
+    "NAME": "억까 방지",
+    "DESCRIPTION": "턴 종료 시, fishing:포일 카드를 2 장 이상 사용했었다면, 방어도를 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "억까 방지",
+      "턴 종료시, #y포일 카드를 2 장 이상 사용했었다면, #y방어도를 !M! #b",
+      " 얻습니다."
+    ]
   }
 }

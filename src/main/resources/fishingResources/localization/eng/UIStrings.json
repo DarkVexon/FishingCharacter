@@ -18,7 +18,7 @@
   "${ModID}:TheHarpoon": {
     "TEXT": [
       "The Harpoon",
-      "#yQuest: Kill an enemy. NL #yReward: Shuffle #yThe #yWhale into your draw pile."
+      "#yQuest: Kill an enemy. NL #yReward: Add #yThe #yWhale into your hand."
     ]
   },
   "${ModID}:TheLuckyPack": {

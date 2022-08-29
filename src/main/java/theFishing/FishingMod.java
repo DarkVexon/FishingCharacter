@@ -249,8 +249,8 @@ public class FishingMod implements
     }
 
     public static Settings.GameLanguage[] SupportedLanguages = {
-            Settings.GameLanguage.ENG
-            //Settings.GameLanguage.KOR
+            Settings.GameLanguage.ENG,
+            Settings.GameLanguage.KOR
     };
 
     private String getLangString() {
