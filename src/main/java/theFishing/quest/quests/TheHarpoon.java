@@ -8,6 +8,7 @@ import theFishing.util.TexLoader;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
+import static theFishing.util.Wiz.makeInHand;
 import static theFishing.util.Wiz.shuffleIn;
 
 public class TheHarpoon extends AbstractQuest {
@@ -32,7 +33,7 @@ public class TheHarpoon extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        shuffleIn(new TheWhale());
+        makeInHand(new TheWhale());
     }
 
     @Override

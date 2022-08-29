@@ -20,8 +20,6 @@ public class Hook extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        rawDescription = cardStrings.DESCRIPTION;
-        initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
@@ -39,16 +37,6 @@ public class Hook extends AbstractFishingCard {
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
-
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[1];
-        this.initializeDescription();
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        rawDescription = cardStrings.DESCRIPTION;
-        initializeDescription();
     }
 
     public void upp() {

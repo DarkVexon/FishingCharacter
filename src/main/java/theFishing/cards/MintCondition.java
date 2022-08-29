@@ -1,17 +1,18 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.powers.LambdaPower;
+import theFishing.powers.MintConditionPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.makeInHand;
 
 public class MintCondition extends AbstractFishingCard {
     public final static String ID = makeID("MintCondition");
@@ -19,37 +20,14 @@ public class MintCondition extends AbstractFishingCard {
 
     public MintCondition() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        cardsToPreview = new Shiv();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower(makeID("MintConditionPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, magicNumber) {
-            private int playedThisTurn = 0;
-
-            @Override
-            public void atStartOfTurn() {
-                playedThisTurn = 0;
-            }
-
-            @Override
-            public void onUseCard(AbstractCard card, UseCardAction action) {
-                if (FoilPatches.isFoil(card)) {
-                    playedThisTurn += 1;
-                    if (playedThisTurn == 2) {
-                        flash();
-                        atb(new GainBlockAction(owner, amount));
-                    }
-                }
-            }
-
-            @Override
-            public void updateDescription() {
-                description = cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2];
-            }
-        });
+        applyToSelf(new MintConditionPower(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeBaseCost(0);
     }
 }

@@ -19,14 +19,14 @@ public class CollectorReminderEffect extends AbstractGameEffect {
     private final AbstractCard __instance;
     private final boolean flippedX = MathUtils.randomBoolean();
 
-    public CollectorReminderEffect(AbstractCard __instance) {
+    public CollectorReminderEffect(AbstractCard __instance, Color color) {
         x = __instance.hb.x;
         y = __instance.hb.y;
         oX = MathUtils.random(__instance.hb.width);
         oY = MathUtils.random(__instance.hb.height);
         this.__instance = __instance;
         this.duration = 0.8F;
-        this.color = Color.CHARTREUSE.cpy();
+        this.color = color;
         this.color.a = 0.0F;
         this.scale = MathUtils.random(0.6F, 0.8F) * Settings.scale;
     }

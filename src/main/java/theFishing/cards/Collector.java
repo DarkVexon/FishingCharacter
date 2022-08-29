@@ -12,14 +12,17 @@ public class Collector extends AbstractFishingCard {
     // intellij stuff power, self, uncommon, , , , , , 
 
     public Collector() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new CollectorPower(1));
+        applyToSelf(new CollectorPower(magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(2);
     }
 }

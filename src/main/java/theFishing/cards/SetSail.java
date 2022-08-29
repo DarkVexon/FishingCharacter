@@ -1,10 +1,10 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import theFishing.actions.DeckToTopOfDeckAction;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
@@ -15,14 +15,15 @@ public class SetSail extends AbstractFishingCard {
     // intellij stuff skill, self, common, , , 4, , , 
 
     public SetSail() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DeckToTopOfDeckAction(p));
-        applyToSelf(new StrengthPower(p, magicNumber));
-        applyToSelf(new LoseStrengthPower(p, magicNumber));
+        atb(new DrawCardAction(secondMagic));
+        atb(new DiscardAction(p, p, secondMagic, false));
+        applyToSelf(new VigorPower(p, magicNumber));
     }
 
     public void upp() {

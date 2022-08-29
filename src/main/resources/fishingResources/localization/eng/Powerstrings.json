@@ -36,7 +36,16 @@
     "DESCRIPTIONS": [
       "If the first card you play each turn is: NL #yFoil: Gain #b",
       " #yStrength. NL Rare: Gain #b",
-      " #yStrength."
+      " #yBlock."
+    ]
+  },
+  "${ModID}:MintConditionPower": {
+    "NAME": "Mint Condition",
+    "DESCRIPTIONS": [
+      "Whenever you play #b3 #yFoil cards, add #b",
+      " #yShiv",
+      " #yShivs",
+      " into your hand."
     ]
   }
 }

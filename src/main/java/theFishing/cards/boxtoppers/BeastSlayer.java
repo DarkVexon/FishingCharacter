@@ -18,8 +18,8 @@ public class BeastSlayer extends AbstractBoxTopper {
 
     public BeastSlayer() {
         super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 13;
-        baseSecondDamage = secondDamage = 26;
+        baseDamage = 12;
+        baseSecondDamage = secondDamage = 24;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

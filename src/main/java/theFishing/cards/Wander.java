@@ -16,20 +16,19 @@ public class Wander extends AbstractFishingCard {
     // intellij stuff attack, all_enemy, common, 9, 1, , , 1, 1
 
     public Wander() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 11;
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.LIGHTNING));
+        dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
         atb(new DiscardAction(p, p, BaseMod.MAX_HAND_SIZE, true));
         atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
         upgradeMagicNumber(1);
-        uDesc();
     }
 }

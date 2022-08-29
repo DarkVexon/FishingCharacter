@@ -182,6 +182,10 @@ public abstract class AbstractFishingCard extends CustomCard {
         atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
     }
 
+    protected void allDmgTop(AbstractGameAction.AttackEffect fx) {
+        att(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
+    }
+
     protected void blck() {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }

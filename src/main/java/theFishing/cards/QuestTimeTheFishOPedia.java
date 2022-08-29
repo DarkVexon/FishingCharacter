@@ -8,8 +8,7 @@ import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.TheFishOPedia;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.shuffleIn;
+import static theFishing.util.Wiz.*;
 
 public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     public final static String ID = makeID("QuestTimeTheFishOPedia");
@@ -17,12 +16,12 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
 
     public QuestTimeTheFishOPedia() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
+            topDeck(AbstractFishCard.returnRandomFish());
         }
         atb(new AcceptQuestAction(new TheFishOPedia()));
     }

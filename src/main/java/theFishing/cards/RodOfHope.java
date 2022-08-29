@@ -16,7 +16,7 @@ public class RodOfHope extends AbstractFishingCard {
 
     public RodOfHope() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 10;
         baseMagicNumber = magicNumber = 2;
     }
 

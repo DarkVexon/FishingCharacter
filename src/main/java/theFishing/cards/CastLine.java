@@ -22,7 +22,6 @@ public class CastLine extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new TalkAction(true, "HELO! I'm running on an NL " + System.getProperty("os.name").toLowerCase() + "!", 1.0F, 2.0F));
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         for (int i = 0; i < magicNumber; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());

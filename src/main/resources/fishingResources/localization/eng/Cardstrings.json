@@ -58,7 +58,7 @@
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
-    "DESCRIPTION": "Put a card from your draw pile on top of your draw pile. NL Gain !M! temporary Strength."
+    "DESCRIPTION": "Draw 1 card. NL Discard 1 card. NL Gain !M! Vigor."
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
@@ -73,8 +73,7 @@
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand, then draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Discard your hand, then draw !M! cards."
   },
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
@@ -390,7 +389,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: Gain 3 Strength.",
+    "DESCRIPTION": "Put !M! ${ModID}:Fish on top of your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: NL Gain 3 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]
@@ -418,7 +417,7 @@
   },
   "${ModID}:QuestTimeTheHarpoon": {
     "NAME": "The Harpoon",
-    "DESCRIPTION": "Deal !D! damage. NL Startup ${ModID}:Quest: NL Kill an enemy. NL *Reward: Shuffle *The *Whale into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Startup ${ModID}:Quest: NL Kill an enemy. NL *Reward: Add *The *Whale into your hand."
   },
   "${ModID}:EndsOfTheEarth": {
     "NAME": "Ends Of The Earth",
@@ -461,16 +460,11 @@
   },
   "${ModID}:MaybeLater": {
     "NAME": "Maybe Later",
-    "DESCRIPTION": "Deal !D! damage. NL Put 1 card from your hand on top of your draw pile. NL If you do, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your hand on top of your draw pile. NL If you do, gain !B! Block."
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "The second time you play a ${ModID}:Foil card each turn, gain !M! Block.",
-    "EXTENDED_DESCRIPTION": [
-      "Mint Condition",
-      "The second time you play a #yFoil card each turn, gain #b",
-      " #yBlock."
-    ]
+    "DESCRIPTION": "Whenever you play 3 ${ModID}:Foil cards, add a *Shiv into your hand."
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
@@ -491,8 +485,7 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL If the first card you play each turn is... NL ${ModID}:Foil: Gain 1 Strength. NL Rare: Gain 1 Strength."
+    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain !M! Strength. NL Rare: Gain !${ModID}:m2! Block."
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",
@@ -581,5 +574,23 @@
   "${ModID}:Stone": {
     "NAME": "Stone",
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted, deal !M! damage to a random enemy."
+  },
+  "${ModID}:ConfettiCannon": {
+    "NAME": "Confetti Cannon",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies for every 3 ${ModID}:Foil cards you have.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " time.)",
+      " times.)"
+    ]
+  },
+  "${ModID}:FullySleeved": {
+    "NAME": "Fully Sleeved",
+    "DESCRIPTION": "At the end of your turn, if you played at least 2 ${ModID}:Foil cards, gain !M! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "Fully Sleeved",
+      "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
+      " #yBlock."
+    ]
   }
 }

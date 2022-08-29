@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -407,12 +408,24 @@ public class FoilPatches {
     )
     public static class CollectorReminderFlames {
         public static void Postfix(AbstractCard __instance) {
-            if (Wiz.isInCombat() && (AbstractDungeon.player.hand.contains(__instance) || (__instance.cardID.equals(EndsOfTheEarth.ID) && AbstractDungeon.player.discardPile.contains(__instance))) && AbstractDungeon.player.hasPower(CollectorPower.ID) && !((CollectorPower) AbstractDungeon.player.getPower(CollectorPower.ID)).activated) {
+            if (Wiz.isInCombat() && AbstractDungeon.player.hasPower(CollectorPower.ID) && !((CollectorPower) AbstractDungeon.player.getPower(CollectorPower.ID)).activated && (AbstractDungeon.player.hand.contains(__instance) || (__instance.cardID.equals(EndsOfTheEarth.ID) && AbstractDungeon.player.discardPile.contains(__instance)))) {
                 if (__instance.rarity == AbstractCard.CardRarity.RARE || isFoil(__instance)) {
                     float timer = CollectorTimerField.collectorTimer.get(__instance);
                     timer -= Gdx.graphics.getDeltaTime();
                     if (timer <= 0) {
-                        AbstractDungeon.topLevelEffectsQueue.add(new CollectorReminderEffect(__instance));
+                        Color toShow;
+                        if (__instance.rarity == AbstractCard.CardRarity.RARE && !isFoil(__instance)) {
+                            toShow = Color.CHARTREUSE.cpy();
+                        } else if (isFoil(__instance) && __instance.rarity != AbstractCard.CardRarity.RARE) {
+                            toShow = Color.BLUE .cpy();
+                        } else {
+                            if (MathUtils.randomBoolean()) {
+                                toShow = Color.CHARTREUSE.cpy();
+                            } else {
+                                toShow = Color.BLUE.cpy();
+                            }
+                        }
+                        AbstractDungeon.topLevelEffectsQueue.add(new CollectorReminderEffect(__instance, toShow));
                         CollectorTimerField.collectorTimer.set(__instance, CollectorTimerField.TIME_BETWEEN_SPARKS);
                     } else {
                         CollectorTimerField.collectorTimer.set(__instance, timer);
