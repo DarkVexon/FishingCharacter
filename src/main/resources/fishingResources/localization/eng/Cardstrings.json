@@ -349,8 +349,8 @@
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",
-    "DESCRIPTION": "{@@}Gain !M! Orb Slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !M! Orb Slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "{@@}Gain !M! Orb slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !M! Orb slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:TheWhale": {
     "NAME": "The Whale",
@@ -359,8 +359,8 @@
   },
   "${ModID}:Swordfish": {
     "NAME": "Swordfish",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
@@ -389,7 +389,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Put !M! ${ModID}:Fish on top of your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: NL Gain 3 Strength.",
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: NL Gain 2 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]
@@ -523,10 +523,6 @@
   "${ModID}:Hindsight": {
     "NAME": "Hindsight",
     "DESCRIPTION": "Next turn, gain !B! Block. NL Return 1 card from your discard pile to your hand."
-  },
-  "${ModID}:ScalingIsWin": {
-    "NAME": "Scaling Is Win",
-    "DESCRIPTION": "At the start of your turn, gain !M! Strength."
   },
   "${ModID}:ZaHando": {
     "NAME": "Za Hando",

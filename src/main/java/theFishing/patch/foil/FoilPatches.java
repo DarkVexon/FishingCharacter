@@ -415,9 +415,9 @@ public class FoilPatches {
                     if (timer <= 0) {
                         Color toShow;
                         if (__instance.rarity == AbstractCard.CardRarity.RARE && !isFoil(__instance)) {
-                            toShow = Color.CHARTREUSE.cpy();
+                            toShow = Color.BLUE.cpy();
                         } else if (isFoil(__instance) && __instance.rarity != AbstractCard.CardRarity.RARE) {
-                            toShow = Color.BLUE .cpy();
+                            toShow = Color.CHARTREUSE.cpy();
                         } else {
                             if (MathUtils.randomBoolean()) {
                                 toShow = Color.CHARTREUSE.cpy();

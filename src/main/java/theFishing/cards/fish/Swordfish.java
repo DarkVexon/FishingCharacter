@@ -12,10 +12,12 @@ public class Swordfish extends AbstractFishCard {
 
     public Swordfish() {
         super(ID, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 4;
+        baseBlock = 3;
     }
 
     public void fishEffect(AbstractPlayer p, AbstractMonster m) {
+        blck();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
     }
 }

@@ -19,12 +19,12 @@ public class Tripwire extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         applyToSelf(new TripwirePower(magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
         upgradeMagicNumber(2);
     }
 }
