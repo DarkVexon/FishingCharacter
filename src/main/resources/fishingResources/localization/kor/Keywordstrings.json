@@ -34,5 +34,12 @@
       "포일"
     ],
     "DESCRIPTION": "매번 카드 보상을 받을때마다, 그 카드들 중 #b1 장은 #y포일 카드가 됩니다. NL 해당 카드는 #y색이 #y다르며 #g빛납니다!"
+  },
+  {
+    "PROPER_NAME": "Unnate",
+    "NAMES": [
+      "unnate"
+    ],
+    "DESCRIPTION": "Starts each combat at the bottom of your draw pile."
   }
 ]
