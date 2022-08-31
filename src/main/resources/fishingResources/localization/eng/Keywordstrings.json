@@ -34,5 +34,12 @@
       "foil"
     ],
     "DESCRIPTION": "In each card reward, #b1 of the cards will be #yFoil. NL #gShiny!"
+  },
+  {
+    "PROPER_NAME": "Unnate",
+    "NAMES": [
+      "unnate"
+    ],
+    "DESCRIPTION": "Starts each combat at the bottom of your draw pile."
   }
 ]

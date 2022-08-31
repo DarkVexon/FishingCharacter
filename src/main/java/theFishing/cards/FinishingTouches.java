@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -12,6 +13,7 @@ import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class FinishingTouches extends AbstractFishingCard {
     public final static String ID = makeID("FinishingTouches");
@@ -19,10 +21,10 @@ public class FinishingTouches extends AbstractFishingCard {
 
     public FinishingTouches() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new DiscardAction(p, p, 2, false));
         applyToSelf(new LambdaPower(makeID("FinishingTouchesPower"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, 1) {
             public void onUseCard(AbstractCard card, UseCardAction action) {
                 if (!card.purgeOnUse && this.amount > 0 && AbstractDungeon.player.hand.size() == 1 && AbstractDungeon.player.hand.contains(card)) {
@@ -58,7 +60,6 @@ public class FinishingTouches extends AbstractFishingCard {
     }
 
     public void upp() {
-        isEthereal = false;
-        uDesc();
+        upgradeBaseCost(1);
     }
 }
