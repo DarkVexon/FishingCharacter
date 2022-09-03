@@ -71,9 +71,10 @@
     "NAME": "오늘은 이것으로 끝!",
     "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:솔로 : 뽑을 카드 더미 맨 위에 있는 카드를 사용합니다."
   },
-  "fishing:Wander": {
-    "NAME": "방랑",
-    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 손패의 카드를 전부 버리고, 카드를 !M! 장 뽑습니다."
+  "${ModID}:MerchantsStrike": {
+    "NAME": "Shopping Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each enemy in combat. NL When you purchase a relic at the Merchant, Upgrade this.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each enemy in combat."
   },
   "fishing:BagOfDefends": {
     "NAME": "수비의 가방",
