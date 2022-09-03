@@ -274,7 +274,7 @@
   },
   "${ModID}:Fishbones": {
     "NAME": "Fishbones",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card in your Exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card in your exhaust pile."
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
@@ -571,7 +571,7 @@
   },
   "${ModID}:ConfettiCannon": {
     "NAME": "Confetti Cannon",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies for every 3 ${ModID}:Foil cards you have.",
+    "DESCRIPTION": "Deal !D! damage for every 3 ${ModID}:Foil cards you have.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",

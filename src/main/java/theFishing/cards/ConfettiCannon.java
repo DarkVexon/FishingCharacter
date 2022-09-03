@@ -1,10 +1,12 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.effects.RainbowExplosionEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.isFoil;
@@ -14,9 +16,8 @@ public class ConfettiCannon extends AbstractFishingCard {
     // intellij stuff attack, all_enemy, rare, 7, 3, , , , 
 
     public ConfettiCannon() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 8;
-        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,7 +26,8 @@ public class ConfettiCannon extends AbstractFishingCard {
             public void update() {
                 isDone = true;
                 for (int i = 0; i < countCards(); i++) {
-                    addToTop(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AttackEffect.FIRE, true));
+                   dmgTop(m, AttackEffect.NONE);
+                   addToTop(new VFXAction(new RainbowExplosionEffect(m.hb.cX, m.hb.cY)));
                 }
             }
         });
