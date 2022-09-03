@@ -73,7 +73,7 @@
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
-    "DESCRIPTION": "Deal !D! damage. NL Discard your hand, then draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL You may remove this card from your deck at any time."
   },
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
@@ -550,7 +550,7 @@
   },
   "${ModID}:Preclude": {
     "NAME": "Preclude",
-    "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all [#EFC851]Time[] [#EFC851]Warp[].",
+    "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp.",
     "EXTENDED_DESCRIPTION": [
       "I can't play this Opener after other cards.",
       "~Cheater...~ NL @CHEEEATER!@"
@@ -586,5 +586,9 @@
       "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
       " #yBlock."
     ]
+  },
+  "${ModID}:ImOut": {
+    "NAME": "I'm Out",
+    "DESCRIPTION": "Deal !D! damage. NL You may remove this card from your deck at any time."
   }
 }

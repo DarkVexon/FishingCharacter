@@ -39,7 +39,7 @@ public class MintConditionPower extends AbstractEasyPower {
 
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
-        this.damage += stackAmount;
+        this.damage += 1;
         this.updateDescription();
     }
 

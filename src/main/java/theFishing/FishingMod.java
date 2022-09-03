@@ -242,10 +242,16 @@ public class FishingMod implements
     }
 
     public static float time = 0f;
+    public static AbstractCard toRemove = null;
 
     @Override
     public void receivePostUpdate() {
         time += Gdx.graphics.getDeltaTime();
+        if (toRemove != null) {
+            AbstractDungeon.player.masterDeck.removeCard(toRemove);
+            toRemove = null;
+
+        }
     }
 
     public static Settings.GameLanguage[] SupportedLanguages = {
