@@ -104,7 +104,8 @@
   },
   "fishing:FutureProofing": {
     "NAME": "미래 보강",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 예지 !M!. NL 이 카드의 예지 효과로 카드를 버리면, 해당 카드는 이번 전투 동안 강화됩니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 뽑을 카드 더미에 있는 무작위 카드 1 장을 강화합니다. ",
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 뽑을 카드 더미에 있는 무작위 카드 2 장을 강화합니다."
   },
   "fishing:CardboardBullets": {
     "NAME": "골판지 총알",
@@ -203,7 +204,7 @@
   },
   "fishing:DeckedOut": {
     "NAME": "덱 아웃",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이 게임을 스팀 덱에서 플레이하고 있다면, [E] 를 얻습니다."
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. *단도 !M! 장 과 fishing:포일 상태의 엄벌 1 장을 얻습니다. NL 이 게임을 스팀 덱에서 플레이하고 있다면, 얻은 단도와 엄벌을 강화합니다."
   },
   "fishing:ShipRam": {
     "NAME": "선박 충각술",

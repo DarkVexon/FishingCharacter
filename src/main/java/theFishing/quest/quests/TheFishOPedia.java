@@ -56,7 +56,7 @@ public class TheFishOPedia extends AbstractQuest {
     public void onPlayCard(AbstractCard card) {
         if (card instanceof AbstractFishCard && !alreadyPlayed.stream().anyMatch(q -> q.getKey().equals(card.cardID))) {
             increment();
-            alreadyPlayed.add(new Pair(card.cardID, card.name.replaceAll("\\+", "")));
+            alreadyPlayed.add(new Pair(card.cardID, card.originalName));
         }
     }
 

@@ -8,8 +8,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.ScryCallbackAction;
 import theFishing.effects.ColoredBeamEffect;
+import theFishing.util.Wiz;
+
+import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -29,16 +31,27 @@ public class FutureProofing extends AbstractFishingCard {
         atb(new SFXAction("ATTACK_DEFECT_BEAM"));
         atb(new VFXAction(new ColoredBeamEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractDungeon.player.flipHorizontal, Color.RED.cpy(), Color.FIREBRICK.cpy()), 0.4F));
         allDmg(AbstractGameAction.AttackEffect.FIRE);
-        atb(new ScryCallbackAction(magicNumber, (cards) -> {
-            for (AbstractCard q : cards) {
-                if (q.canUpgrade())
-                    q.upgrade();
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (int i = 0; i < magicNumber; i++) {
+                    ArrayList<AbstractCard> possCards = new ArrayList<>();
+                    for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
+                        if (q.canUpgrade()) {
+                            possCards.add(q);
+                        }
+                    }
+                    if (!possCards.isEmpty())
+                        Wiz.getRandomItem(possCards, AbstractDungeon.cardRandomRng).upgrade();
+                }
             }
-        }));
+        });
     }
 
     public void upp() {
         upgradeDamage(2);
         upgradeMagicNumber(1);
+        uDesc();
     }
 }

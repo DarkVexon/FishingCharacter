@@ -104,7 +104,8 @@
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Scry !M!. NL Upgrade any cards discarded for the rest of combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Upgrade !M! random card in your draw pile for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Upgrade !M! random cards in your draw pile for the rest of combat."
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
@@ -203,7 +204,7 @@
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
-    "DESCRIPTION": "Draw !M! cards. NL If you're on Steam Deck, gain [E]."
+    "DESCRIPTION": "Add !M! *Shivs and 1 ${ModID}:Foil *Smite into your hand. NL If you're on Steam Deck, Upgrade them."
   },
   "${ModID}:ShipRam": {
     "NAME": "Ship Ram",
@@ -388,7 +389,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 ${ModID}:Fish with different names. NL *Reward: NL Gain 2 Strength.",
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]

@@ -1,15 +1,21 @@
 package theFishing.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
+import com.megacrit.cardcrawl.cards.tempCards.Smite;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightBulbEffect;
 import theFishing.patch.foil.FoilShiny;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.patch.foil.FoilPatches.makeFoil;
 import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.makeInHand;
 
 public class DeckedOut extends AbstractFishingCard {
     public final static String ID = makeID("DeckedOut");
@@ -17,15 +23,24 @@ public class DeckedOut extends AbstractFishingCard {
 
     public DeckedOut() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
+        AbstractCard q = new Shiv();
+        AbstractCard q2 = new Smite();
+        makeFoil(q2);
+        MultiCardPreview.add(this, q, q2);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DrawCardAction(magicNumber));
+        AbstractCard q = new Shiv();
+        AbstractCard q2 = new Smite();
+        makeFoil(q2);
         if (FoilShiny.FoilCardsShine.isOnSteamDeck()) {
+            q.upgrade();
+            q2.upgrade();
             atb(new VFXAction(new LightBulbEffect(p.hb)));
-            atb(new GainEnergyAction(1));
         }
+        makeInHand(q, magicNumber);
+        makeInHand(q2);
     }
 
     @Override

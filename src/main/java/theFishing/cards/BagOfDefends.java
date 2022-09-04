@@ -22,7 +22,7 @@ public class BagOfDefends extends AbstractFishingCard implements OnRemoveCardFro
 
     public BagOfDefends() {
         super(ID, -1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -49,7 +49,7 @@ public class BagOfDefends extends AbstractFishingCard implements OnRemoveCardFro
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
         uDesc();
     }
 }
