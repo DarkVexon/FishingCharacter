@@ -33,6 +33,7 @@ public class DeckToTopOfDeckAction extends AbstractGameAction {
             if (tmp.size() == 1) {
                 AbstractCard tar = tmp.getTopCard();
                 tmp.removeCard(tar);
+                AbstractDungeon.player.drawPile.removeCard(tar);
                 tmp.moveToDeck(tar, false);
             }
 
@@ -47,6 +48,7 @@ public class DeckToTopOfDeckAction extends AbstractGameAction {
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                 tmp.removeCard(c);
+                AbstractDungeon.player.drawPile.removeCard(c);
                 AbstractDungeon.player.hand.moveToDeck(c, false);
             }
 
