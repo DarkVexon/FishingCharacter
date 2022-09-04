@@ -2,8 +2,6 @@ package theFishing.cards;
 
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.cards.tempCards.Smite;

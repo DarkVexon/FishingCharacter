@@ -73,7 +73,7 @@
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL You may remove this card from your deck at any time."
+    "DESCRIPTION": "Deal !D! damage. NL Choose a card from your draw pile to put on top."
   },
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
@@ -179,7 +179,7 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Draw 1 card. NL Startup: Gain !M! Gold."
+    "DESCRIPTION": "Draw 1 card. NL Startup: Gain !M! *Gold."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
@@ -224,7 +224,7 @@
   },
   "${ModID}:MerchantsStrike": {
     "NAME": "Shopping Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each enemy in combat. NL When you purchase a relic at the Merchant, Upgrade this.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each enemy in combat. NL When you purchase a *Relic, Upgrade this.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each enemy in combat."
   },
   "${ModID}:Lie": {
@@ -319,7 +319,7 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] [E] and draw !M! cards.",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] [E] and draw !M! card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] [E] and draw !M! cards."
   },
   "${ModID}:Maw": {

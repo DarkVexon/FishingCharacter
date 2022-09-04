@@ -1,7 +1,5 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAndDeckAction;
-import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BerserkPower;
@@ -9,7 +7,6 @@ import theFishing.patch.UnnateCoffeePatch;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.atb;
 
 public class Concentrated extends AbstractFishingCard {
     public final static String ID = makeID("Concentrated");
