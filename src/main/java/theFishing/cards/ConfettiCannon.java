@@ -2,7 +2,6 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,18 +25,18 @@ public class ConfettiCannon extends AbstractFishingCard {
             public void update() {
                 isDone = true;
                 for (int i = 0; i < countCards(); i++) {
-                   dmgTop(m, AttackEffect.NONE);
-                   addToTop(new VFXAction(new RainbowExplosionEffect(m.hb.cX, m.hb.cY)));
+                    dmgTop(m, AttackEffect.NONE);
+                    addToTop(new VFXAction(new RainbowExplosionEffect(m.hb.cX, m.hb.cY)));
                 }
             }
         });
     }
 
-
-    public static int countCards() {
+    public int countCards() {
         int count = 0;
         count += AbstractDungeon.player.drawPile.group.stream().filter(q -> isFoil(q)).count();
         count += AbstractDungeon.player.hand.group.stream().filter(q -> isFoil(q)).count();
+        count += AbstractDungeon.player.limbo.group.stream().filter(q -> isFoil(q) && q == this).count();
         count += AbstractDungeon.player.discardPile.group.stream().filter(q -> isFoil(q)).count();
         return count / 3;
     }
