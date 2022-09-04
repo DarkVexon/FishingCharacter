@@ -71,10 +71,9 @@
     "NAME": "오늘은 이것으로 끝!",
     "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:솔로 : 뽑을 카드 더미 맨 위에 있는 카드를 사용합니다."
   },
-  "${ModID}:MerchantsStrike": {
-    "NAME": "Shopping Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each enemy in combat. NL When you purchase a relic at the Merchant, Upgrade this.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each enemy in combat."
+  "fishing:Wander": {
+    "NAME": "방랑",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 이 카드는 어떤 상황에서든 덱에서 제거할 수 있습니다."
   },
   "fishing:BagOfDefends": {
     "NAME": "수비의 가방",
@@ -140,7 +139,7 @@
   },
   "fishing:AllOut": {
     "NAME": "총력",
-    "DESCRIPTION": "턴 종료시, 손에 카드가 하나도 없다면, 적 전체에게 피해를 !M! 줍니다.",
+    "DESCRIPTION": "카드를 1 장 버립니다. NL 턴 종료시, 손에 카드가 하나도 없다면, 적 전체에게 피해를 !M! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "총력",
       "턴 종료시, 손에 카드가 하나도 없다면 적 전체에게 피해를 #b",
@@ -222,9 +221,10 @@
     "NAME": "가시 돋힌 성격",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 가시 를 !M! 얻습니다. NL fishing:항해 : 추가로 가시 를 !fishing:m2! 얻습니다."
   },
-  "fishing:Tripwire": {
-    "NAME": "철사 덫",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 방어도를 전부 잃었다면, 적 전체의 체력을 !M! 감소시킵니다."
+  "fishing:MerchantsStrike": {
+    "NAME": "쇼핑 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 전투에 존재하는 적 하나당, 방어도를 !B! 얻습니다. NL 상점에서 유물을 구입하면, 이 카드를 강화합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 전투에 존재하는 적 하나당, 방어도를 !B! 얻습니다."
   },
   "fishing:Lie": {
     "NAME": "거짓말",
@@ -251,8 +251,7 @@
   },
   "fishing:ItWasTHIIIIIIISBig": {
     "NAME": "이마아아안큼이나 컸어!",
-    "DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 손패에 존재하는 모든 fishing:물고기 카드의 효과가 2배 증가합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL 뽑을 카드 더미, 버린 카드 더미, 손패에 존재하는 모든 fishing:물고기 카드의 효과가 2배 증가합니다. NL 소멸."
+    "DESCRIPTION": " fishing:물고기 1 장을 얻습니다. NL 현재 보유한 모든 fishing:물고기 의 효과를 2배로 증가시킵니다. NL 소멸."
   },
   "fishing:GoneFishing": {
     "NAME": "낚시 여행",
@@ -264,7 +263,7 @@
   },
   "fishing:AnglerForm": {
     "NAME": "낚시꾼의 형상",
-    "DESCRIPTION": "매 턴 시작시, 다음에 사용하는 카드 !M! 장에 카드 1장 뽑기 효과를 부여합니다."
+    "DESCRIPTION": "보존. 매 턴 시작시, 다음에 사용하는 카드 !M! 장에 카드 1장 뽑기 효과를 부여합니다."
   },
   "fishing:FullHouse": {
     "NAME": "풀하우스",
@@ -307,8 +306,8 @@
   },
   "fishing:Concentrated": {
     "NAME": "카페인 충만",
-    "DESCRIPTION": "휘발성. NL 매 턴 시작시, [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 휘발성. NL 매 턴 시작시, [E] 를 얻습니다."
+    "DESCRIPTION": "fishing:후천성. NL 매 턴 시작시, [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "매 턴 시작시, [E] 를 얻습니다."
   },
   "fishing:PlantFlag": {
     "NAME": "깃발 꽂기",
@@ -335,8 +334,7 @@
   },
   "fishing:FinishingTouches": {
     "NAME": "마무리 일격",
-    "DESCRIPTION": "휘발성. NL 카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
-    "UPGRADE_DESCRIPTION": "카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
+    "DESCRIPTION": "카드를 2 장 버립니다. NL 카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
     "EXTENDED_DESCRIPTION": [
       "마무리 일격",
       "카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
@@ -361,8 +359,8 @@
   },
   "fishing:Swordfish": {
     "NAME": "황새치",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !fishing:m3! 뽑습니다. NL 소멸."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. 피해를 !D! 줍니다. NL 카드를 !fishing:m3! 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. 피해를 !D! 줍니다. NL 카드를 !fishing:m3! 뽑습니다. NL 소멸."
   },
   "fishing:AquaOrb": {
     "NAME": "해양의 보주",
@@ -391,9 +389,9 @@
   },
   "fishing:QuestTimeTheFishOPedia": {
     "NAME": "물고기 사전",
-    "DESCRIPTION": "fishing:물고기 !M! 장을 뽑을 카드 더미에 넣습니다. NL fishing:퀘스트 : 각기 다른 5 장의 fishing:물고기 카드를 사용하세요. NL *보상: 힘을 3 얻습니다.",
+    "DESCRIPTION": "fishing:물고기 !M! 장을 뽑을 카드 더미에 넣습니다. NL fishing:퀘스트 : 각기 다른 5 장의 fishing:물고기 카드를 사용하세요. NL *보상: 힘을 2 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "Choose a Fish."
+      "물고기를 선택하세요."
     ]
   },
   "fishing:SoleSight": {
@@ -443,7 +441,7 @@
   },
   "fishing:ShinyShots": {
     "NAME": "광채의 탄환",
-    "DESCRIPTION": " !D! 피해를 3 번 줍니다. NL 손패에 존재하는 fishing:포일 카드 1장당, 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 존재하는 fishing:포일 카드 1장당, 방어도를 !B! 얻습니다."
   },
   "fishing:PerfectPull": {
     "NAME": "완벽한 끌당",
@@ -580,7 +578,7 @@
   },
   "fishing:ConfettiCannon": {
     "NAME": "색종이 대포",
-    "DESCRIPTION": "보유한 fishing:포일 카드 3장당, 적 전체에게 피해를 !D! 줍니다.",
+    "DESCRIPTION": "보유한 fishing:포일 카드 3장당, 피해를 !D! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       " NL ( ",
       " 번 공격합니다.)",
@@ -595,5 +593,9 @@
       "턴 종료시, #y포일 카드를 2 장 이상 사용했었다면, #y방어도를 !M! #b",
       " 얻습니다."
     ]
+  },
+  "fishing:ImOut": {
+    "NAME": "나 가요",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드는 어떤 상황에서든 덱에서 제거할 수 있습니다."
   }
 }

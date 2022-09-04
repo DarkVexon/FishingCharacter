@@ -440,7 +440,7 @@
   },
   "${ModID}:ShinyShots": {
     "NAME": "Shiny Shots",
-    "DESCRIPTION": "Deal !D! damage 3 times. NL Gain !B! Block for each ${ModID}:Foil card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each ${ModID}:Foil card in your hand."
   },
   "${ModID}:PerfectPull": {
     "NAME": "Perfect Pull",

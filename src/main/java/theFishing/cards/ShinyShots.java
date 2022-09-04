@@ -20,13 +20,11 @@ public class ShinyShots extends AbstractFishingCard {
 
     public ShinyShots() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 14;
         baseBlock = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         atb(new DamagePlusWallopVFXAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
         atb(new AbstractGameAction() {
             @Override
@@ -42,7 +40,7 @@ public class ShinyShots extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
         upgradeBlock(1);
     }
 }

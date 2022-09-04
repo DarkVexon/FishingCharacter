@@ -19,7 +19,7 @@ public class MerchantsStrike extends AbstractFishingCard implements OnBuyRelicCa
 
     public MerchantsStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 3;
         baseBlock = 2;
         tags.add(CardTags.STRIKE);
     }
@@ -43,5 +43,6 @@ public class MerchantsStrike extends AbstractFishingCard implements OnBuyRelicCa
     public void upp() {
         upgradeDamage(1);
         upgradeBlock(1);
+        uDesc();
     }
 }
