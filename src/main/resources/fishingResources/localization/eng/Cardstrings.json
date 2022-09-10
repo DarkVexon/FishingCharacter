@@ -558,8 +558,7 @@
     "NAME": "Preclude",
     "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp.",
     "EXTENDED_DESCRIPTION": [
-      "I can't play this Opener after other cards.",
-      "~Cheater...~ NL @CHEEEATER!@"
+      "I can't play this Opener after other cards."
     ]
   },
   "${ModID}:CrystallineConfluence": {

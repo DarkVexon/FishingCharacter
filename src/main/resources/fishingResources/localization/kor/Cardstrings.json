@@ -560,8 +560,7 @@
     "NAME": "프렐류드",
     "DESCRIPTION": "입장식. NL 피해를 !D! 줍니다. NL 카드를 1 장 버립니다. NL 대상의 [#EFC851]시간[] [#EFC851]왜곡[] 을 초기화시킵니다.",
     "EXTENDED_DESCRIPTION": [
-      "이 카드는 턴 시작시 가장 처음에 사용해야만 해.",
-      "~비겁한...~ NL @이@ 비겁한@ @놈!@"
+      "이 카드는 턴 시작시 가장 처음에 사용해야만 해."
     ]
   },
   "fishing:CrystallineConfluence": {
