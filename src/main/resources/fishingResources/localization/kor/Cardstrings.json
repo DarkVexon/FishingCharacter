@@ -298,12 +298,7 @@
   },
   "fishing:RidiculousFishing": {
     "NAME": "어이없는 낚시",
-    "DESCRIPTION": "무색 카드를 사용할 때마다, 무작위 적에게 피해를 !M! 줍니다.",
-    "EXTENDED_DESCRIPTION": [
-      "어이없는 낚시",
-      "무색 카드를 사용할 때마다, 무작위 적에게 피해를 #b",
-      " 줍니다."
-    ]
+    "DESCRIPTION": "무색 카드를 사용할 때마다, 무작위 적에게 피해를 !M! 줍니다."
   },
   "fishing:Concentrated": {
     "NAME": "카페인 충만",

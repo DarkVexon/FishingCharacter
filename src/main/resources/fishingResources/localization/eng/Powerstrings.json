@@ -49,5 +49,12 @@
       "#yFoil cards gain #b",
       " times the benefit from #yStrength and #yDexterity."
     ]
+  },
+  "${ModID}:RidiculousFishingPower": {
+    "NAME": "Ridiculous Fishing",
+    "DESCRIPTIONS": [
+      "Whenever you play a Colorless card, deal #b",
+      " damage to a random enemy."
+    ]
   }
 }

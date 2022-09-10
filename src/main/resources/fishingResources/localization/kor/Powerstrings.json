@@ -47,5 +47,12 @@
       " 장을",
       " 얻습니다."
     ]
+  },
+  "fishing:RidiculousFishingPower": {
+    "NAME": "어이없는 낚시",
+    "DESCRIPTIONS": [
+      "무색 카드를 사용할 때마다, 무작위 적에게 피해를 #b",
+      " 줍니다."
+    ]
   }
 }

@@ -302,12 +302,7 @@
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
-    "DESCRIPTION": "Whenever you play a Colorless card, deal !M! damage to a random enemy.",
-    "EXTENDED_DESCRIPTION": [
-      "Ridiculous Fishing",
-      "Whenever you play a Colorless card, deal #b",
-      " damage to a random enemy."
-    ]
+    "DESCRIPTION": "Whenever you play a Colorless card, deal !M! damage to a random enemy."
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
