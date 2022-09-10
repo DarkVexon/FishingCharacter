@@ -21,14 +21,14 @@ public class MintConditionPower extends AbstractEasyPower {
 
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
         if (isFoil(card) && AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            return type == DamageInfo.DamageType.NORMAL ? damage + (float) AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount : damage;
+            return type == DamageInfo.DamageType.NORMAL ? damage + ((float) AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount * amount) : damage;
         }
         return damage;
     }
 
     public float modifyBlock(float blockAmount, AbstractCard card) {
         if (isFoil(card) && AbstractDungeon.player.hasPower(DexterityPower.POWER_ID)) {
-            return blockAmount + (float) AbstractDungeon.player.getPower(DexterityPower.POWER_ID).amount;
+            return blockAmount + ((float) AbstractDungeon.player.getPower(DexterityPower.POWER_ID).amount * amount);
         }
         return blockAmount;
     }
@@ -36,10 +36,9 @@ public class MintConditionPower extends AbstractEasyPower {
     @Override
     public void updateDescription() {
         if (amount < 4) {
-            description = powerStrings.DESCRIPTIONS[amount-1];
-        }
-        else {
+            description = powerStrings.DESCRIPTIONS[amount - 1];
+        } else {
             description = powerStrings.DESCRIPTIONS[4] + amount + powerStrings.DESCRIPTIONS[5];
         }
-   }
+    }
 }

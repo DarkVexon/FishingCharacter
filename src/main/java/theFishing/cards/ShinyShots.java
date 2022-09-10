@@ -42,7 +42,7 @@ public class ShinyShots extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
         upgradeBlock(1);
     }
 }
