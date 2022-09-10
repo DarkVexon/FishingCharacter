@@ -65,5 +65,12 @@
       " cards",
       " and #yExhaust #b"
     ]
+  },
+  "${ModID}:FullySleevedPower": {
+    "NAME": "Fully Sleeved",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
+      " #yBlock."
+    ]
   }
 }

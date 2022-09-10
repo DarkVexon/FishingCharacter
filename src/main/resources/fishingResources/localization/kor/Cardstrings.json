@@ -575,12 +575,7 @@
   },
   "fishing:FullySleeved": {
     "NAME": "억까 방지",
-    "DESCRIPTION": "턴 종료 시, fishing:포일 카드를 2 장 이상 사용했었다면, 방어도를 !M! 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "억까 방지",
-      "턴 종료시, #y포일 카드를 2 장 이상 사용했었다면, #y방어도를 !M! #b",
-      " 얻습니다."
-    ]
+    "DESCRIPTION": "턴 종료 시, fishing:포일 카드를 2 장 이상 사용했었다면, 방어도를 !M! 얻습니다."
   },
   "fishing:ImOut": {
     "NAME": "나 가요",

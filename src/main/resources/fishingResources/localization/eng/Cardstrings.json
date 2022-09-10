@@ -573,12 +573,7 @@
   },
   "${ModID}:FullySleeved": {
     "NAME": "Fully Sleeved",
-    "DESCRIPTION": "At the end of your turn, if you played at least 2 ${ModID}:Foil cards, gain !M! Block.",
-    "EXTENDED_DESCRIPTION": [
-      "Fully Sleeved",
-      "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
-      " #yBlock."
-    ]
+    "DESCRIPTION": "At the end of your turn, if you played at least 2 ${ModID}:Foil cards, gain !M! Block."
   },
   "${ModID}:ImOut": {
     "NAME": "I'm Out",
