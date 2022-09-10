@@ -24,14 +24,14 @@ public class TheFinalCard extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.hand.size() <= 1) {
+        if (isSolo()) {
             atb(new VFXAction(new GrandFinalEffect(), Settings.FAST_MODE ? 0.7F : 1.0F));
             atb(new FinalCardAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY, this));
         }
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = adp().hand.size() <= 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = isSolo() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

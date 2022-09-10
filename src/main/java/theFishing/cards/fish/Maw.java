@@ -12,7 +12,7 @@ public class Maw extends AbstractFishCard {
 
     public Maw() {
         super(ID, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 3;
     }
 
     public void fishEffect(AbstractPlayer p, AbstractMonster m) {

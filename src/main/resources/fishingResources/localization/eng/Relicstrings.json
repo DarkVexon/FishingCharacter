@@ -19,7 +19,7 @@
     "NAME": "Broken Oar",
     "FLAVOR": "Most trips to the Spire are one-way.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Draw #b1 fewer card each turn."
+      "Gain [E] at the start of your turn. NL Draw #b1 less card at the start of each turn."
     ]
   },
   "${ModID}:MaelstromAnkh": {

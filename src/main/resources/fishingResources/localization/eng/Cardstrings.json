@@ -87,7 +87,7 @@
   },
   "${ModID}:RodSlam": {
     "NAME": "Rod Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw 1 fewer card."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, NL draw 1 less card."
   },
   "${ModID}:HunkerDown": {
     "NAME": "Hunker Down",
@@ -149,7 +149,7 @@
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Clove",
-    "DESCRIPTION": "Remove your Weak and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Remove your Weak, Vulnerable, and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
@@ -179,7 +179,7 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Draw 1 card. NL Startup: Gain !M! *Gold."
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Startup: Gain !M! *Gold."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
@@ -195,8 +195,11 @@
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
-    "DESCRIPTION": "Add a random X-cost card from another class into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a random X-cost card from another class into your hand. NL Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 X-cost cards of any color to add into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 X-cost cards of any color to add into your hand. NL Gain [E]. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to add into your hand."
+    ]
   },
   "${ModID}:Splash": {
     "NAME": "Splash",
@@ -204,7 +207,7 @@
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
-    "DESCRIPTION": "Add !M! *Shivs and 1 ${ModID}:Foil *Smite into your hand. NL If you're on Steam Deck, Upgrade them."
+    "DESCRIPTION": "Add !M! *Shivs and a ${ModID}:Foil *Smite into your hand. NL If you're on Steam Deck, Upgrade them."
   },
   "${ModID}:ShipRam": {
     "NAME": "Ship Ram",
@@ -212,7 +215,8 @@
   },
   "${ModID}:FlamingFlip": {
     "NAME": "Flaming Flip",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card at random. NL Draw 2 cards."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw !M! cards."
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
@@ -248,7 +252,8 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: Apply !M! Vulnerable. NL X >= 4: Gain !${ModID}:m2! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: NL Apply !M! Vulnerable. NL X >= 4: NL Gain X Strength.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: NL Apply !M! Vulnerable. NL X >= 4: NL Gain X+1 Strength."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIIIS Big!",
@@ -319,8 +324,7 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] [E] and draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] [E] and draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] [E] and draw !M! cards."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -364,7 +368,7 @@
   },
   "${ModID}:AquaOrb": {
     "NAME": "Aqua Orb",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL If this is the first card you played this combat, gain 1 Artifact."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL If your discard pile is empty, gain 1 Artifact."
   },
   "${ModID}:FreeDrinks": {
     "NAME": "Free Drinks",
@@ -376,7 +380,7 @@
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",
-    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! [#EFC851]Plated[] [#EFC851]Armor[]. NL Draw 1 fewer card each turn."
+    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Plated *Armor. NL Draw 1 less card at the start of each turn."
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Storm",
@@ -441,11 +445,11 @@
   },
   "${ModID}:ShinyShots": {
     "NAME": "Shiny Shots",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block for each ${ModID}:Foil card in your hand."
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Gain !B! Block for each ${ModID}:Foil card in your hand."
   },
   "${ModID}:PerfectPull": {
     "NAME": "Perfect Pull",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Draw 1 card. NL If you draw a ${ModID}:Foil card, repeat this."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL If you drew a ${ModID}:Foil card this way, deal !D! damage again."
   },
   "${ModID}:ShimmeringShank": {
     "NAME": "Shimmering Shield",
@@ -464,7 +468,7 @@
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "Whenever you play 3 ${ModID}:Foil cards, add a *Shiv into your hand."
+    "DESCRIPTION": "Gain !M! Strength. NL Gain 1 Dexterity. NL ${ModID}:Foil cards benefit double from Strength and Dexterity."
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
@@ -573,7 +577,7 @@
   },
   "${ModID}:ConfettiCannon": {
     "NAME": "Confetti Cannon",
-    "DESCRIPTION": "Deal !D! damage for every 3 ${ModID}:Foil cards you have.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Draw 1 card. NL If you drew a ${ModID}:Foil card this way, repeat this.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",

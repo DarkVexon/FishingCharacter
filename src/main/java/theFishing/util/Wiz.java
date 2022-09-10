@@ -63,39 +63,30 @@ public class Wiz {
         return monsters;
     }
 
-    public static ArrayList<AbstractCard> getCardsMatchingPredicate(Predicate<AbstractCard> pred) {
+    public static ArrayList<String> getCardsMatchingPredicate(Predicate<AbstractCard> pred) {
         return getCardsMatchingPredicate(pred, false);
     }
 
-    public static ArrayList<AbstractCard> getCardsMatchingPredicate(Predicate<AbstractCard> pred, boolean allcards) {
+    public static ArrayList<String> getCardsMatchingPredicate(Predicate<AbstractCard> pred, boolean allcards) {
         if (allcards) {
-            ArrayList<AbstractCard> cardsList = new ArrayList<>();
+            ArrayList<String> cardsList = new ArrayList<>();
             for (AbstractCard c : CardLibrary.getAllCards()) {
-                if (pred.test(c)) cardsList.add(c.makeStatEquivalentCopy());
+                if (pred.test(c)) cardsList.add(c.cardID);
             }
             return cardsList;
         } else {
-            ArrayList<AbstractCard> cardsList = new ArrayList<>();
+            ArrayList<String> cardsList = new ArrayList<>();
             for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
-                if (pred.test(c)) cardsList.add(c.makeStatEquivalentCopy());
+                if (pred.test(c)) cardsList.add(c.cardID);
             }
             for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
-                if (pred.test(c)) cardsList.add(c.makeStatEquivalentCopy());
+                if (pred.test(c)) cardsList.add(c.cardID);
             }
             for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
-                if (pred.test(c)) cardsList.add(c.makeStatEquivalentCopy());
+                if (pred.test(c)) cardsList.add(c.cardID);
             }
             return cardsList;
         }
-    }
-
-    public static AbstractCard returnTrulyRandomPrediCardInCombat(Predicate<AbstractCard> pred, boolean allCards) {
-        return getRandomItem(getCardsMatchingPredicate(pred, allCards));
-    }
-
-
-    public static AbstractCard returnTrulyRandomPrediCardInCombat(Predicate<AbstractCard> pred) {
-        return returnTrulyRandomPrediCardInCombat(pred, false);
     }
 
     public static <T> T getRandomItem(ArrayList<T> list, Random rng) {
@@ -104,10 +95,6 @@ public class Wiz {
 
     public static <T> T getRandomItem(ArrayList<T> list) {
         return getRandomItem(list, AbstractDungeon.cardRandomRng);
-    }
-
-    private static boolean actuallyHovered(Hitbox hb) {
-        return InputHelper.mX > hb.x && InputHelper.mX < hb.x + hb.width && InputHelper.mY > hb.y && InputHelper.mY < hb.y + hb.height;
     }
 
     public static boolean isInCombat() {

@@ -26,14 +26,14 @@ public class AquaOrb extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, magicNumber, false)));
         blck();
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() <= 1) {
+        if (p.discardPile.isEmpty()) {
             atb(new VFXAction(new ColoredSanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.SKY.cpy())));
             applyToSelf(new ArtifactPower(p, 1));
         }
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = AbstractDungeon.player.discardPile.isEmpty() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

@@ -17,7 +17,7 @@ public class PlantFlag extends AbstractFishingCard {
         AbstractCard q = new Flag();
         makeFoil(q);
         cardsToPreview = q;
-        baseBlock = 3;
+        baseBlock = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

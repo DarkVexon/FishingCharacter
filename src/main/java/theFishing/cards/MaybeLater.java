@@ -17,7 +17,7 @@ public class MaybeLater extends AbstractFishingCard {
     public MaybeLater() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 6;
-        baseBlock = 4;
+        baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

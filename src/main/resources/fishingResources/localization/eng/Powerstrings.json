@@ -3,16 +3,16 @@
     "NAME": "Fasting-B",
     "DESCRIPTIONS": [
       "Draw #b",
-      " fewer card each turn.",
-      " fewer cards each turn."
+      " less card at the start of each turn.",
+      " less cards at the start of each turn."
     ]
   },
   "${ModID}:DrawLessNextTurnPower": {
     "NAME": "Draw Less Next Turn",
     "DESCRIPTIONS": [
       "Draw #b",
-      " fewer card next turn.",
-      " fewer cards next turn."
+      " less card next turn.",
+      " less cards next turn."
     ]
   },
   "${ModID}:TripwirePower": {
@@ -42,10 +42,12 @@
   "${ModID}:MintConditionPower": {
     "NAME": "Mint Condition",
     "DESCRIPTIONS": [
-      "Whenever you play #b3 #yFoil cards, add #b",
-      " #yShiv",
-      " #yShivs",
-      " into your hand."
+      "#yFoil cards gain double benefit from #yStrength and #yDexterity.",
+      "#yFoil cards gain triple benefit from #yStrength and #yDexterity.",
+      "#yFoil cards gain quadruple benefit from #yStrength and #yDexterity.",
+      "#yFoil cards gain quintuple benefit from #yStrength and #yDexterity.",
+      "#yFoil cards gain #b",
+      " times the benefit from #yStrength and #yDexterity."
     ]
   }
 }

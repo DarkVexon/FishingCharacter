@@ -434,4 +434,21 @@ public class FoilPatches {
             }
         }
     }
+
+    @SpirePatch(
+            clz = AbstractDungeon.class,
+            method = "transformCard",
+            paramtypez = {
+                    AbstractCard.class,
+                    boolean.class,
+                    Random.class
+            }
+    )
+    public static class TransformFoilsToFoils {
+        public static void Postfix(AbstractCard c, boolean autoUpgrade, Random rng) {
+            if (isFoil(c)) {
+                makeFoil(AbstractDungeon.transformedCard);
+            }
+        }
+    }
 }

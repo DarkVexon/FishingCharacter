@@ -15,17 +15,20 @@ public class FlamingFlip extends AbstractFishingCard {
 
     public FlamingFlip() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 7;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AnimateHopAction(p));
         blck();
-        atb(new ExhaustAction(1, true, false, false));
-        atb(new DrawCardAction(2));
+        atb(new ExhaustAction(1, false, false, false));
+        atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(1);
+        upgradeMagicNumber(1);
+        uDesc();
     }
 }

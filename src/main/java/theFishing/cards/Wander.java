@@ -1,18 +1,19 @@
 package theFishing.cards;
 
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.DeckToTopOfDeckAction;
-import theFishing.util.ImageHelper;
-import theFishing.util.TexLoader;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.FishingMod.makeImagePath;
 
 public class Wander extends AbstractFishingCard {
-    private static final TextureAtlas.AtlasRegion buttonTex = ImageHelper.asAtlasRegion(TexLoader.getTexture(makeImagePath("512/removal.png")));
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardPileToTopOfDeckAction");
+    public static final String[] TEXT = uiStrings.TEXT;
     public final static String ID = makeID("Wander");
     // intellij stuff attack, all_enemy, common, 9, 1, , , 1, 1
 
@@ -23,7 +24,12 @@ public class Wander extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        addToBot(new DeckToTopOfDeckAction(p));
+        addToBot(new SelectCardsAction(AbstractDungeon.player.drawPile.group, 1, uiStrings.TEXT[0], (cards) -> {
+            for (AbstractCard q : cards) {
+                AbstractDungeon.player.drawPile.removeCard(q);
+                AbstractDungeon.player.drawPile.addToTop(q);
+            }
+        }));
     }
 
     public void upp() {

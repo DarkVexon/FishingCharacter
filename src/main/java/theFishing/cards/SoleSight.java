@@ -9,7 +9,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class SoleSight extends AbstractFishingCard {
     public final static String ID = makeID("SoleSight");
@@ -22,14 +23,14 @@ public class SoleSight extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ScryAction(magicNumber));
-        if (p.hand.size() <= 1) {
+        if (isSolo()) {
             atb(new VFXAction(p, new InflameEffect(p), 0.66F));
             applyToSelf(new StrengthPower(p, magicNumber));
         }
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = adp().hand.size() <= 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = isSolo() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

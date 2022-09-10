@@ -13,9 +13,9 @@ public class Hook extends AbstractFishingCard {
     // intellij stuff attack, enemy, common, 8, 1, , , 1, 1
 
     public Hook() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
