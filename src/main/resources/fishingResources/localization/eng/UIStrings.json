@@ -9,6 +9,11 @@
       "~Cheater...~ NL @CHEEEATER!@"
     ]
   },
+  "${ModID}:MopUpAction": {
+    "TEXT": [
+      "to Exhaust for Mop Up."
+    ]
+  },
   "${ModID}:FishDescriptor": {
     "TEXT": [
       "Fish"

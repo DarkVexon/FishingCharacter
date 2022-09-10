@@ -9,6 +9,11 @@
       "~비겁한...~ NL @이@ 비겁한@ @놈!@"
     ]
   },
+  "fishing:MopUpAction": {
+    "TEXT": [
+      "소멸시킬 카드를 선택하세요."
+    ]
+  },
   "fishing:FishDescriptor": {
     "TEXT": [
       "물고기"
