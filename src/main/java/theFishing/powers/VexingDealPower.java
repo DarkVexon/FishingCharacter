@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static theFishing.FishingMod.makeID;
 
 public class VexingDealPower extends LambdaPower {
-    public static String ID = makeID(AllOutPower.class.getSimpleName());
+    public static String ID = makeID(VexingDealPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public VexingDealPower() {
-        super(makeID("VexingDealPower"), powerStrings.NAME, AbstractPower.PowerType.BUFF, false, AbstractDungeon.player, 1);
+        super(ID, powerStrings.NAME, AbstractPower.PowerType.BUFF, false, AbstractDungeon.player, 1);
     }
 
     @Override
