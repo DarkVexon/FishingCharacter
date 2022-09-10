@@ -333,13 +333,7 @@
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
-    "DESCRIPTION": "Discard 2 cards. NL When you play a card, if it's the only card in your hand, play it twice.",
-    "EXTENDED_DESCRIPTION": [
-      "Finishing Touches",
-      "When you play a card, if it's the only card in your hand, play it twice.",
-      "When you play a card, if it's the only card in your hand, play it #b",
-      " additional times."
-    ]
+    "DESCRIPTION": "Discard 2 cards. NL When you play a card, if it's the only card in your hand, play it twice."
   },
   "${ModID}:FlyingFish": {
     "NAME": "Flying Fish",

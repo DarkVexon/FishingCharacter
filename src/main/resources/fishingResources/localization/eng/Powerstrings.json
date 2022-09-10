@@ -72,5 +72,12 @@
       "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
       " #yBlock."
     ]
-  }
+  },"${ModID}:FinishingTouchesPower": {
+  "NAME": "Finishing Touches",
+  "DESCRIPTIONS": [
+    "When you play a card, if it's the only card in your hand, play it twice.",
+    "When you play a card, if it's the only card in your hand, play it #b",
+    " additional times."
+  ]
+}
 }
