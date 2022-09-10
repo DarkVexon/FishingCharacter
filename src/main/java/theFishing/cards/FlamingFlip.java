@@ -15,8 +15,8 @@ public class FlamingFlip extends AbstractFishingCard {
 
     public FlamingFlip() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 7;
-        baseMagicNumber = magicNumber = 1;
+        baseBlock = 5;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,8 +27,6 @@ public class FlamingFlip extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(1);
-        upgradeMagicNumber(1);
-        uDesc();
+        upgradeBlock(3);
     }
 }

@@ -1,4 +1,4 @@
-package theFishing.cards;
+package theFishing.cards.boxtoppers;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -9,19 +9,20 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import theFishing.cards.AbstractFishingCard;
+import theFishing.cards.OnBuyRelicCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.forAllMonstersLiving;
+import static theFishing.util.Wiz.*;
 
-public class MerchantsStrike extends AbstractFishingCard implements OnBuyRelicCard {
+public class MerchantsStrike extends AbstractBoxTopper implements OnBuyRelicCard {
     public final static String ID = makeID("MerchantsStrike");
-    // intellij stuff attack, enemy, uncommon, 6, 1, , , 9, 3
+    // intellij stuff attack, enemy, 3, 1, 2, 1, , 
 
     public MerchantsStrike() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 3;
         baseBlock = 2;
-        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

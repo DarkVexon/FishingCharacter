@@ -73,7 +73,7 @@
   },
   "fishing:Wander": {
     "NAME": "방랑",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 이 카드는 어떤 상황에서든 덱에서 제거할 수 있습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 카드 1장을 선택해 뽑을 카드 더미 맨 위에 넣습니다."
   },
   "fishing:BagOfDefends": {
     "NAME": "수비의 가방",
@@ -149,7 +149,7 @@
   },
   "fishing:GarlicClove": {
     "NAME": "마늘 한 쪽",
-    "DESCRIPTION": "나에게 부여된 약화와 손상을 전부 제거합니다. NL 흡혈귀(?) 이벤트로 얻는 흡혈 카드가 덱에 없다면, 체력을 !M! 회복합니다. NL 소멸."
+    "DESCRIPTION": "나에게 부여된 약화, 취약, 손상을 전부 제거합니다. NL 흡혈귀(?) 이벤트로 얻는 흡혈 카드가 덱에 없다면, 체력을 !M! 회복합니다. NL 소멸."
   },
   "fishing:RingTheBell": {
     "NAME": "방울의 울림",
@@ -179,7 +179,7 @@
   },
   "fishing:TreasureChest": {
     "NAME": "보물 상자",
-    "DESCRIPTION": "카드를 1 장 뽑습니다. NL 개전 : 골드를 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1 장 뽑습니다. NL 개전 : 골드를 !M! 얻습니다."
   },
   "fishing:Whaling": {
     "NAME": "고래잡이",
@@ -195,8 +195,11 @@
   },
   "fishing:XMarksTheSpot": {
     "NAME": "목표 지점 표시",
-    "DESCRIPTION": "다른 직업의 비용이 X 인 무작위 카드 1 장을 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "다른 직업의 비용이 X 인 무작위 카드 1 장을 얻습니다. NL [E] 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "모든 직업의 비용이 X인 카드 3장 중 하나를 선택하여 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "모든 직업의 비용이 X인 카드 3장 중 하나를 선택하여 얻습니다. NL [E] 를 얻습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "손으로 가져올 카드 1장을 선택하세요."
+    ]
   },
   "fishing:Splash": {
     "NAME": "튀어오르기",
@@ -212,7 +215,8 @@
   },
   "fishing:FlamingFlip": {
     "NAME": "격렬한 물제비",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 카드 1장을 소멸시킵니다. NL 카드를 2 장 뽑습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1장 소멸시킵니다. NL 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1장 소멸시킵니다. NL 카드를 !M! 장 뽑습니다."
   },
   "fishing:BoxOfHavoc": {
     "NAME": "파괴적인 상자",
@@ -248,7 +252,8 @@
   },
   "fishing:RatedX": {
     "NAME": "평점 X",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL X >= 1: 방어도를 !B! 얻습니다. NL X >= 2: 취약을 !M! 부여합니다. NL X >= 4: 힘을 !fishing:m2! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL X >= 1: 방어도를 !B! 얻습니다. NL X >= 2: NL 취약을 !M! 부여합니다. NL X >= 4: NL 힘을 X 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL X >= 1: 방어도를 !B! 얻습니다. NL X >= 2: NL 취약을 !M! 부여합니다. NL X >= 4: NL 힘을 X +1 얻습니다."
   },
   "fishing:ItWasTHIIIIIIISBig": {
     "NAME": "이마아아안큼이나 컸어!",
@@ -320,8 +325,7 @@
   },
   "fishing:RodOfHope": {
     "NAME": "희망의 낚싯대",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:항해 : [E] [E] 를 얻고 카드를 !M! 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL fishing:항해 : [E] [E] 를 얻고 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:항해 : [E] [E] 를 얻고 카드를 !M! 장 뽑습니다."
   },
   "fishing:Maw": {
     "NAME": "아귀",
@@ -365,7 +369,7 @@
   },
   "fishing:AquaOrb": {
     "NAME": "해양의 보주",
-    "DESCRIPTION": "적 전체에게 약화를 !M! 부여합니다. NL 방어도를 !B! 얻습니다. NL 이번 전투에서 처음으로 사용한 카드가 이 카드라면, 인공물을 1 얻습니다."
+    "DESCRIPTION": "적 전체에게 약화를 !M! 부여합니다. NL 방어도를 !B! 얻습니다. NL 버린 카드 더미가 비어있다면, 인공물을 1 얻습니다."
   },
   "fishing:FreeDrinks": {
     "NAME": "공짜 음료",
@@ -442,11 +446,11 @@
   },
   "fishing:ShinyShots": {
     "NAME": "광채의 탄환",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 존재하는 fishing:포일 카드 1장당, 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "!D! 피해를 3 번 줍니다. NL 손패에 존재하는 fishing:포일 카드 1장당, 방어도를 !B! 얻습니다."
   },
   "fishing:PerfectPull": {
     "NAME": "완벽한 끌당",
-    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 카드를 1 장 뽑습니다. NL 뽑은 카드가 fishing:포일 카드라면, 이 효과를 반복합니다."
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 카드를 1 장 뽑습니다. NL 뽑은 카드가 fishing:포일 카드라면, 다시 피해를 !D! 줍니다."
   },
   "fishing:ShimmeringShank": {
     "NAME": "반짝이 방패",
@@ -465,7 +469,7 @@
   },
   "fishing:MintCondition": {
     "NAME": "상쾌한 컨디션",
-    "DESCRIPTION": "fishing:포일 카드를 3 장 사용할 때마다, *단도 를 얻습니다."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 민첩을 1 얻습니다. NL 이제 fishing:포일 카드가 힘과 민첩의 영향을 2배로 받습니다."
   },
   "fishing:TheBackpack": {
     "NAME": "배낭",
@@ -579,7 +583,7 @@
   },
   "fishing:ConfettiCannon": {
     "NAME": "색종이 대포",
-    "DESCRIPTION": "보유한 fishing:포일 카드 3장당, 피해를 !D! 줍니다.",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 카드를 1 장 뽑습니다. NL 뽑은 카드가 fishing:포일 카드라면, 이 효과를 반복합니다.",
     "EXTENDED_DESCRIPTION": [
       " NL ( ",
       " 번 공격합니다.)",

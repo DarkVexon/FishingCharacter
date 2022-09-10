@@ -1,25 +1,28 @@
 package theFishing.cards;
 
 import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
-import theFishing.patch.foil.FoilPatches;
+import theFishing.util.Wiz;
 
 import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.patch.foil.FoilPatches.isFoil;
+import static theFishing.patch.foil.FoilPatches.makeFoil;
 import static theFishing.util.Wiz.applyToEnemy;
 import static theFishing.util.Wiz.atb;
 
-public class GlitterGlue extends AbstractFishingCard implements SpawnModificationCard {
+public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
     public final static String ID = makeID("GlitterGlue");
     // intellij stuff skill, enemy, uncommon, , , , , , 
 
@@ -43,17 +46,34 @@ public class GlitterGlue extends AbstractFishingCard implements SpawnModificatio
 
 
     @Override
-    public void onRewardListCreated(ArrayList<AbstractCard> rewardCards) {
-        boolean triggered = false;
-        for (AbstractCard q : rewardCards) {
-            if (!FoilPatches.isFoil(q)) {
-                FoilPatches.makeFoil(q);
-                triggered = true;
+    public void onObtainCard() {
+        boolean showSelf = false;
+        boolean showTrigger = false;
+        if (!isFoil(this)) {
+            makeFoil(this);
+            showSelf = true;
+        }
+        ArrayList<AbstractCard> upgradableCards = new ArrayList();
+
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (!isFoil(c)) {
+                upgradableCards.add(c);
             }
         }
-        if (triggered) {
-            superFlash(Color.BLUE);
+
+        AbstractCard tar = Wiz.getRandomItem(upgradableCards);
+        if (tar != null) {
+            makeFoil(tar);
+            showTrigger = true;
+        }
+
+        if (showSelf && showTrigger) {
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy(), Settings.WIDTH / 3.0F, Settings.HEIGHT / 3.0F));
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy(), (Settings.WIDTH / 3.0F * 2f), (Settings.HEIGHT / 3.0F * 2f)));
+        } else if (showSelf) {
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy()));
+        } else if (showTrigger) {
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy()));
         }
     }
-
 }

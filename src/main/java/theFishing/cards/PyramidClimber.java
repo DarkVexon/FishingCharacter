@@ -12,7 +12,7 @@ public class PyramidClimber extends AbstractFishingCard {
 
     public PyramidClimber() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 12;
+        baseBlock = 13;
         cardsToPreview = new Stone();
     }
 

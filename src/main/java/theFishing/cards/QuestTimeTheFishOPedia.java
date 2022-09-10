@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
@@ -8,8 +9,7 @@ import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.TheFishOPedia;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.shuffleIn;
+import static theFishing.util.Wiz.*;
 
 public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     public final static String ID = makeID("QuestTimeTheFishOPedia");
@@ -17,13 +17,12 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
 
     public QuestTimeTheFishOPedia() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
-        }
+        AbstractCard q = AbstractFishCard.returnRandomFish();
+        if (upgraded) q.upgrade();
+        makeInHand(q);
         atb(new AcceptQuestAction(new TheFishOPedia()));
     }
 
@@ -33,6 +32,6 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        uDesc();
     }
 }
