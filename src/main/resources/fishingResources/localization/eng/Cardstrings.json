@@ -400,14 +400,7 @@
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
     "DESCRIPTION": "At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
-    "EXTENDED_DESCRIPTION": [
-      "Vexing Deal",
-      "At the start of your turn, draw #b",
-      " card",
-      " cards",
-      " and #yExhaust #b"
-    ]
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10 or higher, gain !M! Strength."
   },
   "${ModID}:TheFinalCard": {
     "NAME": "The Final Card",

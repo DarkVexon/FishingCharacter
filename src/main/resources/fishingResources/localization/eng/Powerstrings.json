@@ -56,5 +56,14 @@
       "Whenever you play a Colorless card, deal #b",
       " damage to a random enemy."
     ]
+  },
+  "${ModID}:VexingDealPower": {
+    "NAME": "Vexing Deal",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b",
+      " card",
+      " cards",
+      " and #yExhaust #b"
+    ]
   }
 }
