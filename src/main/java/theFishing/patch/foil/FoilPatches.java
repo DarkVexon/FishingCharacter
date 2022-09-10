@@ -394,48 +394,6 @@ public class FoilPatches {
     }
 
     @SpirePatch(
-            clz = AbstractCard.class,
-            method = SpirePatch.CLASS
-    )
-    public static class CollectorTimerField {
-        public static final float TIME_BETWEEN_SPARKS = 0.075F;
-        public static SpireField<Float> collectorTimer = new SpireField<>(() -> TIME_BETWEEN_SPARKS);
-    }
-
-    @SpirePatch(
-            clz = AbstractCard.class,
-            method = "update"
-    )
-    public static class CollectorReminderFlames {
-        public static void Postfix(AbstractCard __instance) {
-            if (Wiz.isInCombat() && AbstractDungeon.player.hasPower(CollectorPower.ID) && !((CollectorPower) AbstractDungeon.player.getPower(CollectorPower.ID)).activated && (AbstractDungeon.player.hand.contains(__instance) || (__instance.cardID.equals(EndsOfTheEarth.ID) && AbstractDungeon.player.discardPile.contains(__instance)))) {
-                if (__instance.rarity == AbstractCard.CardRarity.RARE || isFoil(__instance)) {
-                    float timer = CollectorTimerField.collectorTimer.get(__instance);
-                    timer -= Gdx.graphics.getDeltaTime();
-                    if (timer <= 0) {
-                        Color toShow;
-                        if (__instance.rarity == AbstractCard.CardRarity.RARE && !isFoil(__instance)) {
-                            toShow = Color.BLUE.cpy();
-                        } else if (isFoil(__instance) && __instance.rarity != AbstractCard.CardRarity.RARE) {
-                            toShow = Color.CHARTREUSE.cpy();
-                        } else {
-                            if (MathUtils.randomBoolean()) {
-                                toShow = Color.CHARTREUSE.cpy();
-                            } else {
-                                toShow = Color.BLUE.cpy();
-                            }
-                        }
-                        AbstractDungeon.topLevelEffectsQueue.add(new CollectorReminderEffect(__instance, toShow));
-                        CollectorTimerField.collectorTimer.set(__instance, CollectorTimerField.TIME_BETWEEN_SPARKS);
-                    } else {
-                        CollectorTimerField.collectorTimer.set(__instance, timer);
-                    }
-                }
-            }
-        }
-    }
-
-    @SpirePatch(
             clz = AbstractDungeon.class,
             method = "transformCard",
             paramtypez = {

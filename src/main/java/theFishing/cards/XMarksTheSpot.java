@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -34,9 +33,11 @@ public class XMarksTheSpot extends AbstractFishingCard {
             validCards = new ArrayList<>();
             validCards.addAll(getCardsMatchingPredicate(c -> c.cost == -1 && c.rarity != CardRarity.BASIC && c.rarity != CardRarity.SPECIAL, true));
         }
+        ArrayList<String> possCards = new ArrayList<>();
+        possCards.addAll(validCards);
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            AbstractCard q = CardLibrary.getCard(Wiz.getRandomItem(validCards, AbstractDungeon.cardRandomRng));
+            AbstractCard q = CardLibrary.getCard(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1))).makeCopy();
             if (q instanceof Tempest) {
                 q.rawDescription = q.rawDescription + " NL (You get 5 Orb slots!)";
                 q.initializeDescription();
