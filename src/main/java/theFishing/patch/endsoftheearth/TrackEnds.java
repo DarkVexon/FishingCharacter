@@ -25,7 +25,7 @@ public class TrackEnds {
     )
     public static class UpdatePatch {
         public static void Postfix(DiscardPilePanel __instance) {
-            if (!AbstractDungeon.isScreenUp) {
+            if (!AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null) {
                 validEnds.removeIf(q -> !AbstractDungeon.player.discardPile.group.contains(q));
 
                 for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
