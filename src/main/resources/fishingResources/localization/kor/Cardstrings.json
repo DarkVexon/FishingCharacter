@@ -62,10 +62,7 @@
   },
   "fishing:MopUp": {
     "NAME": "걸레질 청소",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1 장 선택해 소멸시킵니다. NL 소멸시킨 카드가 상태이상 또는 저주 였다면, 카드를 1장 뽑습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "소멸시킬 카드를 선택하세요."
-    ]
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1 장 선택해 소멸시킵니다. NL 소멸시킨 카드가 상태이상 또는 저주 였다면, 카드를 1장 뽑습니다."
   },
   "fishing:ThatsAllFolks": {
     "NAME": "오늘은 이것으로 끝!",
@@ -298,12 +295,7 @@
   },
   "fishing:RidiculousFishing": {
     "NAME": "어이없는 낚시",
-    "DESCRIPTION": "fishing:물고기 를 사용할 때마다, 무작위 적에게 피해를 !M! 줍니다.",
-    "EXTENDED_DESCRIPTION": [
-      "어이없는 낚시",
-      "#y물고기 를 사용할 때마다, 무작위 적에게 피해를 #b",
-      " 줍니다."
-    ]
+    "DESCRIPTION": "fishing:물고기 를 사용할 때마다, 무작위 적에게 피해를 !M! 줍니다."
   },
   "fishing:Concentrated": {
     "NAME": "카페인 충만",
@@ -334,13 +326,7 @@
   },
   "fishing:FinishingTouches": {
     "NAME": "마무리 일격",
-    "DESCRIPTION": "카드를 2 장 버립니다. NL 카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
-    "EXTENDED_DESCRIPTION": [
-      "마무리 일격",
-      "카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다.",
-      "카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 그 카드를 추가로 #b",
-      " 번 사용합니다."
-    ]
+    "DESCRIPTION": "카드를 2 장 버립니다. NL 카드를 사용했을때, 그 카드가 손패에 유일하게 남아있는 카드라면, 2 번 사용합니다."
   },
   "fishing:FlyingFish": {
     "NAME": "날치",
@@ -402,14 +388,7 @@
   "fishing:VexingDeal": {
     "NAME": "짜증나는 거래",
     "DESCRIPTION": "내 턴 시작시, 카드를 1장 뽑고 카드를 1장 소멸시킵니다. NL 현재 플레이하고 있는 승천이 10 또는 그 이상일시, 힘을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작시, 카드를 1장 뽑고 카드를 1장 소멸시킵니다. NL 현재 플레이하고 있는 승천이 10 또는 그 이상일시, 힘을 !M! 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "짜증나는 거래",
-      "내 턴 시작시, 카드를 #b",
-      " 장",
-      " 장",
-      " 뽑고 카드를 소멸시킵니다: #b"
-    ]
+    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작시, 카드를 1장 뽑고 카드를 1장 소멸시킵니다. NL 현재 플레이하고 있는 승천이 10 또는 그 이상일시, 힘을 !M! 얻습니다."
   },
   "fishing:TheFinalCard": {
     "NAME": "최후의 카드",
@@ -559,8 +538,7 @@
     "NAME": "프렐류드",
     "DESCRIPTION": "입장식. NL 피해를 !D! 줍니다. NL 카드를 1 장 버립니다. NL 대상의 [#EFC851]시간[] [#EFC851]왜곡[] 을 초기화시킵니다.",
     "EXTENDED_DESCRIPTION": [
-      "이 카드는 턴 시작시 가장 처음에 사용해야만 해.",
-      "~비겁한...~ NL @이@ 비겁한@ @놈!@"
+      "이 카드는 턴 시작시 가장 처음에 사용해야만 해."
     ]
   },
   "fishing:CrystallineConfluence": {
@@ -587,12 +565,7 @@
   },
   "fishing:FullySleeved": {
     "NAME": "억까 방지",
-    "DESCRIPTION": "턴 종료 시, fishing:포일 카드를 2 장 이상 사용했었다면, 방어도를 !M! 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "억까 방지",
-      "턴 종료시, #y포일 카드를 2 장 이상 사용했었다면, #y방어도를 !M! #b",
-      " 얻습니다."
-    ]
+    "DESCRIPTION": "턴 종료 시, fishing:포일 카드를 2 장 이상 사용했었다면, 방어도를 !M! 얻습니다."
   },
   "fishing:ImOut": {
     "NAME": "나 가요",

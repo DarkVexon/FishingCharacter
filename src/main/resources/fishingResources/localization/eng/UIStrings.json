@@ -4,6 +4,16 @@
       "Choose a card to put on top of your draw pile and make free until played."
     ]
   },
+  "${ModID}:PrecludeAction": {
+    "TEXT": [
+      "~Cheater...~ NL @CHEEEATER!@"
+    ]
+  },
+  "${ModID}:MopUpAction": {
+    "TEXT": [
+      "to Exhaust for Mop Up."
+    ]
+  },
   "${ModID}:FishDescriptor": {
     "TEXT": [
       "Fish"

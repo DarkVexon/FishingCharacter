@@ -47,5 +47,36 @@
       " more damage and grant #b",
       " more #yBlock."
     ]
+  },
+  "${ModID}:RidiculousFishingPower": {
+    "NAME": "Ridiculous Fishing",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yFish, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "${ModID}:VexingDealPower": {
+    "NAME": "Vexing Deal",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b",
+      " card",
+      " cards",
+      " and #yExhaust #b"
+    ]
+  },
+  "${ModID}:FinishingTouchesPower": {
+    "NAME": "Finishing Touches",
+    "DESCRIPTIONS": [
+      "When you play a card, if it's the only card in your hand, play it twice.",
+      "When you play a card, if it's the only card in your hand, play it #b",
+      " additional times."
+    ]
+  },
+  "${ModID}:ReservesPower": {
+    "NAME": "Reserves",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
+      " #yBlock."
+    ]
   }
 }

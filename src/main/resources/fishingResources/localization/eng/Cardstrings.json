@@ -62,10 +62,7 @@
   },
   "${ModID}:MopUp": {
     "NAME": "Mop Up",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. NL If it's a Status or Curse card, draw 1 card.",
-    "EXTENDED_DESCRIPTION": [
-      "to Exhaust for Mop Up."
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. NL If it's a Status or Curse card, draw 1 card."
   },
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
@@ -183,11 +180,7 @@
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",
-    "DESCRIPTION": "After you play an X-cost card, gain [E].",
-    "EXTENDED_DESCRIPTION": [
-      "Reserves",
-      "After you play an X-cost card, gain "
-    ]
+    "DESCRIPTION": "After you play an X-cost card, gain [E]."
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
@@ -297,12 +290,7 @@
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
-    "DESCRIPTION": "Whenever you play a ${ModID}:Fish, deal !M! damage to a random enemy.",
-    "EXTENDED_DESCRIPTION": [
-      "Ridiculous Fishing",
-      "Whenever you play a #yFish, deal #b",
-      " damage to a random enemy."
-    ]
+    "DESCRIPTION": "Whenever you play a ${ModID}:Fish, deal !M! damage to a random enemy."
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
@@ -333,13 +321,7 @@
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
-    "DESCRIPTION": "Discard 2 cards. NL When you play a card, if it's the only card in your hand, play it twice.",
-    "EXTENDED_DESCRIPTION": [
-      "Finishing Touches",
-      "When you play a card, if it's the only card in your hand, play it twice.",
-      "When you play a card, if it's the only card in your hand, play it #b",
-      " additional times."
-    ]
+    "DESCRIPTION": "Discard 2 cards. NL When you play a card, if it's the only card in your hand, play it twice."
   },
   "${ModID}:FlyingFish": {
     "NAME": "Flying Fish",
@@ -400,14 +382,7 @@
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
     "DESCRIPTION": "At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10 or higher, gain !M! Strength.",
-    "EXTENDED_DESCRIPTION": [
-      "Vexing Deal",
-      "At the start of your turn, draw #b",
-      " card",
-      " cards",
-      " and #yExhaust #b"
-    ]
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10 or higher, gain !M! Strength."
   },
   "${ModID}:TheFinalCard": {
     "NAME": "The Final Card",
@@ -553,8 +528,7 @@
     "NAME": "Preclude",
     "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp.",
     "EXTENDED_DESCRIPTION": [
-      "I can't play this Opener after other cards.",
-      "~Cheater...~ NL @CHEEEATER!@"
+      "I can't play this Opener after other cards."
     ]
   },
   "${ModID}:CrystallineConfluence": {
@@ -581,12 +555,7 @@
   },
   "${ModID}:FullySleeved": {
     "NAME": "Fully Sleeved",
-    "DESCRIPTION": "At the end of your turn, if you played at least 2 ${ModID}:Foil cards, gain !M! Block.",
-    "EXTENDED_DESCRIPTION": [
-      "Fully Sleeved",
-      "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
-      " #yBlock."
-    ]
+    "DESCRIPTION": "At the end of your turn, if you played at least 2 ${ModID}:Foil cards, gain !M! Block."
   },
   "${ModID}:ImOut": {
     "NAME": "I'm Out",
