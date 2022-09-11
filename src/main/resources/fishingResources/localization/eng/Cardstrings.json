@@ -249,7 +249,10 @@
   },
   "${ModID}:ChocolateChipCookie": {
     "NAME": "Chocolate Chip Cookie",
-    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand for the rest of combat. NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand for the rest of combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "mmm..."
+    ]
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
@@ -366,7 +369,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Deal !D! damage. Add 1 ${ModID}:Fish into your hand. NL ${ModID}:Quest: Play 5 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Quest: Play 4 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]

@@ -27,7 +27,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
         atb(new HealAction(p, p, magicNumber));
         applyToSelf(new DexterityPower(p, secondMagic));
         atb(new ArmamentsAction(true));
-        atb(new TalkAction(true, "mmm...", 1F, 2F));
+        atb(new TalkAction(true, cardStrings.EXTENDED_DESCRIPTION[0], 1F, 2F));
     }
 
     @Override

@@ -26,13 +26,13 @@ public class OldBobber extends AbstractAdventurerRelic {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card instanceof AbstractFishCard) {
+        if (card.color == AbstractCard.CardColor.COLORLESS) {
             ++this.counter;
             if (this.counter % 3 == 0) {
                 this.counter = 0;
                 this.flash();
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                atb(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(8, true, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                atb(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(7, true, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             }
         }
 

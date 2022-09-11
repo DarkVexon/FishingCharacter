@@ -45,9 +45,6 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         ArrayList<TooltipInfo> result = new ArrayList<>();
-        if (FoilPatches.isFoil(this)) {
-            result.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("foil")), BaseMod.getKeywordDescription(makeID("foil"))));
-        }
         result.add(new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1]));
         return result;
     }

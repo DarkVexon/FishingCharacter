@@ -33,7 +33,7 @@
     "NAME": "Unagee Skull",
     "FLAVOR": "Known to guard sunken ships long ago.",
     "DESCRIPTIONS": [
-      "At the start of each combat, shuffle #b1 #y${ModID}:Fish into your draw and discard piles."
+      "At the start of each combat, add #b1 #yFish into your hand."
     ]
   },
   "${ModID}:Signpost": {
@@ -46,7 +46,7 @@
   },
   "${ModID}:Goggles": {
     "NAME": "Goggles",
-    "FLAVOR": "\"With these... we can cross it.\" - Kublai the Great",
+    "FLAVOR": "\"We may now cross the Sands.\" - Kublai the Great",
     "DESCRIPTIONS": [
       "Whenever you end your turn with an empty hand, gain #b1 #yStrength."
     ]
@@ -62,7 +62,7 @@
     "NAME": "Old Bobber",
     "FLAVOR": "The new one is shinier.",
     "DESCRIPTIONS": [
-      "Every time you play #b3 #y${ModID}:Fish in a single turn, deal #b8 damage to ALL enemies."
+      "Every time you play #b3 Colorless cards in a single turn, deal #b7 damage to ALL enemies."
     ]
   },
   "${ModID}:LuckyRing": {
