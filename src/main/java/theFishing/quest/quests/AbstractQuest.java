@@ -42,7 +42,7 @@ public abstract class AbstractQuest {
             if (progress == goal) {
                 QuestHelper.playCompleteQuestSfx();
                 grantReward();
-                atb(new AbandonQuestAction(this));
+                atb(new AbandonQuestAction(this.questID));
             }
         }
     }

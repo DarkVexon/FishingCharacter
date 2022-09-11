@@ -24,7 +24,7 @@ public class TheKeyReturns extends AbstractBoxTopper {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         for (AbstractQuest q : QuestHelper.quests) {
             q.grantReward();
-            atb(new AbandonQuestAction(q));
+            atb(new AbandonQuestAction(q.questID));
         }
     }
 

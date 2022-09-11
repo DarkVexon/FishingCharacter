@@ -2,18 +2,17 @@ package theFishing.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import theFishing.quest.QuestHelper;
-import theFishing.quest.quests.AbstractQuest;
 
 public class AbandonQuestAction extends AbstractGameAction {
-    private final AbstractQuest takenQuest;
+    private final String ID;
 
-    public AbandonQuestAction(AbstractQuest takenQuest) {
-        this.takenQuest = takenQuest;
+    public AbandonQuestAction(String ID) {
+        this.ID = ID;
     }
 
     @Override
     public void update() {
         isDone = true;
-        QuestHelper.quests.remove(takenQuest);
+        QuestHelper.quests.removeIf(q -> q.questID.equals(ID));
     }
 }

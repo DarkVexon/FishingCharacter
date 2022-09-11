@@ -48,7 +48,7 @@ public class ThePrismaticPortal extends AbstractQuest {
             if (okayed[0] && okayed[1] && okayed[2]) {
                 QuestHelper.playCompleteQuestSfx();
                 grantReward();
-                AbstractDungeon.actionManager.addToBottom(new AbandonQuestAction(this));
+                AbstractDungeon.actionManager.addToBottom(new AbandonQuestAction(this.questID));
             }
         }
     }
