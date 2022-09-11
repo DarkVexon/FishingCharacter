@@ -44,7 +44,6 @@ public class BoosterBox extends AbstractAdventurerRelic implements CustomSavable
                 possibleBoosters.add(BeastSlayer.ID);
                 possibleBoosters.add(CrystallineConfluence.ID);
                 possibleBoosters.add(SpinAttack.ID);
-                possibleBoosters.add(MerchantsStrike.ID);
             }
 
             boosterBoxBonus = CardLibrary.getCard(Wiz.getRandomItem(possibleBoosters, AbstractDungeon.cardRng)).makeCopy();
