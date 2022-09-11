@@ -19,7 +19,7 @@
     "NAME": "Broken Oar",
     "FLAVOR": "Most trips to the Spire are one-way.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Draw #b1 less card at the start of each turn."
+      "Gain [E] at the start of your turn. NL At the start of combat, shuffle #b4 #yShivs into your draw pile."
     ]
   },
   "${ModID}:MaelstromAnkh": {
@@ -41,7 +41,7 @@
     "FLAVOR": "\"Welcome. You have come very far...\"",
     "DESCRIPTIONS": [
       "The first time you play a #yPower card each combat, gain #b",
-      " #yBlock."
+      " #yBlock and [E] ."
     ]
   },
   "${ModID}:Goggles": {
@@ -59,10 +59,10 @@
     ]
   },
   "${ModID}:OldBobber": {
-    "NAME": "Bobber",
+    "NAME": "Old Bobber",
     "FLAVOR": "The new one is shinier.",
     "DESCRIPTIONS": [
-      "Every time you play #b3 #y${ModID}:Fish in a single turn, deal #b7 damage to ALL enemies."
+      "Every time you play #b3 #y${ModID}:Fish in a single turn, deal #b8 damage to ALL enemies."
     ]
   },
   "${ModID}:LuckyRing": {

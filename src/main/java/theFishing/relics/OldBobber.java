@@ -33,7 +33,7 @@ public class OldBobber extends AbstractEasyRelic {
                 this.counter = 0;
                 this.flash();
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                atb(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(7, true, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                atb(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(8, true, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             }
         }
 

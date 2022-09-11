@@ -1,5 +1,9 @@
 package theFishing.relics;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.status.Wound;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
 
@@ -15,12 +19,16 @@ public class BrokenOar extends AbstractEasyRelic {
     @Override
     public void onEquip() {
         AbstractDungeon.player.energy.energyMaster++;
-        AbstractDungeon.player.masterHandSize--;
     }
 
     @Override
     public void onUnequip() {
         AbstractDungeon.player.energy.energyMaster--;
-        AbstractDungeon.player.masterHandSize--;
+    }
+
+    public void atBattleStart() {
+        this.flash();
+        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.addToBot(new MakeTempCardInDrawPileAction(new Shiv(), 4, true, true));
     }
 }

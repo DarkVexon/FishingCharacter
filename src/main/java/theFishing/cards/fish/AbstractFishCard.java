@@ -53,30 +53,26 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             weightedFishList.put(Guppy.ID, 25);
             weightedFishList.put(Boot.ID, 10);
             weightedFishList.put(Octopus.ID, 8);
-            weightedFishList.put(Eel.ID, 7);
-            weightedFishList.put(Swordfish.ID, 5);
+            weightedFishList.put(Eel.ID, 5);
+            weightedFishList.put(Swordfish.ID, 4);
+            weightedFishList.put(Shark.ID, 4);
+            weightedFishList.put(Starfish.ID, 4);
             weightedFishList.put(Hammerhead.ID, 3);
-            weightedFishList.put(Shark.ID, 2);
-            weightedFishList.put(Starfish.ID, 2);
-            weightedFishList.put(Maw.ID, 1);
+            weightedFishList.put(Maw.ID, 2);
             weightedFishList.put(Qwilfish.ID, 1);
-            weightedFishList.put(Jellyfish.ID, 1);
-            weightedFishList.put(Blooper.ID, 1);
             weightedFishList.put(SeaMonster.ID, 1);
         }
 
         if (maelstromFishList == null) {
             maelstromFishList = new LinkedHashMap<>();
             maelstromFishList.put(Octopus.ID, 8);
-            maelstromFishList.put(Eel.ID, 7);
-            maelstromFishList.put(Swordfish.ID, 5);
+            maelstromFishList.put(Eel.ID, 5);
+            maelstromFishList.put(Swordfish.ID, 4);
+            maelstromFishList.put(Shark.ID, 4);
+            maelstromFishList.put(Starfish.ID, 4);
             maelstromFishList.put(Hammerhead.ID, 3);
-            maelstromFishList.put(Shark.ID, 2);
-            maelstromFishList.put(Starfish.ID, 2);
-            maelstromFishList.put(Maw.ID, 1);
+            maelstromFishList.put(Maw.ID, 2);
             maelstromFishList.put(Qwilfish.ID, 1);
-            maelstromFishList.put(Jellyfish.ID, 1);
-            maelstromFishList.put(Blooper.ID, 1);
             maelstromFishList.put(SeaMonster.ID, 1);
         }
     }

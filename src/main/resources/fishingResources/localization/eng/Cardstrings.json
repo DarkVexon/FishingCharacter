@@ -44,13 +44,13 @@
   },
   "${ModID}:Shark": {
     "NAME": "Shark",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
@@ -388,8 +388,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL ${ModID}:Quest: Play 5 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 3 Strength.",
-    "UPGRADE_DESCRIPTION": "Add 1 Upgraded ${ModID}:Fish into your hand. NL ${ModID}:Quest: Play 5 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 3 Strength.",
+    "DESCRIPTION": "Deal !D! damage. Add 1 ${ModID}:Fish into your hand. NL ${ModID}:Quest: Play 5 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]

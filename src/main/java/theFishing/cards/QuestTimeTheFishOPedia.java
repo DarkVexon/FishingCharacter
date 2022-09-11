@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,13 +17,13 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public QuestTimeTheFishOPedia() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard q = AbstractFishCard.returnRandomFish();
-        if (upgraded) q.upgrade();
-        makeInHand(q);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        makeInHand(AbstractFishCard.returnRandomFish());
         atb(new AcceptQuestAction(new TheFishOPedia()));
     }
 
@@ -32,6 +33,6 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     }
 
     public void upp() {
-        uDesc();
+        upgradeDamage(4);
     }
 }

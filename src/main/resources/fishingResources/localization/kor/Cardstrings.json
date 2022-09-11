@@ -73,7 +73,7 @@
   },
   "fishing:Wander": {
     "NAME": "방랑",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 카드 1장을 선택해 뽑을 카드 더미 맨 위에 넣습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드 1장을 선택해 뽑을 카드 더미 맨 위에 넣습니다."
   },
   "fishing:BagOfDefends": {
     "NAME": "수비의 가방",
@@ -109,11 +109,7 @@
   },
   "fishing:CardboardBullets": {
     "NAME": "골판지 총알",
-    "DESCRIPTION": "손패에 있는 카드의 총합 비용만큼 피해를 줍니다. NL X 비용의 카드는 4 비용으로 취급됩니다.",
-    "UPGRADE_DESCRIPTION": "손패에 있는 카드의 총합 비용 + 3만큼 피해를 줍니다. NL X 비용의 카드는 4 비용으로 취급됩니다.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (피해를 !D! 줍니다.)"
-    ]
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 있는 카드 1장당, 이 카드의 피해량이 1 감소합니다."
   },
   "fishing:FeedingFrenzy": {
     "NAME": "피딩 프렌지",
@@ -126,11 +122,11 @@
   },
   "fishing:CatchOfTheDay": {
     "NAME": "오늘의 수익",
-    "DESCRIPTION": "매 턴 종료시, 뽑을 카드 더미에 fishing:물고기 1장을 넣습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 종료시, 뽑을 카드 더미에 fishing:물고기 1장을 넣습니다.",
+    "DESCRIPTION": "매 턴 종료시, 뽑을 카드 더미 맨 위에 fishing:물고기 1장을 넣습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 종료시, 뽑을 카드 더미 맨 위에에 fishing:물고기 1장을 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "오늘의 수익",
-      "매 턴 종료시, 뽑을 카드 더미에 #y물고기 #b",
+      "매 턴 종료시, 뽑을 카드 더미 맨 위에 #y물고기 #b",
       " 장을 넣습니다."
     ]
   },
@@ -215,8 +211,7 @@
   },
   "fishing:FlamingFlip": {
     "NAME": "격렬한 물제비",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1장 소멸시킵니다. NL 카드를 !M! 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1장 소멸시킵니다. NL 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1 장 소멸시킵니다. NL 카드를 !M! 장 뽑습니다."
   },
   "fishing:BoxOfHavoc": {
     "NAME": "파괴적인 상자",
@@ -285,11 +280,11 @@
   },
   "fishing:Hook": {
     "NAME": "훅",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 fishing:물고기 1장당, 이 카드의 피해량이 !M! 증가합니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 fishing:물고기 1장당, 이 카드의 피해량이 !M! 증가합니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 무색 카드 1장당, 이 카드의 피해량이 !M! 증가합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 무색 카드 1장당, 이 카드의 피해량이 !M! 증가합니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " 장의 fishing:물고기 를 사용했습니다.)"
+      " 장의 무색 카드를 사용했습니다.)"
     ]
   },
   "fishing:Crosshairs": {
@@ -303,10 +298,10 @@
   },
   "fishing:RidiculousFishing": {
     "NAME": "어이없는 낚시",
-    "DESCRIPTION": "무색 카드를 사용할 때마다, 무작위 적에게 피해를 !M! 줍니다.",
+    "DESCRIPTION": "fishing:물고기 를 사용할 때마다, 무작위 적에게 피해를 !M! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "어이없는 낚시",
-      "무색 카드를 사용할 때마다, 무작위 적에게 피해를 #b",
+      "#y물고기 를 사용할 때마다, 무작위 적에게 피해를 #b",
       " 줍니다."
     ]
   },
@@ -394,7 +389,8 @@
   },
   "fishing:QuestTimeTheFishOPedia": {
     "NAME": "물고기 사전",
-    "DESCRIPTION": "fishing:물고기 !M! 장을 뽑을 카드 더미에 넣습니다. NL fishing:퀘스트 : 각기 다른 5 장의 fishing:물고기 카드를 사용하세요. NL *보상: 힘을 2 얻습니다.",
+    "DESCRIPTION": "fishing:물고기 1 장을 얻습니다. NL fishing:퀘스트 : 각기 다른 5종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 3 얻습니다.",
+    "UPGRADE_DESCRIPTION": "강화된 fishing:물고기 1 장을 얻습니다. NL fishing:퀘스트 : 각기 다른 5종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 3 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "물고기를 선택하세요."
     ]
@@ -469,7 +465,7 @@
   },
   "fishing:MintCondition": {
     "NAME": "상쾌한 컨디션",
-    "DESCRIPTION": "힘을 !M! 얻습니다. NL 민첩을 1 얻습니다. NL 이제 fishing:포일 카드가 힘과 민첩의 영향을 2배로 받습니다."
+    "DESCRIPTION": "모든 fishing:포일 카드의 피해량이 !M! 증가하고 획득 방어도가 !M! 증가합니다."
   },
   "fishing:TheBackpack": {
     "NAME": "배낭",
@@ -490,12 +486,11 @@
   },
   "fishing:Collector": {
     "NAME": "수집가",
-    "DESCRIPTION": "매 턴 처음으로 사용하는 카드가... NL fishing:포일 : 힘을 !M! 얻습니다. NL 희귀: 방어도를 !fishing:m2! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. 매 턴 처음으로 사용하는 카드가... NL fishing:포일 : 힘을 !M! 얻습니다. NL 희귀: 방어도를 !fishing:m2! 얻습니다."
+    "DESCRIPTION": "매 턴 종료시, 이번 턴에 fishing:포일 카드를 2 장 이상 사용했다면, 힘을 !M! 얻습니다."
   },
   "fishing:GlitterGlue": {
     "NAME": "반짝이 풀",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 부여합니다. NL 이 카드가 카드 보상에서 등장할시, 이 카드는 fishing:포일 상태가 됩니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 부여합니다. NL 이 카드를 획득하면, 덱에 있는 무작위 카드 1장과 이 카드를 fishing:포일 상태로 변화시킵니다."
   },
   "fishing:Wizardry": {
     "NAME": "위저드리",
@@ -602,5 +597,24 @@
   "fishing:ImOut": {
     "NAME": "나 가요",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드는 어떤 상황에서든 덱에서 제거할 수 있습니다."
+  },
+  "fishing:Tripwire": {
+    "NAME": "철사 덫",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 방어도가 파괴되었다면, 적 전체의 체력을 !M! 감소시킵니다."
+  },
+  "fishing:FirstClass": {
+    "NAME": "1등 인생",
+    "DESCRIPTION": "매 턴 시작시, fishing:포일 상태의 *비행 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 시작시, fishing:포일 상태의 *비행 을 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "1등 인생",
+      "매 턴 시작시, #y포일 상태의 #y비행 #b",
+      " 장을 얻습니다.",
+      " 장을 얻습니다."
+    ]
+  },
+  "fishing:Flight": {
+    "NAME": "비행",
+    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 소멸."
   }
 }
