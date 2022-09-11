@@ -81,5 +81,11 @@
       " different kinds of #yFish. NL #yReward: Gain #b2 #yStrength.",
       " NL Already played:"
     ]
+  },
+  "${ModID}:XMarksTheSpotAction": {
+    "TEXT": [
+      "Choose a card to add into your hand.",
+      "orb? :0"
+    ]
   }
 }

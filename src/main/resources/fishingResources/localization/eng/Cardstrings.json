@@ -183,7 +183,7 @@
     "DESCRIPTION": "Choose 1 of 3 X-cost cards of any color to add into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose 1 of 3 X-cost cards of any color to add into your hand. NL Gain [E]. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Choose a card to add into your hand."
+      " NL (You get 5 Orb slots!)"
     ]
   },
   "${ModID}:Splash": {

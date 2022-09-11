@@ -1,6 +1,5 @@
 package theFishing.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -11,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.XMarksTheSpotAction;
 
 import java.util.ArrayList;
 
@@ -39,18 +39,12 @@ public class XMarksTheSpot extends AbstractFishingCard {
         for (int i = 0; i < 3; i++) {
             AbstractCard q = CardLibrary.getCard(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1))).makeCopy();
             if (q instanceof Tempest) {
-                q.rawDescription = q.rawDescription + " NL (You get 5 Orb slots!)";
+                q.rawDescription = q.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
                 q.initializeDescription();
             }
             cardsList.add(q);
         }
-        atb(new SelectCardsCenteredAction(cardsList, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
-            if (cards.get(0).cardID.equals(Tempest.ID) && p.maxOrbs == 0) {
-                att(new TalkAction(true, "orb? :0", 0.3F, 2F));
-                att(new IncreaseMaxOrbAction(5));
-            }
-            att(new MakeTempCardInHandAction(cards.get(0)));
-        }));
+        atb(new XMarksTheSpotAction(cardsList));
         if (upgraded) {
             atb(new GainEnergyAction(1));
         }
