@@ -19,7 +19,6 @@ public class TreasureChest extends AbstractFishingCard implements StartupCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 12;
         baseBlock = 4;
-        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

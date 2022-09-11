@@ -14,44 +14,34 @@ public class CardboardBullets extends AbstractFishingCard {
 
     public CardboardBullets() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 0;
+        baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
-    private int getEnergyAmount(AbstractCard card) {
-        int cost = card.costForTurn;
-        if (card.cost == -1) cost = 4;
-        if (card.cost == -2) cost = 0;
-        if (card.freeToPlayOnce) cost = 0;
-        return cost;
-    }
-
+    @Override
     public void applyPowers() {
-        baseDamage = AbstractDungeon.player.hand.group.stream().mapToInt(this::getEnergyAmount).sum();
-        if (upgraded) {
-            baseDamage += 3;
-        }
+        int realBaseDamage = this.baseDamage;
+        int modifier = (int) AbstractDungeon.player.hand.group.stream().filter(c -> c != this).count();
+        baseDamage -= modifier;
         super.applyPowers();
-        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
-    }
-
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
     }
 
     @Override
-    public void onMoveToDiscard() {
-        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION);
-        initializeDescription();
+    public void calculateCardDamage(AbstractMonster mo) {
+        int realBaseDamage = this.baseDamage;
+        int modifier = (int) AbstractDungeon.player.hand.group.stream().filter(c -> c != this).count();
+        baseDamage -= modifier;
+        super.calculateCardDamage(mo);
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
     }
 
     public void upp() {
-        uDesc();
+        upgradeDamage(3);
     }
 }

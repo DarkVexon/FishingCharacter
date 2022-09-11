@@ -1,6 +1,5 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -9,7 +8,7 @@ import theFishing.powers.LambdaPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.topDeck;
 
 public class CatchOfTheDay extends AbstractFishingCard {
     public final static String ID = makeID("CatchOfTheDay");
@@ -25,7 +24,7 @@ public class CatchOfTheDay extends AbstractFishingCard {
             public void atEndOfTurn(boolean isPlayer) {
                 flash();
                 for (int i = 0; i < amount; i++) {
-                    atb(new MakeTempCardInDrawPileAction(AbstractFishCard.returnRandomFish(), 1, true, true));
+                    topDeck(AbstractFishCard.returnRandomFish());
                 }
             }
 

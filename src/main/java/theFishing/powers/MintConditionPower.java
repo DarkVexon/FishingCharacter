@@ -15,30 +15,26 @@ public class MintConditionPower extends AbstractEasyPower {
     public static String ID = makeID(MintConditionPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
-    public MintConditionPower() {
-        super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, 1);
+    public MintConditionPower(int amount) {
+        super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if (isFoil(card) && AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            return type == DamageInfo.DamageType.NORMAL ? damage + ((float) AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount * amount) : damage;
+        if (isFoil(card)) {
+            return type == DamageInfo.DamageType.NORMAL ? damage + amount : damage;
         }
         return damage;
     }
 
     public float modifyBlock(float blockAmount, AbstractCard card) {
-        if (isFoil(card) && AbstractDungeon.player.hasPower(DexterityPower.POWER_ID)) {
-            return blockAmount + ((float) AbstractDungeon.player.getPower(DexterityPower.POWER_ID).amount * amount);
+        if (isFoil(card)) {
+            return blockAmount + ((float) amount);
         }
         return blockAmount;
     }
 
     @Override
     public void updateDescription() {
-        if (amount < 4) {
-            description = powerStrings.DESCRIPTIONS[amount - 1];
-        } else {
-            description = powerStrings.DESCRIPTIONS[4] + amount + powerStrings.DESCRIPTIONS[5];
-        }
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount + powerStrings.DESCRIPTIONS[2];
     }
 }

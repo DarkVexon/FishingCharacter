@@ -12,7 +12,7 @@ public class Boot extends AbstractFishCard {
 
     public Boot() {
         super(ID, CardType.ATTACK, CardTarget.ALL_ENEMY);
-        baseDamage = 1;
+        baseDamage = 2;
         isMultiDamage = true;
     }
 

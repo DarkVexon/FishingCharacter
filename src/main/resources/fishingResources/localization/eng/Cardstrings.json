@@ -44,13 +44,13 @@
   },
   "${ModID}:Shark": {
     "NAME": "Shark",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
@@ -106,11 +106,7 @@
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
-    "DESCRIPTION": "Deal damage equal to the total cost of cards in your hand. NL X-cost counts as 4.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to the total cost of cards in your hand + 3. NL X-cost counts as 4.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)"
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Deals 1 less damage for each other card in your hand."
   },
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
@@ -123,12 +119,12 @@
   },
   "${ModID}:CatchOfTheDay": {
     "NAME": "Catch of the Day",
-    "DESCRIPTION": "At the end of your turn, shuffle a ${ModID}:Fish into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, shuffle a ${ModID}:Fish into your draw pile.",
+    "DESCRIPTION": "At the end of your turn, put a ${ModID}:Fish on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, put a ${ModID}:Fish on top of your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "Catch of the Day",
-      "At the end of your turn, shuffle #b",
-      " #yFish into your draw pile."
+      "At the end of your turn, put #b",
+      " #yFish on top of your draw pile."
     ]
   },
   "${ModID}:Baited": {
@@ -208,8 +204,7 @@
   },
   "${ModID}:FlamingFlip": {
     "NAME": "Flaming Flip",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw !M! cards."
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
@@ -278,10 +273,10 @@
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each ${ModID}:Fish played this turn.",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Colorless card played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " ${ModID}:Fish played.)"
+      " Colorless cards played.)"
     ]
   },
   "${ModID}:Crosshairs": {
@@ -295,7 +290,7 @@
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
-    "DESCRIPTION": "Whenever you play a Colorless card, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you play a ${ModID}:Fish, deal !M! damage to a random enemy."
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
@@ -375,7 +370,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL ${ModID}:Quest: Play 5 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
+    "DESCRIPTION": "Deal !D! damage. Add 1 ${ModID}:Fish into your hand. NL ${ModID}:Quest: Play 5 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]
@@ -443,7 +438,7 @@
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain 1 Dexterity. NL ${ModID}:Foil cards benefit double from Strength and Dexterity."
+    "DESCRIPTION": "${ModID}:Foil cards deal !M! more damage and grant !M! more Block."
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
@@ -464,11 +459,11 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "If the first card you play each turn is... NL ${ModID}:Foil: Gain !M! Strength. NL Rare: Gain !${ModID}:m2! Block."
+    "DESCRIPTION": "At the end of your turn, if you played 2 or more ${ModID}:Foil cards, gain !M! Strength."
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL When this appears in a card reward, the cards are ${ModID}:Foil."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL When you obtain this, make it and a random card in your deck ${ModID}:Foil."
   },
   "${ModID}:Wizardry": {
     "NAME": "Wizardry",
@@ -565,5 +560,24 @@
   "${ModID}:ImOut": {
     "NAME": "I'm Out",
     "DESCRIPTION": "Deal !D! damage. NL You may remove this card from your deck at any time."
+  },
+  "${ModID}:Tripwire": {
+    "NAME": "Tripwire",
+    "DESCRIPTION": "Deal !D! damage. NL If your Block is broken this turn, ALL enemies lose !M! HP."
+  },
+  "${ModID}:FirstClass": {
+    "NAME": "First Class",
+    "DESCRIPTION": "At the start of your turn, add a ${ModID}:Foil *Flight into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a ${ModID}:Foil *Flight into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "First Class",
+      "At the start of your turn, add #b",
+      " #yFlight into your hand.",
+      " #yFlights into your hand."
+    ]
+  },
+  "${ModID}:Flight": {
+    "NAME": "Flight",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Exhaust."
   }
 }

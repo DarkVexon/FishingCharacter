@@ -1,6 +1,7 @@
 package theFishing.relics;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,7 +18,7 @@ public class Signpost extends AbstractEasyRelic {
         super(ID, RelicTier.UNCOMMON, LandingSound.FLAT, TheFishing.Enums.FISHING_COLOR);
     }
 
-    public static final int BLOCK_GRANTED = 7;
+    public static final int BLOCK_GRANTED = 6;
 
     @Override
     public void atBattleStart() {
@@ -35,6 +36,7 @@ public class Signpost extends AbstractEasyRelic {
             flash();
             atb(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             atb(new GainBlockAction(AbstractDungeon.player, BLOCK_GRANTED));
+            atb(new GainEnergyAction(1));
             grayscale = true;
         }
     }

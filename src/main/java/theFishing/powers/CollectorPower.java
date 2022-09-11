@@ -1,16 +1,15 @@
 package theFishing.powers;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.patch.foil.FoilPatches.isFoil;
 import static theFishing.util.Wiz.atb;
 
 public class CollectorPower extends AbstractEasyPower {
@@ -21,31 +20,22 @@ public class CollectorPower extends AbstractEasyPower {
         super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
-    public boolean activated = true;
-
     @Override
-    public void atStartOfTurn() {
-        activated = false;
+    public void atEndOfTurn(boolean isPlayer) {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> isFoil(q)).count() >= 2) {
+            flash();
+            atb(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+        }
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        boolean triggered = false;
-        if (FoilPatches.isFoil(card) && !activated) {
-            flash();
-            applyToSelf(new StrengthPower(owner, amount));
-            triggered = true;
-        }
-        if (card.rarity == AbstractCard.CardRarity.RARE && !activated) {
-            if (!triggered)
-                flash();
-            atb(new GainBlockAction(owner, amount * 2));
-        }
-        activated = true;
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount * 2 + powerStrings.DESCRIPTIONS[2];
+        int cards = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> isFoil(q)).count();
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + cards + ((cards == 1) ? powerStrings.DESCRIPTIONS[2] : powerStrings.DESCRIPTIONS[3]);
     }
 }

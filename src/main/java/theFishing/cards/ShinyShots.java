@@ -21,7 +21,7 @@ public class ShinyShots extends AbstractFishingCard {
     public ShinyShots() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 5;
-        baseBlock = 3;
+        baseBlock = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
