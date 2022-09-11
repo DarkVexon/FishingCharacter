@@ -15,7 +15,7 @@ public class FullySleevedPower extends LambdaPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public FullySleevedPower(int amount) {
-        super(makeID("FullySleevedPower"), powerStrings.NAME, AbstractPower.PowerType.BUFF, false, AbstractDungeon.player, amount);
+        super(ID, powerStrings.NAME, AbstractPower.PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
     @Override

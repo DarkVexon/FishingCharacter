@@ -184,11 +184,7 @@
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",
-    "DESCRIPTION": "After you play an X-cost card, gain [E].",
-    "EXTENDED_DESCRIPTION": [
-      "Reserves",
-      "After you play an X-cost card, gain "
-    ]
+    "DESCRIPTION": "After you play an X-cost card, gain [E]."
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
