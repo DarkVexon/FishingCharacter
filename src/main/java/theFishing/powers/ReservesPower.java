@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
-public class ReservesPower extends LambdaPower {
+public class ReservesPower extends AbstractAdventurerPower {
     public static String ID = makeID(ReservesPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 

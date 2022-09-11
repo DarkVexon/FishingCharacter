@@ -8,7 +8,7 @@ import theFishing.TheFishing;
 
 import static theFishing.FishingMod.makeID;
 
-public class Newsletter extends AbstractEasyRelic {
+public class Newsletter extends AbstractAdventurerRelic {
     public static final String ID = makeID("Newsletter");
 
     public Newsletter() {

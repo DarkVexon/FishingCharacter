@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 
 import static theFishing.FishingMod.makeID;
 
-public class TakeItEasyPower extends AbstractEasyPower {
+public class TakeItEasyPower extends AbstractAdventurerPower {
     public static String ID = makeID(TakeItEasyPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 

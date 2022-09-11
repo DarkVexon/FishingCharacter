@@ -8,7 +8,7 @@ import theFishing.TheFishing;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 
-public class Goggles extends AbstractEasyRelic {
+public class Goggles extends AbstractAdventurerRelic {
     public static final String ID = makeID("Goggles");
 
     public Goggles() {

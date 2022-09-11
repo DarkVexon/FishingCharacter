@@ -10,7 +10,7 @@ import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
 
-public class TripwirePower extends AbstractEasyPower implements OnMyBlockBrokenPower {
+public class TripwirePower extends AbstractAdventurerPower implements OnMyBlockBrokenPower {
     public static String ID = makeID(TripwirePower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
@@ -21,9 +21,9 @@ public class TripwirePower extends AbstractEasyPower implements OnMyBlockBrokenP
     @Override
     public void onMyBlockBroken() {
         flash();
-        addToBot(new AnimateHopAction(owner));
-        addToBot(new AllEnemyLoseHPAction(amount));
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        addToTop(new AllEnemyLoseHPAction(amount));
+        addToTop(new AnimateHopAction(owner));
     }
 
     public void atEndOfRound() {

@@ -4,7 +4,7 @@ import theFishing.TheFishing;
 
 import static theFishing.FishingMod.makeID;
 
-public class MaelstromAnkh extends AbstractEasyRelic {
+public class MaelstromAnkh extends AbstractAdventurerRelic {
     public static final String ID = makeID("MaelstromAnkh");
 
     public MaelstromAnkh() {

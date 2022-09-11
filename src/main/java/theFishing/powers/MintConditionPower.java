@@ -5,13 +5,11 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.isFoil;
 
-public class MintConditionPower extends AbstractEasyPower {
+public class MintConditionPower extends AbstractAdventurerPower {
     public static String ID = makeID(MintConditionPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 

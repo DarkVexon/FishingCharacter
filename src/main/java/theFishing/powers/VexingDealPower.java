@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static theFishing.FishingMod.makeID;
 
-public class VexingDealPower extends LambdaPower {
+public class VexingDealPower extends AbstractAdventurerPower {
     public static String ID = makeID(VexingDealPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 

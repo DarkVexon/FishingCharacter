@@ -11,7 +11,7 @@ import theFishing.TheFishing;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
-public class Signpost extends AbstractEasyRelic {
+public class Signpost extends AbstractAdventurerRelic {
     public static final String ID = makeID("Signpost");
 
     public Signpost() {

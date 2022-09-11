@@ -1,15 +1,16 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.SmartTopCardPlayAction;
 import theFishing.effects.SilentQuickPlayerSpotlight;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.adp;
+import static theFishing.util.Wiz.atb;
 
 public class ThatsAllFolks extends AbstractFishingCard {
     public final static String ID = makeID("ThatsAllFolks");
@@ -24,13 +25,7 @@ public class ThatsAllFolks extends AbstractFishingCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (p.hand.size() <= 1) {
             AbstractDungeon.effectsQueue.add(new SilentQuickPlayerSpotlight());
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    att(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
-                }
-            });
+            atb(new SmartTopCardPlayAction());
         }
     }
 

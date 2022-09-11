@@ -16,7 +16,7 @@ public class RingTheBell extends AbstractFishingCard {
     //ART: Adventurer in the background aiming their pistol at the mocking Cursed Bell in the foreground
 
     public RingTheBell() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 13;
         cardsToPreview = new CurseOfTheBell();
     }
@@ -28,6 +28,7 @@ public class RingTheBell extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        isEthereal = true;
+        uDesc();
     }
 }

@@ -78,5 +78,36 @@
       "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
       " #yBlock."
     ]
+  },
+  "${ModID}:CatchOfTheDayPower": {
+    "NAME": "Catch of the Day",
+    "DESCRIPTIONS": [
+      "At the end of your turn, put #b",
+      " #yFish on top of your draw pile."
+    ]
+  },
+  "${ModID}:FirstClassPower": {
+    "NAME": "First Class",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " #yFlight into your hand.",
+      " #yFlights into your hand."
+    ]
+  },
+  "${ModID}:ShinyShivPower": {
+    "NAME": "Shimmering Shield",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yFoil card this turn, add #b",
+      " #yShiv",
+      " #yShivs",
+      " into your hand."
+    ]
+  },
+  "${ModID}:PowerPelletPower": {
+    "NAME": "Power Pellet",
+    "DESCRIPTIONS": [
+      "#yWaka #yWakas deal #b",
+      " additional damage."
+    ]
   }
 }

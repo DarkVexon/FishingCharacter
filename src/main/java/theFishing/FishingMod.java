@@ -28,7 +28,7 @@ import theFishing.potions.CarePackage;
 import theFishing.potions.OceanInAJar;
 import theFishing.potions.StarlightSoda;
 import theFishing.quest.QuestHelper;
-import theFishing.relics.AbstractEasyRelic;
+import theFishing.relics.AbstractAdventurerRelic;
 import theFishing.util.FoilSparkleHandler;
 import theFishing.util.Wiz;
 
@@ -125,8 +125,8 @@ public class FishingMod implements
     @Override
     public void receiveEditRelics() {
         new AutoAdd(modID)
-                .packageFilter(AbstractEasyRelic.class)
-                .any(AbstractEasyRelic.class, (info, relic) -> {
+                .packageFilter(AbstractAdventurerRelic.class)
+                .any(AbstractAdventurerRelic.class, (info, relic) -> {
                     if (relic.color == null) {
                         BaseMod.addRelic(relic, RelicType.SHARED);
                     } else {

@@ -1,15 +1,13 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.HunkerDownAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.att;
 
 public class HunkerDown extends AbstractFishingCard {
     public final static String ID = makeID("HunkerDown");
@@ -22,15 +20,7 @@ public class HunkerDown extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1 < 3) {
-                    att(new GainEnergyAction(1));
-                }
-            }
-        });
+        atb(new HunkerDownAction());
         rawDescription = cardStrings.DESCRIPTION;
         initializeDescription();
     }

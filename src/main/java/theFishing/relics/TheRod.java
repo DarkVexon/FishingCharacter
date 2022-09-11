@@ -1,13 +1,12 @@
 package theFishing.relics;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
 import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
 
-public class TheRod extends AbstractEasyRelic {
+public class TheRod extends AbstractAdventurerRelic {
     public static final String ID = makeID("TheRod");
 
     public TheRod() {

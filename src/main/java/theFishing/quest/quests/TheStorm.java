@@ -1,21 +1,14 @@
 package theFishing.quest.quests;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
+import theFishing.actions.StormCompletionAction;
 import theFishing.util.TexLoader;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.att;
 
 public class TheStorm extends AbstractQuest {
 
@@ -39,16 +32,7 @@ public class TheStorm extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(true);
-                att(new LoseHPAction(target, AbstractDungeon.player, 17));
-                att(new VFXAction(new LightningEffect(target.drawX, target.drawY), 0.05F));
-                att(new SFXAction("ORB_LIGHTNING_EVOKE"));
-            }
-        });
+        atb(new StormCompletionAction());
     }
 
     @Override

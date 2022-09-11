@@ -120,12 +120,7 @@
   "${ModID}:CatchOfTheDay": {
     "NAME": "Catch of the Day",
     "DESCRIPTION": "At the end of your turn, put a ${ModID}:Fish on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, put a ${ModID}:Fish on top of your draw pile.",
-    "EXTENDED_DESCRIPTION": [
-      "Catch of the Day",
-      "At the end of your turn, put #b",
-      " #yFish on top of your draw pile."
-    ]
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, put a ${ModID}:Fish on top of your draw pile."
   },
   "${ModID}:Baited": {
     "NAME": "Baited",
@@ -146,7 +141,8 @@
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
-    "DESCRIPTION": "ALL enemies lose 13 HP. NL Put a *Curse *of *the *Bell on top of your draw pile."
+    "DESCRIPTION": "ALL enemies lose 13 HP. NL Put a *Curse *of *the *Bell on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL ALL enemies lose 13 HP. NL Put a *Curse *of *the *Bell on top of your draw pile."
   },
   "${ModID}:Bobber": {
     "NAME": "Bobber",

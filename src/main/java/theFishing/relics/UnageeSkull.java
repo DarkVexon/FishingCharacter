@@ -8,7 +8,7 @@ import theFishing.cards.fish.AbstractFishCard;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
-public class UnageeSkull extends AbstractEasyRelic {
+public class UnageeSkull extends AbstractAdventurerRelic {
     public static final String ID = makeID("UnageeSkull");
 
     public UnageeSkull() {

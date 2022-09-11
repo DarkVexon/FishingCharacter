@@ -2,7 +2,6 @@ package theFishing.relics;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +13,7 @@ import theFishing.cards.fish.AbstractFishCard;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
-public class OldBobber extends AbstractEasyRelic {
+public class OldBobber extends AbstractAdventurerRelic {
     public static final String ID = makeID("OldBobber");
 
     public OldBobber() {

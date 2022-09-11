@@ -25,7 +25,7 @@ import java.util.Random;
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
 
-public class BoosterBox extends AbstractEasyRelic implements CustomSavable<String> {
+public class BoosterBox extends AbstractAdventurerRelic implements CustomSavable<String> {
     public static final String ID = makeID("BoosterBox");
 
     private AbstractCard boosterBoxBonus;

@@ -2,14 +2,13 @@ package theFishing.relics;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
 
 import static theFishing.FishingMod.makeID;
 
-public class BrokenOar extends AbstractEasyRelic {
+public class BrokenOar extends AbstractAdventurerRelic {
     public static final String ID = makeID("BrokenOar");
 
     public BrokenOar() {

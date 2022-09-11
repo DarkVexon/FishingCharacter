@@ -12,7 +12,7 @@ import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
 
-public class RidiculousFishingPower extends LambdaPower {
+public class RidiculousFishingPower extends AbstractAdventurerPower {
     public static String ID = makeID(RidiculousFishingPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 

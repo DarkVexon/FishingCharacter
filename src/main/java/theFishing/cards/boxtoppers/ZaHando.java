@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.ZaHandoAction;
 import theFishing.util.Wiz;
 
 import java.util.ArrayList;
@@ -27,20 +28,7 @@ public class ZaHando extends AbstractBoxTopper {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (!p.hand.isEmpty()) {
-                    if (p.hand.size() % 2 == 0) {
-                        att(new ExhaustSpecificCardAction(p.hand.group.get(p.hand.group.size() / 2), p.hand));
-                        att(new ExhaustSpecificCardAction(p.hand.group.get(p.hand.group.size() / 2 - 1), p.hand));
-                    } else {
-                        att(new ExhaustSpecificCardAction(p.hand.group.get(p.hand.group.size() / 2), p.hand));
-                    }
-                }
-            }
-        });
+        atb(new ZaHandoAction());
     }
 
     @Override

@@ -1,14 +1,12 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.MaybeLaterAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.att;
 
 public class MaybeLater extends AbstractFishingCard {
     public final static String ID = makeID("MaybeLater");
@@ -22,16 +20,7 @@ public class MaybeLater extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (!p.hand.isEmpty()) {
-                    att(new GainBlockAction(p, block));
-                }
-                att(new PutOnDeckAction(p, p, 1, false));
-            }
-        });
+        atb(new MaybeLaterAction(block));
     }
 
     public void upp() {

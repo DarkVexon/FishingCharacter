@@ -3,7 +3,6 @@ package theFishing.patch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.shop.StoreRelic;
-import theFishing.cards.OnBuyRelicCard;
 
 public class MerchantsStrikePatch {
     @SpirePatch(

@@ -12,7 +12,7 @@ import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.isFoil;
 import static theFishing.util.Wiz.atb;
 
-public class CollectorPower extends AbstractEasyPower {
+public class CollectorPower extends AbstractAdventurerPower {
     public static String ID = makeID(CollectorPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
