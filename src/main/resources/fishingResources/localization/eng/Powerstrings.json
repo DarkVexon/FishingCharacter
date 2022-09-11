@@ -2,9 +2,9 @@
   "${ModID}:TakeItEasyPower": {
     "NAME": "Fasting-B",
     "DESCRIPTIONS": [
-      "Draw #b",
-      " less card at the start of each turn.",
-      " less cards at the start of each turn."
+      "At the start of your turn, discard #b",
+      " card.",
+      " cards."
     ]
   },
   "${ModID}:DrawLessNextTurnPower": {

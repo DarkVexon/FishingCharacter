@@ -14,7 +14,7 @@ public class AnglerForm extends AbstractFishingCard {
 
     public AnglerForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         selfRetain = true;
         tags.add(BaseModCardTags.FORM);
     }

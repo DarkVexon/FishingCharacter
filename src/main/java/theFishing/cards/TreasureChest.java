@@ -7,9 +7,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
+import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.makeInHand;
 
 public class TreasureChest extends AbstractFishingCard implements StartupCard {
     public final static String ID = makeID("TreasureChest");
@@ -18,12 +20,10 @@ public class TreasureChest extends AbstractFishingCard implements StartupCard {
     public TreasureChest() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 12;
-        baseBlock = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        atb(new DrawCardAction(1));
+        makeInHand(AbstractFishCard.returnRandomFish());
     }
 
     public void upp() {

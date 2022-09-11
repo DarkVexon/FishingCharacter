@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
@@ -15,11 +16,11 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
 
     public QuestTimeTheFishOPedia() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 6;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        atb(new DrawCardAction(magicNumber));
         atb(new AcceptQuestAction(new TheFishOPedia()));
     }
 
@@ -29,6 +30,6 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeMagicNumber(1);
     }
 }

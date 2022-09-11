@@ -73,7 +73,9 @@
       "fishing:포일",
       "TRANSLATION NOTE: Make sure this is the same as implementations of the Foil keyword in cards.",
       "fishing:물고기",
-      "TRANSLATION NOTE: Make sure this is the same as implementations of the Fish keyword in cards."
+      "TRANSLATION NOTE: Make sure this is the same as implementations of the Fish keyword in cards.",
+      "주의",
+      "포션 슬롯이 비어있을때만 포션을 얻을수 있습니다."
     ]
   },
   "fishing:QuestLog": {
@@ -87,6 +89,12 @@
       "#y퀘스트: 각기 다른 #b",
       " 장의 #y물고기 카드를 사용하세요. NL #y보상: #y힘을 #b3 #y얻습니다.",
       " NL 이미 사용한 물고기:"
+    ]
+  },
+  "${ModID}:XMarksTheSpotAction": {
+    "TEXT": [
+      "Choose a card to add into your hand.",
+      "orb? :0"
     ]
   }
 }

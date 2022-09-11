@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.shuffleIn;
+import static theFishing.util.Wiz.*;
 
 public class GoneFishing extends AbstractFishingCard {
     public final static String ID = makeID("GoneFishing");
@@ -22,7 +21,7 @@ public class GoneFishing extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new IntangiblePlayerPower(p, 1));
         for (int i = 0; i < magicNumber; i++) {
-            shuffleIn(AbstractFishCard.returnRandomFish());
+            topDeck(AbstractFishCard.returnRandomFish());
         }
     }
 

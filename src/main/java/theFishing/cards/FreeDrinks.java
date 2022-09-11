@@ -42,13 +42,6 @@ public class FreeDrinks extends AbstractFishingCard implements OnObtainCard {
         }
     }
 
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        ArrayList<TooltipInfo> result = new ArrayList<>();
-        result.add(new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1]));
-        return result;
-    }
-
     public void upp() {
         upgradeMagicNumber(1);
     }

@@ -168,7 +168,7 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Startup: Gain !M! *Gold."
+    "DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Startup: Gain !M! *Gold."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
@@ -200,7 +200,7 @@
   },
   "${ModID}:FlamingFlip": {
     "NAME": "Flaming Flip",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw 1 card."
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
@@ -245,7 +245,7 @@
   },
   "${ModID}:GoneFishing": {
     "NAME": "Gone Fishing",
-    "DESCRIPTION": "Gain 1 Intangible. NL Shuffle !M! ${ModID}:Fish into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Gain 1 Intangible. NL Put !M! ${ModID}:Fish on top of your draw pile. NL Exhaust."
   },
   "${ModID}:ChocolateChipCookie": {
     "NAME": "Chocolate Chip Cookie",
@@ -306,7 +306,7 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] [E] and draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] and draw 1 card."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -356,7 +356,7 @@
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",
-    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Plated *Armor. NL Draw 1 less card at the start of each turn."
+    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Plated *Armor. NL At the start of your turn, discard 1 card."
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Storm",
@@ -369,7 +369,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Quest: Play 4 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Quest: Play 4 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]

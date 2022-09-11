@@ -66,7 +66,9 @@
       "${ModID}:foil",
       "${ModID}:Foil",
       "${ModID}:fish",
-      "${ModID}:Fish"
+      "${ModID}:Fish",
+      "DISCLAIMER",
+      "Offer only valid with an empty potion slot."
     ]
   },
   "${ModID}:QuestLog": {

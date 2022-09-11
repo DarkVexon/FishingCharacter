@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import theFishing.cards.FreeDrinks;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -42,15 +43,6 @@ public class FoilTooltips1 {
                 sumTooltipHeight -= textHeight + BOX_EDGE_H * 3.15F;
             }
         }
-        List<TooltipInfo> tooltips = new ArrayList<>();
-        if (FoilPatches.isFoil(___card) && !___card.rawDescription.toLowerCase().contains(UI_STRINGS.TEXT[0])) {
-            tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(UI_STRINGS.TEXT[0]), BaseMod.getKeywordDescription(UI_STRINGS.TEXT[0])));
-        }
-        if (!tooltips.isEmpty())
-            for (TooltipInfo tooltip : tooltips) {
-                float textHeight = -FontHelper.getSmartHeight(FontHelper.tipHeaderFont, TipHelper.capitalize(tooltip.title), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - FontHelper.getSmartHeight(FontHelper.tipBodyFont, tooltip.description, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
-                textHeight -= sumTooltipHeight -= textHeight + BOX_EDGE_H * 3.15F;
-            }
         sumTooltipHeight *= -1.0F;
         if (sumTooltipHeight > AbstractCard.IMG_HEIGHT)
             y[0] = y[0] + sumTooltipHeight - AbstractCard.IMG_HEIGHT;
@@ -66,6 +58,9 @@ public class FoilTooltips1 {
             List<TooltipInfo> tooltips = new ArrayList<>();
             if (FoilPatches.isFoil(acard) && !acard.rawDescription.toLowerCase().contains(UI_STRINGS.TEXT[0])) {
                 tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(UI_STRINGS.TEXT[0]), BaseMod.getKeywordDescription(UI_STRINGS.TEXT[0])));
+            }
+            if (acard instanceof FreeDrinks) {
+                tooltips.add(new TooltipInfo(UI_STRINGS.TEXT[4], UI_STRINGS.TEXT[5]));
             }
             if (!tooltips.isEmpty())
                 for (TooltipInfo tooltip : tooltips) {

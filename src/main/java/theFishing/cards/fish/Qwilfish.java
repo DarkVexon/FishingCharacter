@@ -14,7 +14,7 @@ public class Qwilfish extends AbstractFishCard {
 
     public Qwilfish() {
         super(ID, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void fishEffect(AbstractPlayer p, AbstractMonster m) {
