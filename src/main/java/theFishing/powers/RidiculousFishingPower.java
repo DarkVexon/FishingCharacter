@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
 
@@ -21,7 +22,7 @@ public class RidiculousFishingPower extends LambdaPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card.color == AbstractCard.CardColor.COLORLESS) {
+        if (card instanceof AbstractFishCard) {
             flash();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
