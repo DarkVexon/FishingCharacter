@@ -75,7 +75,7 @@
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
     "DESCRIPTION": "Gain !B! Block X times. NL When you remove a Defend from your deck, Upgrade this.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Stuffed with Defends!"
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Stuffed with Defends."
   },
   "${ModID}:Oblivious": {
     "NAME": "Oblivious",

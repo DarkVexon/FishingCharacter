@@ -4,7 +4,7 @@
     <groupId>UnimportantInfo</groupId>
 
     <artifactId>TheAdventurer</artifactId>
-    <version>2.13</version>
+    <version>2.15</version>
     <name>The Adventurer</name>
     <description>Adds a new playable character: The Adventurer.</description>
     <!-- Change the above for mod information. -->
