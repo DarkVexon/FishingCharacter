@@ -106,7 +106,7 @@
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
-    "DESCRIPTION": "Deal !D! damage. NL Deals 1 less damage for each other card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Deals 2 less damage for each other card in your hand."
   },
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
@@ -410,7 +410,7 @@
   },
   "${ModID}:TheEternityGem": {
     "NAME": "The Eternity Gem",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
   },
   "${ModID}:ShinyShots": {
     "NAME": "Shiny Shots",

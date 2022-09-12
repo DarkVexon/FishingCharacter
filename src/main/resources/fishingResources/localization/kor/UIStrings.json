@@ -96,5 +96,15 @@
       "손으로 가져올 카드를 선택하세요.",
       "orb? :0"
     ]
+  },
+  "fishing:BackpackAction": {
+    "TEXT": [
+      "손으로 가져올 카드를 선택하세요."
+    ]
+  },
+  "fishing:FullHouseAction": {
+    "TEXT": [
+      "복사할 카드를 선택하세요."
+    ]
   }
 }

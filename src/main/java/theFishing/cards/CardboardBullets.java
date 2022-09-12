@@ -24,7 +24,7 @@ public class CardboardBullets extends AbstractFishingCard {
     @Override
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
-        int modifier = (int) AbstractDungeon.player.hand.group.stream().filter(c -> c != this).count();
+        int modifier = (int) AbstractDungeon.player.hand.group.stream().filter(c -> c != this).count() * 2;
         baseDamage -= modifier;
         super.applyPowers();
         this.baseDamage = realBaseDamage;
@@ -34,7 +34,7 @@ public class CardboardBullets extends AbstractFishingCard {
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         int realBaseDamage = this.baseDamage;
-        int modifier = (int) AbstractDungeon.player.hand.group.stream().filter(c -> c != this).count();
+        int modifier = (int) AbstractDungeon.player.hand.group.stream().filter(c -> c != this).count() * 2;
         baseDamage -= modifier;
         super.calculateCardDamage(mo);
         this.baseDamage = realBaseDamage;

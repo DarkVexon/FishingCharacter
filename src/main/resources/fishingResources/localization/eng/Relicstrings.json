@@ -55,7 +55,7 @@
     "NAME": "Newsletter",
     "FLAVOR": "\"Peculiar! A shimmering cube of false promises.\" - Ranwid",
     "DESCRIPTIONS": [
-      "The merchant's cards are #y${ModID}:Foil, #yUpgraded, and cost #b20% less."
+      "The merchant's cards are #y${ModID}:Foil, #yUpgraded, and cost #b25% less."
     ]
   },
   "${ModID}:OldBobber": {

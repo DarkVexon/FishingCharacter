@@ -28,5 +28,5 @@ public class Newsletter extends AbstractAdventurerRelic {
         return (Settings.isEndless || AbstractDungeon.floorNum <= 48) && !(AbstractDungeon.getCurrRoom() instanceof ShopRoom);
     }
 
-    public static final float SHOP_CARD_PRICE_REDUCE = 0.8F; // mult by
+    public static final float SHOP_CARD_PRICE_REDUCE = 0.75F; // mult by
 }

@@ -89,5 +89,15 @@
       "Choose a card to add into your hand.",
       "orb? :0"
     ]
+  },
+  "${ModID}:BackpackAction": {
+    "TEXT": [
+      "Choose a card to put into your hand."
+    ]
+  },
+  "${ModID}:FullHouseAction": {
+    "TEXT": [
+      "Choose a card to duplicate."
+    ]
   }
 }
