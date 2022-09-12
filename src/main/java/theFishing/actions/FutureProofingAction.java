@@ -1,8 +1,12 @@
 package theFishing.actions;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theFishing.util.Wiz;
 
 import java.util.ArrayList;
@@ -22,8 +26,14 @@ public class FutureProofingAction extends AbstractGameAction {
                     possCards.add(q);
                 }
             }
-            if (!possCards.isEmpty())
-                Wiz.getRandomItem(possCards, AbstractDungeon.cardRandomRng).upgrade();
+            if (!possCards.isEmpty()) {
+                AbstractCard tar = Wiz.getRandomItem(possCards, AbstractDungeon.cardRandomRng);
+                tar.upgrade();
+                float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
+                float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy(), x, y));
+                AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
+            }
         }
     }
 }

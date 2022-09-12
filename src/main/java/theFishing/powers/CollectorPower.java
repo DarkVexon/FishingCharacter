@@ -21,6 +21,11 @@ public class CollectorPower extends AbstractAdventurerPower {
     }
 
     @Override
+    public void atStartOfTurn() {
+        updateDescription();
+    }
+
+    @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> isFoil(q)).count() >= 2) {
             flash();

@@ -90,8 +90,8 @@
     "NAME": "First Class",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      " #yFlight into your hand.",
-      " #yFlights into your hand."
+      " #yFoil #yFlight into your hand.",
+      " #yFoil #yFlights into your hand."
     ]
   },
   "${ModID}:ShinyShivPower": {

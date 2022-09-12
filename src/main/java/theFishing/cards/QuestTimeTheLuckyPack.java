@@ -30,6 +30,6 @@ public class QuestTimeTheLuckyPack extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(3);
     }
 }
