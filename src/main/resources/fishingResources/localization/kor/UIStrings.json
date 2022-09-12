@@ -35,7 +35,7 @@
     "TEXT": [
       "행운의 가방",
       "#y퀘스트: 한 턴에 #y포일 카드 #b",
-      " 장을 사용하세요. NL #y보상: 마지막으로 사용한 카드가 1번 더 사용됩니다."
+      " 장을 사용하세요. NL #y보상: #y판금 #y갑옷 을 3 얻습니다."
     ]
   },
   "fishing:ThePrismaticPortal": {
@@ -87,13 +87,13 @@
     "TEXT": [
       "물고기 사전",
       "#y퀘스트: 각기 다른 #b",
-      " 장의 #y물고기 카드를 사용하세요. NL #y보상: #y힘을 #b3 #y얻습니다.",
+      " 장의 #y물고기 카드를 사용하세요. NL #y보상: #y힘을 #b2 #y얻습니다.",
       " NL 이미 사용한 물고기:"
     ]
   },
-  "${ModID}:XMarksTheSpotAction": {
+  "fishing:XMarksTheSpotAction": {
     "TEXT": [
-      "Choose a card to add into your hand.",
+      "손으로 가져올 카드를 선택하세요.",
       "orb? :0"
     ]
   }

@@ -149,7 +149,8 @@
   },
   "fishing:RingTheBell": {
     "NAME": "방울의 울림",
-    "DESCRIPTION": "적 전체의 체력을 13 감소시킵니다. NL 뽑을 카드 더미 맨 위에 *방울의 *저주 를 넣습니다."
+    "DESCRIPTION": "적 전체의 체력을 13 감소시킵니다. NL 뽑을 카드 더미 맨 위에 *방울의 *저주 를 넣습니다.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 적 전체의 체력을 13 감소시킵니다. NL 뽑을 카드 더미 맨 위에 *방울의 *저주 를 넣습니다."
   },
   "fishing:Bobber": {
     "NAME": "낚시찌",
@@ -175,7 +176,7 @@
   },
   "fishing:TreasureChest": {
     "NAME": "보물 상자",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1 장 뽑습니다. NL 개전 : 골드를 !M! 얻습니다."
+    "DESCRIPTION": "fishing:물고기 1 장을 얻습니다. NL 개전 : 골드를 !M! 얻습니다."
   },
   "fishing:Whaling": {
     "NAME": "고래잡이",
@@ -211,7 +212,7 @@
   },
   "fishing:FlamingFlip": {
     "NAME": "격렬한 물제비",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1 장 소멸시킵니다. NL 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1 장 소멸시킵니다. NL 카드를 1 장 뽑습니다."
   },
   "fishing:BoxOfHavoc": {
     "NAME": "파괴적인 상자",
@@ -223,8 +224,8 @@
   },
   "fishing:MerchantsStrike": {
     "NAME": "쇼핑 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 전투에 존재하는 적 하나당, 방어도를 !B! 얻습니다. NL 상점에서 유물을 구입하면, 이 카드를 강화합니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 전투에 존재하는 적 하나당, 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 상점에서 유물을 구입하면, 이 카드를 강화합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 판매 완료! 고오오마워요!"
   },
   "fishing:Lie": {
     "NAME": "거짓말",
@@ -260,7 +261,10 @@
   },
   "fishing:ChocolateChipCookie": {
     "NAME": "초코칩 쿠키",
-    "DESCRIPTION": "체력을 !M! 회복합니다. NL 민첩을 !fishing:m2! 얻습니다. NL 손에 있는 모든 카드를 이번 전투 동안 강화 합니다. NL 소멸."
+    "DESCRIPTION": "체력을 !M! 회복합니다. NL 민첩을 !fishing:m2! 얻습니다. NL 손에 있는 모든 카드를 이번 전투 동안 강화 합니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "mmm..."
+    ]
   },
   "fishing:AnglerForm": {
     "NAME": "낚시꾼의 형상",
@@ -320,7 +324,7 @@
   },
   "fishing:RodOfHope": {
     "NAME": "희망의 낚싯대",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:항해 : [E] [E] 를 얻고 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:항해 : [E] 를 얻고 카드를 1 장 뽑습니다."
   },
   "fishing:Maw": {
     "NAME": "아귀",
@@ -376,7 +380,7 @@
   },
   "fishing:FastingB": {
     "NAME": "공복 혈당",
-    "DESCRIPTION": "가시를 !M! 얻습니다. NL !M! [#EFC851]판금[] [#EFC851]갑옷[] 을 얻습니다. NL 매 턴 시작시 카드를 1장 적게 뽑습니다."
+    "DESCRIPTION": "가시를 !M! 얻습니다. NL !M! *판금 *갑옷 을 얻습니다. NL 매 턴 시작시 카드를 1장 버립니다."
   },
   "fishing:QuestTimeTheStorm": {
     "NAME": "폭풍우",
@@ -385,12 +389,12 @@
   },
   "fishing:QuestTimeTheLuckyPack": {
     "NAME": "행운의 가방",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:퀘스트 : 한 턴에 fishing:포일 카드 3 장을 사용하세요. NL *보상: 마지막으로 사용한 카드가 2번 사용됩니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL fishing:퀘스트 : 한 턴에 fishing:포일 카드 3 장을 사용하세요. NL *보상: *판금 *갑옷 을 3 얻습니다."
   },
   "fishing:QuestTimeTheFishOPedia": {
     "NAME": "물고기 사전",
-    "DESCRIPTION": "피해를 !D! 줍니다. fishing:물고기 1 장을 얻습니다. NL fishing:퀘스트 : 각기 다른 5종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 3 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 강화된 fishing:물고기 1 장을 얻습니다. NL fishing:퀘스트 : 각기 다른 5종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 3 얻습니다.",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL fishing:퀘스트 : 각기 다른 4종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 2 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL fishing:퀘스트 : 각기 다른 4종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 2 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "물고기를 선택하세요."
     ]

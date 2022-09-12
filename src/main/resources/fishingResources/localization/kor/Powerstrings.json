@@ -3,8 +3,8 @@
     "NAME": "공복 혈당",
     "DESCRIPTIONS": [
       "매 턴 시작시 카드를 #b",
-      " 장 적게 뽑습니다.",
-      " 장 적게 뽑습니다."
+      " 장 버립니다.",
+      " 장 버립니다."
     ]
   },
   "fishing:DrawLessNextTurnPower": {
@@ -34,18 +34,18 @@
   "fishing:CollectorPower": {
     "NAME": "수집가",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you played #b2 or more #yFoil cards, gain #b",
-      " #yStrength. NL #b",
-      " #yFoil card played this turn.",
-      " #yFoil cards played this turn."
+      "매 턴 종료시, 이번 턴에 #y포일 카드를 #b2 장 이상 사용했다면, #b",
+      " #y힘을 얻습니다. NL #b",
+      " #y장의 포일 카드가 사용되었습니다.",
+      " #y장의 포일 카드가 사용되었습니다."
     ]
   },
   "fishing:MintConditionPower": {
     "NAME": "상쾌한 컨디션",
     "DESCRIPTIONS": [
-      "#yFoil cards deal #b",
-      " more damage and grant #b",
-      " more #yBlock."
+      "모든 #y포일 카드의 피해량이 #b",
+      " 증가하고 획득 #y방어도가 #b",
+      " 증가합니다."
     ]
   },
   "fishing:RidiculousFishingPower": {
@@ -85,14 +85,14 @@
       "비용이 X 인 카드를 사용하면, 획득: "
     ]
   },
-  "${ModID}:CatchOfTheDayPower": {
+  "fishing:CatchOfTheDayPower": {
     "NAME": "오늘의 수익",
     "DESCRIPTIONS": [
       "매 턴 종료시, 뽑을 카드 더미 맨 위에 #y물고기 #b",
       " 장을 넣습니다."
     ]
   },
-  "${ModID}:FirstClassPower": {
+  "fishing:FirstClassPower": {
     "NAME": "1등 인생",
     "DESCRIPTIONS": [
       "매 턴 시작시, #y포일 상태의 #y비행 #b",
@@ -100,7 +100,7 @@
       " 장을 얻습니다."
     ]
   },
-  "${ModID}:ShinyShivPower": {
+  "fishing:ShinyShivPower": {
     "NAME": "반짝이 방패",
     "DESCRIPTIONS": [
       "이번 턴에 포일 카드를 사용할 때마다 #y단도 #b",
@@ -109,14 +109,14 @@
       " 얻습니다."
     ]
   },
-  "${ModID}:PowerPelletPower": {
+  "fishing:PowerPelletPower": {
     "NAME": "파워 쿠키",
     "DESCRIPTIONS": [
       "#y와구 #y와구 카드의 피해량이 #b",
       " 증가합니다."
     ]
   },
-  "${ModID}:AllOutPower": {
+  "fishing:AllOutPower": {
     "NAME": "총력",
     "DESCRIPTIONS": [
       "턴 종료시, 손에 카드가 하나도 없다면 적 전체에게 피해를 #b",
