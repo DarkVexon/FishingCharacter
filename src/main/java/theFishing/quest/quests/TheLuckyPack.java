@@ -5,13 +5,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import theFishing.actions.RepeatCardAction;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.util.TexLoader;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
-import static theFishing.util.Wiz.att;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class TheLuckyPack extends AbstractQuest {
 
@@ -36,8 +36,7 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        AbstractCard q = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1);
-        att(new RepeatCardAction(q));
+        applyToSelf(new PlatedArmorPower(AbstractDungeon.player, 3));
     }
 
     @Override

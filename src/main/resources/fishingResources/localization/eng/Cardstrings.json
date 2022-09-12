@@ -365,7 +365,7 @@
   },
   "${ModID}:QuestTimeTheLuckyPack": {
     "NAME": "The Lucky Pack",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a turn. NL *Reward: Play the last card twice."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a turn. NL *Reward: Gain 3 *Plated *Armor."
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
