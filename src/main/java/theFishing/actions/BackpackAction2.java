@@ -10,8 +10,10 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.util.List;
 
+import static theFishing.FishingMod.makeID;
+
 public class BackpackAction2 extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardPileToTopOfDeckAction");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("BackpackAction"));
     public static final String[] TEXT = uiStrings.TEXT;
     private CardGroup targetGroup;
 

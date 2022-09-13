@@ -11,12 +11,13 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.util.List;
 
+import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.isFoil;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
 import static theFishing.util.Wiz.att;
 
 public class FullHouseAction2 extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardPileToTopOfDeckAction");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("FullHouseAction"));
     public static final String[] TEXT = uiStrings.TEXT;
     private CardGroup targetGroup;
     private int dupes;
