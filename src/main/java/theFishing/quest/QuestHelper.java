@@ -35,6 +35,7 @@ public class QuestHelper {
     }
 
     public static void render(SpriteBatch sb) {
+        sb.setColor(Color.WHITE.cpy());
         FontHelper.renderFontLeftTopAligned(
                 sb,
                 FontHelper.tipHeaderFont,
