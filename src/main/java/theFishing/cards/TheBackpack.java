@@ -1,10 +1,12 @@
 package theFishing.cards;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.BackpackAction;
+import theFishing.actions.BackpackAction2;
 import theFishing.patch.foil.FoilPatches;
 
 import java.util.ArrayList;
@@ -25,13 +27,12 @@ public class TheBackpack extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> possCards = new ArrayList<>();
+        CardGroup possCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard q : p.drawPile.group) {
             if (FoilPatches.isFoil(q))
-                possCards.add(q);
+                possCards.addToRandomSpot(q);
         }
-        Collections.shuffle(possCards, MathUtils.random);
-        atb(new BackpackAction(possCards));
+        atb(new BackpackAction2(possCards));
     }
 
     public void upp() {

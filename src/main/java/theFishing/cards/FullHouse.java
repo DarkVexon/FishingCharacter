@@ -1,15 +1,12 @@
 package theFishing.cards;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.FullHouseAction;
-
-import java.util.ArrayList;
-import java.util.Collections;
+import theFishing.actions.FullHouseAction2;
 
 import static theFishing.FishingMod.makeID;
 
@@ -32,9 +29,11 @@ public class FullHouse extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> sortedList = new ArrayList<>(p.drawPile.group);
-        Collections.shuffle(sortedList, MathUtils.random);
-        addToBot(new FullHouseAction(sortedList, magicNumber));
+        CardGroup possCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard q : p.drawPile.group) {
+            possCards.addToRandomSpot(q);
+        }
+        addToBot(new FullHouseAction2(possCards, magicNumber));
     }
 
     @Override

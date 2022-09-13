@@ -1,6 +1,7 @@
 package theFishing.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,13 +11,19 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.util.List;
 
-public class WanderAction extends AbstractGameAction {
+import static theFishing.patch.foil.FoilPatches.isFoil;
+import static theFishing.patch.foil.FoilPatches.makeFoil;
+import static theFishing.util.Wiz.att;
+
+public class FullHouseAction2 extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardPileToTopOfDeckAction");
     public static final String[] TEXT = uiStrings.TEXT;
     private CardGroup targetGroup;
+    private int dupes;
 
-    public WanderAction(CardGroup targetGroup) {
+    public FullHouseAction2(CardGroup targetGroup, int dupes) {
         this.targetGroup = targetGroup;
+        this.dupes = dupes;
         this.amount = 1;
         this.duration = this.startDuration = Settings.ACTION_DUR_XFAST;
     }
@@ -29,7 +36,7 @@ public class WanderAction extends AbstractGameAction {
             }
 
             if (targetGroup.size() == 1) {
-                selectedCardsToTopOfDeck(targetGroup.group);
+                duplicate(targetGroup.group, dupes);
                 this.isDone = true;
                 return;
             }
@@ -39,7 +46,7 @@ public class WanderAction extends AbstractGameAction {
         }
 
         if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
-            selectedCardsToTopOfDeck(AbstractDungeon.gridSelectScreen.selectedCards);
+            duplicate(AbstractDungeon.gridSelectScreen.selectedCards, dupes);
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             AbstractDungeon.player.hand.refreshHandLayout();
             this.isDone = true;
@@ -48,10 +55,12 @@ public class WanderAction extends AbstractGameAction {
         }
     }
 
-    private static void selectedCardsToTopOfDeck(List<AbstractCard> cards) {
+    private static void duplicate(List<AbstractCard> cards, int amount) {
         for (AbstractCard q : cards) {
-            AbstractDungeon.player.drawPile.removeCard(q);
-            AbstractDungeon.player.drawPile.addToTop(q);
+            if (!isFoil(q)) {
+                makeFoil(q);
+            }
+            att(new MakeTempCardInDrawPileAction(q, amount, true, true));
         }
     }
 }
