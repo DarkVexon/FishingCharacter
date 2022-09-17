@@ -1,17 +1,11 @@
 package theFishing.cards;
 
-import basemod.BaseMod;
-import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.Sozu;
-import theFishing.patch.foil.FoilPatches;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToEnemy;

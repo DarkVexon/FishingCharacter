@@ -1,16 +1,10 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
+import basemod.BaseMod;
+import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.BackpackAction;
-import theFishing.actions.BackpackAction2;
-import theFishing.patch.foil.FoilPatches;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -20,23 +14,17 @@ public class TheBackpack extends AbstractFishingCard {
     // intellij stuff skill, self, rare, , , , , , 
 
     public TheBackpack() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        isInnate = true;
-        selfRetain = true;
-        exhaust = true;
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseBlock = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        CardGroup possCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (AbstractCard q : p.drawPile.group) {
-            if (FoilPatches.isFoil(q))
-                possCards.addToRandomSpot(q);
-        }
-        atb(new BackpackAction2(possCards));
+        blck();
+        atb(new DiscardAction(p, p, BaseMod.MAX_HAND_SIZE, true));
+        atb(new BetterDiscardPileToHandAction(1));
     }
 
     public void upp() {
-        exhaust = false;
-        uDesc();
+        upgradeBlock(4);
     }
 }

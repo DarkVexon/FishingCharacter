@@ -20,14 +20,17 @@ public class CollectorPower extends AbstractAdventurerPower {
         super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
+    private int cardsPlayedThisTurn;
+
     @Override
     public void atStartOfTurn() {
+        cardsPlayedThisTurn = 0;
         updateDescription();
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> isFoil(q)).count() >= 2) {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> isFoil(q)).count() >= 3) {
             flash();
             atb(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
         }
@@ -35,12 +38,13 @@ public class CollectorPower extends AbstractAdventurerPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        cardsPlayedThisTurn = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> isFoil(q)).count();
         updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        int cards = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> isFoil(q)).count();
+        int cards = cardsPlayedThisTurn;
         description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + cards + ((cards == 1) ? powerStrings.DESCRIPTIONS[2] : powerStrings.DESCRIPTIONS[3]);
     }
 }

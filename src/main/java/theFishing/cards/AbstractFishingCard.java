@@ -19,7 +19,6 @@ import theFishing.TheFishing;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.FishingMod.modID;
 import static theFishing.util.Wiz.*;
-import static theFishing.util.Wiz.adp;
 
 public abstract class AbstractFishingCard extends CustomCard {
 
@@ -195,6 +194,6 @@ public abstract class AbstractFishingCard extends CustomCard {
     }
 
     protected boolean isSolo() {
-        return (adp().hand.size()  == 0 || (adp().hand.size() == 1 && adp().hand.contains(this)));
+        return (adp().hand.size() == 0 || (adp().hand.size() == 1 && adp().hand.contains(this)));
     }
 }

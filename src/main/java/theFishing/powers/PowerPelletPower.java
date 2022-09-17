@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import theFishing.cards.WakaWaka;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.topDeck;
 
 public class PowerPelletPower extends AbstractAdventurerPower {
     public static String ID = makeID(PowerPelletPower.class.getSimpleName());

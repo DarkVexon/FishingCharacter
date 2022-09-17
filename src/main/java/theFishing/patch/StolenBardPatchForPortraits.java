@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import javassist.CtBehavior;
 import theFishing.cards.FullHouse;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 

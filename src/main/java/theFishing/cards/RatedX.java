@@ -23,7 +23,7 @@ public class RatedX extends AbstractFishingCard {
         baseDamage = 7;
         baseBlock = 7;
         baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 0;
+        baseSecondMagic = secondMagic = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,7 +32,7 @@ public class RatedX extends AbstractFishingCard {
         }
         atb(new EasyXCostAction(this, (effect, params) -> {
             if (effect >= 4) {
-                applyToSelfTop(new StrengthPower(p, effect + params[0]));
+                applyToSelfTop(new StrengthPower(p, secondMagic));
             }
             if (effect >= 2) {
                 applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
@@ -43,7 +43,7 @@ public class RatedX extends AbstractFishingCard {
             dmgTop(m, AbstractGameAction.AttackEffect.NONE);
             this.addToTop(new VFXAction(new ClashEffect(m.hb.cX, m.hb.cY), 0.1F));
             return true;
-        }, secondMagic));
+        }));
     }
 
     public void upp() {
@@ -51,6 +51,5 @@ public class RatedX extends AbstractFishingCard {
         upgradeBlock(1);
         upgradeMagicNumber(1);
         upgradeSecondMagic(1);
-        uDesc();
     }
 }

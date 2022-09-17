@@ -21,7 +21,7 @@ import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.att;
 
 public class XMarksTheSpotAction extends AbstractGameAction {
-    private CardGroup selectGroup;
+    private final CardGroup selectGroup;
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("XMarksTheSpotAction"));
 
     public XMarksTheSpotAction(ArrayList<AbstractCard> group) {

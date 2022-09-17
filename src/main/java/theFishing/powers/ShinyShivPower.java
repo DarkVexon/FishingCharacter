@@ -12,7 +12,6 @@ import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.topDeck;
 
 public class ShinyShivPower extends AbstractAdventurerPower {
     public static String ID = makeID(ShinyShivPower.class.getSimpleName());
@@ -21,7 +20,7 @@ public class ShinyShivPower extends AbstractAdventurerPower {
     public ShinyShivPower() {
         super(ID, powerStrings.NAME, PowerType.BUFF, true, AbstractDungeon.player, 1);
     }
-    
+
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (FoilPatches.isFoil(card)) {

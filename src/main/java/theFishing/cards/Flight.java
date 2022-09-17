@@ -2,10 +2,8 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
 
 public class Flight extends AbstractFishingCard {
     public final static String ID = makeID("Flight");
@@ -13,7 +11,7 @@ public class Flight extends AbstractFishingCard {
 
     public Flight() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = 10;
+        baseBlock = 9;
         isEthereal = true;
         exhaust = true;
     }

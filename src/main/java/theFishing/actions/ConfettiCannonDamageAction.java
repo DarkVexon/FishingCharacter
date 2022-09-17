@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.effects.RainbowExplosionEffect;
 
 public class ConfettiCannonDamageAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public ConfettiCannonDamageAction(AbstractCard card) {
         this.card = card;

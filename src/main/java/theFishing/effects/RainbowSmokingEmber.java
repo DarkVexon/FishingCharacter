@@ -7,14 +7,13 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.FastSmokeParticle;
 
 public class RainbowSmokingEmber extends AbstractGameEffect {
     private float x;
-    private float vX;
+    private final float vX;
     private float y;
     private float vY;
-    private float gravity;
+    private final float gravity;
     private static final float INTERVAL = 0.01F;
     private float smokeTimer = 0.0F;
 
@@ -26,7 +25,7 @@ public class RainbowSmokingEmber extends AbstractGameEffect {
         this.gravity = 800.0F * Settings.scale;
         this.scale = MathUtils.random(0.2F, 0.4F) * Settings.scale;
         this.duration = MathUtils.random(0.3F, 0.4F);
-        this.color = new Color(MathUtils.random(0F, 1F), MathUtils.random(0F,1F), MathUtils.random(0F,1F), 1F);
+        this.color = new Color(MathUtils.random(0F, 1F), MathUtils.random(0F, 1F), MathUtils.random(0F, 1F), 1F);
     }
 
     public void update() {

@@ -6,7 +6,8 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.topDeck;
 
 public class GoneFishing extends AbstractFishingCard {
     public final static String ID = makeID("GoneFishing");

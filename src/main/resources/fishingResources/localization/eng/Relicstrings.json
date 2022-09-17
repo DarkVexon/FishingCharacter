@@ -72,12 +72,11 @@
       "At the start of your 2nd turn, draw #b1 card and gain [E] [E] ."
     ]
   },
-  "${ModID}:BoosterBox": {
-    "NAME": "Booster Box",
-    "FLAVOR": "More than six promotional Foils! Can you discover them all?",
+  "${ModID}:ExpulsionLetter": {
+    "NAME": "Final Results",
+    "FLAVOR": "You were never gonna get it.",
     "DESCRIPTIONS": [
-      "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. NL In addition, obtain a #y${ModID}:Foil #pPromo card.",
-      "Upon pickup, #yUpgrade #b2 random non-Foil cards and make them #y${ModID}:Foil. NL In addition, obtain a #y${ModID}:Foil #pPromo card: "
+      "At the start of combat, add a #y${ModID}:Foil #yMiracle, #ySmite, and #ySafety into your hand."
     ]
   }
 }

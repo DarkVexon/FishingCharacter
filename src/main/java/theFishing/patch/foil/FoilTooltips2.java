@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static theFishing.FishingMod.makeID;
-
 @SpirePatch(clz = SingleCardViewPopup.class, method = "renderTips")
 public class FoilTooltips2 {
 

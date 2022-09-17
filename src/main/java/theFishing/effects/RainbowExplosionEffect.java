@@ -6,12 +6,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.DarkSmokePuffEffect;
 
 public class RainbowExplosionEffect extends AbstractGameEffect {
     private static final int EMBER_COUNT = 12;
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
 
     public RainbowExplosionEffect(float x, float y) {
         this.x = x;
@@ -21,7 +20,7 @@ public class RainbowExplosionEffect extends AbstractGameEffect {
     public void update() {
         //AbstractDungeon.effectsQueue.add(new DarkSmokePuffEffect(this.x, this.y));
 
-        for(int i = 0; i < 8; ++i) {
+        for (int i = 0; i < 8; ++i) {
             AbstractDungeon.effectsQueue.add(new RainbowSmokingEmber(this.x + MathUtils.random(-50.0F, 50.0F) * Settings.scale, this.y + MathUtils.random(-50.0F, 50.0F) * Settings.scale));
         }
 

@@ -8,6 +8,6 @@ public class MaelstromAnkh extends AbstractAdventurerRelic {
     public static final String ID = makeID("MaelstromAnkh");
 
     public MaelstromAnkh() {
-        super(ID, RelicTier.BOSS, LandingSound.SOLID, TheFishing.Enums.FISHING_COLOR);
+        super(ID, RelicTier.SHOP, LandingSound.SOLID, TheFishing.Enums.FISHING_COLOR);
     }
 }

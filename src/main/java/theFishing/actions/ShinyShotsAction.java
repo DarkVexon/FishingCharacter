@@ -5,9 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.patch.foil.FoilPatches;
-import theFishing.util.Wiz;
-
-import java.util.ArrayList;
 
 import static theFishing.util.Wiz.att;
 

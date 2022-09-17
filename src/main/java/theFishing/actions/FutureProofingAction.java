@@ -1,23 +1,27 @@
 package theFishing.actions;
 
-import com.badlogic.gdx.math.MathUtils;
+import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.ui.panels.DrawPilePanel;
+import theFishing.effects.MiniUpgradeShine;
 import theFishing.util.Wiz;
 
 import java.util.ArrayList;
 
 public class FutureProofingAction extends AbstractGameAction {
+    private static float DEST_X = -1.0F;
+    private static float DEST_Y = -1.0F;
+
     public FutureProofingAction(int amount) {
         this.amount = amount;
     }
 
     @Override
     public void update() {
+        boolean upgradedAnyCard = false;
         isDone = true;
         for (int i = 0; i < this.amount; i++) {
             ArrayList<AbstractCard> possCards = new ArrayList<>();
@@ -29,11 +33,16 @@ public class FutureProofingAction extends AbstractGameAction {
             if (!possCards.isEmpty()) {
                 AbstractCard tar = Wiz.getRandomItem(possCards, AbstractDungeon.cardRandomRng);
                 tar.upgrade();
-                float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
-                float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy(), x, y));
-                AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
+                upgradedAnyCard = true;
             }
+        }
+        if (upgradedAnyCard) {
+            if (DEST_X == -1.0F && DEST_Y == -1.0F) {
+                Hitbox hb = ReflectionHacks.getPrivate(AbstractDungeon.overlayMenu.combatDeckPanel, DrawPilePanel.class, "hb");
+                DEST_X = hb.cX;
+                DEST_Y = hb.cY;
+            }
+            AbstractDungeon.topLevelEffects.add(new MiniUpgradeShine(DEST_X, DEST_Y));
         }
     }
 }

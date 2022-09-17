@@ -13,7 +13,7 @@ import java.util.List;
 public class WanderAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardPileToTopOfDeckAction");
     public static final String[] TEXT = uiStrings.TEXT;
-    private CardGroup targetGroup;
+    private final CardGroup targetGroup;
 
     public WanderAction(CardGroup targetGroup) {
         this.targetGroup = targetGroup;

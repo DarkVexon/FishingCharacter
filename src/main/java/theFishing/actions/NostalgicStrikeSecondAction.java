@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class NostalgicStrikeSecondAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public NostalgicStrikeSecondAction(AbstractCard card) {
         this.card = card;

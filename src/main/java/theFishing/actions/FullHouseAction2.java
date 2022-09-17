@@ -19,8 +19,8 @@ import static theFishing.util.Wiz.att;
 public class FullHouseAction2 extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("FullHouseAction"));
     public static final String[] TEXT = uiStrings.TEXT;
-    private CardGroup targetGroup;
-    private int dupes;
+    private final CardGroup targetGroup;
+    private final int dupes;
 
     public FullHouseAction2(CardGroup targetGroup, int dupes) {
         this.targetGroup = targetGroup;

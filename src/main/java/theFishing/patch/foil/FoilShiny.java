@@ -2,10 +2,12 @@ package theFishing.patch.foil;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.GL30;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
+import com.badlogic.gdx.utils.BufferUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
@@ -15,6 +17,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import theFishing.FishingMod;
 import theFishing.util.ImageHelper;
 
+import java.nio.IntBuffer;
 import java.nio.charset.StandardCharsets;
 
 public class FoilShiny {
@@ -58,7 +61,17 @@ public class FoilShiny {
             sb.end();
             ImageHelper.beginBuffer(fbo);
             sb.begin();
+            IntBuffer buf_rgb = BufferUtils.newIntBuffer(16);
+            IntBuffer buf_a = BufferUtils.newIntBuffer(16);
+            Gdx.gl.glGetIntegerv(GL30.GL_BLEND_EQUATION_RGB, buf_rgb);
+            Gdx.gl.glGetIntegerv(GL30.GL_BLEND_EQUATION_ALPHA, buf_a);
+
+            Gdx.gl.glBlendEquationSeparate(buf_rgb.get(0), GL30.GL_MAX);
+            Gdx.gl.glBlendEquationSeparate(GL30.GL_FUNC_ADD, GL30.GL_MAX);
             card.render(sb, false);
+            Gdx.gl.glBlendEquationSeparate(GL30.GL_FUNC_ADD, GL30.GL_FUNC_ADD);
+            Gdx.gl.glBlendEquationSeparate(buf_rgb.get(0), buf_a.get(0));
+
             sb.end();
             fbo.end();
             sb.begin();

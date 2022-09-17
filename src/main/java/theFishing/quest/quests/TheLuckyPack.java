@@ -58,12 +58,12 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public Texture progressTex(int idx) {
-        if (idx == 2) {
-            if (progress > idx) {
-                return complete_last;
-            }
-            return incomplete_last;
-        }
+//        if (idx == 2) {
+//            if (progress > idx) {
+//                return complete_last;
+//            }
+//            return incomplete_last;
+//        }
         if (progress > idx) {
             return complete;
         }

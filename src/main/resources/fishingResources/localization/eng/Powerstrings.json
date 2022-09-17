@@ -34,7 +34,7 @@
   "${ModID}:CollectorPower": {
     "NAME": "Collector",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you played #b2 or more #yFoil cards, gain #b",
+      "At the end of your turn, if you played #b3 or more #yFoil cards, gain #b",
       " #yStrength. NL #b",
       " #yFoil card played this turn.",
       " #yFoil cards played this turn."

@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import theFishing.actions.FinalCardAction;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.adp;
 import static theFishing.util.Wiz.atb;
 
 public class TheFinalCard extends AbstractFishingCard {
@@ -19,7 +18,7 @@ public class TheFinalCard extends AbstractFishingCard {
 
     public TheFinalCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 22;
+        baseDamage = 21;
         isMultiDamage = true;
     }
 

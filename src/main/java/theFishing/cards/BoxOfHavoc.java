@@ -11,7 +11,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToEnemy;
+import static theFishing.util.Wiz.forAllMonstersLiving;
 
 public class BoxOfHavoc extends AbstractFishingCard {
     public final static String ID = makeID("BoxOfHavoc");

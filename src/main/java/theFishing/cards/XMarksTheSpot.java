@@ -1,9 +1,6 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Tempest;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +12,8 @@ import theFishing.actions.XMarksTheSpotAction;
 import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.getCardsMatchingPredicate;
 
 public class XMarksTheSpot extends AbstractFishingCard {
     public final static String ID = makeID("XMarksTheSpot");

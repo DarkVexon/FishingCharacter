@@ -10,11 +10,9 @@ public class NostalgicStrikeFirstAction extends AbstractGameAction {
     @Override
     public void update() {
         isDone = true;
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1 < 3) {
-            if (!AbstractDungeon.player.discardPile.isEmpty()) {
-                AbstractCard card = AbstractDungeon.player.discardPile.getRandomCard(AbstractDungeon.cardRandomRng);
-                att(new NostalgicStrikeSecondAction(card));
-            }
+        if (!AbstractDungeon.player.discardPile.isEmpty()) {
+            AbstractCard card = AbstractDungeon.player.discardPile.getRandomCard(AbstractDungeon.cardRandomRng);
+            att(new NostalgicStrikeSecondAction(card));
         }
     }
 }

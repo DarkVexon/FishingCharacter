@@ -9,7 +9,6 @@ import theFishing.cards.Flight;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
-import static theFishing.util.Wiz.topDeck;
 
 public class FirstClassPower extends AbstractAdventurerPower {
     public static String ID = makeID(FirstClassPower.class.getSimpleName());

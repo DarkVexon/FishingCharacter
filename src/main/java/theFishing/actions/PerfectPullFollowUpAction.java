@@ -1,22 +1,18 @@
 package theFishing.actions;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.effects.ColoredVerticalAttackEffect;
 
 import static theFishing.patch.foil.FoilPatches.isFoil;
 import static theFishing.util.Wiz.att;
 
 public class PerfectPullFollowUpAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public PerfectPullFollowUpAction(AbstractCard card, AbstractMonster target) {
         this.card = card;

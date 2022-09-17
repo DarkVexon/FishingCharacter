@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class RainbowSmokeParticle extends AbstractGameEffect {
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private float vX;
     private float scale = 0.01F;
-    private float targetScale;
+    private final float targetScale;
     private static TextureAtlas.AtlasRegion img;
 
     public RainbowSmokeParticle(float x, float y, Color color) {
@@ -25,8 +25,8 @@ public class RainbowSmokeParticle extends AbstractGameEffect {
 
         this.targetScale = MathUtils.random(0.3F, 0.6F) * Settings.scale;
         this.color = color;
-        this.x = x - (float)img.packedWidth / 2.0F;
-        this.y = y - (float)img.packedHeight / 2.0F;
+        this.x = x - (float) img.packedWidth / 2.0F;
+        this.y = y - (float) img.packedHeight / 2.0F;
         this.rotation = MathUtils.random(360.0F);
         this.duration = 0.3F;
     }
@@ -44,7 +44,7 @@ public class RainbowSmokeParticle extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
-        sb.draw(img, this.x, this.y, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale, this.scale, this.rotation);
+        sb.draw(img, this.x, this.y, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth, (float) img.packedHeight, this.scale, this.scale, this.rotation);
     }
 
     public void dispose() {

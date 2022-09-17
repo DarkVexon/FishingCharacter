@@ -79,5 +79,12 @@
       "획득시, #y포일 상태가 아닌 무작위 카드 #b2 장을 #y강화 하고 #yfishing:포일 상태로 만듭니다. NL 추가로, #yfishing:포일 #p프로모 카드를 얻습니다.",
       "획득시, #y포일 상태가 아닌 무작위 카드 #b2 장을 #y강화 하고 #yfishing:포일 상태로 만듭니다. NL 추가로, #yfishing:포일 #p프로모 카드를 얻습니다: "
     ]
+  },
+  "${ModID}:ExpulsionLetter": {
+    "NAME": "Final Results",
+    "FLAVOR": "You were never gonna get it.",
+    "DESCRIPTIONS": [
+      "At the start of combat, add a #y${ModID}:Foil #yMiracle, #ySmite, and #ySafety into your hand."
+    ]
   }
 }

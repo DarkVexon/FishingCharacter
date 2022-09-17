@@ -236,11 +236,10 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: NL Apply !M! Vulnerable. NL X >= 4: NL Gain X Strength.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: NL Apply !M! Vulnerable. NL X >= 4: NL Gain X+1 Strength."
+    "DESCRIPTION": "Deal !D! damage. NL X >= 1: Gain !B! Block. NL X >= 2: NL Apply !M! Vulnerable. NL X >= 4: NL Gain !${ModID}:m2! Strength."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
-    "NAME": "It Was THIIIIIIIS Big!",
+    "NAME": "It Was THIIIIIS Big!",
     "DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Double the effects of ALL current ${ModID}:Fish. NL Exhaust."
   },
   "${ModID}:GoneFishing": {
@@ -369,7 +368,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Quest: Play 4 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Quest: Play 4 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 3 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]
@@ -402,7 +401,8 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "${ModID}:Quest: Play a Common, Uncommon, and Rare card in a turn. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "${ModID}:Quest: Play a Rare card. NL *Reward: Shuffle *The *Gem *Search into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Quest: Play a Rare card. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
@@ -441,11 +441,7 @@
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",
-    "DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Put a ${ModID}:Foil card from your draw pile into your hand.",
-    "EXTENDED_DESCRIPTION": [
-      "Choose a card to put into your hand."
-    ]
+    "DESCRIPTION": "Gain !B! Block. NL Discard your hand. NL Put a card from your discard pile into your hand."
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
@@ -458,7 +454,7 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "At the end of your turn, if you played 2 or more ${ModID}:Foil cards, gain !M! Strength."
+    "DESCRIPTION": "At the end of your turn, if you played 3 or more ${ModID}:Foil cards, gain !M! Strength."
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",

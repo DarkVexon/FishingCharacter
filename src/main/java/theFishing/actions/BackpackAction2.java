@@ -15,7 +15,7 @@ import static theFishing.FishingMod.makeID;
 public class BackpackAction2 extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("BackpackAction"));
     public static final String[] TEXT = uiStrings.TEXT;
-    private CardGroup targetGroup;
+    private final CardGroup targetGroup;
 
     public BackpackAction2(CardGroup targetGroup) {
         this.targetGroup = targetGroup;

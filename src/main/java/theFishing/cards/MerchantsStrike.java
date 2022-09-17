@@ -28,7 +28,7 @@ public class MerchantsStrike extends AbstractFishingCard implements OnBuyRelicCa
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        applyToEnemy(m, new VulnerablePower(m, 1, false));
+        applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
     }
 
     @Override

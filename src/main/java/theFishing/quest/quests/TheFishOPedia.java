@@ -49,7 +49,7 @@ public class TheFishOPedia extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        applyToSelf(new StrengthPower(AbstractDungeon.player, 2));
+        applyToSelf(new StrengthPower(AbstractDungeon.player, 3));
     }
 
     @Override
