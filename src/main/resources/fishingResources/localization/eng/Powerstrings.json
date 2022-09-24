@@ -75,8 +75,7 @@
   "${ModID}:ReservesPower": {
     "NAME": "Reserves",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you played at least #b2 #yFoil cards, gain #b",
-      " #yBlock."
+      "Whenever you play a cost X card, gain "
     ]
   },
   "${ModID}:CatchOfTheDayPower": {

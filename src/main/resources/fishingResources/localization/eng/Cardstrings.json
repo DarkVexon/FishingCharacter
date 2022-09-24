@@ -176,12 +176,12 @@
   },
   "${ModID}:Reserves": {
     "NAME": "Reserves",
-    "DESCRIPTION": "After you play an X-cost card, gain [E]."
+    "DESCRIPTION": "After you play a cost X card, gain [E]."
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
-    "DESCRIPTION": "Choose 1 of 3 X-cost cards of any color to add into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 X-cost cards of any color to add into your hand. NL Gain [E]. NL Exhaust.",
+    "DESCRIPTION": "Choose 1 of 3 cost X cards of any color to add into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cost X cards of any color to add into your hand. NL Gain [E]. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (You get 5 Orb slots!)"
     ]
