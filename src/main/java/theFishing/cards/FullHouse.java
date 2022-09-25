@@ -4,8 +4,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.actions.FullHouseAction2;
 
 import static theFishing.FishingMod.makeID;
@@ -23,6 +25,8 @@ public class FullHouse extends AbstractFishingCard {
     @Override
     protected Texture getPortraitImage() {
         if (upgraded) {
+            if (UnlockTracker.betaCardPref.getBoolean(ID, false) || Settings.PLAYTESTER_ART_MODE)
+                return ImageMaster.loadImage("fishingResources/images/cards/FourOfAKind_b_p.png");
             return ImageMaster.loadImage("fishingResources/images/cards/FourOfAKind_p.png");
         }
         return super.getPortraitImage();
