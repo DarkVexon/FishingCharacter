@@ -194,32 +194,60 @@ public class FoilPatches {
 //        }
 //    }
 
-    public static final ShaderProgram ART_SHADER = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_card_art.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
-
-    @SpirePatch(
-            clz = AbstractCard.class,
-            method = "renderPortrait"
-    )
     public static class FoilSpecialArt {
+        public static final ShaderProgram ART_SHADER = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_card_art.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
         private static ShaderProgram oldShader;
         private static Color oldColor;
-
+    
         public static HashMap<String, Float> shiftAmts = new HashMap<>();
 
-        public static void Prefix(AbstractCard __instance, SpriteBatch sb) {
-            if (isFoil(__instance)) {
+        public static void enableShader(AbstractCard c, SpriteBatch sb) {
+            if (isFoil(c)) {
                 oldShader = sb.getShader();
                 sb.setShader(ART_SHADER);
-                ART_SHADER.setUniformf("shift_amt", shiftAmts.computeIfAbsent(__instance.cardID, key -> {
-                    Random rng = new Random((long) __instance.cardID.hashCode());
+                ART_SHADER.setUniformf("shift_amt", shiftAmts.computeIfAbsent(c.cardID, key -> {
+                    Random rng = new Random((long) c.cardID.hashCode());
                     return 0.2F + rng.random(0F, 0.6F);
                 }));
             }
         }
 
-        public static void Postfix(AbstractCard __instance, SpriteBatch sb) {
-            if (isFoil(__instance)) {
+        public static void disableShader(AbstractCard c, SpriteBatch sb) {
+            if (isFoil(c)) {
                 sb.setShader(oldShader);
+            }
+        }
+
+        
+        @SpirePatch(clz = AbstractCard.class, method = "renderPortrait")
+        public static class Portrait {
+            public static void Prefix(AbstractCard __instance, SpriteBatch sb) {
+                enableShader(__instance, sb);
+            }
+            public static void Postfix(AbstractCard __instance, SpriteBatch sb) {
+                disableShader(__instance, sb);
+            }
+        }
+
+        @SpirePatch(clz = AbstractCard.class, method = "renderJokePortrait")
+        public static class JokePortrait {
+            public static void Prefix(AbstractCard __instance, SpriteBatch sb) {
+                enableShader(__instance, sb);
+            }
+            public static void Postfix(AbstractCard __instance, SpriteBatch sb) {
+                disableShader(__instance, sb);
+            }
+        }
+
+        @SpirePatch(clz = SingleCardViewPopup.class, method = "renderPortrait")
+        public static class SingleCardView {    
+            public static void Prefix(SingleCardViewPopup __instance, SpriteBatch sb) {
+                AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+                enableShader(card, sb);
+            }
+            public static void Postfix(SingleCardViewPopup __instance, SpriteBatch sb) {
+                AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
+                disableShader(card, sb);
             }
         }
     }
@@ -250,34 +278,6 @@ public class FoilPatches {
 //            }
 //        }
 //    }
-
-    @SpirePatch(
-            clz = SingleCardViewPopup.class,
-            method = "renderPortrait"
-    )
-    public static class FoilSpecialArtSingleCardView {
-        private static ShaderProgram oldShader;
-        private static Color oldColor;
-
-        public static void Prefix(SingleCardViewPopup __instance, SpriteBatch sb) {
-            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
-            if (isFoil(card)) {
-                oldShader = sb.getShader();
-                sb.setShader(ART_SHADER);
-                ART_SHADER.setUniformf("shift_amt", FoilSpecialArt.shiftAmts.computeIfAbsent(card.cardID, key -> {
-                    Random rng = new Random((long) card.cardID.hashCode());
-                    return 0.2F + rng.random(0F, 0.6F);
-                }));
-            }
-        }
-
-        public static void Postfix(SingleCardViewPopup __instance, SpriteBatch sb) {
-            AbstractCard card = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
-            if (isFoil(card)) {
-                sb.setShader(oldShader);
-            }
-        }
-    }
 
     /*
     @SpirePatch(
