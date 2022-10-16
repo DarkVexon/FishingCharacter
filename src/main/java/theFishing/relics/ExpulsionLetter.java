@@ -25,6 +25,9 @@ public class ExpulsionLetter extends AbstractAdventurerRelic {
         AbstractCard q = new Miracle();
         AbstractCard q2 = new Smite();
         AbstractCard q3 = new Safety();
+        q.upgrade();
+        q2.upgrade();
+        q3.upgrade();
         makeFoil(q);
         makeFoil(q2);
         makeFoil(q3);

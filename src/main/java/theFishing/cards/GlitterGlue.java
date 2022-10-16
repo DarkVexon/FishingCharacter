@@ -68,12 +68,12 @@ public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
         }
 
         if (showSelf && showTrigger) {
-            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy(), Settings.WIDTH / 3.0F, Settings.HEIGHT / 2.0F));
-            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy(), (Settings.WIDTH / 3.0F * 2f), Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy(), Settings.WIDTH / 3.0F, Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy(), (Settings.WIDTH / 3.0F * 2f), Settings.HEIGHT / 2.0F));
         } else if (showSelf) {
-            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy()));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy()));
         } else if (showTrigger) {
-            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy()));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy()));
         }
     }
 }

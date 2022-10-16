@@ -76,7 +76,7 @@
     "NAME": "Final Results",
     "FLAVOR": "You were never gonna get it.",
     "DESCRIPTIONS": [
-      "At the start of combat, add a #y${ModID}:Foil #yMiracle, #ySmite, and #ySafety into your hand."
+      "At the start of combat, add an #yUpgraded #y${ModID}:Foil #yMiracle, #ySmite, and #ySafety into your hand."
     ]
   }
 }
