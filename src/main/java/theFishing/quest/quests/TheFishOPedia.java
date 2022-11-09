@@ -22,12 +22,22 @@ public class TheFishOPedia extends AbstractQuest {
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
-    private final ArrayList<Pair<String, String>> alreadyPlayed = new ArrayList<>();
+    private static class TwoStrings {
+        public String str1;
+        public String str2;
+
+        public TwoStrings(String s1, String s2) {
+            this.str1 = s1;
+            this.str2 = s2;
+        }
+    }
+
+    private final ArrayList<TwoStrings> alreadyPlayed = new ArrayList<>();
 
     private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Fishopedia.png"));
 
     public TheFishOPedia() {
-        super(ID, 4);
+        super(ID, 3);
     }
 
     @Override
@@ -40,8 +50,8 @@ public class TheFishOPedia extends AbstractQuest {
         String returnval = uiStrings.TEXT[1] + goal + uiStrings.TEXT[2];
         if (!alreadyPlayed.isEmpty()) {
             returnval = returnval + uiStrings.TEXT[3];
-            for (Pair<String, String> s : alreadyPlayed) {
-                returnval = returnval + " NL " + FontHelper.colorString(s.getValue(), "y");
+            for (TwoStrings s : alreadyPlayed) {
+                returnval = returnval + " NL " + FontHelper.colorString(s.str2, "y");
             }
         }
         return returnval;
@@ -54,16 +64,16 @@ public class TheFishOPedia extends AbstractQuest {
 
     @Override
     public void onPlayCard(AbstractCard card) {
-        if (card instanceof AbstractFishCard && !alreadyPlayed.stream().anyMatch(q -> q.getKey().equals(card.cardID))) {
+        if (card instanceof AbstractFishCard && !alreadyPlayed.stream().anyMatch(q -> q.str1.equals(card.cardID))) {
             increment();
-            alreadyPlayed.add(new Pair(card.cardID, card.originalName));
+            alreadyPlayed.add(new TwoStrings(card.cardID, card.originalName));
         }
     }
 
     @Override
     public Texture progressTex(int idx) {
         if (progress > idx) {
-            return TexLoader.getTexture(makeImagePath("quests/Fishopedia_Completed_" + alreadyPlayed.get(idx).getKey().replaceAll(modID + ":", "") + ".png"));
+            return TexLoader.getTexture(makeImagePath("quests/Fishopedia_Completed_" + alreadyPlayed.get(idx).str1.replaceAll(modID + ":", "") + ".png"));
         }
         return incomplete;
     }

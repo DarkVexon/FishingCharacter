@@ -22,6 +22,11 @@
     "DESCRIPTION": "Gain !M! Strength. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
+  "${ModID}:RoboFish": {
+    "NAME": "Mecherel",
+    "DESCRIPTION": "Gain !M! Artifact. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Draw !${ModID}:m3! cards. NL Exhaust."
+  },
   "${ModID}:Octopus": {
     "NAME": "Octopus",
     "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Draw !${ModID}:m3! card. NL Exhaust.",
@@ -54,7 +59,7 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Put !M! ${ModID}:Fish on top of your draw pile."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
@@ -368,7 +373,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Quest: Play 4 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 3 Strength.",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Quest: Play 3 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 3 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]

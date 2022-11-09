@@ -34,7 +34,12 @@ public class FoilShiny {
 
         public static boolean isOnSteamDeck() {
             if (RUNNING_ON_STEAM_DECK == -1) {
-                RUNNING_ON_STEAM_DECK = CardCrawlGame.clientUtils.isSteamRunningOnSteamDeck() ? 1 : 0;
+                try {
+                    RUNNING_ON_STEAM_DECK = CardCrawlGame.clientUtils.isSteamRunningOnSteamDeck() ? 1 : 0;
+                } catch (IllegalAccessError e) {
+                    System.out.println("VEX OVERRIDE DETECTED: GOG PLAYER");
+                    RUNNING_ON_STEAM_DECK = 0;
+                }
             }
             return RUNNING_ON_STEAM_DECK == 1;
         }

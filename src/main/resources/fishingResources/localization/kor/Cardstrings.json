@@ -22,6 +22,11 @@
     "DESCRIPTION": "힘을 !M! 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "힘을 !M! 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
   },
+  "fishing:RoboFish": {
+    "NAME": "로봇 물고기",
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "힘을 !M! 얻습니다. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸."
+  },
   "fishing:Octopus": {
     "NAME": "문어",
     "DESCRIPTION": "{@@}카드를 !M! 장 뽑습니다{!M!|>1=s}. NL 카드를 !fishing:m3! 장 뽑습니다. NL 소멸.",
@@ -393,8 +398,8 @@
   },
   "fishing:QuestTimeTheFishOPedia": {
     "NAME": "물고기 사전",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL fishing:퀘스트 : 각기 다른 4종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 3 얻습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL fishing:퀘스트 : 각기 다른 4종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 3 얻습니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL fishing:퀘스트 : 각기 다른 3종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 3 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL fishing:퀘스트 : 각기 다른 4종류의 fishing:물고기 를 사용하세요. NL *보상: NL 힘을 3 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "물고기를 선택하세요."
     ]

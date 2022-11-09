@@ -16,11 +16,11 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
 
     public QuestTimeTheFishOPedia() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DrawCardAction(magicNumber));
+        blck();
         atb(new AcceptQuestAction(new TheFishOPedia()));
     }
 
@@ -30,6 +30,6 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBlock(4);
     }
 }
