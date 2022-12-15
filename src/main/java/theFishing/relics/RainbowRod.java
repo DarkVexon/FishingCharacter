@@ -21,7 +21,7 @@ public class RainbowRod extends AbstractAdventurerRelic {
 
     @Override
     public void onCardDraw(AbstractCard drawnCard) {
-        if (counter > 0 && !drawnCard.upgraded) {
+        if (counter > 0 && !drawnCard.upgraded && drawnCard.canUpgrade()) {
             counter -= 1;
             drawnCard.upgrade();
             drawnCard.superFlash();
