@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.shuffleIn;
 import static theFishing.util.Wiz.topDeck;
 
 public class PyramidClimber extends AbstractFishingCard {
@@ -18,7 +19,7 @@ public class PyramidClimber extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        topDeck(new Stone());
+        shuffleIn(new Stone());
     }
 
     public void upp() {

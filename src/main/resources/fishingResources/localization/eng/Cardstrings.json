@@ -59,7 +59,7 @@
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
-    "DESCRIPTION": "Deal !D! damage. NL Put !M! ${ModID}:Fish on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! ${ModID}:Fish into your draw pile."
   },
   "${ModID}:SetSail": {
     "NAME": "Set Sail",
@@ -450,7 +450,7 @@
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "Gain !B! Block. NL Put a *Stone on top of your draw pile.",
+    "DESCRIPTION": "Gain !B! Block. NL Shuffle a *Stone into your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "Pyramid Climb",
       "At the end of your turn, gain #b",
