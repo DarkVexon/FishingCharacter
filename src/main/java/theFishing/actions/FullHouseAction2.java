@@ -58,10 +58,11 @@ public class FullHouseAction2 extends AbstractGameAction {
 
     private static void duplicate(List<AbstractCard> cards, int amount) {
         for (AbstractCard q : cards) {
-            if (!isFoil(q)) {
-                makeFoil(q);
+            AbstractCard tar = q.makeStatEquivalentCopy();
+            if (!isFoil(tar)) {
+                makeFoil(tar);
             }
-            att(new MakeTempCardInDrawPileAction(q, amount, true, true));
+            att(new MakeTempCardInDrawPileAction(tar, amount, true, true));
         }
     }
 }

@@ -1,16 +1,15 @@
 package theFishing.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
-import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.makeInHand;
 
 public class TreasureChest extends AbstractFishingCard implements StartupCard {
     public final static String ID = makeID("TreasureChest");
@@ -22,7 +21,7 @@ public class TreasureChest extends AbstractFishingCard implements StartupCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        makeInHand(AbstractFishCard.returnRandomFish());
+        atb(new DrawCardAction(1));
     }
 
     public void upp() {

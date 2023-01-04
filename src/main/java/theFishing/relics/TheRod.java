@@ -13,36 +13,28 @@ public class TheRod extends AbstractAdventurerRelic {
         super(ID, RelicTier.STARTER, LandingSound.FLAT, TheFishing.Enums.FISHING_COLOR);
     }
 
-    private static final int CARDS_UPGRADED = 3;
-
     @Override
     public void atBattleStart() {
-        counter = CARDS_UPGRADED;
         grayscale = false;
     }
 
     @Override
     public void onCardDraw(AbstractCard drawnCard) {
-        if (!grayscale && !drawnCard.upgraded && FoilPatches.isFoil(drawnCard)) {
-            counter -= 1;
-            drawnCard.upgrade();
+        if (!grayscale && FoilPatches.isFoil(drawnCard) && drawnCard.costForTurn != 0 && !drawnCard.freeToPlayOnce) {
+            flash();
+            drawnCard.updateCost(-99);
             drawnCard.superFlash();
-            drawnCard.applyPowers();
-            if (counter == 0) {
-                grayscale = true;
-                counter = -1;
-            }
+            grayscale = true;
         }
     }
 
     @Override
     public void onVictory() {
         grayscale = false;
-        counter = -1;
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + CARDS_UPGRADED + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0];
     }
 }

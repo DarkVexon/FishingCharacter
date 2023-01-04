@@ -1,6 +1,5 @@
 package theFishing;
 
-import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
@@ -26,6 +25,7 @@ import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
 import theFishing.cards.Strike;
 import theFishing.relics.TheRod;
+import theFishing.util.EnergyOrbFishing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,27 +35,14 @@ import static theFishing.TheFishing.Enums.FISHING_COLOR;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
 
 public class TheFishing extends CustomPlayer {
-    private static final String[] orbTextures = {
-            modID + "Resources/images/char/mainChar/orb/layer1.png",
-            modID + "Resources/images/char/mainChar/orb/layer2.png",
-            modID + "Resources/images/char/mainChar/orb/layer3.png",
-            modID + "Resources/images/char/mainChar/orb/layer4.png",
-            modID + "Resources/images/char/mainChar/orb/layer5.png",
-            modID + "Resources/images/char/mainChar/orb/layer6.png",
-            modID + "Resources/images/char/mainChar/orb/layer1d.png",
-            modID + "Resources/images/char/mainChar/orb/layer2d.png",
-            modID + "Resources/images/char/mainChar/orb/layer3d.png",
-            modID + "Resources/images/char/mainChar/orb/layer4d.png",
-            modID + "Resources/images/char/mainChar/orb/layer5d.png",};
     private static final Float SIZE_SCALE = 0.8F;
     static final String ID = makeID("TheFishing");
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
 
-
     public TheFishing(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpineAnimation("fishingResources/images/char/mainChar/NewProject.atlas", "fishingResources/images/char/mainChar/NewProject.json", SIZE_SCALE));
+        super(name, setClass, new EnergyOrbFishing(), new SpineAnimation("fishingResources/images/char/mainChar/NewProject.atlas", "fishingResources/images/char/mainChar/NewProject.json", SIZE_SCALE));
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -98,7 +85,6 @@ public class TheFishing extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        //retVal.add(SpinAttack.ID);
         retVal.add(CastLine.ID);
         return retVal;
     }

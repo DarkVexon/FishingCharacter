@@ -172,8 +172,8 @@
     "DESCRIPTION": "Deal !D! damage to a random enemy X times."
   },
   "${ModID}:TreasureChest": {
-    "NAME": "Treasure Chest",
-    "DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Startup: Gain !M! *Gold."
+    "NAME": "Sand Dollars",
+    "DESCRIPTION": "Draw 1 card. NL Startup: Gain !M! *Gold."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
@@ -259,7 +259,7 @@
     ]
   },
   "${ModID}:AnglerForm": {
-    "NAME": "Angler Form",
+    "NAME": "Benthic Form",
     "DESCRIPTION": "Retain. NL The first !M! times you play a card each turn, draw 1 card."
   },
   "${ModID}:FullHouse": {

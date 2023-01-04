@@ -1,10 +1,9 @@
 {
   "${ModID}:TheRod": {
     "NAME": "The Rod",
-    "FLAVOR": "The only one of its kind.",
+    "FLAVOR": "The only one of its kind. Glows in the dark.",
     "DESCRIPTIONS": [
-      "#yUpgrade the first #b",
-      " unupgraded #y${ModID}:Foil cards you draw each combat."
+      "The first time you draw a #y${ModID}:Foil card each combat, reduce its cost to #b0."
     ]
   },
   "${ModID}:RainbowRod": {
@@ -55,7 +54,7 @@
     "NAME": "Newsletter",
     "FLAVOR": "\"Peculiar! A shimmering cube of false promises.\" - Ranwid",
     "DESCRIPTIONS": [
-      "The merchant's cards are #y${ModID}:Foil, #yUpgraded, and cost #b25% less."
+      "The merchant's cards are #y${ModID}:Foil, #yUpgraded, and #b25% off."
     ]
   },
   "${ModID}:OldBobber": {
