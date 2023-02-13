@@ -23,19 +23,22 @@ public class Hook extends AbstractFishingCard {
 
     public void calculateCardDamage(AbstractMonster mo) {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> q.color.equals(CardColor.COLORLESS)).count();
+        this.baseDamage += this.magicNumber * bonus();
         super.calculateCardDamage(mo);
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
     }
 
     public void applyPowers() {
-        int count = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> q.color.equals(CardColor.COLORLESS)).count();
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * count;
+        this.baseDamage += this.magicNumber * bonus();
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    private static int bonus() {
+        return (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(q -> q.color.equals(CardColor.COLORLESS)).count();
     }
 
     public void upp() {

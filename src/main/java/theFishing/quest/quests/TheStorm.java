@@ -17,7 +17,7 @@ public class TheStorm extends AbstractQuest {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TheStorm() {
-        super(ID, 6);
+        super(ID, 5);
     }
 
     @Override

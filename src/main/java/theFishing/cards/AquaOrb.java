@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +14,7 @@ import theFishing.effects.ColoredSanctityEffect;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class AquaOrb extends AbstractFishingCard {
+public class AquaOrb extends AbstractFishingCard  {
     public final static String ID = makeID("AquaOrb");
     // intellij stuff skill, self, , , , 17, 6, , 
 
@@ -26,14 +27,14 @@ public class AquaOrb extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, magicNumber, false)));
         blck();
-        if (p.discardPile.isEmpty()) {
+        if (GameActionManager.turn == 1) {
             atb(new VFXAction(new ColoredSanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.SKY.cpy())));
             applyToSelf(new ArtifactPower(p, 1));
         }
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDungeon.player.discardPile.isEmpty() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = GameActionManager.turn == 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

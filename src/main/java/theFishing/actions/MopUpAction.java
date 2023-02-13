@@ -1,13 +1,15 @@
 package theFishing.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 
 import java.util.ArrayList;
@@ -19,9 +21,15 @@ import static theFishing.util.Wiz.att;
 public class MopUpAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(FishingMod.makeID("MopUpAction"));
     public static final String[] TEXT = uiStrings.TEXT;
+    private AbstractMonster target;
+    private int damage;
+    private DamageInfo.DamageType damageTypeForTurn;
 
 
-    public MopUpAction() {
+    public MopUpAction(AbstractMonster target, int damage, DamageInfo.DamageType damageTypeForTurn) {
+        this.target = target;
+        this.damage = damage;
+        this.damageTypeForTurn = damageTypeForTurn;
         this.duration = this.startDuration = Settings.ACTION_DUR_XFAST;
     }
 
@@ -57,11 +65,11 @@ public class MopUpAction extends AbstractGameAction {
         }
     }
 
-    private static void mopUpSelectedCard(List<AbstractCard> cards) {
+    private void mopUpSelectedCard(List<AbstractCard> cards) {
         if (cards.get(0).type == AbstractCard.CardType.STATUS || cards
                 .get(0).type == AbstractCard.CardType.CURSE || cards
                 .get(0).color == AbstractCard.CardColor.CURSE) {
-            att(new DrawCardAction(1));
+            att(new DamageAction(this.target, new DamageInfo(AbstractDungeon.player, damage, damageTypeForTurn), AttackEffect.SLASH_VERTICAL));
         }
         att(new ExhaustSpecificCardAction(cards.get(0), AbstractDungeon.player.hand));
     }

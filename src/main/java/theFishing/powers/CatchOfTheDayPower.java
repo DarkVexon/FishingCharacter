@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.shuffleIn;
 import static theFishing.util.Wiz.topDeck;
 
 public class CatchOfTheDayPower extends AbstractAdventurerPower {
@@ -20,7 +21,7 @@ public class CatchOfTheDayPower extends AbstractAdventurerPower {
     public void atEndOfTurn(boolean isPlayer) {
         flash();
         for (int i = 0; i < amount; i++) {
-            topDeck(AbstractFishCard.returnRandomFish());
+            shuffleIn(AbstractFishCard.returnRandomFish());
         }
     }
 

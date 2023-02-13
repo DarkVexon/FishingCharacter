@@ -1,54 +1,41 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.MultiCast;
 import com.megacrit.cardcrawl.cards.blue.Tempest;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.XMarksTheSpotAction;
-
-import java.util.ArrayList;
+import theFishing.TheFishing;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.getCardsMatchingPredicate;
+import static theFishing.util.Wiz.*;
 
 public class XMarksTheSpot extends AbstractFishingCard {
     public final static String ID = makeID("XMarksTheSpot");
-    // intellij stuff skill, self, uncommon, , , , , ,
-
-    private static ArrayList<String> validCards;
+    // intellij stuff skill, self, uncommon, , , , , , 
 
     public XMarksTheSpot() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (validCards == null) {
-            validCards = new ArrayList<>();
-            validCards.addAll(getCardsMatchingPredicate(c -> c.cost == -1 && c.rarity != CardRarity.BASIC && c.rarity != CardRarity.SPECIAL, true));
+        AbstractCard q = CardLibrary.getCard(getRandomItem(getCardsMatchingPredicate(c -> c.cost == -1 && c.color != TheFishing.Enums.FISHING_COLOR && c.color != CardColor.COLORLESS && !c.cardID.equals(MultiCast.ID), true)));
+        if (q.cardID.equals(Tempest.ID) && p.maxOrbs == 0) {
+            addToBot(new IncreaseMaxOrbAction(5));
+            atb(new TalkAction(true, "orb? :0", 0.5F, 2F));
         }
-        ArrayList<String> possCards = new ArrayList<>();
-        possCards.addAll(validCards);
-        ArrayList<AbstractCard> cardsList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            AbstractCard q = CardLibrary.getCard(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1))).makeCopy();
-            if (q instanceof Tempest) {
-                q.rawDescription = q.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
-                q.initializeDescription();
-            }
-            cardsList.add(q);
-        }
-        atb(new XMarksTheSpotAction(cardsList));
-        if (upgraded) {
-            atb(new GainEnergyAction(1));
-        }
+        makeInHand(q);
+        atb(new GainEnergyAction(magicNumber));
     }
 
     public void upp() {
+        upgradeMagicNumber(1);
         uDesc();
     }
 }

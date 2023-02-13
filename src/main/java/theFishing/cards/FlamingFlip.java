@@ -14,15 +14,14 @@ public class FlamingFlip extends AbstractFishingCard {
     // intellij stuff skill, self, uncommon, , , 5, 3, , 
 
     public FlamingFlip() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AnimateHopAction(p));
         blck();
         atb(new ExhaustAction(1, false, false, false));
-        atb(new DrawCardAction(1));
     }
 
     public void upp() {

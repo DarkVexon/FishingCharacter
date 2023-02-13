@@ -41,5 +41,12 @@
       "unnate"
     ],
     "DESCRIPTION": "Starts each combat at the bottom of your draw pile."
+  },
+  {
+    "PROPER_NAME": "Picked",
+    "NAMES": [
+      "picked"
+    ],
+    "DESCRIPTION": "Effect triggers when you obtain this card."
   }
 ]

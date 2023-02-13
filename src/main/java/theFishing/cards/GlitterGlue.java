@@ -47,12 +47,6 @@ public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        boolean showSelf = false;
-        boolean showTrigger = false;
-        if (!isFoil(this)) {
-            makeFoil(this);
-            showSelf = true;
-        }
         ArrayList<AbstractCard> upgradableCards = new ArrayList();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
@@ -60,20 +54,24 @@ public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
                 upgradableCards.add(c);
             }
         }
+        ArrayList<AbstractCard> foiledCards = new ArrayList<>();
 
-        AbstractCard tar = Wiz.getRandomItem(upgradableCards);
-        if (tar != null) {
-            makeFoil(tar);
-            showTrigger = true;
+        for (int i = 0; i < 2; i++) {
+            if (!upgradableCards.isEmpty()) {
+                AbstractCard tar = Wiz.getRandomItem(upgradableCards);
+                if (tar != null) {
+                    makeFoil(tar);
+                    upgradableCards.remove(tar);
+                    foiledCards.add(tar);
+                }
+            }
         }
 
-        if (showSelf && showTrigger) {
-            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy(), Settings.WIDTH / 3.0F, Settings.HEIGHT / 2.0F));
-            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy(), (Settings.WIDTH / 3.0F * 2f), Settings.HEIGHT / 2.0F));
-        } else if (showSelf) {
-            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy()));
-        } else if (showTrigger) {
-            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy()));
+        if (foiledCards.size() == 2) {
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(foiledCards.get(0).makeStatEquivalentCopy(), Settings.WIDTH / 3.0F, Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(foiledCards.get(1).makeStatEquivalentCopy(), (Settings.WIDTH / 3.0F * 2f), Settings.HEIGHT / 2.0F));
+        } else if (foiledCards.size() == 1) {
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(foiledCards.get(0).makeStatEquivalentCopy()));
         }
     }
 }

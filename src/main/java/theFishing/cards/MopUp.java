@@ -14,12 +14,12 @@ public class MopUp extends AbstractFishingCard {
 
     public MopUp() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        atb(new MopUpAction());
+        atb(new MopUpAction(m, damage, damageTypeForTurn));
     }
 
     public void upp() {

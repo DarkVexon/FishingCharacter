@@ -26,16 +26,12 @@ public class Wizardry extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new ThirdEyeEffect(p.hb.cX, p.hb.cY)));
         applyToSelf(new VigorPower(p, magicNumber));
+        AbstractCard q = new Pinball();
+        FoilPatches.makeFoil(q);
+        topDeck(q);
     }
 
     public void upp() {
         upgradeMagicNumber(2);
-    }
-
-    @Override
-    public void triggerWhenDrawn() {
-        AbstractCard q = new Pinball();
-        FoilPatches.makeFoil(q);
-        topDeck(q);
     }
 }
