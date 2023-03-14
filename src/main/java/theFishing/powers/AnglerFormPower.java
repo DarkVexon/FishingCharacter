@@ -19,14 +19,6 @@ public class AnglerFormPower extends AbstractAdventurerPower {
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() <= amount) {
-            flash();
-            addToBot(new DrawCardAction(1));
-        }
-    }
-
-    @Override
     public void updateDescription() {
         description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1];
     }

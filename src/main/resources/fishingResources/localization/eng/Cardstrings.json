@@ -415,11 +415,11 @@
   },
   "${ModID}:ShinyShots": {
     "NAME": "Shiny Shots",
-    "DESCRIPTION": "Deal !D! damage 3 times. NL Gain !B! Block for each ${ModID}:Foil card in your hand."
+    "DESCRIPTION": "Retain. NL Deal !D! damage for each Foil card in your hand."
   },
   "${ModID}:PerfectPull": {
     "NAME": "Perfect Pull",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL If you drew a ${ModID}:Foil card this way, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random ${ModID}:Foil card in your hand to 0 this turn."
   },
   "${ModID}:ShimmeringShank": {
     "NAME": "Shimmering Shield",
@@ -438,7 +438,7 @@
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "${ModID}:Foil cards deal !M! more damage and grant !M! more Block."
+    "DESCRIPTION": "The first time you play a ${ModID}:Foil card each turn, deal !M! damage to the frontmost enemy."
   },
   "${ModID}:TheBackpack": {
     "NAME": "The Backpack",

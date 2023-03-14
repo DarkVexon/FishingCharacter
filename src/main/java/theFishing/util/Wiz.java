@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import theFishing.patch.foil.FoilPatches;
 
@@ -153,5 +155,36 @@ public class Wiz {
 
     public static void applyToSelfTop(AbstractPower po) {
         att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
+    }
+
+    public static AbstractMonster getFrontmostEnemy() {
+        AbstractMonster foe = null;
+        float bestPos = 10000F;
+        for (AbstractMonster m : Wiz.getEnemies()) {
+            if (m.drawX < bestPos) {
+                foe = m;
+                bestPos = m.drawX;
+            }
+        }
+        return foe;
+    }
+
+    public static int pwrAmt(AbstractCreature check, String ID) {
+        AbstractPower found = check.getPower(ID);
+        if (found != null) {
+            return found.amount;
+        }
+        return 0;
+    }
+
+    public static int getLogicalCardCost(AbstractCard c) {
+        if (!c.freeToPlay()) {
+            if(c.cost <= -2) {
+                return 0;
+            } else if(c.cost == -1)
+                return EnergyPanel.totalCount;
+            return c.costForTurn;
+        }
+        return 0;
     }
 }

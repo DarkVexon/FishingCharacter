@@ -1,13 +1,16 @@
 package theFishing.powers;
 
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import theFishing.patch.foil.FoilPatches;
+import theFishing.util.Wiz;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.patch.foil.FoilPatches.isFoil;
 
 public class MintConditionPower extends AbstractAdventurerPower {
     public static String ID = makeID(MintConditionPower.class.getSimpleName());
@@ -17,18 +20,20 @@ public class MintConditionPower extends AbstractAdventurerPower {
         super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
-    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if (isFoil(card)) {
-            return type == DamageInfo.DamageType.NORMAL ? damage + amount : damage;
-        }
-        return damage;
+    private boolean triggered = false;
+
+    @Override
+    public void atStartOfTurn() {
+        triggered = false;
     }
 
-    public float modifyBlock(float blockAmount, AbstractCard card) {
-        if (isFoil(card)) {
-            return blockAmount + ((float) amount);
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (FoilPatches.isFoil(card) && !triggered) {
+            flash();
+            triggered = true;
+            addToBot(new DamageAction(Wiz.getFrontmostEnemy(), new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS)));
         }
-        return blockAmount;
     }
 
     @Override

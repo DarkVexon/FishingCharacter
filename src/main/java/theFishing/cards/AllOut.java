@@ -24,6 +24,6 @@ public class AllOut extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(3);
     }
 }
