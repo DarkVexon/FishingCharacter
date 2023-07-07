@@ -24,6 +24,7 @@ import theFishing.cards.cardvars.SecondMagicNumber;
 import theFishing.cards.cardvars.ThirdMagicNumber;
 import theFishing.patch.PreDrawPatch;
 import theFishing.patch.foil.FoilPatches;
+import theFishing.patch.foil.FoilShinyName;
 import theFishing.potions.CarePackage;
 import theFishing.potions.OceanInAJar;
 import theFishing.potions.StarlightSoda;
@@ -252,6 +253,8 @@ public class FishingMod implements
             toRemove = null;
 
         }
+
+        FoilShinyName.update();
     }
 
     public static Settings.GameLanguage[] SupportedLanguages = {
