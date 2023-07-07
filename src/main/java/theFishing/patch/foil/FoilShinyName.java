@@ -55,6 +55,11 @@ public class FoilShinyName {
         }
     }
 
+    @SpirePatch(clz = AbstractCard.class, method="renderDescription")
+    public static class FoilCardsMovingText {
+
+    }
+
     @SpirePatch(clz = AbstractCard.class, method = "renderTitle")
     public static class FoilCardsShinyNameEnd {
         public static void Postfix(AbstractCard __instance) {

@@ -24,42 +24,48 @@ vec4 shiftHue(vec3 col, float Shift)
     return vec4(col, 1.0);
 }
 
-void brightnessAdjust( inout vec4 color, in float b) {
+void brightnessAdjust(inout vec4 color, in float b) {
     color.rgb += b;
 }
 
-void contrastAdjust( inout vec4 color, in float c) {
+void contrastAdjust(inout vec4 color, in float c) {
     float t = 0.5 - c * 0.5;
     color.rgb = color.rgb * c + t;
 }
 
-mat4 saturationMatrix( float saturation ) {
-    vec3 luminance = vec3( 0.3086, 0.6094, 0.0820 );
+mat4 saturationMatrix(float saturation) {
+    vec3 luminance = vec3(0.3086, 0.6094, 0.0820);
     float oneMinusSat = 1.0 - saturation;
-    vec3 red = vec3( luminance.x * oneMinusSat );
+    vec3 red = vec3(luminance.x * oneMinusSat);
     red.r += saturation;
 
-    vec3 green = vec3( luminance.y * oneMinusSat );
+    vec3 green = vec3(luminance.y * oneMinusSat);
     green.g += saturation;
 
-    vec3 blue = vec3( luminance.z * oneMinusSat );
+    vec3 blue = vec3(luminance.z * oneMinusSat);
     blue.b += saturation;
 
     return mat4(
-    red,     0,
-    green,   0,
-    blue,    0,
-    0, 0, 0, 1 );
+    red, 0,
+    green, 0,
+    blue, 0,
+    0, 0, 0, 1);
 }
 
 
 void main() {
     vec4 outputColor = rgba(vec2(0, 0));
 
-    outputColor = saturationMatrix(0.6) * outputColor;
-    brightnessAdjust(outputColor, 0.125);
-    contrastAdjust(outputColor, 1.1);
-    vec4 hueShifted = shiftHue(outputColor.rgb, shift_amt);
+    if (outputColor.r > .9 && outputColor.g > .9 && outputColor.b < .25) {
+        outputColor = saturationMatrix(0.6) * outputColor;
+        brightnessAdjust(outputColor, 0.125);
+        contrastAdjust(outputColor, 1.1);
+        vec4 hueShifted = shiftHue(outputColor.rgb, shift_amt);
 
-    gl_FragColor = vec4(hueShifted.r, hueShifted.g, hueShifted.b, outputColor.a);
+        gl_FragColor = vec4(hueShifted.r, hueShifted.g, hueShifted.b, outputColor.a);
+    }
+    else {
+        gl_FragColor = outputColor;
+    }
+
 }
