@@ -61,6 +61,11 @@
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/2368513093/WidePotions.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>org.bitbucket.cowwoc</groupId>
+            <artifactId>diff-match-patch</artifactId>
+            <version>1.2</version>
+        </dependency>
     </dependencies>
 
 
