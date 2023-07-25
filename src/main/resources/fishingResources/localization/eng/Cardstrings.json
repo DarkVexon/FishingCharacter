@@ -355,8 +355,8 @@
     ]
   },
   "${ModID}:FastingB": {
-    "NAME": "Fasting-B",
-    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Plated *Armor. NL At the start of your turn, discard 1 card."
+    "NAME": "Turtle",
+    "DESCRIPTION": "Gain !M! Thorns. NL At the start of your turn, discard 1 card and gain !M! Block."
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Storm",

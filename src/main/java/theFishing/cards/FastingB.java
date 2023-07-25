@@ -25,8 +25,7 @@ public class FastingB extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new FastingEffect(p.hb.cX, p.hb.cY, Color.ORANGE)));
         applyToSelf(new ThornsPower(p, magicNumber));
-        applyToSelf(new PlatedArmorPower(p, magicNumber));
-        applyToSelf(new TakeItEasyPower());
+        applyToSelf(new TakeItEasyPower(magicNumber));
     }
 
     public void upp() {

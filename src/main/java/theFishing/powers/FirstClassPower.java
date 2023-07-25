@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import theFishing.cards.Flight;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
@@ -22,9 +21,9 @@ public class FirstClassPower extends AbstractAdventurerPower {
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
-            AbstractCard q = new Flight();
-            makeFoil(q);
-            this.addToBot(new MakeTempCardInHandAction(q, this.amount, false));
+            //AbstractCard q = new Flight();
+            //makeFoil(q);
+            //this.addToBot(new MakeTempCardInHandAction(q, this.amount, false));
         }
     }
 
