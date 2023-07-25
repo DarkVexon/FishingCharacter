@@ -11,12 +11,10 @@ public class Boot extends AbstractFishCard {
     // intellij stuff skill, none, special, , , , , 1, 1
 
     public Boot() {
-        super(ID, CardType.ATTACK, CardTarget.ALL_ENEMY);
-        baseDamage = 2;
-        isMultiDamage = true;
+        super(ID, CardType.SKILL, CardTarget.NONE);
     }
 
     public void fishEffect(AbstractPlayer p, AbstractMonster m) {
-        allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+
     }
 }
