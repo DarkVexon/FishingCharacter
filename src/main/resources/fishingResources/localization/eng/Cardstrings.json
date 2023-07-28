@@ -580,7 +580,7 @@
   },
   "${ModID}:Raid": {
     "NAME": "Raid",
-    "DESCRIPTION": "Deal !D! damage for each time you completed the Dungeon this combat. NL ${ModID}:Picked: Obtain 2 *Party *Members."
+    "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain 2 *Party *Members."
   },
   "${ModID}:ShinyShadow": {
     "NAME": "Shiny Shadow",
