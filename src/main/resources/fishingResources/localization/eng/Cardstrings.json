@@ -521,7 +521,7 @@
     "DESCRIPTION": "Deal !D! damage twice. NL Startup: ALL enemies lose !M! HP."
   },
   "${ModID}:Preclude": {
-    "NAME": "Preclude",
+    "NAME": "Escargottem",
     "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp.",
     "EXTENDED_DESCRIPTION": [
       "I can't play this Opener after other cards."
