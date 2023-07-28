@@ -16,7 +16,7 @@ public class DungeonMaster extends AbstractFishingCard {
 
     public DungeonMaster() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 25;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,6 +24,6 @@ public class DungeonMaster extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(7);
+        upgradeMagicNumber(2);
     }
 }

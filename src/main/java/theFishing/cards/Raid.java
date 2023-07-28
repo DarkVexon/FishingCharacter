@@ -12,7 +12,7 @@ import theFishing.FishingMod;
 import static theFishing.FishingMod.makeID;
 
 public class Raid extends AbstractFishingCard implements OnObtainCard {
-    public final static String ID = makeID("RaidNight");
+    public final static String ID = makeID("Raid");
     // intellij stuff attack, enemy, uncommon, 7, 3, , , , 
 
     public Raid() {

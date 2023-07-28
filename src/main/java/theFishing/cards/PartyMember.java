@@ -16,7 +16,7 @@ public class PartyMember extends AbstractFishingCard {
     // intellij stuff skill, self, special, , , , , , 
 
     public PartyMember() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         selfRetain = true;
         exhaust = true;
     }

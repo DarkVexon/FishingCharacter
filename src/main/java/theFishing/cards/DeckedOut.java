@@ -11,7 +11,7 @@ import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.makeInHand;
 
 public class DeckedOut extends AbstractFishingCard {
-    public final static String ID = makeID("AllHandsOnDeck");
+    public final static String ID = makeID("DeckedOut");
     // intellij stuff skill, self, uncommon, , , , , 3, 1
 
     public DeckedOut() {

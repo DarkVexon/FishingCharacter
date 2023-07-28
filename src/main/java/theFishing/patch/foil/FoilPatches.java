@@ -32,6 +32,8 @@ public class FoilPatches {
 
     // GAMEPLAY STUFF
 
+    public static final int FOIL_RARITY = 5; // 1 out of X card rewards
+
     public static final int SHOP_FOIL_CARDS = 2; // X out of the shop's cards
     public static final float SHOP_FOIL_MARKUP = 1.1F; // how much more expensive foils should be
 
@@ -81,7 +83,8 @@ public class FoilPatches {
     public static class FoilInRewards {
         public static void Postfix(ArrayList<AbstractCard> __result) {
             if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING) {
-                makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRng));
+                if (AbstractDungeon.cardRng.random(0, FOIL_RARITY) == 0)
+                    makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRng));
             }
         }
     }
@@ -149,8 +152,10 @@ public class FoilPatches {
     )
     public static class NeowFoils1 {
         public static ArrayList<AbstractCard> Postfix(ArrayList<AbstractCard> __result, NeowReward __instance, boolean rareOnly) {
-            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING))
-                makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRandomRng));
+            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
+                if (AbstractDungeon.cardRng.random(0, FOIL_RARITY) == 0)
+                    makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRandomRng));
+            }
             return __result;
         }
     }
@@ -161,8 +166,10 @@ public class FoilPatches {
     )
     public static class NeowFoils2 {
         public static ArrayList<AbstractCard> Postfix(ArrayList<AbstractCard> __result, NeowReward __instance, boolean rareOnly) {
-            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING))
-                makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRandomRng));
+            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
+                if (AbstractDungeon.cardRng.random(0, FOIL_RARITY) == 0)
+                    makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRandomRng));
+            }
             return __result;
         }
     }

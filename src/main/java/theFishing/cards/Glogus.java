@@ -15,7 +15,7 @@ public class Glogus extends AbstractFishingCard {
     // intellij stuff attack, enemy, special, 16, 4, , , , 
 
     public Glogus() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 16;
     }
 

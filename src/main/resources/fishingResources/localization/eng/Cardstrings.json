@@ -581,5 +581,9 @@
   "${ModID}:Raid": {
     "NAME": "Raid",
     "DESCRIPTION": "Deal !D! damage for each time you completed the Dungeon this combat. NL ${ModID}:Picked: Obtain 2 *Party *Members."
+  },
+  "${ModID}:ShinyShadow": {
+    "NAME": "Shiny Shadow",
+    "DESCRIPTION": "Deal !D! damage. NL Play a ${ModID}:Foil card from your draw pile."
   }
 }
