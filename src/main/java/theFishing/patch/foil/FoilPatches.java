@@ -210,11 +210,10 @@ public class FoilPatches {
             if (isFoil(__instance)) {
                 oldShader = sb.getShader();
                 sb.setShader(ART_SHADER);
-//                ART_SHADER.setUniformf("shift_amt", shiftAmts.computeIfAbsent(__instance.cardID, key -> {
-//                    Random rng = new Random((long) __instance.cardID.hashCode());
-//                    return 0.2F + rng.random(0F, 0.6F);
-//                }));
-                ART_SHADER.setUniformf("shift_amt", FoilShinyName.bobs[0].y);
+                ART_SHADER.setUniformf("shift_amt", shiftAmts.computeIfAbsent(__instance.cardID, key -> {
+                    Random rng = new Random((long) __instance.cardID.hashCode());
+                    return 0.2F + rng.random(0F, 0.6F);
+                }));
             }
         }
 
@@ -265,11 +264,10 @@ public class FoilPatches {
             if (isFoil(card)) {
                 oldShader = sb.getShader();
                 sb.setShader(ART_SHADER);
-//                ART_SHADER.setUniformf("shift_amt", FoilSpecialArt.shiftAmts.computeIfAbsent(card.cardID, key -> {
-//                    Random rng = new Random((long) card.cardID.hashCode());
-//                    return 0.2F + rng.random(0F, 0.6F);
-//                }));
-                ART_SHADER.setUniformf("shift_amt", FoilShinyName.bobs[0].y);
+                ART_SHADER.setUniformf("shift_amt", FoilSpecialArt.shiftAmts.computeIfAbsent(card.cardID, key -> {
+                    Random rng = new Random((long) card.cardID.hashCode());
+                    return 0.2F + rng.random(0F, 0.6F);
+                }));
             }
         }
 
