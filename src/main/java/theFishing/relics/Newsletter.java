@@ -9,7 +9,7 @@ import theFishing.TheFishing;
 import static theFishing.FishingMod.makeID;
 
 public class Newsletter extends AbstractAdventurerRelic {
-    public static final String ID = makeID("Newsletter");
+    public static final String ID = makeID(Newsletter.class.getSimpleName());
 
     public Newsletter() {
         super(ID, RelicTier.RARE, LandingSound.MAGICAL, TheFishing.Enums.FISHING_COLOR);

@@ -37,7 +37,7 @@ public class TheFishOPedia extends AbstractQuest {
     private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/Fishopedia.png"));
 
     public TheFishOPedia() {
-        super(ID, 3);
+        super(ID, 4);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class TheFishOPedia extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        applyToSelf(new StrengthPower(AbstractDungeon.player, 3));
+        applyToSelf(new StrengthPower(AbstractDungeon.player, 2));
     }
 
     @Override

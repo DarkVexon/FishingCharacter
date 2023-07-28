@@ -14,7 +14,7 @@ import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.makeInHand;
 
 public class ExpulsionLetter extends AbstractAdventurerRelic {
-    public static final String ID = makeID("ExpulsionLetter");
+    public static final String ID = makeID(ExpulsionLetter.class.getSimpleName());
 
     public ExpulsionLetter() {
         super(ID, RelicTier.BOSS, LandingSound.FLAT, TheFishing.Enums.FISHING_COLOR);
@@ -25,9 +25,6 @@ public class ExpulsionLetter extends AbstractAdventurerRelic {
         AbstractCard q = new Miracle();
         AbstractCard q2 = new Smite();
         AbstractCard q3 = new Safety();
-        q.upgrade();
-        q2.upgrade();
-        q3.upgrade();
         makeFoil(q);
         makeFoil(q2);
         makeFoil(q3);

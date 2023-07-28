@@ -1,35 +1,38 @@
 package theFishing.relics;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.atb;
 
 public class RainbowRod extends AbstractAdventurerRelic {
-    public static final String ID = makeID("RainbowRod");
+    public static final String ID = makeID(RainbowRod.class.getSimpleName());
 
     public RainbowRod() {
         super(ID, RelicTier.BOSS, LandingSound.MAGICAL, TheFishing.Enums.FISHING_COLOR);
     }
 
     @Override
-    public void atTurnStart() {
-        counter = 2;
-    }
-
-    @Override
-    public void onCardDraw(AbstractCard drawnCard) {
-        if (counter > 0 && !drawnCard.upgraded && drawnCard.canUpgrade()) {
-            counter -= 1;
-            drawnCard.upgrade();
-            drawnCard.superFlash();
-            drawnCard.applyPowers();
-            if (counter == 0) {
-                counter = -1;
+    public void atBattleStart() {
+        atb(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                    c.cost = 0;
+                    c.costForTurn = 0;
+                    c.isCostModified = true;
+                    c.superFlash(Color.GOLD.cpy());
+                }
             }
-        }
+        });
     }
 
     @Override

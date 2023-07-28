@@ -3,7 +3,7 @@
     "NAME": "The Rod",
     "FLAVOR": "The only one of its kind. Glows in the dark.",
     "DESCRIPTIONS": [
-      "The first time you draw a #y${ModID}:Foil card each combat, reduce its cost to #b0."
+      "At the start of combat, reduce the cost of a random card in your hand to #b0 this combat."
     ]
   },
   "${ModID}:RainbowRod": {
@@ -11,26 +11,26 @@
     "FLAVOR": "Fishing 100",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL #yUpgrade the first #b2 unupgraded cards you draw each turn."
+      ".[] NL At the start of combat, reduce the cost of cards in your hand to #b0 this combat."
     ]
   },
   "${ModID}:BrokenOar": {
     "NAME": "Broken Oar",
     "FLAVOR": "Most trips to the Spire are one-way.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL At the start of combat, shuffle #b4 #yShivs into your draw pile."
+      "At the start of your turn, #yExhaust 1 card and gain [E]."
     ]
   },
   "${ModID}:MaelstromAnkh": {
     "NAME": "Maelstrom Ankh",
-    "FLAVOR": "Into the depths.",
+    "FLAVOR": "Ozone and sea salt... 'tis a fine day for fishing.",
     "DESCRIPTIONS": [
       "You no longer find #yBoots, #yGuppies, or #yPiranhas."
     ]
   },
   "${ModID}:UnageeSkull": {
     "NAME": "Unagee Skull",
-    "FLAVOR": "Known to guard sunken ships long ago.",
+    "FLAVOR": "Resembles the serpents that sink Spire-bound ships.",
     "DESCRIPTIONS": [
       "At the start of each combat, add #b1 #yFish into your hand."
     ]
@@ -45,7 +45,7 @@
   },
   "${ModID}:Goggles": {
     "NAME": "Goggles",
-    "FLAVOR": "\"We may now cross the Sands.\" - Kublai the Great",
+    "FLAVOR": "\"With this invention, the Sands are open to us.\" - Kublai the Great",
     "DESCRIPTIONS": [
       "Whenever you end your turn with an empty hand, gain #b1 #yStrength."
     ]
@@ -73,9 +73,30 @@
   },
   "${ModID}:ExpulsionLetter": {
     "NAME": "Final Results",
-    "FLAVOR": "You were never gonna get it.",
+    "FLAVOR": "Excommunicated, exiled, expunged - but you can still fix your gaze on the horizon.",
     "DESCRIPTIONS": [
       "At the start of combat, add an #yUpgraded #y${ModID}:Foil #yMiracle, #ySmite, and #ySafety into your hand."
+    ]
+  },
+  "${ModID}:OtherBoot": {
+    "NAME": "Other Boot",
+    "FLAVOR": "It dropped!",
+    "DESCRIPTIONS": [
+      "Protects from #yThorns and #ySharp #yHide. Whenever you play a #yBoot, gain #b6 #yBlock."
+    ]
+  },
+  "${ModID}:FishOPedia": {
+    "NAME": "Fish-o-Pedia",
+    "FLAVOR": "The last entry is missing.",
+    "DESCRIPTIONS": [
+      "Start each combat with #y${ModID}:Quest: Play #b4 different kinds of #y${ModID}:Fish. #yReward: Gain #b2 #yStrength."
+    ]
+  },
+  "${ModID}:MonsterManual": {
+    "NAME": "Monster Manual",
+    "FLAVOR": "One of the oldest known books in print.",
+    "DESCRIPTIONS": [
+      "At the start of combat, add a #yParty #yMember into your hand."
     ]
   }
 }

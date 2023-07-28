@@ -1,13 +1,15 @@
 package theFishing.relics;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.unique.MadnessAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
-import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.atb;
 
 public class TheRod extends AbstractAdventurerRelic {
-    public static final String ID = makeID("TheRod");
+    public static final String ID = makeID(TheRod.class.getSimpleName());
 
     public TheRod() {
         super(ID, RelicTier.STARTER, LandingSound.FLAT, TheFishing.Enums.FISHING_COLOR);
@@ -15,22 +17,8 @@ public class TheRod extends AbstractAdventurerRelic {
 
     @Override
     public void atBattleStart() {
-        grayscale = false;
-    }
-
-    @Override
-    public void onCardDraw(AbstractCard drawnCard) {
-        if (!grayscale && FoilPatches.isFoil(drawnCard) && drawnCard.costForTurn != 0 && !drawnCard.freeToPlayOnce) {
-            flash();
-            drawnCard.updateCost(-99);
-            drawnCard.superFlash();
-            grayscale = true;
-        }
-    }
-
-    @Override
-    public void onVictory() {
-        grayscale = false;
+        atb(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        atb(new MadnessAction());
     }
 
     @Override

@@ -9,7 +9,7 @@ import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
 
 public class Goggles extends AbstractAdventurerRelic {
-    public static final String ID = makeID("Goggles");
+    public static final String ID = makeID(Goggles.class.getSimpleName());
 
     public Goggles() {
         super(ID, RelicTier.UNCOMMON, LandingSound.CLINK, TheFishing.Enums.FISHING_COLOR);

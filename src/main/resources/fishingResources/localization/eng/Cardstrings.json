@@ -549,9 +549,9 @@
     "NAME": "Ghost Ship",
     "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, if this card is in the Exhaust pile, ALL enemies lose !M! HP."
   },
-  "${ModID}:IdolOfRher": {
-    "NAME": "Idol of Rher",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Enter_the_Dungeon."
+  "${ModID}:DarkDreams": {
+    "NAME": "Dark Dreams",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Enter_the_Dungeon. NL When you Rest, Upgrade this."
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
