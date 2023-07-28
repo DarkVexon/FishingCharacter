@@ -539,7 +539,7 @@
   },
   "${ModID}:DungeonMaster": {
     "NAME": "Dungeon Master",
-    "DESCRIPTION": "Whenever you complete the Dungeon, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Whenever you complete the Dungeon, gain !M! Strength."
   },
   "${ModID}:GazeOfTheGods": {
     "NAME": "Gaze of the Gods",
@@ -564,5 +564,22 @@
   "${ModID}:ProTank": {
     "NAME": "Pro Tank",
     "DESCRIPTION": "Whenever you ${ModID}:Enter_the_Dungeon, gain !M! Block."
+  },
+  "${ModID}:GlogusEgg": {
+    "NAME": "Glogus Egg",
+    "DESCRIPTION": "Exhaust. NL If this card is Exhausted, add *Glogus into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust. NL If this card is Exhausted, add *Glogus+ into your hand."
+  },
+  "${ModID}:Glogus": {
+    "NAME": "Glogus",
+    "DESCRIPTION": "I am born! NL Deal !D! damage."
+  },
+  "${ModID}:PartyMember": {
+    "NAME": "Party Member",
+    "DESCRIPTION": "Retain. NL ${ModID}:Enter_the_Dungeon. NL Exhaust."
+  },
+  "${ModID}:Raid": {
+    "NAME": "Raid",
+    "DESCRIPTION": "Deal !D! damage for each time you completed the Dungeon this combat. NL ${ModID}:Picked: Obtain 2 *Party *Members."
   }
 }

@@ -1,13 +1,12 @@
 package theFishing.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class DungeonMasterPower extends AbstractAdventurerPower implements OnCompleteDungeonPower {
     public static String ID = makeID(DungeonMasterPower.class.getSimpleName());
@@ -21,7 +20,7 @@ public class DungeonMasterPower extends AbstractAdventurerPower implements OnCom
     @Override
     public void onDungeonComplete() {
         flash();
-        addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+        applyToSelf(new StrengthPower(owner, amount));
     }
 
     @Override

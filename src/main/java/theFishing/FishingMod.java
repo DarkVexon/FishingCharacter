@@ -270,4 +270,5 @@ public class FishingMod implements
     }
 
     public static AbstractBoard activeBoard;
+    public static int timesCompletedThisCombat = 0;
 }

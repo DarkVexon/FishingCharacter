@@ -2,6 +2,7 @@ package theFishing.relics;
 
 import theFishing.TheFishing;
 import theFishing.actions.AcceptQuestAction;
+import theFishing.cards.PartyMember;
 import theFishing.quest.quests.TheFishOPedia;
 
 import static theFishing.FishingMod.makeID;

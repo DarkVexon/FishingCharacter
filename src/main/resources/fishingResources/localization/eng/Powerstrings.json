@@ -94,8 +94,8 @@
   "${ModID}:DungeonMasterPower": {
     "NAME": "Dungeon Master",
     "DESCRIPTIONS": [
-      "Whenever you complete the #yDungeon, deal #b",
-      " damage to ALL enemies."
+      "Whenever you complete the #yDungeon, gain #b",
+      " #yStrength."
     ]
   },
   "${ModID}:LunchBoxPower": {
