@@ -12,7 +12,7 @@ public class ConfettiCannon extends AbstractFishingCard {
 
     public ConfettiCannon() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 7;
+        baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

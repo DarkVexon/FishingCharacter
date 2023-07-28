@@ -14,7 +14,7 @@ public class Stone extends AbstractFishingCard {
     // intellij stuff curse, none, curse, , , , , 9, 
 
     public Stone() {
-        super(ID, -2, CardType.CURSE, CardRarity.CURSE, CardTarget.NONE, CardColor.CURSE);
+        super(ID, -2, CardType.STATUS, CardRarity.COMMON, CardTarget.NONE, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 9;
     }
 

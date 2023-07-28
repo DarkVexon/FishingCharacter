@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.cards.fish.AbstractFishCard;
+import theFishing.patch.PreDrawPatch;
 
 import static theFishing.FishingMod.makeID;
 
@@ -21,8 +22,8 @@ public class RidiculousFishingPower extends AbstractAdventurerPower {
     }
 
     @Override
-    public void onAfterCardPlayed(AbstractCard card) {
-        if (card instanceof AbstractFishCard) {
+    public void onCardDraw(AbstractCard card) {
+        if (PreDrawPatch.DRAWN_DURING_TURN) {
             flash();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }

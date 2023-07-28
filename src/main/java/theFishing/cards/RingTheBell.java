@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,8 +16,6 @@ import static theFishing.util.Wiz.topDeck;
 
 public class RingTheBell extends AbstractFishingCard implements OnObtainCard {
     public final static String ID = makeID("RingTheBell");
-    // intellij stuff skill, all_enemy, uncommon, , , , , 13, 
-    //ART: Adventurer in the background aiming their pistol at the mocking Cursed Bell in the foreground
 
     public RingTheBell() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);

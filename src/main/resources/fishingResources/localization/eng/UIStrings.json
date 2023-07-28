@@ -11,7 +11,7 @@
   },
   "${ModID}:MopUpAction": {
     "TEXT": [
-      "to Exhaust for Mop Up."
+      "Exhaust for Mop Up."
     ]
   },
   "${ModID}:FishDescriptor": {
@@ -35,7 +35,7 @@
     "TEXT": [
       "The Lucky Pack",
       "#yQuest: Play #b",
-      " #yFoil cards in a turn. NL #yReward: Gain #b3 #yPlated #yArmor."
+      " #yFoil cards. NL #yReward: Play the last one again."
     ]
   },
   "${ModID}:ThePrismaticPortal": {

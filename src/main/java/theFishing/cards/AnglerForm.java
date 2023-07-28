@@ -3,7 +3,8 @@ package theFishing.cards;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawPower;
+import theFishing.patch.PreDrawPatch;
+import theFishing.powers.AnglerFormPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
@@ -14,18 +15,24 @@ public class AnglerForm extends AbstractFishingCard {
 
     public AnglerForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 6;
-        selfRetain = true;
+        baseMagicNumber = magicNumber = 15;
         tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new DrawPower(p, magicNumber));
+        applyToSelf(new AnglerFormPower(magicNumber));
+    }
+
+    //TODO: implement power trigger time
+
+    @Override
+    public void triggerWhenDrawn() {
+        if (PreDrawPatch.DRAWN_DURING_TURN) {
+            setCostForTurn(0);
+        }
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(3);
+        upgradeMagicNumber(5);
     }
 }

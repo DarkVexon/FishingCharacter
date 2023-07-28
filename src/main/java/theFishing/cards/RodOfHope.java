@@ -15,8 +15,8 @@ public class RodOfHope extends AbstractFishingCard {
     // intellij stuff skill, self, rare, , , , , , 
 
     public RodOfHope() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 12;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,6 +32,6 @@ public class RodOfHope extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(4);
     }
 }

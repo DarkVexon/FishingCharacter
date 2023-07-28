@@ -6,12 +6,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import theFishing.actions.RepeatCardAction;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.util.TexLoader;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.att;
 
 public class TheLuckyPack extends AbstractQuest {
 
@@ -36,7 +38,8 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        applyToSelf(new PlatedArmorPower(AbstractDungeon.player, 3));
+        AbstractCard q = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1);
+        att(new RepeatCardAction(q));
     }
 
     @Override
@@ -46,11 +49,6 @@ public class TheLuckyPack extends AbstractQuest {
         }
     }
 
-    @Override
-    public void atEndOfTurn() {
-        progress = 0;
-    }
-
     private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/LuckyPack.png"));
     private static final Texture complete = TexLoader.getTexture(makeImagePath("quests/LuckyPack_completed.png"));
     private static final Texture incomplete_last = TexLoader.getTexture(makeImagePath("quests/LuckyPack_Last.png"));
@@ -58,12 +56,12 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public Texture progressTex(int idx) {
-//        if (idx == 2) {
-//            if (progress > idx) {
-//                return complete_last;
-//            }
-//            return incomplete_last;
-//        }
+        if (idx == 2) {
+            if (progress > idx) {
+                return complete_last;
+            }
+            return incomplete_last;
+        }
         if (progress > idx) {
             return complete;
         }

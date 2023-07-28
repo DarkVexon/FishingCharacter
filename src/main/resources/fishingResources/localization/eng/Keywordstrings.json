@@ -26,7 +26,7 @@
       "quest",
       "quests"
     ],
-    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward. NL If you already have that #yQuest in progress, draw #b1 card instead."
+    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward."
   },
   {
     "PROPER_NAME": "Foil",
@@ -48,5 +48,13 @@
       "picked"
     ],
     "DESCRIPTION": "Effect triggers when you obtain this card."
+  },
+  {
+    "PROPER_NAME": "Enter the Dungeon",
+    "NAMES": [
+      "enter the dungeon",
+      "enter_the_dungeon"
+    ],
+    "DESCRIPTION": "Move to the next room of the Dungeon and activate its effects."
   }
 ]

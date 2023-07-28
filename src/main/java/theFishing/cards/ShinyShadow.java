@@ -1,0 +1,37 @@
+package theFishing.cards;
+
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.PlayFromPileAction;
+import theFishing.patch.foil.FoilPatches;
+
+import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
+
+public class ShinyShadow extends AbstractFishingCard {
+    public final static String ID = makeID("ShinyShadow");
+    // intellij stuff attack, enemy, common, 19, 6, , , , 
+
+    public ShinyShadow() {
+        super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 19;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        atb(new SelectCardsAction(AbstractDungeon.player.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0], false, (c) -> FoilPatches.isFoil(c), (cards) -> {
+            for (AbstractCard q : cards) {
+                att(new PlayFromPileAction(q, AbstractDungeon.player.drawPile));
+            }
+        }));
+    }
+
+    public void upp() {
+        upgradeDamage(6);
+    }
+}

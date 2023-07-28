@@ -43,9 +43,8 @@
   "${ModID}:MintConditionPower": {
     "NAME": "Mint Condition",
     "DESCRIPTIONS": [
-      "#yFoil cards deal #b",
-      " more damage and grant #b",
-      " more #yBlock."
+      "Whenever you play a #yFoil card, gain #b",
+      " #yStrength."
     ]
   },
   "${ModID}:RidiculousFishingPower": {
@@ -85,35 +84,33 @@
       " #yFish on top of your draw pile."
     ]
   },
-  "${ModID}:FirstClassPower": {
-    "NAME": "First Class",
-    "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " #yFoil #yFlight into your hand.",
-      " #yFoil #yFlights into your hand."
-    ]
-  },
-  "${ModID}:ShinyShivPower": {
-    "NAME": "Shimmering Shield",
-    "DESCRIPTIONS": [
-      "Whenever you play a #yFoil card this turn, add #b",
-      " #yShiv",
-      " #yShivs",
-      " into your hand."
-    ]
-  },
-  "${ModID}:PowerPelletPower": {
-    "NAME": "Power Pellet",
-    "DESCRIPTIONS": [
-      "#yWaka #yWakas deal #b",
-      " additional damage."
-    ]
-  },
   "${ModID}:AllOutPower": {
     "NAME": "All Out",
     "DESCRIPTIONS": [
       "At the end of your turn, if your hand is empty, deal #b",
       " damage to ALL enemies."
+    ]
+  },
+  "${ModID}:DungeonMasterPower": {
+    "NAME": "Dungeon Master",
+    "DESCRIPTIONS": [
+      "Whenever you complete the #yDungeon, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "${ModID}:LunchBoxPower": {
+    "NAME": "Lunch Box",
+    "DESCRIPTIONS": [
+      "Your next Colorless card is played twice this turn.",
+      "Your next #b",
+      " Colorless cards are played twice this turn."
+    ]
+  },
+  "${ModID}:ProTankPower": {
+    "NAME": "Pro Tank",
+    "DESCRIPTIONS": [
+      "Whenever you #yEnter #ythe #yDungeon, gain #b",
+      " #yBlock."
     ]
   }
 }

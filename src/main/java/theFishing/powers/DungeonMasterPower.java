@@ -1,28 +1,27 @@
 package theFishing.powers;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import theFishing.cards.WakaWaka;
 
 import static theFishing.FishingMod.makeID;
 
-public class PowerPelletPower extends AbstractAdventurerPower {
-    public static String ID = makeID(PowerPelletPower.class.getSimpleName());
+public class DungeonMasterPower extends AbstractAdventurerPower implements OnCompleteDungeonPower {
+    public static String ID = makeID(DungeonMasterPower.class.getSimpleName());
+
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
-    public PowerPelletPower(int amount) {
+    public DungeonMasterPower(int amount) {
         super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
     @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if (card.cardID.equals(WakaWaka.ID)) {
-            return damage + amount;
-        }
-        return damage;
+    public void onDungeonComplete() {
+        flash();
+        addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override

@@ -1,13 +1,11 @@
 package theFishing.util;
 
-import com.badlogic.gdx.utils.Array;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,9 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import theFishing.patch.foil.FoilPatches;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
@@ -125,6 +121,14 @@ public class Wiz {
         makeInHand(c, 1);
     }
 
+    public static void makeInHandTop(AbstractCard c, int i) {
+        att(new MakeTempCardInHandAction(c, i));
+    }
+
+    public static void makeInHandTop(AbstractCard c) {
+        makeInHandTop(c, 1);
+    }
+
     public static void shuffleIn(AbstractCard c, int i) {
         atb(new MakeTempCardInDrawPileAction(c, i, true, true));
     }
@@ -179,12 +183,15 @@ public class Wiz {
 
     public static int getLogicalCardCost(AbstractCard c) {
         if (!c.freeToPlay()) {
-            if(c.cost <= -2) {
+            if (c.cost <= -1) {
                 return 0;
-            } else if(c.cost == -1)
-                return EnergyPanel.totalCount;
+            }
             return c.costForTurn;
         }
         return 0;
+    }
+
+    public static AbstractMonster getRandomEnemy() {
+        return AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
     }
 }

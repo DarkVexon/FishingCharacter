@@ -17,7 +17,7 @@ public class FinishingTouchesPower extends AbstractAdventurerPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public FinishingTouchesPower() {
-        super(makeID("FinishingTouchesPower"), powerStrings.NAME, AbstractPower.PowerType.BUFF, false, AbstractDungeon.player, 1);
+        super(ID, powerStrings.NAME, AbstractPower.PowerType.BUFF, false, AbstractDungeon.player, 1);
     }
 
     @Override

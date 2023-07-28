@@ -71,7 +71,7 @@
   },
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Solo: Play the top card of your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Vulnerable. NL ${ModID}:Solo: Apply 2 more Vulnerable."
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
@@ -192,8 +192,8 @@
     "DESCRIPTION": "Can only be played if your hand contains 3 or fewer cards. NL Gain !B! Block. NL Deal !D! damage."
   },
   "${ModID}:DeckedOut": {
-    "NAME": "Decked Out",
-    "DESCRIPTION": "Add !M! *Shivs and a ${ModID}:Foil *Smite into your hand. NL If you're on Steam Deck, Upgrade them."
+    "NAME": "All Hands On Deck",
+    "DESCRIPTION": "Add !M! ${ModID}:Foil *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
   },
   "${ModID}:ShipRam": {
     "NAME": "Ship Ram",
@@ -204,8 +204,9 @@
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust 1 card."
   },
   "${ModID}:BoxOfHavoc": {
-    "NAME": "Box of Havoc",
-    "DESCRIPTION": "Apply !${ModID}:m2! Poison to ALL enemies. NL ${ModID}:Solo: Apply !M! Weak and Vulnerable to ALL enemies."
+    "NAME": "Pandora's Box",
+    "DESCRIPTION": "Draw until you draw !M! Energy worth of cards. NL X counts as 0. NL ${ModID}:Solo: Gain [E] [E].",
+    "UPGRADE_DESCRIPTION": "Draw until you draw !M! Energy worth of cards. NL X counts as 0. NL ${ModID}:Solo: Gain [E] [E] [E]."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Barbed",
@@ -256,7 +257,7 @@
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
-    "DESCRIPTION": "Retain. NL The first !M! times you play a card each turn, draw 1 card."
+    "DESCRIPTION": "Before enemies attack, they lose !M! HP. NL ${ModID}:Voyaged: Costs 0."
   },
   "${ModID}:FullHouse": {
     "NAME": "Three of a Kind",
@@ -289,7 +290,7 @@
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
-    "DESCRIPTION": "Whenever you play a ${ModID}:Fish, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you draw a card during your turn, deal !M! damage to a random enemy."
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
@@ -298,7 +299,7 @@
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
-    "DESCRIPTION": "Gain !B! Block. NL Put a ${ModID}:Foil *Flag on top of your draw pile."
+    "DESCRIPTION": "${ModID}:Enter_the_Dungeon. NL Put a ${ModID}:Foil *Flag on top of your draw pile."
   },
   "${ModID}:Flag": {
     "NAME": "Flag",
@@ -365,7 +366,7 @@
   },
   "${ModID}:QuestTimeTheLuckyPack": {
     "NAME": "The Lucky Pack",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a turn. NL *Reward: Gain 3 *Plated *Armor."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards. NL *Reward: Play the last one again."
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
@@ -384,7 +385,7 @@
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10+, gain !M! Strength."
   },
   "${ModID}:TheFinalCard": {
-    "NAME": "The Final Card",
+    "NAME": "Final Card",
     "DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL If this card ends the combat, Upgrade it.",
     "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL Thanks for playing."
   },
@@ -438,20 +439,16 @@
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
-    "DESCRIPTION": "The first time you play a ${ModID}:Foil card each turn, deal !M! damage to the frontmost enemy."
+    "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a ${ModID}:Foil card, gain 1 Strength."
   },
   "${ModID}:TheBackpack": {
-    "NAME": "The Backpack",
+    "NAME": "Backpack",
     "DESCRIPTION": "Gain !B! Block. NL Discard your hand. NL Put a card from your discard pile into your hand."
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "Gain !B! Block. NL Shuffle a *Stone into your draw pile.",
-    "EXTENDED_DESCRIPTION": [
-      "Pyramid Climb",
-      "At the end of your turn, gain #b",
-      " #yBlock for every #b6 cards in your discard pile."
-    ]
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Add a *Stone into your hand."
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
@@ -517,8 +514,8 @@
     "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! this combat."
   },
   "${ModID}:DoubleUp": {
-    "NAME": "Double Up",
-    "DESCRIPTION": "Deal !D! damage twice. NL Startup: ALL enemies lose !M! HP."
+    "NAME": "Head Start",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Enter_the_Dungeon. NL Startup: ALL enemies lose !M! HP."
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
@@ -526,15 +523,6 @@
     "EXTENDED_DESCRIPTION": [
       "I can't play this Opener after other cards."
     ]
-  },
-  "${ModID}:CrystallineConfluence": {
-    "NAME": "Crystalline Confluence",
-    "DESCRIPTION": "Shuffle X ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle X+1 ${ModID}:Foil *Star *Shards into your draw pile. NL Exhaust."
-  },
-  "${ModID}:SpinAttack": {
-    "NAME": "Spin Attack",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Discard 1 card."
   },
   "${ModID}:Stone": {
     "NAME": "Stone",
@@ -549,31 +537,32 @@
       " times.)"
     ]
   },
-  "${ModID}:FullySleeved": {
-    "NAME": "Fully Sleeved",
-    "DESCRIPTION": "At the end of your turn, if you played at least 2 ${ModID}:Foil cards, gain !M! Block."
+  "${ModID}:DungeonMaster": {
+    "NAME": "Dungeon Master",
+    "DESCRIPTION": "Whenever you complete the Dungeon, deal !M! damage to ALL enemies."
   },
-  "${ModID}:ImOut": {
-    "NAME": "I'm Out",
-    "DESCRIPTION": "Deal !D! damage. NL You may remove this card from your deck at any time."
+  "${ModID}:GazeOfTheGods": {
+    "NAME": "Gaze of the Gods",
+    "DESCRIPTION": "Enemy loses !M! HP. NL If this card is Exhausted, reduce its cost by 1 and return it to your hand."
   },
-  "${ModID}:Tripwire": {
-    "NAME": "Tripwire",
-    "DESCRIPTION": "Deal !D! damage. NL If your Block is broken this turn, ALL enemies lose !M! HP."
+  "${ModID}:GhostShip": {
+    "NAME": "Ghost Ship",
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, if this card is in the Exhaust pile, ALL enemies lose !M! HP."
   },
-  "${ModID}:FirstClass": {
-    "NAME": "First Class",
-    "DESCRIPTION": "At the start of your turn, add a ${ModID}:Foil *Flight into your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a ${ModID}:Foil *Flight into your hand.",
-    "EXTENDED_DESCRIPTION": [
-      "First Class",
-      "At the start of your turn, add #b",
-      " #yFlight into your hand.",
-      " #yFlights into your hand."
-    ]
+  "${ModID}:IdolOfRher": {
+    "NAME": "Idol of Rher",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Enter_the_Dungeon."
   },
-  "${ModID}:Flight": {
-    "NAME": "Flight",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Exhaust."
+  "${ModID}:KeyToTheCity": {
+    "NAME": "Key to the City",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Enter_the_Dungeon. NL Shuffle this card into your draw pile."
+  },
+  "${ModID}:Lunchbox": {
+    "NAME": "Lunch Box",
+    "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Picked: Heal 3 HP."
+  },
+  "${ModID}:ProTank": {
+    "NAME": "Pro Tank",
+    "DESCRIPTION": "Whenever you ${ModID}:Enter_the_Dungeon, gain !M! Block."
   }
 }

@@ -1,18 +1,13 @@
 package theFishing.cards;
 
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import theFishing.actions.DrawUpToEnergyAction;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToEnemy;
-import static theFishing.util.Wiz.forAllMonstersLiving;
+import static theFishing.util.Wiz.atb;
 
 public class BoxOfHavoc extends AbstractFishingCard {
     public final static String ID = makeID("BoxOfHavoc");
@@ -20,24 +15,14 @@ public class BoxOfHavoc extends AbstractFishingCard {
 
     public BoxOfHavoc() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseSecondMagic = secondMagic = 3;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new DrawUpToEnergyAction(magicNumber));
         if (isSolo()) {
-            float duration = 0.25F;
-            addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.RED.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
-            addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.YELLOW.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
-            addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.BLUE.cpy(), ShockWaveEffect.ShockWaveType.CHAOTIC), duration));
+            atb(new GainEnergyAction(magicNumber));
         }
-        forAllMonstersLiving(q -> {
-            applyToEnemy(q, new PoisonPower(q, p, secondMagic));
-            if (p.hand.size() <= 1) {
-                applyToEnemy(q, new WeakPower(q, magicNumber, false));
-                applyToEnemy(q, new VulnerablePower(q, magicNumber, false));
-            }
-        });
     }
 
     public void triggerOnGlowCheck() {
@@ -45,6 +30,7 @@ public class BoxOfHavoc extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeSecondMagic(2);
+        upgradeSecondMagic(1);
+        uDesc();
     }
 }

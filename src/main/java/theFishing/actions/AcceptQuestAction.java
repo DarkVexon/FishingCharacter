@@ -14,11 +14,7 @@ public class AcceptQuestAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (!QuestHelper.quests.stream().anyMatch(q -> q.questID.equals(questToTake.questID))) {
-            QuestHelper.acceptQuest(questToTake);
-        } else {
-            addToTop(new DrawCardAction(1));
-        }
+        QuestHelper.acceptQuest(questToTake);
         isDone = true;
     }
 }

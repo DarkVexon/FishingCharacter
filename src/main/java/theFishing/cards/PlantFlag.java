@@ -3,9 +3,11 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.EnterTheDungeonAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
+import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.topDeck;
 
 public class PlantFlag extends AbstractFishingCard {
@@ -17,17 +19,23 @@ public class PlantFlag extends AbstractFishingCard {
         AbstractCard q = new Flag();
         makeFoil(q);
         cardsToPreview = q;
-        baseBlock = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        atb(new EnterTheDungeonAction());
         AbstractCard q = new Flag();
+        if (upgraded) {
+            q.upgrade();
+        }
         makeFoil(q);
         topDeck(q);
     }
 
     public void upp() {
-        upgradeBlock(3);
+        AbstractCard q = new Flag();
+        q.upgrade();
+        makeFoil(q);
+        cardsToPreview = q;
+        uDesc();
     }
 }
