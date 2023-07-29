@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 import theFishing.actions.PlayFromPileAction;
 import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.att;
+import static theFishing.util.Wiz.*;
 
 public class ShinyShadow extends AbstractFishingCard {
     public final static String ID = makeID("ShinyShadow");
@@ -23,7 +23,8 @@ public class ShinyShadow extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        vfx(new DarkOrbActivateEffect(m.hb.cX, m.hb.cY));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new SelectCardsAction(AbstractDungeon.player.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0], false, (c) -> FoilPatches.isFoil(c), (cards) -> {
             for (AbstractCard q : cards) {
                 att(new PlayFromPileAction(q, AbstractDungeon.player.drawPile));

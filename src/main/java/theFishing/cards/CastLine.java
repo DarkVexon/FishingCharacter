@@ -20,7 +20,7 @@ public class CastLine extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         for (int i = 0; i < magicNumber; i++) {
             shuffleIn(AbstractFishCard.returnRandomFish());
         }

@@ -18,7 +18,7 @@ public class Wander extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         CardGroup possCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard q : p.drawPile.group) {
             possCards.addToRandomSpot(q);

@@ -1,13 +1,19 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import theFishing.powers.VexingDealPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.vfx;
 
 public class VexingDeal extends AbstractFishingCard {
     public final static String ID = makeID("VexingDeal");
@@ -19,8 +25,10 @@ public class VexingDeal extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        vfx(new GiantEyeEffect(p.hb.cX, p.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.8F, 1.0F, 0.0F)));
         applyToSelf(new VexingDealPower());
         if (AbstractDungeon.ascensionLevel >= 10) {
+            vfx(new InflameEffect(p));
             applyToSelf(new StrengthPower(p, magicNumber));
         }
     }

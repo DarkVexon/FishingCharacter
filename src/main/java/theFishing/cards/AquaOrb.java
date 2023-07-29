@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import theFishing.effects.ColoredSanctityEffect;
 
 import static theFishing.FishingMod.makeID;
@@ -25,6 +26,7 @@ public class AquaOrb extends AbstractFishingCard  {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.SKY, ShockWaveEffect.ShockWaveType.ADDITIVE), 0.1F));
         forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, magicNumber, false)));
         blck();
         if (GameActionManager.turn == 1) {

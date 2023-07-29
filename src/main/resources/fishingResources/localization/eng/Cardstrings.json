@@ -568,8 +568,8 @@
   },
   "${ModID}:GlogusEgg": {
     "NAME": "Glogus Egg",
-    "DESCRIPTION": "Exhaust. NL If this card is Exhausted, add *Glogus into your hand.",
-    "UPGRADE_DESCRIPTION": "Exhaust. NL If this card is Exhausted, add *Glogus+ into your hand."
+    "DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a ${ModID}:Foil *Glogus into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a ${ModID}:Foil *Glogus+ into your hand."
   },
   "${ModID}:Glogus": {
     "NAME": "Glogus",

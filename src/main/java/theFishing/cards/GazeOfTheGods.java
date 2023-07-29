@@ -5,9 +5,11 @@ import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.actions.utility.ExhaustToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ThirdEyeEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.vfx;
 
 public class GazeOfTheGods extends AbstractFishingCard {
     public final static String ID = makeID("GazeOfTheGods");
@@ -19,6 +21,7 @@ public class GazeOfTheGods extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        vfx(new ThirdEyeEffect(m.hb.cX, m.hb.cY));
         atb(new LoseHPAction(m, p, magicNumber));
     }
 

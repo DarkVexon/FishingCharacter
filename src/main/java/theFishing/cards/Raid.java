@@ -22,9 +22,9 @@ public class Raid extends AbstractFishingCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         for (int i = 0; i < FishingMod.timesCompletedThisCombat; i++) {
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         }
     }
 

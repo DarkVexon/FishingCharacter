@@ -1,6 +1,9 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 import theFishing.actions.EnterTheDungeonAction;
 import theFishing.patch.OnRestCard;
 
@@ -25,6 +29,10 @@ public class DarkDreams extends AbstractFishingCard implements OnRestCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new VFXAction(m, new VerticalAuraEffect(Color.BLACK, m.hb.cX, m.hb.cY), 0.33F));
+        this.addToBot(new SFXAction("ATTACK_FIRE"));
+        this.addToBot(new VFXAction(m, new VerticalAuraEffect(Color.PURPLE, m.hb.cX, m.hb.cY), 0.33F));
+        this.addToBot(new VFXAction(m, new VerticalAuraEffect(Color.CYAN, m.hb.cX, m.hb.cY), 0.0F));
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         atb(new EnterTheDungeonAction());
     }

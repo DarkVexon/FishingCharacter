@@ -21,7 +21,7 @@ public class DoubleUp extends AbstractFishingCard implements StartupCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         atb(new EnterTheDungeonAction());
     }
 
