@@ -44,8 +44,8 @@
     ]
   },
   "${ModID}:Goggles": {
-    "NAME": "Goggles",
-    "FLAVOR": "\"With this invention, the Sands are open to us.\" - Kublai the Great",
+    "NAME": "Terracotta Scale",
+    "FLAVOR": "Hard and dense. The red glaze has all but chipped away.",
     "DESCRIPTIONS": [
       "Whenever you end your turn with an empty hand, gain #b1 #yStrength."
     ]
@@ -87,7 +87,7 @@
   },
   "${ModID}:FishOPedia": {
     "NAME": "Fish-o-Pedia",
-    "FLAVOR": "The last entry is missing.",
+    "FLAVOR": "Tattered, nibbled, organized by depth. The last entry was torn out entirely.",
     "DESCRIPTIONS": [
       "Start each combat with #y${ModID}:Quest: Play #b4 different kinds of #y${ModID}:Fish. #yReward: Gain #b2 #yStrength."
     ]

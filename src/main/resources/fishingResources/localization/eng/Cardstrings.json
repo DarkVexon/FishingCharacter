@@ -547,11 +547,12 @@
   },
   "${ModID}:GhostShip": {
     "NAME": "Ghost Ship",
-    "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, if this card is in the Exhaust pile, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, if this card is in the Exhaust pile, a random enemy loses !M! HP."
   },
   "${ModID}:DarkDreams": {
     "NAME": "Dark Dreams",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Enter_the_Dungeon. NL When you Rest, Upgrade this."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Enter_the_Dungeon. NL When you Rest, Upgrade this.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Enter_the_Dungeon. NL Zzz..."
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
@@ -572,7 +573,7 @@
   },
   "${ModID}:Glogus": {
     "NAME": "Glogus",
-    "DESCRIPTION": "I am born! NL Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage."
   },
   "${ModID}:PartyMember": {
     "NAME": "Party Member",
