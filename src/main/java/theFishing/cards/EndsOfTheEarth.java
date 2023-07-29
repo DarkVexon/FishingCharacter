@@ -1,10 +1,13 @@
 package theFishing.cards;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.effects.InversionBeamEffect2;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.vfx;
 
 public class EndsOfTheEarth extends AbstractFishingCard {
     public final static String ID = makeID("EndsOfTheEarth");
@@ -18,7 +21,8 @@ public class EndsOfTheEarth extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        vfx(new InversionBeamEffect2(MathUtils.random(m.hb.x + (m.hb.width / 3F), m.hb.x + ((m.hb.width / 3F) * 2F))));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
     }
 
     @Override

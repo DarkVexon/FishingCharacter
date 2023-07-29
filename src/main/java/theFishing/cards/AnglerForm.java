@@ -15,15 +15,13 @@ public class AnglerForm extends AbstractFishingCard {
 
     public AnglerForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 15;
+        baseMagicNumber = magicNumber = 12;
         tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new AnglerFormPower(magicNumber));
     }
-
-    //TODO: implement power trigger time
 
     @Override
     public void triggerWhenDrawn() {
@@ -33,6 +31,6 @@ public class AnglerForm extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(4);
     }
 }

@@ -25,10 +25,8 @@
   "${ModID}:AnglerFormPower": {
     "NAME": "Angler Form",
     "DESCRIPTIONS": [
-      "The first #b",
-      " times you play a card each turn, draw a card.",
-      " NL #b",
-      " triggers remaining this turn."
+      "Before enemies attack, they lose #b",
+      " HP."
     ]
   },
   "${ModID}:CollectorPower": {

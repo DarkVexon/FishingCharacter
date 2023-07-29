@@ -92,7 +92,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Next turn, NL draw 1 less card."
   },
   "${ModID}:HunkerDown": {
-    "NAME": "Hunker Down",
+    "NAME": "Respite",
     "DESCRIPTION": "Gain !B! Block. NL If you have played less than 3 cards this turn, gain [E].",
     "EXTENDED_DESCRIPTION": [
       " NL (",
@@ -196,7 +196,7 @@
     "DESCRIPTION": "Add !M! ${ModID}:Foil *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
   },
   "${ModID}:ShipRam": {
-    "NAME": "Ship Ram",
+    "NAME": "Collision Course",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Deal !${ModID}:sd! damage instead."
   },
   "${ModID}:FlamingFlip": {
@@ -218,17 +218,17 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Thanks for shopping!"
   },
   "${ModID}:Lie": {
-    "NAME": "Lie",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Cheat into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Cheat+ into your hand. NL Exhaust."
+    "NAME": "Hook",
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Line into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Line+ into your hand. NL Exhaust."
   },
   "${ModID}:Cheat": {
-    "NAME": "Cheat",
-    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal+ into your hand. NL Exhaust."
+    "NAME": "Line",
+    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Sinker into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Sinker+ into your hand. NL Exhaust."
   },
   "${ModID}:Steal": {
-    "NAME": "Steal",
+    "NAME": "Sinker",
     "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
   },
   "${ModID}:SetupButBetter": {
@@ -344,7 +344,7 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:AquaOrb": {
-    "NAME": "Aqua Orb",
+    "NAME": "Shipshape",
     "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL If it's turn 1, gain 1 Artifact."
   },
   "${ModID}:FreeDrinks": {
