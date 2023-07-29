@@ -39,13 +39,13 @@
   },
   "${ModID}:Qwilfish": {
     "NAME": "Qwilfish",
-    "DESCRIPTION": "Apply !M! Poison. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Thorns. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:SeaMonster": {
     "NAME": "Sea Monster",
-    "DESCRIPTION": "Add !M! ${ModID}:Fish into your hand. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add !M! ${ModID}:Fish into your hand. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Shark": {
     "NAME": "Shark",
@@ -54,8 +54,8 @@
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Plated Armor. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
@@ -311,8 +311,8 @@
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
-    "DESCRIPTION": "Deal !D! damage twice. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage three times. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage three times. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Eel": {
     "NAME": "Eel",
@@ -330,8 +330,8 @@
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",
-    "DESCRIPTION": "{@@}Gain !M! Orb slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !M! Orb slot{!M!|>1=s}. NL Channel !M! Lightning. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "{@@}Upgrade !M! random card{!M!|>1=s} in your hand. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Upgrade !M! random card{!M!|>1=s} in your hand. NL Draw !${ModID}:m3! card. NL Exhaust."
   },
   "${ModID}:TheWhale": {
     "NAME": "The Whale",

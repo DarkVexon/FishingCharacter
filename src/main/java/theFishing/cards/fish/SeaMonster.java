@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.makeInHand;
+import static theFishing.util.Wiz.shuffleIn;
 
 public class SeaMonster extends AbstractFishCard {
     public final static String ID = makeID("SeaMonster");
@@ -18,7 +19,7 @@ public class SeaMonster extends AbstractFishCard {
 
     public void fishEffect(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            makeInHand(AbstractFishCard.returnRandomFish());
+            shuffleIn(AbstractFishCard.returnRandomFish());
         }
     }
 }

@@ -51,10 +51,15 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             weightedFishList = new LinkedHashMap<>();
             weightedFishList.put(Piranha.ID, 33);
             weightedFishList.put(Guppy.ID, 25);
-            weightedFishList.put(Boot.ID, 9);
-            weightedFishList.put(Eel.ID, 5);
-            weightedFishList.put(Swordfish.ID, 4);
+            weightedFishList.put(Boot.ID, 8);
+            weightedFishList.put(Eel.ID, 6);
+            weightedFishList.put(Swordfish.ID, 5);
+            weightedFishList.put(Jellyfish.ID, 5);
+            weightedFishList.put(Maw.ID, 5);
             weightedFishList.put(Hammerhead.ID, 3);
+            weightedFishList.put(RoboFish.ID, 3);
+            weightedFishList.put(Starfish.ID, 3);
+            weightedFishList.put(Qwilfish.ID, 3);
             weightedFishList.put(SeaMonster.ID, 1);
         }
 

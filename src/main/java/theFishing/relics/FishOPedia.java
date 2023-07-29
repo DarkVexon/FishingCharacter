@@ -11,7 +11,7 @@ public class FishOPedia extends AbstractAdventurerRelic {
     public static final String ID = makeID(FishOPedia.class.getSimpleName());
 
     public FishOPedia() {
-        super(ID, RelicTier.RARE, LandingSound.MAGICAL, TheFishing.Enums.FISHING_COLOR);
+        super(ID, RelicTier.UNCOMMON, LandingSound.MAGICAL, TheFishing.Enums.FISHING_COLOR);
     }
 
     @Override
