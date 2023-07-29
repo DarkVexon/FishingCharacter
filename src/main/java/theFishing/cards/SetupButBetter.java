@@ -20,7 +20,6 @@ public class SetupButBetter extends AbstractFishingCard {
     }
 
     public void upp() {
-        selfRetain = true;
-        uDesc();
+        upgradeBaseCost(0);
     }
 }

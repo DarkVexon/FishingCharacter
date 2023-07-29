@@ -17,6 +17,7 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
     public QuestTimeThePrismaticPortal() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         MultiCardPreview.add(this, new QuestTimeTheGemSearch(), new TheEternityGem());
+        isInnate = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,13 +25,7 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = QuestHelper.hasQuest(ThePrismaticPortal.ID) ? QuestHelper.QUEST_DUPE_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        upgradeBaseCost(0);
     }
 
     @Override

@@ -403,8 +403,7 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "${ModID}:Quest: Play a Rare card. NL *Reward: Shuffle *The *Gem *Search into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Quest: Play a Rare card. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "Innate. NL ${ModID}:Quest: Play a Rare card. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",

@@ -25,11 +25,6 @@ public class QuestTimeTheStorm extends AbstractFishingCard {
         atb(new AcceptQuestAction(new TheStorm()));
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = QuestHelper.hasQuest(TheStorm.ID) ? QuestHelper.QUEST_DUPE_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
     public void upp() {
         upgradeMagicNumber(1);
         uDesc();

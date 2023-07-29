@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import basemod.helpers.BaseModCardTags;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.patch.PreDrawPatch;
@@ -28,6 +29,10 @@ public class AnglerForm extends AbstractFishingCard {
         if (PreDrawPatch.DRAWN_DURING_TURN) {
             setCostForTurn(0);
         }
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = isVoyaged() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

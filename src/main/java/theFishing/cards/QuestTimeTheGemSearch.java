@@ -22,11 +22,6 @@ public class QuestTimeTheGemSearch extends AbstractFishingCard {
         atb(new AcceptQuestAction(new TheGemSearch()));
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = QuestHelper.hasQuest(TheGemSearch.ID) ? QuestHelper.QUEST_DUPE_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
     public void upp() {
         upgradeBaseCost(0);
     }
