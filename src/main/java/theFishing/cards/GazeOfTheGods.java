@@ -17,7 +17,7 @@ public class GazeOfTheGods extends AbstractFishingCard {
 
     public GazeOfTheGods() {
         super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 30;
+        baseMagicNumber = magicNumber = 25;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,6 +32,6 @@ public class GazeOfTheGods extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(10);
+        upgradeMagicNumber(7);
     }
 }

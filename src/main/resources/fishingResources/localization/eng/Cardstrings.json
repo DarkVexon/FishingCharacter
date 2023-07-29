@@ -299,7 +299,8 @@
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
-    "DESCRIPTION": "${ModID}:Enter_the_Dungeon. NL Put a ${ModID}:Foil *Flag on top of your draw pile."
+    "DESCRIPTION": "${ModID}:Enter_the_Dungeon. NL Put a ${ModID}:Foil *Flag on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Enter_the_Dungeon. NL Put a ${ModID}:Foil *Flag+ on top of your draw pile."
   },
   "${ModID}:Flag": {
     "NAME": "Flag",
