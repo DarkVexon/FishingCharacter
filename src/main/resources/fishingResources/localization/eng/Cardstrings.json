@@ -141,7 +141,7 @@
     ]
   },
   "${ModID}:GarlicClove": {
-    "NAME": "Garlic Clove",
+    "NAME": "Garlic Bulb",
     "DESCRIPTION": "Remove your Weak, Vulnerable, and Frail. NL If you're not a Vampire, heal !M! HP. NL Exhaust."
   },
   "${ModID}:RingTheBell": {
@@ -232,7 +232,7 @@
     "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
   },
   "${ModID}:SetupButBetter": {
-    "NAME": "Setdown",
+    "NAME": "Tackle Box",
     "DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL It costs 0 until played.",
     "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your discard pile on top of your draw pile. NL It costs 0 until played."
   },
@@ -294,8 +294,8 @@
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
-    "DESCRIPTION": "${ModID}:Unnate. NL At the start of your turn, gain [E].",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E]."
+    "DESCRIPTION": "${ModID}:Unnate. NL At the start of your turn, gain [E]. NL If this card is Exhausted, play it.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E]. NL If this card is Exhausted, play it."
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
@@ -320,7 +320,7 @@
     "UPGRADE_DESCRIPTION": "{@@}Gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|>4=!M! [E]}. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:FinishingTouches": {
-    "NAME": "Finishing Touches",
+    "NAME": "Last of the Lights",
     "DESCRIPTION": "Discard 2 cards. NL When you play a card, if it's the only card in your hand, play it twice."
   },
   "${ModID}:FlyingFish": {
@@ -360,12 +360,12 @@
     "DESCRIPTION": "Gain !M! Thorns. NL At the start of your turn, discard 1 card and gain !M! Block."
   },
   "${ModID}:QuestTimeTheStorm": {
-    "NAME": "The Storm",
+    "NAME": "The Tempest",
     "DESCRIPTION": "Next turn, gain [E]. NL ${ModID}:Quest: Spend 5 Energy in a turn. NL *Reward: A random enemy loses 17 HP.",
     "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 5 Energy in a turn. NL *Reward: A random enemy loses 17 HP."
   },
   "${ModID}:QuestTimeTheLuckyPack": {
-    "NAME": "The Lucky Pack",
+    "NAME": "The Lucky Pull",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards. NL *Reward: Play the last one again."
   },
   "${ModID}:QuestTimeTheFishOPedia": {
@@ -376,7 +376,7 @@
     ]
   },
   "${ModID}:SoleSight": {
-    "NAME": "Sole Searching",
+    "NAME": "For Old Times' Sake",
     "DESCRIPTION": "Scry !M!. NL ${ModID}:Solo: Gain !M! Strength."
   },
   "${ModID}:VexingDeal": {
@@ -529,7 +529,7 @@
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted, deal !M! damage to a random enemy."
   },
   "${ModID}:ConfettiCannon": {
-    "NAME": "Confetti Cannon",
+    "NAME": "Starfall",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Draw 1 card. NL If you drew a ${ModID}:Foil card this way, repeat this.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
@@ -547,23 +547,23 @@
   },
   "${ModID}:GhostShip": {
     "NAME": "Ghost Ship",
-    "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, if this card is in the Exhaust pile, a random enemy loses !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, if this card is in your exhaust pile, ALL enemies lose !M! HP."
   },
   "${ModID}:DarkDreams": {
-    "NAME": "Dark Dreams",
+    "NAME": "Lurid Slumber",
     "DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Enter_the_Dungeon. NL When you Rest, Upgrade this.",
     "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Enter_the_Dungeon. NL Zzz..."
   },
   "${ModID}:KeyToTheCity": {
-    "NAME": "Key to the City",
+    "NAME": "Diver Down",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Enter_the_Dungeon. NL Shuffle this card into your draw pile."
   },
   "${ModID}:Lunchbox": {
-    "NAME": "Lunch Box",
+    "NAME": "Bento Box",
     "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Picked: Heal 3 HP."
   },
   "${ModID}:ProTank": {
-    "NAME": "Pro Tank",
+    "NAME": "Hermitage",
     "DESCRIPTION": "Whenever you ${ModID}:Enter_the_Dungeon, gain !M! Block."
   },
   "${ModID}:GlogusEgg": {
@@ -584,7 +584,7 @@
     "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain 2 *Party *Members."
   },
   "${ModID}:ShinyShadow": {
-    "NAME": "Shiny Shadow",
+    "NAME": "Twinkle Twinkle",
     "DESCRIPTION": "Deal !D! damage. NL Play a ${ModID}:Foil card from your draw pile."
   }
 }

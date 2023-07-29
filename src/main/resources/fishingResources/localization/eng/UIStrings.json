@@ -33,7 +33,7 @@
   },
   "${ModID}:TheLuckyPack": {
     "TEXT": [
-      "The Lucky Pack",
+      "The Lucky Pull",
       "#yQuest: Play #b",
       " #yFoil cards. NL #yReward: Play the last one again."
     ]
@@ -46,7 +46,7 @@
   },
   "${ModID}:TheStorm": {
     "TEXT": [
-      "The Storm",
+      "The Tempest",
       "#yQuest: Spend #b",
       " Energy in a single turn. NL #yReward: A random enemy loses #b17 HP."
     ]
