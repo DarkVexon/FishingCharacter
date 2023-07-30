@@ -1,5 +1,6 @@
 package theFishing.powers;
 
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -7,33 +8,16 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 
 import static theFishing.FishingMod.makeID;
 
-public class DrawLessNextTurnPower extends AbstractAdventurerPower {
-    public static String ID = makeID(DrawLessNextTurnPower.class.getSimpleName());
+public class DiscardNextTurnPower extends AbstractAdventurerPower {
+    public static String ID = makeID(DiscardNextTurnPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
-    public DrawLessNextTurnPower(int amount) {
+    public DiscardNextTurnPower(int amount) {
         super(ID, powerStrings.NAME, PowerType.DEBUFF, true, AbstractDungeon.player, amount);
-        this.loadRegion("lessdraw");
     }
 
-    @Override
-    public void onInitialApplication() {
-        AbstractDungeon.player.gameHandSize -= amount;
-    }
-
-    @Override
-    public void stackPower(int stackAmount) {
-        AbstractDungeon.player.gameHandSize -= stackAmount;
-        super.stackPower(stackAmount);
-    }
-
-    @Override
-    public void onRemove() {
-        AbstractDungeon.player.gameHandSize += amount;
-    }
-
-    @Override
     public void atStartOfTurnPostDraw() {
+        addToBot(new DiscardAction(owner, owner, amount, false));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

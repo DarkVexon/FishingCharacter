@@ -1,13 +1,12 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.RandomCardFromDiscardPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.NostalgicStrikeFirstAction;
+import theFishing.powers.ReelItBackPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class NostalgicStrike extends AbstractFishingCard {
     public final static String ID = makeID("NostalgicStrike");
@@ -21,7 +20,7 @@ public class NostalgicStrike extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        atb(new RandomCardFromDiscardPileToHandAction());
+        applyToSelf(new ReelItBackPower());
     }
 
     public void upp() {

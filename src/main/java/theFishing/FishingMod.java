@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
@@ -46,11 +47,10 @@ public class FishingMod implements
         EditCharactersSubscriber,
         PostBattleSubscriber,
         OnStartBattleSubscriber,
-        CustomSavable<ArrayList<Boolean>>,
         PostPlayerUpdateSubscriber,
-        AddAudioSubscriber,
         PostInitializeSubscriber,
-        PostUpdateSubscriber {
+        PostUpdateSubscriber,
+        StartGameSubscriber {
 
     public static final String modID = "fishing";
 
@@ -187,34 +187,20 @@ public class FishingMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         QuestHelper.reset();
+        activeBoard.reset();
         PreDrawPatch.DRAWN_DURING_TURN = false;
     }
 
     @Override
     public void receivePostPlayerUpdate() {
-        if (Wiz.isInCombat() && !QuestHelper.quests.isEmpty()) {
-            QuestHelper.update();
-        }
-    }
-
-    @Override
-    public ArrayList<Boolean> onSave() {
-        ArrayList<Boolean> foilCards = new ArrayList<>();
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            foilCards.add(FoilPatches.isFoil(q));
-        }
-        return foilCards;
-    }
-
-    @Override
-    public void onLoad(ArrayList<Boolean> foilCards) {
-        if (foilCards != null)
-            for (int i = 0; i < foilCards.size(); i++) {
-                if (foilCards.get(i)) {
-                    if (AbstractDungeon.player.masterDeck.size() > i)
-                        FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
-                }
+        if (Wiz.isInCombat()) {
+            if (!QuestHelper.quests.isEmpty()) {
+                QuestHelper.update();
             }
+            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
+                activeBoard.update();
+            }
+        }
     }
 
     public static boolean isThisVoyaged(AbstractCard card) {
@@ -222,14 +208,8 @@ public class FishingMod implements
     }
 
     @Override
-    public void receiveAddAudio() {
-        BaseMod.addAudio(makeID("WAKA_WAKA"), "fishingResources/audio/eat_ghost.ogg");
-        BaseMod.addAudio(makeID("EAT_FRUIT"), "fishingResources/audio/eatfruit.ogg");
-    }
-
-    @Override
     public void receivePostInitialize() {
-        BaseMod.addSaveField("FishingMod", fishingMod);
+        initializeSaveData();
 
         if (Loader.isModLoaded("rare-cards-sparkle")) {
             FoilSparkleHandler.init();
@@ -243,16 +223,10 @@ public class FishingMod implements
     }
 
     public static float time = 0f;
-    public static AbstractCard toRemove = null;
 
     @Override
     public void receivePostUpdate() {
         time += Gdx.graphics.getDeltaTime();
-        if (toRemove != null) {
-            AbstractDungeon.player.masterDeck.removeCard(toRemove);
-            toRemove = null;
-
-        }
     }
 
     public static Settings.GameLanguage[] SupportedLanguages = {
@@ -269,6 +243,49 @@ public class FishingMod implements
         return "eng";
     }
 
-    public static AbstractBoard activeBoard;
+    public static AbstractBoard activeBoard = null;
     public static int timesCompletedThisCombat = 0;
+
+    private void initializeSaveData() {
+        BaseMod.addSaveField("FishingFoilCards", new CustomSavable<ArrayList<Integer>>() {
+            @Override
+            public ArrayList<Integer> onSave() {
+                ArrayList<Integer> foilIndices = new ArrayList<>();
+                for (int i = 0; i < AbstractDungeon.player.masterDeck.size(); i++) {
+                    if (FoilPatches.isFoil(AbstractDungeon.player.masterDeck.group.get(i))) {
+                        foilIndices.add(i);
+                    }
+                }
+                return foilIndices;
+            }
+
+            @Override
+            public void onLoad(ArrayList<Integer> integers) {
+                for (Integer i : integers) {
+                    if (AbstractDungeon.player.masterDeck.size() > i) {
+                        FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
+                    }
+                }
+            }
+        });
+
+        BaseMod.addSaveField("FishingRunCurrentBoard", new CustomSavable<String>() {
+            @Override
+            public String onSave() {
+                return activeBoard.id;
+            }
+
+            @Override
+            public void onLoad(String s) {
+                activeBoard = AbstractBoard.getBoardByID(s);
+            }
+        });
+    }
+
+    @Override
+    public void receiveStartGame() {
+        if (!CardCrawlGame.loadingSave) {
+            activeBoard = AbstractBoard.getRunBoard();
+        }
+    }
 }

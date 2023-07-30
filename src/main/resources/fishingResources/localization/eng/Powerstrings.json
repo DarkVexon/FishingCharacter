@@ -7,12 +7,12 @@
       " cards."
     ]
   },
-  "${ModID}:DrawLessNextTurnPower": {
-    "NAME": "Draw Less Next Turn",
+  "${ModID}:DiscardNextTurnPower": {
+    "NAME": "Discard Next Turn",
     "DESCRIPTIONS": [
-      "Draw #b",
-      " less card next turn.",
-      " less cards next turn."
+      "At the start of your next turn, discard #b",
+      " card.",
+      " cards."
     ]
   },
   "${ModID}:TripwirePower": {
@@ -109,6 +109,14 @@
     "DESCRIPTIONS": [
       "Whenever you #yEnter #ythe #yDungeon, gain #b",
       " #yBlock."
+    ]
+  },
+  "${ModID}:ReelItBackPower": {
+    "NAME": "Reel It Back",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you have unused Energy, spend [E] to play a random card from your discard pile.",
+      "At the end of your turn, if you have unused Energy, spend up to #b",
+      " of it to play that many random cards from your discard pile."
     ]
   }
 }

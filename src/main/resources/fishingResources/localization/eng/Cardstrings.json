@@ -89,7 +89,7 @@
   },
   "${ModID}:RodSlam": {
     "NAME": "Rod Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, NL draw 1 less card."
+    "DESCRIPTION": "Deal !D! damage twice. NL Next turn, discard 1 card."
   },
   "${ModID}:HunkerDown": {
     "NAME": "Respite",
@@ -102,7 +102,7 @@
   },
   "${ModID}:NostalgicStrike": {
     "NAME": "Nostalgic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Put a random card from your discard pile into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL At the end of your turn, spend [E] to play a random card from your discard pile."
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",
@@ -586,5 +586,10 @@
   "${ModID}:ShinyShadow": {
     "NAME": "Twinkle Twinkle",
     "DESCRIPTION": "Deal !D! damage. NL Play a ${ModID}:Foil card from your draw pile."
+  },
+  "${ModID}:StickerStrike": {
+    "NAME": "Sticker Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Give a random card in your hand \"A random enemy loses !M! HP.\"",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Give a card in your hand \"A random enemy loses !M! HP.\""
   }
 }

@@ -99,5 +99,23 @@
     "TEXT": [
       "Choose a card to duplicate."
     ]
+  },
+  "${ModID}:StickerCardMod": {
+    "TEXT": [
+      " NL A random enemy loses ",
+      " HP."
+    ]
+  },
+  "${ModID}:BoardEffects": {
+    "TEXT": [
+      "Room "
+    ]
+  },
+  "${ModID}:ChampsArena": {
+    "TEXT": [
+      "Champ's Grisly Arena",
+      "Add #b1 #yShiv into your hand.",
+      "Gain #b1 #yStrength."
+    ]
   }
 }

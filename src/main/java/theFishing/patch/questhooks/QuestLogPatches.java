@@ -5,6 +5,8 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CtBehavior;
+import theFishing.FishingMod;
+import theFishing.TheFishing;
 import theFishing.quest.QuestHelper;
 import theFishing.util.Wiz;
 
@@ -29,8 +31,13 @@ public class QuestLogPatches {
         )
         public static void Insert(AbstractDungeon __instance, SpriteBatch sb) {
             if (AbstractDungeon.rs == AbstractDungeon.RenderScene.NORMAL) {
-                if (Wiz.isInCombat() && !QuestHelper.quests.isEmpty()) {
-                    QuestHelper.render(sb);
+                if (Wiz.isInCombat()) {
+                    if (QuestHelper.quests.isEmpty()) {
+                        QuestHelper.render(sb);
+                    }
+                    if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
+                        FishingMod.activeBoard.render(sb);
+                    }
                 }
             }
         }
