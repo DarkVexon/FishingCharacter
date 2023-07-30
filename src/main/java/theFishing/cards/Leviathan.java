@@ -16,7 +16,7 @@ public class Leviathan extends AbstractFishingCard implements OnObtainCard {
     // intellij stuff power, self, uncommmon, , , , , , 
 
     public Leviathan() {
-        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new SpecialCurse();
     }
 

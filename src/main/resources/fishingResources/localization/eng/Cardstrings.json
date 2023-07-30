@@ -38,12 +38,12 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Qwilfish": {
-    "NAME": "Qwilfish",
+    "NAME": "Blowfish",
     "DESCRIPTION": "Gain !M! Thorns. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:SeaMonster": {
-    "NAME": "Sea Monster",
+    "NAME": "Mola",
     "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
@@ -53,7 +53,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Starfish": {
-    "NAME": "Starfish",
+    "NAME": "Hermit Crab",
     "DESCRIPTION": "Gain !M! Plated Armor. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !M! Plated Armor. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
@@ -576,12 +576,12 @@
     "DESCRIPTION": "Deal !D! damage."
   },
   "${ModID}:PartyMember": {
-    "NAME": "Party Member",
+    "NAME": "Delve",
     "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Enter_the_Dungeon."
   },
   "${ModID}:Raid": {
     "NAME": "Raid",
-    "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain a *Party *Member."
+    "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain a *Delve."
   },
   "${ModID}:ShinyShadow": {
     "NAME": "Twinkle Twinkle",
