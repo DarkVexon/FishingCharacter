@@ -23,7 +23,7 @@
     "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:RoboFish": {
-    "NAME": "Mecherel",
+    "NAME": "Cogfish",
     "DESCRIPTION": "Gain !M! Artifact. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
@@ -298,12 +298,12 @@
     "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E]. NL If this card is Exhausted, play it."
   },
   "${ModID}:PlantFlag": {
-    "NAME": "Plant Flag",
-    "DESCRIPTION": "${ModID}:Enter_the_Dungeon. NL Put a ${ModID}:Foil *Flag on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Enter_the_Dungeon. NL Put a ${ModID}:Foil *Flag+ on top of your draw pile."
+    "NAME": "Spelunk",
+    "DESCRIPTION": "${ModID}:Enter_the_Dungeon. NL Put a ${ModID}:Foil *Decoy on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Enter_the_Dungeon. NL Put a ${ModID}:Foil *Decoy+ on top of your draw pile."
   },
   "${ModID}:Flag": {
-    "NAME": "Flag",
+    "NAME": "Decoy",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
   },
   "${ModID}:RodOfHope": {
@@ -386,7 +386,7 @@
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10+, gain !M! Strength."
   },
   "${ModID}:TheFinalCard": {
-    "NAME": "Final Card",
+    "NAME": "Fishmonger's Finale",
     "DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL If this card ends the combat, Upgrade it.",
     "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL Thanks for playing."
   },
@@ -404,7 +404,7 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "Innate. NL ${ModID}:Quest: Play a Rare card. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "Innate. NL ${ModID}:Quest: Complete the Dungeon. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
@@ -577,19 +577,34 @@
   },
   "${ModID}:PartyMember": {
     "NAME": "Party Member",
-    "DESCRIPTION": "Retain. NL ${ModID}:Enter_the_Dungeon. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Enter_the_Dungeon."
   },
   "${ModID}:Raid": {
     "NAME": "Raid",
-    "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain 2 *Party *Members."
+    "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain a *Party *Member."
   },
   "${ModID}:ShinyShadow": {
     "NAME": "Twinkle Twinkle",
-    "DESCRIPTION": "Deal !D! damage. NL Play a ${ModID}:Foil card from your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Play a ${ModID}:Foil card from your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to play."
+    ]
   },
   "${ModID}:StickerStrike": {
     "NAME": "Sticker Strike",
     "DESCRIPTION": "Deal !D! damage. NL Give a random card in your hand \"A random enemy loses !M! HP.\"",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Give a card in your hand \"A random enemy loses !M! HP.\""
+  },
+  "${ModID}:ExtraTentacle": {
+    "NAME": "Extra Tentacle",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Obtain a *Clumsy."
+  },
+  "${ModID}:Leviathan": {
+    "NAME": "Leviathan",
+    "DESCRIPTION": "Whenever you Exhaust a Curse, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Special *Curse."
+  },
+  "${ModID}:SpecialCurse": {
+    "NAME": "Special Curse",
+    "DESCRIPTION": "Exhaust."
   }
 }

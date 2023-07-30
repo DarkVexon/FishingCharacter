@@ -96,7 +96,7 @@
     "NAME": "Monster Manual",
     "FLAVOR": "One of the oldest known books in print.",
     "DESCRIPTIONS": [
-      "At the start of combat, add a #yParty #yMember into your hand."
+      "At the start of combat, #yEnter #ythe #yDungeon."
     ]
   }
 }

@@ -41,7 +41,7 @@
   "${ModID}:ThePrismaticPortal": {
     "TEXT": [
       "The Prismatic Portal",
-      "#yQuest: Play a Rare card. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
+      "#yQuest: Complete the Dungeon. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
     ]
   },
   "${ModID}:TheStorm": {
