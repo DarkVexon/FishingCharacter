@@ -43,7 +43,7 @@
     "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:SeaMonster": {
-    "NAME": "Mola",
+    "NAME": "Sea Monster",
     "DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Shuffle !M! ${ModID}:Fish into your draw pile. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
