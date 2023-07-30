@@ -192,7 +192,7 @@
     "DESCRIPTION": "Can only be played if your hand contains 3 or fewer cards. NL Gain !B! Block. NL Deal !D! damage."
   },
   "${ModID}:DeckedOut": {
-    "NAME": "All Hands On Deck",
+    "NAME": "Decked Out",
     "DESCRIPTION": "Add !M! ${ModID}:Foil *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
   },
   "${ModID}:ShipRam": {
@@ -404,7 +404,7 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "Innate. NL ${ModID}:Quest: Complete the Dungeon. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "Innate. ${ModID}:Quest: Complete the Dungeon. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
@@ -601,10 +601,11 @@
   },
   "${ModID}:Leviathan": {
     "NAME": "Leviathan",
-    "DESCRIPTION": "Whenever you Exhaust a Curse, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Special *Curse."
+    "DESCRIPTION": "Whenever you Exhaust a Curse, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Rot.",
+    "UPGRADE_DESCRIPTION": "Innate. Whenever you Exhaust a Curse, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Rot."
   },
   "${ModID}:SpecialCurse": {
-    "NAME": "Special Curse",
+    "NAME": "Rot",
     "DESCRIPTION": "Exhaust."
   }
 }
