@@ -89,7 +89,7 @@
   },
   "${ModID}:RodSlam": {
     "NAME": "Rod Slam",
-    "DESCRIPTION": "Deal !D! damage twice. NL Next turn, discard 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, discard 1 card."
   },
   "${ModID}:HunkerDown": {
     "NAME": "Respite",
@@ -184,8 +184,8 @@
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
-    "DESCRIPTION": "Add a random cost X card into your hand. NL Gain [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a random cost X card into your hand. NL Gain [E] [E]. NL Exhaust."
+    "DESCRIPTION": "Add a random cost X card of any color into your hand. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a random cost X card of any color into your hand. NL Gain [E] [E]. NL Exhaust."
   },
   "${ModID}:Splash": {
     "NAME": "Splash",
@@ -362,8 +362,7 @@
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Tempest",
-    "DESCRIPTION": "Next turn, gain [E]. NL ${ModID}:Quest: Spend 5 Energy in a turn. NL *Reward: A random enemy loses 17 HP.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 5 Energy in a turn. NL *Reward: A random enemy loses 17 HP."
+    "DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses !M! HP."
   },
   "${ModID}:QuestTimeTheLuckyPack": {
     "NAME": "The Lucky Pull",
@@ -404,7 +403,7 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "Innate. ${ModID}:Quest: ${ModID}:Delve. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "Innate. NL ${ModID}:Quest: ${ModID}:Delve. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
@@ -559,7 +558,7 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Shuffle this card into your draw pile."
   },
   "${ModID}:Lunchbox": {
-    "NAME": "Bento Box",
+    "NAME": "Lunch Box",
     "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Picked: Heal 3 HP."
   },
   "${ModID}:ProTank": {
@@ -575,13 +574,13 @@
     "NAME": "Glogus",
     "DESCRIPTION": "Deal !D! damage."
   },
-  "${ModID}:PartyMember": {
-    "NAME": "Lamp",
+  "${ModID}:Candle": {
+    "NAME": "Candle",
     "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Delve."
   },
-  "${ModID}:Raid": {
-    "NAME": "Raid",
-    "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain a *Lamp."
+  "${ModID}:DarkDepths": {
+    "NAME": "Dark Depths",
+    "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain a *Candle."
   },
   "${ModID}:ShinyShadow": {
     "NAME": "Twinkle Twinkle",
@@ -601,8 +600,8 @@
   },
   "${ModID}:Leviathan": {
     "NAME": "Leviathan",
-    "DESCRIPTION": "Whenever you Exhaust a Curse, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Rot.",
-    "UPGRADE_DESCRIPTION": "Innate. Whenever you Exhaust a Curse, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Rot."
+    "DESCRIPTION": "Whenever a Curse is Exhausted, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Rot.",
+    "UPGRADE_DESCRIPTION": "Innate. Whenever a Curse is Exhausted, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Rot."
   },
   "${ModID}:SpecialCurse": {
     "NAME": "Rot",

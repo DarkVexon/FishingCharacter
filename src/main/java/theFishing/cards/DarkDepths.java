@@ -11,14 +11,14 @@ import theFishing.FishingMod;
 
 import static theFishing.FishingMod.makeID;
 
-public class Raid extends AbstractFishingCard implements OnObtainCard {
-    public final static String ID = makeID("Raid");
+public class DarkDepths extends AbstractFishingCard implements OnObtainCard {
+    public final static String ID = makeID(DarkDepths.class.getSimpleName());
     // intellij stuff attack, enemy, uncommon, 7, 3, , , , 
 
-    public Raid() {
+    public DarkDepths() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 9;
-        cardsToPreview = new PartyMember();
+        cardsToPreview = new Candle();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,9 +30,8 @@ public class Raid extends AbstractFishingCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        float fractical = Settings.WIDTH / 3;
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new PartyMember(), fractical, Settings.HEIGHT / 2));
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new PartyMember(), fractical * 2, Settings.HEIGHT / 2));
+        float fractical = Settings.WIDTH / 2;
+        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new Candle(), fractical, Settings.HEIGHT / 2));
     }
 
     public void upp() {
