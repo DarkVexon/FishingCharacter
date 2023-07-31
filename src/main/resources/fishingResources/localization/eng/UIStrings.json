@@ -41,14 +41,15 @@
   "${ModID}:ThePrismaticPortal": {
     "TEXT": [
       "The Prismatic Portal",
-      "#yQuest: Complete the Dungeon. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
+      "#yQuest: #yDelve. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
     ]
   },
   "${ModID}:TheStorm": {
     "TEXT": [
       "The Tempest",
       "#yQuest: Spend #b",
-      " Energy in a single turn. NL #yReward: A random enemy loses #b17 HP."
+      " Energy in a single turn. NL #yReward: A random enemy loses #b",
+      " HP."
     ]
   },
   "${ModID}:SillyFishSizes": {

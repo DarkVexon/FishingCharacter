@@ -13,14 +13,14 @@ public class MintCondition extends AbstractFishingCard {
 
     public MintCondition() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new MintConditionPower(1));
+        applyToSelf(new MintConditionPower(magicNumber));
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeMagicNumber(1);
     }
 }

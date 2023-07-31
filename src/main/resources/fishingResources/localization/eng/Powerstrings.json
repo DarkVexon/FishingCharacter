@@ -92,8 +92,8 @@
   "${ModID}:DungeonMasterPower": {
     "NAME": "Dungeon Master",
     "DESCRIPTIONS": [
-      "Whenever you complete the #yDungeon, gain #b",
-      " #yStrength."
+      "Whenever you complete the Dungeon, trigger its final Room #b",
+      " additional times."
     ]
   },
   "${ModID}:LunchBoxPower": {
@@ -107,7 +107,7 @@
   "${ModID}:ProTankPower": {
     "NAME": "Pro Tank",
     "DESCRIPTIONS": [
-      "Whenever you #yEnter #ythe #yDungeon, gain #b",
+      "Whenever you #yDelve, gain #b",
       " #yBlock."
     ]
   },

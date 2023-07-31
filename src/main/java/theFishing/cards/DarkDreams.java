@@ -47,7 +47,7 @@ public class DarkDreams extends AbstractFishingCard implements OnRestCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
         uDesc();
     }
 }

@@ -14,7 +14,7 @@ public class KeyToTheCity extends AbstractFishingCard {
 
     public KeyToTheCity() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 11;
+        baseDamage = 10;
         isMultiDamage = true;
         shuffleBackIntoDrawPile = true;
     }

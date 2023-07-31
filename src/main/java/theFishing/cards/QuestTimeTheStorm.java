@@ -17,16 +17,16 @@ public class QuestTimeTheStorm extends AbstractFishingCard {
 
     public QuestTimeTheStorm() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new EnergizedPower(p, magicNumber));
-        atb(new AcceptQuestAction(new TheStorm()));
+        applyToSelf(new EnergizedPower(p, 2));
+        atb(new AcceptQuestAction(new TheStorm(magicNumber)));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(4);
         uDesc();
     }
 }

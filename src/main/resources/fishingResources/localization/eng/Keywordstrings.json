@@ -50,10 +50,9 @@
     "DESCRIPTION": "Effect triggers when you obtain this card."
   },
   {
-    "PROPER_NAME": "Enter the Dungeon",
+    "PROPER_NAME": "Delve",
     "NAMES": [
-      "enter the dungeon",
-      "enter_the_dungeon"
+      "delve"
     ],
     "DESCRIPTION": "Move to the next room of the Dungeon and activate its effects."
   }

@@ -15,9 +15,11 @@ public class TheStorm extends AbstractQuest {
     public static final String ID = makeID("TheStorm");
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    private int totalDmg;
 
-    public TheStorm() {
-        super(ID, 5);
+    public TheStorm(int totalDmg) {
+        super(ID, 6);
+        this.totalDmg = totalDmg;
     }
 
     @Override
@@ -27,12 +29,12 @@ public class TheStorm extends AbstractQuest {
 
     @Override
     public String getDescription() {
-        return uiStrings.TEXT[1] + goal + uiStrings.TEXT[2];
+        return uiStrings.TEXT[1] + goal + uiStrings.TEXT[2] + totalDmg + uiStrings.TEXT[3];
     }
 
     @Override
     public void grantReward() {
-        atb(new StormCompletionAction());
+        atb(new StormCompletionAction(totalDmg));
     }
 
     @Override
