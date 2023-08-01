@@ -1,10 +1,8 @@
 package theFishing.boards;
 
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import theFishing.FishingMod;
 import theFishing.util.TexLoader;
 
@@ -46,18 +44,11 @@ public abstract class AbstractBoard {
     }
 
     public void render(SpriteBatch sb) {
-        FontHelper.renderFontLeftTopAligned(sb, FontHelper.dungeonTitleFont, name, POS_X, POS_Y, Color.WHITE.cpy());
-        for (int i = 0; i < effects.size(); i++) {
-            effects.get(i).render(sb, i, POS_X + (DIST_BETWEEN * i), POS_Y);
-        }
-        sb.draw(arrow, POS_X + (DIST_BETWEEN * progress), POS_Y - 250F);
+        sb.draw(getBackground(), POS_X, POS_Y);
+        sb.draw(arrow, POS_X, POS_Y + (DIST_BETWEEN * progress));
     }
 
-    public void update() {
-        for (int i = 0; i < effects.size(); i++) {
-            effects.get(i).update(i, POS_X + (DIST_BETWEEN * i), POS_Y);
-        }
-    }
+    public abstract Texture getBackground();
 
     public static AbstractBoard getBoardByID(String ID) {
         switch (ID) {
