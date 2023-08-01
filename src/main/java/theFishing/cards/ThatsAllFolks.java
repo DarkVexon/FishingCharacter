@@ -25,7 +25,6 @@ public class ThatsAllFolks extends AbstractFishingCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         applyToEnemy(m, new VulnerablePower(m, 1, false));
         if (isSolo()) {
-            AbstractDungeon.effectsQueue.add(new SilentQuickPlayerSpotlight());
             applyToEnemy(m, new VulnerablePower(m, 2, false));
         }
     }

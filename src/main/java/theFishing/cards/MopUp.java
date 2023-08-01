@@ -27,7 +27,7 @@ public class MopUp extends AbstractFishingCard {
         atb(new SFXAction("ATTACK_FAST", 0.2F));
         atb(new VFXAction(new AnimatedSlashEffect(m.hb.cX, m.hb.cY - 30.0F * Settings.scale, 500.0F, 200.0F, 290.0F, 3.0F, Color.FOREST, Color.GREEN)));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        atb(new MopUpAction(m, damage, damageTypeForTurn));
+        atb(new MopUpAction(m, damage, damageTypeForTurn)); //TODO: Base this off exhaustaction instead of what it is now.
     }
 
     public void upp() {

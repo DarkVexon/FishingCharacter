@@ -40,5 +40,6 @@ public class GlogusEgg extends AbstractFishingCard {
         c.upgrade();
         FoilPatches.makeFoil(c);
         cardsToPreview = c;
+        uDesc();
     }
 }

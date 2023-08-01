@@ -31,7 +31,7 @@ public abstract class AbstractBoard {
         if (progress >= effects.size()) {
             progress = 1;
         }
-        effects.get(progress).activate();
+        effects.get(progress - 1).activate();
     }
 
     public void reset() {
