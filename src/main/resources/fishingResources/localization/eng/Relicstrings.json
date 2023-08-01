@@ -89,7 +89,7 @@
     "NAME": "Fish-o-Pedia",
     "FLAVOR": "Tattered, nibbled, organized by depth. The last entry was torn out entirely.",
     "DESCRIPTIONS": [
-      "Start each combat with #y${ModID}:Quest: Play #b4 different kinds of #y${ModID}:Fish. #yReward: Gain #b2 #yStrength."
+      "Start each combat with #y${ModID}:Quest [REMOVE_SPACE]: Play #b4 different kinds of #y${ModID}:Fish. #yReward: Gain #b2 #yStrength."
     ]
   },
   "${ModID}:MonsterManual": {

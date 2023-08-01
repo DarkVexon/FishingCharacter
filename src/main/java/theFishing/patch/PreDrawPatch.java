@@ -15,6 +15,7 @@ public class PreDrawPatch {
         public static void Prefix(AbstractPlayer __instance) {
             FishingMod.voyagedCards.clear();
             DRAWN_DURING_TURN = false;
+            FishingMod.delvedThisTurn = false;
         }
     }
 }

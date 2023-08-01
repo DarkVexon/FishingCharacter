@@ -244,7 +244,7 @@ public class FishingMod implements
     }
 
     public static AbstractBoard activeBoard = null;
-    public static int timesCompletedThisCombat = 0;
+    public static boolean delvedThisTurn = false;
 
     private void initializeSaveData() {
         BaseMod.addSaveField("FishingFoilCards", new CustomSavable<ArrayList<Integer>>() {

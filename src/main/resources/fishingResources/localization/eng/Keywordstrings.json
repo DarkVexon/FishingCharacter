@@ -52,7 +52,8 @@
   {
     "PROPER_NAME": "Delve",
     "NAMES": [
-      "delve"
+      "delve",
+      "delved"
     ],
     "DESCRIPTION": "Move to the next room of the Dungeon and activate its effects."
   }

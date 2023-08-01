@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -36,11 +37,13 @@ public class TopPanelBoard extends TopPanelItem {
     public void render(SpriteBatch sb) {
         if (AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING) { //TODO: Or if you have a Delve card
             render(sb, Color.WHITE);
+            if (Wiz.isInCombat()) {
+                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelAmountFont, Integer.toString(FishingMod.activeBoard.progress), this.x + 58.0F * Settings.scale, this.y + 25.0F * Settings.scale, Color.WHITE.cpy());
+            }
             if (getHitbox().hovered) {
                 if (Wiz.isInCombat()) {
                     TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription() + uiStrings.TEXT[2] + FishingMod.activeBoard.progress + uiStrings.TEXT[3]);
-                }
-                else {
+                } else {
                     TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription());
                 }
             }

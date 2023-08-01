@@ -1,6 +1,7 @@
 package theFishing.boards;
 
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import theFishing.FishingMod;
 import theFishing.boards.weeklies.ChampsArena;
 import theFishing.boards.weeklies.TheLibrary;
@@ -35,12 +36,13 @@ public abstract class AbstractBoard {
 
     public static AbstractBoard getRunBoard() {
         //TODO: Date-based system
-        return getBoardByID(ids.get(MathUtils.random(0, ids.size())));
+        return getBoardByID(ids.get(MathUtils.random(0, ids.size() - 1)));
     }
 
     public void proceed() {
+        FishingMod.delvedThisTurn = true;
         progress += 1;
-        if (progress >= effects.size()) {
+        if (progress > effects.size()) {
             progress = 1;
         }
         effects.get(progress - 1).activate();
@@ -48,7 +50,7 @@ public abstract class AbstractBoard {
 
     public void reset() {
         progress = 0;
-        FishingMod.timesCompletedThisCombat = 0;
+        FishingMod.delvedThisTurn = false;
     }
 
 //    public void render(SpriteBatch sb) {
@@ -71,7 +73,8 @@ public abstract class AbstractBoard {
 
     public String getDescription() {
         StringBuilder sb = new StringBuilder();
-        sb.append(name + " NL ");
+        sb.append(FontHelper.colorString(name, "p") + " NL ");
+        sb.append("#gSpecial #gRule: " + getSpecialRule() + " NL ");
         for (int i = 0; i < effects.size(); i++) {
             sb.append(i + 1);
             sb.append(". ");
@@ -80,5 +83,9 @@ public abstract class AbstractBoard {
                 sb.append(" NL ");
         }
         return sb.toString();
+    }
+
+    private String getSpecialRule() {
+        return "None"; //TODO: Unhardcode
     }
 }

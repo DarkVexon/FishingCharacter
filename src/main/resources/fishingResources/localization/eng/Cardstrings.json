@@ -581,7 +581,10 @@
   },
   "${ModID}:DarkDepths": {
     "NAME": "Dark Depths",
-    "DESCRIPTION": "Deal !D! damage for each completed Dungeon this combat. NL ${ModID}:Picked: Obtain a *Candle."
+    "DESCRIPTION": "Can only be played if you ${ModID}:Delved this turn. NL Deal !D! damage. NL ${ModID}:Picked: Obtain a *Candle.",
+    "EXTENDED_DESCRIPTION": [
+      "I haven't Delved this turn!"
+    ]
   },
   "${ModID}:ShinyShadow": {
     "NAME": "Twinkle Twinkle",
