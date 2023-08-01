@@ -1,15 +1,12 @@
 package theFishing.boards.weeklies;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.BoardEffect;
 
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class TheLibrary extends AbstractBoard {
     public static final String ID = FishingMod.makeID(TheLibrary.class.getSimpleName());

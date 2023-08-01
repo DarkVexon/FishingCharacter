@@ -122,11 +122,19 @@
       "Gain #b1 #yStrength."
     ]
   },
-  "${ModID}:ChampsArena": {
+  "${ModID}:TheLibrary": {
     "TEXT": [
-      "The Colosseum",
-      "Add #b1 #yShiv into your hand.",
-      "Gain #b1 #yStrength."
+      "The Library",
+      "Draw #b1 card.",
+      "Draw #b2 cards."
+    ]
+  },
+  "${ModID}:TombOfRorrim": {
+    "TEXT": [
+      "Tomb of Rorrim",
+      "Gain #b1 #yBlock.",
+      "Gain #b3 #yBlock.",
+      "This turn, your next card is played twice."
     ]
   }
 }

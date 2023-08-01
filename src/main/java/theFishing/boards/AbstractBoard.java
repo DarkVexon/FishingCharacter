@@ -1,7 +1,10 @@
 package theFishing.boards;
 
+import com.badlogic.gdx.math.MathUtils;
 import theFishing.FishingMod;
 import theFishing.boards.weeklies.ChampsArena;
+import theFishing.boards.weeklies.TheLibrary;
+import theFishing.boards.weeklies.TombOfRorrim;
 
 import java.util.ArrayList;
 
@@ -22,9 +25,17 @@ public abstract class AbstractBoard {
         this.id = ID;
     }
 
+    private static ArrayList<String> ids = new ArrayList<>();
+
+    static {
+        ids.add(ChampsArena.ID);
+        ids.add(TheLibrary.ID);
+        ids.add(TombOfRorrim.ID);
+    }
+
     public static AbstractBoard getRunBoard() {
         //TODO: Date-based system
-        return new ChampsArena();
+        return getBoardByID(ids.get(MathUtils.random(0, ids.size())));
     }
 
     public void proceed() {
@@ -48,12 +59,14 @@ public abstract class AbstractBoard {
 //    }
 
     public static AbstractBoard getBoardByID(String ID) {
-        switch (ID) {
-            case ChampsArena.ID:
-                return new ChampsArena();
-            default:
-                return new ChampsArena();
+        if (ID.equals(ChampsArena.ID)) {
+            return new ChampsArena();
+        } else if (ID.equals(TheLibrary.ID)) {
+            return new TheLibrary();
+        } else if (ID.equals(TombOfRorrim.ID)) {
+            return new TombOfRorrim();
         }
+        return new ChampsArena();
     }
 
     public String getDescription() {
