@@ -451,7 +451,8 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "At the end of your turn, if you played 3 or more ${ModID}:Foil cards, gain !M! Strength."
+    "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a ${ModID}:Foil card, gain 1 Strength."
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",

@@ -1,17 +1,18 @@
-package theFishing.boards;
+package theFishing.boards.weeklies;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theFishing.util.TexLoader;
+import theFishing.FishingMod;
+import theFishing.boards.AbstractBoard;
+import theFishing.boards.BoardEffect;
 
 import static theFishing.util.Wiz.applyToSelfTop;
 import static theFishing.util.Wiz.makeInHandTop;
 
 public class ChampsArena extends AbstractBoard {
-    public static final String ID = "fishing:ChampsArena";
+    public static final String ID = FishingMod.makeID(ChampsArena.class.getSimpleName());
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public ChampsArena() {

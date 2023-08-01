@@ -1,6 +1,7 @@
 package theFishing.boards;
 
 import theFishing.FishingMod;
+import theFishing.boards.weeklies.ChampsArena;
 
 import java.util.ArrayList;
 

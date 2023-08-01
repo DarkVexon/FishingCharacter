@@ -121,5 +121,12 @@
       "Add #b1 #yShiv into your hand.",
       "Gain #b1 #yStrength."
     ]
+  },
+  "${ModID}:ChampsArena": {
+    "TEXT": [
+      "The Colosseum",
+      "Add #b1 #yShiv into your hand.",
+      "Gain #b1 #yStrength."
+    ]
   }
 }
