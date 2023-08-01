@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.daily.TimeHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import theFishing.FishingMod;
 import theFishing.boards.dailies.*;
+import theFishing.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -85,9 +86,7 @@ public abstract class AbstractBoard {
         sb.append(FontHelper.colorString(name, "p") + " NL ");
         sb.append("#gSpecial #gRule: " + getSpecialRule() + " NL ");
         for (int i = 0; i < effects.size(); i++) {
-            sb.append(i + 1);
-            sb.append(". ");
-            sb.append(effects.get(i).description);
+            sb.append(getEffectDescription(i));
             if (i < effects.size() - 1)
                 sb.append(" NL ");
         }
@@ -100,5 +99,16 @@ public abstract class AbstractBoard {
 
     public void atBattleStartPreDraw() {
 
+    }
+
+    public String getEffectDescription(int i) {
+        StringBuilder sb = new StringBuilder();
+        if (progress == i && Wiz.isInCombat()) {
+            sb.append("#r");
+        }
+        sb.append(i + 1);
+        sb.append(". ");
+        sb.append(effects.get(i).description);
+        return sb.toString();
     }
 }

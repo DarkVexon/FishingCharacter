@@ -56,7 +56,6 @@ public class MopUpAction extends AbstractGameAction {
         } else if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             mopUpSelectedCard(AbstractDungeon.handCardSelectScreen.selectedCards.group);
 
-            hand.addAll(AbstractDungeon.handCardSelectScreen.selectedCards.group);
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
 

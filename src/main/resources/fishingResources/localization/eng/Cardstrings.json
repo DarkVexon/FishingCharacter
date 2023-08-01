@@ -102,7 +102,7 @@
   },
   "${ModID}:NostalgicStrike": {
     "NAME": "Nostalgic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL At the end of your turn, spend [E] to play a random card from your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Put a random cost 0 card from your discard pile into your hand."
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",
@@ -592,11 +592,17 @@
   "${ModID}:StickerStrike": {
     "NAME": "Sticker Strike",
     "DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on a random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on a card in your hand."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on a card in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "put a Sticker on."
+    ]
   },
   "${ModID}:ExtraTentacle": {
     "NAME": "Extra Tentacle",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Obtain a *Clumsy."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Obtain a *Clumsy.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to Exhaust."
+    ]
   },
   "${ModID}:Leviathan": {
     "NAME": "Leviathan",

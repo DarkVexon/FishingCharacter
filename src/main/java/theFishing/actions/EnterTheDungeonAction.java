@@ -21,7 +21,7 @@ public class EnterTheDungeonAction extends AbstractGameAction {
         for (AbstractQuest q : QuestHelper.quests) {
             q.onDelve();
         }
-        if (FishingMod.activeBoard.progress == FishingMod.activeBoard.effects.size() - 1) {
+        if (FishingMod.activeBoard.progress == FishingMod.activeBoard.effects.size()) {
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof OnCompleteDungeonPower) {
                     ((OnCompleteDungeonPower) p).onDungeonComplete();

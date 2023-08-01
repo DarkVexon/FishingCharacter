@@ -3,6 +3,7 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
 
 import static theFishing.FishingMod.makeID;
@@ -17,6 +18,7 @@ public class KeyToTheCity extends AbstractFishingCard {
         baseDamage = 10;
         isMultiDamage = true;
         shuffleBackIntoDrawPile = true;
+        tags.add(FishingMod.DELVES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

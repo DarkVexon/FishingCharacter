@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -79,6 +80,9 @@ public class FishingMod implements
     public static ArrayList<AbstractCard> voyagedCards = new ArrayList<>();
 
     private static FishingMod fishingMod;
+
+    @SpireEnum
+    public static AbstractCard.CardTags DELVES;
 
     public FishingMod() {
         BaseMod.subscribe(this);

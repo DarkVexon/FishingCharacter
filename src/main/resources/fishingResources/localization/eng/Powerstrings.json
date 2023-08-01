@@ -39,7 +39,7 @@
     ]
   },
   "${ModID}:MintConditionPower": {
-    "NAME": "Mint Condition",
+    "NAME": "Collector",
     "DESCRIPTIONS": [
       "Whenever you play a #yFoil card, gain #b",
       " #yStrength."
@@ -105,14 +105,14 @@
     ]
   },
   "${ModID}:ProTankPower": {
-    "NAME": "Pro Tank",
+    "NAME": "Hermitage",
     "DESCRIPTIONS": [
       "Whenever you #yDelve, gain #b",
       " #yBlock."
     ]
   },
   "${ModID}:ReelItBackPower": {
-    "NAME": "Reel It Back",
+    "NAME": "Nostalgic Strike",
     "DESCRIPTIONS": [
       "At the end of your turn, if you have unused Energy, spend [E] to play a random card from your discard pile.",
       "At the end of your turn, if you have unused Energy, spend up to #b",
@@ -135,10 +135,17 @@
     ]
   },
   "${ModID}:MoreKrakenDamagePower": {
-    "NAME": "Release the Kraken",
+    "NAME": "Power Pellet",
     "DESCRIPTIONS": [
-      "#yKrakens deal #b",
+      "#yWaka #yWakas deal #b",
       " more damage."
+    ]
+  },
+  "${ModID}:LeviathanPower": {
+    "NAME": "Leviathan",
+    "DESCRIPTIONS": [
+      "Whenever a #rCurse is #yExhausted, gain #b",
+      " #yStrength and #yDexterity."
     ]
   }
 }

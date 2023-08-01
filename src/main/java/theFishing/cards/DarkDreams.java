@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
+import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
 import theFishing.patch.OnRestCard;
 
@@ -26,6 +27,7 @@ public class DarkDreams extends AbstractFishingCard implements OnRestCard {
     public DarkDreams() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
+        tags.add(FishingMod.DELVES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

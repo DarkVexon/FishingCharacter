@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
 
 import static theFishing.FishingMod.makeID;
@@ -20,6 +21,7 @@ public class PlantFlag extends AbstractFishingCard {
         AbstractCard q = new Flag();
         makeFoil(q);
         cardsToPreview = q;
+        tags.add(FishingMod.DELVES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

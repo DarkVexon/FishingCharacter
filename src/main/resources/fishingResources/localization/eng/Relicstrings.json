@@ -18,7 +18,7 @@
     "NAME": "Broken Oar",
     "FLAVOR": "Most trips to the Spire are one-way.",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yExhaust 1 card and gain [E]."
+      "At the start of your turn, #yExhaust 1 card and gain [E] ."
     ]
   },
   "${ModID}:MaelstromAnkh": {
@@ -44,8 +44,8 @@
     ]
   },
   "${ModID}:Goggles": {
-    "NAME": "Terracotta Scale",
-    "FLAVOR": "Hard and dense. The red glaze has all but chipped away.",
+    "NAME": "Goggles",
+    "FLAVOR": "\"The Sands are now open to us.\" - Kublai the Great.",
     "DESCRIPTIONS": [
       "Whenever you end your turn with an empty hand, gain #b1 #yStrength."
     ]
@@ -75,7 +75,7 @@
     "NAME": "Final Results",
     "FLAVOR": "Excommunicated, exiled, expunged - but you can still fix your gaze on the horizon.",
     "DESCRIPTIONS": [
-      "At the start of combat, add an #yUpgraded #y${ModID}:Foil #yMiracle, #ySmite, and #ySafety into your hand."
+      "At the start of combat, add a #y${ModID}:Foil #yMiracle, #ySmite, and #ySafety into your hand."
     ]
   },
   "${ModID}:OtherBoot": {
