@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.FishingMod;
 import theFishing.powers.OnCompleteDungeonPower;
 import theFishing.powers.OnEnterDungeonPower;
+import theFishing.quest.QuestHelper;
+import theFishing.quest.quests.AbstractQuest;
 
 public class EnterTheDungeonAction extends AbstractGameAction {
     @Override
@@ -15,6 +17,9 @@ public class EnterTheDungeonAction extends AbstractGameAction {
             if (p instanceof OnEnterDungeonPower) {
                 ((OnEnterDungeonPower) p).onDungeonEnter();
             }
+        }
+        for (AbstractQuest q : QuestHelper.quests) {
+            q.onDelve();
         }
         if (FishingMod.activeBoard.progress == FishingMod.activeBoard.effects.size() - 1) {
             for (AbstractPower p : AbstractDungeon.player.powers) {

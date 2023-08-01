@@ -1,4 +1,4 @@
-package theFishing.boards.weeklies;
+package theFishing.boards.dailies;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

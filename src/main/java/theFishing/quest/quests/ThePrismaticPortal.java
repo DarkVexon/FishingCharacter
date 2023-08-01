@@ -1,7 +1,6 @@
 package theFishing.quest.quests;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.cards.QuestTimeTheGemSearch;
@@ -36,10 +35,8 @@ public class ThePrismaticPortal extends AbstractQuest {
     }
 
     @Override
-    public void onPlayCard(AbstractCard card) {
-        if (card.rarity == AbstractCard.CardRarity.RARE) {
-            increment();
-        }
+    public void onDelve() {
+        increment();
     }
 
     private static final Texture rare_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Rare.png"));

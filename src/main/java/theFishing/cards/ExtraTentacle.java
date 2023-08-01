@@ -21,7 +21,7 @@ public class ExtraTentacle extends AbstractFishingCard implements OnObtainCard {
 
     public ExtraTentacle() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 11;
+        baseDamage = 13;
         cardsToPreview = new Clumsy();
     }
 

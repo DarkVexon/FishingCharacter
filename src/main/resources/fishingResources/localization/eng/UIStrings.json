@@ -110,7 +110,7 @@
   "${ModID}:BoardInfo": {
     "TEXT": [
       "The Dungeon",
-      "This week's Dungeon: NL ",
+      "Today's Dungeon: NL ",
       " NL Current room: #b",
       "."
     ]

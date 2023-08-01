@@ -3,10 +3,11 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
 
-public class GhostShip extends AbstractFishingCard {
+public class GhostShip extends AbstractFishingCard implements StartOfTurnInExhaustCard {
     public final static String ID = makeID("GhostShip");
     // intellij stuff attack, enemy, uncommon, 6, 3, , , 6, 3
 
@@ -20,7 +21,10 @@ public class GhostShip extends AbstractFishingCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
     }
 
-    //TODO: Trigger from exhaust pile
+    @Override
+    public void atTurnStartInExhaust() {
+        addToBot(new AllEnemyLoseHPAction(magicNumber, AbstractGameAction.AttackEffect.FIRE));
+    }
 
     public void upp() {
         upgradeDamage(3);

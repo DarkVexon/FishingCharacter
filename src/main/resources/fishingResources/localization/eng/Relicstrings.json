@@ -93,10 +93,10 @@
     ]
   },
   "${ModID}:MonsterManual": {
-    "NAME": "Monster Manual",
-    "FLAVOR": "One of the oldest known books in print.",
+    "NAME": "Magic Box",
+    "FLAVOR": "What will be inside today?",
     "DESCRIPTIONS": [
-      "At the start of combat, #yEnter #ythe #yDungeon."
+      "At the start of combat, #yfishing:Delve."
     ]
   }
 }

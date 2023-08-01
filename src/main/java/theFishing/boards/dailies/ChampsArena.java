@@ -1,4 +1,4 @@
-package theFishing.boards.weeklies;
+package theFishing.boards.dailies;
 
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

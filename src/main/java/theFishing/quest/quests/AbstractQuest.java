@@ -62,4 +62,8 @@ public abstract class AbstractQuest {
     public void atEndOfTurn() {
 
     }
+
+    public void onDelve() {
+
+    }
 }

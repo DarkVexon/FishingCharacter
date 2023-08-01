@@ -1,11 +1,13 @@
 package theFishing.boards;
 
-import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.daily.TimeHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.random.Random;
 import theFishing.FishingMod;
-import theFishing.boards.weeklies.ChampsArena;
-import theFishing.boards.weeklies.TheLibrary;
-import theFishing.boards.weeklies.TombOfRorrim;
+import theFishing.boards.dailies.ChampsArena;
+import theFishing.boards.dailies.TheLibrary;
+import theFishing.boards.dailies.TombOfRorrim;
 
 import java.util.ArrayList;
 
@@ -35,8 +37,7 @@ public abstract class AbstractBoard {
     }
 
     public static AbstractBoard getRunBoard() {
-        //TODO: Date-based system
-        return getBoardByID(ids.get(MathUtils.random(0, ids.size() - 1)));
+        return AbstractBoard.getBoardByID(ids.get((int) (TimeHelper.daySince1970() % ids.size())));
     }
 
     public void proceed() {
