@@ -125,8 +125,8 @@
   "${ModID}:TheLibrary": {
     "TEXT": [
       "The Library",
-      "Draw #b1 card.",
-      "Draw #b2 cards."
+      "Draw #b1 card. Give it #yRetain.",
+      "Deal #b3 damage to a random enemy for each card in your hand."
     ]
   },
   "${ModID}:TombOfRorrim": {
@@ -135,6 +135,44 @@
       "Gain #b1 #yBlock.",
       "Gain #b3 #yBlock.",
       "This turn, your next card is played twice."
+    ]
+  },
+  "${ModID}:WatchersTemple": {
+    "TEXT": [
+      "Temple of the Third Eye",
+      "#yScry #b3.",
+      "Add a #ySmite into your hand.",
+      "Attacks deal #b50% more damage this turn."
+    ]
+  },
+  "${ModID}:WhereItFell": {
+    "TEXT": [
+      "Where It Fell",
+      "Add a #yStar #yShard into your hand.",
+      "Increase the damage and #yBlock of Star Shards by #b6 this turn."
+    ]
+  },
+  "${ModID}:TheDeep": {
+    "TEXT": [
+      "The Maze",
+      "At the start of combat, shuffle #yWaka #yWaka into your draw pile.",
+      "Increase #yWaka #yWaka's damage by #b10 this combat."
+    ]
+  },
+  "${ModID}:TheFactory": {
+    "TEXT": [
+      "The Factory",
+      "At the start of combat, #yExhaust #b1 random card in your draw pile.",
+      "Gain #b4 #yBlock.",
+      "Play a copy of the #yExhausted card."
+    ]
+  },
+  "${ModID}:TheStarship": {
+    "TEXT": [
+      "The Starship",
+      "#yUpgrade a random card in your hand.",
+      "Gain [E].",
+      "Deal #b9 damage to a random enemy."
     ]
   }
 }

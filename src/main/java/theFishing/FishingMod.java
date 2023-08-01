@@ -187,9 +187,12 @@ public class FishingMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        PreDrawPatch.DRAWN_DURING_TURN = false;
+
         QuestHelper.reset();
         activeBoard.reset();
-        PreDrawPatch.DRAWN_DURING_TURN = false;
+
+        activeBoard.atBattleStartPreDraw();
     }
 
     @Override

@@ -23,7 +23,7 @@
     "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:RoboFish": {
-    "NAME": "Cogfish",
+    "NAME": "Mecherel",
     "DESCRIPTION": "Gain !M! Artifact. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
@@ -38,7 +38,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Qwilfish": {
-    "NAME": "Blowfish",
+    "NAME": "Qwilfish",
     "DESCRIPTION": "Gain !M! Thorns. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
@@ -53,7 +53,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Starfish": {
-    "NAME": "Hermit Crab",
+    "NAME": "Starfish",
     "DESCRIPTION": "Gain !M! Plated Armor. NL Draw !${ModID}:m3! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !M! Plated Armor. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
@@ -218,17 +218,17 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Thanks for shopping!"
   },
   "${ModID}:Lie": {
-    "NAME": "Hook",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Line into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Line+ into your hand. NL Exhaust."
+    "NAME": "Lie",
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Cheat into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Add a *Cheat+ into your hand. NL Exhaust."
   },
   "${ModID}:Cheat": {
-    "NAME": "Line",
-    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Sinker into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Sinker+ into your hand. NL Exhaust."
+    "NAME": "Cheat",
+    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal+ into your hand. NL Exhaust."
   },
   "${ModID}:Steal": {
-    "NAME": "Sinker",
+    "NAME": "Steal",
     "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
   },
   "${ModID}:SetupButBetter": {
@@ -298,12 +298,12 @@
     "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E]. NL If this card is Exhausted, play it."
   },
   "${ModID}:PlantFlag": {
-    "NAME": "Spelunk",
-    "DESCRIPTION": "${ModID}:Delve. NL Put a ${ModID}:Foil *Decoy on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Delve. NL Put a ${ModID}:Foil *Decoy+ on top of your draw pile."
+    "NAME": "Plant Flag",
+    "DESCRIPTION": "${ModID}:Delve. NL Put a ${ModID}:Foil *Flag on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Delve. NL Put a ${ModID}:Foil *Flag+ on top of your draw pile."
   },
   "${ModID}:Flag": {
-    "NAME": "Decoy",
+    "NAME": "Flag",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
   },
   "${ModID}:RodOfHope": {
@@ -345,7 +345,7 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:AquaOrb": {
-    "NAME": "Shipshape",
+    "NAME": "Aqua Orb",
     "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Gain !B! Block. NL If it's turn 1, gain 1 Artifact."
   },
   "${ModID}:FreeDrinks": {
@@ -396,10 +396,6 @@
   "${ModID}:EndsOfTheEarth": {
     "NAME": "Ends Of The Earth",
     "DESCRIPTION": "Can be played from your discard pile. NL Gain !B! Block. NL Deal !D! damage."
-  },
-  "${ModID}:StarShard": {
-    "NAME": "Star Shard",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw 1 card."
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
@@ -529,7 +525,7 @@
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted, deal !M! damage to a random enemy."
   },
   "${ModID}:ConfettiCannon": {
-    "NAME": "Starfall",
+    "NAME": "Confetti Cannon",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Draw 1 card. NL If you drew a ${ModID}:Foil card this way, repeat this.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
@@ -555,7 +551,7 @@
     "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL ${ModID}:Delve. NL Zzz..."
   },
   "${ModID}:KeyToTheCity": {
-    "NAME": "Diver Down",
+    "NAME": "Key to the City",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Shuffle this card into your draw pile."
   },
   "${ModID}:Lunchbox": {
@@ -595,8 +591,8 @@
   },
   "${ModID}:StickerStrike": {
     "NAME": "Sticker Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Give a random card in your hand \"A random enemy loses !M! HP.\"",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Give a card in your hand \"A random enemy loses !M! HP.\""
+    "DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on a random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on a card in your hand."
   },
   "${ModID}:ExtraTentacle": {
     "NAME": "Extra Tentacle",
@@ -610,5 +606,14 @@
   "${ModID}:SpecialCurse": {
     "NAME": "Rot",
     "DESCRIPTION": "Exhaust."
+  },
+  "${ModID}:StarShard": {
+    "NAME": "Star Shard",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "${ModID}:Kraken": {
+    "NAME": "Waka Waka",
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage."
   }
 }

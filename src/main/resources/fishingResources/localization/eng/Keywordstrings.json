@@ -55,6 +55,13 @@
       "delve",
       "delved"
     ],
-    "DESCRIPTION": "Move to the next room of the Dungeon and activate its effects."
+    "DESCRIPTION": "Move to the next Dungeon room and activate its effects."
+  },
+  {
+    "PROPER_NAME": "Sticker",
+    "NAMES": [
+      "sticker"
+    ],
+    "DESCRIPTION": "After you play a card, Stickers on it make a random enemy lose #b8 HP."
   }
 ]

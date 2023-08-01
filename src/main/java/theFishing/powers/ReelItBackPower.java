@@ -17,7 +17,7 @@ public class ReelItBackPower extends AbstractAdventurerPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public ReelItBackPower() {
-        super(ID, powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, 1);
+        super(ID, powerStrings.NAME, PowerType.BUFF, true, AbstractDungeon.player, 1);
     }
 
     @Override

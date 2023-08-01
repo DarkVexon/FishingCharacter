@@ -118,5 +118,27 @@
       "At the end of your turn, if you have unused Energy, spend up to #b",
       " of it to play that many random cards from your discard pile."
     ]
+  },
+  "${ModID}:MoreDamageThisTurnPower": {
+    "NAME": "Semi-Wrath",
+    "DESCRIPTIONS": [
+      "Attacks deal #b50% more damage this turn.",
+      "Attacks deal #b50% more damage for the next #b",
+      " turns."
+    ]
+  },
+  "${ModID}:BetterStarShardsThisTurnPower": {
+    "NAME": "Starlit",
+    "DESCRIPTIONS": [
+      "#yStar #yShards have #b",
+      " increased damage and #yBlock this turn."
+    ]
+  },
+  "${ModID}:MoreKrakenDamagePower": {
+    "NAME": "Release the Kraken",
+    "DESCRIPTIONS": [
+      "#yKrakens deal #b",
+      " more damage."
+    ]
   }
 }

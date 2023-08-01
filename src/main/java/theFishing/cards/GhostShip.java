@@ -13,8 +13,8 @@ public class GhostShip extends AbstractFishingCard implements StartOfTurnInExhau
 
     public GhostShip() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 6;
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

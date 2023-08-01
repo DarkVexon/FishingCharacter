@@ -1,15 +1,15 @@
 package theFishing.boards;
 
-import com.megacrit.cardcrawl.core.Settings;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.daily.TimeHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.random.Random;
 import theFishing.FishingMod;
-import theFishing.boards.dailies.ChampsArena;
-import theFishing.boards.dailies.TheLibrary;
-import theFishing.boards.dailies.TombOfRorrim;
+import theFishing.boards.dailies.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public abstract class AbstractBoard {
 
@@ -28,16 +28,26 @@ public abstract class AbstractBoard {
         this.id = ID;
     }
 
-    private static ArrayList<String> ids = new ArrayList<>();
+    private static HashMap<String, Class<? extends AbstractBoard>> ids = new LinkedHashMap<>();
 
     static {
-        ids.add(ChampsArena.ID);
-        ids.add(TheLibrary.ID);
-        ids.add(TombOfRorrim.ID);
+        ids.put(ChampsArena.ID, ChampsArena.class);
+        ids.put(TombOfRorrim.ID, TombOfRorrim.class);
+        ids.put(TheDeep.ID, TheDeep.class);
+        ids.put(TheFactory.ID, TheFactory.class);
+        ids.put(TheStarship.ID, TheStarship.class);
+        ids.put(WatchersTemple.ID, WatchersTemple.class);
+        ids.put(WhereItFell.ID, WhereItFell.class);
+        ids.put(TheLibrary.ID, TheLibrary.class);
     }
 
     public static AbstractBoard getRunBoard() {
-        return AbstractBoard.getBoardByID(ids.get((int) (TimeHelper.daySince1970() % ids.size())));
+        ArrayList<String> idsToUse = new ArrayList<>();
+        idsToUse.addAll(ids.keySet());
+        if (CardCrawlGame.playerName.toLowerCase().contains("vex")) {
+            return AbstractBoard.getBoardByID(idsToUse.get(MathUtils.random(idsToUse.size() - 1)));
+        }
+        return AbstractBoard.getBoardByID(idsToUse.get((int) (TimeHelper.daySince1970() % ids.size())));
     }
 
     public void proceed() {
@@ -62,14 +72,12 @@ public abstract class AbstractBoard {
 //    }
 
     public static AbstractBoard getBoardByID(String ID) {
-        if (ID.equals(ChampsArena.ID)) {
+        try {
+            return ids.get(ID).newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            System.out.println("ERROR! Couldn't make board by ID");
             return new ChampsArena();
-        } else if (ID.equals(TheLibrary.ID)) {
-            return new TheLibrary();
-        } else if (ID.equals(TombOfRorrim.ID)) {
-            return new TombOfRorrim();
         }
-        return new ChampsArena();
     }
 
     public String getDescription() {
@@ -86,7 +94,11 @@ public abstract class AbstractBoard {
         return sb.toString();
     }
 
-    private String getSpecialRule() {
+    public String getSpecialRule() {
         return "None"; //TODO: Unhardcode
+    }
+
+    public void atBattleStartPreDraw() {
+
     }
 }

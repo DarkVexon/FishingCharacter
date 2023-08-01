@@ -20,7 +20,7 @@ public class StickerStrike extends AbstractFishingCard {
     public StickerStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 7;
-        baseMagicNumber = magicNumber = 7;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,7 +28,7 @@ public class StickerStrike extends AbstractFishingCard {
         if (upgraded) {
             atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
                 for (AbstractCard c : cards) {
-                    CardModifierManager.addModifier(c, new StickerCardMod(magicNumber));
+                    CardModifierManager.addModifier(c, new StickerCardMod());
                     c.superFlash(QuestHelper.QUEST_DUPE_BORDER_GLOW_COLOR);
                 }
             }));
@@ -38,7 +38,7 @@ public class StickerStrike extends AbstractFishingCard {
                 public void update() {
                     isDone = true;
                     AbstractCard tar = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                    CardModifierManager.addModifier(tar, new StickerCardMod(magicNumber));
+                    CardModifierManager.addModifier(tar, new StickerCardMod());
                     tar.superFlash(QuestHelper.QUEST_DUPE_BORDER_GLOW_COLOR);
                 }
             });
@@ -47,7 +47,6 @@ public class StickerStrike extends AbstractFishingCard {
 
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(2);
         uDesc();
     }
 }
