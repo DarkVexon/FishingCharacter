@@ -18,7 +18,7 @@ public class MoreKrakenDamagePower extends AbstractAdventurerPower {
     }
 
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1];
     }
 
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {

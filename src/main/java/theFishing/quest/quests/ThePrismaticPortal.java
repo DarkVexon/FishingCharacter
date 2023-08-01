@@ -39,8 +39,8 @@ public class ThePrismaticPortal extends AbstractQuest {
         increment();
     }
 
-    private static final Texture rare_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Rare.png"));
-    private static final Texture rare_com = TexLoader.getTexture(makeImagePath("quests/Portal_Rare_Completed.png"));
+    private static final Texture rare_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Key.png"));
+    private static final Texture rare_com = TexLoader.getTexture(makeImagePath("quests/Portal_Key_Completed.png"));
 
     @Override
     public Texture progressTex(int idx) {

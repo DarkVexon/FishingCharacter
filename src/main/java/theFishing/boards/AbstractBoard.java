@@ -1,7 +1,5 @@
 package theFishing.boards;
 
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.daily.TimeHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import theFishing.FishingMod;
@@ -9,6 +7,7 @@ import theFishing.boards.dailies.*;
 import theFishing.util.Wiz;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -30,23 +29,29 @@ public abstract class AbstractBoard {
     }
 
     private static HashMap<String, Class<? extends AbstractBoard>> ids = new LinkedHashMap<>();
+    private static HashMap<String, Class<? extends AbstractBoard>> complexIds = new LinkedHashMap<>();
 
     static {
         ids.put(ChampsArena.ID, ChampsArena.class);
         ids.put(TombOfRorrim.ID, TombOfRorrim.class);
-        ids.put(TheDeep.ID, TheDeep.class);
-        ids.put(TheFactory.ID, TheFactory.class);
         ids.put(TheStarship.ID, TheStarship.class);
-        ids.put(WatchersTemple.ID, WatchersTemple.class);
-        ids.put(WhereItFell.ID, WhereItFell.class);
-        ids.put(TheLibrary.ID, TheLibrary.class);
+
+
+        complexIds.put(TheDeep.ID, TheDeep.class);
+        complexIds.put(TheFactory.ID, TheFactory.class);
+        complexIds.put(WatchersTemple.ID, WatchersTemple.class);
+        complexIds.put(WhereItFell.ID, WhereItFell.class);
+        complexIds.put(TheLibrary.ID, TheLibrary.class);
     }
 
     public static AbstractBoard getRunBoard() {
+        Calendar calendar = Calendar.getInstance();
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
         ArrayList<String> idsToUse = new ArrayList<>();
-        idsToUse.addAll(ids.keySet());
-        if (CardCrawlGame.playerName.toLowerCase().contains("vex")) {
-            return AbstractBoard.getBoardByID(idsToUse.get(MathUtils.random(idsToUse.size() - 1)));
+        if (dayOfWeek == 7 || dayOfWeek == 1) {
+            idsToUse.addAll(complexIds.keySet());
+        } else {
+            idsToUse.addAll(ids.keySet());
         }
         return AbstractBoard.getBoardByID(idsToUse.get((int) (TimeHelper.daySince1970() % ids.size())));
     }

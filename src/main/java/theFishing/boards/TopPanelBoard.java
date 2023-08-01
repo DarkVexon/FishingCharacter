@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
@@ -21,7 +22,7 @@ public class TopPanelBoard extends TopPanelItem {
 
     public static final String ID = FishingMod.makeID("BoardInfo");
 
-    private static final Texture ICON = ImageMaster.ENDLESS_ICON; //TODO: Special icon
+    private static final Texture ICON = ImageMaster.INTENT_UNKNOWN; //TODO: Special icon
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TopPanelBoard() {
@@ -42,12 +43,12 @@ public class TopPanelBoard extends TopPanelItem {
             }
             if (getHitbox().hovered) {
                 if (Wiz.isInCombat()) {
-                    TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription() + uiStrings.TEXT[2] + FishingMod.activeBoard.progress + uiStrings.TEXT[3]);
+                    TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription() + uiStrings.TEXT[2] + FishingMod.activeBoard.progress + LocalizedStrings.PERIOD);
                 } else {
                     TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription());
                 }
             } else if (Wiz.isInCombat() && AbstractDungeon.player.isDraggingCard && AbstractDungeon.player.hoveredCard.hasTag(FishingMod.DELVES)) {
-                TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getEffectDescription(FishingMod.activeBoard.progress));
+                TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[3], FishingMod.activeBoard.getEffectDescription(FishingMod.activeBoard.progress));
             }
         }
     }

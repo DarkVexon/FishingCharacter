@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.unique.RandomCardFromDiscardPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,17 +25,7 @@ public class NostalgicStrike extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                ArrayList<AbstractCard> potential = new ArrayList<>();
-                potential.addAll(p.discardPile.group.stream().filter(q -> q.cost == 0 || q.freeToPlayOnce).collect(Collectors.toList()));
-                if (!potential.isEmpty()) {
-                    p.discardPile.moveToHand(Wiz.getRandomItem(potential));
-                }
-            }
-        });
+        atb(new RandomCardFromDiscardPileToHandAction());
     }
 
     public void upp() {
