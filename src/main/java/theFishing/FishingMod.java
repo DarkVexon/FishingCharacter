@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.boards.AbstractBoard;
+import theFishing.boards.TopPanelBoard;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
@@ -197,9 +198,6 @@ public class FishingMod implements
             if (!QuestHelper.quests.isEmpty()) {
                 QuestHelper.update();
             }
-            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
-                activeBoard.update();
-            }
         }
     }
 
@@ -220,6 +218,8 @@ public class FishingMod implements
             WidePotionsMod.whitelistSimplePotion(StarlightSoda.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(CarePackage.POTION_ID);
         }
+
+        BaseMod.addTopPanelItem(new TopPanelBoard());
     }
 
     public static float time = 0f;

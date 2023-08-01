@@ -32,11 +32,8 @@ public class QuestLogPatches {
         public static void Insert(AbstractDungeon __instance, SpriteBatch sb) {
             if (AbstractDungeon.rs == AbstractDungeon.RenderScene.NORMAL) {
                 if (Wiz.isInCombat()) {
-                    if (QuestHelper.quests.isEmpty()) {
+                    if (!QuestHelper.quests.isEmpty()) {
                         QuestHelper.render(sb);
-                    }
-                    if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
-                        FishingMod.activeBoard.render(sb);
                     }
                 }
             }

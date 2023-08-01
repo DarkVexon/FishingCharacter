@@ -1,24 +1,20 @@
 package theFishing.boards;
 
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.core.Settings;
 import theFishing.FishingMod;
-import theFishing.util.TexLoader;
 
 import java.util.ArrayList;
 
 public abstract class AbstractBoard {
 
-    private static final Texture arrow = TexLoader.getTexture("fishingResources/images/board/player.png");
-    private static final float POS_X = 300F * Settings.scale;
-    private static final float DIST_BETWEEN = 100F * Settings.scale;
-    private static final float POS_Y = Settings.HEIGHT / 3F;
+//    private static final Texture arrow = TexLoader.getTexture("fishingResources/images/board/player.png");
+//    private static final float POS_X = 300F * Settings.scale;
+//    private static final float DIST_BETWEEN = 100F * Settings.scale;
+//    private static final float POS_Y = Settings.HEIGHT / 3F;
 
     public String id;
     public String name;
     public int progress = 0;
-    public ArrayList<BoardEffect> effects;
+    public ArrayList<BoardEffect> effects = new ArrayList<>();
 
     public AbstractBoard(String ID, String name) {
         this.name = name;
@@ -43,12 +39,12 @@ public abstract class AbstractBoard {
         FishingMod.timesCompletedThisCombat = 0;
     }
 
-    public void render(SpriteBatch sb) {
-        sb.draw(getBackground(), POS_X, POS_Y);
-        sb.draw(arrow, POS_X, POS_Y + (DIST_BETWEEN * progress));
-    }
-
-    public abstract Texture getBackground();
+//    public void render(SpriteBatch sb) {
+//        for (int i = 0; i < effects.size(); i++) {
+//            effects.get(i).render(sb, i, POS_X, POS_Y + (DIST_BETWEEN * i));
+//        }
+//        sb.draw(arrow, POS_X, POS_Y + (DIST_BETWEEN * progress));
+//    }
 
     public static AbstractBoard getBoardByID(String ID) {
         switch (ID) {
@@ -57,5 +53,18 @@ public abstract class AbstractBoard {
             default:
                 return new ChampsArena();
         }
+    }
+
+    public String getDescription() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(name + " NL ");
+        for (int i = 0; i < effects.size(); i++) {
+            sb.append(i + 1);
+            sb.append(". ");
+            sb.append(effects.get(i).description);
+            if (i < effects.size() - 1)
+                sb.append(" NL ");
+        }
+        return sb.toString();
     }
 }

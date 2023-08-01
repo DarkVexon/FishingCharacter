@@ -107,14 +107,17 @@
       " HP."
     ]
   },
-  "${ModID}:BoardEffects": {
+  "${ModID}:BoardInfo": {
     "TEXT": [
-      "Room "
+      "The Dungeon",
+      "This week's Dungeon: NL ",
+      " NL Current room: #b",
+      "."
     ]
   },
   "${ModID}:ChampsArena": {
     "TEXT": [
-      "Champ's Grisly Arena",
+      "The Colosseum",
       "Add #b1 #yShiv into your hand.",
       "Gain #b1 #yStrength."
     ]
