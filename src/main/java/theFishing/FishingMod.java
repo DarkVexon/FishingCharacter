@@ -196,7 +196,8 @@ public class FishingMod implements
         QuestHelper.reset();
         activeBoard.reset();
 
-        activeBoard.atBattleStartPreDraw();
+        if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING))
+            activeBoard.atBattleStartPreDraw();
     }
 
     @Override
