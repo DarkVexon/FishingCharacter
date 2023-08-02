@@ -189,7 +189,10 @@
   },
   "${ModID}:Splash": {
     "NAME": "Splash",
-    "DESCRIPTION": "Can only be played if your hand contains 3 or fewer cards. NL Gain !B! Block. NL Deal !D! damage."
+    "DESCRIPTION": "Can only be played if your hand contains 3 or fewer cards. NL Gain !B! Block. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "My hand is too big."
+    ]
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
@@ -321,7 +324,7 @@
     "UPGRADE_DESCRIPTION": "{@@}Gain {!M!|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|>4=!M! [E]}. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:FinishingTouches": {
-    "NAME": "Last of the Lights",
+    "NAME": "Finishing Touches",
     "DESCRIPTION": "Discard 2 cards. NL When you play a card, if it's the only card in your hand, play it twice."
   },
   "${ModID}:FlyingFish": {
@@ -538,7 +541,7 @@
     "DESCRIPTION": "Whenever you complete the Dungeon, trigger its final Room !M! additional times."
   },
   "${ModID}:GazeOfTheGods": {
-    "NAME": "Gaze of the Gods",
+    "NAME": "Yawning Void",
     "DESCRIPTION": "Enemy loses !M! HP. NL If this card is Exhausted, reduce its cost by 1 and return it to your hand."
   },
   "${ModID}:GhostShip": {
@@ -599,7 +602,7 @@
   },
   "${ModID}:ExtraTentacle": {
     "NAME": "Extra Tentacle",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Obtain a *Clumsy.",
+    "DESCRIPTION": "Deal !D! damage twice. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Obtain a *Clumsy.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Exhaust."
     ]

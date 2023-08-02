@@ -21,17 +21,18 @@ public class ExtraTentacle extends AbstractFishingCard implements OnObtainCard {
 
     public ExtraTentacle() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 13;
+        baseDamage = 6;
         cardsToPreview = new Clumsy();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         atb(new SelectCardsAction(p.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> cards.forEach(q -> att(new ExhaustSpecificCardAction(q, p.drawPile, false)))));
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(2);
     }
 
     @Override

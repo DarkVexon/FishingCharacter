@@ -16,7 +16,7 @@ public class Glogus extends AbstractFishingCard {
 
     public Glogus() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 14;
+        baseDamage = 15;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,6 +24,6 @@ public class Glogus extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(5);
     }
 }
