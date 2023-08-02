@@ -2,16 +2,12 @@ package theFishing.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theFishing.FishingMod;
-
-import java.util.Iterator;
 
 import static theFishing.FishingMod.makeID;
 
@@ -37,12 +33,16 @@ public class DarkDepths extends AbstractFishingCard implements OnObtainCard {
         } else {
             if (FishingMod.delvedThisTurn) {
                 return true;
-            }
-            else {
+            } else {
                 cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
                 return false;
             }
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = FishingMod.delvedThisTurn ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override

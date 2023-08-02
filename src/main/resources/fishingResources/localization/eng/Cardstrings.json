@@ -450,7 +450,7 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, gain !M! Strength.",
+    "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, gain 1 Strength.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a ${ModID}:Foil card, gain 1 Strength."
   },
   "${ModID}:GlitterGlue": {

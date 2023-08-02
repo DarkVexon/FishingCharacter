@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,7 +30,7 @@ public class StickerStrike extends AbstractFishingCard {
             atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
                 for (AbstractCard c : cards) {
                     CardModifierManager.addModifier(c, new StickerCardMod());
-                    c.superFlash(QuestHelper.QUEST_DUPE_BORDER_GLOW_COLOR);
+                    c.superFlash(Color.GOLD.cpy());
                 }
             }));
         } else {
@@ -39,7 +40,7 @@ public class StickerStrike extends AbstractFishingCard {
                     isDone = true;
                     AbstractCard tar = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
                     CardModifierManager.addModifier(tar, new StickerCardMod());
-                    tar.superFlash(QuestHelper.QUEST_DUPE_BORDER_GLOW_COLOR);
+                    tar.superFlash(Color.GOLD.cpy());
                 }
             });
         }

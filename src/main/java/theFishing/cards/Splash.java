@@ -31,6 +31,11 @@ public class Splash extends AbstractFishingCard {
         return super.canUse(p, m);
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.player.hand.size() > 3 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(3);
         upgradeBlock(3);
