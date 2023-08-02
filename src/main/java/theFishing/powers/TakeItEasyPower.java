@@ -19,7 +19,6 @@ public class TakeItEasyPower extends AbstractAdventurerPower {
     public void atStartOfTurnPostDraw() {
         this.flash();
         this.addToBot(new DiscardAction(this.owner, this.owner, this.amount, false));
-        addToBot(new GainBlockAction(owner, amount));
     }
 
     @Override

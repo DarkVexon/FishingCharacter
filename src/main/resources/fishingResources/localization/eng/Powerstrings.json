@@ -1,10 +1,17 @@
 {
   "${ModID}:TakeItEasyPower": {
-    "NAME": "Fasting-B",
+    "NAME": "Discard Each Turn",
     "DESCRIPTIONS": [
       "At the start of your turn, discard #b",
       " card.",
       " cards."
+    ]
+  },
+  "${ModID}:TakeItEasyBlockPower": {
+    "NAME": "Turtle",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yBlock."
     ]
   },
   "${ModID}:DiscardNextTurnPower": {
@@ -48,7 +55,7 @@
   "${ModID}:RidiculousFishingPower": {
     "NAME": "Ridiculous Fishing",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFish, deal #b",
+      "Whenever you draw a card during your turn, deal #b",
       " damage to a random enemy."
     ]
   },
@@ -78,8 +85,8 @@
   "${ModID}:CatchOfTheDayPower": {
     "NAME": "Catch of the Day",
     "DESCRIPTIONS": [
-      "At the end of your turn, put #b",
-      " #yFish on top of your draw pile."
+      "At the end of your turn, shuffle #b",
+      " #yFish into your draw pile."
     ]
   },
   "${ModID}:AllOutPower": {
