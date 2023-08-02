@@ -115,7 +115,7 @@ public abstract class AbstractBoard {
 
     public String getEffectDescription(int i) {
         StringBuilder sb = new StringBuilder();
-        if (progress == i && Wiz.isInCombat()) {
+        if (progress % effects.size() == i && Wiz.isInCombat()) {
             sb.append("#r");
         }
         sb.append(i + 1);

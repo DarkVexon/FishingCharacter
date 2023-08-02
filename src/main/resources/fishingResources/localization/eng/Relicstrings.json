@@ -3,7 +3,7 @@
     "NAME": "The Rod",
     "FLAVOR": "The only one of its kind. Glows in the dark.",
     "DESCRIPTIONS": [
-      "At the start of combat, reduce the cost of a random card in your hand to #b0 this combat."
+      "At the start of each combat, #yUpgrade a random card in your hand. It costs #b0 until played."
     ]
   },
   "${ModID}:RainbowRod": {
@@ -11,7 +11,7 @@
     "FLAVOR": "Fishing 100",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL At the start of combat, reduce the cost of cards in your hand to #b0 this combat."
+      ".[] NL At the start of each combat, #yUpgrade all cards in your hand. They cost #b0 this combat."
     ]
   },
   "${ModID}:BrokenOar": {
