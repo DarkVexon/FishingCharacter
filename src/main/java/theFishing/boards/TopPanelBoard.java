@@ -47,7 +47,7 @@ public class TopPanelBoard extends TopPanelItem {
                 } else {
                     TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription());
                 }
-            } else if (Wiz.isInCombat() && AbstractDungeon.player.isDraggingCard && AbstractDungeon.player.hoveredCard.hasTag(FishingMod.DELVES)) {
+            } else if (Wiz.isInCombat() && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode) && AbstractDungeon.player.hoveredCard != null && AbstractDungeon.player.hoveredCard.hasTag(FishingMod.DELVES)) {
                 TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[3], FishingMod.activeBoard.getEffectDescription(FishingMod.activeBoard.progress));
             }
         }

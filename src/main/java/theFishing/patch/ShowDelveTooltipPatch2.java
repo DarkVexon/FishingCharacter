@@ -13,10 +13,14 @@ public class ShowDelveTooltipPatch2 {
     )
     public static class ResetDrag {
         public static void Postfix(SpriteBatch sb) {
-            if (ShowDelveTooltipPatch1.resetBackToTrue) {
+            if (ShowDelveTooltipPatch1.resetDraggingBackToTrue) {
                 AbstractDungeon.player.isDraggingCard = true;
             }
-            ShowDelveTooltipPatch1.resetBackToTrue = false;
+            if (ShowDelveTooltipPatch1.resetTargetingBackToTrue) {
+                AbstractDungeon.player.inSingleTargetMode = true;
+            }
+            ShowDelveTooltipPatch1.resetDraggingBackToTrue = false;
+            ShowDelveTooltipPatch1.resetTargetingBackToTrue = false;
         }
     }
 }
