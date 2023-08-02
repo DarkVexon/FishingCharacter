@@ -302,8 +302,8 @@
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
-    "DESCRIPTION": "${ModID}:Delve. NL Put a ${ModID}:Foil *Flag on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Delve. NL Put a ${ModID}:Foil *Flag+ on top of your draw pile."
+    "DESCRIPTION": "${ModID}:Delve. NL Add a ${ModID}:Foil *Flag into your hand.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Delve. NL Add a ${ModID}:Foil *Flag+ into your hand."
   },
   "${ModID}:Flag": {
     "NAME": "Flag",

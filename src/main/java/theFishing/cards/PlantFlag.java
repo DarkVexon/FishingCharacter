@@ -9,8 +9,7 @@ import theFishing.actions.EnterTheDungeonAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
-import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.topDeck;
+import static theFishing.util.Wiz.*;
 
 public class PlantFlag extends AbstractFishingCard {
     public final static String ID = makeID("PlantFlag");
@@ -32,7 +31,7 @@ public class PlantFlag extends AbstractFishingCard {
             q.upgrade();
         }
         makeFoil(q);
-        topDeck(q);
+        makeInHand(q);
     }
 
     public void upp() {

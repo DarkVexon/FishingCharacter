@@ -79,7 +79,14 @@ public abstract class AbstractBoard {
 
     public static AbstractBoard getBoardByID(String ID) {
         try {
-            return ids.get(ID).newInstance();
+            if (ids.containsKey(ID))
+                return ids.get(ID).newInstance();
+            else if (complexIds.containsKey(ID))
+                return complexIds.get(ID).newInstance();
+            else {
+                System.out.println("ERROR! Couldn't find board by ID");
+                return new ChampsArena();
+            }
         } catch (InstantiationException | IllegalAccessException e) {
             System.out.println("ERROR! Couldn't make board by ID");
             return new ChampsArena();
