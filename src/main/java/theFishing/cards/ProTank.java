@@ -1,9 +1,11 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.EnterTheDungeonAction;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.powers.ProTankPower;
 
@@ -15,15 +17,19 @@ public class ProTank extends AbstractFishingCard {
     // intellij stuff power, self, uncommon, , , , , 3, 1
 
     public ProTank() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
+        baseDamage = 16;
+        baseBlock = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new ProTankPower(magicNumber));
+        blck();
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        atb(new EnterTheDungeonAction());
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeDamage(4);
+        upgradeBlock(4);
     }
 }

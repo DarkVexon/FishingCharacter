@@ -34,6 +34,9 @@ public abstract class AbstractBoard {
         ids.put(ChampsArena.ID, ChampsArena.class);
         ids.put(TombOfRorrim.ID, TombOfRorrim.class);
         ids.put(TheStarship.ID, TheStarship.class);
+        ids.put(MegaCrit.ID, MegaCrit.class);
+        ids.put(MorshusShop.ID, MorshusShop.class);
+        ids.put(ThortonsBank.ID, ThortonsBank.class);
 
 
         complexIds.put(TheDeep.ID, TheDeep.class);
@@ -110,6 +113,10 @@ public abstract class AbstractBoard {
     }
 
     public void atBattleStartPreDraw() {
+
+    }
+
+    public void atRunStart() {
 
     }
 

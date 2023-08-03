@@ -555,15 +555,15 @@
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Shuffle this card into your draw pile."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests."
   },
   "${ModID}:Lunchbox": {
     "NAME": "Lunch Box",
     "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Picked: Heal 3 HP."
   },
   "${ModID}:ProTank": {
-    "NAME": "Hermitage",
-    "DESCRIPTION": "Whenever you ${ModID}:Delve, gain !M! Block."
+    "NAME": "Seal Away",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Delve."
   },
   "${ModID}:GlogusEgg": {
     "NAME": "Glogus Egg",
@@ -602,7 +602,7 @@
   },
   "${ModID}:ExtraTentacle": {
     "NAME": "Extra Tentacle",
-    "DESCRIPTION": "Deal !D! damage twice. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Obtain a *Clumsy.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Raise your Max HP by 2.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Exhaust."
     ]

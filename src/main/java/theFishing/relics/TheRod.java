@@ -3,11 +3,9 @@ package theFishing.relics;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.unique.MadnessAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
-import theFishing.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -28,25 +26,21 @@ public class TheRod extends AbstractAdventurerRelic {
             @Override
             public void update() {
                 isDone = true;
-                AbstractCard target;
-
-                ArrayList<AbstractCard> unupgraded = new ArrayList<>();
+                ArrayList<AbstractCard> not0 = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (q.canUpgrade()) {
-                        unupgraded.add(q);
+                    if (q.costForTurn > 0 || q.cost > 0) {
+                        not0.add(q);
                     }
                 }
-                if (unupgraded.isEmpty()) {
+                if (!not0.isEmpty()) {
+                    AbstractCard target;
                     target = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                } else {
-                    target = Wiz.getRandomItem(unupgraded);
+                    if (target.canUpgrade()) {
+                        target.upgrade();
+                    }
+                    target.freeToPlayOnce = true;
+                    target.superFlash(Color.GOLD.cpy());
                 }
-
-                if (target.canUpgrade()) {
-                    target.upgrade();
-                }
-                target.freeToPlayOnce = true;
-                target.superFlash(Color.GOLD.cpy());
             }
         });
     }

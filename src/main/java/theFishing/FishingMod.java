@@ -294,6 +294,7 @@ public class FishingMod implements
     public void receiveStartGame() {
         if (!CardCrawlGame.loadingSave) {
             activeBoard = AbstractBoard.getRunBoard();
+            activeBoard.atRunStart();
         }
     }
 }

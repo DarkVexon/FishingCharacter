@@ -3,7 +3,7 @@
     "NAME": "The Rod",
     "FLAVOR": "The only one of its kind. Glows in the dark.",
     "DESCRIPTIONS": [
-      "At the start of each combat, #yUpgrade a random card in your hand. It costs #b0 until played."
+      "At the start of each combat, a random card in your hand costs #b0 until played. #yUpgrade it."
     ]
   },
   "${ModID}:RainbowRod": {

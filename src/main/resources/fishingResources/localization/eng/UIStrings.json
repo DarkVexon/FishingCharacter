@@ -174,5 +174,32 @@
       "Gain [E] .",
       "Deal #b9 damage to a random enemy."
     ]
+  },
+  "${ModID}:MorshusShop": {
+    "TEXT": [
+      "Morshu's Shop",
+      "Start the run with #b+25 Gold. Gold is called Rupees.",
+      "#yScry #b3.",
+      "Draw #b2 cards, then #yExhaust #b1 card.",
+      "Deal #b7 damage to ALL enemies."
+    ]
+  },
+  "${ModID}:MegaCrit": {
+    "TEXT": [
+      "MegaCrit",
+      "Cards created by this have #yEthereal and #yExhaust.",
+      "Add a random #yAttack into your hand.",
+      "Add a random #yUpgraded #yAttack into your hand.",
+      "Add a random #yPower into your hand. It costs #b0."
+    ]
+  },
+  "${ModID}:ThortonsBank": {
+    "TEXT": [
+      "Bank of P. Thorton",
+      "If you have #b200 or more Gold, spend #b2 to double these effects.",
+      "Deal #b5 damage to the frontmost enemy.",
+      "Gain #b4 #yBlock.",
+      "Apply #b1 #yWeak and #yVulnerable to the frontmost enemy."
+    ]
   }
 }
