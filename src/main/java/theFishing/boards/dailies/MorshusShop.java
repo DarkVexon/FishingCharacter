@@ -21,11 +21,11 @@ public class MorshusShop extends AbstractBoard {
     public MorshusShop() {
         super(ID, TEXT[0]);
         effects.add(new BoardEffect(TEXT[2], () -> atb(new ScryAction(3))));
-        effects.add(new BoardEffect(TEXT[2], () -> {
+        effects.add(new BoardEffect(TEXT[3], () -> {
             atb(new DrawCardAction(2));
             atb(new ExhaustAction(1, false));
         }));
-        effects.add(new BoardEffect(TEXT[3], () -> atb(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(7, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE))));
+        effects.add(new BoardEffect(TEXT[4], () -> atb(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(7, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE))));
     }
 
     @Override

@@ -52,7 +52,7 @@ public class ThortonsBank extends AbstractBoard {
             }
         }));
 
-        effects.add(new BoardEffect(TEXT[2], () -> {
+        effects.add(new BoardEffect(TEXT[4], () -> {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {

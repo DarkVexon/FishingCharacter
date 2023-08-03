@@ -178,7 +178,7 @@
   "${ModID}:MorshusShop": {
     "TEXT": [
       "Morshu's Shop",
-      "Start the run with #b+25 Gold. Gold is called Rupees.",
+      "Start the run with #b+25 Gold.",
       "#yScry #b3.",
       "Draw #b2 cards, then #yExhaust #b1 card.",
       "Deal #b7 damage to ALL enemies."

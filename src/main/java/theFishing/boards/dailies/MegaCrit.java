@@ -24,14 +24,14 @@ public class MegaCrit extends AbstractBoard {
             CardModifierManager.addModifier(toMake, new ExhaustMod());
             makeInHand(toMake);
         }));
-        effects.add(new BoardEffect(TEXT[2], () -> {
+        effects.add(new BoardEffect(TEXT[3], () -> {
             AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK);
             toMake.upgrade();
             CardModifierManager.addModifier(toMake, new EtherealMod());
             CardModifierManager.addModifier(toMake, new ExhaustMod());
             makeInHand(toMake);
         }));
-        effects.add(new BoardEffect(TEXT[2], () -> {
+        effects.add(new BoardEffect(TEXT[4], () -> {
             AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER);
             toMake.updateCost(-999);
             CardModifierManager.addModifier(toMake, new EtherealMod());

@@ -35,7 +35,7 @@ public abstract class AbstractBoard {
         ids.put(TombOfRorrim.ID, TombOfRorrim.class);
         ids.put(TheStarship.ID, TheStarship.class);
         ids.put(MegaCrit.ID, MegaCrit.class);
-        ids.put(MorshusShop.ID, MorshusShop.class);
+        //ids.put(MorshusShop.ID, MorshusShop.class);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
 
 
