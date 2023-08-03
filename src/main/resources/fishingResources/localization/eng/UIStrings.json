@@ -186,7 +186,7 @@
   },
   "${ModID}:ThortonsBank": {
     "TEXT": [
-      "Bank of P. Thorton",
+      "Thorton & Co.",
       "Whenever you obtain a card with #yDelve, gain #b25 Gold.",
       "Deal #b5 damage to a random enemy.",
       "Gain #b4 #yBlock.",

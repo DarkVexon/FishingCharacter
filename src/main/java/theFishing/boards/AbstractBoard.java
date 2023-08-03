@@ -46,9 +46,10 @@ public abstract class AbstractBoard {
     public static AbstractBoard getRunBoard() {
 
         if (CardCrawlGame.playerName.toLowerCase().contains("vex")) {
-            ArrayList<String> idsToUse = new ArrayList<>();
-            idsToUse.addAll(ids.keySet());
-            return AbstractBoard.getBoardByID(Wiz.getRandomItem(idsToUse));
+            return new MegaCrit();
+//            ArrayList<String> idsToUse = new ArrayList<>();
+//            idsToUse.addAll(ids.keySet());
+//            return AbstractBoard.getBoardByID(Wiz.getRandomItem(idsToUse));
         }
 
         Calendar calendar = Calendar.getInstance();

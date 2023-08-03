@@ -1,7 +1,5 @@
 package theFishing.boards.dailies;
 
-import basemod.cardmods.EtherealMod;
-import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,6 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.BoardEffect;
+import theFishing.cardmods.StickerEtherealMod;
+import theFishing.cardmods.StickerExhaustMod;
 
 import static theFishing.util.Wiz.makeInHand;
 
@@ -20,22 +20,22 @@ public class MegaCrit extends AbstractBoard {
         super(ID, TEXT[0]);
         effects.add(new BoardEffect(TEXT[2], () -> {
             AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK);
-            CardModifierManager.addModifier(toMake, new EtherealMod());
-            CardModifierManager.addModifier(toMake, new ExhaustMod());
+            CardModifierManager.addModifier(toMake, new StickerEtherealMod());
+            CardModifierManager.addModifier(toMake, new StickerExhaustMod());
             makeInHand(toMake);
         }));
         effects.add(new BoardEffect(TEXT[3], () -> {
             AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK);
             toMake.upgrade();
-            CardModifierManager.addModifier(toMake, new EtherealMod());
-            CardModifierManager.addModifier(toMake, new ExhaustMod());
+            CardModifierManager.addModifier(toMake, new StickerEtherealMod());
+            CardModifierManager.addModifier(toMake, new StickerExhaustMod());
             makeInHand(toMake);
         }));
         effects.add(new BoardEffect(TEXT[4], () -> {
             AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER);
             toMake.updateCost(-999);
-            CardModifierManager.addModifier(toMake, new EtherealMod());
-            CardModifierManager.addModifier(toMake, new ExhaustMod());
+            CardModifierManager.addModifier(toMake, new StickerEtherealMod());
+            CardModifierManager.addModifier(toMake, new StickerExhaustMod());
             makeInHand(toMake);
         }));
     }
