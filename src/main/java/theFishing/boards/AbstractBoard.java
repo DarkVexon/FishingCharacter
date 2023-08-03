@@ -1,5 +1,6 @@
 package theFishing.boards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import theFishing.FishingMod;
 import theFishing.boards.dailies.*;
@@ -11,11 +12,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 public abstract class AbstractBoard {
-
-//    private static final Texture arrow = TexLoader.getTexture("fishingResources/images/board/player.png");
-//    private static final float POS_X = 300F * Settings.scale;
-//    private static final float DIST_BETWEEN = 100F * Settings.scale;
-//    private static final float POS_Y = Settings.HEIGHT / 3F;
 
     public String id;
     public String name;
@@ -30,12 +26,13 @@ public abstract class AbstractBoard {
     private static HashMap<String, Class<? extends AbstractBoard>> ids = new LinkedHashMap<>();
     private static HashMap<String, Class<? extends AbstractBoard>> complexIds = new LinkedHashMap<>();
 
+    //TODO: Make this better. automatically add classes with autoadd and split by type as an enum stored in each class
+
     static {
         ids.put(ChampsArena.ID, ChampsArena.class);
         ids.put(TombOfRorrim.ID, TombOfRorrim.class);
         ids.put(TheStarship.ID, TheStarship.class);
         ids.put(MegaCrit.ID, MegaCrit.class);
-        //ids.put(MorshusShop.ID, MorshusShop.class);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
 
 
@@ -73,13 +70,6 @@ public abstract class AbstractBoard {
         FishingMod.delvedThisTurn = false;
     }
 
-//    public void render(SpriteBatch sb) {
-//        for (int i = 0; i < effects.size(); i++) {
-//            effects.get(i).render(sb, i, POS_X, POS_Y + (DIST_BETWEEN * i));
-//        }
-//        sb.draw(arrow, POS_X, POS_Y + (DIST_BETWEEN * progress));
-//    }
-
     public static AbstractBoard getBoardByID(String ID) {
         try {
             if (ids.containsKey(ID))
@@ -108,6 +98,17 @@ public abstract class AbstractBoard {
         return sb.toString();
     }
 
+    public String getEffectDescription(int i) {
+        StringBuilder sb = new StringBuilder();
+        if (progress % effects.size() == i && Wiz.isInCombat()) {
+            sb.append("#r");
+        }
+        sb.append(i + 1);
+        sb.append(". ");
+        sb.append(effects.get(i).description);
+        return sb.toString();
+    }
+
     public String getSpecialRule() {
         return "None"; //TODO: Unhardcode
     }
@@ -120,14 +121,7 @@ public abstract class AbstractBoard {
 
     }
 
-    public String getEffectDescription(int i) {
-        StringBuilder sb = new StringBuilder();
-        if (progress % effects.size() == i && Wiz.isInCombat()) {
-            sb.append("#r");
-        }
-        sb.append(i + 1);
-        sb.append(". ");
-        sb.append(effects.get(i).description);
-        return sb.toString();
+    public void onObtainCard(AbstractCard card) {
+
     }
 }
