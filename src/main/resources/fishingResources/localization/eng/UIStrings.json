@@ -125,7 +125,7 @@
   "${ModID}:TheLibrary": {
     "TEXT": [
       "The Library",
-      "Draw #b1 card. Give it #yRetain.",
+      "Draw #b1 card. Put a #yRetain sticker on it.",
       "Deal #b3 damage to a random enemy for each card in your hand."
     ]
   },
@@ -178,7 +178,7 @@
   "${ModID}:MegaCrit": {
     "TEXT": [
       "MegaCrit",
-      "Cards created by this have #yEthereal and #yExhaust.",
+      "Cards created by this have #yEthereal and #yExhaust stickers.",
       "Add a random #yAttack into your hand.",
       "Add a random #yUpgraded #yAttack into your hand.",
       "Add a random #yPower into your hand. It costs #b0."

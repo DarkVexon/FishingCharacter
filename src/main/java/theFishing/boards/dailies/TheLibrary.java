@@ -1,6 +1,5 @@
 package theFishing.boards.dailies;
 
-import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -13,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.BoardEffect;
+import theFishing.cardmods.StickerRetainMod;
 
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
@@ -28,7 +28,7 @@ public class TheLibrary extends AbstractBoard {
             public void update() {
                 isDone = true;
                 for (AbstractCard c : DrawCardAction.drawnCards) {
-                    CardModifierManager.addModifier(c, new RetainMod());
+                    CardModifierManager.addModifier(c, new StickerRetainMod());
                     c.superFlash(Color.GREEN.cpy());
                 }
             }
@@ -38,7 +38,7 @@ public class TheLibrary extends AbstractBoard {
             public void update() {
                 isDone = true;
                 for (AbstractCard c : DrawCardAction.drawnCards) {
-                    CardModifierManager.addModifier(c, new RetainMod());
+                    CardModifierManager.addModifier(c, new StickerRetainMod());
                     c.superFlash(Color.GREEN.cpy());
                 }
             }

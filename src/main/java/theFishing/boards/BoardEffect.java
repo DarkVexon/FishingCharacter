@@ -19,8 +19,4 @@ public class BoardEffect {
     public void activate() {
         onEnter.run();
     }
-
-//    public void render(SpriteBatch sb, int pos, float x, float y) {
-//        FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, description, x, y);
-//    }
 }

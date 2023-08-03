@@ -19,6 +19,9 @@ public class StickerManager {
     private static final Texture exhaustStickerTex = TexLoader.getTexture("fishingResources/images/ui/sticker_exhaust.png");
     private static final TextureAtlas.AtlasRegion exhaustStickerAtlas = ImageHelper.asAtlasRegion(exhaustStickerTex);
 
+    private static final Texture retainStickerTex = TexLoader.getTexture("fishingResources/images/ui/sticker_retain.png");
+    private static final TextureAtlas.AtlasRegion retainStickerAtlas = ImageHelper.asAtlasRegion(retainStickerTex);
+
     public static final float DIFF_X = 100;
     public static final float DIFF_Y = 150;
 
@@ -30,6 +33,9 @@ public class StickerManager {
                 break;
             case EXHAUST:
                 toUse = exhaustStickerAtlas;
+                break;
+            case RETAIN:
+                toUse = retainStickerAtlas;
                 break;
             case HPLOSS:
             default:
@@ -49,6 +55,7 @@ public class StickerManager {
     public enum StickerType {
         HPLOSS,
         ETHEREAL,
-        EXHAUST
+        EXHAUST,
+        RETAIN
     }
 }
