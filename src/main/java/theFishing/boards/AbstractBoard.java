@@ -1,6 +1,7 @@
 package theFishing.boards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import theFishing.FishingMod;
 import theFishing.boards.dailies.*;
@@ -35,7 +36,6 @@ public abstract class AbstractBoard {
         ids.put(MegaCrit.ID, MegaCrit.class);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
 
-
         complexIds.put(TheDeep.ID, TheDeep.class);
         complexIds.put(TheFactory.ID, TheFactory.class);
         complexIds.put(WatchersTemple.ID, WatchersTemple.class);
@@ -44,6 +44,13 @@ public abstract class AbstractBoard {
     }
 
     public static AbstractBoard getRunBoard() {
+
+        if (CardCrawlGame.playerName.toLowerCase().contains("vex")) {
+            ArrayList<String> idsToUse = new ArrayList<>();
+            idsToUse.addAll(ids.keySet());
+            return AbstractBoard.getBoardByID(Wiz.getRandomItem(idsToUse));
+        }
+
         Calendar calendar = Calendar.getInstance();
         int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
         int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
@@ -53,7 +60,7 @@ public abstract class AbstractBoard {
         } else {
             idsToUse.addAll(ids.keySet());
         }
-        return AbstractBoard.getBoardByID(idsToUse.get((int) (dayOfYear % ids.size())));
+        return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % ids.size()));
     }
 
     public void proceed() {

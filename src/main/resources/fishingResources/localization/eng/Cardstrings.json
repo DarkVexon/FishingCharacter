@@ -563,7 +563,7 @@
   },
   "${ModID}:ProTank": {
     "NAME": "Seal Away",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Next turn, draw !M! additional cards."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Delve."
   },
   "${ModID}:GlogusEgg": {
     "NAME": "Glogus Egg",

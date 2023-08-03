@@ -16,18 +16,18 @@ public class ProTank extends AbstractFishingCard {
 
     public ProTank() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
-        baseDamage = 20;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 16;
+        baseBlock = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         atb(new EnterTheDungeonAction());
-        applyToSelf(new DrawCardNextTurnPower(p, magicNumber));
     }
 
     public void upp() {
         upgradeDamage(4);
-        upgradeMagicNumber(1);
+        upgradeBlock(4);
     }
 }
