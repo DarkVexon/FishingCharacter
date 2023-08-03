@@ -35,6 +35,6 @@ public class ExtraTentacle extends AbstractFishingCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.player.increaseMaxHp(2, false);
+        AbstractDungeon.player.increaseMaxHp(1, false);
     }
 }

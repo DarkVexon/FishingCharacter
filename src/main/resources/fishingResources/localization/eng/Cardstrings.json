@@ -546,7 +546,7 @@
   },
   "${ModID}:GhostShip": {
     "NAME": "Ghost Ship",
-    "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, if this card is in your exhaust pile, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, increase its damage by !M! and return it to your hand."
   },
   "${ModID}:DarkDreams": {
     "NAME": "Lurid Slumber",
@@ -602,7 +602,7 @@
   },
   "${ModID}:ExtraTentacle": {
     "NAME": "Extra Tentacle",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Raise your Max HP by 2.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Raise your Max HP by 1.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Exhaust."
     ]

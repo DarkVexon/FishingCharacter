@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -26,6 +25,21 @@ public class VexingDealPower extends AbstractAdventurerPower {
 
     @Override
     public void updateDescription() {
-        description = amount == 1 ? powerStrings.DESCRIPTIONS[0] : (powerStrings.DESCRIPTIONS[1] + amount + powerStrings.DESCRIPTIONS[2]);
+        StringBuilder sb = new StringBuilder();
+        sb.append(powerStrings.DESCRIPTIONS[0]);
+        sb.append(amount);
+        if (amount == 1) {
+            sb.append(DESCRIPTIONS[1]);
+        } else {
+            sb.append(DESCRIPTIONS[2]);
+        }
+        sb.append(DESCRIPTIONS[3]);
+        sb.append(amount);
+        if (amount == 1) {
+            sb.append(DESCRIPTIONS[1]);
+        } else {
+            sb.append(DESCRIPTIONS[2]);
+        }
+        description = sb.toString();
     }
 }

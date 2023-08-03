@@ -1,20 +1,23 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
+import com.megacrit.cardcrawl.actions.utility.ExhaustToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.atb;
 
-public class GhostShip extends AbstractFishingCard implements StartOfTurnInExhaustCard {
+public class GhostShip extends AbstractFishingCard {
     public final static String ID = makeID("GhostShip");
     // intellij stuff attack, enemy, uncommon, 6, 3, , , 6, 3
 
     public GhostShip() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseMagicNumber = magicNumber = 7;
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,12 +25,19 @@ public class GhostShip extends AbstractFishingCard implements StartOfTurnInExhau
     }
 
     @Override
-    public void atTurnStartInExhaust() {
-        addToBot(new AllEnemyLoseHPAction(magicNumber, AbstractGameAction.AttackEffect.FIRE));
+    public void triggerOnExhaust() {
+        atb(new ModifyDamageAction(this.uuid, magicNumber));
+        atb(new ExhaustToHandAction(this));
+    }
+
+    @Override
+    public void triggerOnManualDiscard() {
+        atb(new ModifyDamageAction(this.uuid, magicNumber));
+        atb(new DiscardToHandAction(this));
     }
 
     public void upp() {
-        upgradeDamage(3);
-        upgradeMagicNumber(3);
+        upgradeDamage(2);
+        upgradeMagicNumber(2);
     }
 }

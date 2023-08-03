@@ -10,7 +10,7 @@ public class SpecialCurse extends AbstractFishingCard {
     // intellij stuff curse, none, curse, , , , , , 
 
     public SpecialCurse() {
-        super(ID, 1, CardType.CURSE, CardRarity.CURSE, CardTarget.NONE, CardColor.CURSE);
+        super(ID, 1, CardType.CURSE, CardRarity.SPECIAL, CardTarget.NONE, CardColor.CURSE);
         exhaust = true;
     }
 
