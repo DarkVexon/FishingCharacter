@@ -24,9 +24,9 @@ public class TheFactory extends AbstractBoard {
 
     public TheFactory() {
         super(ID, TEXT[0]);
-        effects.add(new BoardEffect(TEXT[2], () -> atb(new GainBlockAction(AbstractDungeon.player, 4))));
-        effects.add(new BoardEffect(TEXT[2], () -> atb(new GainBlockAction(AbstractDungeon.player, 4))));
-        effects.add(new BoardEffect(TEXT[3], () -> atb(new RepeatCardAction(thisCombatCard.makeStatEquivalentCopy()))));
+        effects.add(new BoardEffect(TEXT[2], () -> att(new GainBlockAction(AbstractDungeon.player, 4))));
+        effects.add(new BoardEffect(TEXT[2], () -> att(new GainBlockAction(AbstractDungeon.player, 4))));
+        effects.add(new BoardEffect(TEXT[3], () -> att(new RepeatCardAction(thisCombatCard.makeStatEquivalentCopy()))));
     }
 
     @Override

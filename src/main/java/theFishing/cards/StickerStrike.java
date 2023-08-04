@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cardmods.StickerCardMod;
-import theFishing.quest.QuestHelper;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -38,9 +37,11 @@ public class StickerStrike extends AbstractFishingCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    AbstractCard tar = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                    CardModifierManager.addModifier(tar, new StickerCardMod());
-                    tar.superFlash(Color.GOLD.cpy());
+                    if (!AbstractDungeon.player.hand.isEmpty()) {
+                        AbstractCard tar = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                        CardModifierManager.addModifier(tar, new StickerCardMod());
+                        tar.superFlash(Color.GOLD.cpy());
+                    }
                 }
             });
         }

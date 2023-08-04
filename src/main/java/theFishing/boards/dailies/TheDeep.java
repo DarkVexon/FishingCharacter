@@ -7,8 +7,7 @@ import theFishing.boards.BoardEffect;
 import theFishing.cards.Kraken;
 import theFishing.powers.MoreKrakenDamagePower;
 
-import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.shuffleIn;
+import static theFishing.util.Wiz.*;
 
 public class TheDeep extends AbstractBoard {
     public static final String ID = FishingMod.makeID(TheDeep.class.getSimpleName());
@@ -16,9 +15,9 @@ public class TheDeep extends AbstractBoard {
 
     public TheDeep() {
         super(ID, TEXT[0]);
-        effects.add(new BoardEffect(TEXT[2], () -> applyToSelf(new MoreKrakenDamagePower(10))));
-        effects.add(new BoardEffect(TEXT[2], () -> applyToSelf(new MoreKrakenDamagePower(10))));
-        effects.add(new BoardEffect(TEXT[2], () -> applyToSelf(new MoreKrakenDamagePower(10))));
+        effects.add(new BoardEffect(TEXT[2], () -> applyToSelfTop(new MoreKrakenDamagePower(10))));
+        effects.add(new BoardEffect(TEXT[2], () -> applyToSelfTop(new MoreKrakenDamagePower(10))));
+        effects.add(new BoardEffect(TEXT[2], () -> applyToSelfTop(new MoreKrakenDamagePower(10))));
     }
 
     public void atBattleStartPreDraw() {

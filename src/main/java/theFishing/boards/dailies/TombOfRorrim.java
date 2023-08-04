@@ -8,8 +8,7 @@ import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.BoardEffect;
 
-import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.*;
 
 public class TombOfRorrim extends AbstractBoard {
     public static final String ID = FishingMod.makeID(TombOfRorrim.class.getSimpleName());
@@ -17,8 +16,8 @@ public class TombOfRorrim extends AbstractBoard {
 
     public TombOfRorrim() {
         super(ID, TEXT[0]);
-        effects.add(new BoardEffect(TEXT[1], () -> atb(new GainBlockAction(AbstractDungeon.player, 1))));
-        effects.add(new BoardEffect(TEXT[2], () -> atb(new GainBlockAction(AbstractDungeon.player, 3))));
-        effects.add(new BoardEffect(TEXT[3], () -> applyToSelf(new DuplicationPower(AbstractDungeon.player, 1))));
+        effects.add(new BoardEffect(TEXT[1], () -> att(new GainBlockAction(AbstractDungeon.player, 1))));
+        effects.add(new BoardEffect(TEXT[2], () -> att(new GainBlockAction(AbstractDungeon.player, 3))));
+        effects.add(new BoardEffect(TEXT[3], () -> applyToSelfTop(new DuplicationPower(AbstractDungeon.player, 1))));
     }
 }

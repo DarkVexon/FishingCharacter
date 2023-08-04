@@ -16,8 +16,8 @@ public class WatchersTemple extends AbstractBoard {
 
     public WatchersTemple() {
         super(ID, TEXT[0]);
-        effects.add(new BoardEffect(TEXT[1], () -> atb(new ScryAction(3))));
-        effects.add(new BoardEffect(TEXT[2], () -> makeInHand(new Smite())));
-        effects.add(new BoardEffect(TEXT[3], () -> applyToSelf(new MoreDamageThisTurnPower(1))));
+        effects.add(new BoardEffect(TEXT[1], () -> att(new ScryAction(3))));
+        effects.add(new BoardEffect(TEXT[2], () -> makeInHandTop(new Smite())));
+        effects.add(new BoardEffect(TEXT[3], () -> applyToSelfTop(new MoreDamageThisTurnPower(1))));
     }
 }

@@ -11,6 +11,7 @@ import theFishing.cardmods.StickerEtherealMod;
 import theFishing.cardmods.StickerExhaustMod;
 
 import static theFishing.util.Wiz.makeInHand;
+import static theFishing.util.Wiz.makeInHandTop;
 
 public class MegaCrit extends AbstractBoard {
     public static final String ID = FishingMod.makeID(MegaCrit.class.getSimpleName());
@@ -22,21 +23,21 @@ public class MegaCrit extends AbstractBoard {
             AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK);
             CardModifierManager.addModifier(toMake, new StickerEtherealMod());
             CardModifierManager.addModifier(toMake, new StickerExhaustMod());
-            makeInHand(toMake);
+            makeInHandTop(toMake);
         }));
         effects.add(new BoardEffect(TEXT[3], () -> {
             AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK);
             toMake.upgrade();
             CardModifierManager.addModifier(toMake, new StickerEtherealMod());
             CardModifierManager.addModifier(toMake, new StickerExhaustMod());
-            makeInHand(toMake);
+            makeInHandTop(toMake);
         }));
         effects.add(new BoardEffect(TEXT[4], () -> {
             AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER);
             toMake.updateCost(-999);
             CardModifierManager.addModifier(toMake, new StickerEtherealMod());
             CardModifierManager.addModifier(toMake, new StickerExhaustMod());
-            makeInHand(toMake);
+            makeInHandTop(toMake);
         }));
     }
 

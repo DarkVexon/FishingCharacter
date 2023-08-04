@@ -25,9 +25,9 @@ public class ThortonsBank extends AbstractBoard {
 
     public ThortonsBank() {
         super(ID, TEXT[0]);
-        effects.add(new BoardEffect(TEXT[2], () -> atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 5, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT))));
-        effects.add(new BoardEffect(TEXT[3], () -> atb(new GainBlockAction(AbstractDungeon.player, 4))));
-        effects.add(new BoardEffect(TEXT[4], () -> atb(new AbstractGameAction() {
+        effects.add(new BoardEffect(TEXT[2], () -> att(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 5, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT))));
+        effects.add(new BoardEffect(TEXT[3], () -> att(new GainBlockAction(AbstractDungeon.player, 4))));
+        effects.add(new BoardEffect(TEXT[4], () -> att(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;

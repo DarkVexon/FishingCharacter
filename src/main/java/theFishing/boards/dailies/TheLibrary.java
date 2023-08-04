@@ -23,7 +23,7 @@ public class TheLibrary extends AbstractBoard {
 
     public TheLibrary() {
         super(ID, TEXT[0]);
-        effects.add(new BoardEffect(TEXT[1], () -> atb(new DrawCardAction(1, new AbstractGameAction() {
+        effects.add(new BoardEffect(TEXT[1], () -> att(new DrawCardAction(1, new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
@@ -33,7 +33,7 @@ public class TheLibrary extends AbstractBoard {
                 }
             }
         }))));
-        effects.add(new BoardEffect(TEXT[1], () -> atb(new DrawCardAction(1, new AbstractGameAction() {
+        effects.add(new BoardEffect(TEXT[1], () -> att(new DrawCardAction(1, new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
@@ -43,7 +43,7 @@ public class TheLibrary extends AbstractBoard {
                 }
             }
         }))));
-        effects.add(new BoardEffect(TEXT[2], () -> atb(new AbstractGameAction() {
+        effects.add(new BoardEffect(TEXT[2], () -> att(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
