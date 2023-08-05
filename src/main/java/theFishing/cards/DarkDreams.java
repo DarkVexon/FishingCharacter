@@ -41,11 +41,13 @@ public class DarkDreams extends AbstractFishingCard implements OnRestCard {
 
     @Override
     public void onRest() {
-        upgrade();
-        float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
-        float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
-        AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(makeStatEquivalentCopy(), x, y));
-        AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
+        if (!upgraded) {
+            upgrade();
+            float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
+            float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(makeStatEquivalentCopy(), x, y));
+            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
+        }
     }
 
     public void upp() {

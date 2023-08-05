@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.TheFishing;
+import theFishing.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -34,7 +35,7 @@ public class TheRod extends AbstractAdventurerRelic {
                 }
                 if (!not0.isEmpty()) {
                     AbstractCard target;
-                    target = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                    target = Wiz.getRandomItem(not0);
                     if (target.canUpgrade()) {
                         target.upgrade();
                     }

@@ -17,7 +17,7 @@ public class ProTank extends AbstractFishingCard {
     public ProTank() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = 16;
-        baseBlock = 12;
+        baseBlock = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
