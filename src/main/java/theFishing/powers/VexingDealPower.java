@@ -29,16 +29,16 @@ public class VexingDealPower extends AbstractAdventurerPower {
         sb.append(powerStrings.DESCRIPTIONS[0]);
         sb.append(amount);
         if (amount == 1) {
-            sb.append(DESCRIPTIONS[1]);
+            sb.append(powerStrings.DESCRIPTIONS[1]);
         } else {
-            sb.append(DESCRIPTIONS[2]);
+            sb.append(powerStrings.DESCRIPTIONS[2]);
         }
-        sb.append(DESCRIPTIONS[3]);
+        sb.append(powerStrings.DESCRIPTIONS[3]);
         sb.append(amount);
         if (amount == 1) {
-            sb.append(DESCRIPTIONS[1]);
+            sb.append(powerStrings.DESCRIPTIONS[1]);
         } else {
-            sb.append(DESCRIPTIONS[2]);
+            sb.append(powerStrings.DESCRIPTIONS[2]);
         }
         description = sb.toString();
     }
