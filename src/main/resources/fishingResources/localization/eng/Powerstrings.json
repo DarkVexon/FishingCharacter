@@ -152,7 +152,7 @@
     "NAME": "Leviathan",
     "DESCRIPTIONS": [
       "Whenever a #rCurse is #yExhausted, gain #b",
-      " #yStrength and #yDexterity."
+      " #yStrength and #yBlock."
     ]
   }
 }

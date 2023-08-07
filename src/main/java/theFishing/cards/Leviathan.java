@@ -21,7 +21,7 @@ public class Leviathan extends AbstractFishingCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LeviathanPower(2));
+        applyToSelf(new LeviathanPower(3));
     }
 
     public void upp() {

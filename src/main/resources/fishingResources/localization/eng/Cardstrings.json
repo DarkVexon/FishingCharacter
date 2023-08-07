@@ -609,8 +609,8 @@
   },
   "${ModID}:Leviathan": {
     "NAME": "Leviathan",
-    "DESCRIPTION": "Whenever a Curse is Exhausted, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Rot.",
-    "UPGRADE_DESCRIPTION": "Innate. Whenever a Curse is Exhausted, gain 2 Strength and Dexterity. NL ${ModID}:Picked: Obtain a *Rot."
+    "DESCRIPTION": "Whenever a Curse is Exhausted, gain 3 Strength and Block. NL ${ModID}:Picked: Obtain a *Rot.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a Curse is Exhausted, gain 3 Strength and Block. NL ${ModID}:Picked: Obtain a *Rot."
   },
   "${ModID}:SpecialCurse": {
     "NAME": "Rot",

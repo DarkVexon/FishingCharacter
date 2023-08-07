@@ -47,12 +47,12 @@ public abstract class AbstractBoard {
         int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
         int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
         ArrayList<String> idsToUse = new ArrayList<>();
-        if (dayOfWeek == 7 || dayOfWeek == 1) {
+        if (dayOfWeek == Calendar.SUNDAY || dayOfWeek == Calendar.MONDAY) {
             idsToUse.addAll(complexIds.keySet());
         } else {
             idsToUse.addAll(ids.keySet());
         }
-        return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % ids.size()));
+        return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
     }
 
     public void proceed() {

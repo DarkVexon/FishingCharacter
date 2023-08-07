@@ -1,14 +1,15 @@
 package theFishing.powers;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.atb;
 
 public class LeviathanPower extends AbstractAdventurerPower {
     public static String ID = makeID(LeviathanPower.class.getSimpleName());
@@ -24,7 +25,7 @@ public class LeviathanPower extends AbstractAdventurerPower {
         if (card.type == AbstractCard.CardType.CURSE || card.rarity == AbstractCard.CardRarity.CURSE) {
             flash();
             applyToSelf(new StrengthPower(owner, amount));
-            applyToSelf(new DexterityPower(owner, amount));
+            atb(new GainBlockAction(owner, amount));
         }
     }
 
