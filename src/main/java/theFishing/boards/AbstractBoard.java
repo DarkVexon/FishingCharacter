@@ -34,12 +34,14 @@ public abstract class AbstractBoard {
         ids.put(TheStarship.ID, TheStarship.class);
         ids.put(MegaCrit.ID, MegaCrit.class);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
+        ids.put(TowerOfSkies.ID, TowerOfSkies.class);
+        ids.put(Termina.ID, Termina.class);
 
+        complexIds.put(KongJungle.ID, KongJungle.class);
         complexIds.put(TheDeep.ID, TheDeep.class);
         complexIds.put(TheFactory.ID, TheFactory.class);
         complexIds.put(WatchersTemple.ID, WatchersTemple.class);
         complexIds.put(WhereItFell.ID, WhereItFell.class);
-        complexIds.put(TheLibrary.ID, TheLibrary.class);
     }
 
     public static AbstractBoard getRunBoard() {
@@ -52,7 +54,8 @@ public abstract class AbstractBoard {
         } else {
             idsToUse.addAll(ids.keySet());
         }
-        return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
+        return new Termina();
+        //return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
     }
 
     public void proceed() {

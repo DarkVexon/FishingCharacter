@@ -3,11 +3,10 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import theFishing.actions.EnterTheDungeonAction;
 
+import static theFishing.FishingMod.DELVES;
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;
 
 public class ProTank extends AbstractFishingCard {
@@ -18,6 +17,7 @@ public class ProTank extends AbstractFishingCard {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = 16;
         baseBlock = 10;
+        tags.add(DELVES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

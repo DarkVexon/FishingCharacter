@@ -192,5 +192,28 @@
       "Gain #b4 #yBlock.",
       "Apply #b1 #yWeak and #yVulnerable to a random enemy."
     ]
+  },
+  "${ModID}:TowerOfSkies": {
+    "TEXT": [
+      "Tower of Skies",
+      "You can see the top card of your draw pile.",
+      "Draw #b1 card and #yUpgrade it.",
+      "Play the top card of your draw pile."
+    ]
+  },
+  "${ModID}:Termina": {
+    "TEXT": [
+      "Termina",
+      "Cards with Delve are not discarded at the end of your turn.",
+      "Nothing happens...",
+      "ALL enemies lose #b20 HP."
+    ]
+  },
+  "${ModID}:KongJungle": {
+    "TEXT": [
+      "Kong Jungle",
+      "Add a #yBanana into your hand.",
+      "Your next Skill costs #b0."
+    ]
   }
 }

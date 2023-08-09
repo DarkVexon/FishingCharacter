@@ -207,7 +207,7 @@
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust 1 card."
   },
   "${ModID}:BoxOfHavoc": {
-    "NAME": "Pandora's Box",
+    "NAME": "Edan's Box",
     "DESCRIPTION": "Draw until you draw !M! Energy worth of cards. NL X counts as 0. NL ${ModID}:Solo: Gain [E] [E].",
     "UPGRADE_DESCRIPTION": "Draw until you draw !M! Energy worth of cards. NL X counts as 0. NL ${ModID}:Solo: Gain [E] [E] [E]."
   },
@@ -459,7 +459,7 @@
   },
   "${ModID}:Wizardry": {
     "NAME": "Wizardry",
-    "DESCRIPTION": "Gain !M! Vigor. NL Put a ${ModID}:Foil *Pinball on top of your draw pile."
+    "DESCRIPTION": "Your next Attack deals !M! additional damage. NL Put a ${ModID}:Foil *Pinball on top of your draw pile."
   },
   "${ModID}:Pinball": {
     "NAME": "Pinball",
@@ -624,5 +624,13 @@
     "NAME": "Waka Waka",
     "DESCRIPTION": "Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage."
+  },
+  "${ModID}:Broadside": {
+    "NAME": "Broadside",
+    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Discard your hand. NL Draw 1 card."
+  },
+  "${ModID}:Banana": {
+    "NAME": "Banana",
+    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Exhaust."
   }
 }

@@ -19,7 +19,7 @@ public class ShinyShadow extends AbstractFishingCard {
 
     public ShinyShadow() {
         super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 16;
+        baseDamage = 15;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,6 +33,6 @@ public class ShinyShadow extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(5);
     }
 }

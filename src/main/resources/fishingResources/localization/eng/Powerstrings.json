@@ -154,5 +154,13 @@
       "Whenever a #rCurse is #yExhausted, gain #b",
       " #yStrength and #yBlock."
     ]
+  },
+  "${ModID}:NextSkillFreePower": {
+    "NAME": "Free Skill",
+    "DESCRIPTIONS": [
+      "Your next Skill costs #b0.",
+      "Your next #b",
+      " Skills cost #b0."
+    ]
   }
 }
