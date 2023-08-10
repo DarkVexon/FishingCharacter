@@ -630,7 +630,7 @@
     "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Discard your hand. NL Draw 1 card."
   },
   "${ModID}:Banana": {
-    "NAME": "Banana",
+    "NAME": "Bean",
     "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Exhaust."
   }
 }

@@ -211,8 +211,8 @@
   },
   "${ModID}:KongJungle": {
     "TEXT": [
-      "Kong Jungle",
-      "Add a #yBanana into your hand.",
+      "Pyoro's Beanstalk",
+      "Add a #yBean into your hand.",
       "Your next Skill costs #b0."
     ]
   }
