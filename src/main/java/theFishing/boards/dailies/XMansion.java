@@ -26,8 +26,8 @@ public class XMansion extends AbstractBoard {
 
     @Override
     public void atRunStart() {
-        AbstractDungeon.player.masterDeck.group.remove(5);
-        AbstractDungeon.player.masterDeck.group.add(5, new StrikeX());
+        AbstractDungeon.player.masterDeck.group.remove(4);
+        AbstractDungeon.player.masterDeck.group.add(4, new StrikeX());
     }
 
     @Override

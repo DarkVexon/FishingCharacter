@@ -62,6 +62,6 @@ public class TheStorm extends AbstractQuest {
 
     @Override
     public float textpadding() {
-        return 120F;
+        return 150F;
     }
 }

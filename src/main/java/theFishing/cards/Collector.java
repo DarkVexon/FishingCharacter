@@ -12,7 +12,7 @@ public class Collector extends AbstractFishingCard {
     // intellij stuff power, self, uncommon, , , , , , 
 
     public Collector() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -20,7 +20,6 @@ public class Collector extends AbstractFishingCard {
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeBaseCost(1);
     }
 }

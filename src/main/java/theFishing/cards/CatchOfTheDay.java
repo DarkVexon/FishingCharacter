@@ -12,7 +12,7 @@ public class CatchOfTheDay extends AbstractFishingCard {
     // intellij stuff power, self, uncommon, , , , , , 
 
     public CatchOfTheDay() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -20,6 +20,7 @@ public class CatchOfTheDay extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        isInnate = true;
+        uDesc();
     }
 }
