@@ -178,7 +178,7 @@
   "${ModID}:MegaCrit": {
     "TEXT": [
       "MegaCrit",
-      "Cards created by this have #yEthereal and #yExhaust stickers.",
+      "Cards created by this have #yRetain stickers.",
       "Add a random #yAttack into your hand.",
       "Add a random #yUpgraded #yAttack into your hand.",
       "Add a random #yPower into your hand. It costs #b0."
@@ -214,6 +214,15 @@
       "Pyoro's Beanstalk",
       "Add a #yBean into your hand.",
       "Your next Skill costs #b0."
+    ]
+  },
+  "${ModID}:XMansion": {
+    "TEXT": [
+      "X-Mansion",
+      "Start the run with a #yStrike-X replacing one of your #yStrikes.",
+      "Gain #b3 #yBlock.",
+      "Gain [E] .",
+      "Add a #yMiracle into your hand."
     ]
   }
 }

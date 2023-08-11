@@ -36,6 +36,7 @@ public abstract class AbstractBoard {
         ids.put(ThortonsBank.ID, ThortonsBank.class);
         ids.put(TowerOfSkies.ID, TowerOfSkies.class);
         ids.put(Termina.ID, Termina.class);
+        ids.put(XMansion.ID, XMansion.class);
 
         complexIds.put(KongJungle.ID, KongJungle.class);
         complexIds.put(TheDeep.ID, TheDeep.class);
@@ -54,8 +55,7 @@ public abstract class AbstractBoard {
         } else {
             idsToUse.addAll(ids.keySet());
         }
-        return new Termina();
-        //return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
+        return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
     }
 
     public void proceed() {

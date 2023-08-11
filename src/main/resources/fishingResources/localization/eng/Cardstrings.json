@@ -627,10 +627,14 @@
   },
   "${ModID}:Broadside": {
     "NAME": "Broadside",
-    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Discard your hand. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Put a ${ModID}:Foil *Miracle on top of your draw pile."
   },
   "${ModID}:Banana": {
     "NAME": "Bean",
     "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Exhaust."
+  },
+  "${ModID}:StrikeX": {
+    "NAME": "Strike-X",
+    "DESCRIPTION": "Deal !D! damage X times."
   }
 }
