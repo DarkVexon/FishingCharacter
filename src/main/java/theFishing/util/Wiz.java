@@ -67,7 +67,8 @@ public class Wiz {
         if (allcards) {
             ArrayList<String> cardsList = new ArrayList<>();
             for (AbstractCard c : CardLibrary.getAllCards()) {
-                if (pred.test(c)) cardsList.add(c.cardID);
+                if (c.rarity != AbstractCard.CardRarity.SPECIAL && c.rarity != AbstractCard.CardRarity.BASIC)
+                    if (pred.test(c)) cardsList.add(c.cardID);
             }
             return cardsList;
         } else {

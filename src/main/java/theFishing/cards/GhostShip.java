@@ -34,6 +34,14 @@ public class GhostShip extends AbstractFishingCard {
     public void triggerOnManualDiscard() {
         atb(new ModifyDamageAction(this.uuid, magicNumber));
         atb(new DiscardToHandAction(this));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                GhostShip.this.superFlash();
+                GhostShip.this.applyPowers();
+            }
+        });
     }
 
     public void upp() {
