@@ -1,5 +1,8 @@
 package theFishing.cards.fish;
 
+import basemod.abstracts.AbstractCardModifier;
+import basemod.helpers.CardModifierManager;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
@@ -12,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.relics.MaelstromAnkh;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -26,6 +30,8 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
         super(cardID, 0, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);
         exhaust = true;
         baseThirdMagic = thirdMagic = 1;
+        setupLists();
+        CardModifierManager.addModifier(this, new RarityTipModifier());
     }
 
     @Override
@@ -116,5 +122,17 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
     public void upp() {
         upgradeThirdMagic(1);
         uDesc();
+    }
+
+    public static class RarityTipModifier extends AbstractCardModifier {
+        public List<TooltipInfo> additionalTooltips(AbstractCard card) {
+            ArrayList<TooltipInfo> tips = new ArrayList<>();
+            if (weightedFishList.containsKey(card.cardID))
+                tips.add(new TooltipInfo(uiStrings.TEXT[1], "#b"+weightedFishList.get(card.cardID)+"%"));
+            return tips;
+        }
+
+        public boolean isInherent(AbstractCard card) {return true;}
+        public AbstractCardModifier makeCopy() {return new RarityTipModifier();}
     }
 }

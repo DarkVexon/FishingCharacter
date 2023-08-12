@@ -16,7 +16,8 @@
   },
   "${ModID}:FishDescriptor": {
     "TEXT": [
-      "Fish"
+      "Fish",
+      "Rarity"
     ]
   },
   "${ModID}:TheGemSearch": {
