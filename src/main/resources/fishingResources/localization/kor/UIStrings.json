@@ -16,7 +16,8 @@
   },
   "fishing:FishDescriptor": {
     "TEXT": [
-      "물고기"
+      "물고기",
+      "Rarity"
     ]
   },
   "fishing:TheGemSearch": {

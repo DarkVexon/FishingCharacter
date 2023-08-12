@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import javafx.util.Pair;
 import theFishing.cards.fish.AbstractFishCard;
 import theFishing.util.TexLoader;
 
