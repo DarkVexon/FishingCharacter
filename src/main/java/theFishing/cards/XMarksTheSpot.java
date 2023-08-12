@@ -25,7 +25,7 @@ public class XMarksTheSpot extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard q = CardLibrary.getCard(getRandomItem(getCardsMatchingPredicate(c -> c.cost == -1 && c.color != TheFishing.Enums.FISHING_COLOR && c.color != CardColor.COLORLESS && !c.cardID.equals(MultiCast.ID), true)));
+        AbstractCard q = CardLibrary.getCard(getRandomItem(getCardsMatchingPredicate(c -> c.cost == -1 && c.color != CardColor.COLORLESS && !c.cardID.equals(MultiCast.ID), true)));
         if (q.cardID.equals(Tempest.ID) && p.maxOrbs == 0) {
             addToBot(new IncreaseMaxOrbAction(5));
             atb(new TalkAction(true, "orb? :0", 0.5F, 2F));
