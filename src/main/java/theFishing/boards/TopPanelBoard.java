@@ -22,7 +22,7 @@ public class TopPanelBoard extends TopPanelItem {
 
     public static final String ID = FishingMod.makeID("BoardInfo");
 
-    private static final Texture ICON = ImageMaster.INTENT_UNKNOWN; //TODO: Special icon
+    public static final Texture ICON = ImageMaster.INTENT_UNKNOWN; //TODO: Special icon
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TopPanelBoard() {

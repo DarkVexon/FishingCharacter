@@ -93,7 +93,7 @@
   },
   "${ModID}:HunkerDown": {
     "NAME": "Respite",
-    "DESCRIPTION": "Gain !B! Block. NL If you have played less than 3 cards this turn, gain [E].",
+    "DESCRIPTION": "Gain !B! Block. NL If you have played less than !M! cards this turn, gain [E].",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card played.)",

@@ -16,11 +16,12 @@ public class HunkerDown extends AbstractFishingCard {
     public HunkerDown() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 1;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new HunkerDownAction());
+        atb(new HunkerDownAction(magicNumber));
         rawDescription = cardStrings.DESCRIPTION;
         initializeDescription();
     }
@@ -45,10 +46,11 @@ public class HunkerDown extends AbstractFishingCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() < 3 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() < magicNumber ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
         upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 }

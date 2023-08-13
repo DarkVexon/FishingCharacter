@@ -24,6 +24,6 @@ public class Candle extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
     }
 }

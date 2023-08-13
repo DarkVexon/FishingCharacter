@@ -1,16 +1,13 @@
 package theFishing.boards.dailies;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.BoardEffect;
 import theFishing.cards.Banana;
+import theFishing.powers.NextSkillFreePower;
 
-import static theFishing.util.Wiz.att;
+import static theFishing.util.Wiz.applyToSelfTop;
 import static theFishing.util.Wiz.makeInHandTop;
 
 public class KongJungle extends AbstractBoard {
@@ -21,6 +18,6 @@ public class KongJungle extends AbstractBoard {
         super(ID, TEXT[0]);
         effects.add(new BoardEffect(TEXT[1], () -> makeInHandTop(new Banana())));
         effects.add(new BoardEffect(TEXT[1], () -> makeInHandTop(new Banana())));
-        effects.add(new BoardEffect(TEXT[2], () -> att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(20, true), DamageInfo.DamageType.HP_LOSS, AbstractGameAction.AttackEffect.FIRE))));
+        effects.add(new BoardEffect(TEXT[2], () -> applyToSelfTop(new NextSkillFreePower(1))));
     }
 }

@@ -225,5 +225,10 @@
       "Gain [E] .",
       "Add a #yMiracle into your hand."
     ]
+  },
+  "${ModID}:CharacterOption": {
+    "TEXT": [
+      "Today's Dungeon: "
+    ]
   }
 }
