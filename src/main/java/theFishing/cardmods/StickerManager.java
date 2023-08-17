@@ -22,6 +22,9 @@ public class StickerManager {
     private static final Texture retainStickerTex = TexLoader.getTexture("fishingResources/images/ui/sticker_retain.png");
     private static final TextureAtlas.AtlasRegion retainStickerAtlas = ImageHelper.asAtlasRegion(retainStickerTex);
 
+    private static final Texture delveStickerTex = TexLoader.getTexture("fishingResources/images/ui/sticker_delve.png");
+    private static final TextureAtlas.AtlasRegion delveStickerAtlas = ImageHelper.asAtlasRegion(delveStickerTex);
+
     public static final float DIFF_X = 100;
     public static final float DIFF_Y = 150;
 
@@ -36,6 +39,9 @@ public class StickerManager {
                 break;
             case RETAIN:
                 toUse = retainStickerAtlas;
+                break;
+            case DELVE:
+                toUse = delveStickerAtlas;
                 break;
             case HPLOSS:
             default:
@@ -56,6 +62,7 @@ public class StickerManager {
         HPLOSS,
         ETHEREAL,
         EXHAUST,
-        RETAIN
+        RETAIN,
+        DELVE
     }
 }

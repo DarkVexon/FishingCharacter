@@ -16,7 +16,7 @@ public class Broadside extends AbstractFishingCard {
     // intellij stuff attack, enemy, common, 18, 6, , , , 
 
     public Broadside() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 18;
         cardsToPreview = new Miracle();
         FoilPatches.makeFoil(cardsToPreview);

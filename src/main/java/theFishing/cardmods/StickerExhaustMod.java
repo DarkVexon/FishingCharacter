@@ -2,22 +2,15 @@ package theFishing.cardmods;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.cardmods.StickerManager.DIFF_X;
-import static theFishing.cardmods.StickerManager.DIFF_Y;
 
-public class StickerExhaustMod extends AbstractCardModifier {
+public class StickerExhaustMod extends AbstractStickerModifier {
     public static String ID = makeID(StickerExhaustMod.class.getSimpleName());
 
-    private float offsetX;
-    private float offsetY;
-
     public StickerExhaustMod() {
-        offsetX = MathUtils.random(-DIFF_X, DIFF_X);
-        offsetY = MathUtils.random(DIFF_Y);
+        super(StickerManager.StickerType.EXHAUST);
     }
 
     @Override

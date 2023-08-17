@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cardmods.StickerCardMod;
+import theFishing.cardmods.StickerHPLossMod;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -28,7 +28,7 @@ public class StickerStrike extends AbstractFishingCard {
         if (upgraded) {
             atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
                 for (AbstractCard c : cards) {
-                    CardModifierManager.addModifier(c, new StickerCardMod());
+                    CardModifierManager.addModifier(c, new StickerHPLossMod());
                     c.superFlash(Color.GOLD.cpy());
                 }
             }));
@@ -39,7 +39,7 @@ public class StickerStrike extends AbstractFishingCard {
                     isDone = true;
                     if (!AbstractDungeon.player.hand.isEmpty()) {
                         AbstractCard tar = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                        CardModifierManager.addModifier(tar, new StickerCardMod());
+                        CardModifierManager.addModifier(tar, new StickerHPLossMod());
                         tar.superFlash(Color.GOLD.cpy());
                     }
                 }

@@ -52,6 +52,6 @@ public class DarkDepths extends AbstractFishingCard implements OnObtainCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(5);
     }
 }

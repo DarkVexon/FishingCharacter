@@ -4,12 +4,11 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.cards.curses.Clumsy;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -26,7 +25,11 @@ public class ExtraTentacle extends AbstractFishingCard implements OnObtainCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        atb(new SelectCardsAction(p.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> cards.forEach(q -> att(new ExhaustSpecificCardAction(q, p.drawPile, false)))));
+        CardGroup possCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard q : p.drawPile.group) {
+            possCards.addToRandomSpot(q);
+        }
+        atb(new SelectCardsAction(possCards.group, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> cards.forEach(q -> att(new ExhaustSpecificCardAction(q, p.drawPile, false)))));
     }
 
     public void upp() {

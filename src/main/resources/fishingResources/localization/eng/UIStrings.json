@@ -112,123 +112,153 @@
     "TEXT": [
       "The Dungeon",
       "Today's Dungeon: NL ",
-      " NL Current room: #b",
-      "Next Room"
+      " NL Next room: #r",
+      "Next Room",
+      "None"
     ]
   },
   "${ModID}:ChampsArena": {
     "TEXT": [
-      "The Colosseum",
-      "Add #b1 #yShiv into your hand.",
-      "Gain #b1 #yStrength."
-    ]
-  },
-  "${ModID}:TheLibrary": {
-    "TEXT": [
-      "The Library",
-      "Draw #b1 card. Put a #yRetain sticker on it.",
-      "Deal #b3 damage to a random enemy for each card in your hand."
-    ]
+      "The Colosseum"
+    ],
+    "TEXT_DICT": {
+      "F1": "Add #b1 #yShiv into your hand.",
+      "F3": "Gain #b2 #yStrength."
+    }
   },
   "${ModID}:TombOfRorrim": {
     "TEXT": [
-      "Tomb of Rorrim",
-      "Gain #b1 #yBlock.",
-      "Gain #b3 #yBlock.",
-      "This turn, your next card is played twice."
-    ]
+      "Tomb of Rorrim"
+    ],
+    "TEXT_DICT": {
+      "F1": "Gain #b3 #yBlock.",
+      "F3": "This turn, your next card is played twice."
+    }
   },
   "${ModID}:WatchersTemple": {
     "TEXT": [
-      "Temple of the Third Eye",
-      "#yScry #b3.",
-      "Add a #ySmite into your hand.",
-      "Attacks deal #b50% more damage this turn."
-    ]
+      "Temple of the Third Eye"
+    ],
+    "TEXT_DICT": {
+      "F1": "#yScry #b3.",
+      "F2": "Add a #ySmite into your hand.",
+      "F3": "Attacks deal #b50% more damage this turn."
+    }
   },
   "${ModID}:WhereItFell": {
     "TEXT": [
-      "Where It Fell",
-      "Add a #yStar #yShard into your hand.",
-      "Draw #b3 cards."
-    ]
+      "Where It Fell"
+    ],
+    "TEXT_DICT": {
+      "F1": "Add a #yStar #yShard into your hand.",
+      "F3": "Draw #b3 cards."
+    }
   },
   "${ModID}:TheDeep": {
     "TEXT": [
-      "The Maze",
-      "At the start of combat, shuffle #yWaka #yWaka into your draw pile.",
-      "Increase #yWaka #yWaka's damage by #b10 this combat."
-    ]
+      "The Maze"
+    ],
+    "TEXT_DICT": {
+      "SP": "At the start of combat, shuffle #yWaka #yWaka into your draw pile.",
+      "F1": "Increase #yWaka #yWaka's damage by #b10 this combat."
+    }
   },
   "${ModID}:TheFactory": {
     "TEXT": [
-      "The Factory",
-      "At the start of combat, #yExhaust #b1 random card in your draw pile.",
-      "Gain #b4 #yBlock.",
-      "Play a copy of the #yExhausted card."
-    ]
+      "The Factory"
+    ],
+    "TEXT_DICT": {
+      "SP": "At the start of combat, #yExhaust #b1 random card in your draw pile.",
+      "F1": "Gain #b4 #yBlock.",
+      "F3": "Play a copy of the #yExhausted card."
+    }
   },
   "${ModID}:TheStarship": {
     "TEXT": [
-      "The Starship",
-      "#yUpgrade a random card in your hand.",
-      "Gain [E] .",
-      "Deal #b9 damage to a random enemy."
-    ]
+      "The Starship"
+    ],
+    "TEXT_DICT": {
+      "F1": "#yUpgrade a random card in your hand.",
+      "F2": "Gain [E] .",
+      "F3": "Deal #b9 damage to a random enemy."
+    }
   },
   "${ModID}:MegaCrit": {
     "TEXT": [
-      "MegaCrit",
-      "Cards created by this have #yRetain stickers.",
-      "Add a random #yAttack into your hand.",
-      "Add a random #yUpgraded #yAttack into your hand.",
-      "Add a random #yPower into your hand. It costs #b0."
-    ]
+      "MegaCrit"
+    ],
+    "TEXT_DICT": {
+      "SP": "Cards created by this have #yRetain stickers.",
+      "F1": "Add a random #yAttack into your hand.",
+      "F2": "Add a random #yUpgraded #yAttack into your hand.",
+      "F3": "Add a random #yPower into your hand. It costs #b0."
+    }
   },
   "${ModID}:ThortonsBank": {
     "TEXT": [
-      "Thorton & Co.",
-      "Whenever you obtain a card with #yDelve, gain #b25 Gold.",
-      "Deal #b5 damage to a random enemy.",
-      "Gain #b4 #yBlock.",
-      "Apply #b1 #yWeak and #yVulnerable to a random enemy."
-    ]
+      "Thorton & Co."
+    ],
+    "TEXT_DICT": {
+      "SP": "Whenever you obtain a card with #yDelve, gain #b25 Gold.",
+      "F1": "Deal #b5 damage to a random enemy.",
+      "F2": "Gain #b4 #yBlock.",
+      "F3": "Apply #b1 #yWeak and #yVulnerable to a random enemy."
+    }
   },
   "${ModID}:TowerOfSkies": {
     "TEXT": [
-      "Tower of Skies",
-      "You can see the top card of your draw pile.",
-      "Draw #b1 card and #yUpgrade it.",
-      "Play the top card of your draw pile."
-    ]
+      "Tower of Skies"
+    ],
+    "TEXT_DICT": {
+      "SP": "You can see the top card of your draw pile.",
+      "F1": "Draw #b1 card and #yUpgrade it.",
+      "F3": "Play the top card of your draw pile."
+    }
   },
   "${ModID}:Termina": {
     "TEXT": [
-      "Termina",
-      "Cards with Delve are not discarded at the end of your turn.",
-      "Nothing happens...",
-      "ALL enemies lose #b20 HP."
-    ]
+      "Termina"
+    ],
+    "TEXT_DICT": {
+      "SP": "Cards with Delve are not discarded at the end of your turn.",
+      "F1": "Nothing happens...",
+      "F3": "ALL enemies lose #b20 HP."
+    }
   },
   "${ModID}:KongJungle": {
     "TEXT": [
-      "Pyoro's Beanstalk",
-      "Add a #yBean into your hand.",
-      "Your next Skill costs #b0."
-    ]
+      "Pyoro's Beanstalk"
+    ],
+    "TEXT_DICT": {
+      "F1": "Add a #yBean into your hand.",
+      "F3": "Your next Skill costs #b0."
+    }
   },
   "${ModID}:XMansion": {
     "TEXT": [
-      "X-Mansion",
-      "Start the run with a #yStrike-X replacing one of your #yStrikes.",
-      "Gain #b3 #yBlock.",
-      "Gain [E] .",
-      "Add a #yMiracle into your hand."
-    ]
+      "X-Mansion"
+    ],
+    "TEXT_DICT": {
+      "SP": "Start the run with a #yStrike-X replacing one of your #yStrikes.",
+      "F1": "Gain #b3 #yBlock.",
+      "F2": "Gain [E] .",
+      "F3": "Add a #yMiracle into your hand."
+    }
   },
   "${ModID}:CharacterOption": {
     "TEXT": [
       "Today's Dungeon: "
     ]
+  },
+  "${ModID}:Circuitry": {
+    "TEXT": [
+      "Circuitry"
+    ],
+    "TEXT_DICT": {
+      "SP": "Start combat with #b1 Orb slot for each #yDelve card in your deck.",
+      "F1": "#yChannel #b1 #yLightning.",
+      "F2": "#yChannel #b1 #yFrost.",
+      "F3": "Gain #b2 #yFocus."
+    }
   }
 }

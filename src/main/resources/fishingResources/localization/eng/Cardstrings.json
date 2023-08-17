@@ -563,7 +563,7 @@
   },
   "${ModID}:ProTank": {
     "NAME": "Seal Away",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Delve."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Delve twice."
   },
   "${ModID}:GlogusEgg": {
     "NAME": "Glogus Egg",

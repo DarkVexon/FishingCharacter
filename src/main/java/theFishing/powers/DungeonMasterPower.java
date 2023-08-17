@@ -28,7 +28,7 @@ public class DungeonMasterPower extends AbstractAdventurerPower implements OnCom
             public void update() {
                 isDone = true;
                 for (int i = 0; i < DungeonMasterPower.this.amount; i++) {
-                    FishingMod.activeBoard.effects.get(FishingMod.activeBoard.effects.size()-1).activate();
+                    FishingMod.activeBoard.effects.get(FishingMod.activeBoard.effects.size()-1).run();
                 }
             }
         });

@@ -13,21 +13,18 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
-import theFishing.boards.BoardEffect;
 import theFishing.util.Wiz;
 
-import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
 public class ThortonsBank extends AbstractBoard {
     public static final String ID = FishingMod.makeID(ThortonsBank.class.getSimpleName());
-    private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public ThortonsBank() {
-        super(ID, TEXT[0]);
-        effects.add(new BoardEffect(TEXT[2], () -> att(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 5, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT))));
-        effects.add(new BoardEffect(TEXT[3], () -> att(new GainBlockAction(AbstractDungeon.player, 4))));
-        effects.add(new BoardEffect(TEXT[4], () -> att(new AbstractGameAction() {
+        super(ID);
+        effects.add(() -> att(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 5, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT)));
+        effects.add(() -> att(new GainBlockAction(AbstractDungeon.player, 4)));
+        effects.add(() -> att(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
@@ -35,7 +32,7 @@ public class ThortonsBank extends AbstractBoard {
                 att(new ApplyPowerAction(tar, AbstractDungeon.player, new VulnerablePower(tar, 1, false)));
                 att(new ApplyPowerAction(tar, AbstractDungeon.player, new WeakPower(tar, 1, false)));
             }
-        })));
+        }));
     }
 
     @Override
@@ -43,10 +40,5 @@ public class ThortonsBank extends AbstractBoard {
         if (card.hasTag(FishingMod.DELVES)) {
             AbstractDungeon.player.gainGold(25);
         }
-    }
-
-    @Override
-    public String getSpecialRule() {
-        return TEXT[1];
     }
 }

@@ -1,7 +1,9 @@
 package theFishing.boards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.FishingMod;
 import theFishing.boards.dailies.*;
 import theFishing.util.Wiz;
@@ -16,11 +18,27 @@ public abstract class AbstractBoard {
     public String id;
     public String name;
     public int progress = 0;
-    public ArrayList<BoardEffect> effects = new ArrayList<>();
+    public ArrayList<Runnable> effects = new ArrayList<>();
 
-    public AbstractBoard(String ID, String name) {
-        this.name = name;
+    private static HashMap<String, UIStrings> locMap = new HashMap<>();
+
+    public UIStrings getLocString(String ID) {
+        if (locMap.containsKey(ID)) {
+            return locMap.get(ID);
+        } else {
+            UIStrings toFind = CardCrawlGame.languagePack.getUIString(ID);
+            if (toFind != null) {
+                locMap.put(ID, toFind);
+                return toFind;
+            } else {
+                return null;
+            }
+        }
+    }
+
+    public AbstractBoard(String ID) {
         this.id = ID;
+        this.name = getLocString(ID).TEXT[0];
     }
 
     private static HashMap<String, Class<? extends AbstractBoard>> ids = new LinkedHashMap<>();
@@ -37,6 +55,8 @@ public abstract class AbstractBoard {
         ids.put(ChampsArena.ID, ChampsArena.class);
         ids.put(TowerOfSkies.ID, TowerOfSkies.class);
         ids.put(XMansion.ID, XMansion.class);
+        ids.put(Circuitry.ID, Circuitry.class);
+        ids.put(DemonsTomb.ID, DemonsTomb.class);
 
         complexIds.put(KongJungle.ID, KongJungle.class);
         complexIds.put(TheDeep.ID, TheDeep.class);
@@ -55,7 +75,8 @@ public abstract class AbstractBoard {
         } else {
             idsToUse.addAll(ids.keySet());
         }
-        return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
+        return new DemonsTomb();
+        //return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
     }
 
     public void proceed() {
@@ -64,7 +85,7 @@ public abstract class AbstractBoard {
         if (progress > effects.size()) {
             progress = 1;
         }
-        effects.get(progress - 1).activate();
+        effects.get(progress - 1).run();
     }
 
     public void reset() {
@@ -92,27 +113,48 @@ public abstract class AbstractBoard {
         StringBuilder sb = new StringBuilder();
         sb.append(FontHelper.colorString(name, "p") + " NL ");
         sb.append("#gSpecial #gRule: " + getSpecialRule() + " NL ");
-        for (int i = 0; i < effects.size(); i++) {
-            sb.append(getEffectDescription(i));
-            if (i < effects.size() - 1)
-                sb.append(" NL ");
-        }
+        sb.append(getEffectsText());
         return sb.toString();
     }
 
-    public String getEffectDescription(int i) {
+    private String getEffectsText() {
         StringBuilder sb = new StringBuilder();
-        if (progress % effects.size() == i && Wiz.isInCombat()) {
+        boolean no2 = !getLocString(id).TEXT_DICT.containsKey("F2");
+        boolean no3 = !getLocString(id).TEXT_DICT.containsKey("F3");
+        int value = progress % effects.size();
+        if ((value == 1 || (value == 2 && no2) || (value == 3 && no3)) && Wiz.isInCombat()) {
             sb.append("#r");
         }
-        sb.append(i + 1);
-        sb.append(". ");
-        sb.append(effects.get(i).description);
+        sb.append("1");
+        if (no2) {
+            sb.append(" & 2");
+        }
+        if (no3) {
+            sb.append(" & 3");
+        }
+        sb.append(": ");
+        sb.append(getLocString(id).TEXT_DICT.get("F1"));
+        if (!no2) {
+            sb.append(" NL ");
+            if (value == 2) {
+                sb.append("#r");
+            }
+            sb.append("2: ");
+            sb.append(getLocString(id).TEXT_DICT.get("F2"));
+        }
+        if (!no3) {
+            sb.append(" NL ");
+            if (value == 3) {
+                sb.append("#r");
+            }
+            sb.append("3: ");
+            sb.append(getLocString(id).TEXT_DICT.get("F3"));
+        }
         return sb.toString();
     }
 
     public String getSpecialRule() {
-        return "None"; //TODO: Unhardcode
+        return getLocString(id).TEXT_DICT.containsKey("SP") ? getLocString(id).TEXT_DICT.get("SP") : TopPanelBoard.uiStrings.TEXT[4];
     }
 
     public void atBattleStartPreDraw() {
@@ -124,6 +166,14 @@ public abstract class AbstractBoard {
     }
 
     public void onObtainCard(AbstractCard card) {
+
+    }
+
+    public String onSave() {
+        return "";
+    }
+
+    public void onLoad(String s) {
 
     }
 }

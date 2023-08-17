@@ -15,7 +15,7 @@ public class ProTank extends AbstractFishingCard {
 
     public ProTank() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
-        baseDamage = 16;
+        baseDamage = 15;
         baseBlock = 10;
         tags.add(DELVES);
     }
@@ -24,10 +24,11 @@ public class ProTank extends AbstractFishingCard {
         blck();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         atb(new EnterTheDungeonAction());
+        atb(new EnterTheDungeonAction());
     }
 
     public void upp() {
-        upgradeDamage(4);
-        upgradeBlock(4);
+        upgradeDamage(5);
+        upgradeBlock(2);
     }
 }

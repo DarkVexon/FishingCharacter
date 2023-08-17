@@ -1,24 +1,16 @@
 package theFishing.cardmods;
 
 import basemod.abstracts.AbstractCardModifier;
-import basemod.cardmods.EtherealMod;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.cardmods.StickerManager.DIFF_X;
-import static theFishing.cardmods.StickerManager.DIFF_Y;
 
-public class StickerEtherealMod extends AbstractCardModifier {
+public class StickerEtherealMod extends AbstractStickerModifier {
     public static String ID = makeID(StickerEtherealMod.class.getSimpleName());
 
-    private float offsetX;
-    private float offsetY;
-
     public StickerEtherealMod() {
-        offsetX = MathUtils.random(-DIFF_X, DIFF_X);
-        offsetY = MathUtils.random(DIFF_Y);
+        super(StickerManager.StickerType.ETHEREAL);
     }
 
     @Override
