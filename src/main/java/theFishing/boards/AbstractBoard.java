@@ -56,7 +56,6 @@ public abstract class AbstractBoard {
         ids.put(TowerOfSkies.ID, TowerOfSkies.class);
         ids.put(XMansion.ID, XMansion.class);
         ids.put(Circuitry.ID, Circuitry.class);
-        ids.put(DemonsTomb.ID, DemonsTomb.class);
 
         complexIds.put(KongJungle.ID, KongJungle.class);
         complexIds.put(TheDeep.ID, TheDeep.class);
@@ -75,8 +74,7 @@ public abstract class AbstractBoard {
         } else {
             idsToUse.addAll(ids.keySet());
         }
-        return new DemonsTomb();
-        //return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
+        return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
     }
 
     public void proceed() {
