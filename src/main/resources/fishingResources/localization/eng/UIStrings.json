@@ -270,8 +270,8 @@
     ],
     "TEXT_DICT": {
       "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b4 damage to a random enemy.",
-      "F1": "Increase the Cannon's damage by #b8.",
-      "F3": "Gain [E] [E] ."
+      "F1": "Increase the Cannon's damage by #b4.",
+      "F3": "Gain [E] ."
     }
   }
 }

@@ -29,7 +29,8 @@ public class TheCannon extends AbstractBoard {
 
     private static final Texture cannonTex = TexLoader.getTexture("fishingResources/images/ui/cannon2.png");
 
-    private int cannonValue = 4;
+    private static final int STARTING_VALUE = 4;
+    private int cannonValue = STARTING_VALUE;
 
     private static final float CANNON_X = 650F * Settings.scale;
     private static final float CANNON_Y = 320F * Settings.scale;
@@ -44,23 +45,23 @@ public class TheCannon extends AbstractBoard {
             @Override
             public void update() {
                 isDone = true;
-                cannonValue += 8;
+                cannonValue += 4;
             }
         }));
         effects.add(() -> att(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                cannonValue += 8;
+                cannonValue += 4;
             }
         }));
-        effects.add(() -> att(new GainEnergyAction(2)));
+        effects.add(() -> att(new GainEnergyAction(1)));
         hb = new Hitbox(CANNON_X, CANNON_Y, CANNON_SIZE, CANNON_SIZE);
     }
 
     @Override
     public void atBattleStartPreDraw() {
-        cannonValue = 4;
+        cannonValue = STARTING_VALUE;
     }
 
     @Override
