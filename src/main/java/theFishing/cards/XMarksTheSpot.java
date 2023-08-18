@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.cards.blue.Tempest;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.TheFishing;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;

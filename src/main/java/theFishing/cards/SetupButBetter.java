@@ -1,10 +1,13 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.DiscardPileSetupAction;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;
 
 public class SetupButBetter extends AbstractFishingCard {
@@ -12,14 +15,19 @@ public class SetupButBetter extends AbstractFishingCard {
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public SetupButBetter() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DiscardPileSetupAction());
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        atb(new DiscardPileToTopOfDeckAction(p));
+        applyToSelf(new EnergizedPower(p, magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
+        uDesc();
     }
 }

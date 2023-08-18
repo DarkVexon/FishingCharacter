@@ -1,7 +1,6 @@
 package theFishing.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.AbstractQuest;
 

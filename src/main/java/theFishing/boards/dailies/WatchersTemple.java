@@ -2,7 +2,6 @@ package theFishing.boards.dailies;
 
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.tempCards.Smite;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.powers.MoreDamageThisTurnPower;

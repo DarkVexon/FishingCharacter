@@ -15,7 +15,7 @@ import theFishing.effects.ColoredSanctityEffect;
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
 
-public class AquaOrb extends AbstractFishingCard  {
+public class AquaOrb extends AbstractFishingCard {
     public final static String ID = makeID("AquaOrb");
     // intellij stuff skill, self, , , , 17, 6, , 
 

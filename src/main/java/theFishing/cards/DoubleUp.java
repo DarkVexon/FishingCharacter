@@ -17,8 +17,8 @@ public class DoubleUp extends AbstractFishingCard implements StartupCard {
 
     public DoubleUp() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 4;
+        baseDamage = 8;
+        baseMagicNumber = magicNumber = 3;
         tags.add(FishingMod.DELVES);
     }
 

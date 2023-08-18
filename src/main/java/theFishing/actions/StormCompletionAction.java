@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import static theFishing.util.Wiz.att;
 
 public class StormCompletionAction extends AbstractGameAction {
-    private int totalDmg;
+    private final int totalDmg;
 
     public StormCompletionAction(int totalDmg) {
         this.totalDmg = totalDmg;

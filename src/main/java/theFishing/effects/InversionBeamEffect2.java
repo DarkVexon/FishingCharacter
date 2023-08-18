@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class InversionBeamEffect2 extends AbstractGameEffect {
-    private float x;
+    private final float x;
     private float y;
 
     public InversionBeamEffect2(float x) {

@@ -1,5 +1,6 @@
 package theFishing.boards;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -20,7 +21,7 @@ public abstract class AbstractBoard {
     public int progress = 0;
     public ArrayList<Runnable> effects = new ArrayList<>();
 
-    private static HashMap<String, UIStrings> locMap = new HashMap<>();
+    private static final HashMap<String, UIStrings> locMap = new HashMap<>();
 
     public UIStrings getLocString(String ID) {
         if (locMap.containsKey(ID)) {
@@ -41,8 +42,8 @@ public abstract class AbstractBoard {
         this.name = getLocString(ID).TEXT[0];
     }
 
-    private static HashMap<String, Class<? extends AbstractBoard>> ids = new LinkedHashMap<>();
-    private static HashMap<String, Class<? extends AbstractBoard>> complexIds = new LinkedHashMap<>();
+    private static final HashMap<String, Class<? extends AbstractBoard>> ids = new LinkedHashMap<>();
+    private static final HashMap<String, Class<? extends AbstractBoard>> complexIds = new LinkedHashMap<>();
 
     //TODO: Make this better. automatically add classes with autoadd and split by type as an enum stored in each class
 
@@ -56,6 +57,7 @@ public abstract class AbstractBoard {
         ids.put(TowerOfSkies.ID, TowerOfSkies.class);
         ids.put(XMansion.ID, XMansion.class);
         ids.put(Circuitry.ID, Circuitry.class);
+        ids.put(TheCannon.ID, TheCannon.class);
 
         complexIds.put(KongJungle.ID, KongJungle.class);
         complexIds.put(TheDeep.ID, TheDeep.class);
@@ -63,6 +65,8 @@ public abstract class AbstractBoard {
         complexIds.put(WatchersTemple.ID, WatchersTemple.class);
         complexIds.put(WhereItFell.ID, WhereItFell.class);
     }
+
+    private static final String debugOverride = null;
 
     public static AbstractBoard getRunBoard() {
         Calendar calendar = Calendar.getInstance();
@@ -74,7 +78,11 @@ public abstract class AbstractBoard {
         } else {
             idsToUse.addAll(ids.keySet());
         }
-        return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
+        if (debugOverride != null && CardCrawlGame.playerName.toLowerCase().contains("vex")) {
+            return getBoardByID(debugOverride);
+        } else {
+            return AbstractBoard.getBoardByID(idsToUse.get(dayOfYear % idsToUse.size()));
+        }
     }
 
     public void proceed() {
@@ -93,10 +101,8 @@ public abstract class AbstractBoard {
 
     public static AbstractBoard getBoardByID(String ID) {
         try {
-            if (ids.containsKey(ID))
-                return ids.get(ID).newInstance();
-            else if (complexIds.containsKey(ID))
-                return complexIds.get(ID).newInstance();
+            if (ids.containsKey(ID)) return ids.get(ID).newInstance();
+            else if (complexIds.containsKey(ID)) return complexIds.get(ID).newInstance();
             else {
                 System.out.println("ERROR! Couldn't find board by ID");
                 return new ChampsArena();
@@ -108,11 +114,10 @@ public abstract class AbstractBoard {
     }
 
     public String getDescription() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(FontHelper.colorString(name, "p") + " NL ");
-        sb.append("#gSpecial #gRule: " + getSpecialRule() + " NL ");
-        sb.append(getEffectsText());
-        return sb.toString();
+        String sb = FontHelper.colorString(name, "p") + " NL " +
+                "#gSpecial #gRule: " + getSpecialRule() + " NL " +
+                getEffectsText();
+        return sb;
     }
 
     private String getEffectsText() {
@@ -164,6 +169,18 @@ public abstract class AbstractBoard {
     }
 
     public void onObtainCard(AbstractCard card) {
+
+    }
+
+    public void atEndOfTurn() {
+
+    }
+
+    public void render(SpriteBatch sb) {
+
+    }
+
+    public void update() {
 
     }
 

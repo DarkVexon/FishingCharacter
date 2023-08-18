@@ -4,9 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-
 import static theFishing.FishingMod.makeID;
 
 public class Strike extends AbstractFishingCard {

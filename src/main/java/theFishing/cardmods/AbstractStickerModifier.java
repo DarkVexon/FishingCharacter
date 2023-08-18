@@ -10,7 +10,7 @@ import static theFishing.cardmods.StickerManager.DIFF_Y;
 
 public abstract class AbstractStickerModifier extends AbstractCardModifier {
 
-    private StickerManager.StickerType type;
+    private final StickerManager.StickerType type;
     public float offsetX;
     public float offsetY;
 

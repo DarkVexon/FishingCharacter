@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import javassist.CtBehavior;
 import theFishing.FishingMod;
+import theFishing.quest.QuestHelper;
 
 public class OnDrawCard {
     @SpirePatch(
@@ -21,6 +22,7 @@ public class OnDrawCard {
             if (PreDrawPatch.DRAWN_DURING_TURN) {
                 FishingMod.voyagedCards.add(c);
             }
+            QuestHelper.quests.stream().forEach(q -> q.onDrawCard());
         }
 
         private static class Locator extends SpireInsertLocator {

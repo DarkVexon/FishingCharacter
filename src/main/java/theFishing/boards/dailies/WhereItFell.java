@@ -1,7 +1,6 @@
 package theFishing.boards.dailies;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.cards.StarShard;

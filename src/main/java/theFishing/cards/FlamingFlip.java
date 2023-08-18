@@ -1,7 +1,5 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

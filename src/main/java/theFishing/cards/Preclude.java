@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
-import theFishing.FishingMod;
 import theFishing.actions.PrecludeAction;
 
 import static theFishing.FishingMod.makeID;

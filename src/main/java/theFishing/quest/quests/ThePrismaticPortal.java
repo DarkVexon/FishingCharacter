@@ -16,7 +16,7 @@ public class ThePrismaticPortal extends AbstractQuest {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public ThePrismaticPortal() {
-        super(ID, 1);
+        super(ID, 7);
     }
 
     @Override
@@ -34,17 +34,17 @@ public class ThePrismaticPortal extends AbstractQuest {
         Wiz.shuffleIn(new QuestTimeTheGemSearch());
     }
 
+    private static final Texture rare_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Uncommon.png"));
+    private static final Texture rare_com = TexLoader.getTexture(makeImagePath("quests/Portal_Uncommon_Completed.png"));
+
     @Override
-    public void onDelve() {
+    public void onDrawCard() {
         increment();
     }
 
-    private static final Texture rare_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Key.png"));
-    private static final Texture rare_com = TexLoader.getTexture(makeImagePath("quests/Portal_Key_Completed.png"));
-
     @Override
     public Texture progressTex(int idx) {
-        return progress > 0 ? rare_com : rare_unc;
+        return progress > idx ? rare_com : rare_unc;
     }
 
     @Override

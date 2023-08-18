@@ -1,16 +1,13 @@
 package theFishing.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.cards.AbstractFishingCard;
 import theFishing.powers.LunchBoxPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class Lunchbox extends AbstractFishingCard implements OnObtainCard {
     public final static String ID = makeID("Lunchbox");
@@ -28,7 +25,7 @@ public class Lunchbox extends AbstractFishingCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.player.heal(3);
+        AbstractDungeon.player.heal(4);
     }
 
     public void upp() {

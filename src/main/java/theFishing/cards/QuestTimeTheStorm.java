@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import theFishing.actions.AcceptQuestAction;
-import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.TheStorm;
 
 import static theFishing.FishingMod.makeID;

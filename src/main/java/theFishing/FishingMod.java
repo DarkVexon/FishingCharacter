@@ -206,6 +206,9 @@ public class FishingMod implements
             if (!QuestHelper.quests.isEmpty()) {
                 QuestHelper.update();
             }
+            if (FishingMod.activeBoard != null) {
+                FishingMod.activeBoard.update();
+            }
         }
     }
 

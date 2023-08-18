@@ -1,11 +1,11 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
 import static theFishing.FishingMod.makeID;
@@ -22,7 +22,7 @@ public class SoleSight extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ScryAction(magicNumber));
+        applyToSelf(new MantraPower(p, 1));
         if (isSolo()) {
             atb(new VFXAction(p, new InflameEffect(p), 0.66F));
             applyToSelf(new StrengthPower(p, magicNumber));

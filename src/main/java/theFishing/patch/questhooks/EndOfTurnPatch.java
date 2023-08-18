@@ -2,6 +2,7 @@ package theFishing.patch.questhooks;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import theFishing.FishingMod;
 import theFishing.quest.QuestHelper;
 
 @SpirePatch(
@@ -11,5 +12,6 @@ import theFishing.quest.QuestHelper;
 public class EndOfTurnPatch {
     public static void Postfix(GameActionManager __instance) {
         QuestHelper.atEndOfTurn();
+        FishingMod.activeBoard.atEndOfTurn();
     }
 }

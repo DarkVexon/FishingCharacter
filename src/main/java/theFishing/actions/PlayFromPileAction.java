@@ -13,7 +13,7 @@ import theFishing.util.Wiz;
 
 public class PlayFromPileAction extends AbstractGameAction {
 
-    private AbstractCard toPlay;
+    private final AbstractCard toPlay;
     private final CardGroup from;
 
     public PlayFromPileAction(AbstractCard toPlay, CardGroup from) {

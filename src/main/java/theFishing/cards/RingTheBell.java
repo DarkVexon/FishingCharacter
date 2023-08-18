@@ -14,7 +14,6 @@ import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.topDeck;
 
 public class RingTheBell extends AbstractFishingCard implements OnObtainCard {
     public final static String ID = makeID("RingTheBell");

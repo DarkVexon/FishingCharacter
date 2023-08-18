@@ -24,9 +24,9 @@ import static theFishing.util.Wiz.att;
 public class MopUpAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(FishingMod.makeID("MopUpAction"));
     public static final String[] TEXT = uiStrings.TEXT;
-    private AbstractMonster target;
-    private int damage;
-    private DamageInfo.DamageType damageTypeForTurn;
+    private final AbstractMonster target;
+    private final int damage;
+    private final DamageInfo.DamageType damageTypeForTurn;
 
 
     public MopUpAction(AbstractMonster target, int damage, DamageInfo.DamageType damageTypeForTurn) {

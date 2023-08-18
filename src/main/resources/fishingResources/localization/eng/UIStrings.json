@@ -42,7 +42,7 @@
   "${ModID}:ThePrismaticPortal": {
     "TEXT": [
       "The Prismatic Portal",
-      "#yQuest: #yDelve. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
+      "#yQuest: Draw #b7 cards. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
     ]
   },
   "${ModID}:TheStorm": {
@@ -222,7 +222,7 @@
     "TEXT_DICT": {
       "SP": "Cards with Delve are not discarded at the end of your turn.",
       "F1": "Nothing happens...",
-      "F3": "ALL enemies lose #b20 HP."
+      "F3": "ALL enemies lose #b22 HP."
     }
   },
   "${ModID}:KongJungle": {
@@ -259,6 +259,19 @@
       "F1": "#yChannel #b1 #yLightning.",
       "F2": "#yChannel #b1 #yFrost.",
       "F3": "Gain #b2 #yFocus."
+    }
+  },
+  "${ModID}:TheCannon": {
+    "TEXT": [
+      "The Cannon",
+      "Cannon!",
+      "It's me! When you end your turn with unused Energy, I'll deal #b",
+      " damage to a random enemy! Yaya!"
+    ],
+    "TEXT_DICT": {
+      "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b4 damage to a random enemy.",
+      "F1": "Increase the Cannon's damage by #b8.",
+      "F3": "Gain [E] [E] ."
     }
   }
 }

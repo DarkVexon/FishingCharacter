@@ -4,11 +4,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.FishingMod;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;
 
 public class DungeonMasterPower extends AbstractAdventurerPower implements OnCompleteDungeonPower {
@@ -28,7 +26,7 @@ public class DungeonMasterPower extends AbstractAdventurerPower implements OnCom
             public void update() {
                 isDone = true;
                 for (int i = 0; i < DungeonMasterPower.this.amount; i++) {
-                    FishingMod.activeBoard.effects.get(FishingMod.activeBoard.effects.size()-1).run();
+                    FishingMod.activeBoard.effects.get(FishingMod.activeBoard.effects.size() - 1).run();
                 }
             }
         });

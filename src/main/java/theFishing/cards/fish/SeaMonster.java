@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.makeInHand;
 import static theFishing.util.Wiz.shuffleIn;
 
 public class SeaMonster extends AbstractFishCard {

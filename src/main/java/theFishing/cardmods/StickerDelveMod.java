@@ -1,7 +1,6 @@
 package theFishing.cardmods;
 
 import basemod.abstracts.AbstractCardModifier;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

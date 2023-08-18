@@ -15,12 +15,12 @@ public class EnergyOrbFishing extends CustomEnergyOrb {
     private static final float ORB_IMG_SCALE = 1.15f * Settings.scale;
 
     private static final int LAYER_COUNT = 4;
-    private Texture mask;
-    private Texture border;
-    private Texture[] layers = new Texture[LAYER_COUNT];
-    private Texture[] layers_d = new Texture[LAYER_COUNT];
-    private float[] angles = new float[LAYER_COUNT];
-    private FrameBuffer fbo;
+    private final Texture mask;
+    private final Texture border;
+    private final Texture[] layers = new Texture[LAYER_COUNT];
+    private final Texture[] layers_d = new Texture[LAYER_COUNT];
+    private final float[] angles = new float[LAYER_COUNT];
+    private final FrameBuffer fbo;
 
     public EnergyOrbFishing() {
         super(null, null, null);

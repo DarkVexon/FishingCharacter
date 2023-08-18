@@ -12,8 +12,6 @@ import theFishing.TheFishing;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.TopPanelBoard;
 
-import java.time.LocalDateTime;
-
 @SpirePatch(clz = CharacterOption.class, method = "renderInfo")
 public class CharacterSelectBoard {
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString("fishing:CharacterOption").TEXT;

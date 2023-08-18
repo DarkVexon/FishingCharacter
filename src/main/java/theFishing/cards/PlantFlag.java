@@ -1,6 +1,5 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,7 +8,8 @@ import theFishing.actions.EnterTheDungeonAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.makeInHand;
 
 public class PlantFlag extends AbstractFishingCard {
     public final static String ID = makeID("PlantFlag");
@@ -24,7 +24,6 @@ public class PlantFlag extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AnimateHopAction(p));
         atb(new EnterTheDungeonAction());
         AbstractCard q = new Flag();
         if (upgraded) {

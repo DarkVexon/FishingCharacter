@@ -17,7 +17,7 @@ public class KeyToTheCity extends AbstractFishingCard {
     // intellij stuff attack, all_enemy, rare, 10, 4, , , , 
 
     public KeyToTheCity() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 9;
         isMultiDamage = true;
         tags.add(FishingMod.DELVES);
@@ -25,6 +25,8 @@ public class KeyToTheCity extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        atb(new EnterTheDungeonAction());
+        atb(new EnterTheDungeonAction());
         atb(new EnterTheDungeonAction());
         atb(new AbstractGameAction() {
             @Override

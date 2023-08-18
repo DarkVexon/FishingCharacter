@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.util.Wiz;
 
 public class DrawUpToEnergyAction extends AbstractGameAction {
-    private int energy;
+    private final int energy;
     private int tracker = 0;
 
     public DrawUpToEnergyAction(int energy) {

@@ -63,7 +63,7 @@ public abstract class AbstractQuest {
 
     }
 
-    public void onDelve() {
+    public void onDrawCard() {
 
     }
 }

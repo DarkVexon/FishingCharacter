@@ -236,8 +236,8 @@
   },
   "${ModID}:SetupButBetter": {
     "NAME": "Tackle Box",
-    "DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your discard pile on top of your draw pile. NL It costs 0 until played."
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile on top of your draw pile. NL Next turn, gain [E].",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile on top of your draw pile. NL Next turn, gain [E] [E]."
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
@@ -380,7 +380,7 @@
   },
   "${ModID}:SoleSight": {
     "NAME": "For Old Times' Sake",
-    "DESCRIPTION": "Scry !M!. NL ${ModID}:Solo: Gain !M! Strength."
+    "DESCRIPTION": "Gain 1 Mantra. NL ${ModID}:Solo: Gain !M! Strength."
   },
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
@@ -402,7 +402,7 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "Innate. NL ${ModID}:Quest: ${ModID}:Delve. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "Innate. NL ${ModID}:Quest: Draw 7 cards. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
@@ -555,11 +555,11 @@
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve 3 times. NL Complete your ${ModID}:Quests."
   },
   "${ModID}:Lunchbox": {
     "NAME": "Lunch Box",
-    "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Picked: Heal 3 HP."
+    "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Picked: Heal 4 HP."
   },
   "${ModID}:ProTank": {
     "NAME": "Seal Away",
@@ -602,7 +602,7 @@
   },
   "${ModID}:ExtraTentacle": {
     "NAME": "Extra Tentacle",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Raise your Max HP by 1.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Raise your max hand size by 1.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Exhaust."
     ]

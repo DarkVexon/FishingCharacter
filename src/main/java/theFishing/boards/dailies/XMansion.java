@@ -3,7 +3,6 @@ package theFishing.boards.dailies;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;

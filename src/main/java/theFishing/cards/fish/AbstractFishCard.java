@@ -128,11 +128,16 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
         public List<TooltipInfo> additionalTooltips(AbstractCard card) {
             ArrayList<TooltipInfo> tips = new ArrayList<>();
             if (weightedFishList.containsKey(card.cardID))
-                tips.add(new TooltipInfo(uiStrings.TEXT[1], "#b"+weightedFishList.get(card.cardID)+"%"));
+                tips.add(new TooltipInfo(uiStrings.TEXT[1], "#b" + weightedFishList.get(card.cardID) + "%"));
             return tips;
         }
 
-        public boolean isInherent(AbstractCard card) {return true;}
-        public AbstractCardModifier makeCopy() {return new RarityTipModifier();}
+        public boolean isInherent(AbstractCard card) {
+            return true;
+        }
+
+        public AbstractCardModifier makeCopy() {
+            return new RarityTipModifier();
+        }
     }
 }

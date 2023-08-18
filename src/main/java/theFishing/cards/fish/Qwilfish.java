@@ -2,7 +2,6 @@ package theFishing.cards.fish;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
 import static theFishing.FishingMod.makeID;

@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theFishing.cards.fish.AbstractFishCard;
 import theFishing.patch.PreDrawPatch;
 
 import static theFishing.FishingMod.makeID;

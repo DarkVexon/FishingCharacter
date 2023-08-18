@@ -2,13 +2,11 @@ package theFishing.boards.dailies;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.cardmods.StickerRetainMod;
 
-import static theFishing.util.Wiz.makeInHand;
 import static theFishing.util.Wiz.makeInHandTop;
 
 public class MegaCrit extends AbstractBoard {

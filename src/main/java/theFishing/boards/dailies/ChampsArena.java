@@ -1,7 +1,6 @@
 package theFishing.boards.dailies;
 
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.FishingMod;

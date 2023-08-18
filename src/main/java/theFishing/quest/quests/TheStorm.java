@@ -15,7 +15,7 @@ public class TheStorm extends AbstractQuest {
     public static final String ID = makeID("TheStorm");
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
-    private int totalDmg;
+    private final int totalDmg;
 
     public TheStorm(int totalDmg) {
         super(ID, 6);

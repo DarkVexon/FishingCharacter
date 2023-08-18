@@ -1,6 +1,5 @@
 package theFishing.patch;
 
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,8 +10,6 @@ import com.megacrit.cardcrawl.ui.panels.DrawPilePanel;
 import javassist.CtBehavior;
 import theFishing.FishingMod;
 import theFishing.boards.dailies.TowerOfSkies;
-
-import java.lang.reflect.Field;
 
 @SpirePatch(clz = DrawPilePanel.class, method = "render")
 public class TowerOfSkiesPatch {

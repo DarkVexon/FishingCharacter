@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CtBehavior;
 import theFishing.FishingMod;
-import theFishing.TheFishing;
 import theFishing.quest.QuestHelper;
 import theFishing.util.Wiz;
 
@@ -34,6 +33,9 @@ public class QuestLogPatches {
                 if (Wiz.isInCombat()) {
                     if (!QuestHelper.quests.isEmpty()) {
                         QuestHelper.render(sb);
+                    }
+                    if (FishingMod.activeBoard != null) {
+                        FishingMod.activeBoard.render(sb);
                     }
                 }
             }

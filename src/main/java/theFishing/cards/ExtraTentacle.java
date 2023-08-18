@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -7,7 +8,6 @@ import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static theFishing.FishingMod.makeID;
@@ -38,6 +38,6 @@ public class ExtraTentacle extends AbstractFishingCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.player.increaseMaxHp(1, false);
+        BaseMod.MAX_HAND_SIZE += 1;
     }
 }

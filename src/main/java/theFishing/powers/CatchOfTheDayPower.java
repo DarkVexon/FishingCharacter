@@ -7,7 +7,6 @@ import theFishing.cards.fish.AbstractFishCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.shuffleIn;
-import static theFishing.util.Wiz.topDeck;
 
 public class CatchOfTheDayPower extends AbstractAdventurerPower {
     public static String ID = makeID(CatchOfTheDayPower.class.getSimpleName());

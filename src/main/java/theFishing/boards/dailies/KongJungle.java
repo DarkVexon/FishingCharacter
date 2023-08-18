@@ -1,6 +1,5 @@
 package theFishing.boards.dailies;
 
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.cards.Banana;
