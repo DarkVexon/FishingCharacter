@@ -23,7 +23,6 @@ public class KeyToTheCity extends AbstractFishingCard {
     public KeyToTheCity() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 9;
-        isMultiDamage = true;
         tags.add(FishingMod.DELVES);
         baseMagicNumber = magicNumber = 3;
     }
