@@ -31,7 +31,7 @@ public class TheCannon extends AbstractBoard {
 
     private int cannonValue = 4;
 
-    private static final float CANNON_X = 750F * Settings.scale;
+    private static final float CANNON_X = 700F * Settings.scale;
     private static final float CANNON_Y = 325F * Settings.scale;
     private static final float CANNON_SIZE = 150F * Settings.scale;
 
