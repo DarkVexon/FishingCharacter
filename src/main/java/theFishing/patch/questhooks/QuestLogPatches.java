@@ -34,7 +34,7 @@ public class QuestLogPatches {
                     if (!QuestHelper.quests.isEmpty()) {
                         QuestHelper.render(sb);
                     }
-                    if (FishingMod.activeBoard != null) {
+                    if (FishingMod.activeBoard != null && FishingMod.activeBoard.shouldBeActive()) {
                         FishingMod.activeBoard.render(sb);
                     }
                 }

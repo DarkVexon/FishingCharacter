@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -31,8 +31,8 @@ public class TheCannon extends AbstractBoard {
 
     private int cannonValue = 4;
 
-    private static final float CANNON_X = 700F * Settings.scale;
-    private static final float CANNON_Y = 325F * Settings.scale;
+    private static final float CANNON_X = 650F * Settings.scale;
+    private static final float CANNON_Y = 320F * Settings.scale;
     private static final float CANNON_SIZE = 150F * Settings.scale;
 
     private final Hitbox hb;
@@ -84,7 +84,7 @@ public class TheCannon extends AbstractBoard {
             AbstractMonster tar = AbstractDungeon.getRandomMonster();
             atb(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
             vfx(new SmallLaserEffect(CANNON_X + (100 * Settings.scale), CANNON_Y + (100 * Settings.scale), tar.hb.cX, tar.hb.cY), 0.1F);
-            atb(new DamageAllEnemiesAction(AbstractDungeon.player, cannonValue, DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
+            atb(new DamageAction(tar, new DamageInfo(AbstractDungeon.player, cannonValue, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
         }
     }
 }

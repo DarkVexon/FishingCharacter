@@ -3,9 +3,11 @@ package theFishing.boards;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.FishingMod;
+import theFishing.TheFishing;
 import theFishing.boards.dailies.*;
 import theFishing.util.Wiz;
 
@@ -35,6 +37,10 @@ public abstract class AbstractBoard {
                 return null;
             }
         }
+    }
+
+    public boolean shouldBeActive() {
+        return AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING);
     }
 
     public AbstractBoard(String ID) {

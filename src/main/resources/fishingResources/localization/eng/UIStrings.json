@@ -42,7 +42,7 @@
   "${ModID}:ThePrismaticPortal": {
     "TEXT": [
       "The Prismatic Portal",
-      "#yQuest: Draw #b7 cards. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
+      "#yQuest: Play #b7 cards. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
     ]
   },
   "${ModID}:TheStorm": {

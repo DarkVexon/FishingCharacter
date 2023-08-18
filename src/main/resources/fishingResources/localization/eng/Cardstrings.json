@@ -402,7 +402,7 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "Innate. NL ${ModID}:Quest: Draw 7 cards. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "Innate. NL ${ModID}:Quest: Play 7 cards. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
@@ -484,7 +484,7 @@
   },
   "${ModID}:TheKeyReturns": {
     "NAME": "The Key Finisher",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Complete your ${ModID}:Quests."
+    "DESCRIPTION": "Deal !D! damage. NL Complete your ${ModID}:Quests. NL Draw !M! cards."
   },
   "${ModID}:Hindsight": {
     "NAME": "Hindsight",
@@ -555,7 +555,7 @@
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests. NL Draw !M! cards."
   },
   "${ModID}:Lunchbox": {
     "NAME": "Lunch Box",

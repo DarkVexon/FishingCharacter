@@ -12,6 +12,8 @@ import theFishing.quest.QuestHelper;
 public class EndOfTurnPatch {
     public static void Postfix(GameActionManager __instance) {
         QuestHelper.atEndOfTurn();
-        FishingMod.activeBoard.atEndOfTurn();
+        if (FishingMod.activeBoard != null && FishingMod.activeBoard.shouldBeActive()) {
+            FishingMod.activeBoard.atEndOfTurn();
+        }
     }
 }
