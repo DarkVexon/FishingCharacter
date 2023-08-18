@@ -48,16 +48,17 @@ public abstract class AbstractBoard {
     //TODO: Make this better. automatically add classes with autoadd and split by type as an enum stored in each class
 
     static {
+        ids.put(TheCannon.ID, TheCannon.class);
+        ids.put(Circuitry.ID, Circuitry.class);
+        ids.put(Termina.ID, Termina.class);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
         ids.put(TheStarship.ID, TheStarship.class);
-        ids.put(Termina.ID, Termina.class);
         ids.put(MegaCrit.ID, MegaCrit.class);
         ids.put(TombOfRorrim.ID, TombOfRorrim.class);
         ids.put(ChampsArena.ID, ChampsArena.class);
-        ids.put(TowerOfSkies.ID, TowerOfSkies.class);
         ids.put(XMansion.ID, XMansion.class);
-        ids.put(Circuitry.ID, Circuitry.class);
-        ids.put(TheCannon.ID, TheCannon.class);
+        ids.put(TowerOfSkies.ID, TowerOfSkies.class);
+
 
         complexIds.put(KongJungle.ID, KongJungle.class);
         complexIds.put(TheDeep.ID, TheDeep.class);

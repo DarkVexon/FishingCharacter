@@ -96,7 +96,7 @@
     "NAME": "Magic Box",
     "FLAVOR": "What will be inside today?",
     "DESCRIPTIONS": [
-      "At the start of combat, #yfishing:Delve."
+      "Upon pickup, put #y${ModID}:Delve sticker on a random card in your deck."
     ]
   }
 }

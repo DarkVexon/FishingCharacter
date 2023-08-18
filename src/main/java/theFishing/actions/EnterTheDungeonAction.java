@@ -11,7 +11,6 @@ import theFishing.powers.OnEnterDungeonPower;
 public class EnterTheDungeonAction extends AbstractGameAction {
     @Override
     public void update() {
-        addToTop(new AnimateHopAction(AbstractDungeon.player));
         FishingMod.activeBoard.proceed();
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnEnterDungeonPower) {
@@ -25,6 +24,7 @@ public class EnterTheDungeonAction extends AbstractGameAction {
                 }
             }
         }
+        addToTop(new AnimateHopAction(AbstractDungeon.player));
         isDone = true;
     }
 }
