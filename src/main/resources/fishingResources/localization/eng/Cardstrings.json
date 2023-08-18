@@ -302,8 +302,7 @@
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
-    "DESCRIPTION": "${ModID}:Delve. NL Add a ${ModID}:Foil *Flag into your hand.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Delve. NL Add a ${ModID}:Foil *Flag+ into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Apply 1 Weak to ALL enemies. NL ${ModID}:Delve."
   },
   "${ModID}:Flag": {
     "NAME": "Flag",
@@ -518,10 +517,7 @@
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
-    "DESCRIPTION": "Opener. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp.",
-    "EXTENDED_DESCRIPTION": [
-      "I can't play this Opener after other cards."
-    ]
+    "DESCRIPTION": "Lose 1 HP. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp."
   },
   "${ModID}:Stone": {
     "NAME": "Stone",
