@@ -96,7 +96,7 @@
     "NAME": "Magic Box",
     "FLAVOR": "What will be inside today?",
     "DESCRIPTIONS": [
-      "Upon pickup, put #y${ModID}:Delve sticker on a random card in your deck."
+      "Upon pickup, put a #y${ModID}:Delve sticker on a random card in your deck."
     ]
   }
 }

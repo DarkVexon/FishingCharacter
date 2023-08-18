@@ -27,7 +27,6 @@ public class SetupButBetter extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        uDesc();
+        upgradeDamage(3);
     }
 }

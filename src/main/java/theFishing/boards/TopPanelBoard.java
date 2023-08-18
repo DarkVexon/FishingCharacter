@@ -45,10 +45,10 @@ public class TopPanelBoard extends TopPanelItem {
                     case 0:
                         image = ICON_ST1;
                         break;
-                    case 2:
+                    case 1:
                         image = ICON_ST2;
                         break;
-                    case 3:
+                    case 2:
                         image = ICON_ST3;
                         break;
                 }
@@ -57,22 +57,11 @@ public class TopPanelBoard extends TopPanelItem {
             }
             render(sb, Color.WHITE);
             if (Wiz.isInCombat()) {
-                switch (FishingMod.activeBoard.progress) {
-                    case 0:
-                        image = ICON_ST1;
-                        break;
-                    case 2:
-                        image = ICON_ST2;
-                        break;
-                    case 3:
-                        image = ICON_ST3;
-                        break;
-                }
-                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelAmountFont, Integer.toString((FishingMod.activeBoard.progress + 1) % FishingMod.activeBoard.effects.size()), this.x + 58.0F * Settings.scale, this.y + 25.0F * Settings.scale, Color.WHITE.cpy());
+                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelAmountFont, Integer.toString(FishingMod.activeBoard.progress + 1), this.x + 58.0F * Settings.scale, this.y + 25.0F * Settings.scale, Color.WHITE.cpy());
             }
             if (getHitbox().hovered) {
                 if (Wiz.isInCombat()) {
-                    TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription() + uiStrings.TEXT[2] + ((FishingMod.activeBoard.progress + 1) % FishingMod.activeBoard.effects.size()) + LocalizedStrings.PERIOD);
+                    TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription() + uiStrings.TEXT[2] + (FishingMod.activeBoard.progress + 1) + LocalizedStrings.PERIOD);
                 } else {
                     TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription());
                 }

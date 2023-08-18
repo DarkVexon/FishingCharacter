@@ -555,7 +555,7 @@
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve 3 times. NL Complete your ${ModID}:Quests."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests."
   },
   "${ModID}:Lunchbox": {
     "NAME": "Lunch Box",

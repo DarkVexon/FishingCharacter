@@ -88,11 +88,11 @@ public abstract class AbstractBoard {
 
     public void proceed() {
         FishingMod.delvedThisTurn = true;
+        effects.get(progress).run();
         progress += 1;
-        if (progress > effects.size()) {
-            progress = 1;
+        if (progress == 3) {
+            progress = 0;
         }
-        effects.get(progress - 1).run();
     }
 
     public void reset() {
@@ -125,22 +125,30 @@ public abstract class AbstractBoard {
         StringBuilder sb = new StringBuilder();
         boolean no2 = !getLocString(id).TEXT_DICT.containsKey("F2");
         boolean no3 = !getLocString(id).TEXT_DICT.containsKey("F3");
-        int value = progress % effects.size();
-        if ((value == 1 || (value == 2 && no2) || (value == 3 && no3)) && Wiz.isInCombat()) {
+        int value = (progress + 1);
+        if (value == 1 && Wiz.isInCombat()) {
             sb.append("#r");
         }
         sb.append("1");
         if (no2) {
-            sb.append(" & 2");
+            sb.append(" & ");
+            if (value == 2 && Wiz.isInCombat()) {
+                sb.append("#r");
+            }
+            sb.append("2");
         }
         if (no3) {
-            sb.append(" & 3");
+            sb.append(" & ");
+            if (value == 3 && Wiz.isInCombat()) {
+                sb.append("#r");
+            }
+            sb.append("3");
         }
         sb.append(": ");
         sb.append(getLocString(id).TEXT_DICT.get("F1"));
         if (!no2) {
             sb.append(" NL ");
-            if (value == 2) {
+            if (value == 2 && Wiz.isInCombat()) {
                 sb.append("#r");
             }
             sb.append("2: ");
@@ -148,7 +156,7 @@ public abstract class AbstractBoard {
         }
         if (!no3) {
             sb.append(" NL ");
-            if (value == 3) {
+            if (value == 3 && Wiz.isInCombat()) {
                 sb.append("#r");
             }
             sb.append("3: ");
@@ -182,14 +190,6 @@ public abstract class AbstractBoard {
     }
 
     public void update() {
-
-    }
-
-    public String onSave() {
-        return "";
-    }
-
-    public void onLoad(String s) {
 
     }
 }
