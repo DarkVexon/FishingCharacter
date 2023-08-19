@@ -95,10 +95,10 @@ public class FoilPatches {
                         q.price *= Newsletter.SHOP_CARD_PRICE_REDUCE;
                     }
                 } else {
-                    AbstractCard target1 = coloredCards.remove(AbstractDungeon.cardRng.random(coloredCards.size() - 1));
+                    AbstractCard target1 = coloredCards.get(AbstractDungeon.cardRng.random(coloredCards.size() - 1));
                     makeFoil(target1);
                     target1.price *= SHOP_FOIL_MARKUP;
-                    AbstractCard target2 = colorlessCards.remove(AbstractDungeon.cardRng.random(colorlessCards.size() - 1));
+                    AbstractCard target2 = colorlessCards.get(AbstractDungeon.cardRng.random(colorlessCards.size() - 1));
                     makeFoil(target2);
                     target2.price *= SHOP_FOIL_MARKUP;
                 }
