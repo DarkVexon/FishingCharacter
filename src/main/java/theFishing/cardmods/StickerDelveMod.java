@@ -19,6 +19,13 @@ public class StickerDelveMod extends AbstractStickerModifier {
     }
 
     @Override
+    public void onInitialApplication(AbstractCard card) {
+        if (!card.hasTag(FishingMod.DELVES)) {
+            card.tags.add(FishingMod.DELVES);
+        }
+    }
+
+    @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         atb(new AbstractGameAction() {
             @Override

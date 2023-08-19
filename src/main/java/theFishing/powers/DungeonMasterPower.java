@@ -21,15 +21,9 @@ public class DungeonMasterPower extends AbstractAdventurerPower implements OnCom
     @Override
     public void onDungeonComplete() {
         flash();
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                for (int i = 0; i < DungeonMasterPower.this.amount; i++) {
-                    FishingMod.activeBoard.effects.get(FishingMod.activeBoard.effects.size() - 1).run();
-                }
-            }
-        });
+        for (int i = 0; i < DungeonMasterPower.this.amount; i++) {
+            FishingMod.activeBoard.effects.get(FishingMod.activeBoard.effects.size() - 1).run();
+        }
     }
 
     @Override

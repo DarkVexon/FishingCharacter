@@ -36,9 +36,6 @@ public class TheRod extends AbstractAdventurerRelic {
                 if (!not0.isEmpty()) {
                     AbstractCard target;
                     target = Wiz.getRandomItem(not0);
-                    if (target.canUpgrade()) {
-                        target.upgrade();
-                    }
                     target.freeToPlayOnce = true;
                     target.superFlash(Color.GOLD.cpy());
                 }

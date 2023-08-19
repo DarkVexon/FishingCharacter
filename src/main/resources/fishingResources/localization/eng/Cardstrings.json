@@ -155,12 +155,7 @@
   },
   "${ModID}:PowerPellet": {
     "NAME": "Power Pellet",
-    "DESCRIPTION": "*Waka *Wakas deal !M! additional damage. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Power Pellet",
-      "#yWaka #yWakas deal #b",
-      " additional damage."
-    ]
+    "DESCRIPTION": "*Waka *Wakas deal !M! additional damage. NL Exhaust."
   },
   "${ModID}:Cannoneer": {
     "NAME": "Cannoneer",
@@ -168,15 +163,11 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Sand Dollars",
-    "DESCRIPTION": "Draw 1 card. NL Startup: Gain !M! *Gold."
+    "DESCRIPTION": "After you play a cost X card, gain [E]. NL ${ModID}:Picked: Gain 30 Gold."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
     "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend !M! to gain an extra 1 Strength."
-  },
-  "${ModID}:Reserves": {
-    "NAME": "Reserves",
-    "DESCRIPTION": "After you play a cost X card, gain [E]."
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
@@ -280,12 +271,7 @@
   },
   "${ModID}:Crosshairs": {
     "NAME": "Crosshairs",
-    "DESCRIPTION": "Whenever you play an X-cost card, deal !M! damage to the frontmost enemy.",
-    "EXTENDED_DESCRIPTION": [
-      "Crosshairs",
-      "Whenever you play an X-cost card, deal #b",
-      " damage to the frontmost enemy."
-    ]
+    "DESCRIPTION": "Whenever you play an X-cost card, deal !M! damage to the frontmost enemy."
   },
   "${ModID}:RidiculousFishing": {
     "NAME": "Ridiculous Fishing",
@@ -415,17 +401,6 @@
     "NAME": "Perfect Pull",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random ${ModID}:Foil card in your hand to 0 this turn."
   },
-  "${ModID}:ShimmeringShank": {
-    "NAME": "Shimmering Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you play a ${ModID}:Foil card this turn, add a *Shiv into your hand.",
-    "EXTENDED_DESCRIPTION": [
-      "Shimmering Shield",
-      "Whenever you play a #yFoil card this turn, add #b",
-      " #yShiv",
-      " #yShivs",
-      " into your hand."
-    ]
-  },
   "${ModID}:MaybeLater": {
     "NAME": "Maybe Later",
     "DESCRIPTION": "Deal !D! damage. NL Put a card from your hand on top of your draw pile. NL If you do, gain !B! Block."
@@ -492,16 +467,6 @@
   "${ModID}:BeastSlayer": {
     "NAME": "Beast Slayer",
     "DESCRIPTION": "Deal !D! damage. NL In Elite combats, deal !${ModID}:sd! damage instead."
-  },
-  "${ModID}:SicklyShine": {
-    "NAME": "Sickly Shine",
-    "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, apply !M! Poison to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a ${ModID}:Foil card, apply !M! Poison to ALL enemies.",
-    "EXTENDED_DESCRIPTION": [
-      "Sickly Shine",
-      "Whenever you play a #yFoil card, apply #b",
-      " #yPoison to ALL enemies."
-    ]
   },
   "${ModID}:Standoff": {
     "NAME": "Standoff",
@@ -628,5 +593,9 @@
   "${ModID}:StrikeX": {
     "NAME": "Strike-X",
     "DESCRIPTION": "Deal !D! damage X times."
+  },
+  "${ModID}:Bioluminescence": {
+    "NAME": "Bioluminescence",
+    "DESCRIPTION": "Whenever you gain extra Energy, gain !M! Strength."
   }
 }

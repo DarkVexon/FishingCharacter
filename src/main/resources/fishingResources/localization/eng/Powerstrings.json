@@ -167,5 +167,12 @@
       "Your next #b",
       " Skills cost #b0."
     ]
+  },
+  "${ModID}:BioluminescencePower": {
+    "NAME": "Bioluminescnece",
+    "DESCRIPTIONS": [
+      "Whenever you gain extra Energy, gain #b",
+      " #yStrength."
+    ]
   }
 }

@@ -26,7 +26,7 @@ public class StickerHPLossMod extends AbstractStickerModifier {
             @Override
             public void update() {
                 isDone = true;
-                att(new LoseHPAction(AbstractDungeon.getRandomMonster(), AbstractDungeon.player, 8));
+                att(new LoseHPAction(AbstractDungeon.getRandomMonster(), AbstractDungeon.player, 7));
             }
         });
     }

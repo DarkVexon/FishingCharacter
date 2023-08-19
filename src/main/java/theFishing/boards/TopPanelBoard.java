@@ -23,9 +23,9 @@ public class TopPanelBoard extends TopPanelItem {
     public static final String ID = FishingMod.makeID("BoardInfo");
 
     public static final Texture ICON = TexLoader.getTexture("fishingResources/images/ui/candle_ooc.png");
-    public static final Texture ICON_ST1 = TexLoader.getTexture("fishingResources/images/ui/candle3.png");
+    public static final Texture ICON_ST1 = TexLoader.getTexture("fishingResources/images/ui/candle1.png");
     public static final Texture ICON_ST2 = TexLoader.getTexture("fishingResources/images/ui/candle2.png");
-    public static final Texture ICON_ST3 = TexLoader.getTexture("fishingResources/images/ui/candle1.png");
+    public static final Texture ICON_ST3 = TexLoader.getTexture("fishingResources/images/ui/candle3.png");
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TopPanelBoard() {
