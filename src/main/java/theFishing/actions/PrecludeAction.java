@@ -23,7 +23,7 @@ public class PrecludeAction extends AbstractGameAction {
         isDone = true;
         for (AbstractMonster q : Wiz.getEnemies()) {
             if (q.hasPower(TimeWarpPower.POWER_ID)) {
-                q.getPower(TimeWarpPower.POWER_ID).amount = 0;
+                q.getPower(TimeWarpPower.POWER_ID).amount = -1;
                 q.getPower(TimeWarpPower.POWER_ID).flash();
                 if (q instanceof TimeEater && AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.cardID.equals(Preclude.ID)).count() == 1) {
                     att(new TalkAction(q, TEXT[0]));
