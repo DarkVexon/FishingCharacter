@@ -21,8 +21,10 @@ public class StormCompletionAction extends AbstractGameAction {
     public void update() {
         isDone = true;
         AbstractMonster target = AbstractDungeon.getRandomMonster();
-        att(new LoseHPAction(target, AbstractDungeon.player, totalDmg));
-        att(new VFXAction(new LightningEffect(target.drawX, target.drawY), 0.05F));
-        att(new SFXAction("ORB_LIGHTNING_EVOKE"));
+        if (target != null) {
+            att(new LoseHPAction(target, AbstractDungeon.player, totalDmg));
+            att(new VFXAction(new LightningEffect(target.drawX, target.drawY), 0.05F));
+            att(new SFXAction("ORB_LIGHTNING_EVOKE"));
+        }
     }
 }

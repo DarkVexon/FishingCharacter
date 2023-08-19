@@ -83,9 +83,11 @@ public class TheCannon extends AbstractBoard {
     public void atEndOfTurn() {
         if (EnergyPanel.totalCount > 0) {
             AbstractMonster tar = AbstractDungeon.getRandomMonster();
-            atb(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            vfx(new SmallLaserEffect(CANNON_X + (100 * Settings.scale), CANNON_Y + (100 * Settings.scale), tar.hb.cX, tar.hb.cY), 0.1F);
-            atb(new DamageAction(tar, new DamageInfo(AbstractDungeon.player, cannonValue, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+            if (tar != null) {
+                atb(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                vfx(new SmallLaserEffect(CANNON_X + (100 * Settings.scale), CANNON_Y + (100 * Settings.scale), tar.hb.cX, tar.hb.cY), 0.1F);
+                atb(new DamageAction(tar, new DamageInfo(AbstractDungeon.player, cannonValue, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+            }
         }
     }
 }

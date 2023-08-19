@@ -133,12 +133,8 @@
   },
   "${ModID}:AllOut": {
     "NAME": "All Out",
-    "DESCRIPTION": "Discard 1 card. NL At the end of your turn, if your hand is empty, deal !M! damage to ALL enemies.",
-    "EXTENDED_DESCRIPTION": [
-      "All Out",
-      "At the end of your turn, if your hand is empty, deal #b",
-      " damage to ALL enemies."
-    ]
+    "DESCRIPTION": "Discard 2 cards. NL The first time your hand is empty each turn, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Discard 2 cards. NL The first !M! times your hand is empty each turn, draw 1 card."
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Bulb",
@@ -253,7 +249,7 @@
   },
   "${ModID}:ChocolateChipCookie": {
     "NAME": "Chocolate Chip Cookie",
-    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand for the rest of combat. Exhaust.",
+    "DESCRIPTION": "Heal !M! HP. NL Gain 1 Dexterity. NL Upgrade all cards in your hand for the rest of combat. Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "mmm..."
     ]

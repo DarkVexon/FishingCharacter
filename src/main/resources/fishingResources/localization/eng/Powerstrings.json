@@ -92,8 +92,13 @@
   "${ModID}:AllOutPower": {
     "NAME": "All Out",
     "DESCRIPTIONS": [
-      "At the end of your turn, if your hand is empty, deal #b",
-      " damage to ALL enemies."
+      "The first time your hand is empty each turn, draw #b1 card.",
+      "The first #b",
+      " times your hand is empty each turn, draw #b1 card.",
+      " NL #b",
+      " trigger",
+      " triggers",
+      " left."
     ]
   },
   "${ModID}:DungeonMasterPower": {

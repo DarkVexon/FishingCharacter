@@ -18,14 +18,13 @@ public class ChocolateChipCookie extends AbstractFishingCard {
     public ChocolateChipCookie() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 5;
-        baseSecondMagic = secondMagic = 1;
         exhaust = true;
         tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new HealAction(p, p, magicNumber));
-        applyToSelf(new DexterityPower(p, secondMagic));
+        applyToSelf(new DexterityPower(p, 1));
         atb(new ArmamentsAction(true));
         atb(new TalkAction(true, cardStrings.EXTENDED_DESCRIPTION[0], 1F, 2F));
     }
@@ -36,7 +35,6 @@ public class ChocolateChipCookie extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(3);
     }
 }

@@ -14,16 +14,17 @@ public class AllOut extends AbstractFishingCard {
     // intellij stuff power, self, uncommon, , , , , 9, 3
 
     public AllOut() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 7;
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DiscardAction(p, p, 1, false));
+        atb(new DiscardAction(p, p, 2, false));
         applyToSelf(new AllOutPower(magicNumber));
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(1);
+        uDesc();
     }
 }
