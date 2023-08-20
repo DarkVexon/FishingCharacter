@@ -566,8 +566,7 @@
   },
   "${ModID}:Leviathan": {
     "NAME": "Leviathan",
-    "DESCRIPTION": "Whenever a Curse is Exhausted, gain 3 Strength and Block. NL ${ModID}:Picked: Obtain a *Rot.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a Curse is Exhausted, gain 3 Strength and Block. NL ${ModID}:Picked: Obtain a *Rot."
+    "DESCRIPTION": "Whenever a Curse is Exhausted, gain !M! Strength and !M! Block. NL ${ModID}:Picked: Obtain a *Rot."
   },
   "${ModID}:SpecialCurse": {
     "NAME": "Rot",
@@ -596,7 +595,8 @@
   },
   "${ModID}:Bioluminescence": {
     "NAME": "Bioluminescence",
-    "DESCRIPTION": "Whenever you gain extra Energy, gain !M! Strength."
+    "DESCRIPTION": "Whenever you gain extra Energy, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you gain extra Energy, gain !M! Strength."
   },
   "${ModID}:GolemGuardian": {
     "NAME": "Golem Guardian",

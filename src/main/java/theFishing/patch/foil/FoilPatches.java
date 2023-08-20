@@ -32,7 +32,7 @@ public class FoilPatches {
 
     // GAMEPLAY STUFF
 
-    public static final int FOIL_RARITY = 4; // 1 out of X card rewards
+    public static final int FOIL_RARITY = 3; // 1 out of X card rewards
 
     public static final float SHOP_FOIL_MARKUP = 1.1F; // how much more expensive foils should be
 

@@ -18,15 +18,15 @@ public class Leviathan extends AbstractFishingCard implements OnObtainCard {
     public Leviathan() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new SpecialCurse();
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LeviathanPower(3));
+        applyToSelf(new LeviathanPower(magicNumber));
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeMagicNumber(1);
     }
 
     @Override

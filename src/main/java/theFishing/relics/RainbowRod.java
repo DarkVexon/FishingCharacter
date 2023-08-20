@@ -26,11 +26,10 @@ public class RainbowRod extends AbstractAdventurerRelic {
             public void update() {
                 isDone = true;
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                    if (c.canUpgrade()) c.upgrade();
-                    c.cost = 0;
-                    c.costForTurn = 0;
-                    c.isCostModified = true;
-                    c.superFlash(Color.GOLD.cpy());
+                    if (c.cost > 0) {
+                        c.freeToPlayOnce = true;
+                        c.superFlash(Color.GOLD.cpy());
+                    }
                 }
             }
         });
