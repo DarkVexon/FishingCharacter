@@ -297,7 +297,9 @@ public class FishingMod implements
     public void receiveStartGame() {
         if (!CardCrawlGame.loadingSave) {
             activeBoard = AbstractBoard.getRunBoard();
-            activeBoard.atRunStart();
+            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
+                activeBoard.atRunStart();
+            }
         }
     }
 }

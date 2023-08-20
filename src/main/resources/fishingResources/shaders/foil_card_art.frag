@@ -56,9 +56,9 @@ mat4 saturationMatrix(float saturation) {
 void main() {
     vec4 outputColor = rgba(vec2(0, 0));
 
-    outputColor = saturationMatrix(0.6) * outputColor;
-    brightnessAdjust(outputColor, 0.125);
-    contrastAdjust(outputColor, 1.1);
+    //outputColor = saturationMatrix(0.6) * outputColor;
+    //brightnessAdjust(outputColor, 0.125);
+    //contrastAdjust(outputColor, 1.1);
     vec4 hueShifted = shiftHue(outputColor.rgb, shift_amt);
 
     gl_FragColor = vec4(hueShifted.r, hueShifted.g, hueShifted.b, outputColor.a);

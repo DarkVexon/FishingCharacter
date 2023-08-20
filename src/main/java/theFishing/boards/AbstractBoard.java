@@ -49,42 +49,31 @@ public abstract class AbstractBoard {
     }
 
     private static final HashMap<String, Class<? extends AbstractBoard>> ids = new LinkedHashMap<>();
-    private static final HashMap<String, Class<? extends AbstractBoard>> complexIds = new LinkedHashMap<>();
-
-    //TODO: Make this better. automatically add classes with autoadd and split by type as an enum stored in each class
 
     static {
+        ids.put(ChampsArena.ID, ChampsArena.class);
         ids.put(TheCannon.ID, TheCannon.class);
-        ids.put(Circuitry.ID, Circuitry.class);
         ids.put(Termina.ID, Termina.class);
+        ids.put(Circuitry.ID, Circuitry.class);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
         ids.put(TheStarship.ID, TheStarship.class);
         ids.put(MegaCrit.ID, MegaCrit.class);
         ids.put(TombOfRorrim.ID, TombOfRorrim.class);
-        ids.put(ChampsArena.ID, ChampsArena.class);
         ids.put(XMansion.ID, XMansion.class);
         ids.put(TowerOfSkies.ID, TowerOfSkies.class);
-
-
-        complexIds.put(KongJungle.ID, KongJungle.class);
-        complexIds.put(TheDeep.ID, TheDeep.class);
-        complexIds.put(TheFactory.ID, TheFactory.class);
-        complexIds.put(WatchersTemple.ID, WatchersTemple.class);
-        complexIds.put(WhereItFell.ID, WhereItFell.class);
+        ids.put(KongJungle.ID, KongJungle.class);
+        ids.put(TheDeep.ID, TheDeep.class);
+        ids.put(WhereItFell.ID, WhereItFell.class);
+        ids.put(WatchersTemple.ID, WatchersTemple.class);
     }
 
     private static final String debugOverride = null;
 
     public static AbstractBoard getRunBoard() {
         Calendar calendar = Calendar.getInstance();
-        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
         int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
         ArrayList<String> idsToUse = new ArrayList<>();
-        if (dayOfWeek == Calendar.SUNDAY || dayOfWeek == Calendar.MONDAY) {
-            idsToUse.addAll(complexIds.keySet());
-        } else {
-            idsToUse.addAll(ids.keySet());
-        }
+        idsToUse.addAll(ids.keySet());
         if (debugOverride != null && CardCrawlGame.playerName.toLowerCase().contains("vex")) {
             return getBoardByID(debugOverride);
         } else {
@@ -108,9 +97,9 @@ public abstract class AbstractBoard {
 
     public static AbstractBoard getBoardByID(String ID) {
         try {
-            if (ids.containsKey(ID)) return ids.get(ID).newInstance();
-            else if (complexIds.containsKey(ID)) return complexIds.get(ID).newInstance();
-            else {
+            if (ids.containsKey(ID)) {
+                return ids.get(ID).newInstance();
+            } else {
                 System.out.println("ERROR! Couldn't find board by ID");
                 return new ChampsArena();
             }

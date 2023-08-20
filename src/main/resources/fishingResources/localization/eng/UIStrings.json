@@ -140,8 +140,7 @@
       "Temple of the Third Eye"
     ],
     "TEXT_DICT": {
-      "F1": "#yScry #b3.",
-      "F2": "Add a #ySmite into your hand.",
+      "F1": "Add a #ySmite into your hand.",
       "F3": "Attacks deal #b50% more damage this turn."
     }
   },
