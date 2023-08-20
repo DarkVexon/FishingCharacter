@@ -2,10 +2,13 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
@@ -18,14 +21,17 @@ public class ChocolateChipCookie extends AbstractFishingCard {
     public ChocolateChipCookie() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 5;
+        baseSecondMagic = secondMagic = 1;
         exhaust = true;
         tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new RemoveSpecificPowerAction(p, p, WeakPower.POWER_ID));
+        atb(new RemoveSpecificPowerAction(p, p, VulnerablePower.POWER_ID));
+        atb(new RemoveSpecificPowerAction(p, p, FrailPower.POWER_ID));
         atb(new HealAction(p, p, magicNumber));
-        applyToSelf(new DexterityPower(p, 1));
-        atb(new ArmamentsAction(true));
+        applyToSelf(new DexterityPower(p, secondMagic));
         atb(new TalkAction(true, cardStrings.EXTENDED_DESCRIPTION[0], 1F, 2F));
     }
 
@@ -35,6 +41,7 @@ public class ChocolateChipCookie extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

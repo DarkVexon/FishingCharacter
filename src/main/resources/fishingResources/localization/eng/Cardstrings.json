@@ -240,7 +240,7 @@
   },
   "${ModID}:ChocolateChipCookie": {
     "NAME": "Chocolate Chip Cookie",
-    "DESCRIPTION": "Heal !M! HP. NL Gain 1 Dexterity. NL Upgrade all cards in your hand for the rest of combat. Exhaust.",
+    "DESCRIPTION": "Remove your Weak, Vulnerable, and Frail. NL Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "mmm..."
     ]
@@ -597,5 +597,9 @@
   "${ModID}:Bioluminescence": {
     "NAME": "Bioluminescence",
     "DESCRIPTION": "Whenever you gain extra Energy, gain !M! Strength."
+  },
+  "${ModID}:GolemGuardian": {
+    "NAME": "Golem Guardian",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you apply a debuff to an enemy, they take !M! damage."
   }
 }
