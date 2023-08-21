@@ -52,14 +52,14 @@ public abstract class AbstractBoard {
 
     static {
         ids.put(ChampsArena.ID, ChampsArena.class);
-        ids.put(TheCannon.ID, TheCannon.class);
+        ids.put(XMansion.ID, XMansion.class);
         ids.put(Termina.ID, Termina.class);
-        ids.put(Circuitry.ID, Circuitry.class);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
         ids.put(TheStarship.ID, TheStarship.class);
         ids.put(MegaCrit.ID, MegaCrit.class);
+        ids.put(TheCannon.ID, TheCannon.class);
         ids.put(TombOfRorrim.ID, TombOfRorrim.class);
-        ids.put(XMansion.ID, XMansion.class);
+        ids.put(Circuitry.ID, Circuitry.class);
         ids.put(TowerOfSkies.ID, TowerOfSkies.class);
         ids.put(KongJungle.ID, KongJungle.class);
         ids.put(TheDeep.ID, TheDeep.class);
