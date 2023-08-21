@@ -3,6 +3,7 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import theFishing.util.Wiz;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
@@ -32,7 +33,7 @@ public class PyramidClimber extends AbstractFishingCard {
 
     @Override
     public boolean freeToPlay() {
-        if (isSolo()) {
+        if (Wiz.isInCombat() && isSolo()) {
             return true;
         }
         return super.freeToPlay();
