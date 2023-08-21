@@ -15,6 +15,6 @@ public class WhereItFell extends AbstractBoard {
         super(ID);
         effects.add(() -> makeInHandTop(new StarShard()));
         effects.add(() -> makeInHandTop(new StarShard()));
-        effects.add(() -> atb(new DrawCardAction(3)));
+        effects.add(() -> atb(new DrawCardAction(2)));
     }
 }

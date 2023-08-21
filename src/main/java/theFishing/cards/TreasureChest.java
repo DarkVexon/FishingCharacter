@@ -1,19 +1,14 @@
 package theFishing.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import theFishing.powers.ReservesPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.atb;
 
 public class TreasureChest extends AbstractFishingCard implements OnObtainCard {
     public final static String ID = makeID("TreasureChest");

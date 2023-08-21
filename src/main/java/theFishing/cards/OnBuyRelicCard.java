@@ -1,4 +1,4 @@
-package theFishing.patch;
+package theFishing.cards;
 
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 

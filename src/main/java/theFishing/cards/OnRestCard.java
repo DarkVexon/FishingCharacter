@@ -1,4 +1,4 @@
-package theFishing.patch;
+package theFishing.cards;
 
 public interface OnRestCard {
     void onRest();

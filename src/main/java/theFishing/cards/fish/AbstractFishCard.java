@@ -25,6 +25,8 @@ import static theFishing.FishingMod.makeID;
 public abstract class AbstractFishCard extends AbstractFishingCard {
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("FishDescriptor"));
+    public static LinkedHashMap<String, Integer> weightedFishList;
+    public static LinkedHashMap<String, Integer> maelstromFishList;
 
     public AbstractFishCard(String cardID, AbstractCard.CardType type, AbstractCard.CardTarget target) {
         super(cardID, 0, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);
@@ -33,17 +35,6 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
         setupLists();
         CardModifierManager.addModifier(this, new RarityTipModifier());
     }
-
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        fishEffect(p, m);
-        addToBot(new DrawCardAction(thirdMagic));
-    }
-
-    public abstract void fishEffect(AbstractPlayer p, AbstractMonster m);
-
-    public static LinkedHashMap<String, Integer> weightedFishList;
-    public static LinkedHashMap<String, Integer> maelstromFishList;
 
     public static AbstractCard returnRandomFish() {
         if (AbstractDungeon.player.hasRelic(MaelstromAnkh.ID)) {
@@ -108,6 +99,14 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
         }
         return new Madness();
     }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        fishEffect(p, m);
+        addToBot(new DrawCardAction(thirdMagic));
+    }
+
+    public abstract void fishEffect(AbstractPlayer p, AbstractMonster m);
 
     @Override
     public List<String> getCardDescriptors() {

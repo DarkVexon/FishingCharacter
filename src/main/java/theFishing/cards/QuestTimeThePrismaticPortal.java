@@ -1,6 +1,5 @@
 package theFishing.cards;
 
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
@@ -15,7 +14,7 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
 
     public QuestTimeThePrismaticPortal() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        MultiCardPreview.add(this, new QuestTimeTheGemSearch(), new TheEternityGem());
+        cardsToPreview = new QuestTimeTheGemSearch();
         isInnate = true;
     }
 

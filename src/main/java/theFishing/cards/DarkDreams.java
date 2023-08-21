@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
-import theFishing.patch.OnRestCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToEnemy;

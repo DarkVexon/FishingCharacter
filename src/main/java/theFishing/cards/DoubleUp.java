@@ -2,7 +2,9 @@ package theFishing.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 import theFishing.actions.AllEnemyLoseHPAction;
@@ -10,6 +12,7 @@ import theFishing.actions.EnterTheDungeonAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class DoubleUp extends AbstractFishingCard implements StartupCard {
     public final static String ID = makeID("DoubleUp");
@@ -27,14 +30,14 @@ public class DoubleUp extends AbstractFishingCard implements StartupCard {
         atb(new EnterTheDungeonAction());
     }
 
-    @Override
-    public boolean atBattleStartPreDraw() {
-        atb(new AllEnemyLoseHPAction(magicNumber));
-        return true;
-    }
-
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
+    }
+
+    @Override
+    public boolean atBattleStartPreDraw() {
+        atb(new GainBlockAction(AbstractDungeon.player, magicNumber));
+        return false;
     }
 }

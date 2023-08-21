@@ -25,6 +25,15 @@ public class GazeOfTheGods extends AbstractFishingCard {
         baseMagicNumber = magicNumber = 30;
     }
 
+    private static String scream() {
+        int roll = MathUtils.random(1);
+        if (roll == 0) {
+            return "VO_NEMESIS_2A";
+        } else {
+            return "VO_NEMESIS_2B";
+        }
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SFXAction(scream()));
         vfx(new GiantEyeEffect(p.hb.cX, p.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.4F, 0.8F, 0.0F)));
@@ -36,16 +45,6 @@ public class GazeOfTheGods extends AbstractFishingCard {
     public void triggerOnExhaust() {
         atb(new ReduceCostAction(this));
         atb(new ExhaustToHandAction(this));
-    }
-
-
-    private static String scream() {
-        int roll = MathUtils.random(1);
-        if (roll == 0) {
-            return "VO_NEMESIS_2A";
-        } else {
-            return "VO_NEMESIS_2B";
-        }
     }
 
     public void upp() {

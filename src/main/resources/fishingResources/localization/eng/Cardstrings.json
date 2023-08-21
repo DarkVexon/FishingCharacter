@@ -195,8 +195,7 @@
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Edan's Box",
-    "DESCRIPTION": "Draw until you draw !M! Energy worth of cards. NL X counts as 0. NL ${ModID}:Solo: Gain [E] [E].",
-    "UPGRADE_DESCRIPTION": "Draw until you draw !M! Energy worth of cards. NL X counts as 0. NL ${ModID}:Solo: Gain [E] [E] [E]."
+    "DESCRIPTION": "Draw until you draw !M! Energy worth of cards. NL X counts as 0. NL Startup: ALL enemies lose !${ModID}:m2! HP."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Barbed",
@@ -416,7 +415,7 @@
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Add a *Stone into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Solo: Costs 0."
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
@@ -474,7 +473,7 @@
   },
   "${ModID}:DoubleUp": {
     "NAME": "Head Start",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Startup: ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Startup: Gain !M! Block."
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
