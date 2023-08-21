@@ -26,7 +26,7 @@ void main() {
     float tmp = mod(x_time / 3.0, 1.5);
     val = val - tmp;
     float line_size = 0.075;
-    if (outputColor.a > 0 && outputColor.r > 0 && outputColor.g > 0 && outputColor.b > 0) {
+    if (outputColor.a > 0 || outputColor.r > 0 || outputColor.g > 0 || outputColor.b > 0) {
         if (val - v_texCoords.y < (line_size / 3) && val - v_texCoords.y > -(line_size/3))
         {
             outputColor.r = outputColor.r + 0.1;

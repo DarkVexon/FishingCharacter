@@ -600,5 +600,10 @@
   "${ModID}:GolemGuardian": {
     "NAME": "Golem Guardian",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you apply a debuff to an enemy, they take !M! damage."
+  },
+  "${ModID}:Energize": {
+    "NAME": "Energize",
+    "DESCRIPTION": "Gain [E] [E]. NL Increase this card's cost by 1 this combat.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Increase this card's cost by 1 this combat."
   }
 }
