@@ -2,8 +2,10 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.applyToSelf;
 
 public class PyramidClimber extends AbstractFishingCard {
     public final static String ID = makeID(PyramidClimber.class.getSimpleName());
@@ -11,11 +13,12 @@ public class PyramidClimber extends AbstractFishingCard {
 
     public PyramidClimber() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        applyToSelf(new NextTurnBlockPower(p, block, this.originalName));
     }
 
     @Override
@@ -24,7 +27,7 @@ public class PyramidClimber extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 
     @Override

@@ -415,7 +415,7 @@
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Solo: Costs 0."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !B! Block. NL ${ModID}:Solo: Costs 0."
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
