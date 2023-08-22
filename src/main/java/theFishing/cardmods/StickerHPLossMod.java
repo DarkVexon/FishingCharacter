@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 
 import static theFishing.util.Wiz.atb;
@@ -26,7 +27,9 @@ public class StickerHPLossMod extends AbstractStickerModifier {
             @Override
             public void update() {
                 isDone = true;
-                att(new LoseHPAction(AbstractDungeon.getRandomMonster(), AbstractDungeon.player, 7));
+                AbstractMonster q = AbstractDungeon.getRandomMonster();
+                if (q != null)
+                    att(new LoseHPAction(q, AbstractDungeon.player, 7));
             }
         });
     }
