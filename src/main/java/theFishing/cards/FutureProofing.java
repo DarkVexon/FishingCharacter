@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.FutureProofingAction;
 import theFishing.effects.ColoredBeamEffect;
+import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -26,7 +27,9 @@ public class FutureProofing extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SFXAction("ATTACK_DEFECT_BEAM"));
-        atb(new VFXAction(new ColoredBeamEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractDungeon.player.flipHorizontal, Color.RED.cpy(), Color.FIREBRICK.cpy()), 0.4F));
+        Color c = FoilPatches.isFoil(this) ? Color.BLUE.cpy() : Color.RED.cpy();
+        Color c2 = FoilPatches.isFoil(this) ? Color.SKY.cpy() : Color.FIREBRICK.cpy();
+        atb(new VFXAction(new ColoredBeamEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractDungeon.player.flipHorizontal, c, c2), 0.4F));
         allDmg(AbstractGameAction.AttackEffect.FIRE);
         atb(new FutureProofingAction(magicNumber));
     }

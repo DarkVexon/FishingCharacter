@@ -24,7 +24,7 @@ public class VexingDeal extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        vfx(new GiantEyeEffect(p.hb.cX, p.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.8F, 1.0F, 0.0F)));
+        vfx(new GiantEyeEffect(p.hb.cX, p.hb.cY + 300.0F * Settings.scale, new Color(0.98431372549F, 0.94901960784F, 0.21176470588F, 0.0F)));
         applyToSelf(new VexingDealPower());
         if (AbstractDungeon.ascensionLevel >= 10) {
             vfx(new InflameEffect(p));

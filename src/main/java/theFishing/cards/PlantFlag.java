@@ -15,7 +15,7 @@ public class PlantFlag extends AbstractFishingCard {
 
     public PlantFlag() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
         tags.add(FishingMod.DELVES);
     }
 

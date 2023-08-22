@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
-import com.megacrit.cardcrawl.vfx.combat.ThirdEyeEffect;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -36,8 +36,8 @@ public class GazeOfTheGods extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SFXAction(scream()));
-        vfx(new GiantEyeEffect(p.hb.cX, p.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.4F, 0.8F, 0.0F)));
-        vfx(new ThirdEyeEffect(m.hb.cX, m.hb.cY));
+        vfx(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(0.98431372549F, 0.94901960784F, 0.21176470588F, 0.0F)));
+        vfx(new LightningEffect(m.drawX, m.drawY), 0.05F);
         atb(new LoseHPAction(m, p, magicNumber));
     }
 

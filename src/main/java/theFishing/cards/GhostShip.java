@@ -1,14 +1,18 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.ExhaustToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.vfx;
 
 public class GhostShip extends AbstractFishingCard {
     public final static String ID = makeID("GhostShip");
@@ -21,7 +25,8 @@ public class GhostShip extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        vfx(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     @Override
