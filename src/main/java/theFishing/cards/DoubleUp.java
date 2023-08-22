@@ -3,9 +3,11 @@ package theFishing.cards;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import theFishing.FishingMod;
 import theFishing.actions.AllEnemyLoseHPAction;
 import theFishing.actions.EnterTheDungeonAction;
@@ -37,7 +39,8 @@ public class DoubleUp extends AbstractFishingCard implements StartupCard {
 
     @Override
     public boolean atBattleStartPreDraw() {
-        atb(new GainBlockAction(AbstractDungeon.player, magicNumber));
-        return false;
+        AbstractDungeon.effectList.add(new RainingGoldEffect(this.magicNumber, true));
+        atb(new GainGoldAction(this.magicNumber));
+        return true;
     }
 }

@@ -17,11 +17,12 @@ public class ThatsAllFolks extends AbstractFishingCard {
     public ThatsAllFolks() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        applyToEnemy(m, new VulnerablePower(m, 1, false));
+        applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         if (isSolo()) {
             applyToEnemy(m, new VulnerablePower(m, 2, false));
         }
@@ -32,6 +33,7 @@ public class ThatsAllFolks extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

@@ -15,7 +15,6 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
     public QuestTimeThePrismaticPortal() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new QuestTimeTheGemSearch();
-        isInnate = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,7 +22,8 @@ public class QuestTimeThePrismaticPortal extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        isInnate = true;
+        uDesc();
     }
 
     @Override

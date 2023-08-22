@@ -17,7 +17,7 @@ public class DarkDepths extends AbstractFishingCard implements OnObtainCard {
 
     public DarkDepths() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 16;
+        baseDamage = 17;
         cardsToPreview = new Candle();
     }
 

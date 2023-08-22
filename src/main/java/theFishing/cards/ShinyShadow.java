@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
+import com.megacrit.cardcrawl.vfx.combat.ViceCrushEffect;
 import theFishing.actions.PlayFromPileAction;
 import theFishing.patch.foil.FoilPatches;
 
@@ -23,7 +23,7 @@ public class ShinyShadow extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        vfx(new DarkOrbActivateEffect(m.hb.cX, m.hb.cY));
+        vfx(new ViceCrushEffect(m.hb.cX, m.hb.cY), 0.5F);
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new SelectCardsAction(AbstractDungeon.player.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0], false, (c) -> FoilPatches.isFoil(c), (cards) -> {
             for (AbstractCard q : cards) {

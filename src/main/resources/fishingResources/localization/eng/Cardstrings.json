@@ -71,7 +71,7 @@
   },
   "${ModID}:ThatsAllFolks": {
     "NAME": "That's All, Folks!",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Vulnerable. NL ${ModID}:Solo: Apply 2 more Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${ModID}:Solo: Apply 2 more Vulnerable."
   },
   "${ModID}:Wander": {
     "NAME": "Wander",
@@ -353,10 +353,7 @@
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Quest: Play 3 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 3 Strength.",
-    "EXTENDED_DESCRIPTION": [
-      "Choose a Fish."
-    ]
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Quest: Play 3 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 3 Strength."
   },
   "${ModID}:SoleSight": {
     "NAME": "For Old Times' Sake",
@@ -382,7 +379,8 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "Innate. NL ${ModID}:Quest: Play 7 cards. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "${ModID}:Quest: Play 7 cards. NL *Reward: Shuffle *The *Gem *Search into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Quest: Play 7 cards. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
@@ -472,8 +470,8 @@
     "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! this combat."
   },
   "${ModID}:DoubleUp": {
-    "NAME": "Head Start",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Startup: Gain !M! Block."
+    "NAME": "Fund the Expedition",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Startup: Gain !M! Gold."
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
@@ -565,7 +563,8 @@
   },
   "${ModID}:Leviathan": {
     "NAME": "Leviathan",
-    "DESCRIPTION": "Whenever a Curse is Exhausted, gain !M! Strength and !M! Block. NL ${ModID}:Picked: Obtain a *Rot."
+    "DESCRIPTION": "Whenever a Curse is Exhausted, gain !M! Strength and !M! Block. NL ${ModID}:Picked: Obtain a *Rot.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a Curse is Exhausted, gain !M! Strength and !M! Block. NL ${ModID}:Picked: Obtain a *Rot."
   },
   "${ModID}:SpecialCurse": {
     "NAME": "Rot",

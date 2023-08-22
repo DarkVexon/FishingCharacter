@@ -21,7 +21,6 @@ public class Bioluminescence extends AbstractFishingCard {
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeBaseCost(0);
     }
 }

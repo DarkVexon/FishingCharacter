@@ -32,7 +32,7 @@ public class RingTheBell extends AbstractFishingCard implements OnObtainCard {
     @Override
     public void onObtainCard() {
         CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), Settings.WIDTH / 2, Settings.HEIGHT / 2));
+        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), Settings.WIDTH / 2F, Settings.HEIGHT / 2F));
     }
 
     public void upp() {
