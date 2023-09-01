@@ -2,14 +2,18 @@ package theFishing;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -17,6 +21,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -35,9 +40,10 @@ import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractAdventurerRelic;
 import theFishing.util.FoilSparkleHandler;
 import theFishing.util.Wiz;
-
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Properties;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -80,6 +86,8 @@ public class FishingMod implements
     public static ArrayList<AbstractCard> voyagedCards = new ArrayList<>();
 
     private static FishingMod fishingMod;
+    public static SpireConfig config;
+    public static boolean foilAnywhere;
 
     @SpireEnum
     public static AbstractCard.CardTags DELVES;
@@ -114,7 +122,12 @@ public class FishingMod implements
         return modID + "Resources/images/cards/" + resourcePath;
     }
 
-    public static void initialize() {
+    public static void initialize() throws IOException {
+        Properties defaults = new Properties();
+        defaults.setProperty("foilanywhere", "false");
+        config = new SpireConfig(modID, "config", defaults);
+        foilAnywhere = config.getBool("foilanywhere");
+
         fishingMod = new FishingMod();
     }
 
@@ -231,6 +244,18 @@ public class FishingMod implements
         }
 
         BaseMod.addTopPanelItem(new TopPanelBoard());
+
+
+
+
+        String[] TEXT = CardCrawlGame.languagePack.getUIString(makeID("ConfigMenu")).TEXT;
+        ModPanel settingsPanel = new ModPanel();
+        settingsPanel.addUIElement(new ModLabeledToggleButton(TEXT[3], 350, 800, Settings.CREAM_COLOR, FontHelper.charDescFont, config.getBool("foilanywhere"), settingsPanel, label -> {}, button -> {
+            foilAnywhere = button.enabled;
+            config.setBool("foilanywhere", button.enabled);
+            try {config.save();} catch (Exception e) {}
+        }));
+        BaseMod.registerModBadge(new Texture(makeImagePath("ui/badge.png")), TEXT[0], TEXT[1], TEXT[2], settingsPanel);
     }
 
     public static float time = 0f;
