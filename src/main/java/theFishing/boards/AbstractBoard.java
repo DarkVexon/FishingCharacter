@@ -167,6 +167,10 @@ public abstract class AbstractBoard {
 
     }
 
+    public void triggerOnDraw(AbstractCard drawnCard) {
+
+    }
+
     public void atRunStart() {
 
     }

@@ -212,8 +212,8 @@
   },
   "${ModID}:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal+ into your hand. NL Exhaust."
+    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal into your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL Add a *Steal+ into your hand. Exhaust."
   },
   "${ModID}:Steal": {
     "NAME": "Steal",
@@ -290,7 +290,7 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] and draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged or ${ModID}:Solo: Gain [E] and draw 1 card."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -469,8 +469,8 @@
     "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! this combat."
   },
   "${ModID}:DoubleUp": {
-    "NAME": "Head Start",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve."
+    "NAME": "Dungeon Crawl",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Deals !M! additional damage for each ${ModID}:Delve this combat."
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
@@ -516,7 +516,7 @@
   },
   "${ModID}:ProTank": {
     "NAME": "Seal Away",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Delve twice."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Delve. NL ${ModID}:Picked: Obtain a *Candle."
   },
   "${ModID}:GlogusEgg": {
     "NAME": "Glogus Egg",

@@ -21,6 +21,9 @@ public class TowerOfSkiesPatch {
         if (FishingMod.activeBoard == null || !FishingMod.activeBoard.id.equals(TowerOfSkies.ID) || AbstractDungeon.isScreenUp) {
             return;
         }
+        if (!FishingMod.activeBoard.shouldBeActive()) {
+            return;
+        }
         if (AbstractDungeon.player.drawPile.isEmpty()) {
             return;
         }

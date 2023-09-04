@@ -8,6 +8,9 @@ import theFishing.FishingMod;
 import theFishing.powers.OnCompleteDungeonPower;
 
 public class EnterTheDungeonAction extends AbstractGameAction {
+
+    public static int timesDelvedThisCombat = 0;
+
     @Override
     public void update() {
         if (FishingMod.activeBoard.progress == 2) {
@@ -18,6 +21,7 @@ public class EnterTheDungeonAction extends AbstractGameAction {
             }
         }
         FishingMod.activeBoard.proceed();
+        timesDelvedThisCombat++;
         addToTop(new AnimateHopAction(AbstractDungeon.player));
         isDone = true;
     }

@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import theFishing.actions.EnterTheDungeonAction;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.TopPanelBoard;
 import theFishing.cards.AbstractFishingCard;
@@ -205,6 +206,7 @@ public class FishingMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         PreDrawPatch.DRAWN_DURING_TURN = false;
+        EnterTheDungeonAction.timesDelvedThisCombat = 0;
 
         QuestHelper.reset();
         activeBoard.reset();

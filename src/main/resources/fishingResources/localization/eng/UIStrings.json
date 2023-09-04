@@ -131,6 +131,7 @@
       "The Colosseum"
     ],
     "TEXT_DICT": {
+      "SP": "#yUpgrade the first Attack you draw each combat.",
       "F1": "Add #b1 #yShiv into your hand.",
       "F3": "Gain #b2 #yStrength."
     }

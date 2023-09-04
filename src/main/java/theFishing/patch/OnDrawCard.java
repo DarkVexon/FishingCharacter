@@ -23,6 +23,9 @@ public class OnDrawCard {
                 FishingMod.voyagedCards.add(c);
             }
             QuestHelper.quests.stream().forEach(q -> q.onDrawCard());
+            if (FishingMod.activeBoard.shouldBeActive()) {
+                FishingMod.activeBoard.triggerOnDraw(c);
+            }
         }
 
         private static class Locator extends SpireInsertLocator {
