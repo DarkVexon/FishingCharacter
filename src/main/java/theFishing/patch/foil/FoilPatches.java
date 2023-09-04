@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import javassist.CtBehavior;
+import theFishing.FishingMod;
 import theFishing.TheFishing;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.relics.Newsletter;
@@ -58,6 +59,10 @@ public class FoilPatches {
         }
     }
 
+    private static boolean canBeFoil() {
+        return AbstractDungeon.player != null && (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING) || FishingMod.foilAnywhere);
+    }
+
     @SpirePatch(clz = AbstractCard.class, method = "makeStatEquivalentCopy")
     public static class FoilCopies {
         public static AbstractCard Postfix(AbstractCard __result, AbstractCard __instance) {
@@ -72,7 +77,7 @@ public class FoilPatches {
     @SpirePatch2(clz = AbstractDungeon.class, method = "getRewardCards")
     public static class FoilInRewards {
         public static void Postfix(ArrayList<AbstractCard> __result) {
-            if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING) {
+            if (canBeFoil()) {
                 if (AbstractDungeon.cardRng.random(0, FOIL_RARITY) == 0)
                     makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRng));
             }
@@ -82,7 +87,7 @@ public class FoilPatches {
     @SpirePatch(clz = ShopScreen.class, method = "initCards")
     public static class FoilInShops {
         public static void Postfix(ShopScreen __instance) {
-            if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING) {
+            if (canBeFoil()) {
                 ArrayList<AbstractCard> coloredCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "coloredCards");
                 ArrayList<AbstractCard> colorlessCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
                 if (AbstractDungeon.player.hasRelic(Newsletter.ID)) {
@@ -129,7 +134,7 @@ public class FoilPatches {
     @SpirePatch(clz = NeowReward.class, method = "getColorlessRewardCards")
     public static class NeowFoils1 {
         public static ArrayList<AbstractCard> Postfix(ArrayList<AbstractCard> __result, NeowReward __instance, boolean rareOnly) {
-            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
+            if (canBeFoil()) {
                 if (AbstractDungeon.cardRng.random(0, FOIL_RARITY) == 0)
                     makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRandomRng));
             }
@@ -140,7 +145,7 @@ public class FoilPatches {
     @SpirePatch(clz = NeowReward.class, method = "getRewardCards")
     public static class NeowFoils2 {
         public static ArrayList<AbstractCard> Postfix(ArrayList<AbstractCard> __result, NeowReward __instance, boolean rareOnly) {
-            if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
+            if (canBeFoil()) {
                 if (AbstractDungeon.cardRng.random(0, FOIL_RARITY) == 0)
                     makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRandomRng));
             }
