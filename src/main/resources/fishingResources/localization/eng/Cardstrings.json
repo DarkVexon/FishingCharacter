@@ -133,8 +133,7 @@
   },
   "${ModID}:AllOut": {
     "NAME": "All Out",
-    "DESCRIPTION": "Discard 2 cards. NL The first time your hand is empty each turn, draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Discard 2 cards. NL The first !M! times your hand is empty each turn, draw 1 card."
+    "DESCRIPTION": "Discard 2 cards. NL The first !M! times your hand is empty each turn, draw 1 card."
   },
   "${ModID}:GarlicClove": {
     "NAME": "Garlic Bulb",
@@ -400,7 +399,7 @@
   },
   "${ModID}:MaybeLater": {
     "NAME": "Maybe Later",
-    "DESCRIPTION": "Deal !D! damage. NL Put a card from your hand on top of your draw pile. NL If you do, gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. Deal !D! damage. NL Put a card from your hand on top of your draw pile."
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
@@ -470,8 +469,8 @@
     "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! this combat."
   },
   "${ModID}:DoubleUp": {
-    "NAME": "Fund the Expedition",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Startup: Gain !M! Gold."
+    "NAME": "Head Start",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve."
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",

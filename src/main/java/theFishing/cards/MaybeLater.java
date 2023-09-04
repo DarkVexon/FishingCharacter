@@ -1,9 +1,10 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.MaybeLaterAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -19,8 +20,9 @@ public class MaybeLater extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        atb(new MaybeLaterAction(block));
+        atb(new PutOnDeckAction(AbstractDungeon.player, AbstractDungeon.player, 1, false));
     }
 
     public void upp() {
