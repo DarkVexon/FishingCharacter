@@ -399,7 +399,7 @@
   },
   "${ModID}:MaybeLater": {
     "NAME": "Maybe Later",
-    "DESCRIPTION": "Gain !B! Block. Deal !D! damage. NL Put a card from your hand on top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Put a card from your hand on top of your draw pile."
   },
   "${ModID}:MintCondition": {
     "NAME": "Mint Condition",
@@ -474,7 +474,7 @@
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
-    "DESCRIPTION": "Lose 1 HP. NL Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp."
+    "DESCRIPTION": "Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp."
   },
   "${ModID}:Stone": {
     "NAME": "Stone",
@@ -491,7 +491,7 @@
   },
   "${ModID}:DungeonMaster": {
     "NAME": "Dungeon Master",
-    "DESCRIPTION": "Whenever you complete the Dungeon, trigger its final Room !M! additional times."
+    "DESCRIPTION": "Whenever you complete the Dungeon, trigger its final room !M! additional times."
   },
   "${ModID}:GazeOfTheGods": {
     "NAME": "Yawning Void",
