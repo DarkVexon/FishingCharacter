@@ -63,7 +63,7 @@ public abstract class AbstractBoard {
         ids.put(WhereItFell.ID, WhereItFell.class);
     }
 
-    private static final String debugOverride = null;
+    private static final String debugOverride = WizvexTower.ID;
 
     public static AbstractBoard getRunBoard() {
         Calendar calendar = Calendar.getInstance();

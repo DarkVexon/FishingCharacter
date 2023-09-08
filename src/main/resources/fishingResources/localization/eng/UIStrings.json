@@ -289,7 +289,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Start combat with four Spells. When they run out, refill them!",
-      "F1": "Choose a Spell to put into your hand.",
+      "F1": "Choose a Spell to put into your hand...",
       "F3": "... and it costs 0."
     }
   }
