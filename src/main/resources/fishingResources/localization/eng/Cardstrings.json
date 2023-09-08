@@ -249,10 +249,10 @@
   },
   "${ModID}:FullHouse": {
     "NAME": "Three of a Kind",
-    "DESCRIPTION": "Choose a card in your draw pile. NL Shuffle !M! ${ModID}:Foil copies into your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Choose a card. NL Shuffle !M! ${ModID}:Foil copies of that card into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Four of a Kind",
-      "Choose a card to duplicate."
+      "duplicate."
     ]
   },
   "${ModID}:Fishbones": {
@@ -603,5 +603,22 @@
     "NAME": "Energize",
     "DESCRIPTION": "Gain [E] [E]. NL Increase this card's cost by 1 this combat.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Increase this card's cost by 1 this combat."
+  },
+  "${ModID}:Thunderbolt": {
+    "NAME": "Thunderbolt",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "${ModID}:BurningStudy": {
+    "NAME": "Burning Study",
+    "DESCRIPTION": "Exhaust 1 card. NL Gain !M! Strength. NL Exhaust."
+  },
+  "${ModID}:Cryostasis": {
+    "NAME": "Cryostasis",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
+  },
+  "${ModID}:Darkleech": {
+    "NAME": "Darkleech",
+    "DESCRIPTION": "ALL enemies lose !M! HP. NL Draw !${ModID}:m2! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! HP. NL Draw !${ModID}:m2! cards. NL Exhaust."
   }
 }

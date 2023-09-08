@@ -1,14 +1,17 @@
 package theFishing.cards;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.actions.FullHouseAction2;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.patch.foil.FoilPatches.isFoil;
+import static theFishing.patch.foil.FoilPatches.makeFoil;
+import static theFishing.util.Wiz.att;
 
 public class FullHouse extends AbstractFishingCard {
     public final static String ID = makeID("FullHouse");
@@ -29,11 +32,15 @@ public class FullHouse extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        CardGroup possCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (AbstractCard q : p.drawPile.group) {
-            possCards.addToRandomSpot(q);
-        }
-        addToBot(new FullHouseAction2(possCards, magicNumber));
+        addToBot(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[1], (cards) -> {
+            for (AbstractCard q : cards) {
+                AbstractCard tar = q.makeStatEquivalentCopy();
+                if (!isFoil(tar)) {
+                    makeFoil(tar);
+                }
+                att(new MakeTempCardInDrawPileAction(tar, magicNumber, true, true));
+            }
+        }));
     }
 
     @Override

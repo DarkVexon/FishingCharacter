@@ -1,6 +1,5 @@
 package theFishing.boards.dailies;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -13,8 +12,6 @@ import static theFishing.util.Wiz.makeInHandTop;
 public class ChampsArena extends AbstractBoard {
     public static final String ID = FishingMod.makeID(ChampsArena.class.getSimpleName());
 
-    private boolean activatedThisCombat = false;
-
     public ChampsArena() {
         super(ID);
         effects.add(() -> makeInHandTop(new Shiv()));
@@ -23,16 +20,7 @@ public class ChampsArena extends AbstractBoard {
     }
 
     @Override
-    public void atBattleStartPreDraw() {
-        activatedThisCombat = false;
-    }
-
-    @Override
-    public void triggerOnDraw(AbstractCard drawnCard) {
-        if (!activatedThisCombat && drawnCard.type == AbstractCard.CardType.ATTACK && drawnCard.canUpgrade()) {
-            drawnCard.upgrade();
-            drawnCard.superFlash();
-            activatedThisCombat = true;
-        }
+    public void atRunStart() {
+        AbstractDungeon.player.masterDeck.group.get(4).upgrade();
     }
 }

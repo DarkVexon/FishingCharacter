@@ -131,7 +131,7 @@
       "The Colosseum"
     ],
     "TEXT_DICT": {
-      "SP": "#yUpgrade the first Attack you draw each combat.",
+      "SP": "Start with one Strike #yUpgraded.",
       "F1": "Add #b1 #yShiv into your hand.",
       "F3": "Gain #b2 #yStrength."
     }
@@ -281,6 +281,16 @@
       "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b4 damage to a random enemy.",
       "F1": "Increase the Cannon's damage by #b4.",
       "F3": "Gain [E] ."
+    }
+  },
+  "${ModID}:WizvexTower": {
+    "TEXT": [
+      "Wizvex Tower"
+    ],
+    "TEXT_DICT": {
+      "SP": "Start combat with four Spells. When they run out, refill them!",
+      "F1": "Choose a Spell to put into your hand.",
+      "F3": "... and it costs 0."
     }
   }
 }

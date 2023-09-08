@@ -52,18 +52,15 @@ public abstract class AbstractBoard {
 
     static {
         ids.put(ChampsArena.ID, ChampsArena.class);
-        ids.put(XMansion.ID, XMansion.class);
+        ids.put(WizvexTower.ID, WizvexTower.class);
         ids.put(Termina.ID, Termina.class);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
-        ids.put(TheStarship.ID, TheStarship.class);
         ids.put(MegaCrit.ID, MegaCrit.class);
         ids.put(Circuitry.ID, Circuitry.class);
-        ids.put(TowerOfSkies.ID, TowerOfSkies.class);
         ids.put(TheCannon.ID, TheCannon.class);
         ids.put(KongJungle.ID, KongJungle.class);
         ids.put(TheDeep.ID, TheDeep.class);
         ids.put(WhereItFell.ID, WhereItFell.class);
-        ids.put(WatchersTemple.ID, WatchersTemple.class);
     }
 
     private static final String debugOverride = null;
@@ -167,10 +164,6 @@ public abstract class AbstractBoard {
 
     }
 
-    public void triggerOnDraw(AbstractCard drawnCard) {
-
-    }
-
     public void atRunStart() {
 
     }
@@ -188,6 +181,14 @@ public abstract class AbstractBoard {
     }
 
     public void update() {
+
+    }
+
+    public void postPlayerRender(SpriteBatch sb) {
+
+    }
+
+    public void prePlayerRender(SpriteBatch sb) {
 
     }
 }
