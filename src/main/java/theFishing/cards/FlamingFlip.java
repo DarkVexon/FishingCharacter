@@ -1,8 +1,8 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.FlamingFlipAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -13,13 +13,12 @@ public class FlamingFlip extends AbstractFishingCard {
 
     public FlamingFlip() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 5;
-        selfRetain = true;
+        baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new ExhaustAction(1, false, false, false));
+        atb(new FlamingFlipAction());
     }
 
     public void upp() {

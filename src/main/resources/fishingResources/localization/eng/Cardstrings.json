@@ -182,7 +182,7 @@
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! ${ModID}:Foil *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
+    "DESCRIPTION": "Exhaust 1 card. NL Add !M! ${ModID}:Foil *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
   },
   "${ModID}:ShipRam": {
     "NAME": "Collision Course",
@@ -190,7 +190,7 @@
   },
   "${ModID}:FlamingFlip": {
     "NAME": "Straw Sleeves",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust 1 card."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Next turn, add a copy of it into your hand."
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Edan's Box",
@@ -340,7 +340,7 @@
   },
   "${ModID}:FastingB": {
     "NAME": "Turtle",
-    "DESCRIPTION": "Gain !M! Thorns. NL At the start of your turn, discard 1 card and gain !M! Block."
+    "DESCRIPTION": "Gain !M! Thorns. NL At the end of your turn, gain !M! Block. NL At the start of your turn, draw 1 less card."
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Tempest",
@@ -563,8 +563,8 @@
   },
   "${ModID}:Leviathan": {
     "NAME": "Leviathan",
-    "DESCRIPTION": "Whenever a Curse is Exhausted, gain !M! Strength and !M! Block. NL ${ModID}:Picked: Obtain a *Rot.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a Curse is Exhausted, gain !M! Strength and !M! Block. NL ${ModID}:Picked: Obtain a *Rot."
+    "DESCRIPTION": "Whenever a Curse is Exhausted, gain !M! Strength and !${ModID}:m2! Block. NL ${ModID}:Picked: Obtain a *Rot.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a Curse is Exhausted, gain !M! Strength and !${ModID}:m2! Block. NL ${ModID}:Picked: Obtain a *Rot."
   },
   "${ModID}:SpecialCurse": {
     "NAME": "Rot",
@@ -598,7 +598,7 @@
   },
   "${ModID}:GolemGuardian": {
     "NAME": "Golem Guardian",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you apply a debuff to an enemy, they take !M! damage."
+    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! this combat."
   },
   "${ModID}:Energize": {
     "NAME": "Energize",

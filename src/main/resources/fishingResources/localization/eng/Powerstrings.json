@@ -2,9 +2,9 @@
   "${ModID}:TakeItEasyPower": {
     "NAME": "Discard Each Turn",
     "DESCRIPTIONS": [
-      "At the start of your turn, discard #b",
-      " card.",
-      " cards."
+      "At the start of your turn, draw #b",
+      " less card.",
+      " less cards."
     ]
   },
   "${ModID}:TakeItEasyBlockPower": {
@@ -158,7 +158,8 @@
     "NAME": "Leviathan",
     "DESCRIPTIONS": [
       "Whenever a #rCurse is #yExhausted, gain #b",
-      " #yStrength and #yBlock."
+      " #yStrength and #b",
+      " #yBlock."
     ]
   },
   "${ModID}:NextSkillFreePower": {
@@ -174,6 +175,21 @@
     "DESCRIPTIONS": [
       "Whenever you gain extra Energy, gain #b",
       " #yStrength."
+    ]
+  },
+  "${ModID}:AddCopyNextTurnPower": {
+    "NAME": "Gaining Card",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, add ",
+      " into your hand."
+    ]
+  },
+  "${ModID}:NextCardsExhaustPower": {
+    "NAME": "Next Cards Exhaust",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " time you play an Attack or Skill, #yExhaust it.",
+      " times you play an Attack or Skill, #yExhaust it."
     ]
   }
 }

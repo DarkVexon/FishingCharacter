@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,6 +9,7 @@ import theFishing.patch.foil.FoilPatches;
 import theFishing.patch.foil.FoilShiny;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.makeInHand;
 
 public class DeckedOut extends AbstractFishingCard {
@@ -16,7 +18,6 @@ public class DeckedOut extends AbstractFishingCard {
 
     public DeckedOut() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 4;
         baseMagicNumber = magicNumber = 2;
         AbstractCard q = new Shiv();
         FoilPatches.makeFoil(q);
@@ -24,7 +25,7 @@ public class DeckedOut extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        atb(new ExhaustAction(1, false, false, false));
         AbstractCard q = new Shiv();
         FoilPatches.makeFoil(q);
         if (FoilShiny.FoilCardsShine.isOnSteamDeck()) {

@@ -23,6 +23,11 @@
       "Exhaust for Mop Up."
     ]
   },
+  "${ModID}:FlamingFlipAction": {
+    "TEXT": [
+      "Exhaust for Straw Sleeves."
+    ]
+  },
   "${ModID}:FishDescriptor": {
     "TEXT": [
       "Fish",
