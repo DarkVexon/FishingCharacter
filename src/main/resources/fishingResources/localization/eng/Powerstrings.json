@@ -32,8 +32,8 @@
   "${ModID}:AnglerFormPower": {
     "NAME": "Angler Form",
     "DESCRIPTIONS": [
-      "Before enemies attack, they lose #b",
-      " HP."
+      "Before enemies attack, they take #b",
+      " damage."
     ]
   },
   "${ModID}:CollectorPower": {
@@ -104,8 +104,9 @@
   "${ModID}:DungeonMasterPower": {
     "NAME": "Dungeon Master",
     "DESCRIPTIONS": [
-      "Whenever you complete the Dungeon, trigger its final Room #b",
-      " additional times."
+      "Whenever you complete the Dungeon, trigger its final room #b",
+      " additional times.",
+      "Whenever you complete the Dungeon, trigger its final room again."
     ]
   },
   "${ModID}:LunchBoxPower": {
@@ -169,7 +170,7 @@
     ]
   },
   "${ModID}:BioluminescencePower": {
-    "NAME": "Bioluminescnece",
+    "NAME": "Bioluminescence",
     "DESCRIPTIONS": [
       "Whenever you gain extra Energy, gain #b",
       " #yStrength."

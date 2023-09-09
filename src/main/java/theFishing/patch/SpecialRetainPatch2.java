@@ -2,6 +2,7 @@ package theFishing.patch;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.common.DiscardAtEndOfTurnAction;
+import com.megacrit.cardcrawl.actions.unique.RestoreRetainedCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
@@ -9,14 +10,14 @@ import javassist.expr.FieldAccess;
 import theFishing.FishingMod;
 import theFishing.boards.dailies.Termina;
 
-@SpirePatch(clz = DiscardAtEndOfTurnAction.class, method = "update")
-public class SpecialRetainPatch {
+@SpirePatch(clz = RestoreRetainedCardsAction.class, method = "update")
+public class SpecialRetainPatch2 {
     public static ExprEditor Instrument() {
         return new ExprEditor() {
             @Override
             public void edit(FieldAccess f) throws CannotCompileException {
                 if (f.getFieldName().equals("selfRetain")) {
-                    f.replace("$_ = " + SpecialRetainPatch.class.getName() + ".Do($0, $proceed($$));");
+                    f.replace("$_ = " + SpecialRetainPatch2.class.getName() + ".Do($0, $proceed($$));");
                 }
             }
         };

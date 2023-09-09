@@ -57,6 +57,7 @@ public class FishingMod implements
         PostBattleSubscriber,
         OnStartBattleSubscriber,
         PostPlayerUpdateSubscriber,
+        AddAudioSubscriber,
         PostInitializeSubscriber,
         PostUpdateSubscriber,
         StartGameSubscriber {
@@ -328,5 +329,12 @@ public class FishingMod implements
                 activeBoard.atRunStart();
             }
         }
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(makeID("WAKA_WAKA"), "fishingResources/audio/eat_ghost.ogg");
+        BaseMod.addAudio(makeID("EAT_FRUIT"), "fishingResources/audio/eatfruit.ogg");
+        BaseMod.addAudio(makeID("CLOCKTOWER"), "fishingResources/audio/mm_clocktower_bell.mp3");
     }
 }

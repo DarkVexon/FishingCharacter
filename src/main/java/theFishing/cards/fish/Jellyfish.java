@@ -1,8 +1,8 @@
 package theFishing.cards.fish;
 
-import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.actions.AllEnemyLoseHPAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -13,11 +13,10 @@ public class Jellyfish extends AbstractFishCard {
 
     public Jellyfish() {
         super(ID, CardType.SKILL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void fishEffect(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++)
-            atb(new UpgradeRandomCardAction());
+        atb(new AllEnemyLoseHPAction(magicNumber));
     }
 }

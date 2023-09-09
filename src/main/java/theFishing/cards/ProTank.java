@@ -19,8 +19,8 @@ public class ProTank extends AbstractFishingCard implements OnObtainCard {
 
     public ProTank() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
-        baseDamage = 9;
-        baseBlock = 9;
+        baseDamage = 8;
+        baseBlock = 8;
         tags.add(DELVES);
         cardsToPreview = new Candle();
     }

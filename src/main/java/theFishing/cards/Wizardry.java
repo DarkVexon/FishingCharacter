@@ -4,7 +4,8 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ThirdEyeEffect;
 import theFishing.patch.foil.FoilPatches;
 
@@ -17,7 +18,7 @@ public class Wizardry extends AbstractFishingCard {
 
     public Wizardry() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         AbstractCard q = new Pinball();
         FoilPatches.makeFoil(q);
         cardsToPreview = q;
@@ -25,7 +26,8 @@ public class Wizardry extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new ThirdEyeEffect(p.hb.cX, p.hb.cY)));
-        applyToSelf(new VigorPower(p, magicNumber));
+        applyToSelf(new StrengthPower(p, magicNumber));
+        applyToSelf(new LoseStrengthPower(p, -magicNumber));
         AbstractCard q = new Pinball();
         FoilPatches.makeFoil(q);
         topDeck(q);

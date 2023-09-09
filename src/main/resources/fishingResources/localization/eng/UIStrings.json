@@ -231,7 +231,7 @@
     "TEXT_DICT": {
       "SP": "Cards with Delve are not discarded at the end of your turn.",
       "F1": "Nothing happens...",
-      "F3": "ALL enemies lose #b22 HP."
+      "F3": "Deal #b18 damage to ALL enemies."
     }
   },
   "${ModID}:KongJungle": {

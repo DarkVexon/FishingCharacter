@@ -3,7 +3,7 @@
     "NAME": "The Rod",
     "FLAVOR": "The only one of its kind. Glows in the dark.",
     "DESCRIPTIONS": [
-      "At the start of each combat, reduce the cost of a random card in your hand to #b0 until played."
+      "At the start of each combat, draw #b1 card and gain [E] ."
     ]
   },
   "${ModID}:RainbowRod": {

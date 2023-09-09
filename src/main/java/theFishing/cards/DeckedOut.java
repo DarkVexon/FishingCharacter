@@ -16,13 +16,15 @@ public class DeckedOut extends AbstractFishingCard {
 
     public DeckedOut() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseBlock = 4;
+        baseMagicNumber = magicNumber = 2;
         AbstractCard q = new Shiv();
         FoilPatches.makeFoil(q);
         cardsToPreview = q;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         AbstractCard q = new Shiv();
         FoilPatches.makeFoil(q);
         if (FoilShiny.FoilCardsShine.isOnSteamDeck()) {
@@ -37,6 +39,7 @@ public class DeckedOut extends AbstractFishingCard {
     }
 
     public void upp() {
+        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 }

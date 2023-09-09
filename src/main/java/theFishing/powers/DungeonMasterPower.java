@@ -28,6 +28,6 @@ public class DungeonMasterPower extends AbstractAdventurerPower implements OnCom
 
     @Override
     public void updateDescription() {
-        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1];
+        description = amount == 1 ? powerStrings.DESCRIPTIONS[2] : (powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1]);
     }
 }

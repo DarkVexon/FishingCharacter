@@ -3,7 +3,7 @@ package theFishing.powers;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,6 +38,6 @@ public class AnglerFormPower extends AbstractAdventurerPower implements PreEnemy
         });
         addToBot(new WaitAction(0.15F));
         addToBot(new VFXAction(new BiteEffect(info.owner.hb.cX, info.owner.hb.cY, Color.YELLOW.cpy())));
-        addToBot(new LoseHPAction(info.owner, owner, amount));
+        addToBot(new DamageAction(info.owner, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS)));
     }
 }

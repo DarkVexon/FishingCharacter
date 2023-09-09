@@ -43,7 +43,6 @@ public class Fishbones extends AbstractFishingCard {
 
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeDamage(6);
     }
 }

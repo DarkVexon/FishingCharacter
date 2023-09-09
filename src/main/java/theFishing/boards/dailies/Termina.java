@@ -2,6 +2,7 @@ package theFishing.boards.dailies;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
@@ -14,10 +15,8 @@ public class Termina extends AbstractBoard {
 
     public Termina() {
         super(ID);
-        effects.add(() -> {
-        });
-        effects.add(() -> {
-        });
-        effects.add(() -> att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(22, true), DamageInfo.DamageType.HP_LOSS, AbstractGameAction.AttackEffect.FIRE)));
+        effects.add(() -> att(new SFXAction("fishing:CLOCKTOWER")));
+        effects.add(() -> att(new SFXAction("fishing:CLOCKTOWER")));
+        effects.add(() -> att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(18, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT)));
     }
 }

@@ -3,6 +3,7 @@ package theFishing.cards;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
@@ -19,6 +20,7 @@ public class Kraken extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new SFXAction("fishing:EAT_FRUIT"));
         addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY, Color.YELLOW.cpy())));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
     }

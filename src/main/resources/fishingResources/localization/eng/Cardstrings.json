@@ -182,7 +182,7 @@
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
-    "DESCRIPTION": "Add !M! ${ModID}:Foil *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! ${ModID}:Foil *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
   },
   "${ModID}:ShipRam": {
     "NAME": "Collision Course",
@@ -245,7 +245,7 @@
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
-    "DESCRIPTION": "Before enemies attack, they lose !M! HP. NL ${ModID}:Voyaged: Costs 0."
+    "DESCRIPTION": "Before enemies attack, they take !M! damage. NL ${ModID}:Voyaged: Costs 0."
   },
   "${ModID}:FullHouse": {
     "NAME": "Three of a Kind",
@@ -313,8 +313,8 @@
   },
   "${ModID}:Jellyfish": {
     "NAME": "Jellyfish",
-    "DESCRIPTION": "{@@}Upgrade !M! random card{!M!|>1=s} in your hand. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Upgrade !M! random card{!M!|>1=s} in your hand. NL Draw !${ModID}:m3! card. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose !M! HP. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! HP. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:TheWhale": {
     "NAME": "The Whale",
@@ -425,7 +425,7 @@
   },
   "${ModID}:Wizardry": {
     "NAME": "Wizardry",
-    "DESCRIPTION": "Your next Attack deals !M! additional damage. NL Put a ${ModID}:Foil *Pinball on top of your draw pile."
+    "DESCRIPTION": "Gain !M! Strength. NL At the end of this turn, lose !M! Strength. NL Put a ${ModID}:Foil *Pinball on top of your draw pile."
   },
   "${ModID}:Pinball": {
     "NAME": "Pinball",
@@ -491,7 +491,8 @@
   },
   "${ModID}:DungeonMaster": {
     "NAME": "Dungeon Master",
-    "DESCRIPTION": "Whenever you complete the Dungeon, trigger its final room !M! additional times."
+    "DESCRIPTION": "Whenever you complete the Dungeon, trigger its final room again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you complete the Dungeon, trigger its final room again."
   },
   "${ModID}:GazeOfTheGods": {
     "NAME": "Yawning Void",
