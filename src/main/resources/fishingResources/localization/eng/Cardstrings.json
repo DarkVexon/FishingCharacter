@@ -102,7 +102,8 @@
   },
   "${ModID}:NostalgicStrike": {
     "NAME": "Nostalgic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Put a random card from your discard pile into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Put !M! random card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put !M! random cards from your discard pile into your hand."
   },
   "${ModID}:FutureProofing": {
     "NAME": "Future Proofing",

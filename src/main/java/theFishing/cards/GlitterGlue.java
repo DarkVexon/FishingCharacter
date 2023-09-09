@@ -29,7 +29,7 @@ public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
 
     public GlitterGlue() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 5;
         baseMagicNumber = magicNumber = 2;
     }
 
@@ -42,7 +42,8 @@ public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 
 

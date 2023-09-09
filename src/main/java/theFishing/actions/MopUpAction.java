@@ -69,7 +69,7 @@ public class MopUpAction extends AbstractGameAction {
 
     private void mopUpSelectedCard(List<AbstractCard> cards) {
         if (cards.get(0).type == AbstractCard.CardType.STATUS || cards.get(0).type == AbstractCard.CardType.CURSE || cards.get(0).color == AbstractCard.CardColor.CURSE) {
-            att(new DamageAction(this.target, new DamageInfo(AbstractDungeon.player, damage, damageTypeForTurn), AttackEffect.SLASH_VERTICAL));
+            att(new DamageAction(this.target, new DamageInfo(AbstractDungeon.player, damage, damageTypeForTurn), AttackEffect.NONE));
             att(new VFXAction(new AnimatedSlashEffect(target.hb.cX, target.hb.cY - 30.0F * Settings.scale, 500.0F, 200.0F, 290.0F, 3.0F, Color.FOREST, Color.GREEN)));
             att(new SFXAction("ATTACK_FAST", 0.2F));
             att(new SFXAction("ATTACK_WHIFF_2", 0.3F));

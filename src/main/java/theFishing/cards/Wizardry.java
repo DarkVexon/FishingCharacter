@@ -27,7 +27,7 @@ public class Wizardry extends AbstractFishingCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new ThirdEyeEffect(p.hb.cX, p.hb.cY)));
         applyToSelf(new StrengthPower(p, magicNumber));
-        applyToSelf(new LoseStrengthPower(p, -magicNumber));
+        applyToSelf(new LoseStrengthPower(p, magicNumber));
         AbstractCard q = new Pinball();
         FoilPatches.makeFoil(q);
         topDeck(q);

@@ -18,7 +18,6 @@ public class ThornyPersonality extends AbstractFishingCard {
         baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
         baseSecondMagic = secondMagic = 2;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,6 +34,7 @@ public class ThornyPersonality extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 }
