@@ -1,6 +1,6 @@
 {
   "${ModID}:TakeItEasyPower": {
-    "NAME": "Discard Each Turn",
+    "NAME": "Draw Down",
     "DESCRIPTIONS": [
       "At the start of your turn, draw #b",
       " less card.",

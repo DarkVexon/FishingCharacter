@@ -599,7 +599,7 @@
   },
   "${ModID}:GolemGuardian": {
     "NAME": "Golem Guardian",
-    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! this combat. NL Free in Shops."
   },
   "${ModID}:Energize": {
     "NAME": "Energize",

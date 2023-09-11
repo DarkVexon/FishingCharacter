@@ -18,6 +18,7 @@ import javassist.CtBehavior;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
 import theFishing.cards.AbstractFishingCard;
+import theFishing.cards.GolemGuardian;
 import theFishing.relics.Newsletter;
 import theFishing.util.ImageHelper;
 import theFishing.util.TexLoader;
@@ -87,9 +88,9 @@ public class FoilPatches {
     @SpirePatch(clz = ShopScreen.class, method = "initCards")
     public static class FoilInShops {
         public static void Postfix(ShopScreen __instance) {
+            ArrayList<AbstractCard> coloredCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "coloredCards");
+            ArrayList<AbstractCard> colorlessCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
             if (canBeFoil()) {
-                ArrayList<AbstractCard> coloredCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "coloredCards");
-                ArrayList<AbstractCard> colorlessCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
                 if (AbstractDungeon.player.hasRelic(Newsletter.ID)) {
                     ArrayList<AbstractCard> shopCards = new ArrayList<>();
                     shopCards.addAll(coloredCards);
@@ -106,6 +107,11 @@ public class FoilPatches {
                     AbstractCard target2 = colorlessCards.get(AbstractDungeon.cardRng.random(colorlessCards.size() - 1));
                     makeFoil(target2);
                     target2.price *= SHOP_FOIL_MARKUP;
+                }
+            }
+            for (AbstractCard q : coloredCards) {
+                if (q instanceof GolemGuardian) {
+                    q.price = 0;
                 }
             }
         }

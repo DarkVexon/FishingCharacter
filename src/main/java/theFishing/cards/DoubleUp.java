@@ -18,7 +18,7 @@ public class DoubleUp extends AbstractFishingCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         tags.add(FishingMod.DELVES);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -47,7 +47,7 @@ public class DoubleUp extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

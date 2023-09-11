@@ -80,9 +80,9 @@
   },
   "${ModID}:OtherBoot": {
     "NAME": "Other Boot",
-    "FLAVOR": "It dropped!",
+    "FLAVOR": "A beautiful green. Squeaks charismatically. And it's watertight to boot!",
     "DESCRIPTIONS": [
-      "Protects from #yThorns and #ySharp #yHide. Whenever you play a #yBoot, gain #b6 #yBlock."
+      "When you would gain #b4 or less #yBlock, increase it to #b5."
     ]
   },
   "${ModID}:FishOPedia": {
