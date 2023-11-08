@@ -13,8 +13,7 @@ import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.vfx;
+import static theFishing.util.Wiz.*;
 
 public class GazeOfTheGods extends AbstractFishingCard {
     public final static String ID = makeID("GazeOfTheGods");
@@ -43,8 +42,8 @@ public class GazeOfTheGods extends AbstractFishingCard {
 
     @Override
     public void triggerOnExhaust() {
-        atb(new ReduceCostAction(this));
-        atb(new ExhaustToHandAction(this));
+        att(new ExhaustToHandAction(this));
+        att(new ReduceCostAction(this));
     }
 
     public void upp() {

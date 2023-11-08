@@ -82,7 +82,7 @@
     "NAME": "Other Boot",
     "FLAVOR": "A beautiful green. Squeaks charismatically. And it's watertight to boot!",
     "DESCRIPTIONS": [
-      "When you would gain #b4 or less #yBlock, increase it to #b5."
+      "Whenever you would gain #b4 or less #yBlock, increase it to #b5."
     ]
   },
   "${ModID}:FishOPedia": {

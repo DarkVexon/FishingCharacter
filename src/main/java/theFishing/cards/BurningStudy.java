@@ -1,12 +1,10 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import theFishing.cards.AbstractFishingCard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;

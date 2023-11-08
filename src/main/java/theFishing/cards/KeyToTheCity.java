@@ -1,12 +1,9 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import theFishing.FishingMod;
 import theFishing.actions.AbandonQuestAction;
 import theFishing.actions.EnterTheDungeonAction;
@@ -23,13 +20,13 @@ public class KeyToTheCity extends AbstractFishingCard {
     public KeyToTheCity() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 9;
+        isMultiDamage = true;
         tags.add(FishingMod.DELVES);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true), Settings.FAST_MODE ? 0.0F : 0.1F));
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        allDmg(AbstractGameAction.AttackEffect.SMASH);
         atb(new EnterTheDungeonAction());
         atb(new AbstractGameAction() {
             @Override

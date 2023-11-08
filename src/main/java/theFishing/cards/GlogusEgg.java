@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.makeInHand;
+import static theFishing.util.Wiz.makeInHandTop;
 
 public class GlogusEgg extends AbstractFishingCard {
     public final static String ID = makeID("GlogusEgg");
@@ -32,7 +32,7 @@ public class GlogusEgg extends AbstractFishingCard {
             c.upgrade();
         }
         FoilPatches.makeFoil(c);
-        makeInHand(c);
+        makeInHandTop(c);
     }
 
     public void upp() {

@@ -3,10 +3,8 @@ package theFishing.cards;
 import com.megacrit.cardcrawl.actions.common.ModifyBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.powers.NextCardsExhaustPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
 import static theFishing.util.Wiz.atb;
 
 public class GolemGuardian extends AbstractFishingCard {

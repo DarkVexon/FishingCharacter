@@ -12,10 +12,10 @@ public class OtherBoot extends AbstractAdventurerRelic {
     }
 
     @Override
-    public int onPlayerGainBlock(int blockAmount) {
-        if (blockAmount < 5) {
+    public int onPlayerGainedBlock(float blockAmount) {
+        if (blockAmount < 5F) {
             return 5;
         }
-        return blockAmount;
+        return (int) blockAmount;
     }
 }

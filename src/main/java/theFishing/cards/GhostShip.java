@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 import static theFishing.util.Wiz.vfx;
 
 public class GhostShip extends AbstractFishingCard {
@@ -28,15 +28,15 @@ public class GhostShip extends AbstractFishingCard {
 
     @Override
     public void triggerOnExhaust() {
-        atb(new ModifyDamageAction(this.uuid, magicNumber));
-        atb(new ExhaustToHandAction(this));
-        atb(new AbstractGameAction() {
+        att(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
                 GhostShip.this.applyPowers();
             }
         });
+        att(new ExhaustToHandAction(this));
+        att(new ModifyDamageAction(this.uuid, magicNumber));
     }
 
     public void upp() {

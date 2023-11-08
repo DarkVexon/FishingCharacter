@@ -510,7 +510,8 @@
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests. NL Draw !M! cards."
   },
   "${ModID}:Lunchbox": {
     "NAME": "Lunch Box",
@@ -550,7 +551,6 @@
   "${ModID}:StickerStrike": {
     "NAME": "Sticker Strike",
     "DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on a random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on a card in your hand.",
     "EXTENDED_DESCRIPTION": [
       "put a Sticker on."
     ]

@@ -41,6 +41,7 @@ import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractAdventurerRelic;
 import theFishing.util.FoilSparkleHandler;
 import theFishing.util.Wiz;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -249,14 +250,16 @@ public class FishingMod implements
         BaseMod.addTopPanelItem(new TopPanelBoard());
 
 
-
-
         String[] TEXT = CardCrawlGame.languagePack.getUIString(makeID("ConfigMenu")).TEXT;
         ModPanel settingsPanel = new ModPanel();
-        settingsPanel.addUIElement(new ModLabeledToggleButton(TEXT[3], 350, 800, Settings.CREAM_COLOR, FontHelper.charDescFont, config.getBool("foilanywhere"), settingsPanel, label -> {}, button -> {
+        settingsPanel.addUIElement(new ModLabeledToggleButton(TEXT[3], 350, 800, Settings.CREAM_COLOR, FontHelper.charDescFont, config.getBool("foilanywhere"), settingsPanel, label -> {
+        }, button -> {
             foilAnywhere = button.enabled;
             config.setBool("foilanywhere", button.enabled);
-            try {config.save();} catch (Exception e) {}
+            try {
+                config.save();
+            } catch (Exception e) {
+            }
         }));
         BaseMod.registerModBadge(new Texture(makeImagePath("ui/badge.png")), TEXT[0], TEXT[1], TEXT[2], settingsPanel);
     }
@@ -300,11 +303,12 @@ public class FishingMod implements
 
             @Override
             public void onLoad(ArrayList<Integer> integers) {
-                for (Integer i : integers) {
-                    if (AbstractDungeon.player.masterDeck.size() > i) {
-                        FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
+                if (integers != null)
+                    for (Integer i : integers) {
+                        if (AbstractDungeon.player.masterDeck.size() > i) {
+                            FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
+                        }
                     }
-                }
             }
         });
 
@@ -316,7 +320,10 @@ public class FishingMod implements
 
             @Override
             public void onLoad(String s) {
-                activeBoard = AbstractBoard.getBoardByID(s);
+                if (s != null)
+                    activeBoard = AbstractBoard.getBoardByID(s);
+                else
+                    activeBoard = AbstractBoard.getRunBoard();
             }
         });
     }

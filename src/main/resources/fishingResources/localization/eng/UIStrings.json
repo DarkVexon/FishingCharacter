@@ -272,7 +272,7 @@
       "SP": "Start combat with #b1 Orb slot for each #yDelve card in your deck.",
       "F1": "#yChannel #b1 #yLightning.",
       "F2": "#yChannel #b1 #yFrost.",
-      "F3": "Gain #b2 #yFocus."
+      "F3": "Gain #b1 #yFocus."
     }
   },
   "${ModID}:TheCannon": {

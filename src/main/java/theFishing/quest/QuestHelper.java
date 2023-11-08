@@ -29,7 +29,7 @@ public class QuestHelper {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("QuestLog"));
 
     static {
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 10; i++) {
             boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (50F * Settings.scale))), 200F * Settings.scale, 27.5F * Settings.scale));
         }
     }

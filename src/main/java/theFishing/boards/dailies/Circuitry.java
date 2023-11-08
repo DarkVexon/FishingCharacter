@@ -18,7 +18,7 @@ public class Circuitry extends AbstractBoard {
         super(ID);
         effects.add(() -> att(new ChannelAction(new Lightning())));
         effects.add(() -> att(new ChannelAction(new Frost())));
-        effects.add(() -> applyToSelfTop(new FocusPower(AbstractDungeon.player, 2)));
+        effects.add(() -> applyToSelfTop(new FocusPower(AbstractDungeon.player, 1)));
     }
 
     @Override
