@@ -189,6 +189,7 @@ public class FoilPatches {
     public static final ShaderProgram ART_SHADER = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_card_art.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
     @SpirePatch(clz = AbstractCard.class, method = "renderPortrait")
+    @SpirePatch(clz = AbstractCard.class, method = "renderJokePortrait")
     public static class FoilSpecialArt {
         private static ShaderProgram oldShader;
         private static Color oldColor;
