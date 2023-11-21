@@ -25,6 +25,6 @@ public class TheBackpack extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 }

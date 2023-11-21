@@ -191,7 +191,7 @@
   },
   "${ModID}:FlamingFlip": {
     "NAME": "Straw Sleeves",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Next turn, add a copy of it into your hand."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust 1 card."
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Edan's Box",
@@ -535,7 +535,7 @@
     "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Delve."
   },
   "${ModID}:DarkDepths": {
-    "NAME": "Dark Depths",
+    "NAME": "Waxing Shadows",
     "DESCRIPTION": "Can only be played if you ${ModID}:Delved this turn. NL Deal !D! damage. NL ${ModID}:Picked: Obtain a *Candle.",
     "EXTENDED_DESCRIPTION": [
       "I haven't Delved this turn!"

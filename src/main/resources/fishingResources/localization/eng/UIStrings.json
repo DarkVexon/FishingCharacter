@@ -297,5 +297,15 @@
       "F1": "Choose a Spell to put into your hand...",
       "F3": "... and it costs 0."
     }
+  },
+  "${ModID}:TheToxfill": {
+    "TEXT": [
+      "The Toxfill"
+    ],
+    "TEXT_DICT": {
+      "SP": "Whenever you apply a debuff to an enemy, they take #b1 damage.",
+      "F1": "Increase this damage by #b2.",
+      "F3": "ALL enemies lose #b1 #yStrength."
+    }
   }
 }

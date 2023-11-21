@@ -1,5 +1,6 @@
 package theFishing.cards;
 
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.FlamingFlipAction;
@@ -13,12 +14,13 @@ public class FlamingFlip extends AbstractFishingCard {
 
     public FlamingFlip() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 6;
+        baseBlock = 5;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new FlamingFlipAction());
+        atb(new ExhaustAction(1, false));
     }
 
     public void upp() {
