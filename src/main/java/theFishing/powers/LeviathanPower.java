@@ -25,12 +25,12 @@ public class LeviathanPower extends AbstractAdventurerPower {
         if (card.type == AbstractCard.CardType.CURSE || card.rarity == AbstractCard.CardRarity.CURSE) {
             flash();
             applyToSelf(new StrengthPower(owner, amount));
-            atb(new GainBlockAction(owner, amount * 3));
+            atb(new GainBlockAction(owner, amount * (5/2)));
         }
     }
 
     @Override
     public void updateDescription() {
-        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount * 3 + powerStrings.DESCRIPTIONS[2];
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount * (5/2) + powerStrings.DESCRIPTIONS[2];
     }
 }

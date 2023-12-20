@@ -21,7 +21,7 @@ public class Baited extends AbstractFishingCard {
 
     public Baited() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 14;
+        baseDamage = 13;
         baseMagicNumber = magicNumber = 2;
     }
 
@@ -43,6 +43,6 @@ public class Baited extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(5);
     }
 }

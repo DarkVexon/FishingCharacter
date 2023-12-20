@@ -16,7 +16,7 @@ public class BoxOfHavoc extends AbstractFishingCard implements StartupCard {
     public BoxOfHavoc() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 3;
+        baseSecondMagic = secondMagic = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -31,6 +31,6 @@ public class BoxOfHavoc extends AbstractFishingCard implements StartupCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(2);
+        upgradeSecondMagic(1);
     }
 }

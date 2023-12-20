@@ -8,6 +8,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.cardmods.StickerHPLossMod;
+import theFishing.util.Wiz;
+
+import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -19,6 +22,7 @@ public class StickerStrike extends AbstractFishingCard {
     public StickerStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 7;
+        baseMagicNumber = magicNumber = 1;
         tags.add(CardTags.STRIKE);
     }
 
@@ -29,15 +33,27 @@ public class StickerStrike extends AbstractFishingCard {
             public void update() {
                 isDone = true;
                 if (!AbstractDungeon.player.hand.isEmpty()) {
-                    AbstractCard tar = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                    CardModifierManager.addModifier(tar, new StickerHPLossMod());
-                    tar.superFlash(Color.GOLD.cpy());
+                    ArrayList<AbstractCard> validCards = new ArrayList<>();
+                    validCards.addAll(AbstractDungeon.player.hand.group);
+                    ArrayList<AbstractCard> toModify = new ArrayList<>();
+                    for (int i = 0; i < magicNumber; i++) {
+                        if (!validCards.isEmpty()) {
+                            AbstractCard next = Wiz.getRandomItem(validCards, AbstractDungeon.cardRandomRng);
+                            validCards.remove(next);
+                            toModify.add(next);
+                        }
+                    }
+                    for (AbstractCard tar : toModify) {
+                        CardModifierManager.addModifier(tar, new StickerHPLossMod());
+                        tar.superFlash(Color.GOLD.cpy());
+                    }
                 }
             }
         });
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeMagicNumber(1);
+        uDesc();
     }
 }

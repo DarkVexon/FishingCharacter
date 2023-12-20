@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 import static theFishing.FishingMod.*;
 import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.applyToSelfTop;
 
 public class TheFishOPedia extends AbstractQuest {
 
@@ -59,6 +60,11 @@ public class TheFishOPedia extends AbstractQuest {
     @Override
     public void grantReward() {
         applyToSelf(new StrengthPower(AbstractDungeon.player, 2));
+    }
+
+    @Override
+    public void grantRewardTop() {
+        applyToSelfTop(new StrengthPower(AbstractDungeon.player, 2));
     }
 
     @Override

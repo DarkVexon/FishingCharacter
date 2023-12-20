@@ -24,9 +24,6 @@ public class ItWasTHIIIIIIISBigAction extends AbstractGameAction {
     public void update() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             tripleCard(c);
-            if (c instanceof AbstractFishCard) {
-                c.superFlash();
-            }
         }
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             tripleCard(c);
@@ -49,6 +46,7 @@ public class ItWasTHIIIIIIISBigAction extends AbstractGameAction {
                 ((AbstractFishingCard) c).secondMagic = ((AbstractFishingCard) c).baseSecondMagic = ((AbstractFishingCard) c).baseSecondMagic * amount;
             c.applyPowers();
             increaseNameSize((AbstractFishCard) c);
+            if (AbstractDungeon.player.hand.contains(c)) c.superFlash();
         }
     }
 

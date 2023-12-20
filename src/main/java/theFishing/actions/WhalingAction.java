@@ -18,7 +18,7 @@ public class WhalingAction extends AbstractGameAction {
     public void update() {
         isDone = true;
         AbstractDungeon.player.loseGold(amount);
-        applyToSelfTop(new StrengthPower(AbstractDungeon.player, 1));
+        applyToSelfTop(new StrengthPower(AbstractDungeon.player, 2));
         att(new VFXAction(new InflameEffect(AbstractDungeon.player)));
     }
 }

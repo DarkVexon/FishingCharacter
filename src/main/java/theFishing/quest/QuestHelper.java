@@ -56,7 +56,7 @@ public class QuestHelper {
                     Color.WHITE.cpy()
             );
             for (int i = 0; i < q.goal; i++) {
-                ImageHelper.drawTextureScaled(sb, q.progressTex(i), boxes.get(xr).x + (((i * 40) + q.textpadding()) * Settings.scale), boxes.get(xr).y - 3);
+                ImageHelper.drawTextureScaled(sb, q.progressTex(i), boxes.get(xr).x + (((i * q.getImgSpacing()) + q.textpadding()) * Settings.scale), boxes.get(xr).y - 3);
             }
             xr++;
         }
@@ -131,5 +131,11 @@ public class QuestHelper {
 
     public static boolean hasQuest(String ID) {
         return quests.stream().anyMatch(q -> q.questID.equals(ID));
+    }
+
+    public static void onGainBlock(int blockAmount) {
+        for (AbstractQuest q : quests) {
+            q.onGainBlock(blockAmount);
+        }
     }
 }

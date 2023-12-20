@@ -15,14 +15,15 @@ public class FinishingTouches extends AbstractFishingCard {
 
     public FinishingTouches() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DiscardAction(p, p, 2, false));
-        applyToSelf(new FinishingTouchesPower());
+        applyToSelf(new FinishingTouchesPower(magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeMagicNumber(1);
     }
 }

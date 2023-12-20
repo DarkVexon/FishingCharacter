@@ -18,7 +18,7 @@
     "NAME": "Broken Oar",
     "FLAVOR": "Most trips to the Spire are one-way.",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yExhaust 1 card and gain [E] ."
+      "At the start of your turn, #yExhaust #b1 card and gain [E] ."
     ]
   },
   "${ModID}:MaelstromAnkh": {

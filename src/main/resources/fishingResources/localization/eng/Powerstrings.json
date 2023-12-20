@@ -48,7 +48,8 @@
   "${ModID}:MintConditionPower": {
     "NAME": "Collector",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFoil card, gain #b",
+      "Whenever you play a #yFoil or Rare card, gain #b",
+      " #yStrength. #yFoil Rares grant #b",
       " #yStrength."
     ]
   },
@@ -71,9 +72,13 @@
   "${ModID}:FinishingTouchesPower": {
     "NAME": "Finishing Touches",
     "DESCRIPTIONS": [
-      "When you play a card, if it's the only card in your hand, play it twice.",
-      "When you play a card, if it's the only card in your hand, play it #b",
-      " additional times."
+      "The first #b",
+      " time",
+      " times",
+      " you play the only card in your hand each turn, play it twice. NL #b",
+      " trigger",
+      " triggers",
+      " remaining."
     ]
   },
   "${ModID}:ReservesPower": {
@@ -104,9 +109,9 @@
   "${ModID}:DungeonMasterPower": {
     "NAME": "Dungeon Master",
     "DESCRIPTIONS": [
-      "Whenever you complete the Dungeon, trigger its final room #b",
+      "#yDelve #yBonus #b3 triggers #b",
       " additional times.",
-      "Whenever you complete the Dungeon, trigger its final room again."
+      "#yDelve #yBonus #b3 triggers twice."
     ]
   },
   "${ModID}:LunchBoxPower": {
@@ -190,6 +195,13 @@
       "The next #b",
       " time you play an Attack or Skill, #yExhaust it.",
       " times you play an Attack or Skill, #yExhaust it."
+    ]
+  },
+  "${ModID}:PyramidClimbPower": {
+    "NAME": "Pyramid Climb",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, gain #b",
+      " #yBlock."
     ]
   }
 }

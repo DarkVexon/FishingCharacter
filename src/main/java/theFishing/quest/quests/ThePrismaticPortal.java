@@ -1,7 +1,6 @@
 package theFishing.quest.quests;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.cards.QuestTimeTheGemSearch;
@@ -17,7 +16,7 @@ public class ThePrismaticPortal extends AbstractQuest {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public ThePrismaticPortal() {
-        super(ID, 7);
+        super(ID, 13);
     }
 
     @Override
@@ -35,21 +34,43 @@ public class ThePrismaticPortal extends AbstractQuest {
         Wiz.shuffleIn(new QuestTimeTheGemSearch());
     }
 
-    private static final Texture rare_unc = TexLoader.getTexture(makeImagePath("quests/Portal_Uncommon.png"));
-    private static final Texture rare_com = TexLoader.getTexture(makeImagePath("quests/Portal_Uncommon_Completed.png"));
+    @Override
+    public void grantRewardTop() {
+        Wiz.shuffleInTop(new QuestTimeTheGemSearch());
+    }
+
+    private static final Texture left_unc = TexLoader.getTexture(makeImagePath("quests/Block_Left.png"));
+    private static final Texture left_com = TexLoader.getTexture(makeImagePath("quests/Block_Left_Completed.png"));
+    private static final Texture mid_unc = TexLoader.getTexture(makeImagePath("quests/Block_Middle.png"));
+    private static final Texture mid_com = TexLoader.getTexture(makeImagePath("quests/Block_Middle_Completed.png"));
+    private static final Texture right_unc = TexLoader.getTexture(makeImagePath("quests/Block_Right.png"));
+    private static final Texture right_com = TexLoader.getTexture(makeImagePath("quests/Block_Right_Completed.png"));
 
     @Override
-    public void onPlayCard(AbstractCard card) {
-        increment();
+    public void onGainBlock(int blockAmount) {
+        for (int i = 0; i < blockAmount; i++) {
+            increment();
+        }
     }
 
     @Override
     public Texture progressTex(int idx) {
-        return progress > idx ? rare_com : rare_unc;
+        if (idx == 0) {
+            return progress > idx ? left_com : left_unc;
+        } else if (idx == goal - 1) {
+            return progress > idx ? right_com : right_unc;
+        } else {
+            return progress > idx ? mid_com : mid_unc;
+        }
     }
 
     @Override
     public float textpadding() {
         return 233F;
+    }
+
+    @Override
+    public float getImgSpacing() {
+        return 16;
     }
 }

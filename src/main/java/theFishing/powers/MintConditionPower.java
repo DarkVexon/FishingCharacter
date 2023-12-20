@@ -21,7 +21,10 @@ public class MintConditionPower extends AbstractAdventurerPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (FoilPatches.isFoil(card)) {
+        if (FoilPatches.isFoil(card) && card.rarity.equals(AbstractCard.CardRarity.RARE)) {
+            flash();
+            applyToSelf(new StrengthPower(owner, amount * 2));
+        } else if (FoilPatches.isFoil(card) || card.rarity.equals(AbstractCard.CardRarity.RARE)) {
             flash();
             applyToSelf(new StrengthPower(owner, amount));
         }
@@ -29,6 +32,6 @@ public class MintConditionPower extends AbstractAdventurerPower {
 
     @Override
     public void updateDescription() {
-        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1];
+        description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + amount * 2 + powerStrings.DESCRIPTIONS[2];
     }
 }

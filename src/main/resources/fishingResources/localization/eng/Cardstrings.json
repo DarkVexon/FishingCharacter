@@ -54,8 +54,8 @@
   },
   "${ModID}:Starfish": {
     "NAME": "Starfish",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Plated Armor. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Gain !M! *Plated *Armor. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! *Plated *Armor. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:CastLine": {
     "NAME": "Cast Line",
@@ -167,7 +167,7 @@
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
-    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend !M! to gain an extra 1 Strength."
+    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend !M! to gain an extra 2 Strength."
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
@@ -194,8 +194,8 @@
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust 1 card."
   },
   "${ModID}:BoxOfHavoc": {
-    "NAME": "Edan's Box",
-    "DESCRIPTION": "Draw until you draw !M! Energy worth of cards. NL X counts as 0. NL Startup: ALL enemies lose !${ModID}:m2! HP."
+    "NAME": "T.E.'s Box",
+    "DESCRIPTION": "Draw cards until their total cost is !M! or more. NL X counts as 0. NL Startup: ALL enemies lose !${ModID}:m2! HP."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Barbed",
@@ -218,7 +218,7 @@
   },
   "${ModID}:Steal": {
     "NAME": "Steal",
-    "DESCRIPTION": "If the enemy has positive Strength, steal up to !M! of it. NL Exhaust."
+    "DESCRIPTION": "Enemy loses 1 Strength. NL Gain !M! Strength. NL Exhaust."
   },
   "${ModID}:SetupButBetter": {
     "NAME": "Tackle Box",
@@ -231,7 +231,8 @@
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIS Big!",
-    "DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Double the effects of ALL current ${ModID}:Fish. NL Exhaust."
+    "DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Double the non-draw effects of ALL your ${ModID}:Fish. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Double the non-draw effects of ALL your ${ModID}:Fish."
   },
   "${ModID}:GoneFishing": {
     "NAME": "Gone Fishing",
@@ -246,7 +247,7 @@
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
-    "DESCRIPTION": "Before enemies attack, they take !M! damage. NL ${ModID}:Voyaged: Costs 0."
+    "DESCRIPTION": "Gain !M! *Plated *Armor. NL ${ModID}:Voyaged: Costs 1. NL ${ModID}:Picked: Obtain a ${ModID}:Fish."
   },
   "${ModID}:FullHouse": {
     "NAME": "Three of a Kind",
@@ -258,7 +259,7 @@
   },
   "${ModID}:Fishbones": {
     "NAME": "Fishbones",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card in your exhaust pile."
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
@@ -278,8 +279,7 @@
   },
   "${ModID}:Concentrated": {
     "NAME": "Caffeinated",
-    "DESCRIPTION": "${ModID}:Unnate. NL At the start of your turn, gain [E]. NL If this card is Exhausted, play it.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E]. NL If this card is Exhausted, play it."
+    "DESCRIPTION": "Play the top card of your draw pile. NL At the start of your turn, gain [E]."
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
@@ -305,7 +305,7 @@
   },
   "${ModID}:FinishingTouches": {
     "NAME": "Finishing Touches",
-    "DESCRIPTION": "Discard 2 cards. NL When you play a card, if it's the only card in your hand, play it twice."
+    "DESCRIPTION": "Discard 2 cards. NL The first !M! times you play the only card in your hand each turn, play it twice."
   },
   "${ModID}:FlyingFish": {
     "NAME": "Flying Fish",
@@ -345,11 +345,11 @@
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Tempest",
-    "DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 6 Energy in a turn. NL *Reward: A random enemy loses !M! HP."
+    "DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 5 Energy in a turn. NL *Reward: A random enemy loses !M! HP."
   },
   "${ModID}:QuestTimeTheLuckyPack": {
     "NAME": "The Lucky Pull",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards. NL *Reward: Play the last one again."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards. NL *Reward: Gain !M! *Plated *Armor."
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
@@ -379,8 +379,8 @@
   },
   "${ModID}:QuestTimeThePrismaticPortal": {
     "NAME": "The Prismatic Portal",
-    "DESCRIPTION": "${ModID}:Quest: Play 7 cards. NL *Reward: Shuffle *The *Gem *Search into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Quest: Play 7 cards. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
+    "DESCRIPTION": "${ModID}:Quest: Gain 13 Block. NL *Reward: Shuffle *The *Gem *Search into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Quest: Gain 13 Block. NL *Reward: Shuffle *The *Gem *Search into your draw pile."
   },
   "${ModID}:QuestTimeTheGemSearch": {
     "NAME": "The Gem Search",
@@ -388,7 +388,7 @@
   },
   "${ModID}:TheEternityGem": {
     "NAME": "The Eternity Gem",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "${ModID}:ShinyShots": {
     "NAME": "Shiny Shots",
@@ -413,12 +413,11 @@
   },
   "${ModID}:PyramidClimber": {
     "NAME": "Pyramid Climb",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !B! Block. NL ${ModID}:Solo: Costs 0."
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you play a card this turn, gain !M! Block."
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "Whenever you play a ${ModID}:Foil card, gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a ${ModID}:Foil card, gain 1 Strength."
+    "DESCRIPTION": "Whenever you play a ${ModID}:Foil or Rare card, gain 1 Strength. NL ${ModID}:Foil Rares grant 2 Strength."
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",
@@ -475,7 +474,7 @@
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
-    "DESCRIPTION": "Deal !D! damage. NL Discard 1 card. NL Reset all *Time *Warp."
+    "DESCRIPTION": "Deal !D! damage twice. NL Discard 1 card. NL Reset all *Time *Warp."
   },
   "${ModID}:Stone": {
     "NAME": "Stone",
@@ -492,12 +491,12 @@
   },
   "${ModID}:DungeonMaster": {
     "NAME": "Dungeon Master",
-    "DESCRIPTION": "Whenever you complete the Dungeon, trigger its final room again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you complete the Dungeon, trigger its final room again."
+    "DESCRIPTION": "fishing:Delve *Bonus 3 triggers twice.",
+    "UPGRADE_DESCRIPTION": "Innate. NL fishing:Delve *Bonus 3 triggers twice."
   },
   "${ModID}:GazeOfTheGods": {
     "NAME": "Yawning Void",
-    "DESCRIPTION": "Enemy loses !M! HP. NL If this card is Exhausted, reduce its cost by 1 and return it to your hand."
+    "DESCRIPTION": "Enemy loses !M! HP. NL If this card is Exhausted, return it to your hand. It costs 0 until played."
   },
   "${ModID}:GhostShip": {
     "NAME": "Ghost Ship",
@@ -510,8 +509,7 @@
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Delve. NL Complete your ${ModID}:Quests. NL Draw !M! cards."
+    "DESCRIPTION": "Complete your ${ModID}:Quests. NL Deal !D! damage. NL ${ModID}:Delve.  NL Draw !M! cards."
   },
   "${ModID}:Lunchbox": {
     "NAME": "Lunch Box",
@@ -550,7 +548,8 @@
   },
   "${ModID}:StickerStrike": {
     "NAME": "Sticker Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on a random card in your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Smiley_Sticker on !M! random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Smiley_Sticker on !M! random cards in your hand.",
     "EXTENDED_DESCRIPTION": [
       "put a Sticker on."
     ]
@@ -582,7 +581,7 @@
   },
   "${ModID}:Broadside": {
     "NAME": "Broadside",
-    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Put a ${ModID}:Foil *Miracle on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage to the frontmost enemy !M! times. NL Put a ${ModID}:Foil *Miracle on top of your draw pile."
   },
   "${ModID}:Banana": {
     "NAME": "Bean",

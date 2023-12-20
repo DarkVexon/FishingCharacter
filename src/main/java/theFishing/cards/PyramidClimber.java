@@ -2,7 +2,7 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import theFishing.powers.PyramidClimbPower;
 import theFishing.util.Wiz;
 
 import static theFishing.FishingMod.makeID;
@@ -15,27 +15,16 @@ public class PyramidClimber extends AbstractFishingCard {
     public PyramidClimber() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 4;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new NextTurnBlockPower(p, block, this.originalName));
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = isSolo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        applyToSelf(new PyramidClimbPower(magicNumber));
     }
 
     public void upp() {
-        upgradeBlock(2);
-    }
-
-    @Override
-    public boolean freeToPlay() {
-        if (Wiz.isInCombat() && isSolo()) {
-            return true;
-        }
-        return super.freeToPlay();
+        upgradeBlock(1);
+        upgradeMagicNumber(1);
     }
 }

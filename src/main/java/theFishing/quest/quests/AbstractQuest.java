@@ -28,6 +28,8 @@ public abstract class AbstractQuest {
 
     public abstract void grantReward();
 
+    public abstract void grantRewardTop();
+
     public String questID;
 
     public AbstractQuest(String ID, int goal) {
@@ -64,6 +66,14 @@ public abstract class AbstractQuest {
     }
 
     public void onDrawCard() {
+
+    }
+
+    public float getImgSpacing() {
+        return 40F;
+    }
+
+    public void onGainBlock(int blockAmount) {
 
     }
 }

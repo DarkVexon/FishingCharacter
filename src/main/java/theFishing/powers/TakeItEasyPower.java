@@ -11,7 +11,7 @@ public class TakeItEasyPower extends AbstractAdventurerPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TakeItEasyPower(int amount) {
-        super(makeID("TakeItEasyPower"), powerStrings.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
+        super(makeID("TakeItEasyPower"), powerStrings.NAME, PowerType.DEBUFF, false, AbstractDungeon.player, amount);
     }
 
     @Override

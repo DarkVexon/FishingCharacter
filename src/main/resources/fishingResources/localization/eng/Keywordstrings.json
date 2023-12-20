@@ -55,13 +55,14 @@
       "delve",
       "delved"
     ],
-    "DESCRIPTION": "Move to the next Dungeon room and activate its effects."
+    "DESCRIPTION": "Trigger the next effect of today's Delve Bonus."
   },
   {
-    "PROPER_NAME": "Sticker",
+    "PROPER_NAME": "Smiley Sticker",
     "NAMES": [
-      "sticker"
+      "smiley sticker",
+      "smiley_sticker"
     ],
-    "DESCRIPTION": "After you play a card, Stickers on it make a random enemy lose #b7 HP."
+    "DESCRIPTION": "After you play a card, Smiley Stickers on it make a random enemy lose #b4 HP."
   }
 ]

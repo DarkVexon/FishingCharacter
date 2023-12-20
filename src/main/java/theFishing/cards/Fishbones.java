@@ -15,14 +15,14 @@ public class Fishbones extends AbstractFishingCard {
     // intellij stuff attack, enemy, rare, 12, , , , 2, 1
 
     public Fishbones() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 16;
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        baseDamage = 15;
         baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal)));
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        allDmg(AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
@@ -43,6 +43,6 @@ public class Fishbones extends AbstractFishingCard {
 
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeMagicNumber(1);
     }
 }

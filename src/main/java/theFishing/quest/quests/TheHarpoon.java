@@ -9,6 +9,7 @@ import theFishing.util.TexLoader;
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.makeInHand;
+import static theFishing.util.Wiz.makeInHandTop;
 
 public class TheHarpoon extends AbstractQuest {
 
@@ -33,6 +34,11 @@ public class TheHarpoon extends AbstractQuest {
     @Override
     public void grantReward() {
         makeInHand(new TheWhale());
+    }
+
+    @Override
+    public void grantRewardTop() {
+        makeInHandTop(new TheWhale());
     }
 
     @Override

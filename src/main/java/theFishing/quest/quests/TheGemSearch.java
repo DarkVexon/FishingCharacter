@@ -10,6 +10,7 @@ import theFishing.util.TexLoader;
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.shuffleIn;
+import static theFishing.util.Wiz.shuffleInTop;
 
 public class TheGemSearch extends AbstractQuest {
 
@@ -35,6 +36,11 @@ public class TheGemSearch extends AbstractQuest {
     @Override
     public void grantReward() {
         shuffleIn(new TheEternityGem());
+    }
+
+    @Override
+    public void grantRewardTop() {
+        shuffleInTop(new TheEternityGem());
     }
 
     private static final Texture incomplete = TexLoader.getTexture(makeImagePath("quests/GemSearch.png"));

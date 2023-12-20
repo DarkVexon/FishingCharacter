@@ -9,6 +9,7 @@ import theFishing.util.TexLoader;
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
 import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class TheStorm extends AbstractQuest {
 
@@ -18,7 +19,7 @@ public class TheStorm extends AbstractQuest {
     private final int totalDmg;
 
     public TheStorm(int totalDmg) {
-        super(ID, 6);
+        super(ID, 5);
         this.totalDmg = totalDmg;
     }
 
@@ -35,6 +36,11 @@ public class TheStorm extends AbstractQuest {
     @Override
     public void grantReward() {
         atb(new StormCompletionAction(totalDmg));
+    }
+
+    @Override
+    public void grantRewardTop() {
+        att(new StormCompletionAction(totalDmg));
     }
 
     @Override

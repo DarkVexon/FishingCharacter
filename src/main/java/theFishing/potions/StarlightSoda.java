@@ -1,5 +1,6 @@
 package theFishing.potions;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -40,12 +41,12 @@ public class StarlightSoda extends AbstractPotion {
         atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, WeakPower.POWER_ID));
         atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VulnerablePower.POWER_ID));
         atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, FrailPower.POWER_ID));
-        atb(new ScryAction(potency));
+        atb(new GainBlockAction(AbstractDungeon.player, potency));
     }
 
     @Override
     public int getPotency(int ascensionlevel) {
-        return 3;
+        return 5;
     }
 
     @Override

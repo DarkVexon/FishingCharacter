@@ -29,7 +29,7 @@ public class StickerHPLossMod extends AbstractStickerModifier {
                 isDone = true;
                 AbstractMonster q = AbstractDungeon.getRandomMonster();
                 if (q != null)
-                    att(new LoseHPAction(q, AbstractDungeon.player, 7));
+                    att(new LoseHPAction(q, AbstractDungeon.player, 4));
             }
         });
     }

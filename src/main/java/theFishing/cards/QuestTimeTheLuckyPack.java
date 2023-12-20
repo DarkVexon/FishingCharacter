@@ -16,14 +16,16 @@ public class QuestTimeTheLuckyPack extends AbstractFishingCard {
     public QuestTimeTheLuckyPack() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 9;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new AcceptQuestAction(new TheLuckyPack()));
+        atb(new AcceptQuestAction(new TheLuckyPack(magicNumber)));
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

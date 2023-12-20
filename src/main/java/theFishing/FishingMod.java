@@ -1,15 +1,13 @@
 package theFishing;
 
-import basemod.AutoAdd;
-import basemod.BaseMod;
-import basemod.ModLabeledToggleButton;
-import basemod.ModPanel;
+import basemod.*;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -24,6 +22,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.actions.EnterTheDungeonAction;
 import theFishing.boards.AbstractBoard;
@@ -91,6 +90,7 @@ public class FishingMod implements
     private static FishingMod fishingMod;
     public static SpireConfig config;
     public static boolean foilAnywhere;
+    public static int delvePreference;
 
     @SpireEnum
     public static AbstractCard.CardTags DELVES;
@@ -128,8 +128,10 @@ public class FishingMod implements
     public static void initialize() throws IOException {
         Properties defaults = new Properties();
         defaults.setProperty("foilanywhere", "false");
+        defaults.setProperty("delvepreference", "0");
         config = new SpireConfig(modID, "config", defaults);
         foilAnywhere = config.getBool("foilanywhere");
+        delvePreference = config.getInt("delvepreference");
 
         fishingMod = new FishingMod();
     }
@@ -252,7 +254,8 @@ public class FishingMod implements
 
         String[] TEXT = CardCrawlGame.languagePack.getUIString(makeID("ConfigMenu")).TEXT;
         ModPanel settingsPanel = new ModPanel();
-        settingsPanel.addUIElement(new ModLabeledToggleButton(TEXT[3], 350, 800, Settings.CREAM_COLOR, FontHelper.charDescFont, config.getBool("foilanywhere"), settingsPanel, label -> {
+
+        settingsPanel.addUIElement(new ModLabeledToggleButton(TEXT[3], 365, 700, Settings.CREAM_COLOR, FontHelper.charDescFont, config.getBool("foilanywhere"), settingsPanel, label -> {
         }, button -> {
             foilAnywhere = button.enabled;
             config.setBool("foilanywhere", button.enabled);
@@ -261,6 +264,52 @@ public class FishingMod implements
             } catch (Exception e) {
             }
         }));
+
+        settingsPanel.addUIElement(new ModLabel("Delve Preference", 365, 650, settingsPanel, (modLabel -> {
+
+        })));
+
+        ArrayList<String> dropdownOptions = new ArrayList<>();
+
+        dropdownOptions.add("Daily");
+        dropdownOptions.add("Random");
+        for (String ID : AbstractBoard.idsList) {
+            dropdownOptions.add(AbstractBoard.getBoardByID(ID).name);
+        }
+
+        DropdownMenu d = new DropdownMenu((dropdownMenu, i, s) -> {
+            delvePreference = i;
+            config.setInt("delvepreference", delvePreference);
+            try {
+                config.save();
+            } catch (Exception e) {
+            }
+        }, dropdownOptions, FontHelper.tipBodyFont, Settings.CREAM_COLOR, dropdownOptions.size());
+
+        d.setSelectedIndex(delvePreference);
+
+        settingsPanel.addUIElement(new IUIElement() {
+            @Override
+            public void render(SpriteBatch spriteBatch) {
+                d.render(spriteBatch, 365 * Settings.scale, 625 * Settings.scale);
+            }
+
+            @Override
+            public void update() {
+                d.update();
+            }
+
+            @Override
+            public int renderLayer() {
+                return 0;
+            }
+
+            @Override
+            public int updateOrder() {
+                return 0;
+            }
+        });
+
         BaseMod.registerModBadge(new Texture(makeImagePath("ui/badge.png")), TEXT[0], TEXT[1], TEXT[2], settingsPanel);
     }
 

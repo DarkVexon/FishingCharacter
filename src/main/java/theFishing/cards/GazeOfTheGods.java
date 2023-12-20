@@ -2,6 +2,7 @@ package theFishing.cards;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.actions.utility.ExhaustToHandAction;
@@ -21,7 +22,7 @@ public class GazeOfTheGods extends AbstractFishingCard {
 
     public GazeOfTheGods() {
         super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 30;
+        baseMagicNumber = magicNumber = 25;
     }
 
     private static String scream() {
@@ -43,10 +44,16 @@ public class GazeOfTheGods extends AbstractFishingCard {
     @Override
     public void triggerOnExhaust() {
         att(new ExhaustToHandAction(this));
-        att(new ReduceCostAction(this));
+        att(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                GazeOfTheGods.this.freeToPlayOnce = true;
+            }
+        });
     }
 
     public void upp() {
-        upgradeMagicNumber(10);
+        upgradeMagicNumber(7);
     }
 }

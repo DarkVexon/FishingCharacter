@@ -50,13 +50,14 @@
     "TEXT": [
       "The Lucky Pull",
       "#yQuest: Play #b",
-      " #yFoil cards. NL #yReward: Play the last one again."
+      " #yFoil cards. NL #yReward: Gain #b",
+      " #yPlated #yArmor."
     ]
   },
   "${ModID}:ThePrismaticPortal": {
     "TEXT": [
       "The Prismatic Portal",
-      "#yQuest: Play #b7 cards. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
+      "#yQuest: Gain #b13 #yBlock. NL #yReward: Shuffle #yThe #yGem #ySearch into your draw pile."
     ]
   },
   "${ModID}:TheStorm": {
@@ -124,10 +125,10 @@
   },
   "${ModID}:BoardInfo": {
     "TEXT": [
-      "The Dungeon",
-      "Today's Dungeon: NL ",
-      " NL Next room: #r",
-      "Next Room",
+      "Delve Bonus",
+      "Today's Delve Bonus: NL ",
+      " NL Next Effect: #r",
+      "Next Effect",
       "None"
     ]
   },
@@ -261,7 +262,7 @@
   },
   "${ModID}:CharacterOption": {
     "TEXT": [
-      "Today's Dungeon: "
+      "Today's Delve Bonus: "
     ]
   },
   "${ModID}:Circuitry": {
@@ -283,8 +284,8 @@
       " damage to a random enemy! Yaya!"
     ],
     "TEXT_DICT": {
-      "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b4 damage to a random enemy.",
-      "F1": "Increase the Cannon's damage by #b4.",
+      "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b5 damage to a random enemy.",
+      "F1": "Increase the Cannon's damage by #b5.",
       "F3": "Gain [E] ."
     }
   },
@@ -298,14 +299,15 @@
       "F3": "... and it costs 0."
     }
   },
-  "${ModID}:TheToxfill": {
+  "${ModID}:PowerBar": {
     "TEXT": [
-      "The Toxfill"
+      "Power Bar",
+      "Power Bar",
+      "Fill this up with your unused #yBlock to unlock new #yDelve effects. Current Power: #b"
     ],
     "TEXT_DICT": {
-      "SP": "Whenever you apply a debuff to an enemy, they take #b1 damage.",
-      "F1": "Increase this damage by #b2.",
-      "F3": "ALL enemies lose #b1 #yStrength."
+      "SP": "At the start of your turn, unused #yBlock charges up your Power Bar.",
+      "F1": "If you have at least... NL #b5 Power: Deal #b3 damage to ALL enemies. NL #b10 Power: Draw #b1 card. NL #b18 Power: Gain #b1 #yStrength. NL #b30 Power: Spend #b5 for [E]."
     }
   }
 }

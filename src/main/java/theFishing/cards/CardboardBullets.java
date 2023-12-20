@@ -15,7 +15,7 @@ public class CardboardBullets extends AbstractFishingCard {
 
     public CardboardBullets() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

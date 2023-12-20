@@ -15,7 +15,7 @@ public class HunkerDown extends AbstractFishingCard {
 
     public HunkerDown() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 1;
+        baseBlock = 2;
         baseMagicNumber = magicNumber = 3;
     }
 
