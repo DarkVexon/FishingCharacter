@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
+import theFishing.boards.AbstractBoard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.applyToEnemy;
@@ -26,7 +27,7 @@ public class DarkDreams extends AbstractFishingCard implements OnRestCard {
     public DarkDreams() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
-        tags.add(FishingMod.DELVES);
+        AbstractBoard.postInitDelveState(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

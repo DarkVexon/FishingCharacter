@@ -17,6 +17,7 @@ public class Darkleech extends AbstractFishingCard {
         baseMagicNumber = magicNumber = 7;
         baseSecondMagic = secondMagic = 1;
         exhaust = true;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

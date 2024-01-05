@@ -109,9 +109,9 @@
   "${ModID}:DungeonMasterPower": {
     "NAME": "Dungeon Master",
     "DESCRIPTIONS": [
-      "#yDelve #yBonus #b3 triggers #b",
-      " additional times.",
-      "#yDelve #yBonus #b3 triggers twice."
+      "At the start of your turn, #yDelve #b",
+      " times.",
+      "At the start of your turn, #yDelve."
     ]
   },
   "${ModID}:LunchBoxPower": {
@@ -202,6 +202,14 @@
     "DESCRIPTIONS": [
       "Whenever you play a card this turn, gain #b",
       " #yBlock."
+    ]
+  },
+  "${ModID}:TerminaStackPower": {
+    "NAME": "Termina Approaches",
+    "DESCRIPTIONS": [
+      "After #yDelving #b",
+      " more time, deal #b18 damage to ALL enemies.",
+      " more times, deal #b18 damage to ALL enemies."
     ]
   }
 }

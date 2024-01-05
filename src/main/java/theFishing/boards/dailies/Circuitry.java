@@ -5,20 +5,26 @@ import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.Frost;
 import com.megacrit.cardcrawl.orbs.Lightning;
-import com.megacrit.cardcrawl.powers.FocusPower;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
+import static theFishing.util.Wiz.att;
 
 public class Circuitry extends AbstractBoard {
     public static final String ID = FishingMod.makeID(Circuitry.class.getSimpleName());
 
     public Circuitry() {
         super(ID);
-        effects.add(() -> att(new ChannelAction(new Lightning())));
-        effects.add(() -> att(new ChannelAction(new Frost())));
-        effects.add(() -> applyToSelfTop(new FocusPower(AbstractDungeon.player, 1)));
+    }
+
+    @Override
+    public void effect() {
+        if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+            att(new ChannelAction(new Lightning()));
+        } else {
+            att(new ChannelAction(new Frost()));
+        }
     }
 
     @Override

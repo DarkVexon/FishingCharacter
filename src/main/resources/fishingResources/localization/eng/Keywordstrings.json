@@ -36,13 +36,6 @@
     "DESCRIPTION": "One in three card rewards will contain a Foil card. NL #gShiny!"
   },
   {
-    "PROPER_NAME": "Unnate",
-    "NAMES": [
-      "unnate"
-    ],
-    "DESCRIPTION": "Starts each combat at the bottom of your draw pile."
-  },
-  {
     "PROPER_NAME": "Picked",
     "NAMES": [
       "picked"
@@ -55,7 +48,7 @@
       "delve",
       "delved"
     ],
-    "DESCRIPTION": "Trigger the next effect of today's Delve Bonus."
+    "DESCRIPTION": "Trigger today's Delve effect."
   },
   {
     "PROPER_NAME": "Smiley Sticker",

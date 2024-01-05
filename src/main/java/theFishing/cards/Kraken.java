@@ -16,7 +16,7 @@ public class Kraken extends AbstractFishingCard {
 
     public Kraken() {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 10;
+        baseDamage = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

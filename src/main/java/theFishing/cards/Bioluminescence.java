@@ -21,6 +21,6 @@ public class Bioluminescence extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
     }
 }

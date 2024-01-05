@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
+import theFishing.boards.AbstractBoard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -16,7 +17,7 @@ public class DoubleUp extends AbstractFishingCard {
     public DoubleUp() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
-        tags.add(FishingMod.DELVES);
+        AbstractBoard.postInitDelveState(this);
         baseMagicNumber = magicNumber = 1;
     }
 

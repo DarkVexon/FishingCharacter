@@ -2,6 +2,7 @@ package theFishing.boards.dailies;
 
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
@@ -14,9 +15,12 @@ public class ChampsArena extends AbstractBoard {
 
     public ChampsArena() {
         super(ID);
-        effects.add(() -> makeInHandTop(new Shiv()));
-        effects.add(() -> makeInHandTop(new Shiv()));
-        effects.add(() -> applyToSelfTop(new StrengthPower(AbstractDungeon.player, 2)));
+    }
+
+    @Override
+    public void effect() {
+        applyToSelfTop(new LoseStrengthPower(AbstractDungeon.player, 2));
+        applyToSelfTop(new StrengthPower(AbstractDungeon.player, 2));
     }
 
     @Override

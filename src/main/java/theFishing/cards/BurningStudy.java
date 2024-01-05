@@ -17,6 +17,7 @@ public class BurningStudy extends AbstractFishingCard {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

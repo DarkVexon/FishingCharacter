@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
+import theFishing.boards.AbstractBoard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.*;
@@ -16,7 +17,7 @@ public class PlantFlag extends AbstractFishingCard {
     public PlantFlag() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 3;
-        tags.add(FishingMod.DELVES);
+        AbstractBoard.postInitDelveState(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

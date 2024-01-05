@@ -3,6 +3,7 @@ package theFishing.boards.dailies;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
 import theFishing.cardmods.StickerRetainMod;
@@ -14,22 +15,27 @@ public class MegaCrit extends AbstractBoard {
 
     public MegaCrit() {
         super(ID);
-        effects.add(() -> {
-            AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK);
-            CardModifierManager.addModifier(toMake, new StickerRetainMod());
-            makeInHandTop(toMake);
-        });
-        effects.add(() -> {
-            AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK);
-            toMake.upgrade();
-            CardModifierManager.addModifier(toMake, new StickerRetainMod());
-            makeInHandTop(toMake);
-        });
-        effects.add(() -> {
-            AbstractCard toMake = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER);
-            toMake.updateCost(-999);
-            CardModifierManager.addModifier(toMake, new StickerRetainMod());
-            makeInHandTop(toMake);
-        });
+    }
+
+    @Override
+    public void effect() {
+        AbstractCard toMake = generateCardChoices();
+        CardModifierManager.addModifier(toMake, new StickerRetainMod());
+        makeInHandTop(toMake);
+    }
+
+    private AbstractCard generateCardChoices() {
+        int roll = AbstractDungeon.cardRandomRng.random(99);
+        AbstractCard.CardRarity cardRarity;
+        if (roll < 55) {
+            cardRarity = AbstractCard.CardRarity.COMMON;
+        } else if (roll < 85) {
+            cardRarity = AbstractCard.CardRarity.UNCOMMON;
+        } else {
+            cardRarity = AbstractCard.CardRarity.RARE;
+        }
+
+        AbstractCard tmp = CardLibrary.getAnyColorCard(AbstractCard.CardType.ATTACK, cardRarity);
+        return tmp.makeCopy();
     }
 }

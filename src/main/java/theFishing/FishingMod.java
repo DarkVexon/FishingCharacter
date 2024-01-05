@@ -19,7 +19,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
@@ -27,6 +29,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.actions.EnterTheDungeonAction;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.TopPanelBoard;
+import theFishing.boards.dailies.LandOfGiants;
 import theFishing.cards.AbstractFishingCard;
 import theFishing.cards.cardvars.SecondDamage;
 import theFishing.cards.cardvars.SecondMagicNumber;
@@ -48,19 +51,7 @@ import java.util.Properties;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
-public class FishingMod implements
-        EditCardsSubscriber,
-        EditRelicsSubscriber,
-        EditStringsSubscriber,
-        EditKeywordsSubscriber,
-        EditCharactersSubscriber,
-        PostBattleSubscriber,
-        OnStartBattleSubscriber,
-        PostPlayerUpdateSubscriber,
-        AddAudioSubscriber,
-        PostInitializeSubscriber,
-        PostUpdateSubscriber,
-        StartGameSubscriber {
+public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, EditCharactersSubscriber, PostBattleSubscriber, OnStartBattleSubscriber, PostPlayerUpdateSubscriber, AddAudioSubscriber, PostInitializeSubscriber, PostUpdateSubscriber, StartGameSubscriber {
 
     public static final String modID = "fishing";
 
@@ -98,11 +89,7 @@ public class FishingMod implements
     public FishingMod() {
         BaseMod.subscribe(this);
 
-        BaseMod.addColor(TheFishing.Enums.FISHING_COLOR, characterColor, characterColor, characterColor,
-                characterColor, characterColor, characterColor, characterColor,
-                ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
-                ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
-                CARD_ENERGY_L, TEXT_ENERGY);
+        BaseMod.addColor(TheFishing.Enums.FISHING_COLOR, characterColor, characterColor, characterColor, characterColor, characterColor, characterColor, characterColor, ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S, ATTACK_L_ART, SKILL_L_ART, POWER_L_ART, CARD_ENERGY_L, TEXT_ENERGY);
     }
 
     public static String makePath(String resourcePath) {
@@ -138,8 +125,7 @@ public class FishingMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new TheFishing(TheFishing.characterStrings.NAMES[1], TheFishing.Enums.THE_FISHING),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheFishing.Enums.THE_FISHING);
+        BaseMod.addCharacter(new TheFishing(TheFishing.characterStrings.NAMES[1], TheFishing.Enums.THE_FISHING), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheFishing.Enums.THE_FISHING);
 
         BaseMod.addPotion(OceanInAJar.class, Color.BLUE.cpy(), Color.SKY.cpy(), null, OceanInAJar.POTION_ID, TheFishing.Enums.THE_FISHING);
         BaseMod.addPotion(StarlightSoda.class, Color.YELLOW.cpy(), Color.BLACK.cpy(), null, StarlightSoda.POTION_ID, TheFishing.Enums.THE_FISHING);
@@ -148,18 +134,16 @@ public class FishingMod implements
 
     @Override
     public void receiveEditRelics() {
-        new AutoAdd(modID)
-                .packageFilter(AbstractAdventurerRelic.class)
-                .any(AbstractAdventurerRelic.class, (info, relic) -> {
-                    if (relic.color == null) {
-                        BaseMod.addRelic(relic, RelicType.SHARED);
-                    } else {
-                        BaseMod.addRelicToCustomPool(relic, relic.color);
-                    }
-                    if (!info.seen) {
-                        UnlockTracker.markRelicAsSeen(relic.relicId);
-                    }
-                });
+        new AutoAdd(modID).packageFilter(AbstractAdventurerRelic.class).any(AbstractAdventurerRelic.class, (info, relic) -> {
+            if (relic.color == null) {
+                BaseMod.addRelic(relic, RelicType.SHARED);
+            } else {
+                BaseMod.addRelicToCustomPool(relic, relic.color);
+            }
+            if (!info.seen) {
+                UnlockTracker.markRelicAsSeen(relic.relicId);
+            }
+        });
     }
 
     @Override
@@ -167,10 +151,7 @@ public class FishingMod implements
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new ThirdMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
-        new AutoAdd(modID)
-                .packageFilter(AbstractFishingCard.class)
-                .setDefaultSeen(true)
-                .cards();
+        new AutoAdd(modID).packageFilter(AbstractFishingCard.class).setDefaultSeen(true).cards();
     }
 
 
@@ -215,8 +196,7 @@ public class FishingMod implements
         QuestHelper.reset();
         activeBoard.reset();
 
-        if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING))
-            activeBoard.atBattleStartPreDraw();
+        if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) activeBoard.atBattleStartPreDraw();
     }
 
     @Override
@@ -320,10 +300,7 @@ public class FishingMod implements
         time += Gdx.graphics.getDeltaTime();
     }
 
-    public static Settings.GameLanguage[] SupportedLanguages = {
-            Settings.GameLanguage.ENG,
-            Settings.GameLanguage.KOR
-    };
+    public static Settings.GameLanguage[] SupportedLanguages = {Settings.GameLanguage.ENG, Settings.GameLanguage.KOR};
 
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
@@ -352,12 +329,11 @@ public class FishingMod implements
 
             @Override
             public void onLoad(ArrayList<Integer> integers) {
-                if (integers != null)
-                    for (Integer i : integers) {
-                        if (AbstractDungeon.player.masterDeck.size() > i) {
-                            FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
-                        }
+                if (integers != null) for (Integer i : integers) {
+                    if (AbstractDungeon.player.masterDeck.size() > i) {
+                        FoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
                     }
+                }
             }
         });
 
@@ -369,18 +345,45 @@ public class FishingMod implements
 
             @Override
             public void onLoad(String s) {
-                if (s != null)
-                    activeBoard = AbstractBoard.getBoardByID(s);
-                else
-                    activeBoard = AbstractBoard.getRunBoard();
+                if (s != null) activeBoard = AbstractBoard.getBoardByID(s);
+                else activeBoard = AbstractBoard.getRunBoard();
+
+                reInitializeDelveKeyword();
+
+                if (activeBoard.id.equalsIgnoreCase(LandOfGiants.ID)) {
+                    for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+                        if (q.hasTag(FishingMod.DELVES)) {
+                            AbstractCard source = CardLibrary.getCard(q.cardID);
+                            q.cost = source.cost + 1;
+                            q.costForTurn = q.cost;
+                        }
+                    }
+                }
             }
         });
+    }
+
+    private static String[] names = {
+            "delve",
+            "delved"
+    };
+
+    public static void reInitializeDelveKeyword() {
+        System.out.println("Re-Initializing Delve Keyword. Active Board: " + activeBoard);
+        if (activeBoard != null) {
+            GameDictionary.keywords.put("fishing:delve", "Trigger today's Delve effect: NL " + activeBoard.getLocString(activeBoard.id).TEXT_DICT.get("F1"));
+            GameDictionary.keywords.put("fishing:delved", "Trigger today's Delve effect: NL " + activeBoard.getLocString(activeBoard.id).TEXT_DICT.get("F1"));
+        } else {
+            GameDictionary.keywords.put("fishing:delve", "Trigger today's Delve effect.");
+            GameDictionary.keywords.put("fishing:delved", "Trigger today's Delve effect.");
+        }
     }
 
     @Override
     public void receiveStartGame() {
         if (!CardCrawlGame.loadingSave) {
             activeBoard = AbstractBoard.getRunBoard();
+            reInitializeDelveKeyword();
             if (AbstractDungeon.player.chosenClass.equals(TheFishing.Enums.THE_FISHING)) {
                 activeBoard.atRunStart();
             }

@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
+import theFishing.boards.AbstractBoard;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -15,7 +16,7 @@ public class Candle extends AbstractFishingCard {
     public Candle() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = 1;
-        tags.add(FishingMod.DELVES);
+        AbstractBoard.postInitDelveState(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

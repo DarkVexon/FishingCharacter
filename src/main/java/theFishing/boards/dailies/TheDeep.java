@@ -13,18 +13,12 @@ public class TheDeep extends AbstractBoard {
 
     public TheDeep() {
         super(ID);
-        effects.add(() -> {
-            applyToSelfTop(new MoreKrakenDamagePower(10));
-            att(new SFXAction("fishing:WAKA_WAKA"));
-        });
-        effects.add(() -> {
-            applyToSelfTop(new MoreKrakenDamagePower(10));
-            att(new SFXAction("fishing:WAKA_WAKA"));
-        });
-        effects.add(() -> {
-            applyToSelfTop(new MoreKrakenDamagePower(10));
-            att(new SFXAction("fishing:WAKA_WAKA"));
-        });
+    }
+
+    @Override
+    public void effect() {
+        applyToSelfTop(new MoreKrakenDamagePower(10));
+        att(new SFXAction("fishing:WAKA_WAKA"));
     }
 
     public void atBattleStartPreDraw() {

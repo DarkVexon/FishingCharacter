@@ -22,7 +22,7 @@ public class TopPanelBoard extends TopPanelItem {
 
     public static final String ID = FishingMod.makeID("BoardInfo");
 
-    public static final Texture ICON = TexLoader.getTexture("fishingResources/images/ui/candle_ooc.png");
+    public static final Texture ICON = TexLoader.getTexture("fishingResources/images/ui/candle3.png");
     public static final Texture ICON_ST1 = TexLoader.getTexture("fishingResources/images/ui/candle1.png");
     public static final Texture ICON_ST2 = TexLoader.getTexture("fishingResources/images/ui/candle2.png");
     public static final Texture ICON_ST3 = TexLoader.getTexture("fishingResources/images/ui/candle3.png");
@@ -40,35 +40,10 @@ public class TopPanelBoard extends TopPanelItem {
     @Override
     public void render(SpriteBatch sb) {
         if (AbstractDungeon.player.chosenClass == TheFishing.Enums.THE_FISHING) { //TODO: Or if you have a Delve card
-            if (Wiz.isInCombat()) {
-                switch (FishingMod.activeBoard.progress) {
-                    case 0:
-                        image = ICON_ST1;
-                        break;
-                    case 1:
-                        image = ICON_ST2;
-                        break;
-                    case 2:
-                        image = ICON_ST3;
-                        break;
-                }
-            } else {
-                image = ICON;
-            }
             render(sb, Color.WHITE);
-            if (Wiz.isInCombat()) {
-                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelAmountFont, Integer.toString(FishingMod.activeBoard.progress + 1), this.x + 58.0F * Settings.scale, this.y + 25.0F * Settings.scale, Color.WHITE.cpy());
-            }
             if (getHitbox().hovered) {
-                if (Wiz.isInCombat()) {
-                    TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription() + uiStrings.TEXT[2] + (FishingMod.activeBoard.progress + 1) + LocalizedStrings.PERIOD);
-                } else {
-                    TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription());
-                }
+                TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1] + FishingMod.activeBoard.getDescription());
             }
-            //else if (Wiz.isInCombat() && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode) && AbstractDungeon.player.hoveredCard != null && AbstractDungeon.player.hoveredCard.hasTag(FishingMod.DELVES)) {
-            //    TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[3], FishingMod.activeBoard.getEffectDescription(FishingMod.activeBoard.progress % FishingMod.activeBoard.effects.size()));
-            //}
         }
     }
 

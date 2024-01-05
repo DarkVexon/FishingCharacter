@@ -12,7 +12,7 @@ public class DungeonMaster extends AbstractFishingCard {
     // intellij stuff power, self, rare, , , , , 25, 7
 
     public DungeonMaster() {
-        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

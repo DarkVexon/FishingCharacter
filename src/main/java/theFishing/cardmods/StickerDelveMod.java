@@ -1,12 +1,15 @@
 package theFishing.cardmods;
 
 import basemod.abstracts.AbstractCardModifier;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import theFishing.FishingMod;
 import theFishing.actions.EnterTheDungeonAction;
+import theFishing.boards.AbstractBoard;
+import theFishing.boards.dailies.LandOfGiants;
 
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
@@ -16,13 +19,12 @@ public class StickerDelveMod extends AbstractStickerModifier {
 
     public StickerDelveMod() {
         super(StickerManager.StickerType.DELVE);
+        offsetY = MathUtils.random(-175, -150);
     }
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        if (!card.hasTag(FishingMod.DELVES)) {
-            card.tags.add(FishingMod.DELVES);
-        }
+        AbstractBoard.postInitDelveState(card);
     }
 
     @Override

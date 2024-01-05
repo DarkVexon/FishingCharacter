@@ -19,12 +19,10 @@ public class Leviathan extends AbstractFishingCard implements OnObtainCard {
     public Leviathan() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new SpecialCurse();
-        baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LeviathanPower(magicNumber));
+        applyToSelf(new LeviathanPower(2));
     }
 
     public void upp() {

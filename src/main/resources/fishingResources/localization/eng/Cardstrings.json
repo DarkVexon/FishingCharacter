@@ -167,7 +167,8 @@
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
-    "DESCRIPTION": "Gain 1 Strength. NL If you have over 200 *Gold, spend !M! to gain an extra 2 Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL Put a copy of this with increased values on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength. NL Put a copy of this with increased values on top of your draw pile."
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
@@ -491,8 +492,8 @@
   },
   "${ModID}:DungeonMaster": {
     "NAME": "Dungeon Master",
-    "DESCRIPTION": "fishing:Delve *Bonus 3 triggers twice.",
-    "UPGRADE_DESCRIPTION": "Innate. NL fishing:Delve *Bonus 3 triggers twice."
+    "DESCRIPTION": "At the start of your turn, fishing:Delve.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, fishing:Delve."
   },
   "${ModID}:GazeOfTheGods": {
     "NAME": "Yawning Void",
@@ -517,7 +518,7 @@
   },
   "${ModID}:ProTank": {
     "NAME": "Seal Away",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Delve. NL ${ModID}:Picked: Obtain a *Candle."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Delve twice."
   },
   "${ModID}:GlogusEgg": {
     "NAME": "Glogus Egg",
@@ -563,8 +564,8 @@
   },
   "${ModID}:Leviathan": {
     "NAME": "Leviathan",
-    "DESCRIPTION": "Whenever a Curse is Exhausted, gain !M! Strength and !${ModID}:m2! Block. NL ${ModID}:Picked: Obtain a *Rot.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a Curse is Exhausted, gain !M! Strength and !${ModID}:m2! Block. NL ${ModID}:Picked: Obtain a *Rot."
+    "DESCRIPTION": "Whenever a Curse is Exhausted, gain 2 Strength and 4 Block. NL ${ModID}:Picked: Obtain a *Rot.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a Curse is Exhausted, gain 2 Strength and 4 Block. NL ${ModID}:Picked: Obtain a *Rot."
   },
   "${ModID}:SpecialCurse": {
     "NAME": "Rot",
@@ -607,19 +608,19 @@
   },
   "${ModID}:Thunderbolt": {
     "NAME": "Thunderbolt",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
   },
   "${ModID}:BurningStudy": {
     "NAME": "Burning Study",
-    "DESCRIPTION": "Exhaust 1 card. NL Gain !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Exhaust 1 card. NL Gain !M! Strength. NL Exhaust."
   },
   "${ModID}:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
   },
   "${ModID}:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "ALL enemies lose !M! HP. NL Draw !${ModID}:m2! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose !M! HP. NL Draw !${ModID}:m2! cards. NL Exhaust."
+    "DESCRIPTION": "Retain. NL ALL enemies lose !M! HP. NL Draw !${ModID}:m2! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL ALL enemies lose !M! HP. NL Draw !${ModID}:m2! cards. NL Exhaust."
   }
 }

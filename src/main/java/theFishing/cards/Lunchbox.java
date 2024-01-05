@@ -15,7 +15,7 @@ public class Lunchbox extends AbstractFishingCard implements OnObtainCard {
 
     public Lunchbox() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

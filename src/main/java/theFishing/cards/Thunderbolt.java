@@ -18,6 +18,7 @@ public class Thunderbolt extends AbstractFishingCard {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 13;
         exhaust = true;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

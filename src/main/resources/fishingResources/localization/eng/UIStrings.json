@@ -23,11 +23,6 @@
       "Exhaust for Mop Up."
     ]
   },
-  "${ModID}:FlamingFlipAction": {
-    "TEXT": [
-      "Exhaust for Straw Sleeves."
-    ]
-  },
   "${ModID}:FishDescriptor": {
     "TEXT": [
       "Fish",
@@ -138,26 +133,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Start with one Strike #yUpgraded.",
-      "F1": "Add #b1 #yShiv into your hand.",
-      "F3": "Gain #b2 #yStrength."
-    }
-  },
-  "${ModID}:TombOfRorrim": {
-    "TEXT": [
-      "Tomb of Rorrim"
-    ],
-    "TEXT_DICT": {
-      "F1": "Gain #b3 #yBlock.",
-      "F3": "This turn, your next card is played twice."
-    }
-  },
-  "${ModID}:WatchersTemple": {
-    "TEXT": [
-      "Temple of the Third Eye"
-    ],
-    "TEXT_DICT": {
-      "F1": "Add a #ySmite into your hand.",
-      "F3": "Attacks deal #b50% more damage this turn."
+      "F1": "Gain #b2 #yStrength. At the end of this turn, lose #b2 #yStrength."
     }
   },
   "${ModID}:WhereItFell": {
@@ -165,8 +141,8 @@
       "Where It Fell"
     ],
     "TEXT_DICT": {
-      "F1": "Add a #yStar #yShard into your hand.",
-      "F3": "Draw #b2 cards."
+      "SP": "Start with a random common relic instead of The Rod.",
+      "F1": "Add a #yStar #yShard into your hand."
     }
   },
   "${ModID}:TheDeep": {
@@ -178,35 +154,13 @@
       "F1": "Increase #yWaka #yWaka's damage by #b10 this combat."
     }
   },
-  "${ModID}:TheFactory": {
-    "TEXT": [
-      "The Factory"
-    ],
-    "TEXT_DICT": {
-      "SP": "At the start of combat, #yExhaust #b1 random card in your draw pile.",
-      "F1": "Gain #b4 #yBlock.",
-      "F3": "Play a copy of the #yExhausted card."
-    }
-  },
-  "${ModID}:TheStarship": {
-    "TEXT": [
-      "The Starship"
-    ],
-    "TEXT_DICT": {
-      "F1": "#yUpgrade a random card in your hand.",
-      "F2": "Gain [E] .",
-      "F3": "Deal #b9 damage to a random enemy."
-    }
-  },
   "${ModID}:MegaCrit": {
     "TEXT": [
       "MegaCrit"
     ],
     "TEXT_DICT": {
       "SP": "Cards created by this have #yRetain stickers.",
-      "F1": "Add a random #yAttack into your hand.",
-      "F2": "Add a random #yUpgraded #yAttack into your hand.",
-      "F3": "Add a random #yPower into your hand. It costs #b0."
+      "F1": "Add a random #yAttack of any color into your hand."
     }
   },
   "${ModID}:ThortonsBank": {
@@ -215,19 +169,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Whenever you obtain a card with #yDelve, gain #b25 Gold.",
-      "F1": "Deal #b5 damage to a random enemy.",
-      "F2": "Gain #b4 #yBlock.",
-      "F3": "Apply #b1 #yWeak and #yVulnerable to a random enemy."
-    }
-  },
-  "${ModID}:TowerOfSkies": {
-    "TEXT": [
-      "Tower of Skies"
-    ],
-    "TEXT_DICT": {
-      "SP": "You can see the top card of your draw pile.",
-      "F1": "Draw #b1 card and #yUpgrade it.",
-      "F3": "Play the top card of your draw pile."
+      "F1": "Gain #b4 #yBlock."
     }
   },
   "${ModID}:Termina": {
@@ -236,28 +178,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Cards with Delve are not discarded at the end of your turn.",
-      "F1": "Nothing happens...",
-      "F3": "Deal #b18 damage to ALL enemies."
-    }
-  },
-  "${ModID}:KongJungle": {
-    "TEXT": [
-      "Pyoro's Beanstalk"
-    ],
-    "TEXT_DICT": {
-      "F1": "Add a #yBean into your hand.",
-      "F3": "Your next Skill costs #b0."
-    }
-  },
-  "${ModID}:XMansion": {
-    "TEXT": [
-      "X-Mansion"
-    ],
-    "TEXT_DICT": {
-      "SP": "Start the run with a #yStrike-X replacing one of your #yStrikes.",
-      "F1": "Gain #b3 #yBlock.",
-      "F2": "Gain [E] .",
-      "F3": "Add a #yMiracle into your hand."
+      "F1": "After 3 Delves, deal #b18 damage to ALL enemies."
     }
   },
   "${ModID}:CharacterOption": {
@@ -271,9 +192,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Start combat with #b1 Orb slot for each #yDelve card in your deck.",
-      "F1": "#yChannel #b1 #yLightning.",
-      "F2": "#yChannel #b1 #yFrost.",
-      "F3": "Gain #b1 #yFocus."
+      "F1": "#yChannel #b1 #yLightning or #yFrost at random."
     }
   },
   "${ModID}:TheCannon": {
@@ -284,9 +203,8 @@
       " damage to a random enemy! Yaya!"
     ],
     "TEXT_DICT": {
-      "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b5 damage to a random enemy.",
-      "F1": "Increase the Cannon's damage by #b5.",
-      "F3": "Gain [E] ."
+      "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b6 damage to a random enemy.",
+      "F1": "Increase the Cannon's damage by #b6."
     }
   },
   "${ModID}:WizvexTower": {
@@ -295,19 +213,16 @@
     ],
     "TEXT_DICT": {
       "SP": "Start combat with four Spells. When they run out, refill them!",
-      "F1": "Choose a Spell to put into your hand...",
-      "F3": "... and it costs 0."
+      "F1": "Put a random Spell into your hand."
     }
   },
-  "${ModID}:PowerBar": {
+  "${ModID}:LandOfGiants": {
     "TEXT": [
-      "Power Bar",
-      "Power Bar",
-      "Fill this up with your unused #yBlock to unlock new #yDelve effects. Current Power: #b"
+      "Land of Giants"
     ],
     "TEXT_DICT": {
-      "SP": "At the start of your turn, unused #yBlock charges up your Power Bar.",
-      "F1": "If you have at least... NL #b5 Power: Deal #b3 damage to ALL enemies. NL #b10 Power: Draw #b1 card. NL #b18 Power: Gain #b1 #yStrength. NL #b30 Power: Spend #b5 for [E]."
+      "SP": "Cards with Delve cost #b1 more.",
+      "F1": "Play the top card of your draw pile."
     }
   }
 }

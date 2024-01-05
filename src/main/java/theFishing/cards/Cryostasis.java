@@ -16,6 +16,7 @@ public class Cryostasis extends AbstractFishingCard {
         baseBlock = 7;
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

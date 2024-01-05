@@ -5,12 +5,12 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theFishing.FishingMod;
 import theFishing.TheFishing;
 import theFishing.boards.dailies.*;
-import theFishing.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -21,8 +21,6 @@ public abstract class AbstractBoard {
 
     public String id;
     public String name;
-    public int progress = 0;
-    public ArrayList<Runnable> effects = new ArrayList<>();
 
     private static final HashMap<String, UIStrings> locMap = new HashMap<>();
 
@@ -59,20 +57,20 @@ public abstract class AbstractBoard {
         idsList.add(WizvexTower.ID);
         ids.put(ThortonsBank.ID, ThortonsBank.class);
         idsList.add(ThortonsBank.ID);
-        ids.put(MegaCrit.ID, MegaCrit.class);
-        idsList.add(MegaCrit.ID);
         ids.put(Circuitry.ID, Circuitry.class);
         idsList.add(Circuitry.ID);
+        ids.put(MegaCrit.ID, MegaCrit.class);
+        idsList.add(MegaCrit.ID);
         ids.put(TheCannon.ID, TheCannon.class);
         idsList.add(TheCannon.ID);
-        ids.put(KongJungle.ID, KongJungle.class);
-        idsList.add(KongJungle.ID);
         ids.put(TheDeep.ID, TheDeep.class);
         idsList.add(TheDeep.ID);
         ids.put(Termina.ID, Termina.class);
         idsList.add(Termina.ID);
         ids.put(WhereItFell.ID, WhereItFell.class);
         idsList.add(WhereItFell.ID);
+        ids.put(LandOfGiants.ID, LandOfGiants.class);
+        idsList.add(LandOfGiants.ID);
     }
 
     private static final String debugOverride = null;
@@ -102,15 +100,12 @@ public abstract class AbstractBoard {
 
     public void proceed() {
         FishingMod.delvedThisTurn = true;
-        effects.get(progress).run();
-        progress += 1;
-        if (progress == 3) {
-            progress = 0;
-        }
+        effect();
     }
 
+    public abstract void effect();
+
     public void reset() {
-        progress = 0;
         FishingMod.delvedThisTurn = false;
     }
 
@@ -133,55 +128,8 @@ public abstract class AbstractBoard {
         return sb;
     }
 
-    private Boolean no2 = null;
-    private Boolean no3 = null;
-
-    private String getEffectsText() {
-        StringBuilder sb = new StringBuilder();
-        if (no2 == null) no2 = !getLocString(id).TEXT_DICT.containsKey("F2");
-        if (no3 == null) no3 = !getLocString(id).TEXT_DICT.containsKey("F3");
-        int value = (progress + 1);
-        if ((value == 1 || (no2 && no3)) && Wiz.isInCombat()) {
-            sb.append("#r");
-        }
-        if (no2 && no3) {
-            sb.append("Effect");
-        } else {
-            sb.append("1");
-            if (no2) {
-                sb.append(" & ");
-                if (value == 2 && Wiz.isInCombat()) {
-                    sb.append("#r");
-                }
-                sb.append("2");
-            }
-            if (no3) {
-                sb.append(" & ");
-                if (value == 3 && Wiz.isInCombat()) {
-                    sb.append("#r");
-                }
-                sb.append("3");
-            }
-        }
-        sb.append(": ");
-        sb.append(getLocString(id).TEXT_DICT.get("F1"));
-        if (!no2) {
-            sb.append(" NL ");
-            if (value == 2 && Wiz.isInCombat()) {
-                sb.append("#r");
-            }
-            sb.append("2: ");
-            sb.append(getLocString(id).TEXT_DICT.get("F2"));
-        }
-        if (!no3) {
-            sb.append(" NL ");
-            if (value == 3 && Wiz.isInCombat()) {
-                sb.append("#r");
-            }
-            sb.append("3: ");
-            sb.append(getLocString(id).TEXT_DICT.get("F3"));
-        }
-        return sb.toString();
+    public String getEffectsText() {
+        return "#yEffect: " + getLocString(id).TEXT_DICT.get("F1");
     }
 
     public String getSpecialRule() {
@@ -222,5 +170,16 @@ public abstract class AbstractBoard {
 
     public void prePlayerRender(SpriteBatch sb) {
 
+    }
+
+    public static void postInitDelveState(AbstractCard card) {
+        if (!card.hasTag(FishingMod.DELVES)) {
+            card.tags.add(FishingMod.DELVES);
+            if (FishingMod.activeBoard != null && CardCrawlGame.isInARun() && FishingMod.activeBoard.id.equalsIgnoreCase(LandOfGiants.ID)) {
+                AbstractCard source = CardLibrary.getCard(card.cardID);
+                card.cost = source.cost + 1;
+                card.costForTurn = card.cost;
+            }
+        }
     }
 }

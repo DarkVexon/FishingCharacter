@@ -34,9 +34,11 @@ public class WizvexTower extends AbstractBoard {
 
     public WizvexTower() {
         super(ID);
-        effects.add(() -> att(new ConjureAction(true, false)));
-        effects.add(() -> att(new ConjureAction(true, false)));
-        effects.add(() -> att(new ConjureAction(true, true)));
+    }
+
+    @Override
+    public void effect() {
+        att(new ConjureAction(false, false));
     }
 
     private static final ArrayList<String> spells = new ArrayList<>();

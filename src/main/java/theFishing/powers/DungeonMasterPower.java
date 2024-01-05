@@ -1,15 +1,14 @@
 package theFishing.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import theFishing.FishingMod;
+import theFishing.actions.EnterTheDungeonAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
 
-public class DungeonMasterPower extends AbstractAdventurerPower implements OnCompleteDungeonPower {
+public class DungeonMasterPower extends AbstractAdventurerPower {
     public static String ID = makeID(DungeonMasterPower.class.getSimpleName());
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
@@ -19,10 +18,10 @@ public class DungeonMasterPower extends AbstractAdventurerPower implements OnCom
     }
 
     @Override
-    public void onDungeonComplete() {
+    public void atStartOfTurnPostDraw() {
         flash();
-        for (int i = 0; i < DungeonMasterPower.this.amount; i++) {
-            FishingMod.activeBoard.effects.get(FishingMod.activeBoard.effects.size() - 1).run();
+        for (int i = 0; i < amount; i++) {
+            atb(new EnterTheDungeonAction());
         }
     }
 

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import theFishing.FishingMod;
 import theFishing.actions.AbandonQuestAction;
 import theFishing.actions.EnterTheDungeonAction;
+import theFishing.boards.AbstractBoard;
 import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.AbstractQuest;
 
@@ -25,7 +26,7 @@ public class KeyToTheCity extends AbstractFishingCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 9;
         isMultiDamage = true;
-        tags.add(FishingMod.DELVES);
+        AbstractBoard.postInitDelveState(this);
         baseMagicNumber = magicNumber = 2;
     }
 
