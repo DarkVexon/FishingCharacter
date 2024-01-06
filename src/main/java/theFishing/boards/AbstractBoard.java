@@ -63,14 +63,14 @@ public abstract class AbstractBoard {
         idsList.add(MegaCrit.ID);
         ids.put(TheCannon.ID, TheCannon.class);
         idsList.add(TheCannon.ID);
+        ids.put(LandOfGiants.ID, LandOfGiants.class);
+        idsList.add(LandOfGiants.ID);
         ids.put(TheDeep.ID, TheDeep.class);
         idsList.add(TheDeep.ID);
         ids.put(Termina.ID, Termina.class);
         idsList.add(Termina.ID);
         ids.put(WhereItFell.ID, WhereItFell.class);
         idsList.add(WhereItFell.ID);
-        ids.put(LandOfGiants.ID, LandOfGiants.class);
-        idsList.add(LandOfGiants.ID);
     }
 
     private static final String debugOverride = null;

@@ -492,8 +492,8 @@
   },
   "${ModID}:DungeonMaster": {
     "NAME": "Dungeon Master",
-    "DESCRIPTION": "At the start of your turn, fishing:Delve.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, fishing:Delve."
+    "DESCRIPTION": "fishing:Delve. NL At the start of your turn, fishing:Delve.",
+    "UPGRADE_DESCRIPTION": "Innate. NL fishing:Delve. NL At the start of your turn, fishing:Delve."
   },
   "${ModID}:GazeOfTheGods": {
     "NAME": "Yawning Void",

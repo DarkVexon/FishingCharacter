@@ -1,5 +1,6 @@
 package theFishing;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
@@ -18,8 +19,10 @@ import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
@@ -28,6 +31,7 @@ import theFishing.relics.TheRod;
 import theFishing.util.EnergyOrbFishing;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static theFishing.FishingMod.*;
@@ -43,11 +47,7 @@ public class TheFishing extends CustomPlayer {
 
     public TheFishing(String name, PlayerClass setClass) {
         super(name, setClass, new EnergyOrbFishing(), new SpineAnimation("fishingResources/images/char/mainChar/NewProject.atlas", "fishingResources/images/char/mainChar/NewProject.json", SIZE_SCALE));
-        initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
-                getLoadout(), 20.0F, -10.0F, 200.0F, 250.0F, new EnergyManager(3));
+        initializeClass(null, SHOULDER1, SHOULDER2, CORPSE, getLoadout(), 20.0F, -10.0F, 200.0F, 250.0F, new EnergyManager(3));
 
 
         dialogX = (drawX + 0.0F * Settings.scale);
@@ -71,9 +71,7 @@ public class TheFishing extends CustomPlayer {
 
     @Override
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAMES[0], TEXT[0],
-                74, 74, 0, 99, 5, this, getStartingRelics(),
-                getStartingDeck(), false);
+        return new CharSelectInfo(NAMES[0], TEXT[0], 74, 74, 0, 99, 5, this, getStartingRelics(), getStartingDeck(), false);
     }
 
     @Override
@@ -98,8 +96,7 @@ public class TheFishing extends CustomPlayer {
     @Override
     public void doCharSelectScreenSelectEffect() {
         CardCrawlGame.sound.playA("UNLOCK_PING", MathUtils.random(-0.2F, 0.2F));
-        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
-                false);
+        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
     }
 
     @Override
@@ -159,10 +156,7 @@ public class TheFishing extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[]{
-                AbstractGameAction.AttackEffect.FIRE,
-                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
-                AbstractGameAction.AttackEffect.FIRE};
+        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.FIRE};
     }
 
     @Override

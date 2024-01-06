@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
+import theFishing.FishingMod;
 import theFishing.TheFishing;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.TopPanelBoard;
@@ -18,14 +19,20 @@ public class CharacterSelectBoard {
     private static final Color COLOR = new Color(0.55f, 1.00f, 0.26f, 1f);
 
     private static String curString = null;
+    private static int prevSelection = -1;
 
     public static void Prefix(CharacterOption __instance, SpriteBatch sb) {
         if (__instance.c instanceof TheFishing) {
-            if (curString == null) {
-                curString = AbstractBoard.getRunBoard().name; //TODO: Won't update at midnight
+            if (curString == null || FishingMod.delvePreference != prevSelection) {
+                prevSelection = FishingMod.delvePreference;
+                if (FishingMod.delvePreference == 1) {
+                    curString = "Randomly Selected";
+                } else {
+                    curString = AbstractBoard.getRunBoard().name;
+                }
             }
             sb.draw(TopPanelBoard.ICON, getF(__instance, "infoX") - 24f, getF(__instance, "infoY") - 125f * Settings.scale - 24f, 24f, 24f, 48f, 48f, Settings.scale, Settings.scale, 0f, 0, 0, 64, 64, false, false);
-            FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, TEXT[0] + AbstractBoard.getRunBoard().name, getF(__instance, "infoX") + 25F * Settings.scale, getF(__instance, "infoY") - 125f * Settings.scale, 10000f, 10000f, COLOR);
+            FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, TEXT[0] + curString, getF(__instance, "infoX") + 25F * Settings.scale, getF(__instance, "infoY") - 125f * Settings.scale, 10000f, 10000f, COLOR);
         }
     }
 

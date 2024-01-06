@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theFishing.actions.EnterTheDungeonAction;
+import theFishing.boards.AbstractBoard;
 
 import static theFishing.FishingMod.DELVES;
 import static theFishing.FishingMod.makeID;
@@ -21,7 +22,7 @@ public class ProTank extends AbstractFishingCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = 7;
         baseBlock = 7;
-        tags.add(DELVES);
+        AbstractBoard.postInitDelveState(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

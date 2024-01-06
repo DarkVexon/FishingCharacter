@@ -25,6 +25,6 @@ public class QuestTimeTheStorm extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(5);
     }
 }
