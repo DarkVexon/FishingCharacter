@@ -18,6 +18,7 @@ public class Fishbones extends AbstractFishingCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 15;
         baseMagicNumber = magicNumber = 2;
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
