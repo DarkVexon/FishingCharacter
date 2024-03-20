@@ -150,7 +150,7 @@
       "The Maze"
     ],
     "TEXT_DICT": {
-      "SP": "At the start of combat, shuffle #yWaka #yWaka into your draw pile.",
+      "SP": "The first time you #yDelve each combat, shuffle #yWaka #yWaka into your draw pile.",
       "F1": "Increase #yWaka #yWaka's damage by #b10 this combat."
     }
   },

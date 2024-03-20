@@ -15,13 +15,19 @@ public class TheDeep extends AbstractBoard {
         super(ID);
     }
 
+    private boolean activated = false;
+
     @Override
     public void effect() {
         applyToSelfTop(new MoreKrakenDamagePower(10));
+        if (!activated) {
+            activated = true;
+            shuffleInTop(new Kraken());
+        }
         att(new SFXAction("fishing:WAKA_WAKA"));
     }
 
     public void atBattleStartPreDraw() {
-        shuffleIn(new Kraken());
+        activated = false;
     }
 }

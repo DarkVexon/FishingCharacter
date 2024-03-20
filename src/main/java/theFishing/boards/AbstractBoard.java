@@ -69,8 +69,6 @@ public abstract class AbstractBoard {
         idsList.add(TheDeep.ID);
         ids.put(Termina.ID, Termina.class);
         idsList.add(Termina.ID);
-        ids.put(WhereItFell.ID, WhereItFell.class);
-        idsList.add(WhereItFell.ID);
     }
 
     private static final String debugOverride = null;
