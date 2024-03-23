@@ -127,7 +127,7 @@ public abstract class AbstractBoard {
     }
 
     public String getEffectsText() {
-        return "#yEffect: " + getLocString(id).TEXT_DICT.get("F1");
+        return "#yKeyword #yEffect: " + getLocString(id).TEXT_DICT.get("F1");
     }
 
     public String getSpecialRule() {

@@ -56,6 +56,6 @@
       "smiley sticker",
       "smiley_sticker"
     ],
-    "DESCRIPTION": "After you play a card, Smiley Stickers on it make a random enemy lose #b4 HP."
+    "DESCRIPTION": "After you play a card with a Smiley Sticker on it, a random enemy loses #b4 HP."
   }
 ]
