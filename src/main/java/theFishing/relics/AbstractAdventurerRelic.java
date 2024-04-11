@@ -1,6 +1,7 @@
 package theFishing.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.interfaces.OnPlayerDamagedSubscriber;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theFishing.util.TexLoader;
