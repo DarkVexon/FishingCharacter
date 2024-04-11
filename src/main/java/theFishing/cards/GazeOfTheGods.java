@@ -21,7 +21,7 @@ public class GazeOfTheGods extends AbstractFishingCard {
     // intellij stuff skill, enemy, rare, , , , , 30, 10
 
     public GazeOfTheGods() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 25;
     }
 

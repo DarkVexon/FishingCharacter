@@ -71,7 +71,7 @@ public class TheFishing extends CustomPlayer {
 
     @Override
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAMES[0], TEXT[0], 74, 74, 0, 99, 5, this, getStartingRelics(), getStartingDeck(), false);
+        return new CharSelectInfo(NAMES[0], TEXT[0], 76, 76, 0, 99, 5, this, getStartingRelics(), getStartingDeck(), false);
     }
 
     @Override
