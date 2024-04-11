@@ -232,8 +232,8 @@
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIS Big!",
-    "DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Double the non-draw effects of ALL your ${ModID}:Fish. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Double the non-draw effects of ALL your ${ModID}:Fish."
+    "DESCRIPTION": "Add a ${ModID}:Fish into your hand. NL Double the non-draw effects of ALL your ${ModID}:Fish. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a ${ModID}:Fish into your hand. NL Double the non-draw effects of ALL your ${ModID}:Fish."
   },
   "${ModID}:GoneFishing": {
     "NAME": "Gone Fishing",
@@ -534,7 +534,7 @@
     "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Delve."
   },
   "${ModID}:DarkDepths": {
-    "NAME": "Waxing Shadows",
+    "NAME": "Dark Depths",
     "DESCRIPTION": "Can only be played if you ${ModID}:Delved this turn. NL Deal !D! damage. NL ${ModID}:Picked: Obtain a *Candle.",
     "EXTENDED_DESCRIPTION": [
       "I haven't Delved this turn!"
@@ -582,7 +582,7 @@
   },
   "${ModID}:Broadside": {
     "NAME": "Broadside",
-    "DESCRIPTION": "Deal !D! damage to the frontmost enemy !M! times. NL Put a ${ModID}:Foil *Miracle on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Put a ${ModID}:Foil *Miracle on top of your draw pile."
   },
   "${ModID}:Banana": {
     "NAME": "Bean",
@@ -622,5 +622,10 @@
     "NAME": "Darkleech",
     "DESCRIPTION": "Retain. NL ALL enemies lose !M! HP. NL Draw !${ModID}:m2! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL ALL enemies lose !M! HP. NL Draw !${ModID}:m2! cards. NL Exhaust."
+  },
+  "${ModID}:AdventureGameSolution": {
+    "NAME": "Point and Click",
+    "DESCRIPTION": "Add a ${ModID}:Fish, an *Insight, and a *Miracle into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a ${ModID}:Fish, an *Insight, and !M! *Miracles into your hand. NL Exhaust."
   }
 }

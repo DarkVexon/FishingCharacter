@@ -1,6 +1,7 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,7 +18,7 @@ public class Broadside extends AbstractFishingCard {
 
     public Broadside() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
         baseMagicNumber = magicNumber = 3;
         cardsToPreview = new Miracle();
         FoilPatches.makeFoil(cardsToPreview);
@@ -25,13 +26,7 @@ public class Broadside extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    dmgTop(Wiz.getFrontmostEnemy(), AttackEffect.FIRE);
-                }
-            });
+            atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
         AbstractCard card = new Miracle();
         FoilPatches.makeFoil(card);

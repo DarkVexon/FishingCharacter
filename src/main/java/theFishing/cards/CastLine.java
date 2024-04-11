@@ -14,7 +14,7 @@ public class CastLine extends AbstractFishingCard {
 
     public CastLine() {
         super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 5;
         baseMagicNumber = magicNumber = 1;
     }
 

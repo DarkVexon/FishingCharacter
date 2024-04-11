@@ -33,6 +33,9 @@ public class ConjureAction extends AbstractGameAction {
                     isDone = true;
                     if (((WizvexTower) FishingMod.activeBoard).spellCards.isEmpty()) {
                         ((WizvexTower) FishingMod.activeBoard).refreshSpells();
+                        for (WizvexTower.CardRenderInfo c : ((WizvexTower) FishingMod.activeBoard).spellCards) {
+                            c.card.upgrade();
+                        }
                     }
                 }
             });

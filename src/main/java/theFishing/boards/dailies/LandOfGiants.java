@@ -1,5 +1,6 @@
 package theFishing.boards.dailies;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theFishing.FishingMod;
@@ -17,5 +18,6 @@ public class LandOfGiants extends AbstractBoard {
     @Override
     public void effect() {
         att(new PlayTopCardAction(AbstractDungeon.getRandomMonster(), false));
+        att(new GainBlockAction(AbstractDungeon.player, 2));
     }
 }

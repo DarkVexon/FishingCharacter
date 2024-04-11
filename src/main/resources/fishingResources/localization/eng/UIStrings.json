@@ -133,7 +133,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Start with one Strike #yUpgraded.",
-      "F1": "Gain #b2 #yStrength. At the end of this turn, lose #b2 #yStrength."
+      "F1": "Every other Delve, gain #b1 #yStrength."
     }
   },
   "${ModID}:WhereItFell": {
@@ -178,7 +178,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Cards with Delve are not discarded at the end of your turn.",
-      "F1": "After 3 Delves, deal #b18 damage to ALL enemies."
+      "F1": "After 3 Delves, deal #b22 damage to ALL enemies."
     }
   },
   "${ModID}:CharacterOption": {
@@ -212,7 +212,7 @@
       "Wizvex Tower"
     ],
     "TEXT_DICT": {
-      "SP": "Start combat with four Spells. When they run out, refill them!",
+      "SP": "Start combat with four Spells. When they run out, refill them with Upgraded Spells!",
       "F1": "Put a random Spell into your hand."
     }
   },
@@ -222,7 +222,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Cards with Delve cost #b1 more.",
-      "F1": "Play the top card of your draw pile."
+      "F1": "Gain #b2 #yBlock and play the top card of your draw pile."
     }
   }
 }

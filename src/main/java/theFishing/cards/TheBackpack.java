@@ -14,7 +14,7 @@ public class TheBackpack extends AbstractFishingCard {
     // intellij stuff skill, self, rare, , , , , , 
 
     public TheBackpack() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 9;
     }
 

@@ -29,7 +29,7 @@ public class Termina extends AbstractBoard {
             att(new SFXAction("fishing:CLOCKTOWER"));
         } else {
             att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, result));
-            att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(18, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(22, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 }

@@ -14,7 +14,7 @@ public class GolemGuardian extends AbstractFishingCard {
     public GolemGuardian() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 15;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,7 +23,6 @@ public class GolemGuardian extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(1);
         upgradeMagicNumber(-1);
     }
 }
