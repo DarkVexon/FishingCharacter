@@ -45,8 +45,7 @@
     "TEXT": [
       "The Lucky Pull",
       "#yQuest: Play #b",
-      " #yFoil cards. NL #yReward: Gain #b",
-      " #yPlated #yArmor."
+      " #yFoil cards. NL #yReward: Play your last played card again."
     ]
   },
   "${ModID}:ThePrismaticPortal": {
@@ -150,8 +149,8 @@
       "The Maze"
     ],
     "TEXT_DICT": {
-      "SP": "The first time you #yDelve each combat, shuffle #yWaka #yWaka into your draw pile.",
-      "F1": "Increase #yWaka #yWaka's damage by #b10 this combat."
+      "SP": "The first time you #yDelve each combat, shuffle #yWaka #yWaka into your draw pile. (It's a cost #b2 #yAttack that deals #b10 damage.)",
+      "F1": "#yWaka #yWaka deals #b10 more damage this combat."
     }
   },
   "${ModID}:MegaCrit": {
@@ -178,7 +177,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Cards with Delve are not discarded at the end of your turn.",
-      "F1": "After 3 Delves, deal #b22 damage to ALL enemies."
+      "F1": "Every 3 Delves, deal #b22 damage to ALL enemies."
     }
   },
   "${ModID}:CharacterOption": {
@@ -203,8 +202,8 @@
       " damage to a random enemy! Yaya!"
     ],
     "TEXT_DICT": {
-      "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b6 damage to a random enemy.",
-      "F1": "Increase the Cannon's damage by #b6."
+      "SP": "When you end your turn with unused Energy, Fire the Cannon to deal #b5 damage to a random enemy.",
+      "F1": "Increase the Cannon's damage by #b5."
     }
   },
   "${ModID}:WizvexTower": {

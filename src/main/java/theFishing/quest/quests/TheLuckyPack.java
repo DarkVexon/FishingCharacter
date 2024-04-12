@@ -6,24 +6,22 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import theFishing.actions.RepeatCardAction;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.util.TexLoader;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.FishingMod.makeImagePath;
-import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.applyToSelfTop;
+import static theFishing.util.Wiz.*;
 
 public class TheLuckyPack extends AbstractQuest {
 
     public static final String ID = makeID("TheLuckyPack");
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
-    private int amount;
 
-    public TheLuckyPack(int amount) {
+    public TheLuckyPack() {
         super(ID, 3);
-        this.amount = amount;
     }
 
     @Override
@@ -33,18 +31,20 @@ public class TheLuckyPack extends AbstractQuest {
 
     @Override
     public String getDescription() {
-        String result = uiStrings.TEXT[1] + goal + uiStrings.TEXT[2] + amount + uiStrings.TEXT[3];
+        String result = uiStrings.TEXT[1] + goal + uiStrings.TEXT[2];
         return result;
     }
 
     @Override
     public void grantReward() {
-        applyToSelf(new PlatedArmorPower(AbstractDungeon.player, amount));
+        AbstractCard q = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1);
+        atb(new RepeatCardAction(q));
     }
 
     @Override
     public void grantRewardTop() {
-        applyToSelfTop(new PlatedArmorPower(AbstractDungeon.player, amount));
+        AbstractCard q = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1);
+        att(new RepeatCardAction(q));
     }
 
     @Override
@@ -78,3 +78,4 @@ public class TheLuckyPack extends AbstractQuest {
         return 175F;
     }
 }
+

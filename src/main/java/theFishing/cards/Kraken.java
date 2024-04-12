@@ -26,7 +26,6 @@ public class Kraken extends AbstractFishingCard {
     }
 
     public void upp() {
-        selfRetain = true;
-        uDesc();
+        upgradeBaseCost(1);
     }
 }

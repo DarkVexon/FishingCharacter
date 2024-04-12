@@ -18,10 +18,14 @@ public class Preclude extends AbstractFishingCard {
 
     public Preclude() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, false), Settings.FAST_MODE ? 0.0F : 0.1F));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, false), Settings.FAST_MODE ? 0.0F : 0.1F));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, false), Settings.FAST_MODE ? 0.0F : 0.1F));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, false), Settings.FAST_MODE ? 0.0F : 0.1F));
@@ -31,6 +35,6 @@ public class Preclude extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
     }
 }

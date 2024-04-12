@@ -59,8 +59,6 @@ public abstract class AbstractBoard {
         idsList.add(ThortonsBank.ID);
         ids.put(Circuitry.ID, Circuitry.class);
         idsList.add(Circuitry.ID);
-        ids.put(MegaCrit.ID, MegaCrit.class);
-        idsList.add(MegaCrit.ID);
         ids.put(TheCannon.ID, TheCannon.class);
         idsList.add(TheCannon.ID);
         ids.put(LandOfGiants.ID, LandOfGiants.class);

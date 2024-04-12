@@ -1,20 +1,15 @@
 package theFishing.potions;
 
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.cards.tempCards.Safety;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
-import com.megacrit.cardcrawl.cards.tempCards.Smite;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import theFishing.FishingMod;
+import theFishing.actions.EnterTheDungeonAction;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
-import static theFishing.util.Wiz.makeInHand;
 
 public class CarePackage extends AbstractPotion {
     public static final String POTION_ID = makeID("CarePackage");
@@ -37,15 +32,14 @@ public class CarePackage extends AbstractPotion {
 
     @Override
     public void use(AbstractCreature abstractCreature) {
-        makeInHand(new Smite());
-        makeInHand(new Safety());
-        makeInHand(new Shiv());
-        atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, potency));
+        for (int i = 0; i < potency; i++) {
+            atb(new EnterTheDungeonAction());
+        }
     }
 
     @Override
     public int getPotency(int ascensionlevel) {
-        return 6;
+        return 4;
     }
 
     @Override

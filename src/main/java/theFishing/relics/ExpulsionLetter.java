@@ -20,17 +20,23 @@ public class ExpulsionLetter extends AbstractAdventurerRelic {
         super(ID, RelicTier.BOSS, LandingSound.FLAT, TheFishing.Enums.FISHING_COLOR);
     }
 
-    public void atBattleStartPreDraw() {
-        atb(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractCard q = new Miracle();
-        AbstractCard q2 = new Smite();
-        AbstractCard q3 = new Safety();
-        makeFoil(q);
-        makeFoil(q2);
-        makeFoil(q3);
-        makeInHand(q);
-        makeInHand(q2);
-        makeInHand(q3);
+    @Override
+    public void atTurnStartPostDraw() {
+        flash();
+        AbstractCard result = null;
+        int x = AbstractDungeon.cardRandomRng.random(0, 2);
+        switch (x) {
+            case 0:
+                result = new Miracle();
+                break;
+            case 1:
+                result = new Smite();
+                break;
+            case 2:
+                result = new Safety();
+                break;
+        }
+        makeFoil(result);
+        makeInHand(result);
     }
-
 }

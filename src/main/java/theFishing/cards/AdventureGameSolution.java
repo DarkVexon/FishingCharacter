@@ -18,6 +18,7 @@ public class AdventureGameSolution extends AbstractFishingCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
         MultiCardPreview.add(this, new Insight(), new Miracle());
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

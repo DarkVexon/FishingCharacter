@@ -1,9 +1,9 @@
 {
   "${ModID}:CarePackage": {
-    "NAME": "Care Package",
+    "NAME": "Bottled Journey",
     "DESCRIPTIONS": [
-      "Add #ySmite, #ySafety and a #yShiv to your hand. Heal #b",
-      " HP."
+      "#yDelve #b",
+      " times."
     ]
   },
   "${ModID}:OceanInAJar": {

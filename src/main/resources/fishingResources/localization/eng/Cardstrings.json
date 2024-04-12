@@ -284,7 +284,7 @@
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
-    "DESCRIPTION": "Gain !B! Block. NL Apply 1 Weak to ALL enemies. NL ${ModID}:Delve."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL ${ModID}:Delve."
   },
   "${ModID}:Flag": {
     "NAME": "Flag",
@@ -296,8 +296,8 @@
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
-    "DESCRIPTION": "Deal !D! damage three times. NL Draw !${ModID}:m3! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage three times. NL Draw !${ModID}:m3! cards. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Draw !${ModID}:m3! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Draw !${ModID}:m3! cards. NL Exhaust."
   },
   "${ModID}:Eel": {
     "NAME": "Eel",
@@ -349,8 +349,8 @@
     "DESCRIPTION": "Next turn, gain [E] [E]. NL ${ModID}:Quest: Spend 5 Energy in a turn. NL *Reward: A random enemy loses !M! HP."
   },
   "${ModID}:QuestTimeTheLuckyPack": {
-    "NAME": "The Lucky Pull",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards. NL *Reward: Gain !M! *Plated *Armor."
+    "NAME": "The Lucky Pack",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards. NL *Reward: Play your last played card again."
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
@@ -475,7 +475,7 @@
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
-    "DESCRIPTION": "Deal !D! damage twice. NL Discard 1 card. NL Reset all *Time *Warp."
+    "DESCRIPTION": "Deal !D! damage 4 times. NL Discard 1 card. NL Reset all *Time *Warp."
   },
   "${ModID}:Stone": {
     "NAME": "Stone",
@@ -510,7 +510,8 @@
   },
   "${ModID}:KeyToTheCity": {
     "NAME": "Key to the City",
-    "DESCRIPTION": "Complete your ${ModID}:Quests. NL Deal !D! damage. NL ${ModID}:Delve.  NL Draw !M! cards."
+    "DESCRIPTION": "Complete your ${ModID}:Quests. NL Deal !D! damage. NL ${ModID}:Delve. NL Retain your hand this turn.",
+    "UPGRADE_DESCRIPTION": "Complete your ${ModID}:Quests. NL Deal !D! damage. NL ${ModID}:Delve twice. NL Retain your hand this turn."
   },
   "${ModID}:Lunchbox": {
     "NAME": "Lunch Box",

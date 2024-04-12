@@ -21,11 +21,10 @@ public class QuestTimeTheLuckyPack extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new AcceptQuestAction(new TheLuckyPack(magicNumber)));
+        atb(new AcceptQuestAction(new TheLuckyPack()));
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeDamage(4);
     }
 }
