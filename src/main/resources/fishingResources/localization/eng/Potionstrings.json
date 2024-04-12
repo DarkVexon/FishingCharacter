@@ -16,8 +16,8 @@
   "${ModID}:StarlightSoda": {
     "NAME": "Starlight Soda",
     "DESCRIPTIONS": [
-      "Remove your #yWeak, #yVulnerable, and #yFrail. Gain #b",
-      " #yBlock."
+      "Remove your debuffs. Heal #b",
+      " HP."
     ]
   }
 }
