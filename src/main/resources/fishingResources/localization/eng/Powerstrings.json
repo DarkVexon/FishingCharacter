@@ -211,5 +211,11 @@
       " more time, deal #b18 damage to ALL enemies.",
       " more times, deal #b18 damage to ALL enemies."
     ]
+  },
+  "${ModID}:ArenaStackPower": {
+    "NAME": "Training",
+    "DESCRIPTIONS": [
+      "Your next #yDelve grants #b1 #yStrength."
+    ]
   }
 }

@@ -626,7 +626,7 @@
   },
   "${ModID}:AdventureGameSolution": {
     "NAME": "Point and Click",
-    "DESCRIPTION": "Add a ${ModID}:Fish, an *Insight, and a *Miracle into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a ${ModID}:Fish, an *Insight, and !M! *Miracles into your hand. NL Exhaust."
+    "DESCRIPTION": "Discard your hand. NL Add a ${ModID}:Fish, an *Insight, and a *Miracle into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discard your hand. NL Add a ${ModID}:Fish, an *Insight, and !M! *Miracles into your hand. NL Exhaust."
   }
 }
