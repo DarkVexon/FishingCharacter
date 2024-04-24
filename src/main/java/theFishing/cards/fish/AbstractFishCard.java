@@ -49,27 +49,25 @@ public abstract class AbstractFishCard extends AbstractFishingCard {
             weightedFishList.put(Piranha.ID, 33);
             weightedFishList.put(Guppy.ID, 25);
             weightedFishList.put(Boot.ID, 8);
-            weightedFishList.put(Eel.ID, 6);
+            weightedFishList.put(Eel.ID, 7);
             weightedFishList.put(Swordfish.ID, 5);
             weightedFishList.put(Jellyfish.ID, 5);
             weightedFishList.put(Maw.ID, 5);
-            weightedFishList.put(Hammerhead.ID, 3);
+            weightedFishList.put(Hammerhead.ID, 4);
+            weightedFishList.put(Qwilfish.ID, 4);
             weightedFishList.put(RoboFish.ID, 3);
-            weightedFishList.put(Starfish.ID, 3);
-            weightedFishList.put(Qwilfish.ID, 3);
             weightedFishList.put(SeaMonster.ID, 1);
         }
 
         if (maelstromFishList == null) {
             maelstromFishList = new LinkedHashMap<>();
-            maelstromFishList.put(Eel.ID, 6);
+            maelstromFishList.put(Eel.ID, 7);
             maelstromFishList.put(Swordfish.ID, 5);
             maelstromFishList.put(Jellyfish.ID, 5);
             maelstromFishList.put(Maw.ID, 5);
-            maelstromFishList.put(Hammerhead.ID, 3);
+            maelstromFishList.put(Hammerhead.ID, 4);
+            maelstromFishList.put(Qwilfish.ID, 4);
             maelstromFishList.put(RoboFish.ID, 3);
-            maelstromFishList.put(Starfish.ID, 3);
-            maelstromFishList.put(Qwilfish.ID, 3);
             maelstromFishList.put(SeaMonster.ID, 1);
         }
     }

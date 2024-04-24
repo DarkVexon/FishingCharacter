@@ -19,7 +19,7 @@ public class RingTheBell extends AbstractFishingCard implements OnObtainCard {
     public final static String ID = makeID("RingTheBell");
 
     public RingTheBell() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 13;
         cardsToPreview = new CurseOfTheBell();
     }

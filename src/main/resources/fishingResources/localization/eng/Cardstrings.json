@@ -252,7 +252,7 @@
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
-    "DESCRIPTION": "Gain !M! *Plated *Armor and !M! Thorns. NL ${ModID}:Voyaged: ALL enemies lose !${ModID}:m2! Strength. NL ${ModID}:Picked: Obtain a ${ModID}:Fish."
+    "DESCRIPTION": "The first !M! times you play a card each turn, draw a card. NL ${ModID}:Voyaged: ALL enemies lose !${ModID}:m2! Strength."
   },
   "${ModID}:FullHouse": {
     "NAME": "Three of a Kind",
@@ -500,9 +500,13 @@
     "UPGRADE_DESCRIPTION": "Innate. NL fishing:Delve. NL At the start of your turn, fishing:Delve."
   },
   "${ModID}:GazeOfTheGods": {
-    "NAME": "Yawning Void",
-    "DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a ${ModID}:Foil *Star *Shard into your hand.",
-    "UPGRADE_DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a ${ModID}:Foil *Star *Shard+ into your hand."
+    "NAME": "Whip",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each ${ModID}:Foil card played this turn. NL ${ModID}:Picked: Obtain a *Tile."
+  },
+  "${ModID}:Puzzle": {
+    "NAME": "Tile",
+    "DESCRIPTION": "Always ${ModID}:Foil. NL Draw !M! card. NL Exhaust 1 card.",
+    "UPGRADE_DESCRIPTION": "Always ${ModID}:Foil. NL Draw !M! cards. NL Exhaust 1 card."
   },
   "${ModID}:GhostShip": {
     "NAME": "Ghost Ship",

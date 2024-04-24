@@ -27,7 +27,7 @@ public class AnglerForm extends AbstractFishingCard implements OnObtainCard {
 
     public AnglerForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 2;
         tags.add(BaseModCardTags.FORM);
     }
@@ -53,7 +53,7 @@ public class AnglerForm extends AbstractFishingCard implements OnObtainCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
         upgradeSecondMagic(1);
     }
 }

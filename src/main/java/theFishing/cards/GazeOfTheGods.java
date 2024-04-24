@@ -1,26 +1,31 @@
 package theFishing.cards;
 
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theFishing.patch.foil.FoilPatches;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.patch.foil.FoilPatches.isFoil;
 import static theFishing.patch.foil.FoilPatches.makeFoil;
-import static theFishing.util.Wiz.makeInHandTop;
 
-public class GazeOfTheGods extends AbstractFishingCard {
+public class GazeOfTheGods extends AbstractFishingCard implements OnObtainCard {
     public final static String ID = makeID("GazeOfTheGods");
     // intellij stuff skill, enemy, rare, , , , , 30, 10
 
     public GazeOfTheGods() {
-        super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        AbstractCard q = new StarShard();
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        AbstractCard q = new Puzzle();
         makeFoil(q);
         cardsToPreview = q;
-        exhaust = true;
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public static String scream() {
@@ -33,28 +38,35 @@ public class GazeOfTheGods extends AbstractFishingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        atb(new SFXAction(scream()));
-//        vfx(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(0.98431372549F, 0.94901960784F, 0.21176470588F, 0.0F)));
-//        vfx(new LightningEffect(m.drawX, m.drawY), 0.05F);
-//        atb(new LoseHPAction(m, p, magicNumber));
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(FoilPatches::isFoil).count();
+        super.calculateCardDamage(mo);
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().filter(FoilPatches::isFoil).count();
+        super.applyPowers();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
     }
 
     @Override
-    public void triggerOnExhaust() {
-        CardCrawlGame.sound.play(scream(), 0.1F);
-        AbstractCard c = new StarShard();
-        if (upgraded) {
-            c.upgrade();
-        }
-        FoilPatches.makeFoil(c);
-        makeInHandTop(c);
+    public void onObtainCard() {
+        float fractical = Settings.WIDTH / 2F;
+        AbstractCard q = new Puzzle();
+        makeFoil(q);
+        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(q, fractical, Settings.HEIGHT / 2));
     }
 
     public void upp() {
-        uDesc();
-        AbstractCard q = new StarShard();
-        q.upgrade();
-        makeFoil(q);
-        cardsToPreview = q;
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

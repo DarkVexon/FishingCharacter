@@ -79,7 +79,7 @@ public class FoilPatches {
     public static class FoilInRewards {
         public static void Postfix(ArrayList<AbstractCard> __result) {
             if (canBeFoil()) {
-                if (AbstractDungeon.cardRng.random(0, FOIL_RARITY) == 0)
+                if (AbstractDungeon.cardRng.random(0, FOIL_RARITY - 1) == 0)
                     makeFoil(Wiz.getRandomItem(__result, AbstractDungeon.cardRng));
             }
         }
