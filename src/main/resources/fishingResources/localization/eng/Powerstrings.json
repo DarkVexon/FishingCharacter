@@ -215,7 +215,22 @@
   "${ModID}:ArenaStackPower": {
     "NAME": "Training",
     "DESCRIPTIONS": [
-      "Your next #yDelve grants #b1 #yStrength."
+      "At the start of your next turn, gain #b",
+      " #yStrength."
+    ]
+  },
+  "${ModID}:TerminaEmpoweredPower": {
+    "NAME": "Gaze of the Gods",
+    "DESCRIPTIONS": [
+      "The #yTermina #yDelve effect deals #b",
+      " additional damage."
+    ]
+  },
+  "${ModID}:ShinySeekerPower": {
+    "NAME": "Shiny Seeker",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yFoil card, gain #b",
+      " #yBlock."
     ]
   }
 }

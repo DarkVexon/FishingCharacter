@@ -1,6 +1,5 @@
 package theFishing.cards;
 
-import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,9 +7,17 @@ import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import theFishing.util.Wiz;
+
+import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
+import static theFishing.patch.foil.FoilPatches.makeFoil;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
@@ -38,6 +45,22 @@ public class ExtraTentacle extends AbstractFishingCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        BaseMod.MAX_HAND_SIZE += 1;
+        ArrayList<AbstractCard> upgradableCards = new ArrayList();
+
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.canUpgrade()) {
+                upgradableCards.add(c);
+            }
+        }
+
+        if (!upgradableCards.isEmpty()) {
+            AbstractCard tar = Wiz.getRandomItem(upgradableCards);
+            if (tar != null) {
+                makeFoil(tar);
+                upgradableCards.remove(tar);
+                AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy()));
+                AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+            }
+        }
     }
 }

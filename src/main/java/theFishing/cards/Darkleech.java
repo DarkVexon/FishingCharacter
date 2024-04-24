@@ -1,6 +1,6 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AllEnemyLoseHPAction;
@@ -13,8 +13,8 @@ public class Darkleech extends AbstractFishingCard {
     // intellij stuff skill, all_enemy, special, , , , , 7, 2
 
     public Darkleech() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
-        baseMagicNumber = magicNumber = 7;
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
+        baseMagicNumber = magicNumber = 5;
         baseSecondMagic = secondMagic = 1;
         exhaust = true;
         selfRetain = true;
@@ -22,7 +22,7 @@ public class Darkleech extends AbstractFishingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AllEnemyLoseHPAction(magicNumber));
-        atb(new DrawCardAction(secondMagic));
+        atb(new GainEnergyAction(secondMagic));
     }
 
     public void upp() {

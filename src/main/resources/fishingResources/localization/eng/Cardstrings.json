@@ -166,9 +166,13 @@
     "DESCRIPTION": "After you play a cost X card, gain [E]. NL ${ModID}:Picked: Gain 30 Gold."
   },
   "${ModID}:Whaling": {
-    "NAME": "Whaling",
-    "DESCRIPTION": "Gain !M! Strength. NL Put a copy of this with increased values on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength. NL Put a copy of this with increased values on top of your draw pile."
+    "NAME": "Shiny Seeker",
+    "DESCRIPTION": "Shuffle a ${ModID}:Foil *Gem into your draw pile. NL Whenever you play a ${ModID}:Foil card, gain 1 Block.",
+    "UPGRADE_DESCRIPTION": "Shuffle a ${ModID}:Foil *Gem+ into your draw pile. NL Whenever you play a ${ModID}:Foil card, gain 1 Block."
+  },
+  "${ModID}:Gem": {
+    "NAME": "Gem",
+    "DESCRIPTION": "Gain !M! Strength."
   },
   "${ModID}:XMarksTheSpot": {
     "NAME": "X Marks the Spot",
@@ -248,7 +252,7 @@
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
-    "DESCRIPTION": "Gain !M! *Plated *Armor. NL ${ModID}:Voyaged: Costs 1. NL ${ModID}:Picked: Obtain a ${ModID}:Fish."
+    "DESCRIPTION": "Gain !M! *Plated *Armor and !M! Thorns. NL ${ModID}:Voyaged: ALL enemies lose !${ModID}:m2! Strength. NL ${ModID}:Picked: Obtain a ${ModID}:Fish."
   },
   "${ModID}:FullHouse": {
     "NAME": "Three of a Kind",
@@ -422,7 +426,7 @@
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL ${ModID}:Picked: Make 2 random cards in your deck ${ModID}:Foil."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL ${ModID}:Picked: Make 3 random cards in your deck ${ModID}:Foil."
   },
   "${ModID}:Wizardry": {
     "NAME": "Wizardry",
@@ -475,7 +479,7 @@
   },
   "${ModID}:Preclude": {
     "NAME": "Escargottem",
-    "DESCRIPTION": "Deal !D! damage 4 times. NL Discard 1 card. NL Reset all *Time *Warp."
+    "DESCRIPTION": "Deal !D! damage twice. NL Discard 1 card. NL Reset all *Time *Warp."
   },
   "${ModID}:Stone": {
     "NAME": "Stone",
@@ -497,7 +501,8 @@
   },
   "${ModID}:GazeOfTheGods": {
     "NAME": "Yawning Void",
-    "DESCRIPTION": "Enemy loses !M! HP. NL If this card is Exhausted, return it to your hand. It costs 0 until played."
+    "DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a ${ModID}:Foil *Star *Shard into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a ${ModID}:Foil *Star *Shard+ into your hand."
   },
   "${ModID}:GhostShip": {
     "NAME": "Ghost Ship",
@@ -550,15 +555,15 @@
   },
   "${ModID}:StickerStrike": {
     "NAME": "Sticker Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Smiley_Sticker on !M! random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Smiley_Sticker on !M! random cards in your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on !M! random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on !M! random cards in your hand.",
     "EXTENDED_DESCRIPTION": [
       "put a Sticker on."
     ]
   },
   "${ModID}:ExtraTentacle": {
     "NAME": "Extra Tentacle",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Raise your max hand size by 1.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Upgrade 1 random card.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Exhaust."
     ]
@@ -574,7 +579,7 @@
   },
   "${ModID}:StarShard": {
     "NAME": "Star Shard",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw 1 card."
   },
   "${ModID}:Kraken": {
     "NAME": "Waka Waka",
@@ -621,8 +626,8 @@
   },
   "${ModID}:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL ALL enemies lose !M! HP. NL Draw !${ModID}:m2! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL ALL enemies lose !M! HP. NL Draw !${ModID}:m2! cards. NL Exhaust."
+    "DESCRIPTION": "Retain. NL ALL enemies lose !M! HP. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL ALL enemies lose !M! HP. NL Gain [E] [E]. NL Exhaust."
   },
   "${ModID}:AdventureGameSolution": {
     "NAME": "Point and Click",

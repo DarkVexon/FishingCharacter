@@ -15,7 +15,7 @@ public class TheBackpack extends AbstractFishingCard {
 
     public TheBackpack() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 9;
+        baseBlock = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,6 +25,6 @@ public class TheBackpack extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 }

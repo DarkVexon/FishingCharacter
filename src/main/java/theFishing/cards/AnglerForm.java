@@ -3,6 +3,7 @@ package theFishing.cards;
 import basemod.helpers.BaseModCardTags;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,14 +11,15 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 import theFishing.cards.fish.AbstractFishCard;
-import theFishing.patch.PreDrawPatch;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
-import static theFishing.util.Wiz.vfx;
+import static theFishing.cards.GazeOfTheGods.scream;
+import static theFishing.util.Wiz.*;
 
 public class AnglerForm extends AbstractFishingCard implements OnObtainCard {
     public final static String ID = makeID("AnglerForm");
@@ -25,19 +27,18 @@ public class AnglerForm extends AbstractFishingCard implements OnObtainCard {
 
     public AnglerForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 7;
+        baseMagicNumber = magicNumber = 6;
+        baseSecondMagic = secondMagic = 2;
         tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         vfx(new MiracleEffect(new Color(0.98431372549F, 0.94901960784F, 0.21176470588F, 0.0F), Color.YELLOW.cpy(), "MAW_DEATH"), 0.1F);
         applyToSelf(new PlatedArmorPower(p, magicNumber));
-    }
-
-    @Override
-    public void triggerWhenDrawn() {
-        if (PreDrawPatch.DRAWN_DURING_TURN) {
-            setCostForTurn(1);
+        applyToSelf(new ThornsPower(p, magicNumber));
+        if (isVoyaged()) {
+            atb(new SFXAction(scream()));
+            forAllMonstersLiving(q -> applyToEnemy(q, new StrengthPower(q, -secondMagic)));
         }
     }
 
@@ -53,5 +54,6 @@ public class AnglerForm extends AbstractFishingCard implements OnObtainCard {
 
     public void upp() {
         upgradeMagicNumber(2);
+        upgradeSecondMagic(1);
     }
 }

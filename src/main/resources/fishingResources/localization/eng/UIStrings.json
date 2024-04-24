@@ -131,8 +131,8 @@
       "The Colosseum"
     ],
     "TEXT_DICT": {
-      "SP": "Start with one Strike #yUpgraded.",
-      "F1": "Every other Delve, gain #b1 #yStrength."
+      "SP": "None",
+      "F1": "Next turn, gain #b1 #yStrength."
     }
   },
   "${ModID}:WhereItFell": {
@@ -168,7 +168,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Whenever you obtain a card with #yDelve, gain #b25 Gold.",
-      "F1": "Deal #b5 damage to a random enemy."
+      "F1": "Gain #b4 #yBlock."
     }
   },
   "${ModID}:Termina": {
@@ -177,7 +177,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Cards with Delve are not discarded at the end of your turn.",
-      "F1": "Every 3 Delves, deal #b22 damage to ALL enemies."
+      "F1": "Every 3 Delves, deal #b20 damage to ALL enemies and increase this damage by 10 for the rest of combat."
     }
   },
   "${ModID}:CharacterOption": {
@@ -221,7 +221,7 @@
     ],
     "TEXT_DICT": {
       "SP": "Cards with Delve cost #b1 more.",
-      "F1": "Gain #b2 #yBlock and play the top card of your draw pile."
+      "F1": "Gain #b1 #yStrength and play the top card of your draw pile."
     }
   }
 }

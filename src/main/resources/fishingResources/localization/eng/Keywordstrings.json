@@ -51,11 +51,11 @@
     "DESCRIPTION": "Trigger today's Delve effect."
   },
   {
-    "PROPER_NAME": "Smiley Sticker",
+    "PROPER_NAME": "Sticker",
     "NAMES": [
-      "smiley sticker",
-      "smiley_sticker"
+      "sticker",
+      "sticker"
     ],
-    "DESCRIPTION": "After you play a card with a Smiley Sticker on it, a random enemy loses #b4 HP."
+    "DESCRIPTION": "After you play a card with a Sticker on it, a random enemy loses #b5 HP."
   }
 ]

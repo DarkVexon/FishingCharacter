@@ -42,7 +42,7 @@ public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 
@@ -58,7 +58,7 @@ public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
         }
         ArrayList<AbstractCard> foiledCards = new ArrayList<>();
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             if (!upgradableCards.isEmpty()) {
                 AbstractCard tar = Wiz.getRandomItem(upgradableCards);
                 if (tar != null) {
@@ -69,7 +69,11 @@ public class GlitterGlue extends AbstractFishingCard implements OnObtainCard {
             }
         }
 
-        if (foiledCards.size() == 2) {
+        if (foiledCards.size() == 3) {
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(foiledCards.get(0).makeStatEquivalentCopy(), Settings.WIDTH / 4.0F, Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(foiledCards.get(1).makeStatEquivalentCopy(), (Settings.WIDTH / 4.0F * 2f), Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(foiledCards.get(2).makeStatEquivalentCopy(), (Settings.WIDTH / 4.0F * 3f), Settings.HEIGHT / 2.0F));
+        } else if (foiledCards.size() == 2) {
             AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(foiledCards.get(0).makeStatEquivalentCopy(), Settings.WIDTH / 3.0F, Settings.HEIGHT / 2.0F));
             AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(foiledCards.get(1).makeStatEquivalentCopy(), (Settings.WIDTH / 3.0F * 2f), Settings.HEIGHT / 2.0F));
         } else if (foiledCards.size() == 1) {

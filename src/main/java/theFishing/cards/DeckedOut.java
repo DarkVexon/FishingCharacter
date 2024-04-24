@@ -18,7 +18,7 @@ public class DeckedOut extends AbstractFishingCard {
 
     public DeckedOut() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         AbstractCard q = new Shiv();
         FoilPatches.makeFoil(q);
         cardsToPreview = q;
@@ -40,7 +40,6 @@ public class DeckedOut extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 }

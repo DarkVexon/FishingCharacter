@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
+import theFishing.powers.TerminaEmpoweredPower;
 import theFishing.powers.TerminaStackPower;
 
 import static theFishing.util.Wiz.applyToSelfTop;
@@ -29,7 +30,12 @@ public class Termina extends AbstractBoard {
             att(new SFXAction("fishing:CLOCKTOWER"));
         } else {
             att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, result));
-            att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(22, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            int damage = 20;
+            AbstractPower p = AbstractDungeon.player.getPower(TerminaEmpoweredPower.ID);
+            if (p != null) {
+                damage += p.amount;
+            }
+            att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(damage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 }
