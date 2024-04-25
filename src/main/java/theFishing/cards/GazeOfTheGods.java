@@ -22,7 +22,6 @@ public class GazeOfTheGods extends AbstractFishingCard implements OnObtainCard {
     public GazeOfTheGods() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         AbstractCard q = new Puzzle();
-        makeFoil(q);
         cardsToPreview = q;
         baseDamage = 7;
         baseMagicNumber = magicNumber = 4;
@@ -61,7 +60,6 @@ public class GazeOfTheGods extends AbstractFishingCard implements OnObtainCard {
     public void onObtainCard() {
         float fractical = Settings.WIDTH / 2F;
         AbstractCard q = new Puzzle();
-        makeFoil(q);
         AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(q, fractical, Settings.HEIGHT / 2));
     }
 
