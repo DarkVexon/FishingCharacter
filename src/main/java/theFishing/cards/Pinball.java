@@ -13,7 +13,7 @@ public class Pinball extends AbstractFishingCard {
 
     public Pinball() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
-        baseDamage = 2;
+        baseDamage = 3;
         baseMagicNumber = magicNumber = 4;
         exhaust = true;
     }

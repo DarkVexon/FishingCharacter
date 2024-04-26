@@ -17,7 +17,6 @@ import theFishing.util.Wiz;
 import java.util.ArrayList;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.patch.foil.FoilPatches.makeFoil;
 import static theFishing.util.Wiz.atb;
 import static theFishing.util.Wiz.att;
 
@@ -56,10 +55,10 @@ public class ExtraTentacle extends AbstractFishingCard implements OnObtainCard {
         if (!upgradableCards.isEmpty()) {
             AbstractCard tar = Wiz.getRandomItem(upgradableCards);
             if (tar != null) {
-                makeFoil(tar);
+                tar.upgrade();
                 upgradableCards.remove(tar);
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(tar.makeStatEquivalentCopy()));
-                AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             }
         }
     }

@@ -30,8 +30,8 @@ public class Whaling extends AbstractFishingCard {
 
     public void upp() {
         uDesc();
-        if (cardsToPreview != null) {
-            cardsToPreview.upgrade();
-        }
+        AbstractCard c = new Gem();
+        makeFoil(c);
+        c.upgrade();
     }
 }

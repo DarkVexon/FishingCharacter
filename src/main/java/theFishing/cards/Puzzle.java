@@ -16,6 +16,7 @@ public class Puzzle extends AbstractFishingCard {
     public Puzzle() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 1;
+        FoilPatches.makeFoil(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

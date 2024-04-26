@@ -15,11 +15,13 @@ public class PlantFlag extends AbstractFishingCard {
 
     public PlantFlag() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
+        baseBlock = 3;
         AbstractBoard.postInitDelveState(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, magicNumber, false)));
         atb(new EnterTheDungeonAction());
     }

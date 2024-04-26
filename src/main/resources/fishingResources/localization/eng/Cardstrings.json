@@ -288,7 +288,7 @@
   },
   "${ModID}:PlantFlag": {
     "NAME": "Plant Flag",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL ${ModID}:Delve."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL ${ModID}:Delve."
   },
   "${ModID}:Flag": {
     "NAME": "Flag",

@@ -10,12 +10,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 import theFishing.cards.fish.AbstractFishCard;
+import theFishing.powers.AnglerFormPower;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.cards.GazeOfTheGods.scream;
@@ -34,8 +33,7 @@ public class AnglerForm extends AbstractFishingCard implements OnObtainCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         vfx(new MiracleEffect(new Color(0.98431372549F, 0.94901960784F, 0.21176470588F, 0.0F), Color.YELLOW.cpy(), "MAW_DEATH"), 0.1F);
-        applyToSelf(new PlatedArmorPower(p, magicNumber));
-        applyToSelf(new ThornsPower(p, magicNumber));
+        applyToSelf(new AnglerFormPower(magicNumber));
         if (isVoyaged()) {
             atb(new SFXAction(scream()));
             forAllMonstersLiving(q -> applyToEnemy(q, new StrengthPower(q, -secondMagic)));
