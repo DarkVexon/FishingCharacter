@@ -20,7 +20,7 @@ import static theFishing.FishingMod.makeID;
 import static theFishing.cards.GazeOfTheGods.scream;
 import static theFishing.util.Wiz.*;
 
-public class AnglerForm extends AbstractFishingCard implements OnObtainCard {
+public class AnglerForm extends AbstractFishingCard {
     public final static String ID = makeID("AnglerForm");
     // intellij stuff power, self, rare, , , , , 3, 1
 
@@ -38,12 +38,6 @@ public class AnglerForm extends AbstractFishingCard implements OnObtainCard {
             atb(new SFXAction(scream()));
             forAllMonstersLiving(q -> applyToEnemy(q, new StrengthPower(q, -secondMagic)));
         }
-    }
-
-    @Override
-    public void onObtainCard() {
-        CardCrawlGame.sound.playA("MAW_DEATH", 0.1F);
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(AbstractFishCard.returnRandomFish(), Settings.WIDTH / 2F, Settings.HEIGHT / 2F));
     }
 
     public void triggerOnGlowCheck() {
