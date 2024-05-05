@@ -33,5 +33,6 @@ public class Whaling extends AbstractFishingCard {
         AbstractCard c = new Gem();
         makeFoil(c);
         c.upgrade();
+        cardsToPreview = c;
     }
 }
