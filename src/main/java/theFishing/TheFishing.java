@@ -24,6 +24,8 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.stances.DivinityStance;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
 import theFishing.cards.Strike;
@@ -199,6 +201,16 @@ public class TheFishing extends CustomPlayer {
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.7F);
     }
+
+    @Override
+    public void onStanceChange(String stanceId) {
+        super.onStanceChange(stanceId);
+
+        if (stanceId.equals(DivinityStance.STANCE_ID)) {
+            UnlockTracker.unlockAchievement(FishingMod.makeID("OLD_TIMES"));
+        }
+    }
+
 
     @Override
     public void initializeStarterDeck() {

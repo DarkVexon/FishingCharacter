@@ -1,0 +1,47 @@
+AdventurerAchievements.png
+size: 480,512
+format: RGB888
+filter: Linear,Linear
+repeat: none
+locked/adventurermastery
+  rotate: false
+  xy: 0, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/adventurermastery
+  rotate: false
+  xy: 160, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/delvegraduate
+  rotate: false
+  xy: 320, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/delvegraduate
+  rotate: false
+  xy: 0, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/oldtimes
+  rotate: false
+  xy: 160, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/oldtimes
+  rotate: false
+  xy: 320, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
