@@ -1,5 +1,5 @@
 AdventurerAchievements.png
-size: 480,512
+size: 640,640
 format: RGB888
 filter: Linear,Linear
 repeat: none
@@ -26,21 +26,35 @@ locked/delvegraduate
   index: -1
 unlocked/delvegraduate
   rotate: false
-  xy: 0, 160
+  xy: 480, 0
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 locked/oldtimes
   rotate: false
-  xy: 160, 160
+  xy: 0, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 unlocked/oldtimes
   rotate: false
+  xy: 160, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/starlight
+  rotate: false
   xy: 320, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/starlight
+  rotate: false
+  xy: 480, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0

@@ -241,5 +241,11 @@
       "For Old Times' Sake",
       "As The Adventurer, enter Divinity."
     ]
+  },
+  "${ModID}:STARLIGHT": {
+    "TEXT": [
+      "Starlight",
+      "Use Twinkle Twinkle to play a Rare card from your draw pile."
+    ]
   }
 }

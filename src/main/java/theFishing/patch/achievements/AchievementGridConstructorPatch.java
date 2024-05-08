@@ -17,6 +17,7 @@ public class AchievementGridConstructorPatch {
     @SpirePostfixPatch
     public static void Postfix(AchievementGrid instance) {
         FishingAchievementItem.atlas = new TextureAtlas(Gdx.files.internal("fishingResources/images/achievements/AdventurerAchievements.atlas"));
+        loadAchievement(instance, "starlight", FishingMod.makeID("STARLIGHT"), false);
         loadAchievement(instance, "oldtimes", FishingMod.makeID("OLD_TIMES"), false);
         loadAchievement(instance, "delvegraduate", FishingMod.makeID("DELVE_GRADUATE"), false);
         loadAchievement(instance, "adventurermastery", FishingMod.makeID("ADVENTURER_MASTERY"), false);
