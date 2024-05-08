@@ -42,6 +42,7 @@ import theFishing.potions.OceanInAJar;
 import theFishing.potions.StarlightSoda;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractAdventurerRelic;
+import theFishing.util.AchievementUnlockTracker;
 import theFishing.util.FoilSparkleHandler;
 import theFishing.util.Wiz;
 
@@ -403,7 +404,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
             }
 
             if (allDelveBonusesCompleted) {
-                UnlockTracker.unlockAchievement(FishingMod.makeID("DELVE_GRADUATE"));
+                AchievementUnlockTracker.unlockAchievement(FishingMod.makeID("DELVE_GRADUATE"));
             }
         }
     }

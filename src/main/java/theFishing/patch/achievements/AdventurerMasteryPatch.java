@@ -6,9 +6,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
+
 import theFishing.FishingMod;
 import theFishing.TheFishing;
+import theFishing.util.AchievementUnlockTracker;
 
 @SpirePatch(clz = VictoryScreen.class, method = SpirePatch.CONSTRUCTOR, paramtypez = {MonsterGroup.class})
 public class AdventurerMasteryPatch {
@@ -19,7 +20,7 @@ public class AdventurerMasteryPatch {
     public static void Postfix(VictoryScreen __instance, MonsterGroup m) {
         AbstractPlayer p = AbstractDungeon.player;
         if (p != null && p instanceof TheFishing && AbstractDungeon.ascensionLevel == 20 && AbstractDungeon.actNum == 4) {
-            UnlockTracker.unlockAchievement(FishingMod.makeID("ADVENTURER_MASTERY"));
+            AchievementUnlockTracker.unlockAchievement(FishingMod.makeID("ADVENTURER_MASTERY"));
         }
     }
 }

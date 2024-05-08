@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.FishingMod;
+import theFishing.util.AchievementUnlockTracker;
 import theFishing.util.Wiz;
 
 public class PlayFromPileAction extends AbstractGameAction {
@@ -49,7 +49,7 @@ public class PlayFromPileAction extends AbstractGameAction {
             }
 
             if (toPlay.rarity == AbstractCard.CardRarity.RARE) {
-                UnlockTracker.unlockAchievement(FishingMod.makeID("STARLIGHT"));
+                AchievementUnlockTracker.unlockAchievement(FishingMod.makeID("STARLIGHT"));
             }
 
             this.isDone = true;

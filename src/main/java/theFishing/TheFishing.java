@@ -1,6 +1,5 @@
 package theFishing;
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
@@ -19,21 +18,18 @@ import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.DivinityStance;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
 import theFishing.cards.Strike;
 import theFishing.relics.TheRod;
+import theFishing.util.AchievementUnlockTracker;
 import theFishing.util.EnergyOrbFishing;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import static theFishing.FishingMod.*;
@@ -207,7 +203,7 @@ public class TheFishing extends CustomPlayer {
         super.onStanceChange(stanceId);
 
         if (stanceId.equals(DivinityStance.STANCE_ID)) {
-            UnlockTracker.unlockAchievement(FishingMod.makeID("OLD_TIMES"));
+            AchievementUnlockTracker.unlockAchievement(FishingMod.makeID("OLD_TIMES"));
         }
     }
 
