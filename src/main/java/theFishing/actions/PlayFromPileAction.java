@@ -6,10 +6,12 @@ import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
+import theFishing.TheFishing;
 import theFishing.util.FishingAchievementUnlocker;
 import theFishing.util.Wiz;
 
@@ -49,7 +51,10 @@ public class PlayFromPileAction extends AbstractGameAction {
             }
 
             if (toPlay.rarity == AbstractCard.CardRarity.RARE) {
-                FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("STARLIGHT"));
+                AbstractPlayer p = AbstractDungeon.player;
+                if (p != null && p instanceof TheFishing) {
+                    FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("STARLIGHT"));
+                }
             }
 
             this.isDone = true;

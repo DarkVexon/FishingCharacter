@@ -1,8 +1,10 @@
 package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.FishingMod;
+import theFishing.TheFishing;
 import theFishing.actions.EternityGemAction;
 import theFishing.patch.foil.FoilPatches;
 import theFishing.util.FishingAchievementUnlocker;
@@ -26,7 +28,9 @@ public class TheEternityGem extends AbstractFishingCard {
         }
 
         if (FoilPatches.isFoil(this)) {
-            FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("ETERNITY"));
+            if (p != null && p instanceof TheFishing) {
+                FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("ETERNITY"));
+            }
         }
 
     }

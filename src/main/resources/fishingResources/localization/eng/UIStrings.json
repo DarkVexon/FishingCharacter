@@ -227,13 +227,13 @@
   "${ModID}:ADVENTURER_MASTERY": {
     "TEXT": [
       "Adventurer Mastery",
-      "As the Adventurer, complete The Ending on Ascension Level 20."
+      "As the Adventurer, complete the Ending on Ascension Level 20."
     ]
   },
   "${ModID}:DELVE_GRADUATE": {
     "TEXT": [
       "Delve Graduate",
-      "Win a run with every Delve Bonus."
+      "As the Adventurer, win a run with every Delve Bonus."
     ]
   },
   "${ModID}:OLD_TIMES": {
@@ -245,13 +245,13 @@
   "${ModID}:STARLIGHT": {
     "TEXT": [
       "Starlight",
-      "Use Twinkle Twinkle to play a Rare card from your draw pile."
+      "As the Adventurer, use Twinkle Twinkle to play a Rare card from your draw pile."
     ]
   },
   "${ModID}:ETERNITY": {
     "TEXT": [
       "Eternity",
-      "Play a Foil copy of The Eternity Gem."
+      "As the Adventurer, play a Foil copy of The Eternity Gem."
     ]
   }
 }
