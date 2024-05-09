@@ -26,8 +26,8 @@ import theFishing.cards.CastLine;
 import theFishing.cards.Defend;
 import theFishing.cards.Strike;
 import theFishing.relics.TheRod;
-import theFishing.util.AchievementUnlockTracker;
 import theFishing.util.EnergyOrbFishing;
+import theFishing.util.FishingAchievementUnlocker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -203,7 +203,7 @@ public class TheFishing extends CustomPlayer {
         super.onStanceChange(stanceId);
 
         if (stanceId.equals(DivinityStance.STANCE_ID)) {
-            AchievementUnlockTracker.unlockAchievement(FishingMod.makeID("OLD_TIMES"));
+            FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("OLD_TIMES"));
         }
     }
 

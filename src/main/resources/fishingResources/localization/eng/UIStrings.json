@@ -247,5 +247,11 @@
       "Starlight",
       "Use Twinkle Twinkle to play a Rare card from your draw pile."
     ]
+  },
+  "${ModID}:ETERNITY": {
+    "TEXT": [
+      "Eternity",
+      "Play a Foil The Eternity Gem."
+    ]
   }
 }

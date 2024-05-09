@@ -19,6 +19,7 @@ public class AchievementGridConstructorPatch {
         FishingAchievementItem.atlas = new TextureAtlas(Gdx.files.internal("fishingResources/images/achievements/AdventurerAchievements.atlas"));
         loadAchievement(instance, "starlight", FishingMod.makeID("STARLIGHT"), false);
         loadAchievement(instance, "oldtimes", FishingMod.makeID("OLD_TIMES"), false);
+        loadAchievement(instance, "eternity", FishingMod.makeID("ETERNITY"), false);
         loadAchievement(instance, "delvegraduate", FishingMod.makeID("DELVE_GRADUATE"), false);
         loadAchievement(instance, "adventurermastery", FishingMod.makeID("ADVENTURER_MASTERY"), false);
     }
