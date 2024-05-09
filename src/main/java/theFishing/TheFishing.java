@@ -207,7 +207,6 @@ public class TheFishing extends CustomPlayer {
         }
     }
 
-
     @Override
     public void initializeStarterDeck() {
         super.initializeStarterDeck();

@@ -227,7 +227,7 @@
   "${ModID}:ADVENTURER_MASTERY": {
     "TEXT": [
       "Adventurer Mastery",
-      "As The Adventurer, complete The Ending on Ascension Level 20."
+      "As the Adventurer, complete The Ending on Ascension Level 20."
     ]
   },
   "${ModID}:DELVE_GRADUATE": {
@@ -239,7 +239,7 @@
   "${ModID}:OLD_TIMES": {
     "TEXT": [
       "For Old Times' Sake",
-      "As The Adventurer, enter Divinity."
+      "As the Adventurer, enter Divinity."
     ]
   },
   "${ModID}:STARLIGHT": {
