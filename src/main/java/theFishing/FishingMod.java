@@ -380,15 +380,17 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
     }
 
     public void receivePostDeath() {
-        if (FishingMod.activeBoard.id != null && !completedDelveBonuses.contains(FishingMod.activeBoard.id)) {
-            completedDelveBonuses += (completedDelveBonuses.isEmpty() ? "" : ",") + FishingMod.activeBoard.id;
+        if (AbstractDungeon.actNum == 3 && AbstractDungeon.player.currentHealth > 0 && AbstractDungeon.player instanceof TheFishing || AbstractDungeon.actNum == 4) {
+            if (FishingMod.activeBoard.id != null && !completedDelveBonuses.contains(FishingMod.activeBoard.id)) {
+                completedDelveBonuses += (completedDelveBonuses.isEmpty() ? "" : ",") + FishingMod.activeBoard.id;
 
-            // Update the SpireConfig
-            config.setString("completedDelveBonuses", completedDelveBonuses);
-            try {
-                config.save();
-            } catch (Exception e) {
-                // Handle exception
+                // Update the SpireConfig
+                config.setString("completedDelveBonuses", completedDelveBonuses);
+                try {
+                    config.save();
+                } catch (Exception e) {
+                    // Handle exception
+                }
             }
         }
 
