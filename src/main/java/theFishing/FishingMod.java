@@ -222,7 +222,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
     @Override
     public void receivePostInitialize() {
         initializeSaveData();
-        resetCompletedDelveBonuses();
+       // resetCompletedDelveBonuses();
 
         if (Loader.isModLoaded("rare-cards-sparkle")) {
             FoilSparkleHandler.init();
@@ -254,7 +254,6 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
 
         })));
 
-// Assuming 'completedDelveBonuses' is accessible here, otherwise pass it as needed
         ArrayList<String> dropdownOptions = new ArrayList<>();
         dropdownOptions.add("Daily");
         dropdownOptions.add("Random");
