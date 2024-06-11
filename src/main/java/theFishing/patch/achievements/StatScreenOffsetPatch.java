@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.screens.stats.StatsScreen;
         method = "renderStatScreen"
 )
 public class StatScreenOffsetPatch {
-    public static Integer NEW_ROWS = 1;
+    public static Integer NEW_ACHIEVEMENTS = 5;
 
     public StatScreenOffsetPatch() {
     }
@@ -21,6 +21,6 @@ public class StatScreenOffsetPatch {
             localvars = {"renderY"}
     )
     public static void Insert(StatsScreen __instance, @ByRef float[] renderY) {
-        renderY[0] -= (float)(180 * NEW_ROWS) * Settings.scale;
+        renderY[0] -= (float)(36 * NEW_ACHIEVEMENTS) * Settings.scale;
     }
 }

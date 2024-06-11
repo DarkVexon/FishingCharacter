@@ -17,21 +17,22 @@ public class AchievementGridConstructorPatch {
     @SpirePostfixPatch
     public static void Postfix(AchievementGrid instance) {
         FishingAchievementItem.atlas = new TextureAtlas(Gdx.files.internal("fishingResources/images/achievements/AdventurerAchievements.atlas"));
-        loadAchievement(instance, "starlight", FishingMod.makeID("STARLIGHT"), false);
-        loadAchievement(instance, "oldtimes", FishingMod.makeID("OLD_TIMES"), false);
-        loadAchievement(instance, "eternity", FishingMod.makeID("ETERNITY"), false);
-        loadAchievement(instance, "delvegraduate", FishingMod.makeID("DELVE_GRADUATE"), false);
-        loadAchievement(instance, "adventurermastery", FishingMod.makeID("ADVENTURER_MASTERY"), false);
+        loadAchievement(instance, "STARLIGHT", false);
+        loadAchievement(instance, "OLD_TIMES", false);
+        loadAchievement(instance, "ETERNITY", false);
+        loadAchievement(instance, "DELVE_GRADUATE", false);
+        loadAchievement(instance, "ADVENTURER_MASTERY", false);
     }
 
-    private static void loadAchievement(AchievementGrid instance, String imgName, String id, boolean isHidden) {
-        UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(id);
+    private static void loadAchievement(AchievementGrid instance, String id, boolean isHidden) {
+        String fullId = FishingMod.makeID(id);
+        UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(fullId);
         String name = uiStrings.TEXT[0];
         String description = uiStrings.TEXT[1];
 
-        TextureAtlas.AtlasRegion AchievementImageUnlocked = FishingAchievementItem.atlas.findRegion("unlocked/" + imgName);
-        TextureAtlas.AtlasRegion AchievementImageLocked = FishingAchievementItem.atlas.findRegion("locked/" + imgName);
+        TextureAtlas.AtlasRegion AchievementImageUnlocked = FishingAchievementItem.atlas.findRegion("unlocked/" + id);
+        TextureAtlas.AtlasRegion AchievementImageLocked = FishingAchievementItem.atlas.findRegion("locked/" + id);
 
-        instance.items.add(new FishingAchievementItem(name, description, id, isHidden, AchievementImageUnlocked, AchievementImageLocked));
+        instance.items.add(new FishingAchievementItem(name, description, fullId, isHidden, AchievementImageUnlocked, AchievementImageLocked));
     }
 }
