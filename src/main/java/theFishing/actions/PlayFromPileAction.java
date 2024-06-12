@@ -53,7 +53,7 @@ public class PlayFromPileAction extends AbstractGameAction {
             if (toPlay.rarity == AbstractCard.CardRarity.RARE) {
                 AbstractPlayer p = AbstractDungeon.player;
                 if (p != null && p instanceof TheFishing) {
-                    FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("STARLIGHT"));
+                    FishingAchievementUnlocker.unlockAchievement("STARLIGHT");
                 }
             }
 

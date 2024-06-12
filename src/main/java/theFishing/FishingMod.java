@@ -405,7 +405,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
             }
 
             if (allDelveBonusesCompleted) {
-                FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("DELVE_GRADUATE"));
+                FishingAchievementUnlocker.unlockAchievement("DELVE_GRADUATE");
             }
         }
     }

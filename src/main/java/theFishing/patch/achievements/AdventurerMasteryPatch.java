@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
 
-import theFishing.FishingMod;
 import theFishing.TheFishing;
 import theFishing.util.FishingAchievementUnlocker;
 
@@ -20,7 +19,7 @@ public class AdventurerMasteryPatch {
     public static void Postfix(VictoryScreen __instance, MonsterGroup m) {
         AbstractPlayer p = AbstractDungeon.player;
         if (p != null && p instanceof TheFishing && AbstractDungeon.ascensionLevel == 20 && AbstractDungeon.actNum == 4) {
-            FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("ADVENTURER_MASTERY"));
+            FishingAchievementUnlocker.unlockAchievement("ADVENTURER_MASTERY");
         }
     }
 }

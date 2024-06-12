@@ -203,7 +203,7 @@ public class TheFishing extends CustomPlayer {
         super.onStanceChange(stanceId);
 
         if (stanceId.equals(DivinityStance.STANCE_ID)) {
-            FishingAchievementUnlocker.unlockAchievement(FishingMod.makeID("OLD_TIMES"));
+            FishingAchievementUnlocker.unlockAchievement("OLD_TIMES");
         }
     }
 
