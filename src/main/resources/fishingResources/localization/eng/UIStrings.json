@@ -223,5 +223,35 @@
       "SP": "Cards with Delve cost #b1 more.",
       "F1": "Gain #b1 #yStrength and play the top card of your draw pile."
     }
+  },
+  "${ModID}:ADVENTURER_MASTERY": {
+    "TEXT": [
+      "Adventurer Mastery",
+      "As the Adventurer, complete the Ending on Ascension Level 20."
+    ]
+  },
+  "${ModID}:DELVE_GRADUATE": {
+    "TEXT": [
+      "Delve Graduate",
+      "As the Adventurer, win a run with every Delve Bonus."
+    ]
+  },
+  "${ModID}:OLD_TIMES": {
+    "TEXT": [
+      "For Old Times' Sake",
+      "As the Adventurer, enter Divinity."
+    ]
+  },
+  "${ModID}:STARLIGHT": {
+    "TEXT": [
+      "Starlight",
+      "As the Adventurer, use Twinkle Twinkle to play a Rare card from your draw pile."
+    ]
+  },
+  "${ModID}:ETERNITY": {
+    "TEXT": [
+      "Eternity",
+      "As the Adventurer, play a Foil copy of The Eternity Gem."
+    ]
   }
 }

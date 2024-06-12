@@ -2,7 +2,10 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theFishing.TheFishing;
 import theFishing.actions.EternityGemAction;
+import theFishing.patch.foil.FoilPatches;
+import theFishing.util.FishingAchievementUnlocker;
 
 import static theFishing.FishingMod.makeID;
 import static theFishing.util.Wiz.atb;
@@ -21,6 +24,13 @@ public class TheEternityGem extends AbstractFishingCard {
         for (int i = 0; i < magicNumber; i++) {
             atb(new EternityGemAction(this));
         }
+
+        if (FoilPatches.isFoil(this)) {
+            if (p != null && p instanceof TheFishing) {
+                FishingAchievementUnlocker.unlockAchievement("ETERNITY");
+            }
+        }
+
     }
 
     public void upp() {
