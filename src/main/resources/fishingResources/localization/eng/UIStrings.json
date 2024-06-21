@@ -253,5 +253,10 @@
       "Eternity",
       "As the Adventurer, play a Foil copy of The Eternity Gem."
     ]
+  },
+  "${ModID}:AchievementGrid": {
+    "TEXT": [
+      "#yAdventurer #yAchievements"
+    ]
   }
 }
