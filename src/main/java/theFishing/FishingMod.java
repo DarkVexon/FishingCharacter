@@ -81,7 +81,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
 
     private static FishingMod fishingMod;
     public static SpireConfig config;
-    public static boolean foilAnywhere;
+    public static boolean foilAnywhere, crossmod;
     public static int delvePreference;
     private static String completedDelveBonuses = "";
 
@@ -117,12 +117,14 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
     public static void initialize() throws IOException {
         Properties defaults = new Properties();
         defaults.setProperty("foilanywhere", "false");
+        defaults.setProperty("crossmod", "false");
         defaults.setProperty("delvepreference", "0");
         defaults.setProperty("completedDelveBonuses", "");
         config = new SpireConfig(modID, "config", defaults);
         foilAnywhere = config.getBool("foilanywhere");
         delvePreference = config.getInt("delvepreference");
         completedDelveBonuses = config.getString("completedDelveBonuses");
+        crossmod = config.getBool("crossmod");
 
         fishingMod = new FishingMod();
     }
@@ -246,11 +248,19 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
             config.setBool("foilanywhere", button.enabled);
             try {
                 config.save();
-            } catch (Exception e) {
-            }
+            } catch (Exception e) {}
         }));
 
-        settingsPanel.addUIElement(new ModLabel("Delve Preference", 365, 650, settingsPanel, (modLabel -> {
+        settingsPanel.addUIElement(new ModLabeledToggleButton(TEXT[4], 365, 650, Settings.CREAM_COLOR, FontHelper.charDescFont, config.getBool("crossmod"), settingsPanel, label -> {
+        }, button -> {
+            crossmod = button.enabled;
+            config.setBool("crossmod", button.enabled);
+            try {
+                config.save();
+            } catch (Exception e) {}
+        }));
+
+        settingsPanel.addUIElement(new ModLabel("Delve Preference", 365, 600, settingsPanel, (modLabel -> {
 
         })));
 
@@ -286,7 +296,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
         settingsPanel.addUIElement(new IUIElement() {
             @Override
             public void render(SpriteBatch spriteBatch) {
-                d.render(spriteBatch, 365 * Settings.scale, 625 * Settings.scale);
+                d.render(spriteBatch, 365 * Settings.scale, 525 * Settings.scale);
             }
 
             @Override

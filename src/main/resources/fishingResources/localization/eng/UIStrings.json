@@ -5,7 +5,8 @@
       "Vex'd, Ardentlye",
       "Adds a new playable character: The Adventurer.",
 
-      "Let foil cards appear on any character!"
+      "Let foil cards appear on any character!",
+      "Let \"X Marks the Spot\" take cards from modded characters"
     ]
   },
   "${ModID}:DiscardPileSetupAction": {
