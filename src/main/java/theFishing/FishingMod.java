@@ -4,6 +4,7 @@ import basemod.*;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import basemod.patches.com.megacrit.cardcrawl.screens.options.DropdownMenu.DropdownColoring;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -26,6 +27,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import theFishing.achievements.FishingAchievementGrid;
 import theFishing.actions.EnterTheDungeonAction;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.TopPanelBoard;
@@ -41,17 +43,17 @@ import theFishing.potions.OceanInAJar;
 import theFishing.potions.StarlightSoda;
 import theFishing.quest.QuestHelper;
 import theFishing.relics.AbstractAdventurerRelic;
+import theFishing.util.FishingAchievementUnlocker;
 import theFishing.util.FoilSparkleHandler;
 import theFishing.util.Wiz;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Properties;
+import java.util.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
-public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, EditCharactersSubscriber, PostBattleSubscriber, OnStartBattleSubscriber, PostPlayerUpdateSubscriber, AddAudioSubscriber, PostInitializeSubscriber, PostUpdateSubscriber, StartGameSubscriber {
+public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, PostDeathSubscriber, EditCharactersSubscriber, PostBattleSubscriber, OnStartBattleSubscriber, PostPlayerUpdateSubscriber, AddAudioSubscriber, PostInitializeSubscriber, PostUpdateSubscriber, StartGameSubscriber {
 
     public static final String modID = "fishing";
 
@@ -82,6 +84,8 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
     public static SpireConfig config;
     public static boolean foilAnywhere, crossmod;
     public static int delvePreference;
+    private static String completedDelveBonuses = "";
+    public static FishingAchievementGrid fishingAchievementGrid;
 
     @SpireEnum
     public static AbstractCard.CardTags DELVES;
@@ -117,9 +121,11 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
         defaults.setProperty("foilanywhere", "false");
         defaults.setProperty("crossmod", "false");
         defaults.setProperty("delvepreference", "0");
+        defaults.setProperty("completedDelveBonuses", "");
         config = new SpireConfig(modID, "config", defaults);
         foilAnywhere = config.getBool("foilanywhere");
         delvePreference = config.getInt("delvepreference");
+        completedDelveBonuses = config.getString("completedDelveBonuses");
         crossmod = config.getBool("crossmod");
 
         fishingMod = new FishingMod();
@@ -220,6 +226,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
     @Override
     public void receivePostInitialize() {
         initializeSaveData();
+       // resetCompletedDelveBonuses();
 
         if (Loader.isModLoaded("rare-cards-sparkle")) {
             FoilSparkleHandler.init();
@@ -260,9 +267,9 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
         })));
 
         ArrayList<String> dropdownOptions = new ArrayList<>();
-
         dropdownOptions.add("Daily");
         dropdownOptions.add("Random");
+
         for (String ID : AbstractBoard.idsList) {
             dropdownOptions.add(AbstractBoard.getBoardByID(ID).name);
         }
@@ -273,10 +280,20 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
             try {
                 config.save();
             } catch (Exception e) {
+                // Handle exception
             }
         }, dropdownOptions, FontHelper.tipBodyFont, Settings.CREAM_COLOR, dropdownOptions.size());
 
-        d.setSelectedIndex(delvePreference);
+        DropdownColoring.RowToColor.function.set(d, (index) -> {
+            // Assuming Daily and Random are the first two items and should remain default color
+            if (index > 1) {
+                String boardId = AbstractBoard.idsList.get(index - 2); // Adjust index for "Daily" and "Random"
+                if (completedDelveBonuses.contains(boardId)) {
+                    return Settings.GREEN_TEXT_COLOR; // Change to green if completed
+                }
+            }
+            return null; // Default color otherwise
+        });
 
         settingsPanel.addUIElement(new IUIElement() {
             @Override
@@ -301,6 +318,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
         });
 
         BaseMod.registerModBadge(new Texture(makeImagePath("ui/badge.png")), TEXT[0], TEXT[1], TEXT[2], settingsPanel);
+        fishingAchievementGrid = new FishingAchievementGrid();
     }
 
     public static float time = 0f;
@@ -373,6 +391,43 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
         });
     }
 
+    public void receivePostDeath() {
+        if (AbstractDungeon.actNum == 3 && AbstractDungeon.player.currentHealth > 0 && AbstractDungeon.player instanceof TheFishing || AbstractDungeon.actNum == 4) {
+            if (FishingMod.activeBoard.id != null && !completedDelveBonuses.contains(FishingMod.activeBoard.id)) {
+                completedDelveBonuses += (completedDelveBonuses.isEmpty() ? "" : ",") + FishingMod.activeBoard.id;
+
+                // Update the SpireConfig
+                config.setString("completedDelveBonuses", completedDelveBonuses);
+                try {
+                    config.save();
+                } catch (Exception e) {
+                    // Handle exception
+                }
+            }
+        }
+
+        // Check if all current Delve Bonuses have been completed
+        String[] completedBonuses = completedDelveBonuses.split(",");
+        if (AbstractBoard.idsList.size() == completedBonuses.length) {
+            boolean allDelveBonusesCompleted = true;
+            for (String id : AbstractBoard.idsList) {
+                if (!Arrays.asList(completedBonuses).contains(id)) {
+                    allDelveBonusesCompleted = false;
+                    break;
+                }
+            }
+
+            if (allDelveBonusesCompleted) {
+                FishingAchievementUnlocker.unlockAchievement("DELVE_GRADUATE");
+            }
+        }
+
+        if (AbstractDungeon.actNum == 4 && AbstractDungeon.player.currentHealth > 0 && AbstractDungeon.player instanceof TheFishing && AbstractDungeon.ascensionLevel == 20) {
+            FishingAchievementUnlocker.unlockAchievement("ADVENTURER_MASTERY");
+        }
+
+    }
+
     private static String[] names = {
             "delve",
             "delved"
@@ -399,6 +454,18 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
             }
         }
     }
+
+    public void resetCompletedDelveBonuses() {
+        completedDelveBonuses = "";  // Clear the content of the string
+        config.setString("completedDelveBonuses", completedDelveBonuses);  // Update the config to reflect the empty string
+        try {
+            config.save();  // Save the configuration
+            BaseMod.logger.info("Completed Delve Bonuses have been reset.");
+        } catch (Exception e) {
+            BaseMod.logger.error("Error saving config after resetting Completed Delve Bonuses", e);
+        }
+    }
+
 
     @Override
     public void receiveAddAudio() {

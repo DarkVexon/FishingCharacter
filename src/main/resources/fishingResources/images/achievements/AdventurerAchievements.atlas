@@ -1,0 +1,75 @@
+AdventurerAchievements.png
+size: 640,640
+format: RGB888
+filter: Linear,Linear
+repeat: none
+locked/ADVENTURER_MASTERY
+  rotate: false
+  xy: 0, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/ADVENTURER_MASTERY
+  rotate: false
+  xy: 160, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/DELVE_GRADUATE
+  rotate: false
+  xy: 320, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/DELVE_GRADUATE
+  rotate: false
+  xy: 480, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/OLD_TIMES
+  rotate: false
+  xy: 0, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/OLD_TIMES
+  rotate: false
+  xy: 160, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/STARLIGHT
+  rotate: false
+  xy: 320, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/STARLIGHT
+  rotate: false
+  xy: 480, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/ETERNITY
+  rotate: false
+  xy: 0, 320
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/ETERNITY
+  rotate: false
+  xy: 160, 320
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1

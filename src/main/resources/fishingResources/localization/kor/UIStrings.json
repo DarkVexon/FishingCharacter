@@ -107,5 +107,40 @@
     "TEXT": [
       "복사할 카드를 선택하세요."
     ]
+  },
+  "fishing:ADVENTURER_MASTERY": {
+    "TEXT": [
+      "Adventurer Mastery",
+      "As the Adventurer, complete the Ending on Ascension Level 20."
+    ]
+  },
+  "fishing:DELVE_GRADUATE": {
+    "TEXT": [
+      "Delve Graduate",
+      "As the Adventurer, win a run with every Delve Bonus."
+    ]
+  },
+  "fishing:OLD_TIMES": {
+    "TEXT": [
+      "For Old Times' Sake",
+      "As the Adventurer, enter Divinity."
+    ]
+  },
+  "fishing:STARLIGHT": {
+    "TEXT": [
+      "Starlight",
+      "As the Adventurer, use Twinkle Twinkle to play a Rare card from your draw pile."
+    ]
+  },
+  "fishing:ETERNITY": {
+    "TEXT": [
+      "Eternity",
+      "As the Adventurer, play a Foil copy of The Eternity Gem."
+    ]
+  },
+  "fishing:AchievementGrid": {
+    "TEXT": [
+      "#yAdventurer #yAchievements"
+    ]
   }
 }
