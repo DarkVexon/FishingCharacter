@@ -18,21 +18,21 @@ public class FishingAchievementGrid {
 
     public FishingAchievementGrid() {
         FishingAchievementItem.atlas = new TextureAtlas(Gdx.files.internal("fishingResources/images/achievements/AdventurerAchievements.atlas"));
-        loadAchievement("STARLIGHT", false);
-        loadAchievement("OLD_TIMES", false);
-        loadAchievement("ETERNITY", false);
-        loadAchievement("DELVE_GRADUATE", false);
-        loadAchievement("ADVENTURER_MASTERY", false);
+        loadAchievement("STARLIGHT");
+        loadAchievement("OLD_TIMES");
+        loadAchievement("ETERNITY");
+        loadAchievement("DELVE_GRADUATE");
+        loadAchievement("ADVENTURER_MASTERY");
     }
 
-    private void loadAchievement(String id, boolean isHidden) {
+    private void loadAchievement(String id) {
         String fullId = FishingMod.makeID(id);
         UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(fullId);
         String name = uiStrings.TEXT[0];
         String description = uiStrings.TEXT[1];
         TextureAtlas.AtlasRegion AchievementImageUnlocked = FishingAchievementItem.atlas.findRegion("unlocked/" + id);
         TextureAtlas.AtlasRegion AchievementImageLocked = FishingAchievementItem.atlas.findRegion("locked/" + id);
-        items.add(new FishingAchievementItem(name, description, fullId, isHidden, AchievementImageUnlocked, AchievementImageLocked));
+        items.add(new FishingAchievementItem(name, description, fullId, AchievementImageUnlocked, AchievementImageLocked));
     }
 
     public void updateAchievementStatus() {

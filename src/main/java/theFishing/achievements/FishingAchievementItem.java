@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.screens.stats.AchievementItem;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class FishingAchievementItem {
@@ -22,7 +21,7 @@ public class FishingAchievementItem {
     public boolean isUnlocked;
     public Hitbox hb;
 
-    public FishingAchievementItem(String title, String desc, String key, boolean hidden, TextureAtlas.AtlasRegion unlockedImage, TextureAtlas.AtlasRegion lockedImage) {
+    public FishingAchievementItem(String title, String desc, String key, TextureAtlas.AtlasRegion unlockedImage, TextureAtlas.AtlasRegion lockedImage) {
         this.hb = new Hitbox(160.0F * Settings.scale, 160.0F * Settings.scale);
         this.isUnlocked = UnlockTracker.achievementPref.getBoolean(key, false);
         this.key = key;
@@ -63,7 +62,7 @@ public class FishingAchievementItem {
         if (this.hb != null) {
             this.hb.update();
             if (this.hb.hovered) {
-                TipHelper.renderGenericTip((float) InputHelper.mX + 100.0F * Settings.scale, (float)InputHelper.mY, this.title, this.desc);
+                TipHelper.renderGenericTip((float)InputHelper.mX + 100.0F * Settings.scale, (float)InputHelper.mY, this.title, this.desc);
             }
         }
     }

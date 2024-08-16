@@ -27,6 +27,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import theFishing.achievements.FishingAchievementGrid;
 import theFishing.actions.EnterTheDungeonAction;
 import theFishing.boards.AbstractBoard;
 import theFishing.boards.TopPanelBoard;
@@ -84,6 +85,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
     public static boolean foilAnywhere, crossmod;
     public static int delvePreference;
     private static String completedDelveBonuses = "";
+    public static FishingAchievementGrid fishingAchievementGrid;
 
     @SpireEnum
     public static AbstractCard.CardTags DELVES;
@@ -316,6 +318,7 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
         });
 
         BaseMod.registerModBadge(new Texture(makeImagePath("ui/badge.png")), TEXT[0], TEXT[1], TEXT[2], settingsPanel);
+        fishingAchievementGrid = new FishingAchievementGrid();
     }
 
     public static float time = 0f;
@@ -418,6 +421,11 @@ public class FishingMod implements EditCardsSubscriber, EditRelicsSubscriber, Ed
                 FishingAchievementUnlocker.unlockAchievement("DELVE_GRADUATE");
             }
         }
+
+        if (AbstractDungeon.actNum == 4 && AbstractDungeon.player.currentHealth > 0 && AbstractDungeon.player instanceof TheFishing && AbstractDungeon.ascensionLevel == 20) {
+            FishingAchievementUnlocker.unlockAchievement("ADVENTURER_MASTERY");
+        }
+
     }
 
     private static String[] names = {
