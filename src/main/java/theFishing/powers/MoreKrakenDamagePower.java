@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import theFishing.cards.Kraken;
 
 import static theFishing.FishingMod.makeID;
 
@@ -21,7 +20,5 @@ public class MoreKrakenDamagePower extends AbstractAdventurerPower {
         description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1];
     }
 
-    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        return card.cardID.equals(Kraken.ID) ? damage + amount : damage;
-    }
+
 }

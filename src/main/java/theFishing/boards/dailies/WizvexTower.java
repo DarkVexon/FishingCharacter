@@ -9,10 +9,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import theFishing.FishingMod;
 import theFishing.actions.ConjureAction;
 import theFishing.boards.AbstractBoard;
-import theFishing.cards.BurningStudy;
-import theFishing.cards.Cryostasis;
-import theFishing.cards.Darkleech;
-import theFishing.cards.Thunderbolt;
 
 import java.util.ArrayList;
 
@@ -44,10 +40,7 @@ public class WizvexTower extends AbstractBoard {
     public static float time;
 
     static {
-        spells.add(BurningStudy.ID);
-        spells.add(Cryostasis.ID);
-        spells.add(Thunderbolt.ID);
-        spells.add(Darkleech.ID);
+
     }
 
     public void refreshSpells() {

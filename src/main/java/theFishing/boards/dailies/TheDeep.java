@@ -3,7 +3,6 @@ package theFishing.boards.dailies;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import theFishing.FishingMod;
 import theFishing.boards.AbstractBoard;
-import theFishing.cards.Kraken;
 import theFishing.powers.MoreKrakenDamagePower;
 
 import static theFishing.util.Wiz.*;
@@ -22,7 +21,7 @@ public class TheDeep extends AbstractBoard {
         applyToSelfTop(new MoreKrakenDamagePower(10));
         if (!activated) {
             activated = true;
-            shuffleInTop(new Kraken());
+
         }
         att(new SFXAction("fishing:WAKA_WAKA"));
     }

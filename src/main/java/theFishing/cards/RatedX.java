@@ -50,6 +50,6 @@ public class RatedX extends AbstractFishingCard {
         upgradeDamage(1);
         upgradeBlock(1);
         upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        uDesc();
     }
 }

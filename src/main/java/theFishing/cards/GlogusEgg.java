@@ -16,7 +16,6 @@ public class GlogusEgg extends AbstractFishingCard {
     public GlogusEgg() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         AbstractCard c = new Glogus();
-        FoilPatches.makeFoil(c);
         cardsToPreview = c;
         exhaust = true;
     }
@@ -31,14 +30,12 @@ public class GlogusEgg extends AbstractFishingCard {
         if (upgraded) {
             c.upgrade();
         }
-        FoilPatches.makeFoil(c);
         makeInHandTop(c);
     }
 
     public void upp() {
         AbstractCard c = new Glogus();
         c.upgrade();
-        FoilPatches.makeFoil(c);
         cardsToPreview = c;
         uDesc();
     }

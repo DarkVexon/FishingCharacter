@@ -20,7 +20,6 @@ public class Wizardry extends AbstractFishingCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
         AbstractCard q = new Pinball();
-        FoilPatches.makeFoil(q);
         cardsToPreview = q;
     }
 
@@ -29,7 +28,6 @@ public class Wizardry extends AbstractFishingCard {
         applyToSelf(new StrengthPower(p, magicNumber));
         applyToSelf(new LoseStrengthPower(p, magicNumber));
         AbstractCard q = new Pinball();
-        FoilPatches.makeFoil(q);
         topDeck(q);
     }
 

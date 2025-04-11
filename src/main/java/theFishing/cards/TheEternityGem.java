@@ -13,8 +13,8 @@ public class TheEternityGem extends AbstractFishingCard {
 
     public TheEternityGem() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
-        baseDamage = 11;
-        baseMagicNumber = magicNumber = 11;
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,7 +24,7 @@ public class TheEternityGem extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(2);
+        upgradeMagicNumber(2);
     }
 }

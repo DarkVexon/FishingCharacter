@@ -21,21 +21,6 @@
     "DESCRIPTION": "Effect triggers only if there are no other cards in your hand."
   },
   {
-    "PROPER_NAME": "Quest",
-    "NAMES": [
-      "quest",
-      "quests"
-    ],
-    "DESCRIPTION": "When you complete a #yQuest, obtain its associated #yReward."
-  },
-  {
-    "PROPER_NAME": "Foil",
-    "NAMES": [
-      "foil"
-    ],
-    "DESCRIPTION": "One in three card rewards will contain a Foil card. NL #gShiny!"
-  },
-  {
     "PROPER_NAME": "Picked",
     "NAMES": [
       "picked"
@@ -43,19 +28,11 @@
     "DESCRIPTION": "Effect triggers when you obtain this card."
   },
   {
-    "PROPER_NAME": "Delve",
+    "PROPER_NAME": "Shard",
     "NAMES": [
-      "delve",
-      "delved"
+      "shard",
+      "shards"
     ],
-    "DESCRIPTION": "Trigger today's Delve effect."
-  },
-  {
-    "PROPER_NAME": "Sticker",
-    "NAMES": [
-      "sticker",
-      "sticker"
-    ],
-    "DESCRIPTION": "After you play a card with a Sticker on it, a random enemy loses #b5 HP."
+    "DESCRIPTION": "When you obtain #b5 Shards, add the #yGem into your hand."
   }
 ]

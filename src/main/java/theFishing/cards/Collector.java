@@ -2,24 +2,24 @@ package theFishing.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theFishing.powers.MintConditionPower;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.applyToSelf;
+import static theFishing.util.Wiz.*;
 
 public class Collector extends AbstractFishingCard {
     public final static String ID = makeID(Collector.class.getSimpleName());
-    // intellij stuff power, self, uncommon, , , , , , 
+    // intellij stuff power, self, rare, , , , , 2, 1
 
     public Collector() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new MintConditionPower(1));
+
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeMagicNumber(1);
     }
 }

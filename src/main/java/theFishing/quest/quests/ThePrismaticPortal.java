@@ -3,7 +3,6 @@ package theFishing.quest.quests;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import theFishing.cards.QuestTimeTheGemSearch;
 import theFishing.util.TexLoader;
 import theFishing.util.Wiz;
 
@@ -31,13 +30,14 @@ public class ThePrismaticPortal extends AbstractQuest {
 
     @Override
     public void grantReward() {
-        Wiz.shuffleIn(new QuestTimeTheGemSearch());
+
     }
 
     @Override
     public void grantRewardTop() {
-        Wiz.shuffleInTop(new QuestTimeTheGemSearch());
+
     }
+
 
     private static final Texture left_unc = TexLoader.getTexture(makeImagePath("quests/Block_Left.png"));
     private static final Texture left_com = TexLoader.getTexture(makeImagePath("quests/Block_Left_Completed.png"));

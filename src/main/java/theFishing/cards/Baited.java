@@ -21,28 +21,19 @@ public class Baited extends AbstractFishingCard {
 
     public Baited() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 13;
+        baseDamage = 12;
         baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         vfx(new BiteEffect(m.hb.cX + MathUtils.random(-25.0F, 25.0F) * Settings.scale, m.hb.cY + MathUtils.random(-25.0F, 25.0F) * Settings.scale, Color.WHITE.cpy()), 0.0F);
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        if (m.getIntentBaseDmg() >= 0) {
-            for (int i = 0; i < magicNumber; i++) {
-                makeInHand(AbstractFishCard.returnRandomFish());
-            }
-        }
-    }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (AbstractDungeon.getCurrRoom().monsters.monsters.stream().anyMatch(m -> !m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0)) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        for (int i = 0; i < magicNumber; i++) {
+            makeInHand(AbstractFishCard.returnRandomFish());
         }
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
     }
 }

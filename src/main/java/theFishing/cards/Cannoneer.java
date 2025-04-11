@@ -17,7 +17,7 @@ public class Cannoneer extends AbstractFishingCard {
 
     public Cannoneer() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 8;
+        baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

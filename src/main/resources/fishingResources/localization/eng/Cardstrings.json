@@ -80,7 +80,7 @@
   "${ModID}:BagOfDefends": {
     "NAME": "Bag of Defends",
     "DESCRIPTION": "Gain !B! Block X times. NL When you remove a Defend from your deck, Upgrade this.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Stuffed with Defends."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X times."
   },
   "${ModID}:Oblivious": {
     "NAME": "Oblivious",
@@ -130,7 +130,7 @@
   },
   "${ModID}:Baited": {
     "NAME": "Baited",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, add !M! ${ModID}:Fish into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! ${ModID}:Fish into your hand."
   },
   "${ModID}:AllOut": {
     "NAME": "All Out",
@@ -188,7 +188,7 @@
   },
   "${ModID}:DeckedOut": {
     "NAME": "Decked Out",
-    "DESCRIPTION": "Exhaust 1 card. NL Add !M! ${ModID}:Foil *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
+    "DESCRIPTION": "Exhaust 1 card. NL Add !M! *Shivs into your hand. NL If you're on Steam Deck, Upgrade them."
   },
   "${ModID}:ShipRam": {
     "NAME": "Collision Course",
@@ -200,11 +200,11 @@
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "T.E.'s Box",
-    "DESCRIPTION": "Draw cards until their total cost is !M! or more. NL X counts as 0. NL Startup: ALL enemies lose !${ModID}:m2! HP."
+    "DESCRIPTION": "Draw cards until their total cost is !M! or more. NL X counts as 0."
   },
   "${ModID}:ThornyPersonality": {
     "NAME": "Barbed",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns. NL ${ModID}:Voyaged: Gain !${ModID}:m2! more Thorns."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Voyaged: Gain !M! Thorns."
   },
   "${ModID}:MerchantsStrike": {
     "NAME": "Shopping Strike",
@@ -232,7 +232,8 @@
   },
   "${ModID}:RatedX": {
     "NAME": "Rated X",
-    "DESCRIPTION": "Deal !D! damage. NL If X is at least... NL 1: Gain !B! Block. NL 2: Apply !M! Vulnerable. NL 4: Gain !${ModID}:m2! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL If X is at least... NL 1: Gain !B! Block. NL 2: Apply !M! Vulnerable. NL 4: Gain X Strength.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If X is at least... NL 1: Gain !B! Block. NL 2: Apply !M! Vulnerable. NL 4: Gain X+1 Strength."
   },
   "${ModID}:ItWasTHIIIIIIISBig": {
     "NAME": "It Was THIIIIIS Big!",
@@ -256,7 +257,7 @@
   },
   "${ModID}:FullHouse": {
     "NAME": "Three of a Kind",
-    "DESCRIPTION": "Choose a card. NL Shuffle !M! ${ModID}:Foil copies of that card into your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Choose a card. NL Shuffle !M! copies of that card into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Four of a Kind",
       "duplicate."
@@ -264,7 +265,7 @@
   },
   "${ModID}:Fishbones": {
     "NAME": "Fishbones",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card in your exhaust pile."
   },
   "${ModID}:Hook": {
     "NAME": "Hook",
@@ -346,7 +347,7 @@
   },
   "${ModID}:FastingB": {
     "NAME": "Turtle",
-    "DESCRIPTION": "Gain !M! Thorns. NL At the end of your turn, gain !M! Block. NL At the start of your turn, draw 1 less card."
+    "DESCRIPTION": "Gain !M! Thorns and !M! *Plating. NL At the start of your turn, draw 1 less card."
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Tempest",
@@ -362,21 +363,21 @@
   },
   "${ModID}:SoleSight": {
     "NAME": "For Old Times' Sake",
-    "DESCRIPTION": "Gain 1 Mantra. NL ${ModID}:Solo: Gain !M! Strength."
+    "DESCRIPTION": "${ModID}:Solo: Gain !M! Strength."
   },
   "${ModID}:VexingDeal": {
     "NAME": "Vexing Deal",
-    "DESCRIPTION": "At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10+, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card. NL If it's Ascension 10+, gain !M! Strength."
+    "DESCRIPTION": "At the start of your turn, Exhaust 1 card and draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, Exhaust 1 card and draw 1 card."
   },
   "${ModID}:TheFinalCard": {
     "NAME": "Fishmonger's Finale",
-    "DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL If this card ends the combat, Upgrade it.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL Thanks for playing."
+    "DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies. NL If this card ends combat, Upgrade it.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Solo: Deal !D! damage to ALL enemies."
   },
   "${ModID}:QuestTimeTheHarpoon": {
     "NAME": "The Harpoon",
-    "DESCRIPTION": "Deal !D! damage. NL Startup ${ModID}:Quest: NL Kill an enemy. NL *Reward: Add *The *Whale into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, add *The *Whale into your hand."
   },
   "${ModID}:EndsOfTheEarth": {
     "NAME": "Ends Of The Earth",
@@ -392,8 +393,8 @@
     "DESCRIPTION": "${ModID}:Quest: End your turn with an empty hand. NL *Reward: Shuffle *The *Eternity *Gem into your draw pile."
   },
   "${ModID}:TheEternityGem": {
-    "NAME": "The Eternity Gem",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "NAME": "The Gem",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
   },
   "${ModID}:ShinyShots": {
     "NAME": "Shiny Shots",
@@ -422,7 +423,7 @@
   },
   "${ModID}:Collector": {
     "NAME": "Collector",
-    "DESCRIPTION": "Whenever you play a ${ModID}:Foil or Rare card, gain 1 Strength. NL ${ModID}:Foil Rares grant 2 Strength."
+    "DESCRIPTION": "Whenever you play a Rare card, gain !M! Strength."
   },
   "${ModID}:GlitterGlue": {
     "NAME": "Glitter Glue",
@@ -430,7 +431,7 @@
   },
   "${ModID}:Wizardry": {
     "NAME": "Wizardry",
-    "DESCRIPTION": "Gain !M! Strength. NL At the end of this turn, lose !M! Strength. NL Put a ${ModID}:Foil *Pinball on top of your draw pile."
+    "DESCRIPTION": "Gain !M! Strength this turn. NL Put a *Pinball on top of your draw pile."
   },
   "${ModID}:Pinball": {
     "NAME": "Pinball",
@@ -524,7 +525,7 @@
   },
   "${ModID}:Lunchbox": {
     "NAME": "Lunch Box",
-    "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Picked: Heal 4 HP."
+    "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice."
   },
   "${ModID}:ProTank": {
     "NAME": "Seal Away",
@@ -532,8 +533,8 @@
   },
   "${ModID}:GlogusEgg": {
     "NAME": "Glogus Egg",
-    "DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a ${ModID}:Foil *Glogus into your hand.",
-    "UPGRADE_DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a ${ModID}:Foil *Glogus+ into your hand."
+    "DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a *Glogus into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust. NL If this card is Exhausted, add a *Glogus+ into your hand."
   },
   "${ModID}:Glogus": {
     "NAME": "Glogus",
@@ -550,13 +551,6 @@
       "I haven't Delved this turn!"
     ]
   },
-  "${ModID}:ShinyShadow": {
-    "NAME": "Twinkle Twinkle",
-    "DESCRIPTION": "Deal !D! damage. NL Play a ${ModID}:Foil card from your draw pile.",
-    "EXTENDED_DESCRIPTION": [
-      "Choose a card to play."
-    ]
-  },
   "${ModID}:StickerStrike": {
     "NAME": "Sticker Strike",
     "DESCRIPTION": "Deal !D! damage. NL Put a ${ModID}:Sticker on !M! random card in your hand.",
@@ -567,7 +561,7 @@
   },
   "${ModID}:ExtraTentacle": {
     "NAME": "Extra Tentacle",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your draw pile. NL ${ModID}:Picked: Upgrade 1 random card.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card in your *Draw *Pile.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Exhaust."
     ]
@@ -592,7 +586,7 @@
   },
   "${ModID}:Broadside": {
     "NAME": "Broadside",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Put a ${ModID}:Foil *Miracle on top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Put a *Miracle on top of your draw pile."
   },
   "${ModID}:Banana": {
     "NAME": "Bean",
@@ -609,7 +603,7 @@
   },
   "${ModID}:GolemGuardian": {
     "NAME": "Golem Guardian",
-    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! this combat. NL Free in Shops."
+    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! this combat."
   },
   "${ModID}:Energize": {
     "NAME": "Energize",
@@ -637,5 +631,50 @@
     "NAME": "Point and Click",
     "DESCRIPTION": "Discard your hand. NL Add a ${ModID}:Fish, an *Insight, and a *Miracle into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Discard your hand. NL Add a ${ModID}:Fish, an *Insight, and !M! *Miracles into your hand. NL Exhaust."
+  },
+  "${ModID}:GatherShards": {
+    "NAME": "Gather Shards",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Shards."
+  },
+  "${ModID}:Fragment": {
+    "NAME": "Fragment",
+    "DESCRIPTION": "Gain !M! Vigor and 1 ${ModID}:Shard."
+  },
+  "${ModID}:CrystalCrash": {
+    "NAME": "Crystal Crash",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! ${ModID}:Shard.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! ${ModID}:Shards."
+  },
+  "${ModID}:Gemcraft": {
+    "NAME": "Gemcraft",
+    "DESCRIPTION": "Gain 5 ${ModID}:Shards. NL Exhaust."
+  },
+  "${ModID}:PrismaticBarrier": {
+    "NAME": "Prismatic Barrier",
+    "DESCRIPTION": "Whenever you create a *Gem, gain !M! Block."
+  },
+  "${ModID}:PreStrike": {
+    "NAME": "Pre-Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike into your hand."
+  },
+  "${ModID}:PartyPopper": {
+    "NAME": "Twinkle Twinkle",
+    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [E] for each Attack played this turn."
+  },
+  "${ModID}:ForOldTimesSake": {
+    "NAME": "For Old Times' Sake",
+    "DESCRIPTION": "Discard your hand. NL Gain 1 Strength for each card discarded. NL Exhaust."
+  },
+  "${ModID}:Rot": {
+    "NAME": "Rot",
+    "DESCRIPTION": "Exhaust."
+  },
+  "${ModID}:Sinker": {
+    "NAME": "Sinker",
+    "DESCRIPTION": "Enemy loses !M! Strength. NL Gain !M! Strength. NL Exhaust."
+  },
+  "${ModID}:Turtle": {
+    "NAME": "Turtle",
+    "DESCRIPTION": "Gain !M! Plating."
   }
 }

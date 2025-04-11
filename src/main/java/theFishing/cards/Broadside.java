@@ -17,23 +17,18 @@ public class Broadside extends AbstractFishingCard {
     // intellij stuff attack, enemy, common, 18, 6, , , , 
 
     public Broadside() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 12;
         cardsToPreview = new Miracle();
-        FoilPatches.makeFoil(cardsToPreview);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
-            atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
-        }
+        blck();
         AbstractCard card = new Miracle();
-        FoilPatches.makeFoil(card);
         topDeck(card);
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBlock(4);
     }
 }
